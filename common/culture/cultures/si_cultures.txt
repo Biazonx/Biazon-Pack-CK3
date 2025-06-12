@@ -1,0 +1,53 @@
+﻿nahuatl = {
+	color = { 235 64 52 }
+
+	ethos = ethos_bureaucratic
+	heritage = heritage_cemanahuac
+	language = language_nahuatl
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_warriors_by_merit
+		tradition_sacred_mountains
+		si_tradition_dense_bureaucracy
+		si_tradition_colonial_seafaring
+		si_tradition_headhunting
+	}
+
+	name_list = name_list_nahuatl
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { african_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	
+	ethnicities = {
+		10 = indian
+	}
+}
+
+otomitl = {
+	color = { 173 29 89 }
+
+	ethos = ethos_bellicose
+	heritage = heritage_cemanahuac
+	language = language_nahuatl
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_warriors_of_the_dry
+		tradition_frugal_armorsmiths 
+		si_tradition_colonial_seafaring
+		si_tradition_headhunting
+		si_tradition_dense_bureaucracy
+	}
+
+	name_list = name_list_otomitl
+
+	coa_gfx = { indo_aryan_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { african_clothing_gfx }
+	unit_gfx = { indian_unit_gfx }
+	
+	ethnicities = {
+		10 = indian
+	}
+}

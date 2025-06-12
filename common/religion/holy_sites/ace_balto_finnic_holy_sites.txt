@@ -1,0 +1,86 @@
+﻿
+vodi = {
+	county = c_gdov
+	barony = b_luga
+
+	character_modifier = {
+		name = holy_site_vodi_effect_name
+		stewardship = 1
+		close_relative_opinion = 5
+	}
+}
+
+tarinmaa = {
+	county = c_tavasts
+	barony = b_hameenlinna
+
+	character_modifier = {
+		name = holy_site_tarinmaa_effect_name
+		stewardship = 1
+		same_faith_opinion = 5
+	}
+}
+
+hiiumaa = {
+	county = c_osel
+	#barony = b_hiiumaa
+
+	character_modifier = {
+		name = holy_site_hiiumaa_effect_name
+		stewardship = 1
+		close_relative_opinion = 5
+	}
+}
+
+vanemaa = {
+	county = c_vanemane
+	#barony = b_kandava
+	character_modifier = {
+		name = holy_site_vanemaa_effect_name
+		controlled_province_advantage = 5
+		same_faith_opinion = 5
+	}
+}
+
+pokaini = {
+	county = c_siauliai
+	#barony = b_dobele
+
+	character_modifier = {
+		name = holy_site_pokaini_effect_name
+		controlled_province_advantage = 5
+		stress_loss_mult = 0.1
+	}
+}
+
+braslau = {
+	county = c_kernave
+	barony = b_kernave
+
+	character_modifier = {
+		name = holy_site_braslau_effect_name
+		monthly_piety_gain_per_knight_add = 0.1
+		skirmishers_toughness_mult = 0.1
+	}
+}
+
+romowe = {
+	county = c_konigsberg
+	barony = b_konigsberg
+	character_modifier = {
+		name = holy_site_romowe_effect_name
+		fertility = 0.1
+		same_faith_opinion = 5
+	}
+}
+
+torun = {
+	county = c_torun
+	barony = b_torun
+
+	character_modifier = {
+		name = holy_site_torun_effect_name
+		martial_per_piety_level = 1
+		knight_effectiveness_mult = 0.2
+	}
+}

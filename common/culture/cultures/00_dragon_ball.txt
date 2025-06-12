@@ -1,0 +1,110 @@
+﻿saiyan = {
+ color = { 0.82 0.1 0.26 }
+ 
+ ethos = ethos_bellicose
+ heritage = heritage_dragon_ball
+ language = language_saiyan
+ martial_custom = martial_custom_equal
+ traditions = {
+  tradition_martial_admiration
+  tradition_ruling_caste
+  tradition_eye_for_an_eye
+  tradition_swords_for_hire
+  tradition_quarrelsome
+ }
+
+ name_list = name_list_saiyan  
+
+ coa_gfx = { anglo_saxon_coa_gfx western_coa_gfx }
+ building_gfx = { byzantine_building_gfx }
+ clothing_gfx = { byzantine_clothing_gfx }
+ unit_gfx = { western_unit_gfx }
+
+ ethnicities = {
+  10 = mediterranean_byzantine
+ }
+}
+
+namekian = {
+ color = { 0.25 0.75 0.25 }
+ 
+ ethos = ethos_spiritual
+ heritage = heritage_dragon_ball
+ language = language_namekian
+ martial_custom = martial_custom_equal
+ traditions = {
+  tradition_philosopher_culture
+  tradition_agrarian
+  tradition_highland_warriors
+  tradition_storytellers
+  tradition_mendicant_mystics
+ }
+
+ name_list = name_list_namekian  
+
+ coa_gfx = { arabic_group_coa_gfx }
+ building_gfx = { arabic_group_building_gfx mena_building_gfx }
+ clothing_gfx = { dde_abbasid_clothing_gfx mena_clothing_gfx }
+ unit_gfx = { mena_unit_gfx }
+
+ ethnicities = {
+	10 = arab
+ }
+}
+
+frieza = {
+ color = { 0.9 0.9 0.95 }
+
+ ethos = ethos_bellicose
+ heritage = heritage_dragon_ball
+ language = language_frieza
+ martial_custom = martial_custom_male_only
+ traditions = {
+  tradition_ruling_caste
+  tradition_quarrelsome
+  tradition_servile_soldiers
+  tradition_court_eunuchs
+  tradition_imperial_authority
+ }
+
+ name_list = name_list_frieza  
+
+ coa_gfx = { western_coa_gfx }
+ building_gfx = { western_building_gfx }
+ clothing_gfx = { western_clothing_gfx }
+ unit_gfx = { western_unit_gfx }
+
+ ethnicities = {
+  50 = caucasian_brown_hair
+  50 = caucasian_dark_hair
+ }
+}
+
+
+majin = {
+ color = { 1.0 0.4 1.0 }
+
+ ethos = ethos_stoic
+ heritage = heritage_dragon_ball
+ language = language_majin
+ martial_custom = martial_custom_equal
+ traditions = {
+  tradition_eye_for_an_eye
+  tradition_storytellers
+  tradition_festivities
+  tradition_equal_inheritance
+  tradition_mendicant_mystics
+ }
+
+ name_list = name_list_majin  
+
+ coa_gfx = { scottish_coa_gfx western_coa_gfx }
+ building_gfx = { byzantine_building_gfx }
+ clothing_gfx = { dde_abbasid_clothing_gfx mena_clothing_gfx }
+ unit_gfx = { mena_unit_gfx }
+
+ ethnicities = {
+  10 = asian
+ }
+}
+

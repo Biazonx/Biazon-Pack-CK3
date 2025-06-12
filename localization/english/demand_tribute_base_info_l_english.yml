@@ -1,0 +1,38 @@
+﻿l_english:
+ demand_tribute_tributary_interaction: "Demand as Tributary"
+ demand_tribute_tributary_interaction_desc: "Demand that [recipient.GetShortUINameNoTooltip] becomes your [tributary|E]"
+ demand_tribute_tributary_interaction_cooldown_tt: "[actor.GetShortUIName|U] will not be able to repeat the demand that [recipient.GetShortUIName] become a [tributary|E] for several years"
+ demand_tribute_tributary_interaction_cooldown_active_tt: "[recipient.GetShortUINameNoTooltip] is still angry about the last time you demanded [recipient.GetSheHe] become your $game_concept_tributary$"
+ 
+ demand_tribute_release_as_tributary_interaction: "Release Vassal as Tributary"
+ demand_tribute_release_as_tributary_interaction_desc: "Release your [vassal|E] [recipient.GetTitledFirstName] and make [recipient.GetHerHim] a [tributary|E].\n\n#help This is a good idea if you're over your [vassal_limit|E].#!"
+ demand_tribute_release_as_tributary_interaction_toast: "Release Vassal as Tributary"
+ demand_tribute_release_as_tributary_interaction_toast_desc: "[recipient.GetTitledFirstName] is now your [tributary|E]"
+
+ demand_tribute_requires_crown_authority_tt: "Your '$game_concept_realm_law$' does not allow you to establish tributaries"
+
+ demand_tribute_permanent_tributary_interaction: "Demand as Permanent Tributary"
+ demand_tribute_permanent_tributary_interaction_desc: "Demand that [recipient.GetShortUINameNoTooltip] becomes your permanent [tributary|E]"
+ demand_tribute_permanent_tributary_interaction_cooldown_tt: "[actor.GetShortUIName|U] will not be able to repeat the demand that [recipient.GetShortUIName] become a [tributary|E] for several years"
+ demand_tribute_permanent_tributary_interaction_cooldown_active_tt: "[recipient.GetShortUINameNoTooltip] is still angry about the last time you demanded [recipient.GetSheHe] become your $game_concept_tributary$"
+
+ demand_tribute_make_permanent_tributary_cb: "Bring Under Permanent Tribute"
+ MAKE_PERMANENT_TRIBUTARY_CB_NAME: "Bring [DEFENDER.GetPrimaryTitle.GetNameNoTier] under Permanent [tribute|E]"
+ # MAKE_PERMANENT_TRIBUTARY_CB_SPECIFIC_NAME: "Vassalize [DEFENDER.GetShortUIName]"
+ MAKE_PERMANENT_TRIBUTARY_WAR_NAME: "$ORDER$ [ATTACKER.GetPrimaryTitle.GetPrefix]-[DEFENDER.GetPrimaryTitle.GetAdjective] Tributary War"
+ MAKE_PERMANENT_TRIBUTARY_WAR_NAME_BASE: "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+ demand_tribute_make_permanent_tributary_cb_victory_desc_attacker: "[defender.GetShortUIName|U] becomes your permanent [tributary|E]."
+ demand_tribute_make_permanent_tributary_cb_victory_desc_defender: "You become [attacker.GetShortUINamePossessive] permanent [tributary|E]."
+ demand_tribute_make_permanent_tributary_cb_victory_desc: "[defender.GetShortUIName|U] becomes [attacker.GetShortUINamePossessive] permanent [tributary|E]."
+ demand_tribute_make_permanent_tributary_cb_white_peace_desc_defender: "You remain independent."
+ demand_tribute_make_permanent_tributary_cb_white_peace_desc: "[defender.GetShortUIName|U] remains independent."
+ demand_tribute_make_permanent_tributary_cb_defeat_desc_attacker: "[defender.GetShortUIName|U] remains independent. All [factions|E] against you increase their [discontent|E]."
+
+ demand_tribute_tributary_subjugated: "Subjugated Permanent Tributary"
+ demand_tribute_tributary_subjugated_desc: "A Subjugated Permanent [tributary|E] provides their [suzerain|E] with [gold|E] and [prestige|E] on a regular basis. The [tributary_contract|E] never breaks, even when the [suzerain|E] dies.\n\n$tributary_common_desc$"
+
+ demand_tribute_release_as_permanent_tributary_interaction: "Release Vassal as Permanent Tributary"
+ demand_tribute_release_as_permanent_tributary_interaction_desc: "Release your [vassal|E] [recipient.GetTitledFirstName] and make [recipient.GetHerHim] a Permanent [tributary|E].\n\n#help This is a good idea if you're over your [vassal_limit|E].#!"
+
+ demand_tribute_vassal_to_tributary_interaction: "Pledge Tribute"
+ demand_tribute_vassal_to_tributary_interaction_desc: "Become a [tributary|E] of [recipient.GetShortUIName]"

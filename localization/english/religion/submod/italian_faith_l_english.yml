@@ -1,0 +1,128 @@
+﻿l_english:
+
+    #etc
+    etc_idolism:0 "Esarism"
+    etc_idolism_adj:0 "Esarism"
+    etc_idolism_adherent:0 "Esarist"
+    etc_idolism_adherent_plural:0 "Esarists"
+    etc_idolism_desc:0 "The Etruscan pantheon was a unique existence, having substantial Indo-European yet is not. The Etruscans worshipped Greek deities and heroes as their own, but that did not save them from being integrated into the emerging Roman state" 
+
+    etc_idolism_old:0 "Old Esarism"
+    etc_idolism_old_adj:0 "Old Esarism"
+    etc_idolism_adherent_old:0 "Old Esarist"
+    etc_idolism_old_adherent_plural:0 "Old Esarists"
+    etc_idolism_old_desc:0 "The Etruscan pantheon was a unique existence, having substantial Indo-European yet is not. The Etruscans worshipped Greek deities and heroes as their own, but that did not save them from being integrated into the emerging Roman state"
+
+    #etc_idolism_religious_head_title:0 "Pontifex Maximus"
+    etc_idolism_divine_realm:0 "Realm of the Etruscan gods"
+    etc_idolism_religious_symbol:0 "Etruscan Lion"
+    etc_idolism_religious_text:0 "Ritus and Caerimoniae"
+
+    etc_idolism_religious_head_title:0 "High Priest"
+    etc_idolism_religious_head_title_name:0 "High Priesthood"
+
+    #etc gods/goddesses Localization
+
+    #jupiter Localization
+    etc_idolism_high_god_name:0 "Tinia"
+    etc_idolism_high_god_name_possessive:0 "Tinia's"
+    etc_idolism_high_god_name_alternate:0 "Tinia"
+    etc_idolism_high_god_name_alternate_possessive:0 "Tinia's"
+    etc_idolism_high_god_shehe:0 "He"
+    etc_idolism_high_god_herselfhimself:0 "Himself"
+    etc_idolism_high_god_herhis:0 "His"
+
+    #Creater god Localization
+    etc_idolism_creator_god_name:0 "kháos"
+    etc_idolism_creator_god_name_possessive:0 "kháos's"
+
+    #Health Goddess Munthukh
+    etc_idolism_health_god_name:0 "Munthukh"
+    etc_idolism_health_god_name_possessive:0 "Munthukh's"
+
+    #Fertility Goddess Nortia Localization
+    etc_idolism_fertility_god_name:0 "Nortia"
+    etc_idolism_fertility_god_name_possessive:0 "Nortia's"
+
+    #Wealth god Turms Localization
+    etc_idolism_wealth_god_name:0 "Turms"
+    etc_idolism_wealth_god_name_possessive:0 "Turms's"
+
+    #Household god Lares 
+    etc_idolism_household_god_name:0 "Lares"
+    etc_idolism_household_god_name_possessive:0 "Lares's"
+
+    #Fate god Athrpa Localization
+    etc_idolism_fate_god_name:0 "Athrpa"
+    etc_idolism_fate_god_name_possessive:0 "Athrpa's"
+
+    #knowledge god Menrva Localization
+    etc_idolism_knowledge_god_name:0 "Menrva"
+    etc_idolism_knowledge_god_name_possessive:0 "Menrva's"
+
+    #War god Mars Localization
+    etc_idolism_war_god_name:0 "Mariś"
+    etc_idolism_war_god_name_possessive:0 "Mariś's"
+
+    #Trickster god Mendacius Localization
+    etc_idolism_trickster_god_name:0 "Mendacius"
+    etc_idolism_trickster_god_name_possessive:0 "Mendacius's"
+
+    #Night goddess Thesan Localization
+    etc_idolism_night_god_name:0 "Thesan"
+    etc_idolism_night_god_name_possessive:0 "Thesan's"
+
+    #Water god Nethuns Localization
+    etc_idolism_water_god_name:0 "Nethuns"
+    etc_idolism_water_god_name_possessive:0 "Nethuns"
+
+    #evil gods names 
+    etc_idolism_evil_god_trivia:0 "Culsu" 
+    etc_idolism_evil_god_discordia:0 "Charu"
+
+    etc_idolism_witchgodname_trivia:0 "Trivia"
+
+    #Devil god   
+    etc_idolism_devil_name:0 "Calu" 
+    etc_idolism_devil_name_possessive:0 "Calu's"
+
+    #Death god Aita
+    etc_idolism_death_deity_name:0 "Aita"
+    etc_idolism_death_deity_name_possessive:0 "Aita's"
+
+    #Good gods names 
+    etc_idolism_good_god_usil:0 "Usil" 
+    etc_idolism_good_god_aplu:0 "Aplu" 
+    etc_idolism_good_god_alpan:0 "Alpan" 
+    etc_idolism_good_god_aritimi:0 "Aritimi" 
+    etc_idolism_good_god_uni:0 "Uni" 
+    etc_idolism_good_god_turan:0 "Turan" 
+    etc_idolism_good_god_tahnr:0 "Tahnr" 
+    etc_idolism_good_god_tages:0 "Tages"
+
+    #etc priest 
+
+    #etc priest 
+    etc_idolism_priest_male:0 "Priest"
+    etc_idolism_priest_male_plural:0 "Priests"
+
+    #etc  
+    etc_idolism_priest_female:0 "Priestess" 
+    etc_idolism_priest_female_plural:0 "Priestesses" 
+
+    #etc flamen  
+    etc_idolism_bishop_male:0 "Priest" 
+    etc_idolism_bishop_male_plural:0 "Priests" 
+
+    #roman names
+    #males
+    reserved_male_names:0 "Etruscan male names"
+    #Female 
+    reserved_female_names:0 "Etruscan female names"
+
+    #holy orders: 
+    holy_order_sons_of_maris:0 "Sons of Mariś"
+    holy_order_Protectors_of_menrva:0 "Protectors of Menrva"
+
+
+    

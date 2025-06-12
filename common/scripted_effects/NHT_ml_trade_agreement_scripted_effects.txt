@@ -1,0 +1,1143 @@
+﻿########################################################
+#     Start Trade Agreement
+
+########################################################
+
+nht_trade_agreement_interaction_modifier_effect = {
+	if = {
+		limit = { 
+			scope:actor.monthly_character_income <= scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_2_value
+		}
+		scope:recipient = {
+			add_character_modifier = nht_trade_agreement_1_amount_modifier
+			add_opinion = {
+				modifier = nht_has_trade_agreement_opinion_1
+				target = scope:actor
+			}
+		}
+		scope:actor = {
+			add_character_modifier = nht_trade_agreement_15_amount_modifier
+			add_opinion = {
+				modifier = nht_has_trade_agreement_opinion_15
+				target = scope:recipient
+			}
+		}
+	}
+	if = {
+		limit = { 
+			scope:actor.monthly_character_income > scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_2_value
+			scope:actor.monthly_character_income <= scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_3_value
+		}
+		scope:recipient = {
+			add_character_modifier = nht_trade_agreement_2_amount_modifier
+			add_opinion = {
+				modifier = nht_has_trade_agreement_opinion_2
+				target = scope:actor
+			}
+		}
+		scope:actor = {
+			add_character_modifier = nht_trade_agreement_14_amount_modifier
+			add_opinion = {
+				modifier = nht_has_trade_agreement_opinion_14
+				target = scope:recipient
+			}
+		}
+	}	
+	if = {
+		limit = { 
+			scope:actor.monthly_character_income > scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_3_value
+			scope:actor.monthly_character_income <= scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_4_value
+		}
+		scope:recipient = {
+			add_character_modifier = nht_trade_agreement_3_amount_modifier
+			add_opinion = {
+				modifier = nht_has_trade_agreement_opinion_3
+				target = scope:actor
+			}
+		}
+		scope:actor = {
+			add_character_modifier = nht_trade_agreement_13_amount_modifier
+			add_opinion = {
+				modifier = nht_has_trade_agreement_opinion_13
+				target = scope:recipient
+			}
+		}
+	}	
+	if = {
+		limit = { 
+			scope:actor.monthly_character_income > scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_4_value
+			scope:actor.monthly_character_income <= scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_5_value
+		}
+		scope:recipient = {
+			add_character_modifier = nht_trade_agreement_4_amount_modifier
+			add_opinion = {
+				modifier = nht_has_trade_agreement_opinion_4
+				target = scope:actor
+			}
+		}
+		scope:actor = {
+			add_character_modifier = nht_trade_agreement_12_amount_modifier
+			add_opinion = {
+				modifier = nht_has_trade_agreement_opinion_12
+				target = scope:recipient
+			}
+		}
+	}
+	if = {
+		limit = { 
+			scope:actor.monthly_character_income > scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_5_value
+			scope:actor.monthly_character_income <= scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_6_value
+		}
+		scope:recipient = {
+			add_character_modifier = nht_trade_agreement_5_amount_modifier
+			add_opinion = {
+				modifier = nht_has_trade_agreement_opinion_5
+				target = scope:actor
+			}
+		}
+		scope:actor = {
+			add_character_modifier = nht_trade_agreement_11_amount_modifier
+			add_opinion = {
+				modifier = nht_has_trade_agreement_opinion_11
+				target = scope:recipient
+			}
+		}
+	}	
+	if = {
+		limit = { 
+			scope:actor.monthly_character_income > scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_6_value
+			scope:actor.monthly_character_income <= scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_7_value
+		}
+		scope:recipient = {
+			add_character_modifier = nht_trade_agreement_6_amount_modifier
+			add_opinion = {
+				modifier = nht_has_trade_agreement_opinion_6
+				target = scope:actor
+			}
+		}
+		scope:actor = {
+			add_character_modifier = nht_trade_agreement_10_amount_modifier
+			add_opinion = {
+				modifier = nht_has_trade_agreement_opinion_10
+				target = scope:recipient
+			}
+		}
+	}
+	if = {
+		limit = { 
+			scope:actor.monthly_character_income > scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_7_value
+			scope:actor.monthly_character_income <= scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_9_value
+		}
+		scope:recipient = {
+			add_character_modifier = nht_trade_agreement_7_amount_modifier
+			add_opinion = {
+				modifier = nht_has_trade_agreement_opinion_7
+				target = scope:actor
+			}
+		}
+		scope:actor = {
+			add_character_modifier = nht_trade_agreement_9_amount_modifier
+			add_opinion = {
+				modifier = nht_has_trade_agreement_opinion_9
+				target = scope:recipient
+			}
+		}
+	}	
+	if = {
+		limit = { 
+			scope:actor.monthly_character_income > scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_9_value
+			scope:actor.monthly_character_income <= scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_10_value
+		}
+		scope:recipient = {
+			add_character_modifier = nht_trade_agreement_8_amount_modifier
+			add_opinion = {
+				modifier = nht_has_trade_agreement_opinion_8
+				target = scope:actor
+			}
+		}
+		scope:actor = {
+			add_character_modifier = nht_trade_agreement_8_amount_modifier
+			add_opinion = {
+				modifier = nht_has_trade_agreement_opinion_8
+				target = scope:recipient
+			}
+		}
+	}
+	if = {
+		limit = { 
+			scope:actor.monthly_character_income > scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_10_value
+			scope:actor.monthly_character_income <= scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_11_value
+		}
+		scope:recipient = {
+			add_character_modifier = nht_trade_agreement_9_amount_modifier
+			add_opinion = {
+				modifier = nht_has_trade_agreement_opinion_9
+				target = scope:actor
+			}
+		}
+		scope:actor = {
+			add_character_modifier = nht_trade_agreement_7_amount_modifier
+			add_opinion = {
+				modifier = nht_has_trade_agreement_opinion_7
+				target = scope:recipient
+			}
+		}
+	}
+	if = {
+		limit = { 
+			scope:actor.monthly_character_income > scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_11_value
+			scope:actor.monthly_character_income <= scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_13_value
+		}
+		scope:recipient = {
+			add_character_modifier = nht_trade_agreement_10_amount_modifier
+			add_opinion = {
+				modifier = nht_has_trade_agreement_opinion_10
+				target = scope:actor
+			}
+		}
+		scope:actor = {
+			add_character_modifier = nht_trade_agreement_6_amount_modifier
+			add_opinion = {
+				modifier = nht_has_trade_agreement_opinion_6
+				target = scope:recipient
+			}
+		}
+	}
+	if = {
+		limit = { 
+			scope:actor.monthly_character_income > scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_13_value
+			scope:actor.monthly_character_income <= scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_13_value
+		}
+		scope:recipient = {
+			add_character_modifier = nht_trade_agreement_11_amount_modifier
+			add_opinion = {
+				modifier = nht_has_trade_agreement_opinion_11
+				target = scope:actor
+			}
+		}
+		scope:actor = {
+			add_character_modifier = nht_trade_agreement_5_amount_modifier
+			add_opinion = {
+				modifier = nht_has_trade_agreement_opinion_5
+				target = scope:recipient
+			}
+		}
+	}	
+	if = {
+		limit = { 
+			scope:actor.monthly_character_income > scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_13_value
+			scope:actor.monthly_character_income <= scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_14_value
+		}
+		scope:recipient = {
+			add_character_modifier = nht_trade_agreement_12_amount_modifier
+			add_opinion = {
+				modifier = nht_has_trade_agreement_opinion_12
+				target = scope:actor
+			}
+		}
+		scope:actor = {
+			add_character_modifier = nht_trade_agreement_4_amount_modifier
+			add_opinion = {
+				modifier = nht_has_trade_agreement_opinion_4
+				target = scope:recipient
+			}
+		}
+	}
+	if = {
+		limit = { 
+			scope:actor.monthly_character_income > scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_14_value
+			scope:actor.monthly_character_income <= scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_15_value
+		}
+		scope:recipient = {
+			add_character_modifier = nht_trade_agreement_13_amount_modifier
+			add_opinion = {
+				modifier = nht_has_trade_agreement_opinion_13
+				target = scope:actor
+			}
+		}
+		scope:actor = {
+			add_character_modifier = nht_trade_agreement_3_amount_modifier
+			add_opinion = {
+				modifier = nht_has_trade_agreement_opinion_3
+				target = scope:recipient
+			}
+		}
+	}
+	if = {
+		limit = { 
+			scope:actor.monthly_character_income > scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_15_value
+			scope:actor.monthly_character_income <= scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_16_value
+		}
+		scope:recipient = {
+			add_character_modifier = nht_trade_agreement_14_amount_modifier
+			add_opinion = {
+				modifier = nht_has_trade_agreement_opinion_14
+				target = scope:actor
+			}
+		}
+		scope:actor = {
+			add_character_modifier = nht_trade_agreement_2_amount_modifier
+			add_opinion = {
+				modifier = nht_has_trade_agreement_opinion_2
+				target = scope:recipient
+			}
+		}
+	}
+	if = {
+		limit = { 
+			scope:actor.monthly_character_income > scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_16_value
+		}
+		scope:recipient = {
+			add_character_modifier = nht_trade_agreement_15_amount_modifier
+			add_opinion = {
+				modifier = nht_has_trade_agreement_opinion_15
+				target = scope:actor
+			}
+			
+		}
+		scope:actor = {
+			add_character_modifier = nht_trade_agreement_1_amount_modifier
+			add_opinion = {
+				modifier = nht_has_trade_agreement_opinion_1
+				target = scope:recipient
+			}
+		}
+	}
+}
+
+########################################################
+#     Cancel Trade Agreement
+
+########################################################
+
+nht_cancel_trade_agreement_character_modifier_effect = {
+	if = {
+		limit = { 
+			scope:second_ruler_in_trade_agreement = {
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_1
+					target = scope:first_ruler_in_trade_agreement
+				}
+			}
+		}
+		scope:second_ruler_in_trade_agreement = {
+			remove_character_modifier = nht_trade_agreement_1_amount_modifier
+			remove_opinion = {
+				modifier = nht_has_trade_agreement_opinion_1
+				target = scope:first_ruler_in_trade_agreement
+			}
+		}
+		scope:first_ruler_in_trade_agreement = {
+			remove_character_modifier = nht_trade_agreement_15_amount_modifier
+			remove_opinion = {
+				modifier = nht_has_trade_agreement_opinion_15
+				target = scope:second_ruler_in_trade_agreement
+			}
+		}
+	}
+	if = {
+		limit = { 
+			scope:second_ruler_in_trade_agreement = {
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_2
+					target = scope:first_ruler_in_trade_agreement
+				}
+			}
+		}
+		scope:second_ruler_in_trade_agreement = {
+			remove_character_modifier = nht_trade_agreement_2_amount_modifier
+			remove_opinion = {
+				modifier = nht_has_trade_agreement_opinion_2
+				target = scope:first_ruler_in_trade_agreement
+			}
+		}
+		scope:first_ruler_in_trade_agreement = {
+			remove_character_modifier = nht_trade_agreement_14_amount_modifier
+			remove_opinion = {
+				modifier = nht_has_trade_agreement_opinion_14
+				target = scope:second_ruler_in_trade_agreement
+			}
+		}
+	}	
+	if = {
+		limit = { 
+			scope:second_ruler_in_trade_agreement = {
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_3
+					target = scope:first_ruler_in_trade_agreement
+				}
+			}
+		}
+		scope:second_ruler_in_trade_agreement = {
+			remove_character_modifier = nht_trade_agreement_3_amount_modifier
+			remove_opinion = {
+				modifier = nht_has_trade_agreement_opinion_3
+				target = scope:first_ruler_in_trade_agreement
+			}
+		}
+		scope:first_ruler_in_trade_agreement = {
+			remove_character_modifier = nht_trade_agreement_13_amount_modifier
+			remove_opinion = {
+				modifier = nht_has_trade_agreement_opinion_13
+				target = scope:second_ruler_in_trade_agreement
+			}
+		}
+	}	
+	if = {
+		limit = { 
+			scope:second_ruler_in_trade_agreement = {
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_4
+					target = scope:first_ruler_in_trade_agreement
+				}
+			}
+		}
+		scope:second_ruler_in_trade_agreement = {
+			remove_character_modifier = nht_trade_agreement_4_amount_modifier
+			remove_opinion = {
+				modifier = nht_has_trade_agreement_opinion_4
+				target = scope:first_ruler_in_trade_agreement
+			}
+		}
+		scope:first_ruler_in_trade_agreement = {
+			remove_character_modifier = nht_trade_agreement_12_amount_modifier
+			remove_opinion = {
+				modifier = nht_has_trade_agreement_opinion_12
+				target = scope:second_ruler_in_trade_agreement
+			}
+		}
+	}
+	if = {
+		limit = { 
+			scope:second_ruler_in_trade_agreement = {
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_5
+					target = scope:first_ruler_in_trade_agreement
+				}
+			}
+		}
+		scope:second_ruler_in_trade_agreement = {
+			remove_character_modifier = nht_trade_agreement_5_amount_modifier
+			remove_opinion = {
+				modifier = nht_has_trade_agreement_opinion_5
+				target = scope:first_ruler_in_trade_agreement
+			}
+		}
+		scope:first_ruler_in_trade_agreement = {
+			remove_character_modifier = nht_trade_agreement_11_amount_modifier
+			remove_opinion = {
+				modifier = nht_has_trade_agreement_opinion_11
+				target = scope:second_ruler_in_trade_agreement
+			}
+		}
+	}	
+	if = {
+		limit = { 
+			scope:second_ruler_in_trade_agreement = {
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_6
+					target = scope:first_ruler_in_trade_agreement
+				}
+			}
+		}
+		scope:second_ruler_in_trade_agreement = {
+			remove_character_modifier = nht_trade_agreement_6_amount_modifier
+			remove_opinion = {
+				modifier = nht_has_trade_agreement_opinion_6
+				target = scope:first_ruler_in_trade_agreement
+			}
+		}
+		scope:first_ruler_in_trade_agreement = {
+			remove_character_modifier = nht_trade_agreement_10_amount_modifier
+			remove_opinion = {
+				modifier = nht_has_trade_agreement_opinion_10
+				target = scope:second_ruler_in_trade_agreement
+			}
+		}
+	}
+	if = {
+		limit = { 
+			scope:second_ruler_in_trade_agreement = {
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_7
+					target = scope:first_ruler_in_trade_agreement
+				}
+			}
+		}
+		scope:second_ruler_in_trade_agreement = {
+			remove_character_modifier = nht_trade_agreement_7_amount_modifier
+			remove_opinion = {
+				modifier = nht_has_trade_agreement_opinion_7
+				target = scope:first_ruler_in_trade_agreement
+			}
+		}
+		scope:first_ruler_in_trade_agreement = {
+			remove_character_modifier = nht_trade_agreement_9_amount_modifier
+			remove_opinion = {
+				modifier = nht_has_trade_agreement_opinion_9
+				target = scope:second_ruler_in_trade_agreement
+			}
+		}
+	}	
+	if = {
+		limit = { 
+			scope:second_ruler_in_trade_agreement = {
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_8
+					target = scope:first_ruler_in_trade_agreement
+				}
+			}
+		}
+		scope:second_ruler_in_trade_agreement = {
+			remove_character_modifier = nht_trade_agreement_8_amount_modifier
+			remove_opinion = {
+				modifier = nht_has_trade_agreement_opinion_8
+				target = scope:first_ruler_in_trade_agreement
+			}
+		}
+		scope:first_ruler_in_trade_agreement = {
+			remove_character_modifier = nht_trade_agreement_8_amount_modifier
+			remove_opinion = {
+				modifier = nht_has_trade_agreement_opinion_8
+				target = scope:second_ruler_in_trade_agreement
+			}
+		}
+	}
+	if = {
+		limit = { 
+			scope:second_ruler_in_trade_agreement = {
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_9
+					target = scope:first_ruler_in_trade_agreement
+				}
+			}
+		}
+		scope:second_ruler_in_trade_agreement = {
+			remove_character_modifier = nht_trade_agreement_9_amount_modifier
+			remove_opinion = {
+				modifier = nht_has_trade_agreement_opinion_9
+				target = scope:first_ruler_in_trade_agreement
+			}
+		}
+		scope:first_ruler_in_trade_agreement = {
+			remove_character_modifier = nht_trade_agreement_7_amount_modifier
+			remove_opinion = {
+				modifier = nht_has_trade_agreement_opinion_7
+				target = scope:second_ruler_in_trade_agreement
+			}
+		}
+	}
+	if = {
+		limit = { 
+			scope:second_ruler_in_trade_agreement = {
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_10
+					target = scope:first_ruler_in_trade_agreement
+				}
+			}
+		}
+		scope:second_ruler_in_trade_agreement = {
+			remove_character_modifier = nht_trade_agreement_10_amount_modifier
+			remove_opinion = {
+				modifier = nht_has_trade_agreement_opinion_10
+				target = scope:first_ruler_in_trade_agreement
+			}
+		}
+		scope:first_ruler_in_trade_agreement = {
+			remove_character_modifier = nht_trade_agreement_6_amount_modifier
+			remove_opinion = {
+				modifier = nht_has_trade_agreement_opinion_6
+				target = scope:second_ruler_in_trade_agreement
+			}
+		}
+	}
+	if = {
+		limit = { 
+			scope:second_ruler_in_trade_agreement = {
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_11
+					target = scope:first_ruler_in_trade_agreement
+				}
+			}
+		}
+		scope:second_ruler_in_trade_agreement = {
+			remove_character_modifier = nht_trade_agreement_11_amount_modifier
+			remove_opinion = {
+				modifier = nht_has_trade_agreement_opinion_11
+				target = scope:first_ruler_in_trade_agreement
+			}
+		}
+		scope:first_ruler_in_trade_agreement = {
+			remove_character_modifier = nht_trade_agreement_5_amount_modifier
+			remove_opinion = {
+				modifier = nht_has_trade_agreement_opinion_5
+				target = scope:second_ruler_in_trade_agreement
+			}
+		}
+	}	
+	if = {
+		limit = { 
+			scope:second_ruler_in_trade_agreement = {
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_12
+					target = scope:first_ruler_in_trade_agreement
+				}
+			}
+		}
+		scope:second_ruler_in_trade_agreement = {
+			remove_character_modifier = nht_trade_agreement_12_amount_modifier
+			remove_opinion = {
+				modifier = nht_has_trade_agreement_opinion_12
+				target = scope:first_ruler_in_trade_agreement
+			}
+		}
+		scope:first_ruler_in_trade_agreement = {
+			remove_character_modifier = nht_trade_agreement_4_amount_modifier
+			remove_opinion = {
+				modifier = nht_has_trade_agreement_opinion_4
+				target = scope:second_ruler_in_trade_agreement
+			}
+		}
+	}
+	if = {
+		limit = { 
+			scope:second_ruler_in_trade_agreement = {
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_13
+					target = scope:first_ruler_in_trade_agreement
+				}
+			}
+		}
+		scope:second_ruler_in_trade_agreement = {
+			remove_character_modifier = nht_trade_agreement_13_amount_modifier
+			remove_opinion = {
+				modifier = nht_has_trade_agreement_opinion_13
+				target = scope:first_ruler_in_trade_agreement
+			}
+		}
+		scope:first_ruler_in_trade_agreement = {
+			remove_character_modifier = nht_trade_agreement_3_amount_modifier
+			remove_opinion = {
+				modifier = nht_has_trade_agreement_opinion_3
+				target = scope:second_ruler_in_trade_agreement
+			}
+		}
+	}
+	if = {
+		limit = { 
+			scope:second_ruler_in_trade_agreement = {
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_14
+					target = scope:first_ruler_in_trade_agreement
+				}
+			}
+		}
+		scope:second_ruler_in_trade_agreement = {
+			remove_character_modifier = nht_trade_agreement_14_amount_modifier
+			remove_opinion = {
+				modifier = nht_has_trade_agreement_opinion_14
+				target = scope:first_ruler_in_trade_agreement
+			}
+		}
+		scope:first_ruler_in_trade_agreement = {
+			remove_character_modifier = nht_trade_agreement_2_amount_modifier
+			remove_opinion = {
+				modifier = nht_has_trade_agreement_opinion_2
+				target = scope:second_ruler_in_trade_agreement
+			}
+		}
+	}
+	if = {
+		limit = { 
+			scope:second_ruler_in_trade_agreement = {
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_15
+					target = scope:first_ruler_in_trade_agreement
+				}
+			}
+		}
+		scope:second_ruler_in_trade_agreement = {
+			remove_character_modifier = nht_trade_agreement_15_amount_modifier
+			remove_opinion = {
+				modifier = nht_has_trade_agreement_opinion_15
+				target = scope:first_ruler_in_trade_agreement
+			}
+		}
+		scope:first_ruler_in_trade_agreement = {
+			remove_character_modifier = nht_trade_agreement_1_amount_modifier
+			remove_opinion = {
+				modifier = nht_has_trade_agreement_opinion_1
+				target = scope:second_ruler_in_trade_agreement
+			}
+		}
+	}
+	scope:second_ruler_in_trade_agreement = {
+		remove_list_variable = { 
+			name = is_in_trade_agreement_with_actor_list 
+			target = scope:first_ruler_in_trade_agreement 
+		}
+	}
+	scope:first_ruler_in_trade_agreement = {
+		remove_list_variable = { 
+			name = is_in_trade_agreement_with_actor_list 
+			target = scope:second_ruler_in_trade_agreement 
+		}
+	}
+}
+
+
+########################################################
+#     Cancel Trade Agreement Death
+
+########################################################
+
+nht_cancel_trade_agreement_death_effect = {
+	if = {
+		limit = {
+			root = { 
+				has_character_modifier = nht_trade_agreement_1_amount_modifier
+			}
+			any_in_list = { 
+				variable = is_in_trade_agreement_with_actor_list
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_15
+					target = root
+				}				
+				has_character_modifier = nht_trade_agreement_15_amount_modifier
+			}
+		}
+		every_in_list = {
+			variable = is_in_trade_agreement_with_actor_list
+			limit = { 
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_15
+					target = root
+				}
+			}	
+			remove_character_modifier = nht_trade_agreement_15_amount_modifier
+		}
+	}
+	if = {
+		limit = {
+			root = { 
+				has_character_modifier = nht_trade_agreement_2_amount_modifier
+			}
+			any_in_list = { 
+				variable = is_in_trade_agreement_with_actor_list
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_14
+					target = root
+				}				
+				has_character_modifier = nht_trade_agreement_14_amount_modifier
+			}
+		}
+		every_in_list = {
+			variable = is_in_trade_agreement_with_actor_list
+			limit = { 
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_14
+					target = root
+				}
+			}	
+			remove_character_modifier = nht_trade_agreement_14_amount_modifier
+		}
+	}
+	if = {
+		limit = {
+			root = { 
+				has_character_modifier = nht_trade_agreement_3_amount_modifier
+			}
+			any_in_list = { 
+				variable = is_in_trade_agreement_with_actor_list
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_13
+					target = root
+				}				
+				has_character_modifier = nht_trade_agreement_13_amount_modifier
+			}
+		}
+		every_in_list = {
+			variable = is_in_trade_agreement_with_actor_list
+			limit = { 
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_13
+					target = root
+				}
+			}	
+			remove_character_modifier = nht_trade_agreement_13_amount_modifier
+		}
+	}	
+	if = {
+		limit = {
+			root = { 
+				has_character_modifier = nht_trade_agreement_4_amount_modifier
+			}
+			any_in_list = { 
+				variable = is_in_trade_agreement_with_actor_list
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_12
+					target = root
+				}				
+				has_character_modifier = nht_trade_agreement_12_amount_modifier
+			}
+		}
+		every_in_list = {
+			variable = is_in_trade_agreement_with_actor_list
+			limit = { 
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_12
+					target = root
+				}
+			}	
+			remove_character_modifier = nht_trade_agreement_12_amount_modifier
+		}
+	}
+	if = {
+		limit = {
+			root = { 
+				has_character_modifier = nht_trade_agreement_5_amount_modifier
+			}
+			any_in_list = { 
+				variable = is_in_trade_agreement_with_actor_list
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_11
+					target = root
+				}				
+				has_character_modifier = nht_trade_agreement_11_amount_modifier
+			}
+		}
+		every_in_list = {
+			variable = is_in_trade_agreement_with_actor_list
+			limit = { 
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_11
+					target = root
+				}
+			}	
+			remove_character_modifier = nht_trade_agreement_11_amount_modifier
+		}
+	}
+	if = {
+		limit = {
+			root = { 
+				has_character_modifier = nht_trade_agreement_6_amount_modifier
+			}
+			any_in_list = { 
+				variable = is_in_trade_agreement_with_actor_list
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_10
+					target = root
+				}				
+				has_character_modifier = nht_trade_agreement_10_amount_modifier
+			}
+		}
+		every_in_list = {
+			variable = is_in_trade_agreement_with_actor_list
+			limit = { 
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_10
+					target = root
+				}
+			}	
+			remove_character_modifier = nht_trade_agreement_10_amount_modifier
+		}
+	}
+	if = {
+		limit = {
+			root = { 
+				has_character_modifier = nht_trade_agreement_7_amount_modifier
+			}
+			any_in_list = { 
+				variable = is_in_trade_agreement_with_actor_list
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_9
+					target = root
+				}				
+				has_character_modifier = nht_trade_agreement_9_amount_modifier
+			}
+		}
+		every_in_list = {
+			variable = is_in_trade_agreement_with_actor_list
+			limit = { 
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_9
+					target = root
+				}
+			}	
+			remove_character_modifier = nht_trade_agreement_9_amount_modifier
+		}
+	}
+	if = {
+		limit = {
+			root = { 
+				has_character_modifier = nht_trade_agreement_8_amount_modifier
+			}
+			any_in_list = { 
+				variable = is_in_trade_agreement_with_actor_list
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_8
+					target = root
+				}				
+				has_character_modifier = nht_trade_agreement_8_amount_modifier
+			}
+		}
+		every_in_list = {
+			variable = is_in_trade_agreement_with_actor_list
+			limit = { 
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_8
+					target = root
+				}
+			}	
+			remove_character_modifier = nht_trade_agreement_8_amount_modifier
+		}
+	}
+	if = {
+		limit = {
+			root = { 
+				has_character_modifier = nht_trade_agreement_9_amount_modifier
+			}
+			any_in_list = { 
+				variable = is_in_trade_agreement_with_actor_list
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_7
+					target = root
+				}				
+				has_character_modifier = nht_trade_agreement_7_amount_modifier
+			}
+		}
+		every_in_list = {
+			variable = is_in_trade_agreement_with_actor_list
+			limit = { 
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_7
+					target = root
+				}
+			}	
+			remove_character_modifier = nht_trade_agreement_7_amount_modifier
+		}
+	}
+	if = {
+		limit = {
+			root = { 
+				has_character_modifier = nht_trade_agreement_10_amount_modifier
+			}
+			any_in_list = { 
+				variable = is_in_trade_agreement_with_actor_list
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_6
+					target = root
+				}				
+				has_character_modifier = nht_trade_agreement_6_amount_modifier
+			}
+		}
+		every_in_list = {
+			variable = is_in_trade_agreement_with_actor_list
+			limit = { 
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_6
+					target = root
+				}
+			}	
+			remove_character_modifier = nht_trade_agreement_6_amount_modifier
+		}
+	}
+	if = {
+		limit = {
+			root = { 
+				has_character_modifier = nht_trade_agreement_11_amount_modifier
+			}
+			any_in_list = { 
+				variable = is_in_trade_agreement_with_actor_list
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_5
+					target = root
+				}				
+				has_character_modifier = nht_trade_agreement_5_amount_modifier
+			}
+		}
+		every_in_list = {
+			variable = is_in_trade_agreement_with_actor_list
+			limit = { 
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_5
+					target = root
+				}
+			}	
+			remove_character_modifier = nht_trade_agreement_5_amount_modifier
+		}
+	}
+	if = {
+		limit = {
+			root = { 
+				has_character_modifier = nht_trade_agreement_12_amount_modifier
+			}
+			any_in_list = { 
+				variable = is_in_trade_agreement_with_actor_list
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_4
+					target = root
+				}				
+				has_character_modifier = nht_trade_agreement_4_amount_modifier
+			}
+		}
+		every_in_list = {
+			variable = is_in_trade_agreement_with_actor_list
+			limit = { 
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_4
+					target = root
+				}
+			}	
+			remove_character_modifier = nht_trade_agreement_4_amount_modifier
+		}
+	}
+	if = {
+		limit = {
+			root = { 
+				has_character_modifier = nht_trade_agreement_13_amount_modifier
+			}
+			any_in_list = { 
+				variable = is_in_trade_agreement_with_actor_list
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_3
+					target = root
+				}				
+				has_character_modifier = nht_trade_agreement_3_amount_modifier
+			}
+		}
+		every_in_list = {
+			variable = is_in_trade_agreement_with_actor_list
+			limit = { 
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_3
+					target = root
+				}
+			}	
+			remove_character_modifier = nht_trade_agreement_3_amount_modifier
+		}
+	}
+	if = {
+		limit = {
+			root = { 
+				has_character_modifier = nht_trade_agreement_14_amount_modifier
+			}
+			any_in_list = { 
+				variable = is_in_trade_agreement_with_actor_list
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_2
+					target = root
+				}				
+				has_character_modifier = nht_trade_agreement_2_amount_modifier
+			}
+		}
+		every_in_list = {
+			variable = is_in_trade_agreement_with_actor_list
+			limit = { 
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_2
+					target = root
+				}
+			}	
+			remove_character_modifier = nht_trade_agreement_2_amount_modifier
+		}
+	}
+	if = {
+		limit = {
+			root = { 
+				has_character_modifier = nht_trade_agreement_15_amount_modifier
+			}
+			any_in_list = { 
+				variable = is_in_trade_agreement_with_actor_list
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_1
+					target = root
+				}				
+				has_character_modifier = nht_trade_agreement_1_amount_modifier
+			}
+		}
+		every_in_list = {
+			variable = is_in_trade_agreement_with_actor_list
+			limit = { 
+				has_opinion_modifier = {
+					modifier = nht_has_trade_agreement_opinion_1
+					target = root
+				}
+			}	
+			remove_character_modifier = nht_trade_agreement_1_amount_modifier
+		}
+	}
+}
+
+
+nht_remove_trade_agreement_county_modifier_effect = {
+	if = {
+		limit = {
+			scope:first_ruler_in_trade_agreement = {
+				any_in_list = {
+					variable = nht_counties_in_trade_agreement_list
+					is_target_in_variable_list = {
+						name = nht_is_trade_county_actor_var_list
+						target = scope:second_ruler_in_trade_agreement
+					}					
+				}
+			}
+		}				
+		scope:first_ruler_in_trade_agreement = {
+			random_in_list = {
+				variable = nht_counties_in_trade_agreement_list
+				limit = {
+					is_target_in_variable_list = {
+						name = nht_is_trade_county_actor_var_list
+						target = scope:second_ruler_in_trade_agreement
+					}
+				}						
+				remove_county_modifier = nht_trading_in_county_modifier
+				remove_list_variable = { 
+					name = nht_counties_in_trade_agreement_list 
+					target = scope:first_ruler_in_trade_agreement 
+				}
+			}
+		}
+		scope:second_ruler_in_trade_agreement.capital_county = {
+			remove_county_modifier = nht_trading_in_county_modifier
+			remove_list_variable = { 
+				name = nht_counties_in_trade_agreement_list 
+				target = scope:first_ruler_in_trade_agreement 
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			scope:second_ruler_in_trade_agreement = {
+				any_in_list = {
+					variable = nht_counties_in_trade_agreement_list
+					is_target_in_variable_list = {
+						name = nht_is_trade_county_actor_var_list
+						target = scope:first_ruler_in_trade_agreement
+					}
+				}
+			}
+		}				
+		scope:second_ruler_in_trade_agreement = {
+			random_in_list = {
+				variable = nht_counties_in_trade_agreement_list
+				limit = {
+					is_target_in_variable_list = {
+						name = nht_is_trade_county_actor_var_list
+						target = scope:first_ruler_in_trade_agreement
+					}
+				}						
+				remove_county_modifier = nht_trading_in_county_modifier
+				remove_list_variable = { 
+					name = nht_counties_in_trade_agreement_list 
+					target = scope:second_ruler_in_trade_agreement 
+				}
+			}
+		}
+		scope:first_ruler_in_trade_agreement.capital_county = {
+			remove_county_modifier = nht_trading_in_county_modifier
+			remove_from_list = nht_counties_in_trade_agreement_list
+		}
+	}
+}

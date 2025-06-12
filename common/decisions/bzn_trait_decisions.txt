@@ -1,0 +1,551 @@
+bzn_raise_zealots = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+    }
+
+    decision_group_type = major
+	ai_check_interval = 0
+    desc = bzn_raise_zealots_desc
+
+    cooldown = { years = 3 }
+
+    is_shown = {
+        is_landless_adventurer = no
+        has_trait = inquisitor
+    }
+
+    is_valid = {
+        is_landless_adventurer = no
+        has_trait = inquisitor
+    }
+
+    cost = { piety = 500 }
+
+    effect = {
+        spawn_army = {
+            levies = 1000
+            location = capital_province
+            inheritable = no
+            uses_supply = yes
+            name = bzn.religious.zealots.army
+        }
+    }
+
+    ai_potential = {
+        always = no
+    }
+
+    ai_will_do = {
+        base = 0
+    }
+}
+
+found_special_force_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/fp1_decision_forge_jomsvikings.dds"
+    }
+
+    decision_group_type = major
+    ai_check_interval = 120
+    desc = "found_special_force_decision_desc"
+
+    is_shown = {
+        has_trait = frieza_race
+        NOT = { has_character_modifier = modifier_special_force }
+        is_landless_adventurer = no
+    }
+
+    is_valid = {
+        has_trait = frieza_race
+        prestige_level >= 2
+    }
+
+    effect = {
+        add_character_modifier = {
+            modifier = modifier_special_force
+            years = -1
+        }
+    }
+
+    cost = {
+        prestige = 1000
+        gold = 250
+    }
+
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 20
+    }
+}
+
+bzn_special_army_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/fp1_decision_forge_jomsvikings.dds"
+    }
+
+    decision_group_type = major
+    ai_check_interval = 120
+    desc = bzn_special_army_decision_desc
+
+    cooldown = {
+        years = 5
+    }
+
+    is_shown = {
+        is_landless_adventurer = no
+        has_character_modifier = modifier_special_force
+    }
+
+    is_valid = {
+        is_landless_adventurer = no
+        has_character_modifier = modifier_special_force
+    }
+
+    cost = {
+        prestige = 500
+    }
+
+    effect = {
+        spawn_army = {
+            men_at_arms = {
+                type = house_guard
+                stacks = 10
+            }
+            location = capital_province
+            inheritable = no
+            uses_supply = yes
+            name = bzn.special
+        }
+    }
+
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 20
+    }
+}
+
+establish_trade_organization = {
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/ep3_decision_hold_triumph.dds"
+    }
+
+    decision_group_type = major
+    ai_check_interval = 120
+    desc = "establish_trade_organization_decision_desc"
+
+    is_shown = {
+        has_trait = frieza_race
+        is_landless_adventurer = no
+        NOT = { has_character_modifier = galactic_trade_hub }
+    }
+
+    is_valid = {
+		prestige_level >= 3
+        OR = {
+			diplomacy >= 15
+			stewardship >= 15
+			has_trait = architect
+            has_trait = administrator
+            has_trait = avaricious
+        }
+    }
+	
+	cost = { gold = 500 }
+	
+    effect = {
+        add_character_modifier = {
+            modifier = galactic_trade_hub
+            years = -1
+        }
+    }
+	
+	ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 20
+    }
+}
+
+
+found_hashishiyah_society_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+    }
+
+    decision_group_type = major
+    ai_check_interval = 0
+    desc = "found_hashishiyah_society_decision_desc"
+
+    is_shown = {
+        has_trait = hashishiyah
+        is_landless_adventurer = no
+        NOT = { has_character_modifier = hashishiyah_society }
+    }
+
+    is_valid = {
+        any_courtier = {
+            count >= 5
+            has_trait = hashishiyah
+        }
+    }
+
+    effect = {
+        add_character_modifier = {
+            modifier = hashishiyah_society
+            years = -1
+        }
+
+        every_courtier = {
+            limit = {
+                NOT = { has_trait = hashishiyah }
+            }
+            add_trait = hashishiyah
+        }
+
+        every_vassal = {
+            limit = {
+                NOT = { has_trait = hashishiyah }
+            }
+            add_trait = hashishiyah
+        }
+    }
+	
+	ai_potential = {
+        always = no
+    }
+
+    ai_will_do = {
+        base = 0
+    }
+}
+
+bzn_capture_slaves_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/ep3_decision_varangian_guard.dds"
+    }
+
+    ai_check_interval = 0
+	decision_group_type = realm
+    cooldown = { years = 2 }
+
+    is_shown = {
+        has_trait = slaver
+        is_landless_adventurer = no
+    }
+
+    desc = bzn_capture_slaves_desc
+
+    effect = {
+        trigger_event = {
+            id = bzn_decisions.0003
+            days = { 5 10 }
+        }
+        trigger_event = {
+            id = bzn_decisions.0004
+            days = { 5 10 }
+        }
+        trigger_event = {
+            id = bzn_decisions.0005
+            days = { 5 10 }
+        }
+        custom_tooltip = bzn_capture_slaves_effect_tooltip
+    }
+
+    cost = { prestige = 100 }
+
+    ai_potential = {
+        always = no
+    }
+
+    ai_will_do = {
+        base = 0
+    }
+}
+
+free_yourself_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_activity.dds"
+    }
+	
+	decision_group_type = major
+    ai_check_interval = 120
+    cooldown = { years = 1 }
+
+    is_shown = {
+		OR = {
+			has_trait = thrall
+			has_trait = battle_thrall
+		}
+	}
+    is_valid = {
+        OR = {
+			has_trait = thrall
+			has_trait = battle_thrall
+		}
+		is_independent_ruler = yes
+	}
+	desc = free_yourself_decision_desc
+
+    effect = {
+        add_stress = -30
+		remove_trait = thrall
+		remove_trait = battle_thrall
+	}
+
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 100
+    }
+}
+
+
+challenge_statue_to_duel_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/mpo_decision_confederation.dds"
+    }
+	
+	decision_group_type = major
+    ai_check_interval = 120
+    cooldown = { years = 5 }
+
+    is_shown = {
+        has_trait = lunatic_1
+    }
+
+    is_valid = {
+        has_trait = lunatic_1
+    }
+	
+	desc = challenge_statue_to_duel_decision_desc
+
+    effect = {
+        add_stress = -30
+        add_character_modifier = {
+            modifier = challenged_statue_bonus
+            years = 5
+        }
+        random_list = {
+            75 = { }
+            25 = { add_trait = lifestyle_blademaster }
+        }
+    }
+	
+	 cost = { prestige = 100 }
+
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 50
+    }
+}
+
+write_manifesto_to_stars_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_misc.dds"
+    }
+
+    ai_check_interval = 120
+    decision_group_type = major
+    cooldown = { years = 5 }
+
+    is_shown = {
+        has_trait = lunatic_1
+    }
+
+    is_valid = {
+        has_trait = lunatic_1
+    }
+
+    cost = { prestige = 100 }
+
+    effect = {
+        add_character_modifier = {
+            modifier = manifesto_inspired
+            years = 5
+        }
+        random_list = {
+            75 = { }
+            25 = { add_trait = poet }
+        }
+    }
+
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 50
+    }
+}
+
+convene_spirit_circle_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+    }
+
+    ai_check_interval = 120
+    decision_group_type = major
+    cooldown = { years = 5 }
+
+    is_shown = {
+        has_trait = possessed_1
+    }
+
+    is_valid = {
+        has_trait = possessed_1
+    }
+
+    cost = { piety = 100 }
+
+    effect = {
+        add_character_modifier = {
+            modifier = spirit_guided
+            years = 5
+        }
+    }
+
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 50
+    }
+}
+
+bzn_whisper_to_void = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+    }
+    desc = bzn_whisper_to_void_desc
+    decision_group_type = major
+    ai_check_interval = 120
+
+    is_shown = {
+        NOT = { has_trait = voidborn }
+        has_trait = possessed_1
+    }
+
+    cost = { piety = 1000 }
+
+    is_valid = {
+        piety_level >= 3
+        has_trait = possessed_1
+        OR = {
+			has_trait = scholar
+            has_trait = theologian
+            has_trait = lifestyle_mystic
+            faith = { has_doctrine = tenet_esotericism }
+        }
+    }
+
+    effect = {
+        remove_trait = possessed_1
+        add_trait = voidborn
+    }
+
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 50
+    }
+}
+
+bzn_void_sacrifice = {
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+    }
+    desc = bzn_whisper_to_void_desc
+    decision_group_type = major
+    ai_check_interval = 120
+	cooldown = { years = 5 }
+
+    is_shown = {
+        has_trait = voidborn
+    }
+
+    is_valid = {
+		has_trait = voidborn
+    }
+
+    effect = {
+		add_piety = 1000
+		add_learning_skill = 2
+		add_stress = -30
+		random_courtier = { death }	
+    }
+	
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 50
+    }
+}	
+
+druidic_omen_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_misc.dds"
+    }
+	
+	decision_group_type = major
+	ai_check_interval = 120
+    desc = druidic_omen_decision_desc
+    cooldown = { years = 5 }
+
+    is_shown = {
+        faith = faith:druidism
+        is_landed = yes
+    }
+
+    is_valid = {
+        faith = faith:druidism
+    }
+
+    effect = {
+        send_interface_toast = {
+            type = event_toast_effect_neutral
+            title = msg_druic_omen_focus
+            left_icon = root
+        }
+
+        add_character_modifier = {
+            modifier = druidic_omen_focus
+            years = 5
+        }
+
+        random_list = {
+            75 = { }
+            25 = {
+                add_trait = lifestyle_mystic
+            }
+        }
+    }
+
+    cost = { piety = 200 }
+
+    ai_potential = {
+        has_faith = druidism
+    }
+
+    ai_will_do = {
+        base = 100
+    }
+}
+

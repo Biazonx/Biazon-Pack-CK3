@@ -1,0 +1,460 @@
+﻿namespace = laamp_inspiration
+#Self "Sponsored": Weapon - Choose your item
+laamp_inspiration.0001 = {
+	type = character_event
+	title = fund_inspiration.0001.t
+	desc = fund_inspiration.0011.desc
+	theme = realm
+	left_portrait = {
+		character = scope:inspiration_owner
+		animation = personality_honorable
+	}
+
+	trigger = {
+		scope:inspiration = {
+			has_inspiration_type = laamp_weapon_inspiration
+		}
+		scope:inspiration_owner = { NOT = { exists = var:artifact_weapon_type } }
+		scope:inspiration_owner = scope:inspiration_sponsor
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_epic_sacral_moment"
+		#Saving some scopes for the tooltips
+
+		save_scope_as = actor
+		scope:inspiration_owner = {
+			assign_quirk_effect = yes
+			save_scope_as = recipient
+		}
+
+	}
+
+	after = {
+		scope:inspiration = {
+			change_inspiration_progress = 10
+		}
+	}
+
+	# sword; close quarters to slash and pierce
+	option = {
+		name = fund_inspiration.0011.a
+
+		scope:inspiration_owner = {
+			random_list = { #What do they want to forge?
+				10 = {
+					desc = fund_inspiration.0011.tooltip_dagger
+					set_variable = {
+						name = artifact_weapon_type
+						value = flag:artifact_weapon_type_dagger
+					}
+					custom_tooltip = fund_inspiration.0011.tooltip_dagger.tt
+				}
+				10 = {
+					desc = fund_inspiration.0011.tooltip_sword
+					set_variable = {
+						name = artifact_weapon_type
+						value = flag:artifact_weapon_type_sword
+					}
+					custom_tooltip = fund_inspiration.0011.tooltip_sword.tt
+				}
+			}
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 25
+				has_trait = brave
+			}
+		}
+	}
+
+	# axe or mace; blunt and smash
+	option = {
+		name = fund_inspiration.0011.b
+		scope:inspiration_owner = {
+			random_list = { #What do they want to forge?
+				10 = {
+					desc = fund_inspiration.0011.tooltip_axe
+					set_variable = {
+						name = artifact_weapon_type
+						value = flag:artifact_weapon_type_axe
+					}
+					custom_tooltip = fund_inspiration.0011.tooltip_axe.tt
+				}
+				10 = {
+					desc = fund_inspiration.0011.tooltip_hammer
+					set_variable = {
+						name = artifact_weapon_type
+						value = flag:artifact_weapon_type_hammer
+					}
+					custom_tooltip = fund_inspiration.0011.tooltip_hammer.tt
+				}
+				10 = {
+					desc = fund_inspiration.0011.tooltip_mace
+					set_variable = {
+						name = artifact_weapon_type
+						value = flag:artifact_weapon_type_mace
+					}
+					custom_tooltip = fund_inspiration.0011.tooltip_mace.tt
+				}
+			}
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 25
+				has_trait = strong
+			}
+			modifier = {
+				add = 25
+				has_trait = berserker
+			}
+		}
+	}
+
+	# spear; create distance
+	option = {
+		name = fund_inspiration.0011.c
+		scope:inspiration_owner = {
+			random_list = { #What do they want to forge?
+				10 = {
+					desc = fund_inspiration.0011.tooltip_spear
+					set_variable = {
+						name = artifact_weapon_type
+						value = flag:artifact_weapon_type_spear
+					}
+					custom_tooltip = fund_inspiration.0011.tooltip_spear.tt
+				}
+			}
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 25
+				has_trait = craven
+			}
+			modifier = {
+				add = 25
+				OR = {
+					has_intrigue_lifestyle_trait_trigger = yes
+ 					has_lifestyle = intrigue_lifestyle
+ 				}
+			}
+		}
+	}
+
+	# default option of "do what you want"
+	option = {
+		name = fund_inspiration.0031.f
+		hidden_effect = { #If they haven't specified what they're gonna make we decide it here
+			set_weapon_artifact_type_effect = {
+				BASE_SCOPE = scope:inspiration_owner
+				NO_TYPE = no
+			}
+		}
+		custom_tooltip = fund_inspiration.they_decide_option_tt
+		ai_chance = {
+			base = 25
+			modifier = {
+				add = 25
+				has_trait = arbitrary
+			}
+		}
+	}
+}
+
+#Self "Sponsored": Weapon - Inspiration Complete
+laamp_inspiration.1001 = {
+	type = character_event
+	title = fund_inspiration.1001.t
+	desc = {
+		desc = fund_inspiration.1011.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					scope:weapon_type = flag:artifact_weapon_type_axe
+				}
+				desc = artifact_axe_description
+			}
+			triggered_desc = {
+				trigger = {
+					scope:weapon_type = flag:artifact_weapon_type_dagger
+				}
+				desc = artifact_dagger_description
+			}
+			triggered_desc = {
+				trigger = {
+					scope:weapon_type = flag:artifact_weapon_type_hammer
+				}
+				desc = artifact_hammer_description
+			}
+			triggered_desc = {
+				trigger = {
+					scope:weapon_type = flag:artifact_weapon_type_mace
+				}
+				desc = artifact_mace_description
+			}
+			triggered_desc = {
+				trigger = {
+					scope:weapon_type = flag:artifact_weapon_type_spear
+				}
+				desc = artifact_spear_description
+			}
+			triggered_desc = {
+				trigger = {
+					AND = { 
+						scope:newly_created_artifact = {
+							has_variable = replica_sassanian_sword
+							OR = {
+								rarity = famed
+								rarity = illustrious
+							}
+						}
+					}
+				}
+				desc = famed_replica_sassanian_sword_description
+			}
+			triggered_desc = {
+				trigger = {
+					AND = { 
+						scope:newly_created_artifact = {
+							has_variable = replica_sassanian_sword
+							rarity = masterwork
+						}
+					}
+				}
+				desc = masterwork_replica_sassanian_sword_description
+			}
+			triggered_desc = {
+				trigger = {
+					AND = { 
+						scope:newly_created_artifact = {
+							has_variable = replica_sassanian_sword
+							rarity = common
+						}
+					}
+				}
+				desc = common_replica_sassanian_sword_description
+			}
+			desc = artifact_sword_description
+		}
+	}
+	theme = inspiration_complete
+	override_background = { reference = armory }
+	left_portrait = {
+		character = scope:inspiration_owner
+		triggered_animation = {
+			trigger = { scope:weapon_type = flag:artifact_weapon_type_axe }
+			animation = marshal_axe
+		}
+		triggered_animation = {
+			trigger = { scope:weapon_type = flag:artifact_weapon_type_dagger }
+			animation = marshal_dagger
+		}
+		triggered_animation = {
+			trigger = { scope:weapon_type = flag:artifact_weapon_type_hammer }
+			animation = celebrate_hammer
+		}
+		triggered_animation = {
+			trigger = { scope:weapon_type = flag:artifact_weapon_type_mace }
+			animation = marshal_mace
+		}
+		triggered_animation = {
+			trigger = { scope:weapon_type = flag:artifact_weapon_type_spear }
+			animation = throne_room_two_handed_passive_1
+		}
+		animation = marshal
+	}
+	artifact = { # To display the artifact in the event-window
+        target = scope:newly_created_artifact
+        position = lower_center_portrait
+    }
+
+	trigger = {
+		has_character_flag = trigger_weapon_completion_event
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_epic_sacral_moment"
+		remove_character_flag = trigger_weapon_completion_event
+
+		create_artifact_weapon_effect = {
+			OWNER = root
+			CREATOR = scope:inspiration_owner
+			SET_WEAPON_TYPE = flag:no #Decided in the effect based on the variable saved on the inspiration owner
+		}
+		# Add a dedication to the description - fund_inspiration.7001
+		if = {
+			limit = {
+				scope:inspiration_owner = {
+					has_variable = artifact_dedication_a_var
+				}
+			}
+			scope:inspiration_owner = {
+				var:artifact_dedication_a_var = {
+					save_scope_as = dedication_a
+				}
+			}
+			scope:newly_created_artifact = {
+				set_artifact_description = artifact_dedication_inscribed_a
+			}
+		}
+		else_if = {
+			limit = {
+				scope:inspiration_owner = {
+					has_variable = artifact_dedication_b_var
+				}
+			}
+			scope:inspiration_owner = {
+				var:artifact_dedication_b_var = {
+					save_scope_as = dedication_b
+				}
+			}
+			scope:newly_created_artifact = {
+				set_artifact_description = artifact_dedication_inscribed_b
+			}
+		}
+		else_if = {
+			limit = {
+				scope:inspiration_owner = {
+					has_variable = artifact_dedication_var
+					var:artifact_dedication_var = flag:dedication_c
+				}
+			}
+			scope:newly_created_artifact = {
+				set_artifact_description = artifact_dedication_inscribed_c
+			}
+		}
+		else_if = {
+			limit = {
+				scope:inspiration_owner = {
+					has_variable = artifact_dedication_d_var
+				}
+			}
+			scope:inspiration_owner = {
+				var:artifact_dedication_d_var = {
+					save_scope_as = dedication_d
+				}
+			}
+			scope:newly_created_artifact = {
+				set_artifact_description = artifact_dedication_inscribed_d
+			}
+		}
+		else_if = {
+			limit = {
+				scope:inspiration_owner = {
+					has_variable = artifact_dedication_e_var
+				}
+			}
+			scope:inspiration_owner = {
+				var:artifact_dedication_e_var = {
+					save_scope_as = dedication_e
+				}
+			}
+			scope:newly_created_artifact = {
+				set_artifact_description = artifact_dedication_inscribed_e
+			}
+		}
+		else_if = {
+			limit = {
+				scope:inspiration_owner = {
+					has_variable = artifact_dedication_f_var
+				}
+			}
+			scope:inspiration_owner = {
+				var:artifact_dedication_f_var = {
+					save_scope_as = dedication_f
+				}
+			}
+			scope:newly_created_artifact = {
+				set_artifact_description = artifact_dedication_inscribed_f
+			}
+		}
+		else_if = {
+			limit = {
+				scope:inspiration_owner = {
+					has_variable = artifact_dedication_g1_var
+					has_variable = artifact_dedication_g2_var
+				}
+			}
+			scope:inspiration_owner = {
+				var:artifact_dedication_g1_var = {
+					save_scope_as = dedication_g1
+				}
+			}
+			scope:inspiration_owner = {
+				var:artifact_dedication_g2_var = {
+					save_scope_as = dedication_g2
+				}
+			}
+			scope:newly_created_artifact = {
+				set_artifact_description = artifact_dedication_inscribed_g
+			}
+		}
+		else_if = {
+			limit = {
+				scope:inspiration_owner = {
+					has_variable = artifact_dedication_var
+					var:artifact_dedication_h_var = flag:dedication_h
+				}
+			}
+			scope:newly_created_artifact = {
+				set_artifact_description = artifact_dedication_inscribed_h
+			}
+		}
+		#Inscribe your family motto
+		else_if = {
+			limit = {
+				scope:inspiration_owner = {
+					has_variable = artifact_inscribe_motto_var
+				}
+			}
+			scope:newly_created_artifact = {
+				set_artifact_description = artifact_motto_inscribed
+			}
+		}
+	}
+
+	option = {
+		name = fund_inspiration.1001.a
+		custom_tooltip = create_artifact_weapon_tooltip
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = {
+		name = fund_inspiration.1001.b
+		reverse_add_opinion = {
+			target = scope:inspiration_owner
+			modifier = insulted_opinion
+			opinion = -30
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	option = {
+		name = fund_inspiration.1001.c
+		reverse_add_opinion = {
+			target = scope:inspiration_owner
+			modifier = insulted_opinion
+			opinion = -50
+		}
+		destroy_artifact_aniconist_effect = {
+			ARTIFACT = scope:newly_created_artifact
+			DESTROYER = root
+			GIVE_GOLD = yes
+			PIETY_BY_DEFAULT = no
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	after = {
+		inspiration_completion_effect = yes
+	}
+}

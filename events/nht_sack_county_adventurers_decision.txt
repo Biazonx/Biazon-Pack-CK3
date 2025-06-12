@@ -1,0 +1,631 @@
+﻿###################
+# Siege Perk Event
+#
+###################
+
+namespace = nht_sack_countryside_provisions
+
+scripted_effect determine_provision_count_effect = {
+	save_scope_value_as = {
+		name = $NAME$_provisions_count
+		value = {
+			integer_range = {
+				min = 200
+				max = 400
+			}
+			multiply = {
+				value = 1
+				add = {
+					value = $CHAR$.$SKILL$
+					multiply = 0.01
+				}
+				if = {
+					limit = {
+						domicile ?= { has_domicile_parameter = camp_improves_gather_provisions_decision }
+					}
+					add = 0.5
+				}
+			}
+			ceiling = yes
+		}
+	}
+}
+
+nht_sack_countryside_provisions.0001 = {
+	type = character_event
+	title = nht_sack_countryside_provisions.0001.t
+	desc = {
+		desc = nht_sack_countryside_provisions.0001.desc
+		random_valid = {
+			triggered_desc = {
+				trigger = {
+					location = {
+						OR = {
+							has_province_modifier = winter_mild_modifier
+							has_province_modifier = winter_normal_modifier
+							has_province_modifier = winter_harsh_modifier
+						}
+					}
+					NOR = {
+						has_variable = withered_land_sack
+						has_variable = scarred_battlefield_sack
+						has_variable = protected_village_sack
+						has_variable = unprepared_village_sack
+						has_variable = opportunistic_sack
+					}
+				}
+				desc = nht_sack_countryside_provisions.0001.winter_sack
+			}
+			triggered_desc = {
+				trigger = {
+					location = {
+						OR = {
+							terrain = desert
+							terrain = desert_mountains
+							terrain = taiga
+						}
+					}
+					NOR = {
+						has_variable = withered_land_sack
+						has_variable = scarred_battlefield_sack
+						has_variable = protected_village_sack
+						has_variable = unprepared_village_sack
+						has_variable = opportunistic_sack
+					}
+				}
+				desc = nht_sack_countryside_provisions.0001.poor_sack
+			}
+			triggered_desc = {
+				trigger = {
+					location = {
+						OR = {
+							terrain = farmlands
+							terrain = floodplains
+							terrain = wetlands
+						}
+					}
+					NOR = {
+						has_variable = withered_land_sack
+						has_variable = scarred_battlefield_sack
+						has_variable = protected_village_sack
+						has_variable = unprepared_village_sack
+						has_variable = opportunistic_sack
+					}
+				}
+				desc = nht_sack_countryside_provisions.0001.limited_sack
+			}
+			triggered_desc = {
+				trigger = {
+					location = {
+						OR = {
+							terrain = forest
+							terrain = hills
+							terrain = plains
+						}				
+					}
+					NOR = {
+						has_variable = withered_land_sack
+						has_variable = scarred_battlefield_sack
+						has_variable = protected_village_sack
+						has_variable = unprepared_village_sack
+						has_variable = opportunistic_sack
+					}
+				}
+				desc = nht_sack_countryside_provisions.0001.rich_sack
+			}
+			triggered_desc = {
+				trigger = {
+					has_variable = withered_land_sack
+				}
+				desc = nht_sack_countryside_provisions.0001.withered_land_sack
+			}
+			triggered_desc = {
+				trigger = {
+					has_variable = scarred_battlefield_sack
+				}
+				desc = nht_sack_countryside_provisions.0001.scarred_battlefield_sack
+			}
+			triggered_desc = {
+				trigger = {
+					has_variable = protected_village_sack
+				}
+				desc = nht_sack_countryside_provisions.0001.protected_village_sack
+			}
+			triggered_desc = {
+				trigger = {
+					has_variable = unprepared_village_sack
+				}
+				desc = nht_sack_countryside_provisions.0001.unprepared_village_sack
+			}
+			triggered_desc = {
+				trigger = {
+					has_variable = opportunistic_sack
+				}
+				desc = nht_sack_countryside_provisions.0001.opportunistic_sack
+			}
+			desc = nht_sack_countryside_provisions.0001.decent_sack
+		}
+	}
+	theme = martial
+	override_background = { reference = terrain }
+	left_portrait = {
+		character = root
+		animation = survey
+	}
+	right_portrait = {
+		character = scope:portrait
+		triggered_animation = {
+			trigger = { has_court_position = second_camp_officer }
+			animation = admiration
+		}
+		triggered_animation = {
+			trigger = { has_court_position = master_of_spoils_camp_officer }
+			scripted_animation = bow_closed_blunt
+		}
+	}
+	lower_right_portrait = {
+		character = scope:master_of_spoils_camp_officer
+		trigger = {
+			exists = scope:master_of_spoils_camp_officer
+			exists = scope:portrait
+			scope:master_of_spoils_camp_officer != scope:portrait
+		}
+	}
+
+	immediate = {
+		save_scope_as = camp_owner
+		location = { save_scope_as = loot_province }
+		location.county.holder.liege = { save_scope_as = loot_province_liege }
+		random_list = {
+			55 = {}
+			10 = { set_variable = withered_land_sack }
+			5 = { set_variable = scarred_battlefield_sack }
+			10 = { set_variable = protected_village_sack }
+			15 = { set_variable = unprepared_village_sack }
+			15 = { set_variable = opportunistic_sack }
+		}
+		court_position:second_camp_officer ?= {
+			if = {
+				limit = { is_available = yes }
+				save_scope_as = second_camp_officer
+			}
+			save_scope_as = portrait
+		}
+		court_position:master_of_spoils_camp_officer ?= {
+			if = {
+				limit = { is_available = yes }
+				save_scope_as = master_of_spoils_camp_officer
+			}
+			if = {
+				limit = { NOT = { exists = scope:portrait } }
+				save_scope_as = portrait
+			}
+		}
+		determine_provision_count_effect = { NAME = martial CHAR = scope:camp_owner SKILL = martial }
+		determine_provision_count_effect = { NAME = prowess CHAR = scope:camp_owner SKILL = prowess }
+	}
+
+	option = { #I’ll lead the search myself.
+		name = nht_sack_countryside_provisions.0001.a
+		duel = {
+			skill = prowess
+			value = decent_skill_rating
+			15 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = 1
+				}
+				desc = nht_sack_countryside_provisions.0001.a_personal_failure
+				send_interface_toast = {
+					type = event_toast_effect_good
+					title = nht_sack_countryside_provisions.0001.a_personal_success
+					domicile ?= {
+						change_provisions = {
+							value = {
+								value = scope:loot_province.nht_sack_provisions_base_value
+							}
+						}
+					}
+				}
+				add_gold = medium_gold_value
+				scope:loot_province.county ?= {
+					add_county_modifier = {
+						modifier = nht_sacked_county_for_provision_modifier
+						years = 5
+					}			
+				}
+				scope:loot_province_liege ?= {
+					add_opinion = {
+						target = root
+						modifier = nht_sacked_county_for_provision_opinion
+						opinion = -30
+					}
+				}
+			}
+			20 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = 1
+				}
+				modifier = {
+					has_variable = protected_village_sack
+					factor = 1.3
+				}
+				modifier = {
+					has_variable = unprepared_village_sack
+					factor = 0.6
+				}
+				modifier = {
+					has_variable = opportunistic_sack
+					factor = 0.7
+				}
+				desc = nht_sack_countryside_provisions.0001.a_personal_failure
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					title = nht_sack_countryside_provisions.0001.a_personal_failure
+					custom_tooltip = nht_sack_countryside_provisions.0001.no_provisions_tt
+				}
+			}
+		}
+		ai_chance = {
+			base = 1
+			modifier = { add = prowess }
+		}
+	}
+
+	option = { #Limit the looting
+		name = nht_sack_countryside_provisions.0001.limit_loot
+		trigger = { 
+			OR = { 
+				has_variable = unprepared_village_sack
+				has_variable = opportunistic_sack
+			}
+		}
+		set_variable = nht_limit_loot_provision
+		duel = {
+			skill = martial
+			value = decent_skill_rating
+			10 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = 1
+				}
+				desc = nht_sack_countryside_provisions.0001.limit_loot_success
+				send_interface_toast = {
+					type = event_toast_effect_good
+					title = nht_sack_countryside_provisions.0001.limit_loot_success
+					domicile ?= {
+						change_provisions = {
+							value = {
+								value = scope:loot_province.nht_limited_sack_provisions_base_value
+							}
+						}
+					}
+				}
+				add_gold = minor_gold_value
+				scope:loot_province.county ?= {
+					add_county_modifier = {
+						modifier = nht_sacked_county_for_provision_modifier
+						years = 3
+					}			
+				}
+				scope:loot_province_liege ?= {
+					add_opinion = {
+						target = root
+						modifier = nht_sacked_county_for_provision_opinion
+						opinion = -10
+						years = 5
+					}
+				}
+			}
+			10 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = 1
+				}
+				modifier = {
+					has_variable = protected_village_sack
+					factor = 1.3
+				}
+				modifier = {
+					has_variable = unprepared_village_sack
+					factor = 0.6
+				}
+				modifier = {
+					has_variable = opportunistic_sack
+					factor = 0.7
+				}
+				desc = nht_sack_countryside_provisions.0001.limit_loot_failure
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					title = nht_sack_countryside_provisions.0001.limit_loot_failure
+					custom_tooltip = nht_sack_countryside_provisions.0001.no_provisions_tt
+				}
+				scope:loot_province_liege ?= {
+					add_opinion = {
+						target = root
+						modifier = nht_sacked_county_for_provision_opinion
+						opinion = -30
+					}
+				}
+			}
+		}
+		ai_chance = {
+			base = 1
+			modifier = { add = martial }
+		}
+	}
+
+	option = { # Send my soldiers to ransack the area.
+		name = nht_sack_countryside_provisions.0001.b
+		flavor = nht_sack_countryside_provisions.0001.b.named
+		duel = {
+			skill = prowess
+			value = decent_skill_rating
+			10 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = 1
+				}
+				desc = nht_sack_countryside_provisions.0001.b.success
+				send_interface_toast = {
+					type = event_toast_effect_good
+					title = nht_sack_countryside_provisions.0001.b.success
+					domicile ?= {
+						change_provisions = {
+							value = {
+								value = scope:loot_province.nht_sack_provisions_base_value
+							}
+						}
+					}
+				}
+				add_gold = medium_gold_value
+				scope:loot_province.county ?= {
+					add_county_modifier = {
+						modifier = nht_sacked_county_for_provision_modifier
+						years = 5
+					}			
+				}
+				scope:loot_province_liege ?= {
+					add_opinion = {
+						target = root
+						modifier = nht_sacked_county_for_provision_opinion
+						opinion = -30
+					}
+				}
+			}
+			15 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = 1
+				}
+				modifier = {
+					has_variable = protected_village_sack
+					factor = 1.3
+				}
+				modifier = {
+					has_variable = unprepared_village_sack
+					factor = 0.6
+				}
+				modifier = {
+					has_variable = opportunistic_sack
+					factor = 0.7
+				}
+				desc = nht_sack_countryside_provisions.0001.b.failure
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					title = nht_sack_countryside_provisions.0001.b.failure
+					custom_tooltip = nht_sack_countryside_provisions.0001.no_provisions_tt
+				}
+			}
+		}
+		ai_chance = {
+			base = 1
+			modifier = { add = prowess }
+		}
+	}
+
+	option = { # Send Second In command
+		flavor = nht_sack_countryside_provisions.0001.c.named
+		name = {
+			trigger = { NOT = { exists = scope:second_camp_officer } }
+			text = nht_sack_countryside_provisions.0001.c
+		}
+		name = {
+			trigger = { exists = scope:second_camp_officer }
+			text = nht_sack_countryside_provisions.0001.c.named
+		}
+		trigger = { 
+			employs_court_position = second_camp_officer 
+			exists = scope:second_camp_officer 
+		}
+		reason = have_second_camp_officer
+		show_as_unavailable = { always = yes }
+		scope:second_camp_officer ?= {
+			duel = {
+				skill = martial
+				value = decent_skill_rating
+				10 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = 1
+					}
+					desc = nht_sack_countryside_provisions.0001.c.success
+					scope:camp_owner = {
+						send_interface_toast = {
+							type = event_toast_effect_good
+							title = nht_sack_countryside_provisions.0001.c.success
+							left_icon = scope:second_camp_officer
+							domicile ?= {
+								change_provisions = {
+									value = {
+										value = scope:loot_province.nht_sack_provisions_base_value
+										multiply = 1.25
+									}
+								}
+							}
+						}
+					}
+					add_gold = medium_gold_value
+					scope:loot_province.county ?= {
+						add_county_modifier = {
+							modifier = nht_sacked_county_for_provision_modifier
+							years = 5
+						}			
+					}
+					scope:loot_province_liege ?= {
+						add_opinion = {
+							target = root
+							modifier = nht_sacked_county_for_provision_opinion
+							opinion = -30
+						}
+					}
+				}
+				10 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = 1
+					}
+					modifier = {
+						has_variable = protected_village_sack
+						factor = 1.3
+					}
+					modifier = {
+						has_variable = unprepared_village_sack
+						factor = 0.6
+					}
+					modifier = {
+						has_variable = opportunistic_sack
+						factor = 0.7
+					}
+					desc = nht_sack_countryside_provisions.0001.c.failure
+					scope:camp_owner = {
+						send_interface_toast = {
+							type = event_toast_effect_bad
+							title = nht_sack_countryside_provisions.0001.c.failure
+							left_icon = scope:second_camp_officer
+							custom_tooltip = nht_sack_countryside_provisions.0001.no_provisions_tt
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			base = 1
+			modifier = { add = scope:second_camp_officer.martial }
+		}
+	}
+
+	option = { # Send Second In command
+		flavor = nht_sack_countryside_provisions.0001.d.named
+		name = {
+			trigger = { NOT = { exists = scope:master_of_spoils_camp_officer } }
+			text = nht_sack_countryside_provisions.0001.d
+		}
+		name = {
+			trigger = { exists = scope:master_of_spoils_camp_officer }
+			text = nht_sack_countryside_provisions.0001.d.named
+		}
+		trigger = { 
+			employs_court_position = master_of_spoils_camp_officer
+			exists = scope:master_of_spoils_camp_officer
+		}
+		reason = have_second_camp_officer
+		show_as_unavailable = { always = yes }
+		scope:master_of_spoils_camp_officer ?= {
+			duel = {
+				skill = prowess
+				value = decent_skill_rating
+				10 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = 1
+					}
+					desc = nht_sack_countryside_provisions.0001.d.success
+					scope:camp_owner = {
+						send_interface_toast = {
+							type = event_toast_effect_good
+							title = nht_sack_countryside_provisions.0001.d.success
+							left_icon = scope:master_of_spoils_camp_officer
+							domicile ?= {
+								change_provisions = {
+									value = {
+										value = scope:loot_province.nht_sack_provisions_base_value
+										multiply = 1.25
+									}
+								}
+							}
+						}
+					}
+					add_gold = medium_gold_value
+					scope:loot_province.county ?= {
+						add_county_modifier = {
+							modifier = nht_sacked_county_for_provision_modifier
+							years = 5
+						}			
+					}
+					scope:loot_province_liege ?= {
+						add_opinion = {
+							target = root
+							modifier = nht_sacked_county_for_provision_opinion
+							opinion = -30
+						}
+					}
+				}
+				10 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = 1
+					}
+					modifier = {
+						has_variable = protected_village_sack
+						factor = 1.3
+					}
+					modifier = {
+						has_variable = unprepared_village_sack
+						factor = 0.6
+					}
+					modifier = {
+						has_variable = opportunistic_sack
+						factor = 0.7
+					}
+					desc = nht_sack_countryside_provisions.0001.d.failure
+					scope:camp_owner = {
+						send_interface_toast = {
+							type = event_toast_effect_bad
+							title = nht_sack_countryside_provisions.0001.d.failure
+							left_icon = scope:master_of_spoils_camp_officer
+							custom_tooltip = nht_sack_countryside_provisions.0001.no_provisions_tt
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			base = 1
+			modifier = { add = scope:master_of_spoils_camp_officer.prowess }
+		}
+	}
+	option = {
+		name = nht_sack_countryside_provisions.0001.e
+		remove_decision_cooldown = nht_sack_countryside_provisions_decision
+	}
+	after = {
+		remove_variable = nht_limit_loot_provision
+		remove_variable = withered_land_sack
+		remove_variable = scarred_battlefield_sack
+		remove_variable = protected_village_sack
+		remove_variable = unprepared_village_sack
+		remove_variable = opportunistic_sack
+	}
+}

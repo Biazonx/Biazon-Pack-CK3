@@ -1,0 +1,4 @@
+﻿veteran_modifier = {
+    icon = letter_positive
+}
+

@@ -1,0 +1,72 @@
+﻿language_saiyan = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_saiyan
+		}
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_saiyan }
+			multiply = 10
+		}
+	}
+	
+	color = saiyan
+}
+
+language_namekian = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_namekian
+		}
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_namekian }
+			multiply = 10
+		}
+	}
+	
+	color = namekian
+}
+
+language_frieza = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_frieza
+		}
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_frieza }
+			multiply = 10
+		}
+	}
+	
+	color = frieza
+}
+
+language_majin = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_majin
+		}
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_majin }
+			multiply = 10
+		}
+	}
+	
+	color = majin
+}
+

@@ -1,0 +1,74 @@
+﻿inspirational_learn_trade_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_smith.dds"
+	}
+
+	is_shown = {
+		debug_only = yes
+		always = no
+		has_inspirational_lifestyle_trait_trigger = no
+	}
+
+	ai_check_interval = 0
+
+	ai_potential = {
+		always = no
+	}
+
+	effect = {
+		inspirational_improve_artificer_effect = yes
+	}
+
+	cost = {
+		prestige = medium_prestige_value
+	}
+	
+    ai_will_do = {
+        base = 0
+    }	
+
+}
+
+inspirational_self_sponsor_inspiration_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_smith.dds"
+	}
+
+	is_shown = {
+		debug_only = yes
+		any_inspiration = {
+			inspiration_owner = root
+		}
+	}
+
+	is_valid = {
+
+	}
+
+	effect = {
+		random_inspiration = {
+			limit = {
+				inspiration_owner = root
+			}
+			save_scope_as = inspiration
+		}
+		save_scope_as = inspiration_owner
+		save_scope_as = inspiration_sponsor
+		trigger_event = laamp_inspiration.0001
+	}
+
+	ai_check_interval = 0
+
+	ai_potential = {
+		always = no
+	}
+
+	cost = {
+		gold = laamp_inspiration_cost
+	}
+	
+	ai_will_do = {
+        base = 0
+    }	
+
+}

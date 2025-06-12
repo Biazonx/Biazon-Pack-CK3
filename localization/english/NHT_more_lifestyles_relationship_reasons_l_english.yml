@@ -1,0 +1,8 @@
+﻿l_english:
+  
+ ########################
+ ####### Messages #######  
+ ########################    
+    
+ rival_was_chosen_as_heir: "[CHARACTER.GetShortUIName|U] came to resent [TARGET_CHARACTER.GetShortUIName] because [TARGET_CHARACTER.GetShortUINamePossessiveNoTooltip] was chosen as heir."
+ rival_was_chosen_as_heir_corresponding: "[TARGET_CHARACTER.GetShortUIName|U] came to resent [CHARACTER.GetShortUIName] because [CHARACTER.GetShortUINamePossessiveNoTooltip] was chosen as heir."

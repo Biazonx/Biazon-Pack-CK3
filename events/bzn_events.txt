@@ -1,0 +1,237 @@
+﻿namespace = bzn_decisions
+
+bzn_decisions.0001 = { # Summon Chinese Traveler to Court
+	hidden = yes
+	immediate = {
+		create_character = {
+			location = root.capital_province
+			save_scope_as = traveler
+			template = bzn_traveler_character
+			dynasty = none
+		}
+		add_courtier = scope:traveler
+		send_interface_message = {
+			type = event_generic_good_with_text
+			title = bzn_decisions.0001.t
+			desc = bzn_decisions.0001.desc
+			left_icon = scope:traveler
+		}
+	}
+}
+
+bzn_decisions.0002 = { # Summon Japanese Samurai to Court
+    hidden = yes
+    immediate = {
+        create_character = {
+            location = root.capital_province
+            save_scope_as = new_samurai
+            template = bzn_new_samurai_character
+            dynasty = none
+        }
+        add_courtier = scope:new_samurai
+        send_interface_message = {
+            type = event_generic_good_with_text
+            title = bzn_decisions.0002.t
+            desc = bzn_decisions.0002.desc
+            left_icon = scope:new_samurai
+        }
+    }
+}
+
+bzn_decisions.0003 = { 
+    hidden = yes
+    immediate = {
+        create_character = {
+            location = root.capital_province
+            save_scope_as = slave
+            template = bzn_slave_character
+            dynasty = none
+        }
+		add_courtier = scope:slave
+        send_interface_message = {
+            type = event_generic_good_with_text
+            title = bzn_decisions.0003.t
+            desc = bzn_decisions.0003.desc
+            left_icon = scope:slave
+        }
+    }
+}
+
+bzn_decisions.0004 = { 
+    hidden = yes
+    immediate = {
+        create_character = {
+            location = root.capital_province
+            save_scope_as = slave
+            template = bzn_slave_character
+            dynasty = none
+        }
+		add_courtier = scope:slave
+        send_interface_message = {
+            type = event_generic_good_with_text
+            title = bzn_decisions.0003.t
+            desc = bzn_decisions.0003.desc
+            left_icon = scope:slave
+        }
+    }
+}
+
+bzn_decisions.0005 = { 
+    hidden = yes
+    immediate = {
+        create_character = {
+            location = root.capital_province
+            save_scope_as = slave
+            template = bzn_slave_character
+            dynasty = none
+        }
+		add_courtier = scope:slave
+        send_interface_message = {
+            type = event_generic_good_with_text
+            title = bzn_decisions.0003.t
+            desc = bzn_decisions.0003.desc
+            left_icon = scope:slave
+        }
+    }
+}
+
+
+bzn_decisions.0006 = {
+	hidden = yes
+	immediate = {
+		create_character = {
+			location = root.capital_province
+			save_scope_as = hashishiyah
+			template = bzn_hashishiyah_character
+			dynasty = none
+		}
+		add_courtier = scope:hashishiyah
+		send_interface_message = {
+			type = event_generic_good_with_text
+			title = bzn_decisions.0006.t
+			desc = bzn_decisions.0006.desc
+			left_icon = scope:hashishiyah
+		}
+	}
+}
+
+bzn_decisions.0007 = { 
+    hidden = yes
+    immediate = {
+        create_character = {
+            location = root.capital_province
+            save_scope_as = minion
+            template = bzn_majin_character
+            dynasty = none
+        }
+		add_courtier = scope:minion
+        send_interface_message = {
+            type = event_generic_good_with_text
+            title = bzn_decisions.0007.t
+            desc = bzn_decisions.0003.desc
+            left_icon = scope:minion
+        }
+    }
+}
+
+bzn_decisions.0008 = { 
+    hidden = yes
+    immediate = {
+        create_character = {
+            location = root.capital_province
+            save_scope_as = minion
+            template = bzn_majin_character
+            dynasty = none
+        }
+		add_courtier = scope:minion
+        send_interface_message = {
+            type = event_generic_good_with_text
+            title = bzn_decisions.0007.t
+            desc = bzn_decisions.0007.desc
+            left_icon = scope:minion
+        }
+    }
+}
+
+bzn_decisions.0009 = { 
+    hidden = yes
+    immediate = {
+        create_character = {
+            location = root.capital_province
+            save_scope_as = minion
+            template = bzn_majin_character
+            dynasty = none
+        }
+		add_courtier = scope:minion
+        send_interface_message = {
+            type = event_generic_good_with_text
+            title = bzn_decisions.0007.t
+            desc = bzn_decisions.0007.desc
+            left_icon = scope:minion
+        }
+    }
+}
+
+bzn_decisions.0010 = {
+	hidden = yes
+	immediate = {
+		create_character = {
+			location = root.capital_province
+			save_scope_as = islam_scholar
+			template = bzn_islam_scholar_character
+			dynasty = none
+		}
+		add_courtier = scope:islam_scholar
+		send_interface_message = {
+			type = event_generic_good_with_text
+			title = bzn_decisions.0010.t
+			desc = bzn_decisions.0010.desc
+			left_icon = scope:islam_scholar
+		}
+	}
+}
+
+bzn_decisions.0011 = {
+	type = character_event
+	title = bzn_decisions.0011.t
+	desc = bzn_decisions.0011.d
+	theme = martial
+	override_background = courtyard
+
+	left_portrait = {
+		character = root
+		animation = zealous
+	}
+
+	option = {
+		name = bzn_decisions.0011.a
+		set_character_faith = faith:taborites
+		every_close_family_member = { 
+			set_character_faith = faith:taborites 
+			}
+		capital_county = {
+			set_county_faith = faith:taborites
+			}
+	}
+	option = {
+		name = bzn_decisions.0011.b
+		set_character_faith = faith:ultraquist
+		every_close_family_member = { 
+			set_character_faith = faith:ultraquist 
+			}
+		capital_county = {
+			set_county_faith = faith:ultraquist
+			}
+	}
+	option = {
+		name = bzn_decisions.0011.c
+		set_character_faith = faith:orebites
+		every_close_family_member = { 
+			set_character_faith = faith:orebites 
+			}
+		capital_county = {
+			set_county_faith = faith:orebites
+			}
+		
+	}
+}

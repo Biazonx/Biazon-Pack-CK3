@@ -1,0 +1,597 @@
+﻿l_english:
+
+    egyptian_religion:0 "Egyptian"
+    egyptian_religion_adj:0 "Egyptian"
+    egyptian_religion_desc:0 "The Egyptian pantheon was one of the oldest  practiced religions, dating back to somewhere in prehistory, but concretely coming into archeological record as early as the foundation of the first dynasty of Egypt. The Egyptians believed in a very complex cosmology and afterlife, with the Pharaohs acting as the gods' representative on earth."
+    #pantheon_the_gods:0 "egyptian Pantheon of gods"
+    holy_order_sons_of_Montu:0 "Sons of Montu"
+    holy_order_sons_of_aten:0 "Sons of Aten"
+    #kemetic
+    kemetic_idolism:0 "Kemetism"
+    kemetic_idolism_adj:0 "Kemetism"
+    kemetic_idolism_adherent:0 "Kemetimist"
+    kemetic_idolism_adherent_plural:0 "Kemetimists"
+    kemetic_idolism_desc:0 "The Egyptian pantheon was one of the oldest  practiced religions, dating back to somewhere in prehistory, but concretely coming into archeological record as early as the foundation of the first dynasty of Egypt. The Egyptians believed in a very complex cosmology and afterlife, with the Pharaohs acting as the gods' representative on earth." 
+
+    kemetic_idolism_old:0 "Old Kemetism"
+    kemetic_idolism_old_adj:0 "Old Kemetism"
+    kemetic_idolism_adherent_old:0 "Old Kemetismist"
+    kemetic_idolism_old_adherent_plural:0 "Old Kemetismist"
+    kemetic_idolism_old_desc:0 "The Egyptian pantheon was one of the oldest  practiced religions, dating back to somewhere in prehistory, but concretely coming into archeological record as early as the foundation of the first dynasty of Egypt. The Egyptians believed in a very complex cosmology and afterlife, with the Pharaohs acting as the gods' representative on earth." 
+
+    kemetic_idolism_religious_head_title:0 "High Priest"
+    kemetic_idolism_divine_realm:0 "Divine Realm"
+    kemetic_idolism_religious_symbol:0 "Eye of Amun"
+    kemetic_idolism_religious_text:0 "rituals"
+    
+
+    #kemetic gods/goddesses Localization
+
+    #An Dagda Localization
+    kemetic_idolism_high_god_name:0 "Amun Ra"
+    kemetic_idolism_high_god_name_possessive:0 "Amun Ra's"
+    kemetic_idolism_high_god_name_alternate:0 "The hidden one"
+    kemetic_idolism_high_god_name_alternate_possessive:0 "The hidden one's"
+    kemetic_idolism_high_god_shehe:0 "He"
+    kemetic_idolism_high_god_herselfhimself:0 "Himself"
+    kemetic_idolism_high_god_herhis:0 "His"
+
+    #Creater god Localization
+    kemetic_idolism_creator_god_name:0 "Atum"
+    kemetic_idolism_creator_god_name_possessive:0 "Atum's"
+
+    #Health Goddess Dianus
+    kemetic_idolism_health_god_name:0 "Sekhmet"
+    kemetic_idolism_health_god_name_possessive:0 "Sekhmet's"
+
+    #Fertility Goddess Beira Localization
+    kemetic_idolism_fertility_god_name:0 "Hathor"
+    kemetic_idolism_fertility_god_name_possessive:0 "hathor's"
+
+    #Wealth god Lugh Localization
+    kemetic_idolism_wealth_god_name:0 "Horus"
+    kemetic_idolism_wealth_god_name_possessive:0 "horus's"
+
+    #Household god Brigid 
+    kemetic_idolism_household_god_name:0 "Bes"
+    kemetic_idolism_household_god_name_possessive:0 "Bes's"
+
+    #Fate god Mór-Ríoghain Localization
+    kemetic_idolism_fate_god_name:0 "Shai"
+    kemetic_idolism_fate_god_name_possessive:0 "Shai's"
+
+    #knowledge god ecnaLocalization
+    kemetic_idolism_knowledge_god_name:0 "Thoth"
+    kemetic_idolism_knowledge_god_name_possessive:0 "Thoth's"
+
+    #War god Neit Localization
+    kemetic_idolism_war_god_name:0 "Montu"
+    kemetic_idolism_war_god_name_possessive:0 "Montu's"
+
+    #Trickster god Mendacius Localization
+    kemetic_idolism_trickster_god_name:0 "Seth"
+    kemetic_idolism_trickster_god_name_possessive:0 "Seth's"
+
+    #Night goddess Latona Localization
+    kemetic_idolism_night_god_name:0 "Nephthys"
+    kemetic_idolism_night_god_name_possessive:0 "Nephthys's"
+
+    kemetic_idolism_water_god_name:0 "Anuket"
+    kemetic_idolism_water_god_name_possessive:0 "Anuket's"
+
+    #evil gods names 
+    kemetic_idolism_evil_god_apophis:0 "Apophis" 
+    kemetic_idolism_evil_god_apep:0 "Apep"
+
+    kemetic_idolism_witchgodname_apophis:0 "Apophis" 
+
+    #Devil god   
+    kemetic_idolism_devil_name:0 "Seth" 
+    kemetic_idolism_devil_name_possessive:0 "Seth's"
+
+    #Death god Aed
+    kemetic_idolism_death_deity_name:0 "Osiris"
+    kemetic_idolism_death_deity_name_possessive:0 "Osiris's"
+
+    #Good gods names 
+    kemetic_idolism_good_god_isis:0 "Isis" 
+    kemetic_idolism_good_god_horus:0 "Horus" 
+    kemetic_idolism_good_god_mut:0 "Mut" 
+    kemetic_idolism_good_god_sekhmet:0 "Sekhmet" 
+    kemetic_idolism_good_god_geb:0 "Geb" 
+    kemetic_idolism_good_god_ptah:0 "Ptah" 
+    kemetic_idolism_good_god_re:0 "Re" 
+    kemetic_idolism_good_god_anubis:0 "Anubis"
+
+    
+
+    #kemetic male priests  
+    kemetic_idolism_priest_male:0 "Priest"
+    kemetic_idolism_priest_male_plural:0 "Priests"
+
+    #kemetic female priests 
+    kemetic_idolism_priest_female:0 "Chantress" 
+    kemetic_idolism_priest_female_plural:0 "Chantresses" 
+
+    #Kemetic High Priest 
+    kemetic_idolism_bishop_male:0 "Priest" 
+    kemetic_idolism_bishop_male_plural:0 "Priests" 
+
+    #Atenism
+    atenism:0 "Atenism"
+    atenism_adj:0 "Atenism"
+    atenism_adherent:0 "Atenismist"
+    atenism_adherent_plural:0 "Atenismists"
+    atenism_desc:0 "Atenism, sometimes known as the Amarna heresy, was a short-lived monotheistic or henotheistic worship of the personification of the Sun, Aten. It was established by Akhenaten, also known as Amenhotep IV, of the eighteenth dynasty. After Akhenaten's tumultuous reign towards the Egyptian religion, his cult quickly collapsed as Tutankhamun quickly abolished it." 
+
+    atenism_old:0 "Old Atenism"
+    atenism_old_adj:0 "Old Atenism"
+    atenism_adherent_old:0 "Old Atenismist"
+    atenism_old_adherent_plural:0 "Old Atenismists"
+    atenism_old_desc:0 "Atenism, sometimes known as the Amarna heresy, was a short-lived monotheistic or henotheistic worship of the personification of the Sun, Aten. It was established by Akhenaten, also known as Amenhotep IV, of the eighteenth dynasty. After Akhenaten's tumultuous reign towards the Egyptian religion, his cult quickly collapsed as Tutankhamun quickly abolished it." 
+
+    atenism_religious_head_title:0 "High Priest"
+    atenism_divine_realm:0 "Divine Realm"
+    atenism_religious_symbol:0 "Sun disk"
+    atenism_religious_text:0 "rituals"
+    
+
+    #kemetic gods/goddesses Localization
+
+    #An Dagda Localization
+    atenism_high_god_name:0 "Aten"
+    atenism_high_god_name_possessive:0 "Aten's"
+    atenism_high_god_name_alternate:0 "The Rahorus who rejoices in the horizon"
+    atenism_high_god_name_alternate_possessive:0 "The Rahorus who rejoices in the horizon"
+    atenism_high_god_shehe:0 "He"
+    atenism_high_god_herselfhimself:0 "Himself"
+    atenism_high_god_herhis:0 "His"
+
+    #Creater god Localization
+    atenism_creator_god_name:0 "Atum"
+    atenism_creator_god_name_possessive:0 "Atum's"
+
+    #Health Goddess Dianus
+    atenism_health_god_name:0 "Sekhmet"
+    atenism_health_god_name_possessive:0 "Sekhmet's"
+
+    #Fertility Goddess Beira Localization
+    atenism_fertility_god_name:0 "Hathor"
+    atenism_fertility_god_name_possessive:0 "hathor's"
+
+    #Wealth god Lugh Localization
+    atenism_wealth_god_name:0 "Horus"
+    atenism_wealth_god_name_possessive:0 "horus's"
+
+    #Household god Brigid 
+    atenism_household_god_name:0 "Bes"
+    atenism_household_god_name_possessive:0 "Bes's"
+
+    #Fate god Mór-Ríoghain Localization
+    atenism_fate_god_name:0 "Shai"
+    atenism_fate_god_name_possessive:0 "Shai's"
+
+    #knowledge god ecnaLocalization
+    atenism_knowledge_god_name:0 "Thoth"
+    atenism_knowledge_god_name_possessive:0 "Thoth's"
+
+    #War god Neit Localization
+    atenism_war_god_name:0 "Montu"
+    atenism_war_god_name_possessive:0 "Montu's"
+
+    #Trickster god Mendacius Localization
+    atenism_trickster_god_name:0 "Seth"
+    atenism_trickster_god_name_possessive:0 "Seth's"
+
+    #Night goddess Latona Localization
+    atenism_night_god_name:0 "Nephthys"
+    atenism_night_god_name_possessive:0 "Nephthys's"
+
+    atenism_water_god_name:0 "Anuket"
+    atenism_water_god_name_possessive:0 "Anuket's"
+
+    #evil gods names 
+    atenism_evil_god_apophis:0 "Apophis" 
+    atenism_evil_god_apep:0 "Apep"
+
+    atenism_witchgodname_apophis:0 "Apophis"
+
+    #Devil god   
+    atenism_devil_name:0 "Seth" 
+    atenism_devil_name_possessive:0 "Seth's"
+
+    #Death god Aed
+    atenism_death_deity_name:0 "Osiris"
+    atenism_death_deity_name_possessive:0 "Osiris's"
+
+    #Good gods names 
+    atenism_good_god_isis:0 "Isis" 
+    atenism_good_god_horus:0 "Horus" 
+    atenism_good_god_mut:0 "Mut" 
+    atenism_good_god_sekhmet:0 "Sekhmet" 
+    atenism_good_god_geb:0 "Geb" 
+    atenism_good_god_ptah:0 "Ptah" 
+    atenism_good_god_re:0 "Re" 
+    atenism_good_god_anubis:0 "Anubis"
+
+    #kemetic male priests  
+    atenism_priest_male:0 "Priest"
+    atenism_priest_male_plural:0 "Priests"
+
+    #kemetic female priests 
+    atenism_priest_female:0 "Chantress" 
+    atenism_priest_female_plural:0 "Chantresses" 
+
+    #Kemetic High Priest 
+    atenism_bishop_male:0 "Priest" 
+    atenism_bishop_male_plural:0 "Priests" 
+
+ hermetic_pagan:0 "Hermeticism"
+ hermetic_pagan_adj:0 "Hermetic"
+ hermetic_pagan_adherent:0 "Hermeticist"
+ hermetic_pagan_adherent_plural:0 "Hermeticists"
+ hermetic_pagan_desc:0 "Hermeticists are the students and disciples of Hermes Trismegistus, a demi-god figure combining aspects of the Hellenic god Hermes and the Egyptian god Thoth. Their eclectic philosophy incorporates elements of spiritualism, theology, alchemy, medicine and various forms of magic - encapsulated by the maxim "As above, so below.""
+
+ hermetic_pagan_old:0 "Old Hermeticism"
+ hermetic_pagan_old_adj:0 "Old Hermetic"
+ hermetic_pagan_old_adherent:0 "Old Hermeticist"
+ hermetic_pagan_old_adherent_plural:0 "Old Hermeticists"
+
+ kemetic_high_god_name:0 "Amun-Ra"
+ kemetic_high_god_name_possessive:0 "Amun-Ra's"
+ kemetic_high_god_name_alternate:0 "The Hidden One"
+ kemetic_high_god_name_alternate_possessive:0 "The Hidden One's"
+ kemetic_good_god_anhur:0 "Anhur"
+ kemetic_good_god_aten:0 "Aten"
+ kemetic_good_god_atum:0 "Atum"
+ kemetic_good_god_bennu:0 "Bennu"
+ kemetic_good_god_geb:0 "Geb"
+ kemetic_good_god_khepri:0 "Khepri"
+ kemetic_good_god_khnum:0 "Khnum"
+ kemetic_good_god_khonsu:0 "Khonsu"
+ kemetic_good_god_maahes:0 "Maahes"
+ kemetic_good_god_nefertum:0 "Nefertum"
+ kemetic_good_god_shu:0 "Shu"
+ kemetic_good_god_mut:0 "Mut"
+ kemetic_good_god_hesat:0 "Hesat"
+ kemetic_good_god_maat:0 "Ma'at"
+ kemetic_good_god_wadj-wer:0 "Wadj-wer"
+ kemetic_devil_name:0 "Anubis"
+ kemetic_devil_name_possessive:0 "Anubis'"
+ kemetic_evil_god_sobek:0 "Sobek"
+ kemetic_evil_god_imentet:0 "Imentet"
+ kemetic_evil_god_menhit:0 "Menhit"
+ kemetic_evil_god_nekhbet:0 "Nekhbet"
+ kemetic_evil_god_nephthys:0 "Nephthys"
+ kemetic_evil_god_wadjet:0 "Wadjet"
+ kemetic_evil_god_heh:0 "Heh"
+ kemetic_evil_god_kek:0 "Kek"
+ kemetic_evil_god_nu:0 "Nu"
+ kemetic_death_deity_name:0 "Osiris"
+ kemetic_death_deity_name_possessive:0 "Osiris'"
+ kemetic_creator_god_name:0 "Neith"
+ kemetic_creator_god_name_possessive:0 "Neith's"
+ kemetic_health_god_name:0 "Horus"
+ kemetic_health_god_name_possessive:0 "Horus'"
+ kemetic_fertility_god_name:0 "Hathor"
+ kemetic_fertility_god_name_possessive:0 "Hathor's"
+ kemetic_wealth_god_name:0 "Ptah"
+ kemetic_wealth_god_name_possessive:0 "Ptah's"
+ kemetic_household_god_name:0 "Bastet"
+ kemetic_household_god_name_possessive:0 "Bastet's"
+ kemetic_fate_god_name:0 "the Hemuset"
+ kemetic_fate_god_name_possessive:0 "the Hemusets'"
+ kemetic_knowledge_god_name:0 "Thoth"
+ kemetic_knowledge_god_name_possessive:0 "Thoth's"
+ kemetic_war_god_name:0 "Sekhmet"
+ kemetic_war_god_name_possessive:0 "Sekhmet's"
+ kemetic_trickster_god_name:0 "Set"
+ kemetic_trickster_god_name_possessive:0 "Set's"
+ kemetic_night_god_name:0 "Nut"
+ kemetic_night_god_name_possessive:0 "Nut's"
+ kemetic_water_god_name:0 "Hapi"
+ kemetic_water_god_name_possessive:0 "Hapi's"
+
+ hermetic_high_god_name:0 "Hermes Trismegistus"
+ hermetic_high_god_name_possessive:0 "Hermes Trismegistus'"
+ hermetic_high_god_name_alternate:0 "The Thrice-Greatest"
+ hermetic_high_god_name_alternate_possessive:0 "The Thrice-Greatest's"
+ hermetic_religious_text:0 "Hermetica"
+ hermetic_religious_symbol:0 "caduceus"
+ isiac_high_god_name:0 "Isis"
+ isiac_high_god_name_possessive:0 "Isis'"
+
+ enneadid_high_god_name:0 "Horus"
+ enneadid_high_god_name_possessive:0 "Horus'"
+ enneadid_high_god_name_alternate:0 "The Distant One"
+ enneadid_high_god_name_alternate_possessive:0 "The Distant One's"
+ enneadid_devil_name:0 "Set"
+ enneadid_devil_name_possessive:0 "Set's"
+ enneadid_creator_god_name:0 "Atum"
+ enneadid_creator_god_name_possessive:0 "Atum's"
+ enneadid_health_god_name:0 "Nephthys"
+ enneadid_health_god_name_possessive:0 "Nephthys'"
+ enneadid_fertility_god_name:0 "Isis"
+ enneadid_fertility_god_name_possessive:0 "Isis'"
+ enneadid_wealth_god_name:0 "Shu"
+ enneadid_wealth_god_name_possessive:0 "Shu"
+ enneadid_household_god_name:0 "Isis"
+ enneadid_household_god_name_possessive:0 "Isis"
+ enneadid_fate_god_name:0 "Ma'at"
+ enneadid_fate_god_name_possessive:0 "Ma'at's"
+ enneadid_knowledge_god_name:0 "Thoth"
+ enneadid_knowledge_god_name_possessive:0 "Thoth"
+ enneadid_war_god_name:0 "Horus"
+ enneadid_war_god_name_possessive:0 "Horus'"
+ enneadid_trickster_god_name:0 "Set"
+ enneadid_trickster_god_name_possessive:0 "Set's"
+ enneadid_night_god_name:0 "Nut"
+ enneadid_night_god_name_possessive:0 "Nut's"
+ enneadid_water_god_name:0 "Tefnut"
+ enneadid_water_god_name_possessive:0 "Tefnut's"
+ witchgodname_enneadid:0 "Hekat"
+ enneadid_death_name:0 "Osiris"
+ enneadid_death_name_possessive:0 "Osiris'"
+ enneadid_pantheon:0 "Great Ennead"
+ 
+ enneadid:0 "Cult of Ennead"
+ enneadid_adj:0 "Cult of Enneadid"
+ enneadid_adherent:0 "Enneadist"
+ enneadid_adherent_plural:0 "Enneadists"
+ enneadid_desc:0 "The Ennead cult devotes themselves to Nine Gods which make up the Great Ennead and the Ennead Creation Myth. Creation began with Atum who willed himself into existence, spitting to Shu and Tefnut, who birthed the Earth Geb and the Sky Nut. Geb and Nut became the progenitors of all other Gods, with Osiris, Isis, Set and Nephthys being most important to those that worship the Ennead."
+ 
+ ra_high_god_name:0 "Ra"
+ ra_high_god_name_possessive:0 "Ra's"
+ ra_high_god_name_alternate:0 "Ra-Horakhty"
+ ra_high_god_name_alternate_possessive:0 "Ra-Horakhty's"
+ ra_devil_name:0 "Apophis"
+ ra_devil_name_possessive:0 "Apophis'"
+ ra_creator_god_name:0 "Ra"
+ ra_creator_god_name_possessive:0 "Ra's"
+ ra_health_god_name:0 "Ra-Khepri"
+ ra_health_god_name_possessive:0 "Ra-Khepri's"
+ ra_fertility_god_name:0 "Raet-Tawy"
+ ra_fertility_god_name_possessive:0 "Raet-Tawy's"
+ ra_wealth_god_name:0 "Ra-Horakhty"
+ ra_wealth_god_name_possessive:0 "Ra-Horakhty's"
+ ra_household_god_name:0 "Ra-Horakhty"
+ ra_household_god_name_possessive:0 "Ra-Horakhty's"
+ ra_fate_god_name:0 "Ma'at"
+ ra_fate_god_name_possessive:0 "Ma'at"
+ ra_knowledge_god_name:0 "Thoth"
+ ra_knowledge_god_name_possessive:0 "Thoth"
+ ra_war_god_name:0 "Montu-Ra"
+ ra_war_god_name_possessive:0 "Montu-Ra's"
+ ra_trickster_god_name:0 "Set"
+ ra_trickster_god_name_possessive:0 "Set's"
+ ra_night_god_name:0 "Khnum-Ra"
+ ra_night_god_name_possessive:0 "Khnum-Ra"
+ ra_water_god_name:0 "Mandjet"
+ ra_water_god_name_possessive:0 "Mandjet's"
+ witchgodname_ra:0 "Heka"
+ ra_death_name:0 "Ra"
+ ra_death_name_possessive:0 "Ra's"
+ 
+ ra_house_of_worship:0 "nekhenre"
+ ra_house_of_worship_plural:0 "nekhenres"
+ 
+ ra_religious_text:0 "Pyramid Texts"
+ 
+ ra:0 "Cult of Ra"
+ ra_adj:0 "Cult of Ra"
+ ra_adherent:0 "Ra Cultist"
+ ra_adherent_plural:0 "Ra Cultists"
+ ra_desc:0 "The Cult of Ra became a state religion after the Fifth Dynasty, in which he was declared the first Pharaoh of Egypt from which all rulers are successors. Ra was present at the beginning of the world, creating Shu and Tefnut who aided in the creation of all Gods. As King of the Gods, he ruled for a time over Egypt before returning to the sky as the sun. Each day and night he completes a journey through the sky then through the underworld."
+ 
+ memphite_high_god_name:0 "Ptah"
+ memphite_high_god_name_possessive:0 "Ptah's"
+ memphite_high_god_name_alternate:0 "Master of Justice"
+ memphite_high_god_name_alternate_possessive:0 "Master of Justice's"
+ memphite_devil_name:0 "Apopis"
+ memphite_devil_name_possessive:0 "Apopis'"
+ memphite_creator_god_name:0 "Ptah"
+ memphite_creator_god_name_possessive:0 "Ptah's"
+ memphite_health_god_name:0 "Nefertem"
+ memphite_health_god_name_possessive:0 "Nefertem's"
+ memphite_fertility_god_name:0 "Sekhmet"
+ memphite_fertility_god_name_possessive:0 "Sekhmet's"
+ memphite_wealth_god_name:0 "Ptah"
+ memphite_wealth_god_name_possessive:0 "Ptah's"
+ memphite_household_god_name:0 "Apis"
+ memphite_household_god_name_possessive:0 "Apis'"
+ memphite_fate_god_name:0 "Apis"
+ memphite_fate_god_name_possessive:0 "Apis'"
+ memphite_knowledge_god_name:0 "Ptah"
+ memphite_knowledge_god_name_possessive:0 "Ptah's"
+ memphite_war_god_name:0 "Sekhmet"
+ memphite_war_god_name_possessive:0 "Sekhmet's"
+ memphite_trickster_god_name:0 "Sekhmet"
+ memphite_trickster_god_name_possessive:0 "Sekhmet's"
+ memphite_night_god_name:0 "Ra"
+ memphite_night_god_name_possessive:0 "Ra's"
+ memphite_water_god_name:0 "Nefertem"
+ memphite_water_god_name_possessive:0 "Nefertem's"
+ witchgodname_memphite:0 "Heka"
+ memphite_death_name:0 "Osiris"
+ memphite_death_name_possessive:0 "Osiris"
+ 
+ memphite_religious_text:0 "Shabaka Stone"
+ memphite_pantheon:0 "Memphis Triad"
+ 
+ memphite:0 "Memphitism"
+ memphite_adj:0 "Memphite"
+ memphite_adherent:0 "Memphian"
+ memphite_adherent_plural:0 "Memphians"
+ memphite_desc:0 "Kemetic worship in Memphis based on the Memphis Triad; Ptah, Sekhmet and Nefertem. In Memphite teachings, Ptah, patron of Crafsmen was the creator of the universe and all the Gods, sending his avatar Horus to rule on Earth as the first pharaoh."
+ 
+ ogdoadid_high_god_name:0 "The Ogdoad"
+ ogdoadid_high_god_name_possessive:0 "The Ogdoad's"
+ ogdoadid_high_god_name_alternate:0 "The Eight"
+ ogdoadid_high_god_name_alternate_possessive:0 "The Eight's"
+ ogdoadid_devil_name:0 "Isfet"
+ ogdoadid_devil_name_possessive:0 "Isfet's"
+ ogdoadid_creator_god_name:0 "Nu"
+ ogdoadid_creator_god_name_possessive:0 "Nu's"
+ ogdoadid_health_god_name:0 "Nu"
+ ogdoadid_health_god_name_possessive:0 "Nu's"
+ ogdoadid_fertility_god_name:0 "Ḥeḥu"
+ ogdoadid_fertility_god_name_possessive:0 "Ḥeḥu's"
+ ogdoadid_wealth_god_name:0 "Amun"
+ ogdoadid_wealth_god_name_possessive:0 "Amun's"
+ ogdoadid_household_god_name:0 ""
+ ogdoadid_household_god_name_possessive:0 ""
+ ogdoadid_fate_god_name:0 "Ḥeḥu"
+ ogdoadid_fate_god_name_possessive:0 "Ḥeḥu's"
+ ogdoadid_knowledge_god_name:0 "Ḥeḥu"
+ ogdoadid_knowledge_god_name_possessive:0 "Ḥeḥu's"
+ ogdoadid_war_god_name:0 "Amun"
+ ogdoadid_war_god_name_possessive:0 "Amun's"
+ ogdoadid_trickster_god_name:0 "Set"
+ ogdoadid_trickster_god_name_possessive:0 "Set's"
+ ogdoadid_night_god_name:0 "Amunet"
+ ogdoadid_night_god_name_possessive:0 "Amunet's"
+ ogdoadid_water_god_name:0 "Naunet"
+ ogdoadid_water_god_name_possessive:0 "Naunet's"
+ witchgodname_ogdoadid:0 "Ḥeḥu"
+ ogdoadid_death_name:0 "Amun"
+ ogdoadid_death_name_possessive:0 "Amun's"
+ ogdoadid_religious_text:0 "Coffin Texts"
+ 
+ ogdoadid:0 "Cult of Ogdoad"
+ ogdoadid_adj:0 "Ogdoadid"
+ ogdoadid_adherent:0 "Ogdoadist"
+ ogdoadid_adherent_plural:0 "Ogdoadists"
+ ogdoadid_desc:0 "The Gods of the Ogdoad represent primoridal forces of creation, their worship was first done in Old Kingdom, but quickly fell out of favour. The Ogdoad is divided into four male-female pairs; Nu and Naunet, the primordial Sky and Water, Hehu and Hehut representation of infinity, Kekui and Kekuit representing primeval darkness and Amun and Amunet heralds of repose."
+
+ pharaonic_high_god_name:0 "Nesut-biti"
+ pharaonic_high_god_name_possessive:0 "Nesut-biti's"
+ pharaonic_high_god_name_alternate:0 "Neb-Tawy"
+ pharaonic_high_god_name_alternate_possessive:0 "Neb-Tawy's"
+ pharaonic_devil_name:0 "Isfet"
+ pharaonic_devil_name_possessive:0 "Isfet's"
+ pharaonic_creator_god_name:0 "Ra"
+ pharaonic_creator_god_name_possessive:0 "Ra's"
+ pharaonic_health_god_name:0 "Neb-Tawy"
+ pharaonic_health_god_name_possessive:0 "Neb-Tawy's"
+ pharaonic_fertility_god_name:0 "Neferkheperu"
+ pharaonic_fertility_god_name_possessive:0 "Neferkheperu's"
+ pharaonic_wealth_god_name:0 "Sekhempahtydjeserkhaw"
+ pharaonic_wealth_god_name_possessive:0 "Sekhempahtydjeserkhaw's"
+ pharaonic_household_god_name:0 "Neb-Tawy"
+ pharaonic_household_god_name_possessive:0 "Neb-Tawy's"
+ pharaonic_fate_god_name:0 "Maatkare"
+ pharaonic_fate_god_name_possessive:0 "Maatkare's"
+ pharaonic_knowledge_god_name:0 "Neb-Tawy"
+ pharaonic_knowledge_god_name_possessive:0 "Neb-Tawy's"
+ pharaonic_war_god_name:0 "Khufu"
+ pharaonic_war_god_name_possessive:0 "Khufu's"
+ pharaonic_trickster_god_name:0 "Set"
+ pharaonic_trickster_god_name_possessive:0 "Set's"
+ pharaonic_night_god_name:0 "Neb-Tawy"
+ pharaonic_night_god_name_possessive:0 "Neb-Tawy's"
+ pharaonic_water_god_name:0 "Neb-Tawy"
+ pharaonic_water_god_name_possessive:0 "Neb-Tawy's"
+ witchgodname_pharaonic:0 "Neb-Tawy"
+ pharaonic_death_name:0 "Osiride"
+ pharaonic_death_name_possessive:0 "Osiride"
+ 
+ pharaonic:0 "Cult of Pharaoh"
+ pharaonic_adj:0 "Cult of Pharaoh"
+ pharaonic_adherent:0 "Pharaoh Cultist"
+ pharaonic_adherent_plural:0 "Pharaoh Cultists"
+ pharaonic_desc:0 "From the Pharaoh divine righteousness radiates, it is the Pharaoh that must uphold Ma'at through his campaigns. Part of Pharaonic Cults can be the divinity of the Pharaoh himself, or the divinity of his family, however he can also be the Gods' representative on Earth."   
+
+ phw_great_holy_war:0 "Great Holy War"
+
+ songhai_religious_symbol:0 "ebo"
+
+ kalge_religion:0 "Kalgeism"
+ kalge_religion_adj:0 "Kalgean"
+ kalge_religion_adherent:0 "Kalgean"
+ kalge_religion_adherent_plural:0 "Kalgeans"
+ kalge_religion_desc:0 "The indigenous belief of the Daju people, they worship a high god by the name of Kalge whom they venerate by the building of straw shrines."
+
+ kushitism_pagan_old:0 "Old Kalgeism"
+ kushitism_pagan_old_adj:0 "Old Kalgean"
+ kushitism_pagan_old_adherent:0 "Old Kalgean"
+ kushitism_pagan_old_adherent_plural:0 "Old Kalgeans"
+
+ kalge_high_god_name:0 "Kalge"
+ kalge_high_god_name_2:0 "$kalge_high_god_name$" # Optional translation alt
+ kalge_high_god_name_possessive:0 "Kalge's"
+ kalge_high_god_name_alternate:0 "The High One"
+ kalge_high_god_name_alternate_possessive:0 "The High One's"
+ kalge_pantheon:0 "Kalge"
+ kalge_pantheon_2:0 "$kalge_pantheon$" # Optional translation alt
+ kalge_pantheon_3:0 "$kalge_pantheon$" # Optional translation alt
+
+ kalge_creator_god_name:0 "$kalge_high_god_name$"
+ kalge_creator_god_name_possessive:0 "$kalge_high_god_name_possessive$"
+ kalge_health_god_name:0 "$kalge_high_god_name$"
+ kalge_health_god_name_possessive:0 "$kalge_high_god_name_possessive$"
+ kalge_fertility_god_name:0 "$kalge_high_god_name$"
+ kalge_fertility_god_name_possessive:0 "$kalge_high_god_name_possessive$"
+ kalge_wealth_god_name:0 "$kalge_high_god_name$"
+ kalge_wealth_god_name_possessive:0 "$kalge_high_god_name_possessive$"
+ kalge_household_god_name:0 "$kalge_high_god_name$"
+ kalge_household_god_name_possessive:0 "$kalge_high_god_name_possessive$"
+ kalge_fate_god_name:0 "$kalge_high_god_name$"
+ kalge_fate_god_name_possessive:0 "$kalge_high_god_name_possessive$"
+ kalge_knowledge_god_name:0 "$kalge_high_god_name$"
+ kalge_knowledge_god_name_possessive:0 "$kalge_high_god_name_possessive$"
+ kalge_war_god_name:0 "$kalge_high_god_name$"
+ kalge_war_god_name_possessive:0 "$kalge_high_god_name_possessive$"
+ kalge_trickster_god_name:0 "fortune"
+ kalge_trickster_god_name_possessive:0 "fortune's"
+ kalge_night_god_name:0 "$kalge_high_god_name$"
+ kalge_night_god_name_possessive:0 "$kalge_high_god_name_possessive$"
+ kalge_water_god_name:0 "$kalge_high_god_name$"
+ kalge_water_god_name_possessive:0 "$kalge_high_god_name_possessive$"
+
+ kalge_religious_symbol:0 "bound straw"
+ kalge_religious_symbol_2:0 "$kalge_religious_symbol$" # Optional translation alt
+ kalge_religious_symbol_3:0 "$kalge_religious_symbol$" # Optional translation alt
+ witchgodname_kalge_the_spirits:0 "the spirits"
+ witchgodname_kalge_the_spirits_possessive:0 "the spirits"
+
+ #Kushitic/Meroitic religion
+ meroitic_pagan:0 "Cult of Apedemak"
+ meroitic_pagan_adj:0 "Cult of Apedemak"
+ meroitic_pagan_adherent:0 "Apedemakist"
+ meroitic_pagan_adherent_plural:1 "Apedemakists"
+ meroitic_pagan_desc:1 "The religion of the Kingdom of Meroe reflects centuries of syncretism between the ancient Egyptian pantheon and local Sudanic beliefs; it is a distinct, vibrant tradition, supported by a strong priestly class and monarchial institutions. Prominent cults include that of Apedemak, the lion-headed god of war, and the Egyptian deities Isis and Osiris."
+
+ meroitic_pagan_old:0 "Old Apedemakism"
+ meroitic_pagan_old_adj:0 "Old Apedemakist"
+ meroitic_pagan_old_adherent:0 "Old Apedemakist"
+ meroitic_pagan_old_adherent_plural:0 "Old Apedemakists"
+ meroitic_pagan_old_desc:1 "$meroitic_pagan_desc$"
+ meroitic_high_god_name:0 "Apedemak"
+ meroitic_high_god_name_possessive:0 "Apedemak's"
+ meroitic_high_god_name_alternate:0 "Apedemak"
+ meroitic_high_god_name_alternate_possessive:0 "Apedemak's"
+ meroitic_creator_god_name:0 "Amun"
+ meroitic_creator_god_name_possessive:0 "Amun's"
+ meroitic_health_god_name:0 "Isis" #Blemmeyan for Isis
+ meroitic_health_god_name_possessive:0 "Isis'"
+ meroitic_fertility_god_name:0 "Sebiumeker" # God of regeneration
+ meroitic_fertility_god_name_possessive:0 "Sebiumeker's"
+ meroitic_death_deity_name:0 "Osiris"
+ meroitic_death_deity_name_possessive:0 "Osiris's"
+ meroitic_household_god_name:0 "Bes"
+ meroitic_household_god_name_possessive:0 "Bes'"
+ meroitic_fate_god_name:0 "Thoth"
+ meroitic_fate_god_name_possessive:0 "Thoth's"
+ meroitic_knowledge_god_name:0 "Thoth"
+ meroitic_knowledge_god_name_possessive:0 "Thoth's"
+ meroitic_night_god_name:0 "Amesemi" # Goddess of the Moon
+ meroitic_night_god_name_possessive:0 "Amesemi's"
+ meroitic_good_god_mash:0 "Mash"
+ meroitic_good_god_shebo:0 "Shebo"
+ #meroitic_good_god_sebiumeker:0 "Sebiumeker"
+ meroitic_good_god_arensenuphis:0 "Arensenuphis"
+ meroitic_good_god_mahes:0 "Mahes"
+ meroitic_good_god_anuket:0 "Anuket"
+ meroitic_good_god_wepset:0 "Wepset"
+ meroitic_good_god_mahes:0 "Mahes"
+ meroitic_good_god_sekhmet:0 "Sekhmet"

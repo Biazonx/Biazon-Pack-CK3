@@ -1,0 +1,117 @@
+﻿l_english:
+
+ nht_trading_in_county_modifier: "Trade Agreement Hub"
+ nht_trading_in_county_modifier_desc: "This county is the hub of a trade Agreement." 
+ 
+ ###################
+ #### Modifiers ####
+ ###################
+ nht_reinforced_barony_modifier: "Fortified Holding"
+ nht_reinforced_barony_modifier_desc: "This barony has been fortified." 
+ 
+ nht_recently_sacked_modifier: "Recently Sacked"
+ nht_recently_sacked_modifier_desc: "This province has been attacked and looted. Peasants distrust their liege."
+ 
+ nht_recently_looted_barony_modifier: "Recently Looted"
+ nht_recently_looted_barony_modifier_desc: "This barony has been recently looted." 
+ 
+ nht_recently_sacked_barony_modifier: "Recently Sacked"
+ nht_recently_sacked_barony_modifier_desc: "This barony has been recently sacked." 
+ 
+ nht_reduced_to_ashes_barony_modifier: "Reduced to Ashes"
+ nht_reduced_to_ashes_barony_modifier_desc: "This barony has been razed to the ground by some ruler." 
+ 
+ #Send Soldiers Interaction
+ nht_is_giving_soldiers_modifier: "Sending Soldier to Foreign Ruler"
+ nht_is_receiving_enormous_amount_soldiers_modifier: "Receiving Volunteer from Foreign Ruler" 
+ nht_is_receiving_very_large_amount_soldiers_modifier: "Receiving Volunteer from Foreign Ruler" 
+ nht_is_receiving_larger_amount_soldiers_modifier: "Receiving Volunteer from Foreign Ruler" 
+ nht_is_receiving_equal_amount_soldiers_modifier: "Receiving Volunteer from Foreign Ruler" 
+ nht_is_receiving_sliglty_small_amount_soldiers_modifier: "Receiving Volunteer from Foreign Ruler" 
+ nht_is_receiving_small_amount_soldiers_modifier: "Receiving Volunteer from Foreign Ruler" 
+ nht_is_receiving_very_small_amount_soldiers_modifier: "Receiving Volunteer from Foreign Ruler" 
+ nht_is_receiving_extremly_small_amount_soldiers_modifier: "Receiving Volunteer from Foreign Ruler" 
+ nht_is_receiving_max_small_amount_soldiers_modifier: "Receiving Volunteer from Foreign Ruler"   
+ 
+ 
+ #Trade Agreement Modifiers
+ nht_trade_agreement_1_amount_modifier: "Trade Agreement with Foreign Ruler"
+ nht_trade_agreement_2_amount_modifier: "Trade Agreement with Foreign Ruler"
+ nht_trade_agreement_3_amount_modifier: "Trade Agreement with Foreign Ruler"
+ nht_trade_agreement_4_amount_modifier: "Trade Agreement with Foreign Ruler"
+ nht_trade_agreement_5_amount_modifier: "Trade Agreement with Foreign Ruler"
+ nht_trade_agreement_6_amount_modifier: "Trade Agreement with Foreign Ruler"
+ nht_trade_agreement_7_amount_modifier: "Trade Agreement with Foreign Ruler"
+ nht_trade_agreement_8_amount_modifier: "Trade Agreement with Foreign Ruler"
+ nht_trade_agreement_9_amount_modifier: "Trade Agreement with Foreign Ruler"
+ nht_trade_agreement_10_amount_modifier: "Trade Agreement with Foreign Ruler" 
+ nht_trade_agreement_11_amount_modifier: "Trade Agreement with Foreign Ruler"
+ nht_trade_agreement_12_amount_modifier: "Trade Agreement with Foreign Ruler"
+ nht_trade_agreement_13_amount_modifier: "Trade Agreement with Foreign Ruler"
+ nht_trade_agreement_14_amount_modifier: "Trade Agreement with Foreign Ruler"
+ nht_trade_agreement_15_amount_modifier: "Trade Agreement with Foreign Ruler"
+
+ #Trade Agreement Opinions
+ nht_has_trade_agreement_opinion_1: "Trade Agreement"
+ nht_has_trade_agreement_opinion_2: "Trade Agreement" 
+ nht_has_trade_agreement_opinion_3: "Trade Agreement" 
+ nht_has_trade_agreement_opinion_4: "Trade Agreement" 
+ nht_has_trade_agreement_opinion_5: "Trade Agreement" 
+ nht_has_trade_agreement_opinion_6: "Trade Agreement" 
+ nht_has_trade_agreement_opinion_7: "Trade Agreement" 
+ nht_has_trade_agreement_opinion_8: "Trade Agreement" 
+ nht_has_trade_agreement_opinion_9: "Trade Agreement" 
+ nht_has_trade_agreement_opinion_10: "Trade Agreement" 
+ nht_has_trade_agreement_opinion_11: "Trade Agreement" 
+ nht_has_trade_agreement_opinion_12: "Trade Agreement" 
+ nht_has_trade_agreement_opinion_13: "Trade Agreement" 
+ nht_has_trade_agreement_opinion_14: "Trade Agreement" 
+ nht_has_trade_agreement_opinion_15: "Trade Agreement"
+ 
+
+ #Tutelage Training
+ nht_tutelage_training_modifier: "Prowess Training"
+
+ nht_sword_training_modifier: "Knight Training" 
+ nht_good_sword_training_modifier: "Knight Training" 
+ nht_bad_sword_training_modifier: "Injured During Training" 
+ nht_sword_training_health_modifier: "Knight Training" 
+ nht_good_sword_training_health_modifier: "Knight Training" 
+ 
+ nht_xp_lifestyle_vlow_modifier: "Very Low Lifestyle Experience" 
+ nht_xp_lifestyle_low_modifier: "Low Lifestyle Experience"  
+ nht_xp_lifestyle_high_modifier: "Somewhat High Lifestyle Experience" 
+ nht_xp_lifestyle_high_1_modifier: "High Lifestyle Experience"
+ nht_xp_lifestyle_high_2_modifier: "Very High Lifestyle Experience" 
+ nht_xp_lifestyle_high_3_modifier: "Extremely High Lifestyle Experience"
+ nht_xp_lifestyle_high_4_modifier: "Max High Lifestyle Experience" 
+ 
+ 
+
+ nht_preparing_travel_modifier:4 "Preparing to Travel"  
+ nht_stay_prowess_lifestyle_modifier:4 "Stay On Course"
+ nht_choose_other_lifestyle_modifier:4 "Considering Another Path"  
+ 
+ #Modifiers
+ monthly_nht_prowess_lifestyle_xp_gain_mult:4 "Monthly Prowess [lifestyle|E] Experience"
+ nht_prowess_lifestyle_xp_gain_mult:4 "Prowess [lifestyle|E] Experience"
+ monthly_nht_leadership_lifestyle_xp_gain_mult:4 "Monthly Leadership [lifestyle|E] Experience"
+ nht_leadership_lifestyle_xp_gain_mult:4 "Leadership [lifestyle|E] Experience"
+
+ nht_training_by_liege_modifier: "Trained in the Art of War"  
+ nht_training_by_liege_modifier_desc: "This character has been training in the art of war by someone else."  
+ nht_deceived_training_by_liege_modifier: "Bad Training"  
+ nht_deceived_training_by_liege_modifier_desc: "This character has been given false advices over the art of war by someone else."  
+
+ nht_sacked_county_for_provision_modifier: "Recently Sacked by Wanderers"
+ nht_sacked_county_for_provision_modifier_desc: "This province has been attacked and looted. Peasants distrust their liege."
+ 
+ ##Perks modifiers for when you disable the interactions/decisions etc...
+ nht_train_with_knight_perk_modifier: "Practice Makes Perfect"
+ nht_swordsmanship_tutelage_perk_modifier: "Swordsmanship Teaching"
+ nht_fortify_holding_perk_modifier: "Stonemason's Grace"
+ nht_spoils_of_war_perk_modifier: "Spoils of War"
+ 
+ nht_commerce_maestro_perk_modifier: "Commerce Maestro"
+ nht_joint_forces_perk_modifier: "Joint Forces"
+ nht_inheritance_instinct_perk_modifier: "Inheritance Instinct"

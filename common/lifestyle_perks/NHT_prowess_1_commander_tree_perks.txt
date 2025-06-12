@@ -1,0 +1,257 @@
+﻿nht_perpetual_mastery_perk = {
+	lifestyle = nht_prowess_lifestyle
+	tree = nht_commander
+	position = { 2 0 }
+	icon = node_nht_prowess
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { is_landless_adventurer = yes }
+				desc = nht_perpetual_mastery_perk_adventurer_name
+			}
+			desc = nht_perpetual_mastery_perk_name
+		}
+	}
+	
+	auto_selection_weight = {
+		value = 11
+		if = {
+			limit = {
+				has_education_nht_prowess_trigger = yes
+			}
+			add = 1989
+		}
+		if = {
+			limit = {
+				prowess >= 11
+			}
+			add = 1988
+		}
+		if = {
+			limit = {
+				has_focus = nht_prowess_commanding_focus
+			}
+			multiply = 7
+		}
+		if = {
+			limit = {
+				NOT = { has_game_rule = nht_secondary_lifestyle }
+				nht_can_start_new_lifestyle_tree_prowess_trigger = no
+			}
+			multiply = 0
+		}
+	}
+	character_modifier = {
+		prowess_per_prestige_level = 1
+		knight_effectiveness_mult = 0.15
+	}
+}
+
+nht_controlled_supplies_perk = {
+	lifestyle = nht_prowess_lifestyle
+	tree = nht_commander
+	position = { 0 1.25 }
+	icon = node_nht_prowess
+	parent = nht_perpetual_mastery_perk
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { is_landless_adventurer = yes }
+				desc = nht_controlled_supplies_perk_adventurer_name
+			}
+			desc = nht_controlled_supplies_perk_name
+		}
+	}	
+	character_modifier = {
+		character_travel_safety_mult = 0.15
+	}
+	government_character_modifier = {
+		flag = government_is_landless_adventurer
+		invert_check = yes
+		supply_duration = 0.15
+	}
+	government_character_modifier = {
+		flag = government_is_landless_adventurer
+		provisions_loss_mult = -0.1
+	}	
+}
+
+
+nht_master_of_logistics_perk = {
+	lifestyle = nht_prowess_lifestyle
+	tree = nht_commander
+	position = { 0 2.5 }
+	icon = node_nht_prowess
+	
+	parent = nht_controlled_supplies_perk
+
+	
+	character_modifier = {
+		epidemic_resistance = 10
+	}
+	government_character_modifier = {
+		flag = government_is_landless_adventurer
+		invert_check = yes
+		supply_capacity_add = 100
+	}
+	government_character_modifier = {
+		flag = government_is_landless_adventurer
+		provisions_capacity_add = 500
+	}
+}
+
+
+nht_vanguard_inspiration_perk = {
+	lifestyle = nht_prowess_lifestyle
+	tree = nht_commander
+	position = { 2 1.25 }
+	icon = node_nht_prowess
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { is_landless_adventurer = yes }
+				desc = nht_vanguard_inspiration_perk_adventurer_name
+			}
+			desc = nht_vanguard_inspiration_perk_name
+		}
+	}	
+	parent = nht_perpetual_mastery_perk
+	
+	government_character_modifier = {
+		flag = government_is_landless_adventurer
+		invert_check = yes
+		same_culture_mercenary_hire_cost_mult = -0.25
+		same_culture_holy_order_hire_cost_mult = -0.25
+	}
+	government_character_modifier = {
+		flag = government_is_landless_adventurer
+		men_at_arms_limit = 1
+	}
+}
+
+
+nht_thrifty_operations_perk = {
+	lifestyle = nht_prowess_lifestyle
+	tree = nht_commander
+	position = { 2 2.5 }
+	icon = node_nht_prowess
+	parent = nht_vanguard_inspiration_perk	
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { is_landless_adventurer = yes }
+				desc = nht_thrifty_operations_perk_adventurer_name
+			}
+			desc = nht_thrifty_operations_perk_name
+		}
+	}
+
+	
+	character_modifier = {
+		army_maintenance_mult = -0.15
+	}
+}
+
+
+nht_border_buards_perk = {
+	lifestyle = nht_prowess_lifestyle
+	tree = nht_commander
+	position = { 4 1.25 }
+	icon = node_nht_prowess
+	
+	parent = nht_perpetual_mastery_perk
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { is_landless_adventurer = yes }
+				desc = nht_border_guards_perk_adventurer_name
+			}
+			desc = nht_border_guards_perk_name
+		}
+	}
+
+	government_character_modifier = {
+		flag = government_is_landless_adventurer
+		invert_check = yes
+		garrison_size = 0.2
+		monthly_county_control_growth_add = 0.2
+	}
+	government_character_modifier = {
+		flag = government_is_landless_adventurer
+		men_at_arms_recruitment_cost = -0.1
+	}
+}
+
+
+nht_resolute_vassals_perk = {
+	lifestyle = nht_prowess_lifestyle
+	tree = nht_commander
+	position = { 4 2.5 }
+	icon = node_nht_prowess
+	
+	parent = nht_border_buards_perk
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { is_landless_adventurer = yes }
+				desc = nht_resolute_vassals_perk_adventurer_name
+			}
+			desc = nht_resolute_vassals_perk_name
+		}
+	}
+
+	government_character_modifier = {
+		flag = government_is_landless_adventurer
+		invert_check = yes
+		vassal_levy_contribution_mult = 0.15
+		levy_reinforcement_rate = 0.2
+	}
+	government_character_modifier = {
+		flag = government_is_landless_adventurer
+		siege_phase_time = -0.25
+	}
+}
+
+
+nht_noble_allegiance_perk = {
+	lifestyle = nht_prowess_lifestyle
+	tree = nht_commander
+	position = { 2 3.75 }
+	icon = node_nht_prowess
+	
+	parent = nht_master_of_logistics_perk
+	parent = nht_thrifty_operations_perk
+	parent = nht_resolute_vassals_perk
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { is_landless_adventurer = yes }
+				desc = nht_noble_allegiance_perk_adventurer_name
+			}
+			desc = nht_noble_allegiance_perk_name
+		}
+	}
+
+	character_modifier = {
+		knight_limit = 3
+		accolade_glory_gain_mult = 0.1
+	}
+}
+
+
+nht_commander_perk = {
+	lifestyle = nht_prowess_lifestyle
+	tree = nht_commander
+	position = { 2 5 }
+	icon = nht_commander_perk
+	
+	parent = nht_noble_allegiance_perk	
+	trait = nht_commander
+	effect = {
+		add_trait_force_tooltip = nht_commander
+	}
+}

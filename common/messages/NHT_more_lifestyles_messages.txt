@@ -1,0 +1,29 @@
+﻿
+nht_canceled_trade_agreement = {
+	icon = "message_nht_trade_agreement"
+	title = msg_nht_canceled_trade_agreement
+	desc = msg_nht_canceled_trade_agreement_desc
+	style = bad
+}
+
+nht_canceled_trade_agreement_on_death = {
+	icon = "message_nht_trade_agreement"
+	title = msg_nht_canceled_trade_agreement_on_death
+	desc = msg_nht_canceled_trade_agreement_on_death_desc
+	style = bad
+}
+
+nht_canceled_trade_agreement_war_attacker = {
+	icon = "message_nht_trade_agreement"
+	title = msg_nht_canceled_trade_agreement_war
+	desc = msg_nht_canceled_trade_agreement_war_desc
+	style = bad
+}
+
+nht_canceled_trade_agreement_war_defender = {
+	icon = "message_nht_trade_agreement"
+	title = msg_nht_canceled_trade_agreement_war_defender
+	desc = msg_nht_canceled_trade_agreement_war_defender_desc
+	style = bad
+}
+

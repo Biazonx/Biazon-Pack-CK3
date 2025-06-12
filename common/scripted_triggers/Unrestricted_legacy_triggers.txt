@@ -1,0 +1,11 @@
+eligible_for_fp1_dynasty_legacies_trigger = {
+	has_fp1_dlc_trigger = yes
+}
+
+eligible_for_fp2_dynasty_legacies_trigger = {
+	has_fp2_dlc_trigger = yes
+}
+
+eligible_for_fp3_khvarenah_legacy_trigger = {
+	has_fp3_dlc_trigger = yes
+}

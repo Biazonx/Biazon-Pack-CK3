@@ -1,0 +1,43 @@
+﻿
+l_english:
+  
+ baltic_pagan:1 "Pokainiism"
+ baltic_pagan_adj:1 "Pokainian"
+ baltic_pagan_adherent:1 "Pokainian"
+ baltic_pagan_adherent_plural:1 "Pokainians"
+
+ baltic_pagan_old:1 "Old Pokainiism"
+ baltic_pagan_old_adj:1 "Old Pokainian"
+ baltic_pagan_old_adherent:1 "Old Pokainian"
+ baltic_pagan_old_adherent_plural:1 "Old Pokainians"
+ 
+ lithuanian_pagan:1 "Kernavism"
+ lithuanian_pagan_adj:1 "Kernavist"
+ lithuanian_pagan_adherent:1 "Kernavist"
+ lithuanian_pagan_adherent_plural:1 "Kernavists"
+ 
+ lithuanian_pagan_old:1 "Old Kernavism"
+ lithuanian_pagan_old_adj:1 "Old Kernavist"
+ lithuanian_pagan_old_adherent:1 "Old Kernavist"
+ lithuanian_pagan_old_adherent_plural:1 "Old Kernavists"
+ 
+ prussian_pagan:1 "Romuva"
+ prussian_pagan_adj:1 "Romuvan"
+ prussian_pagan_adherent:1 "Romuvan"
+ prussian_pagan_adherent_plural:1 "Romuvans"
+
+ prussian_pagan_old:1 "Old Romuva"
+ prussian_pagan_old_adj:1 "Old Romuvan"
+ prussian_pagan_old_adherent:1 "Old Romuvan"
+ prussian_pagan_old_adherent_plural:1 "Old Romuvans"
+ 
+ holy_site_vodi_name:0 "Luga"
+ holy_site_vodi_effect_name:0 "From [holy_site|E] #weak ($holy_site_vodi_name$)#!"
+ holy_site_vanemaa_name:0 "Vanema"
+ holy_site_vanemaa_effect_name:0 "From [holy_site|E] #weak ($holy_site_vanemaa_name$)#!"
+ holy_site_tarinmaa_name:0 "Tarinmaa"
+ holy_site_tarinmaa_effect_name:0 "From [holy_site|E] #weak ($holy_site_tarinmaa_name$)#!"
+ holy_site_braslau_name:0 "Kernave"
+ holy_site_braslau_effect_name:0 "From [holy_site|E] #weak ($holy_site_braslau_name$)#!"
+ holy_site_romowe_name:0 "Romowe"
+ holy_site_romowe_effect_name:0 "From [holy_site|E] #weak ($holy_site_romowe_name$)#!"

@@ -1,0 +1,3 @@
+﻿bzn_artifact_dragon_1_visual = {
+	icon = "bzn_artifact_dragon_1.dds"
+	asset = ep1_generic_jewelry_01_a_entity

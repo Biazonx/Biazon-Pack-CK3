@@ -1,0 +1,267 @@
+﻿l_english:
+
+ ##################################################
+ #### Common Events
+ ####
+ ##################################################
+
+ #Choice to have a new ally
+ nht_prowess_commanding.0001.t: "A Council of Swords and Words"
+ nht_prowess_commanding.0001.desc: "In these turbulent times, the strength of a kingdom lies not only in its armies but also in the alliances it fosters. I can feel my neighbors growing restless and so a strategic alliance becomes ever more pressing. Perhaps the ally I need can be found in my realm. \n\nThe air is thick with the scent of wine and the low murmur of conspiring voices in my court. To secure an alliance that could tip the scales of power in my favor."
+ nht_prowess_commanding.0001.a: "[nht_first_vassal.GetTitledFirstName] will be a good ally."
+ nht_prowess_commanding.0001.a.tt: "" 
+ nht_prowess_commanding.0001.b: "Entering an alliance with [nht_second_vassal.GetTitledFirstName] will show my strength."
+ nht_prowess_commanding.0001.b.tt: ""
+ nht_prowess_commanding.0001.c: "An alliance with [nht_third_vassal.GetTitledFirstName] in the only long-term viable option."
+ nht_prowess_commanding.0001.d: "None is good enough."
+ 
+ #One vassal ask your to train him in the art of war
+ nht_prowess_commanding.0002.t: "The Novice Commander"
+ nht_prowess_commanding.0002.opening: "As I survey my troops on the training grounds, I notice [novice_vassal_commander.GetTitledFirstName], my [novice_vassal_commander.GetTitleAsNameNoTooltip], approaching with a look of earnest determination. "[ROOT.Char.GetFirstNameNoTooltip],"  [novice_vassal_commande.GetSheHe] begins, "I seek your counsel in organizing my own soldiers."
+ nht_prowess_commanding.0002.great_prowess: "Your reputation as a master of warfare is known far and wide. "
+ nht_prowess_commanding.0002.good_prowess: "You are a great commander."
+ nht_prowess_commanding.0002.ending: "\n\nWould you honor me with your guidance, or perhaps even a demonstration of your tactics?"\n\nSharing my expertise could strengthen my realm, but leading [novice_vassal_commande.GetHerHim] astray might prove useful later… Could [vassal.GetSheHe] harbor more ambitious intentions?"
+ nht_prowess_commanding.0002.a: "Impart true wisdom."
+ nht_prowess_commanding.0002.a.tt: "You teach [novice_vassal_commande.GetTitledFirstName] effective strategies" 
+ nht_prowess_commanding.0002.a.success: "[novice_vassal_commande.GetTitledFirstNameNoTooltip] is grateful and our alliance is strengthened"
+ nht_prowess_commanding.0002.a.failure: "[novice_vassal_commande.GetTitledFirstNameNoTooltip] misinterprets your teachings, but remains thankful"
+ nht_prowess_commanding.0002.b: "Offer to lead their troops in a mock battle."
+ nht_prowess_commanding.0002.b.success: "You demonstrate superior command, gaining respect and insight"
+ nht_prowess_commanding.0002.b.failure: "Your tactics falter, embarrassing you in front of your vassal"
+ nht_prowess_commanding.0002.c: "Deceive [novice_vassal_commande.GetFirstNameNoTooltip] with flawed tactics."
+ nht_prowess_commanding.0002.c.success: "[vassal.GetTitledFirstNameNoTooltip]'s army is weakened"
+ nht_prowess_commanding.0002.c.failure: "[vassal.GetTitledFirstNameNoTooltip] sees through your ruse"
+ nht_prowess_commanding.0002.d: "Politely decline and focus on your own affairs. "
+ 
+ #You need someone to take more responsabilities
+ nht_prowess_commanding.0003.t: "The Strategist's Quill"
+ nht_prowess_commanding.0003.desc: "As I review the growing pile of military reports and tactical briefings, the weight of my responsibilities as [ROOT.Char.GetTitleTierName] weighs more heavily each passing days. With wars to wage, defenses to maintain, and soldiers to train, the need for a capable military advisor for strategic planning becomes ever more apparent.\n\nSurely my [marshal.GetTitledFirstName] could take the additional responsibilities. However, recently [nht_trusted_advisor.GetTitledFirstName], known for [nht_trusted_advisor.GetHerHis] strategic acumen, has caught my attention."
+ nht_prowess_commanding.0003.a: "I will increase the responsabilities of my marshal."
+ nht_prowess_commanding.0003.a.tt: "" 
+ nht_prowess_commanding.0003.b: "Appoint [nht_trusted_advisor.GetFirstNameNoTooltip] as my military strategist."
+ nht_prowess_commanding.0003.b.success: "[nht_trusted_advisor.GetTitledFirstName] excels in the role " 
+ nht_prowess_commanding.0003.b.failure: "[nht_trusted_advisor.GetTitledFirstName] struggles with the responsibilities" 
+ nht_prowess_commanding.0003.c: "I must shoulder these duties alone."
+ nht_prowess_commanding.0003.c.tt: "The realm needs my direct oversight"
+ 
+ #Fight between Commoner and Knight
+ nht_prowess_commanding.0004.t: "A Clash of Duty and Common Will"
+ nht_prowess_commanding.0004.desc: "A clamor outside my chambers draws me away from my duties. In the courtyard, I find [soldier.GetTitledFirstName], one of my more headstrong soldiers, embroiled in a heated dispute with a local commoner, [commoner.GetTitledFirstName]. "This peasant dares to defy my authority!" [soldier.GetFirstNameNoTooltip] bellows, while [commoner.GetFirstNameNoTooltip] insists on having been wronged. The rest of my court watches in silence, awaiting my decision."
+ nht_prowess_commanding.0004.a: "A soldier of mine should be respected."
+ nht_prowess_commanding.0004.b: "Even the lowest peasant deserves justice."
+ nht_prowess_commanding.0004.c: "Demand Restitution from Both."
+ nht_prowess_commanding.0004.d: "Delegate to Local Authorities"
+ nht_prowess_commanding.0004.e: "Let them sort this out themselves."
+ 
+ #You observe your solder train and think about changing tactics
+ nht_prowess_commanding.0005.t: "A Single Form of Victory"
+ nht_prowess_commanding.0005.desc: "As I observe my soldiers' training, a singular style of combat is evident across the ranks. Each man moves in a manner so practiced, so precise, yet so predictably the same. Intrigued, I approach the master-at-arms, questioning the lack of variety in their training.\n\n"Why burden the mind with more than it needs to know, my lord?" \n\n[nht_training_commander.GetSheHe] replies with a confidence that borders on arrogance. "One technique, perfected, is all we need to triumph." [nht_corrupt_commander.GetHerHis] words ring with pride, but I can't help but wonder—does victory not demand adaptability?"
+ nht_prowess_commanding.0005.a: "Embrace the Simplicity"
+ nht_prowess_commanding.0005.a.t: "Perhaps there is wisdom in mastery over complexity."
+ nht_prowess_commanding.0005.c: "Demand Diverse Training"
+ nht_prowess_commanding.0005.c.t: "No enemy is so simple as to be undone by a single strategy."
+ 
+ #One knight is bossing people around
+ nht_prowess_commanding.0006.t: "A Knight's Dispute"
+ nht_prowess_commanding.0006.desc: "My tour to see my knights takes an unexpected turn upon witnessing the dynamics with [disputed_knight.GetTitledFirstName] and other knights. Commanding with an iron fist, [disputed_knight.GetHeShe] issues orders left and right, the other knights exchange weary glances, their irritation barely concealed. The discontent, it seems, has roots deep enough to trip even the most stalwart horse."
+ nht_prowess_commanding.0006.a: "Confront [disputed_knight.GetTitledFirstName] privately about his conduct."
+ nht_prowess_commanding.0006.b: "Show [disputed_knight.GetHerHim] true authority."
+ nht_prowess_commanding.0006.c: " Leave the matter to resolve naturally among the knights."
+ nht_prowess_commanding.0006.d: " Make [disputed_knight.GetTitledFirstName] officaly in charge of them."
+ 
+ #Ponder over having better supply for your army
+ nht_prowess_commanding.0007.t: "Provisions for the Army"
+ nht_prowess_commanding.0007.desc: " As I peruse the ledgers detailing the current supplies of my army, I find myself deep in thought about the supply I provide to my soldiers. The staples of bread and ale have served us well, but an army marches on its stomach, and the quality of their provisions could well determine the morale and vigor of my forces. A constant supply of meat could significantly bolster my army’s strength and spirits but not without cost."
+ nht_prowess_commanding.0007.a: "Maintain the current provisions. Our current supplies have served us well."
+ nht_prowess_commanding.0007.b: "Invest in securing a steady supply of meat and salt for preservation."
+ nht_prowess_commanding.0007.c: "They are already too well fed…"
+
+ nht_prowess_commanding.0008.t: ""
+ nht_prowess_commanding.0008.desc: ""
+ nht_prowess_commanding.0008.a: ""
+ nht_prowess_commanding.0008.b: ""
+ nht_prowess_commanding.0008.c: ""
+ nht_prowess_commanding.0008.d: ""
+
+ nht_prowess_commanding.0009.t: ""
+ nht_prowess_commanding.0009.desc: ""
+ nht_prowess_commanding.0009.a: ""
+ nht_prowess_commanding.0009.b: ""
+ nht_prowess_commanding.0009.c: ""
+ nht_prowess_commanding.0009.d: ""
+ 
+ ##################################################
+ #### Uncommon Events
+ ####
+ ##################################################
+ 
+ #A holy man ask you to be righteous in war
+ nht_prowess_commanding.1001.t: "The Righteous Path in War"
+ nht_prowess_commanding.1001.islam: "In the quiet of dawn, as the muezzin's call to prayer resonates from the minarets, I am approached by [religious_envoy.GetTitledFirstName], a revered scholar of our faith. \n\n'O [ROOT.Char.GetTitleTierName],' [religious_envoy.GetSheHe] speaks, [religious_envoy.GetHerHis] words steeped in the wisdom of the Qur'an, 'recall that Allah says, 'Indeed, Allah is with those who fear Him and those who are doers of good.' \n\nOur faith commands righteousness in all actions, especially in the strife of battle. [religious_envoy.GetTitledFirstName] implores me to uphold the virtues of our faith as I lead my armies."\n\n[religious_envoy.GetHerHis] words resonate deeply within me. Warfare is indeed a measure of one's fortitude, but equally a reflection of moral integrity. Can I, in the pursuit of victory, maintain the balance of jihad al-nafs (the struggle of the self) with jihad al-sayf (the struggle of the sword)?"
+ nht_prowess_commanding.1001.christianity: "As I make my way through the corridors of my castle, [religious_envoy.GetTitledFirstName], a venerated cleric of our faith, approaches me with a tome in hand. [religious_envoy.GetSheHe] speaks with a voice heavy with the weight of scripture, "My liege, remember the words of our Lord, 'Blessed are the peacemakers, for they will be called children of God.' In these times of war, it is paramount that you embody the virtues of our Savior. Uphold justice and mercy as you command your armies, for our faith is tested not only in our prayers but also in the throes of battle."\n\n[religious_envoy.GetHerHis] words linger in my mind, a solemn reminder. Warfare tests not only my might but also my spirit. How can I ensure that my actions in war reflect the teachings of Christ and honor [ROOT.Char.GetFaith.HighGodName]?"
+ nht_prowess_commanding.1001.judaism: "As the evening shadows lengthen over my court, I find myself in deep conversation with [religious_envoy.GetTitledFirstName], a learned rabbi and respected figure in our faith. [religious_envoy.GetHerHis] eyes, reflecting years of wisdom found in the holy scriptures, meet mine earnestly. "O [ROOT.Char.GetTitleTierName]," [religious_envoy.GetSheHe] begins, [religious_envoy.GetHerHis] voice tinged with the gravity of ancient teachings, "remember the words of our sages 'Who is mighty? He who conquers his impulses.' As you lead your people in battle, it is not only physical strength that you must exhibit, but also moral strength. Uphold the principles of justice and compassion that our faith cherishes, even in the strife of war."\n\n[religious_envoy.GetHerHis] words linger in my heart. War challenges the body, but the true test is of one's soul. Can I ensure that my conduct in battle upholds the values of our faith ?"
+ nht_prowess_commanding.1001.hinduism: "The morning sun casts a golden hue across my chambers as I am visited by [religious_envoy.GetTitledFirstName], a wise and revered man, deeply versed in the knowledge of the faith. [religious_envoy.GetSheHe] greets me with a serene smile and speaks in a voice rich with the wisdom of the Vedas. “My liege, the Bhagavad Gita teaches us that while engaging in war, one must uphold dharma. As a Kshatriya, your duty in war is sacred, but remember, it must be conducted with righteousness and without desire for personal gain." [religious_envoy.GetHerHis] words stir a deep contemplation within me. Warfare is not only a test of physical prowess but also a profound spiritual trial. How can I ensure that my actions in battle are in alignment with dharma, honoring the principles of my faith and [ROOT.Char.GetFaith.HighGodName]?"
+ nht_prowess_commanding.1001.fallback: "As I make my way through the corridors of my castle, [religious_envoy.GetTitledFirstName], a respected figure in the faith. "O [ROOT.Char.GetTitleTierName]," [religious_envoy.GetSheHe] intones with a grave voice, "the path of war is fraught with peril, not just to the body, but to the soul. Our faith demands righteousness in all things, even in the heat of battle. [religious_envoy.GetTitledFirstName] implores me to uphold the virtues of our faith as I lead my armies."\n\n[religious_envoy.GetHerHis] words echo in my mind. War is a test of strength, but also of character. Can I truly wield my sword in righteousness, ensuring my deeds honor [ROOT.Char.GetFaith.HighGodName]?"
+ nht_prowess_commanding.1001.a.hinduism: "Duty calls for strength, not introspection. I shall lead as destiny decrees."
+ nht_prowess_commanding.1001.a.fallback: "War is no place for soft hearts. I shall lead as I always have."
+ nht_prowess_commanding.1001.b: "Perhaps there is wisdom in these words."
+ nht_prowess_commanding.1001.c.cynical: "Fine words for the masses. In war, only the result matters."
+ nht_prowess_commanding.1001.c.fallback: "These ideals are impractical in the chaos of war. Victory justifies the means."
+ nht_prowess_commanding.1001.d.hinduism: "I will embody the righteousness of a true Kshatriya, as the scriptures command."
+ nht_prowess_commanding.1001.d.christianism: "I shall lead with the compassion and justice our Lord teaches."
+ nht_prowess_commanding.1001.d.fallback: "I shall lead with virtue, as my faith commands."
+ 
+ #A commander is challenging my strategy
+ nht_prowess_commanding.1002.t: "A Clash of Command"
+ nht_prowess_commanding.1002.opening: " As I lay out my grand strategy in the war council, a hushed silence falls over the room. This is shattered when [second_in_command.GetTitledFirstName], my second-in-command, abruptly stands and declares,"
+ nht_prowess_commanding.1002.first_alternative: ""A child could have come up with a better strategy." the council fell dead silent, at such open dissent."
+ nht_prowess_commanding.1002.second_alternative: ""This strategy is a disaster waiting to happen!" The room erupts in hushed murmurs, shocked by the brazen challenge."
+ nht_prowess_commanding.1002.third_alternative: ""your plan is obviously flawed." Murmurs of shock ripple through the room. While I value counsel, such open dissent is rare – and risky."
+ nht_prowess_commanding.1002.fourth_alternative: ""With all due respect, I fear there are oversights in your plan." The room fills with a tense whisper, as such disagreement is unexpected."
+ nht_prowess_commanding.1002.fifth_alternative: ""With all due respect, my [ROOT.Char.GetTitleAsNameNoTooltip], I must object,""
+ nht_prowess_commanding.1002.ending: "challenging my plan.\n\nThe council's eyes turn to me, awaiting my response.\n\nAll eyes shift, avoiding mine, except for [second_in_command.GetTitledFirstName]."
+ nht_prowess_commanding.1002.a: "You dare challenge me? [second_in_command.GetTitledFirstName]!"
+ nht_prowess_commanding.1002.b: "Your opinion is noted, but we will proceed as planned"
+ nht_prowess_commanding.1002.c: "Perhaps a private discussion would be more appropriate, [second_in_command.GetTitledFirstName]."
+ nht_prowess_commanding.1002.d: "If you think you can do better, prove it!"
+ nht_prowess_commanding.1002.e.stubborn: "I am the [ROOT.Char.GetTitleTierName], and my word is final."
+ 
+ #Your hear tales of great warriors in your neighbor
+ nht_prowess_commanding.1003.t: "The Famed Warriors of [neighbor.GetTitledFirstName]"
+ nht_prowess_commanding.1003.desc: "Lately, every whisper in the court seems to sing praises of [neighbor.GetTitledFirstName]'s elite soldiers. Tales of their formidable strength and unmatched prowess in combat have even the most stoic of my knights speaking in hushed, awed tones. Are my own troops adequately prepared?"
+ nht_prowess_commanding.1003.a: "Introduce harsher drills for my troops. We will not be outdone!"
+ nht_prowess_commanding.1003.a.tt: "Only through rigorous training can excellence be achieved." 
+ nht_prowess_commanding.1003.b: "Dismiss the rumors. My army is strong as it is."
+ nht_prowess_commanding.1003.b.tt: "Confidence in my own methods is key; there's no need to react to every fairytale."
+
+ #You find a weakness in your capital wall.
+ nht_prowess_commanding.1004.t: "A Gap in the Wall"
+ nht_prowess_commanding.1004.desc: "During my routine inspection of [nt_weakened_capital.GetTitledFirstName]’s defenses, a subtle yet significant vulnerability catches my eye. Nestled between two towers, a section of the wall, less formidable than the rest, could easily invite disaster. The oversight is troubling; if I've noticed it, surely others have as well. Some of my advisors are advocating for reinforcing the defenses but that would mean less ressource for a possible offensive war."
+ nht_prowess_commanding.1004.a: "Strengthen Our Defenses"
+ nht_prowess_commanding.1004.b: "I must keep my resources for later use"
+
+ #Hire Foreign as military advisor
+ nht_prowess_commanding.1005.t: "A Foreign Mind for Military Matters"
+ nht_prowess_commanding.1005.desc: "In my quest to ensure our military remains unmatched, I've entertained the notion of inviting a foreign military advisor to my court. Their expertise in unfamiliar tactics could provide the edge I need on the battlefield. However, whispers of dissent have already begun to spread among my commanders, viewing this as a slight to their capabilities and a threat to their influence. The balance between innovation and tradition is a delicate one."
+ nht_prowess_commanding.1005.a: "Welcome the Advisor"
+ nht_prowess_commanding.1005.b: "Consult with Commanders First"
+ nht_prowess_commanding.1005.c: "It is better it's stays an idea..."
+ 
+ #A Soldier Inspire Others Around Them
+ nht_prowess_commanding.1006.t: "The Inspirational Soldier"
+ nht_prowess_commanding.1006.desc: "Rumors have reached my ears of a particular soldier whose valor and eloquence on and off the battlefield have sparked a fire in the hearts of many. This [inspirational_soldier.GetManWoman], it is said, can turn the tide of despair into a fervent will to push forward. The prospect of such a figure under my command is intriguing, to say the least. Meeting [inspirational_soldier.GetHimHer] could offer insights into the morale of my troops and perhaps even teach me a thing or two about leadership."
+ nht_prowess_commanding.1006.a: "I will visit this soldier and witness [inspirational_soldier.GetHisHer] spirit firsthand."
+ nht_prowess_commanding.1006.b: "There's no need to intervene."
+
+ nht_prowess_commanding.1007.t: "The True Inspirer"
+ nht_prowess_commanding.1007.desc: "Spurred by tales of a soldier whose heartening words have uplifted the spirits of many, I decide to observe [inspirational_soldier.GetTitledFirstName]'s influence firsthand, unannounced. Mingling quietly among the ranks, I find myself among a captivated audience, hanging on every word that flows from [inspirational_soldier.GetTitledFirstName]. Far from mere rumors, the depth of courage, the call to bravery, and the strategic wisdom [inspirational_soldier.GetHeShe] shares resonate deeply.\n\n[inspirational_soldier.GetTitledFirstName]'s eloquence on matters of war and the heartening tales of valor [inspirational_soldier.GetHeShe] recounts not only serve to inspire but also instill a sense of camaraderie. It's clear [inspirational_soldier.GetHeShe] is a rare gem within the ranks."
+ nht_prowess_commanding.1007.a: "Commend [inspirational_soldier.GetHisHer] leadership and oratory skills."
+ nht_prowess_commanding.1007.b: "Propose to [inspirational_soldier.GetTitledFirstName] to hold regular morale-boosting talks."
+ nht_prowess_commanding.1007.c: "[inspirational_soldier.GetSheHe]e can serve me well."
+
+ nht_prowess_commanding.1008.t: "The Pious Inspirer"
+ nht_prowess_commanding.1008.desc: "Curious to witness the source of this widespread admiration for [inspirational_soldier.GetTitledFirstName] without the filter of formality or expectation. I blend into the surroundings, the sight that greets me diverges starkly from what I anticipated. Instead of rousing speeches of war and bravery, I find [inspirational_soldier.GetTitledFirstName] in the midst of a humble sermon, [inspirational_soldier.GetHisHer] words steeped in the deep, resonant faith of our people.\n\nThe soldiers gathered around [inspirational_soldier.GetHimHer] listen with a rapt attention that speaks volumes. It is not just bravery that [inspirational_soldier.GetTitledFirstName] inspires but a profound sense of purpose, a calling higher than any battle cry."
+ nht_prowess_commanding.1008.a: "Reveal your presence and express your respect for [inspirational_soldier.GetTitledFirstName]."
+ nht_prowess_commanding.1008.b: "Maintain your anonymity, allowing [inspirational_soldier.GetTitledFirstName] to continue uninhibited."
+ nht_prowess_commanding.1008.c: "[inspirational_soldier.GetSheHe] can serve me well."
+ nht_prowess_commanding.1008.d: "[inspirational_soldier.GetSheHe] will be my new court chaplain."
+
+ nht_prowess_commanding.1009.t: "A Misunderstood Muse"
+ nht_prowess_commanding.1009.desc: "With curiosity guiding my steps, I make my way toward a group of soldiers, where [inspirational_soldier.GetTitledFirstName] is said to be. The reality that unfolds before me is clearly not the tales that have reached my ears.\n\nThe words of [inspirational_soldier.GetTitledFirstName], far from the inspirational rhetoric I was led to expect, are met with thinly veiled smirks and exchanged glances among the soldiers. The air is thick not with admiration, but with sarcasm. It becomes painfully clear that the tales of [inspirational_soldier.GetHisHer] influence were grossly misrepresented, the truth being that [inspirational_soldier.GetHeShe] is more a source of amusement than inspiration, with [inspirational_soldier.GetHisHer] attempts at leadership unwittingly serving as the butt of jokes behind [inspirational_soldier.GetHisHer] back."
+ nht_prowess_commanding.1009.a: "I step forward to address the soldiers and defend [inspirational_soldier.GetTitledFirstName]'s honor."
+ nht_prowess_commanding.1009.b: "I will mock him with the other soldiers."
+ nht_prowess_commanding.1009.c: "Remain silent and withdraw."
+ 
+ ##################################################
+ #### Rare Events
+ ####
+ ##################################################
+ 
+ #Rebellious soldiers in my Army
+ nht_prowess_commanding.2001.t: "The Seeds of Rebellion"
+ nht_prowess_commanding.2001.opening: "Whispers of discontent have grown into shouts of defiance. Some, driven by grueling demands and delayed pay, are openly defying my authority. Theythreaten to unravel the discipline and order I have painstakingly built…"
+ nht_prowess_commanding.2001.a: "Crush the mutiny now."
+ nht_prowess_commanding.2001.b: "Punish the ringleaders, pardon the rest." 
+ nht_prowess_commanding.2001.c: "Negotiate and address their grievances." 
+ nht_prowess_commanding.2001.d: "Let it die down on its own." 
+ 
+ #Rivalry between two knights
+ nht_prowess_commanding.2002.t: "Rivalry for Renown"
+ nht_prowess_commanding.2002.desc: " As the echoes of clashing steel and spirited shouts fill the air, it becomes clear that a fierce rivalry has taken root within my ranks. Two young soldiers, each with dreams of knighthood and glory, have set their sights on becoming the most celebrated warrior under my banner. Their competition is relentless, driving them to exceed limits but risking injury and discord. Observing their duels, I ponder the potential benefits and perils of this rivalry."
+ nht_prowess_commanding.2002.a: "Encourage Their Rivalry"
+ nht_prowess_commanding.2002.a.t: "Let the fires of competition forge them stronger."
+ nht_prowess_commanding.2002.c: "Command Them to Stop"
+ nht_prowess_commanding.2002.c.t: "Such distractions are a luxury we cannot afford in times of war."
+ 
+ 
+ #Rumors of Corruptions in your Army
+ nht_prowess_commanding.2003.t: "Whispers in the Ranks"
+ nht_prowess_commanding.2003.desc: "As I walk through the barracks and training grounds, I can't help but notice the uneasy glances and hushed conversations among my soldiers. Rumors have been circulating about corruption and misconduct within the ranks of my military. It's troubling to think that those sworn to serve me, might be undermining me or my realm from within."
+ nht_prowess_commanding.2003.a: "Investigate Discreetly"
+ nht_prowess_commanding.2003.b: "Confront the Commanders Directly"
+ nht_prowess_commanding.2003.c: "I shouldn’t pay attention to mere rumors."
+
+ nht_prowess_commanding.2004.t: "A Nest of Vipers?"
+ nht_prowess_commanding.2004.desc: "The investigation into the alleged corruption within my army has finally borne fruit. It appears that gold was stolen, some of my most trusted commanders, [nht_first_commander.GetTitledFirstName], [nht_second_commander.GetTitledFirstName], [nht_third_commander.GetTitledFirstName] are deeply implicated in this conspiracy. This cannot stand!"
+ nht_prowess_commanding.2004.a: "I must purge the guilty."
+ nht_prowess_commanding.2004.b: "Offer a chance for redemption."
+ nht_prowess_commanding.2004.c: "Cover it up."
+
+ nht_prowess_commanding.2005.t: "The Lesser Evil Unveiled"
+ nht_prowess_commanding.2005.desc: "The whispers in the shadows finally coalesce into a voice, albeit a faint one. The investigation, though arduous and shrouded in secrecy, has unveiled a modest scandal within the barracks. One of my commanders, [nht_corrupt_commander.GetTitledFirstName] has been found siphoning supplies for personal gain. Only in small amounts here and there  but the betrayal of trust is a cut nonetheless. "
+ nht_prowess_commanding.2005.a: "A measured response for a measured crime."
+ nht_prowess_commanding.2005.b: "Root out the corruption even the smallest weed must be pulled."
+
+ nht_prowess_commanding.2006.t: "Echoes of Silence"
+ nht_prowess_commanding.2006.desc: "The investigation has run its course like a silent river under a moonless sky. Not a single shred of evidence points to corruption within the ranks of my commanders. It seems the rumors were just that - unsubstantiated whispers, perhaps born of jealousy or paranoia. None of my commanders are aware they were ever subjects of suspicion."
+ nht_prowess_commanding.2006.a: "I appears that I was wrong"
+ nht_prowess_commanding.2006.a.t: "Let sleeping dogs lie. No need to stir unrest with baseless accusations."
+ nht_prowess_commanding.2006.thrusting: "I trusted them all along…"
+ nht_prowess_commanding.2006.c: "Reflect on My Own Paranoia"
+ nht_prowess_commanding.2006.paranoid: "They are all hiding something…"
+
+ nht_prowess_commanding.2007.t: "Confession of a Commander"
+ nht_prowess_commanding.2007.desc: "The air in the council chamber is heavy as [nht_corrupt_commander.GetTitledFirstName] stands before me, [nht_corrupt_commander.GetSheHe]  eyes a mixture of defiance and shame. "I will not hide behind lies," [nht_corrupt_commander.GetSheHe]  declare. The rumors of corruption were true, but not as widespread as feared. "
+ nht_prowess_commanding.2007.desc_first_alternative: "\n\n[nht_corrupt_commander.GetTitledFirstName] confesses to making certain... 'unorthodox decisions' to strengthen our forces, albeit at the cost of some ethical compromises. [nht_corrupt_commander.GetSheHe] insist it was all for the good of the realm, but the betrayal stings nonetheless."
+ nht_prowess_commanding.2007.desc_sec_alternative: "\n\n[nht_corrupt_commander.GetTitledFirstName] confesses to making certain... ...questionable decisions in the allocation of resources and favors. As [nht_corrupt_commander.GetTitledFirstName] details [nht_corrupt_commander.GetHerHis] actions, a ripple of shock spreads through the assembled council members. It becomes apparent that [nht_corrupt_commander.GetTitledFirstName] had been using [nht_corrupt_commander.GetHerHis] position for personal gain, manipulating ressources to benefit [nht_corrupt_commander.GetHerHim]self."
+ nht_prowess_commanding.2007.a: "[nht_corrupt_commander.GetHerHis] honesty is redemption enough."
+ nht_prowess_commanding.2007.b: "[nht_corrupt_commander.GetSheHe] will serve as a lesson to all."
+ nht_prowess_commanding.2007.C: "[nht_corrupt_commander.GetTitledFirstName] will privatly pay me."
+ 
+ nht_prowess_commanding.2008.t: "Shadows of Doubt"
+ nht_prowess_commanding.2008.desc: "The investigation has come to a close, and it appears the fears of corruption within the ranks of my army were unfounded. There are no stolen gold, no betrayals, no secrets sold to enemies - merely rumors, perhaps born of envy or spite. However, my actions have not gone unnoticed. [accused_commander.GetTitledFirstName], one of my most loyal commanders, is deeply offended by the accusations. Trust, once broken, is not easily mended."
+ nht_prowess_commanding.2008.a: "I will offer a public apology."
+ nht_prowess_commanding.2008.b: "[accused_commander.GetTitledFirstName] will be compensated discreetly."
+ nht_prowess_commanding.2008.c: "Insist on the Necessity of the Investigation."
+
+ nht_prowess_commanding.2009.t: "The Unseen Thief Amongst Us"
+ nht_prowess_commanding.2009.desc: "Choosing to turn a deaf ear to the whispers of discord seemed wise, until word came at dawn of coffers lightened and storerooms found wanting. It is unlikely I will ever know who is responsible for this know."
+ nht_prowess_commanding.2009.a: "The truth will never be known"
+ nht_prowess_commanding.2009.b: "Conduct an investigation, however useful"
+
+
+ ##################################################
+ #### Special Events
+ ####
+ ##################################################
+
+ nht_prowess_commanding.3001.t: ""
+ nht_prowess_commanding.3001.desc: ""
+ nht_prowess_commanding.3001.a: ""
+ nht_prowess_commanding.3001.b: ""
+ nht_prowess_commanding.3001.c: ""
+ nht_prowess_commanding.3001.d: ""
+
+
+ ##################################################
+ #### Unavailable Events
+ ####
+ ##################################################
+
+ #
+ nht_prowess_commanding.4001.t: ""
+ nht_prowess_commanding.4001.desc: ""
+ nht_prowess_commanding.4001.a: ""
+ nht_prowess_commanding.4001.b: ""
+ nht_prowess_commanding.4001.c: ""
+ nht_prowess_commanding.4001.d: ""

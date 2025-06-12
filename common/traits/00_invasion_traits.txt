@@ -1,0 +1,626 @@
+﻿frieza_race = {
+	icon = "frieza_race.dds"
+	category = fame
+	genetic = yes
+	good = yes
+	opposites = {
+		pure_saiyan
+		hybrid_saiyan
+		saiyan_tail
+		legendary_super_saiyan
+		super_saiyan
+		low_class_warrior
+		mid_class_warrior
+		elite_class_warrior
+		oozaru
+		namekian_race
+		majin_race
+	}
+	martial = 4
+	prowess = 6
+	no_prowess_loss_from_age = yes
+	same_opinion = -10
+	general_opinion = -15
+	health = 0.25
+	negate_prowess_penalty_add = 3
+	dread_baseline_add = 25
+	dread_gain_mult = 0.25
+	dread_decay_mult = -0.25
+	life_expectancy = 5
+
+	inherit_chance = 100
+	
+	shown_in_ruler_designer = yes
+	ruler_designer_cost = 100
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_frieza_race_desc
+			}
+			desc = trait_namekian_race_character_desc
+		}
+	}
+}
+
+majin_race = {
+	icon = "majin_race.dds"
+	category = fame
+	genetic = yes
+	good = yes
+	opposites = {
+		pure_saiyan
+		hybrid_saiyan
+		saiyan_tail
+		legendary_super_saiyan
+		super_saiyan
+		low_class_warrior
+		mid_class_warrior
+		elite_class_warrior
+		oozaru
+		namekian_race
+		frieza_race
+	}
+	diplomacy = -4
+	intrigue = 4
+	prowess = 8
+	no_prowess_loss_from_age = yes
+	same_opinion = -10
+	general_opinion = -15
+	fertility = 0.25
+	health = 0.25
+	negate_prowess_penalty_add = 5
+	dread_baseline_add = 25
+	dread_gain_mult = 0.25
+	dread_decay_mult = -0.25
+	life_expectancy = 10
+
+	inherit_chance = 100
+	
+	shown_in_ruler_designer = yes
+	ruler_designer_cost = 100
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_majin_race_desc
+			}
+			desc = trait_majin_race_character_desc
+		}
+	}
+}
+
+namekian_race = {
+	icon = "namekian_race.dds"
+	category = fame
+	genetic = yes
+	good = yes
+	opposites = {
+		pure_saiyan
+		hybrid_saiyan
+		saiyan_tail
+		legendary_super_saiyan
+		super_saiyan
+		low_class_warrior
+		mid_class_warrior
+		elite_class_warrior
+		oozaru
+		scarlet_eyes
+		majin_race
+		frieza_race
+	}
+	learning = 2
+	prowess = 1
+	no_prowess_loss_from_age = yes
+	same_opinion = 15
+	health = 0.25
+	negate_prowess_penalty_add = 3
+	life_expectancy = 5
+
+	inherit_chance = 100
+	
+	shown_in_ruler_designer = yes
+	ruler_designer_cost = 25
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_namekian_race_desc
+			}
+			desc = trait_namekian_race_character_desc
+		}
+	}
+}
+
+pure_saiyan = {
+	icon = "pure_saiyan.dds"
+	category = fame
+	genetic = yes
+	good = yes
+	opposites = {
+		hybrid_saiyan
+		namekian_race
+		majin_race
+		frieza_race
+	}
+	diplomacy = -2
+	martial = 2
+	prowess = 2
+	no_prowess_loss_from_age = yes
+	general_opinion = -10
+	same_opinion = 15
+	
+	inherit_chance = 25
+	both_parent_has_trait_inherit_chance = 100
+	
+	shown_in_ruler_designer = yes
+	ruler_designer_cost = 25
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_pure_saiyan_desc
+			}
+			desc = trait_pure_saiyan_character_desc
+		}
+	}
+}
+hybrid_saiyan = {
+	icon = "hybrid_saiyan.dds"
+	category = fame
+	genetic = yes
+	good = yes
+	opposites = {
+		pure_saiyan
+		namekian_race
+		majin_race
+		frieza_race
+	}
+	martial = 1
+	prowess = 2
+	no_prowess_loss_from_age = yes
+	same_opinion = 15
+	
+	inherit_chance = 100
+	shown_in_ruler_designer = yes
+	ruler_designer_cost = 25
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_hybrid_saiyan_desc
+			}
+			desc = trait_hybrid_saiyan_character_desc
+		}
+	}
+}
+saiyan_tail = {
+	icon = "saiyan_tail.dds"
+	category = fame
+	genetic = yes
+	good = yes
+	physical = yes
+	opposites = {
+		namekian_race
+	}
+	
+    monthly_prestige = 0.25
+	general_opinion = -10
+	same_opinion = 15
+	
+	inherit_chance = 100
+	
+	shown_in_ruler_designer = yes
+	ruler_designer_cost = 15
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_saiyan_tail_desc
+			}
+			desc = trait_saiyan_tail_character_desc
+		}
+	}
+}
+ki_control = {
+	icon = "ki_control.dds"
+	category = fame
+	genetic = yes
+	good = yes
+	physical = yes
+	
+	birth = 0.25
+	health = 0.25
+	prowess = 1
+	life_expectancy = 5
+	
+	shown_in_ruler_designer = yes
+	ruler_designer_cost = 30
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_ki_control_desc
+			}
+			desc = trait_ki_control_character_desc
+		}
+	}
+}
+legendary_super_saiyan = {
+	icon = "legendary_super_saiyan.dds"
+	category = fame
+	genetic = yes
+	good = yes
+	physical = yes
+	
+	opposites = {
+		super_saiyan
+		namekian_race
+		oozaru
+	}
+	
+	diplomacy = -5
+	martial = 5
+	prowess = 8
+	no_prowess_loss_from_age = yes
+	general_opinion = -10
+	dread_baseline_add = 25
+	dread_gain_mult = 0.25
+	dread_decay_mult = -0.25
+	
+	shown_in_ruler_designer = yes
+	ruler_designer_cost = 100
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_legendary_super_saiyan_desc
+			}
+			desc = trait_legendary_super_saiyan_character_desc
+		}
+	}
+}
+super_saiyan = {
+	icon = "super_saiyan.dds"
+	category = fame
+	genetic = no
+	good = yes
+	physical = yes
+	
+	opposites = {
+		legendary_super_saiyan
+		namekian_race
+		majin_race
+		frieza_race
+	}
+	
+	martial = 1
+	prowess = 3
+	no_prowess_loss_from_age = yes
+
+	
+	shown_in_ruler_designer = yes
+	ruler_designer_cost = 50
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_super_saiyan_desc
+			}
+			desc = trait_super_saiyan_character_desc
+		}
+	}
+}
+super_saiyan_2 = {
+	icon = "super_saiyan_2.dds"
+	category = fame
+	genetic = no
+	good = yes
+	physical = yes
+	minimum_age = 9
+
+	martial = 2
+	prowess = 6
+	no_prowess_loss_from_age = yes
+	shown_in_ruler_designer = no
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_super_saiyan_2_desc
+			}
+			desc = trait_super_saiyan_2_character_desc
+		}
+	}
+}
+super_saiyan_3 = {
+	icon = "super_saiyan_3.dds"
+	category = fame
+	genetic = no
+	good = yes
+	physical = yes
+	minimum_age = 16
+	
+	martial = 3
+	prowess = 9
+	no_prowess_loss_from_age = yes
+	shown_in_ruler_designer = no
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_super_saiyan_3_desc
+			}
+			desc = trait_super_saiyan_3_character_desc
+		}
+	}
+}
+low_class_warrior = {
+	icon = "low_class_warrior.dds"
+	category = fame
+	genetic = no
+	physical = no
+	
+	opposites = {
+		elite_class_warrior
+		mid_class_warrior
+		namekian_race
+		frieza_race
+		majin_race
+	}
+	
+	same_opinion = 15 
+	opposite_opinion = -10
+	monthly_prestige_gain_mult = 0.05
+
+	
+	shown_in_ruler_designer = yes
+	ruler_designer_cost = 15
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_low_class_warrior_desc
+			}
+			desc = trait_low_class_warrior_character_desc
+		}
+	}
+}
+mid_class_warrior = {
+	icon = "mid_class_warrior.dds"
+	category = fame
+	genetic = no
+	physical = no
+	
+	opposites = {
+		elite_class_warrior
+		low_class_warrior
+		namekian_race
+		frieza_race
+		majin_race
+	}
+	
+	attraction_opinion = 5
+	same_opinion = 15
+	opposite_opinion = -10
+	monthly_prestige_gain_mult = 0.15
+	
+	shown_in_ruler_designer = yes
+	ruler_designer_cost = 20
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_mid_class_warrior_desc
+			}
+			desc = trait_mid_class_warrior_character_desc
+		}
+	}
+}
+elite_class_warrior = {
+	icon = "elite_class_warrior.dds"
+	category = fame
+	genetic = no
+	physical = no
+	
+	opposites = {
+		low_class_warrior
+		mid_class_warrior
+		namekian_race
+		frieza_race
+		majin_race
+	}
+	
+	attraction_opinion = 10
+	same_opinion = 15 
+	opposite_opinion = -10
+	monthly_prestige_gain_mult = 0.3
+	
+	shown_in_ruler_designer = yes
+	ruler_designer_cost = 25
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_elite_class_warrior_desc
+			}
+			desc = trait_elite_class_warrior_character_desc
+		}
+	}
+}
+oozaru = {
+	icon = "oozaru.dds"
+	category = fame
+	genetic = yes
+	physical = yes
+	
+	dread_baseline_add = 15
+	dread_gain_mult = 0.15
+		
+	shown_in_ruler_designer = no
+	ruler_designer_cost = 50
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_oozaru_desc
+			}
+			desc = trait_oozaru_character_desc
+		}
+	}
+}
+super_saiyan_4 = {
+	icon = "super_saiyan_4.dds"
+	category = fame
+	genetic = no
+	physical = yes
+	good = yes
+	
+	opposites = {
+		super_saiyan_god
+	}
+	
+	martial = 4
+	prowess = 10
+	no_prowess_loss_from_age = yes
+	
+	shown_in_ruler_designer = no
+	ruler_designer_cost = 200
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_super_saiyan_4_desc
+			}
+			desc = trait_super_saiyan_4_character_desc
+		}
+	}
+}
+
+scarlet_eyes = {
+	icon = "easteregg_scarlet_eyes.dds"
+	category = fame
+	genetic = yes
+	physical = yes
+	good = yes
+	
+	monthly_prestige = 0.5
+	general_opinion = -10
+	same_opinion = 20
+	
+	shown_in_ruler_designer = yes
+	ruler_designer_cost = 20
+	
+	inherit_chance = 100
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_scarlet_eyes_desc
+			}
+			desc = trait_scarlet_eyes_character_desc
+		}
+	}
+}
+
+golden_form = {
+	icon = "golden_form.dds"
+	category = fame
+	genetic = no
+	physical = yes
+	good = yes
+	
+	martial = 4
+	prowess = 10
+	no_prowess_loss_from_age = yes
+	
+	shown_in_ruler_designer = no
+	ruler_designer_cost = 200
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_golden_form_desc
+			}
+			desc = trait_golden_form_character_desc
+		}
+	}
+}
+
+
+frieza_full = {
+	icon = "frieza_full.dds"
+	category = fame
+	genetic = no
+	good = yes
+	physical = yes
+	
+	martial = 1
+	prowess = 3
+	no_prowess_loss_from_age = yes
+
+	
+	shown_in_ruler_designer = no
+	ruler_designer_cost = 50
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_frieza_full_desc
+			}
+			desc = trait_frieza_full_character_desc
+		}
+	}
+}

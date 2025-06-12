@@ -1,0 +1,326 @@
+﻿l_english:
+
+    mesopotamian_religion:0 "Mesopotamian"
+    mesopotamian_religion_adj:2 "Mesopotamian"
+    mesopotamian_religion_adherent:2 "Mesopotamian"
+    mesopotamian_religion_adherent_plural:2 "Mesopotamian"
+    mesopotamian_religion_desc:0 "The Mesopotamian Religion knows many gods, once the religion of the ancient Babylonians, Assyrians, Akkadians and Sumer"
+
+    #Babylonian
+    babylonian_idolism:0 "Bābilim"
+    babylonian_idolism_adj:0 "Bābilim"
+    babylonian_idolism_adherent:0 "Bābilimist"
+    babylonian_idolism_adherent_plural:0 "Bābilimists"
+    babylonian_idolism_desc:0 "The native faith of the Akkadian and Babylonian people who rose up around the 3rd and 2nd millenniums BC following the decline of Sumer and subjugated the lands of Mesopotamia before being conquered by the Achaemenid Empire.  Their faith revolved around patron gods of city states, allowing the usurpation of one over the other and seeing their kings take center stage as bringers of prosperity." 
+
+    babylonian_idolism_old:0 "Old Bābilim"
+    babylonian_idolism_old_adj:0 "Old Bābilim"
+    babylonian_idolism_adherent_old:0 "Old Bābilimist"
+    babylonian_idolism_old_adherent_plural:0 "Old Bābilimists"
+    babylonian_idolism_old_desc:0 "The native faith of the Akkadian and Babylonian people who rose up around the 3rd and 2nd millenniums BC following the decline of Sumer and subjugated the lands of Mesopotamia before being conquered by the Achaemenid Empire.  Their faith revolved around patron gods of city states, allowing the usurpation of one over the other and seeing their kings take center stage as bringers of prosperity." 
+
+    babylonian_idolism_religious_head_title:0 "Supreme priest"
+    babylonian_idolism_divine_realm:0 "Devine realm"
+    babylonian_idolism_religious_symbol:0 "Blue Lion"
+    babylonian_idolism_religious_text:0 "Enuma Elish"
+    #roman_pantheon_the_gods:0 "Roman pantheon of gods"
+
+    #Babylonian gods/goddesses Localization
+
+    #Marduk Localization
+    babylonian_idolism_high_god_name:0 "Marduk"
+    babylonian_idolism_high_god_name_possessive:0 "Marduk's"
+    babylonian_idolism_high_god_name_alternate:0 "Marduk"
+    babylonian_idolism_high_god_name_alternate_possessive:0 "Marduk's"
+    babylonian_idolism_high_god_shehe:0 "He"
+    babylonian_idolism_high_god_herselfhimself:0 "Himself"
+    babylonian_idolism_high_god_herhis:0 "His"
+
+    #Creater god Localization
+    babylonian_idolism_creator_god_name:0 "Ea"
+    babylonian_idolism_creator_god_name_possessive:0 "Ea's"
+
+    #Health Goddess Ninkarrak
+    babylonian_idolism_health_god_name:0 "Ninkarrak"
+    babylonian_idolism_health_god_name_possessive:0 "Ninkarrak's"
+
+    #Fertility Goddess Ishtar Localization
+    babylonian_idolism_fertility_god_name:0 "Ishtar"
+    babylonian_idolism_fertility_god_name_possessive:0 "Ishtar's"
+
+    #Wealth god Ninhegal Localization
+    babylonian_idolism_wealth_god_name:0 "Ninhegal"
+    babylonian_idolism_wealth_god_name_possessive:0 "Ninhegal's"
+
+    #Household god Ninhursag 
+    babylonian_idolism_household_god_name:0 "Ninhursag"
+    babylonian_idolism_household_god_name_possessive:0 "Ninhursag's"
+
+    #Fate god Ea Localization
+    babylonian_idolism_fate_god_name:0 "Ea"
+    babylonian_idolism_fate_god_name_possessive:0 "Ea's"
+
+    #knowledge god Nabu Localization
+    babylonian_idolism_knowledge_god_name:0 "Nabu"
+    babylonian_idolism_knowledge_god_name_possessive:0 "Nabu's"
+
+    #War god Nergal Localization
+    babylonian_idolism_war_god_name:0 "Nergal"
+    babylonian_idolism_war_god_name_possessive:0 "Nergal's"
+
+    #Trickster god Ea Localization
+    babylonian_idolism_trickster_god_name:0 "Ea"
+    babylonian_idolism_trickster_god_name_possessive:0 "Ea's"
+
+    #Night goddess Ishum Localization
+    babylonian_idolism_night_god_name:0 "Ishum"
+    babylonian_idolism_night_god_name_possessive:0 "Ishum's"
+
+    #Water god Tiamat Localization
+    babylonian_idolism_water_god_name:0 "Tiamat"
+    babylonian_idolism_water_god_name_possessive:0 "Tiamat's"
+
+    #evil gods names 
+    babylonian_idolism_evil_god_tiamat:0 "Tiamat" 
+    babylonian_idolism_evil_god_pazuzu:0 "Pazuzu"
+
+    #witch goddess
+    babylonian_idolism_witchgodname_ea:0 "Ea"
+    babylonian_idolism_witchgodname_ea_possesive:0 "Ea's"
+
+    #Devil god   
+    babylonian_idolism_devil_name:0 "Hanbi" 
+    babylonian_idolism_devil_name_possessive:0 "Hanbi's"
+
+    #Death god Nergal 
+    babylonian_idolism_death_deity_name:0 "Nergal"
+    babylonian_idolism_death_deity_name_possessive:0 "Nergal's"
+
+    #Good gods names 
+    babylonian_idolism_good_god_marduk:0 "Marduk" 
+    babylonian_idolism_good_god_enkimdu:0 "Enkimdu" 
+    babylonian_idolism_good_god_geshtinanna:0 "Geshtinanna" 
+    babylonian_idolism_good_god_ninsun:0 "Ninsun" 
+    babylonian_idolism_good_god_ishtar:0 "Ishtar" 
+    babylonian_idolism_good_god_nabu:0 "Nabu" 
+    babylonian_idolism_good_god_enki:0 "Enki" 
+    babylonian_idolism_good_god_nergal:0 "Nergal"
+
+    #mesopotamian priest flamen vestals
+
+    #mesopotamian priest 
+    babylonian_idolism_priest_male:0 "Priest"
+    babylonian_idolism_priest_male_plural:0 "Priests"
+
+    #mesopotamian priestess 
+    babylonian_idolism_priest_female:0 "Priestess" 
+    babylonian_idolism_priest_female_plural:0 "Priestesses" 
+
+    #mesopotamian high priest
+    babylonian_idolism_bishop_male:0 "Priest" 
+    babylonian_idolism_bishop_male_plural:0 "Priests"
+
+    babylonian_idolism_religious_head_title:0 "High Priest"
+
+    #roman names
+    #males
+    reserved_male_names:0 "Babylonian male names"
+    #Female 
+    reserved_female_names:0 "Babylonian female names"
+
+    #holy orders: 
+    holy_order_sons_of_nergal:0 "Sons of Nergal"
+    holy_order_Protectors_of_anu:0 "Protectors of Anu"
+
+ emesa_pagan_old:0 "Old Emesene Paganism"
+ emesa_pagan_old_adj:0 "Old Emesene"
+ emesa_pagan_old_adherent:0 "Old Emesene"
+ emesa_pagan_old_plural:0 "Old Emesenes"
+
+ emesa_pagan:0 "Emesene Paganism"
+ emesa_pagan_adj:0 "Emesene"
+ emesa_pagan_adherent:0 "Emesene"
+ emesa_pagan_adherent_plural:0 "Emesenes"
+ emesa_pagan_desc:0 "Emesa's pantheon blends together influences from different Semitic and Greco-Roman pantheons, particularly the Phoenician and Arabic pantheons. The chief deity of Emesa is the sun god Elagabal, known to the Greeks and Romans as Elagabalus. Elagabal is worshipped in the form of a large conical black stone."
+
+ emesa_high_god_name:0 "Elagabal"
+ emesa_high_god_name_possessive:0 "Elagabal's"
+ emesa_high_god_alternate_name:0 "Elagabal"
+ emesa_high_god_alternate_name_possessive:0 "Elagabal's"
+
+    #Assyrian
+    assyrian_idolism:0 "Dīnā Āšorīta"
+    assyrian_idolism_adj:0 "Dīnā Āšorīta"
+    assyrian_idolism_adherent:0 "Dīnā Āšorītast"
+    assyrian_idolism_adherent_plural:0 "Dīnā Āšorītasts"
+    assyrian_idolism_desc:0 "The beliefs of the Assyrians are similar to the rest of the people of Mesopotamia. However, the Assyrians hold the god Asshur, the sun god and equivalent of Enlil, as their chief god, leading them to constant wars of supremacy against their neighbors." 
+
+    assyrian_idolism_old:0 "Old Dīnā Āšorīta"
+    assyrian_idolism_old_adj:0 "Old Dīnā Āšorīta"
+    assyrian_idolism_adherent_old:0 "Old Dīnā Āšorītast"
+    assyrian_idolism_old_adherent_plural:0 "Old Dīnā Āšorītasts"
+    assyrian_idolism_old_desc:0 "The beliefs of the Assyrians are similar to the rest of the people of Mesopotamia. However, the Assyrians hold the god Asshur, the sun god and equivalent of Enlil, as their chief god, leading them to constant wars of supremacy against their neighbors." 
+
+    assyrian_idolism_religious_head_title:0 "Supreme priest"
+    assyrian_idolism_divine_realm:0 "Devine realm"
+    assyrian_idolism_religious_symbol:0 "Ashur"
+    assyrian_idolism_religious_text:0 "Enuma Elish"
+
+    assyrian_idolism_high_god_name:0 "Ashur"
+    assyrian_idolism_high_god_name_possessive:0 "Ashur's"
+    assyrian_idolism_high_god_name_alternate:0 "$assyrian_idolism_high_god_name$"
+    assyrian_idolism_high_god_name_alternate_possessive:0 "$assyrian_idolism_high_god_name_possessive$"
+
+    assyrian_idolism_creator_god_name:0 "Ea"
+    assyrian_idolism_creator_god_name_possessive:0 "$assyrian_idolism_creator_god_name$'s"
+
+    assyrian_idolism_health_god_name:0 "Ninkarrak"
+    assyrian_idolism_health_god_name_possessive:0 "$assyrian_idolism_health_god_name$'s"
+
+    assyrian_idolism_fertility_god_name:0 "Ishtar"
+    assyrian_idolism_fertility_god_name_possessive:0 "$assyrian_idolism_fertility_god_name$'s"    
+
+    assyrian_idolism_wealth_god_name:0 "Ninhegal"
+    assyrian_idolism_wealth_god_name_possessive:0 "$assyrian_idolism_wealth_god_name$'s"
+
+    assyrian_idolism_household_god_name:0 "Ninhursag"
+    assyrian_idolism_household_god_name_possessive:0 "$assyrian_idolism_household_god_name$'s"
+
+    assyrian_idolism_fate_god_name:0 "Ea"
+    assyrian_idolism_fate_name_possessive:0 "$assyrian_idolism_fate_god_name$'s"
+
+    assyrian_idolism_knowledge_god_name:0 "Nabu"
+    assyrian_idolism_knowledge_god_name_possessive:0 "$assyrian_idolism_knowledge_god_name$'s"
+
+    assyrian_idolism_war_god_name:0 "Ashur"
+    assyrian_idolism_war_god_name_possessive:0 "$assyrian_idolism_war_god_name$'s"
+
+    assyrian_idolism_trickster_god_name:0 "Ea"
+    assyrian_idolism_trickster_god_name_possessive:0 "Ea's"
+
+    assyrian_idolism_night_god_name:0 "Ishum"
+    assyrian_idolism_night_god_name_possessive:0 "$assyrian_idolism_night_god_name$'s"
+
+    assyrian_idolism_water_god_name:0 " Lugalabba"
+    assyrian_idolism_water_god_name_possessive:0 "$assyrian_idolism_water_god_name$'s"
+
+    assyrian_idolism_death_deity_name:0 "Nergal"
+    assyrian_idolism_death_deity_name_possessive:0 "$assyrian_idolism_death_deity_name$'s"
+
+    assyrian_idolism_witchgodname_ea:0 "Ea"
+    assyrian_idolism_witchgodname_ea_possesive:0 "$assyrian_idolism_witchgodname_ea$'s"
+
+    assyrian_idolism_evil_god_tiamat:0 "Tiamat" 
+    assyrian_idolism_evil_god_pazuzu:0 "Pazuzu"
+
+
+    #assyrian_idolism_pantheon:0 "Annunaki"
+    assyrian_idolism_divine_realm:0 "Kur"
+    assyrian_idolism_afterlife:0 "Irkallu"
+    assyrian_idolism_religious_head:0 "High Priest"
+    assyrian_idolism_religious_head_title_name:0 "High Council"
+
+   #mesopotamian priest 
+    assyrian_idolism_priest_male:0 "Priest"
+    assyrian_idolism_priest_male_plural:0 "Priests"
+
+    #mesopotamian priestess 
+    assyrian_idolism_priest_female:0 "Priestess" 
+    assyrian_idolism_priest_female_plural:0 "Priestesses" 
+
+    #mesopotamian high priest
+    assyrian_idolism_bishop_male:0 "Priest" 
+    assyrian_idolism_bishop_male_plural:0 "Priests" 
+    assyrian_idolism_religious_head_title:0 "High Priest"
+
+    #roman names
+    #males
+    reserved_male_names:0 "Assyrian male names"
+    #Female 
+    reserved_female_names:0 "Assyrian female names"
+
+ ishtarism_pagan:0 "Cult of Ishtar"
+ ishtarism_pagan_adj:0 "Ishtarite"
+ ishtarism_pagan_adherent:0 "Ishtarist"
+ ishtarism_pagan_adherent_plural:0 "Ishtarists"
+ ishtarism_pagan_desc:0 "Ishtarists worship the Sumerian fertility and war goddess Ishtar, the Queen of Heaven and eternal ruler of Uruk. A guarded community of true believers, they have few qualms about living life to the full and are known to indulge in ritual celebrations of both food and flesh, including dark sacraments few dare speak of."
+
+ ishtarism_pagan_old:0 "Old Cult of Ishtar"
+ ishtarism_pagan_old_adj:0 "Old Ishtarite"
+ ishtarism_pagan_old_adherent:0 "Old Ishtarist"
+ ishtarism_pagan_old_adherent_plural:0 "Old Ishtarists"
+
+ mesopotamian_high_god_name:0 "Ashur"
+ mesopotamian_high_god_name_possessive:0 "Ashur's"
+ mesopotamian_high_god_name_alternate:0 "The Great Lord"
+ mesopotamian_high_god_name_alternate_possessive:0 "The Great Lord's"
+ mesopotamian_devil_name:0 "Kingaludda"
+ mesopotamian_devil_name_possessive:0 "Kingaludda's"
+ mesopotamian_death_deity_name:0 "Nergal"
+ mesopotamian_death_deity_name_possessive:0 "Nergal's"
+ mesopotamian_divine_realm:0 "the Tree of Life"
+ mesopotamian_negative_afterlife:0 "Irkalla"
+ mesopotamian_religious_symbol:0 "winged sun"
+ mesopotamian_religious_text:0 "Enuma Elish"
+ mesopotamian_religious_head_title:0 "Enu"
+ religion_the_anunnaki:0 "the Anunnaki"
+
+ mesopotamian_house_of_worship:0 "ziggurat"
+ mesopotamian_house_of_worship_plural:0 "ziggurats"
+ mesopotamian_priest_male:0 "gudu"
+ mesopotamian_priest_male_plural:0 "gudus"
+ mesopotamian_priest_female:0 "entu"
+ mesopotamian_priest_female_plural:0 "entus"
+ mesopotamian_bishop_male:0 "sanga"
+ mesopotamian_bishop_male_plural:0 "sangas"
+ mesopotamian_bishop_female:0 "gala"
+ mesopotamian_bishop_female_plural:0 "galas"
+ mesopotamian_bishop_alternate_plural:0 "gagûm"
+
+ mesopotamian_good_god_ellil:0 "Ellil"
+ mesopotamian_good_god_ninmah:0 "Ninmah"
+ mesopotamian_good_god_nisaba:0 "Nisaba"
+ mesopotamian_good_god_bau:0 "Bau"
+ mesopotamian_good_god_ninlil:0 "Ninlil"
+ mesopotamian_good_god_nanaya:0 "Nanaya"
+ mesopotamian_good_god_nanshe:0 "Nanshe"
+ mesopotamian_evil_god_asag:0 "Asag"
+ mesopotamian_evil_god_hadad:0 "Hadad"
+ mesopotamian_evil_god_ishtaran:0 "Ishtaran"
+ mesopotamian_evil_god_ereshkigal:0 "Ereshkigal"
+ mesopotamian_evil_god_geshtinanna:0 "Geshtinanna"
+ mesopotamian_evil_god_ninazu:0 "Ninazu"
+ mesopotamian_evil_god_zababa:0 "Zababa"
+
+ mesopotamian_creator_god_name:0 "Anu"
+ mesopotamian_creator_god_name_possessive:0 "Anu's"
+ mesopotamian_health_god_name:0 "Gula"
+ mesopotamian_health_god_name_possessive:0 "Gula's"
+ mesopotamian_fertility_god_name:0 "Ishtar"
+ mesopotamian_fertility_god_name_possessive:0 "Ishtar's"
+ mesopotamian_wealth_god_name:0 "Tammuz"
+ mesopotamian_wealth_god_name_possessive:0 "Tammuz's"
+ mesopotamian_household_god_name:0 "Lahmu"
+ mesopotamian_household_god_name_possessive:0 "Lahmu's"
+ mesopotamian_fate_god_name:0 "Shamash"
+ mesopotamian_fate_god_name_possessive:0 "Shamash's"
+ mesopotamian_knowledge_god_name:0 "Nabu"
+ mesopotamian_knowledge_god_name_possessive:0 "Nabu's"
+ mesopotamian_war_god_name:0 "Ninurta"
+ mesopotamian_war_god_name_possessive:0 "Ninurta's"
+ mesopotamian_trickster_god_name:0 "Ea"
+ mesopotamian_trickster_god_name_possessive:0 "Ea's"
+ mesopotamian_night_god_name:0 "Suen"
+ mesopotamian_night_god_name_possessive:0 "Suen's"
+ mesopotamian_water_god_name:0 "$mesopotamian_trickster_god_name$"
+ mesopotamian_water_god_name_possessive:0 "$mesopotamian_trickster_god_name_possessive$"
+ mesopotamian_witch_god_name:0 "Marduk"
+ mesopotamian_witch_god_name_possessive:0 "Marduk's"
+
+ ishtarism_high_god_name:0 "Ishtar"
+ ishtarism_high_god_name_possessive:0 "Ishtar's"
+ ishtarism_high_god_name_alternate:0 "The Queen of Heaven"
+ ishtarism_high_god_name_alternate_possessive:0 "The Queen of Heaven's"
+ ishtarism_war_god_name:0 "$ishtarism_high_god_name$"
+ ishtarism_war_god_name_possessive:0 "$ishtarism_high_god_name_possessive$"
+ ishtarism_religious_symbol:0 "eight-pointed star"

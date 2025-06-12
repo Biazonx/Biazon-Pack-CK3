@@ -1,0 +1,1 @@
+heretical_defector_fervor_gain = 5 # How much fervor Old Faith gains when a ruler splits off to a New Heresy

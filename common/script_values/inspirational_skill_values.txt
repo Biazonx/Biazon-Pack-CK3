@@ -1,0 +1,352 @@
+﻿weapon_inspiration_average_skill_value = {
+	value = martial
+	add = {
+		value = prowess
+		multiply = 2
+	}
+	divide = 2
+	add = {	
+		if = {
+			limit = { 
+				has_trait_xp = {
+					trait = inspirational_blacksmith
+					track = weaponsmith
+					value >= 100
+				}
+			}
+			value = 5
+		}
+		else_if = {
+			limit = { 
+				has_trait_xp = {
+					trait = inspirational_blacksmith
+					track = weaponsmith
+					value >= 60
+				}
+			}
+			value = 3
+		}
+		else_if = {
+			limit = { 
+				has_trait_xp = {
+					trait = inspirational_blacksmith
+					track = weaponsmith
+					value >= 30
+				}
+			}
+			value = 2
+		}
+		else_if = {
+			limit = { has_trait = inspirational_blacksmith }
+			value = 1
+		}
+	}
+}
+armor_inspiration_average_skill_value = {
+	value = martial
+	add = {
+		value = prowess
+		multiply = 2
+	}
+	divide = 2
+	add = {	
+		if = {
+			limit = { 
+				has_trait_xp = {
+					trait = inspirational_blacksmith
+					track = armorsmith
+					value >= 100
+				}
+			}
+			value = 5
+		}
+		else_if = {
+			limit = { 
+				has_trait_xp = {
+					trait = inspirational_blacksmith
+					track = armorsmith
+					value >= 60
+				}
+			}
+			value = 3
+		}
+		else_if = {
+			limit = { 
+				has_trait_xp = {
+					trait = inspirational_blacksmith
+					track = armorsmith
+					value >= 30
+				}
+			}
+			value = 2
+		}
+		else_if = {
+			limit = { has_trait = inspirational_blacksmith }
+			value = 1
+		}
+	}
+}
+book_inspiration_average_skill_value = {
+	value = learning
+	
+	if = {
+		limit = {
+			has_variable = legendary_author
+		}
+		add = 1000
+	}
+	add = {	
+		if = {
+			limit = { 
+				has_trait_xp = {
+					trait = inspirational_author
+					track = manuscripts
+					value >= 100
+				}
+			}
+			value = 5
+		}
+		else_if = {
+			limit = { 
+				has_trait_xp = {
+					trait = inspirational_author
+					track = manuscripts
+					value >= 60
+				}
+			}
+			value = 3
+		}
+		else_if = {
+			limit = { 
+				has_trait_xp = {
+					trait = inspirational_author
+					track = manuscripts
+					value >= 30
+				}
+			}
+			value = 2
+		}
+		else_if = {
+			limit = { has_trait = inspirational_author }
+			value = 1
+		}
+	}
+}
+weaver_inspiration_average_skill_value = {
+	value = diplomacy
+	add = {	
+		if = {
+			limit = { 
+				has_trait_xp = {
+					trait = inspirational_weaver
+					track = wall_hanging
+					value >= 100
+				}
+			}
+			value = 5
+		}
+		else_if = {
+			limit = { 
+				has_trait_xp = {
+					trait = inspirational_weaver
+					track = wall_hanging
+					value >= 60
+				}
+			}
+			value = 3
+		}
+		else_if = {
+			limit = { 
+				has_trait_xp = {
+					trait = inspirational_weaver
+					track = wall_hanging
+					value >= 30
+				}
+			}
+			value = 2
+		}
+		else_if = {
+			limit = { has_trait = inspirational_weaver }
+			value = 1
+		}
+	}
+}
+adventure_inspiration_average_skill_value = {
+	value = prowess
+	multiply = 3
+	add = {
+		value = diplomacy
+		multiply = 1.5
+	}
+	add = {
+		value = learning
+		multiply = 1.5
+	}
+	divide = 4
+}
+artisan_inspiration_average_skill_value = {
+	value = stewardship
+	add = {	
+		if = {
+			limit = { 
+				OR = {
+					has_trait_xp = {
+						trait = inspirational_artisan
+						track = sculpture
+						value >= 100
+					}
+					has_trait_xp = {
+						trait = inspirational_artisan
+						track = carpentry
+						value >= 100
+					}
+				}
+			}
+			value = 5
+		}
+		else_if = {
+			limit = { 
+				OR = {
+					has_trait_xp = {
+						trait = inspirational_artisan
+						track = sculpture
+						value >= 60
+					}
+					has_trait_xp = {
+						trait = inspirational_artisan
+						track = carpentry
+						value >= 60
+					}
+				}
+			}
+			value = 3
+		}
+		else_if = {
+			limit = { 
+				OR = {
+					has_trait_xp = {
+						trait = inspirational_artisan
+						track = sculpture
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = inspirational_artisan
+						track = carpentry
+						value >= 30
+					}
+				}
+			}
+			value = 2
+		}
+		else_if = {
+			limit = { has_trait = inspirational_artisan }
+			value = 1
+		}
+	}
+}
+smith_inspiration_average_skill_value = {
+	value = stewardship
+	multiply = 2
+	add = {
+		value = prowess
+		multiply = 2
+	}
+	add = diplomacy
+	divide = 4
+	add = {	
+		if = {
+			limit = { 
+				OR = {
+					has_trait_xp = {
+						trait = inspirational_goldsmith
+						track = majesty
+						value >= 100
+					}
+					has_trait_xp = {
+						trait = inspirational_goldsmith
+						track = luxury
+						value >= 100
+					}
+				}
+			}
+			value = 5
+		}
+		else_if = {
+			limit = { 
+				OR = {
+					has_trait_xp = {
+						trait = inspirational_goldsmith
+						track = majesty
+						value >= 60
+					}
+					has_trait_xp = {
+						trait = inspirational_goldsmith
+						track = luxury
+						value >= 60
+					}
+				}
+			}
+			value = 3
+		}
+		else_if = {
+			limit = { 
+				OR = {
+					has_trait_xp = {
+						trait = inspirational_goldsmith
+						track = majesty
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = inspirational_goldsmith
+						track = luxury
+						value >= 30
+					}
+				}
+			}
+			value = 2
+		}
+		else_if = {
+			limit = { has_trait = inspirational_goldsmith }
+			value = 1
+		}
+	}
+}
+alchemy_inspiration_average_skill_value = {
+	value = learning
+	add = {	
+		if = {
+			limit = { 
+				has_trait_xp = {
+					trait = inspirational_alchemist
+					track = theory
+					value >= 100
+				}
+			}
+			value = 5
+		}
+		else_if = {
+			limit = { 
+				has_trait_xp = {
+					trait = inspirational_alchemist
+					track = theory
+					value >= 60
+				}
+			}
+			value = 3
+		}
+		else_if = {
+			limit = { 
+				has_trait_xp = {
+					trait = inspirational_alchemist
+					track = theory
+					value >= 30
+				}
+			}
+			value = 2
+		}
+		else_if = {
+			limit = { has_trait = inspirational_alchemist }
+			value = 1
+		}
+	}
+}

@@ -1,0 +1,350 @@
+﻿l_english:
+    
+    #Celtiberian
+    celtic_iberian_idolism:0 "Celtic-Iberian Paganism"
+    celtic_iberian_idolism_adj:0 "Iberian Paganism"
+    celtic_iberian_idolism_adherent:0 "Iberianist"
+    celtic_iberian_idolism_adherent_plural:0 "Iberianists"
+    celtic_iberian_idolism_desc:0 "The Celtic Iberian gods honored by rites and ceremonies to bond with the gods, and get their help or guidance."
+
+    lusitanian_idolism:0 "Lusitanian Paganism"
+    lusitanian_idolism_adj:0 "Lusitanian Paganism"
+    lusitanian_idolism_adherent:0 "Lusitanian"
+    lusitanian_idolism_adherent_plural:0 "Lusitanianists"
+    lusitanian_idolism_desc:0 "Folk religious beliefs and practices of the Lusitanian people, who were an Indo-European ethnic group inhabiting the region that is now modern-day Portugal and parts of western Spain during antiquity." 
+
+    celtic_iberian_idolism_old:0 "Old Iberian Paganism"
+    celtic_iberian_idolism_old_adj:0 "Old Iberian Paganism"
+    celtic_iberian_idolism_adherent_old:0 "Old Iberianist"
+    celtic_iberian_idolism_old_adherent_plural:0 "Old Iberianists"
+    celtic_iberian_idolism_old_desc:0 "Ancestorial religious beliefs and practices of the ancient Celtic peoples who inhabited the Iberian Peninsula, which includes present-day Spain and Portugal, before the Roman conquest." 
+
+    celtic_iberian_idolism_divine_realm:0 "Other world"
+    celtic_iberian_idolism_religious_symbol:0 "wild boar"
+    celtic_iberian_idolism_religious_text:0 "rituals"
+    celtic_iberian_idolism_religious_head_title:0 "High Druid"
+    holy_order_sons_of_reue:0 "Sons of Reue"
+    holy_order_sons_of_lugh:0 "Sons of Lugei"
+
+    celtic_iberian_religious_head_title:0 "High Druid"
+
+    #Reue Localization historical correct
+    celtic_iberian_idolism_high_god_name:0 "Reue"
+    celtic_iberian_idolism_high_god_name_possessive:0 "Reue's"
+    celtic_iberian_idolism_high_god_name_alternate:0 "Reue"
+    celtic_iberian_idolism_high_god_name_alternate_possessive:0 "Reue's"
+    celtic_iberian_idolism_high_god_shehe:0 "He"
+    celtic_iberian_idolism_high_god_herselfhimself:0 "Himself"
+    celtic_iberian_idolism_high_god_herhis:0 "His"
+
+    #Creater god Localization
+    celtic_iberian_idolism_creator_god_name:0 "Brigo"
+    celtic_iberian_idolism_creator_god_name_possessive:0 "Brigo's"
+
+    #Health God Arentius  historical correct
+    celtic_iberian_idolism_health_god_name:0 "Arentius"
+    celtic_iberian_idolism_health_god_name_possessive:0 "Arentius's"
+
+    #Fertility Goddess Nabia Localization  historical correct
+    celtic_iberian_idolism_fertility_god_name:0 "Nabia"
+    celtic_iberian_idolism_fertility_god_name_possessive:0 "Nabia's"
+
+
+    #Wealth god Lugus Localization  historical correct
+    celtic_iberian_idolism_wealth_god_name:0 "Lugei"
+    celtic_iberian_idolism_wealth_god_name_possessive:0 "$celtic_iberian_idolism_wealth_god_name$'s"
+
+    #Household god Lugus historical correct
+    celtic_iberian_idolism_household_god_name:0 "$celtic_iberian_idolism_wealth_god_name$"
+    celtic_iberian_idolism_household_god_name_possessive:0 "$celtic_iberian_idolism_wealth_god_name$'s"
+
+    #Fate god Endovelicus Localization historical correct
+    celtic_iberian_idolism_fate_god_name:0 "Endovelicus"
+    celtic_iberian_idolism_fate_god_name_possessive:0 "Endovelicus's"
+
+    #knowledge god belisama Localization check Needs more research scare information
+    celtic_iberian_idolism_knowledge_god_name:0 "Belisama"
+    celtic_iberian_idolism_knowledge_god_name_possessive:0 "Belisama's"
+
+    #War god Bandua Localization  historical correct
+    celtic_iberian_idolism_war_god_name:0 "Bandua"
+    celtic_iberian_idolism_war_god_name_possessive:0 "Bandua's"
+
+    #Trickster god no god Localization
+    celtic_iberian_idolism_trickster_god_name:0 "$celtic_iberian_idolism_wealth_god_name$"
+    celtic_iberian_idolism_trickster_god_name_possessive:0 "$celtic_iberian_idolism_wealth_god_name$'s"
+
+    #Night goddess Latona Localization
+    celtic_iberian_idolism_night_god_name:0 "no god"
+    celtic_iberian_idolism_night_god_name_possessive:0 "no god"
+
+    #Celtiberian water goddess 
+    celtic_iberian_idolism_water_god_name:0 "Durius"
+    celtic_iberian_idolism_water_god_name_possessive:0 "Durius's"
+
+    #evil gods names  gods of the underword 
+    celtic_iberian_idolism_evil_god_ataecina:0 "Ataecina" 
+    celtic_iberian_idolism_evil_god_luru:0 "Luru"
+
+    celtic_iberian_witchgodname_ataecina:0 "Ataecina"
+
+    #Devil god   
+    celtic_iberian_idolism_devil_name:0 "Reva" 
+    celtic_iberian_idolism_devil_name_possessive:0 "Reva's"
+
+    #Death god Endovelicus  historical correct
+    celtic_iberian_idolism_death_deity_name:0 "Endovelicus"
+    celtic_iberian_idolism_death_deity_name_possessive:0 "Endovelicus's"
+
+    #Good gods names 
+    celtic_iberian_idolism_good_god_dea_brigo:0 "Brigo" 
+    celtic_iberian_idolism_good_god_durius:0 "Durius" 
+    celtic_iberian_idolism_good_god_alaunus:0 "Alaunus" 
+    celtic_iberian_idolism_good_god_lugus:0 "Lugei" 
+    celtic_iberian_idolism_good_god_endovelicus:0 "Endovelicus" 
+    celtic_iberian_idolism_good_god_Besencla:0 "Besenclā" 
+    celtic_iberian_idolism_good_god_visucius:0 "Visucius" 
+    celtic_iberian_idolism_good_god_ares_lusitani:0 "Ares Lusitani"
+
+    #Celtiberian male priests  
+    celtic_iberian_idolism_priest_male:0 "Druid"
+    celtic_iberian_idolism_priest_male_plural:0 "Druids"
+
+    #Celtiberian female priests 
+    celtic_iberian_idolism_priest_female:0 "Druidesses" 
+    celtic_iberian_idolism_priest_female_plural:0 "Druidesses" 
+
+    #Druids  
+    celtic_iberian_idolism_bishop_male:0 "Druid" 
+    celtic_iberian_idolism_bishop_male_plural:0 "Druids"
+
+    lusitanian_idolism_high_god_name:0 "Reue"
+    lusitanian_idolism_high_god_name_possessive:0 "Reue's"
+    lusitanian_idolism_high_god_name_alternate:0 "$lusitanian_idolism_high_god_name$"
+    lusitanian_idolism_high_god_name_alternate_possessive:0 "$lusitanian_idolism_high_god_name$'s"
+    lusitanian_idolism_high_god_shehe:0 "He"
+    lusitanian_idolism_high_god_herselfhimself:0 "Himself"
+    lusitanian_idolism_high_god_herhis:0 "His"
+
+    #Creater god Localization
+    lusitanian_idolism_creator_god_name:0 "$lusitanian_idolism_high_god_name$"
+    lusitanian_idolism_creator_god_name_possessive:0 "$lusitanian_idolism_high_god_name$'s"
+
+    #Health Goddess 
+    lusitanian_idolism_health_god_name:0 "Arancio"
+    lusitanian_idolism_health_god_name_possessive:0 "$lusitanian_idolism_health_god_name$'s"
+
+    #Fertility God Ataecina Localization
+    lusitanian_idolism_fertility_god_name:0 "Ataegina"
+    lusitanian_idolism_fertility_god_name_possessive:0 "$lusitanian_idolism_fertility_god_name$'s"
+
+    #Wealth god En Localization
+    lusitanian_idolism_wealth_god_name:0 "Lucubo"
+    lusitanian_idolism_wealth_god_name_possessive:0 "$lusitanian_idolism_wealth_god_name$'s"
+
+    #Household god Trebaruna
+    lusitanian_idolism_household_god_name:0 "Trebaruna"
+    lusitanian_idolism_household_god_name_possessive:0 "$lusitanian_idolism_household_god_name$'s"
+
+    #Fate god En Localization
+    lusitanian_idolism_fate_god_name:0 "Endovelicos"
+    lusitanian_idolism_fate_god_name_possessive:0 "$lusitanian_idolism_fate_god_name$'s"
+
+    #knowledge god En Localization
+    lusitanian_idolism_knowledge_god_name:0 "$lusitanian_idolism_wealth_god_name$"
+    lusitanian_idolism_knowledge_god_name_possessive:0 "$lusitanian_idolism_wealth_god_name$'s"
+
+    #War god Cariocecus Localization
+    lusitanian_idolism_war_god_name:0 "Cariocecus"
+    lusitanian_idolism_war_god_name_possessive:0 "$lusitanian_idolism_war_god_name$'s"
+
+    #Trickster god Daedalus Localization
+    lusitanian_idolism_trickster_god_name:0 "$lusitanian_idolism_wealth_god_name$"
+    lusitanian_idolism_trickster_god_name_possessive:0 "$lusitanian_idolism_wealth_god_name$'s"
+
+    #Night goddess Ataecina  Localization
+    lusitanian_idolism_night_god_name:0 "Ataecina"
+    lusitanian_idolism_night_god_name_possessive:0 "$lusitanian_idolism_night_god_name$'s"
+
+    #Water god Gebeleizis Localization
+    lusitanian_idolism_water_god_name:0 "Nabia"
+    lusitanian_idolism_water_god_name_possessive:0 "$lusitanian_idolism_water_god_name$'s"
+
+    #evil gods names 
+    lusitanian_idolism_evil_god_ataecina:0 "Ataecina" 
+    
+    #witch goddess
+    lusitanian_idolism_witchgodname_spirit:0 "spirits"
+    lusitanian_idolism_witchgodname_spirit_possesive:0 "$lusitanian_idolism_witchgodname_spirit$"
+
+    #Devil god   #For now there is just no thing like a devil god in the Lusitanian religion
+    lusitanian_idolism_devil_name:0 "spirits" 
+    lusitanian_idolism_devil_name_possessive:0 "$lusitanian_idolism_devil_name$"
+
+    #Death god Zalmoxis 
+    lusitanian_idolism_death_deity_name:0 "Ataecina"
+    lusitanian_idolism_death_deity_name_possessive:0 "$lusitanian_idolism_death_deity_name$'s"
+
+    #lusitanian priest 
+    lusitanian_idolism_priest_male:0 "Priest"
+    lusitanian_idolism_priest_male_plural:0 "Priests"
+
+    #lusitanian priestess 
+    lusitanian_idolism_priest_female:0 "Priestess" 
+    lusitanian_idolism_priest_female_plural:0 "Priestesses" 
+
+    #lusitanian high priest
+    lusitanian_idolism_bishop_male:0 "Priest" 
+    lusitanian_idolism_bishop_male_plural:0 "Priests" 
+
+    lusitanian_idolism_religious_head_title:0 "High Priest"
+
+    lusitanian_idolism_divine_realm:0 "Vdekje"
+    lusitanian_idolism_religious_symbol:0 "Sun"
+    lusitanian_idolism_religious_text:0 "Mythology"
+
+    #roman names
+    #males
+    reserved_male_names:0 "Lusitanian male names"
+    #Female 
+    reserved_female_names:0 "Lusitanian female names"
+
+    #holy orders: 
+    holy_order_sons_of_medaurus:0 "Sons of Medaurus"
+    holy_order_Protectors_of_En:0 "Protectors of En"
+
+    #Gaelic male priests  
+    gaelic_idolism_priest_male:0 "Druid"
+    gaelic_idolism_priest_male_plural:0 "Druids"
+
+    #Gaelic female priests 
+    gaelic_idolism_priest_female:0 "Druidesses" 
+    gaelic_idolism_priest_female_plural:0 "Druidesses" 
+
+    #Druids  
+    gaelic_idolism_bishop_male:0 "Druid" 
+    gaelic_idolism_bishop_male_plural:0 "Druids"  
+
+ ghw_sacred_war:0 "Great Sacred War"
+
+ #Welsh
+ welsh_high_god_name:0 "Beli Mawr"
+ welsh_high_god_name_possessive:0 "Beli Mawr's"
+ welsh_high_god_name_alternate:0 "Great One"
+ welsh_high_god_name_alternate_possessive:0 "Great One's"
+ welsh_good_god_lludd_llaw_eraint:0 "Lludd Llaw Eraint"
+ welsh_good_god_creiddylad:0 "Creiddylad"
+ welsh_good_god_goannon:0 "Gofannon"
+ welsh_good_god_briganti:0 "Briganti"
+ welsh_good_god_bendigeidfran:0 "Bendigeidfran"
+ welsh_good_god_gwydion:0 "Gwydion"
+ welsh_good_god_gwyn_ap_nudd:0 "Gwynn ap Nudd"
+ welsh_good_god_arianrhod:0 "Arianrhod"
+ welsh_good_god_coventina:0 "Coventina"
+ welsh_good_god_the_tylweth_teg:0 "the Tylwyth Teg"
+ welsh_good_god_culhwch:0 "Culhwch"
+ welsh_good_god_dylan_ail_don:0 "Dylan ail Don"
+ welsh_good_god_bladud:0 "Bladud"
+ welsh_good_god_pryderi:0 "Pryderi"
+ welsh_good_god_ceridwen:0 "Ceridwen"
+ welsh_good_god_gwenhwyfar:0 "Gwenhwyfar"
+ welsh_good_god_nimue:0 "Nimue"
+ welsh_good_god_astarte:0 "Astarte"
+ welsh_good_god_rhiannon:0 "Rhiannon"
+ welsh_creator_god_name:0 "Dyḗus"
+ welsh_creator_god_name_possessive:0 "Dyḗus'"
+ welsh_health_god_name:0 "Lludd Llaw Eraint"
+ welsh_health_god_name_possessive:0 "Lludd Llaw Eraint's"
+ welsh_fertility_god_name:0 "Creiddylad"
+ welsh_fertility_god_name_possessive:0 "Creiddylad's"
+ welsh_wealth_god_name:0 "Gofannon"
+ welsh_wealth_god_name_possessive:0 "Gofannon's"
+ welsh_household_god_name:0 "Briganti"
+ welsh_household_god_name_possessive:0 "Briganti's"
+ welsh_fate_god_name:0 "Bendigeidfran"
+ welsh_fate_god_name_possessive:0 "Bendigeidfran's"
+ welsh_knowledge_god_name:0 "Gwydion"
+ welsh_knowledge_god_name_possessive:0 "Gwydion's"
+ welsh_war_god_name:0 "Gwynn ap Nudd"
+ welsh_war_god_name_possessive:0 "Gwynn ap Nudd's"
+ welsh_trickster_god_name:0 "Gwydion"
+ welsh_trickster_god_name_possessive:0 "Gwydion's"
+ welsh_night_god_name:0 "Arianrhod"
+ welsh_night_god_name_possessive:0 "Arianrhod's"
+ welsh_water_god_name:0 "Coventina"
+ welsh_water_god_name_possessive:0 "Coventina's"
+ welsh_devil_name:0 "Efnysien"
+ welsh_devil_name_possessive:0 "Efnysien's"
+ welsh_evil_god_ysbaddaden:0 "Ysbaddaden"
+ welsh_evil_god_goemagot:0 "Goemagot"
+ welsh_evil_god_the_giants:0 "the Giants"
+ welsh_religious_symbol:0 "triquetra"
+ welsh_religious_text:0 "Y Gododdin"
+ welsh_religious_head_title:0 "High Archdruid"
+ welsh_divine_realm:0 "Annwn"
+ welsh_afterlife_name:0 "Annwn"
+ welsh_death_deity_name:0 "Arawn"
+ welsh_death_deity_name_possessive:0 "Arawn's"
+ welsh_witchgodname_gwydion:0 "Gwydion"
+
+ central_pagan_evil_god_surtr: "Surtr"
+
+ welsh_pagan:0 "Welsh Paganism"
+ welsh_pagan_adj:0 "Welsh Paganism"
+ welsh_pagan_adherent:0 "Welsh Paganist"
+ welsh_pagan_adherent_plural:0 "Welsh Paganists"
+
+ welsh_pagan_old:0 "Old Welsh Paganism"
+ welsh_pagan_old_adj:0 "Old Welsh Paganism"
+ welsh_pagan_old_adherent:0 "Old Welsh Paganist"
+ welsh_pagan_old_adherent_plural:0 "Old Welsh Paganists"
+ welsh_pagan_desc:0 "Although originally part of the Brythonic pantheon, the Welsh resisted the Christianisation of the Isles and continued evolving as a pagan religion. Eventually the Welsh developed their own cultural and religious identity, and the Welsh pantheon became a religion of its own."
+
+ celtic_house_of_worship:0 "Nemeton"
+ celtic_house_of_worship_plural:0 "Nemetons"
+ celtic_religious_head_title:0 "High Druid"
+ celtic_religious_head_title_name:0 "High Circle"
+ celtic_priest_male:0 "druid"
+ celtic_priest_male_plural:0 "druids"
+ celtic_priest_female:0 "druidess"
+ celtic_priest_female_plural:0 "druidesses"
+ celtic_divine_realm:0 "Otherworld"
+
+ basque_good_god_lur:0 "$basque_creator_god_name$"
+ basque_good_god_eate:0 "$basque_water_god_name$"
+ basque_good_god_egoi:0 "Egoi"
+ basque_good_god_ekhi:0 "$basque_health_god_name$"
+ basque_good_god_orko:0 "$basque_war_god_name$"
+ basque_good_god_aatxe:0 "Aatxe"
+ basque_good_god_basajaunak:0 "the basajaunak"
+ basque_good_god_jentilak:0 "the jentilak"
+ basque_good_god_laminak:0 "the laminak"
+ basque_good_god_mairuak:0 "the mairuak"
+ basque_good_god_iratxoak:0 "the iratxoak"
+ basque_good_god_sorginak:0 "the sorginak"
+ basque_good_god_odei:0 "Odei"
+
+ basque_evil_god_inguma:0 "$basque_trickster_god_name$"
+ basque_evil_god_sugaar:0 "$basque_knowledge_god_name$"
+ basque_evil_god_gaizkin:0 "Gaizkiñ"
+ basque_evil_god_gaueko:0 "Gaueko"
+ basque_evil_god_herensuge:0 "$basque_fertility_god_name$"
+ basque_evil_god_tartalo:0 "$basque_wealth_god_name$"
+ basque_evil_god_akerbeltz:0 "Akerbeltz"
+ basque_evil_god_debru:0 "$basque_devil_name$"
+ basque_evil_god_balbe:0 "$basque_death_deity_name$"
+ basque_evil_god_ilazki:0 "$basque_night_god_name$"
+ basque_evil_god_mikelats:0 "Mikelats"
+ basque_evil_god_aideko:0 "Aideko"
+
+ skordism_faith:0 "Skordism"
+ skordism_faith_adj:0 "Skordic"
+ skordism_faith_adherent:0 "Skordist"
+ skordism_faith_adherent_plural:0 "Skordists"
+ skordism_faith_desc:0 "The native faith of Skordian people that was a ruling dynasty in ancient Illyria." # TODO #Grath TODO: Write this
+ 
+ nemetism_faith:0 "Nemetism"
+ nemetism_faith_adj:0 "Nemetic"
+ nemetism_faith_adherent:0 "Nemetist"
+ nemetism_faith_adherent_plural:0 "Nemetists"
+ nemetism_faith_desc:0 "Veneration of Nemetona as well as the celebration of seasonal festivals and rituals similar to those practiced by ancient Celtic peoples." # TODO #Grath TODO: Write this

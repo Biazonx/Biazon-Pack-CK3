@@ -1,0 +1,6 @@
+﻿si_rf_foreign = {
+	is_pagan = yes  				# Specifies if the group is pagan or not (default value is yes)
+	piety_icon_group = pagan 	# All religions in this family default to this set of piety icons. Order of precedence is the lowest level scripted in: faith > religion > family.
+	doctrine_background_icon = core_tenet_banner_pagan.dds 	# All religions in this family default to this doctrine background icon. Order of precedence is the lowest level scripted in: faith > religion > family.
+	hostility_doctrine = si_hostility_group # INTERFACE ONLY: Use this doctrine when displaying hostility information for the whole religious family (if not scripted, then show no information)
+}

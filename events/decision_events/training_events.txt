@@ -1,0 +1,79 @@
+﻿namespace = basic_training
+
+basic_training.0001 = {
+    type = character_event
+    title = basic_training.0001.t
+    desc = basic_training.0001.d
+    theme = martial
+
+    left_portrait = {
+        character = root
+        animation = war_attacker
+    }
+
+	option = { # Fuse with a Warrior Clan namekian
+		name = basic_training.0001.a
+		add_character_modifier = {
+			modifier = modifier_namek_warrior
+		}
+	}	
+
+	option = { # Fuse with a Dragon Clan namekian
+		name = basic_training.0001.b
+	add_character_modifier = {
+			modifier = modifier_dragon_clan
+		}
+	}	
+}
+
+basic_training.0002 = {
+    type = character_event
+    title = basic_training.0002.t
+    desc = basic_training.0002.d
+    theme = martial
+
+    left_portrait = {
+        character = root
+        animation = war_attacker
+    }
+
+	option = { # extreme training
+		name = basic_training.0002.a
+		add_character_modifier = {
+			modifier = exhausted_modifier
+			days = 182.5
+		}
+		random_list = {
+			50 = {
+			add_prowess_skill = 1
+			}
+			30 = {
+			add_prowess_skill = 2
+			}
+			20 = {
+			add_prowess_skill = 3
+			add_trait = ki_control
+		}
+
+	}
+}	
+
+	option = { # normal training
+	name = basic_training.0002.b
+	random_list = {
+		    60 = {
+			add_prowess_skill = 1
+			}
+			
+			30 = {
+			add_prowess_skill = 2
+			}
+			
+			10 = {
+			add_prowess_skill = 3
+			add_trait = ki_control
+		}
+
+	}
+  }
+}

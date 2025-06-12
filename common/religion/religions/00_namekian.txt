@@ -1,0 +1,114 @@
+namekian_religion = {
+    family = rf_pagan
+
+    doctrine = pagan_hostility_doctrine
+
+    #Main Group
+    doctrine = doctrine_temporal_head
+    doctrine = doctrine_gender_equal
+    doctrine = doctrine_pluralism_righteous
+    doctrine = doctrine_theocracy_lay_clergy
+
+    #Marriage
+    doctrine = doctrine_monogamy
+    doctrine = doctrine_divorce_approval
+    doctrine = doctrine_bastardry_legitimization
+    doctrine = doctrine_consanguinity_restricted
+
+    #Crimes
+    doctrine = doctrine_homosexuality_accepted
+    doctrine = doctrine_adultery_men_shunned
+    doctrine = doctrine_adultery_women_shunned
+    doctrine = doctrine_kinslaying_close_kin_crime
+    doctrine = doctrine_deviancy_shunned
+    doctrine = doctrine_witchcraft_accepted
+
+    #Clerical Functions
+    doctrine = doctrine_clerical_function_recruitment
+    doctrine = doctrine_clerical_gender_either
+    doctrine = doctrine_clerical_marriage_allowed
+    doctrine = doctrine_clerical_succession_temporal_appointment
+
+    #Pilgrimage
+    doctrine = doctrine_pilgrimage_encouraged
+
+    #Funeral Tradition
+    doctrine = doctrine_funeral_stoic
+
+    traits = {
+        virtues = { namekian_race patient temperate compassionate lifestyle_mystic }
+        sins = { wrathful arrogant deceitful }
+    }
+
+    holy_order_names = {
+        { name = "holy_order_guardians_of_guru" }
+        { name = "holy_order_dragon_clan_protectors" }
+    }
+
+    custom_faith_icons = {
+        custom_faith_lotus custom_faith_eye_of_providence custom_faith_aum_tibetan
+    }
+
+    holy_order_maa = { guardians }
+
+    localization = {
+        #High God Name
+        HighGodName = namekian_high_god
+        HighGodName2 = namekian_high_god_2
+        HighGodNamePossessive = namekian_high_god_possessive
+        HighGodNameSheHe = CHARACTER_SHEHE_HE
+        HighGodHerselfHimself = CHARACTER_HIMSELF
+        HighGodHerHis = CHARACTER_HERHIS_HIS
+        HighGodNameAlternate = namekian_high_god_alternate
+        HighGodNameAlternatePossessive = namekian_high_god_alternate_possessive
+
+        #Creator
+        CreatorName = namekian_creator_god
+        CreatorNamePossessive = namekian_creator_god_possessive
+
+        #Other Deities
+        HealthGodName = namekian_health_god
+        FertilityGodName = namekian_growth_god
+        WealthGodName = namekian_prosperity_god
+        HouseholdGodName = namekian_home_god
+        FateGodName = namekian_destiny_god
+        KnowledgeGodName = namekian_knowledge_god
+        WarGodName = namekian_guardian_god
+
+        #Evil Gods
+        DevilName = namekian_evil_spirits
+        EvilGodNames = { namekian_corrupt_dragons }
+
+        #Worship Terms
+        HouseOfWorship = namekian_house_of_worship
+        HouseOfWorshipPlural = namekian_house_of_worship_plural
+        ReligiousSymbol = namekian_dragon_symbol
+        ReligiousText = namekian_sacred_scrolls
+        ReligiousHeadName = namekian_grand_elder
+        DivineRealm = namekian_afterlife
+        PositiveAfterLife = namekian_spirit_world
+        NegativeAfterLife = namekian_void
+
+        #Priest Names
+        PriestMale = namekian_elder
+        PriestFemale = namekian_elder
+    }
+
+    faiths = {
+        namekian_faith = {
+            color = { 0.2 0.8 0.2 } # bright green
+            icon = "namekian_faith.dds"
+
+            holy_site = rome # placeholder — you can assign custom ones later
+            holy_site = constantinople
+            holy_site = baghdad
+            holy_site = jerusalem
+            holy_site = mecca
+
+            doctrine = tenet_inner_journey
+            doctrine = tenet_pentarchy
+            doctrine = tenet_esotericism
+        }
+    }
+}
+

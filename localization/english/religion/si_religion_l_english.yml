@@ -1,0 +1,150 @@
+﻿l_english:
+ #Group
+ si_rf_foreign:0 "Foreign"
+ si_rf_foreign_desc:0 "The gods of the invaders are completely unlike any we have ever heard of."
+ 
+ #Religion
+ anahuac_religion:0 "Toltecayotl"
+ anahuac_religion_adj:0 "Toltecayotl"
+ anahuac_religion_adjerent:0 "Toltecatl"
+ anahuac_religion_adherent_plural:0 "Tolteca"
+ anahuac_religion_desc:0 "The new arrivals from across the Atlantic adhere to a variety of philosophies for achieving personal fame, purity and wisdom, and partake in the many complex rituals and sacrifices crucial in order for their vast pantheon of deities to keep the world together."
+ nahua_house_of_worship:1 "teocalli"
+ nahua_house_of_worship2:1 "$nahua_house_of_worship$"
+ nahua_house_of_worship3:1 "$nahua_house_of_worship$"
+ nahua_house_of_worship_plural:1 "teocallis"
+ nahua_religious_symbol:0 "yauhtli"
+ nahua_religious_symbol2:0 "$nahua_religious_symbol$"
+ nahua_religious_symbol3:0 "$nahua_religious_symbol$"
+ nahua_religious_text:0 "Huehuetlatolli"
+ nahua_religious_text2:0 "$nahua_religious_text$"
+ nahua_religious_text3:0 "$nahua_religious_text$"
+ nahua_religious_head_title:0 "High Priest" #Provisionally
+ nahua_religious_head_title_name:0 "High Priesthood" #Provisionally
+ nahua_devotee_male:1 "tlamatini "
+ nahua_devotee_male_plural:0 "tlamatinime"
+ nahua_devotee_female:0 "$nahua_devotee_male$"
+ nahua_devotee_female_plural:0 "$nahua_devotee_male_plural$"
+ nahua_devotee_neuter:0 "$nahua_devotee_male$"
+ nahua_devotee_neuter_plural:0 "$nahua_devotee_male_plural$"
+ nahua_priest_male:0 "priest"
+ nahua_priest_male_plural:0 "priests"
+ nahua_alt_priest_plural:0 "$nahua_priest_male_plural$"
+ nahua_bishop:0 "tlamacazui"
+ nahua_bishop_plural:0 "tlamacazuis"
+ nahua_divine_realm:0 "Omeyocan"
+ nahua_divine_realm2:0 "$nahua_divine_realm$"
+ nahua_divine_realm3:0 "$nahua_divine_realm$"
+ nahua_positive_afterlife:0 "Chicnauhtopan"
+ nahua_positive_afterlife2:0 "$nahua_positive_afterlife$"
+ nahua_positive_afterlife3:0 "$nahua_positive_afterlife$"
+ nahua_negative_afterlife:0 "Chicnauhmictlan"
+ nahua_negative_afterlife2:0 "$nahua_negative_afterlife$"
+ nahua_negative_afterlife3:0 "$nahua_negative_afterlife$"
+ 
+ holy_site_giza_name:0 "Giza"
+ holy_site_hodh_name:0 "Hodh"
+ holy_site_paris_name:0 "Paris"
+ 
+ #Head gods
+ nahua_god_tlaloc:0 "Tlaloc"
+ nahua_god_tlaloc_possessive:0 "Tlaloc's"
+ nahua_god_tlaloc_alt:0 "the Rain-Bringer"
+ nahua_god_tlaloc_alt_possessive:0 "the Rain-Bringer's"
+ nahua_god_tezcatlipoca:0 "Tezcatlipoca"
+ nahua_god_tezcatlipoca_possessive:0 "Tezcatlipoca's"
+ nahua_god_tezcatlipoca_alt:0 "the Smoking Mirror"
+ nahua_god_tezcatlipoca_alt_possessive:0 "the Smoking Mirror's"
+ nahua_god_quetzalcoatl:0 "Quetzalcoatl"
+ nahua_god_quetzalcoatl_possessive:0 "Quetzalcoatl's"
+ nahua_god_quetzalcoatl_alt:0 "the Feathered Serpent"
+ nahua_god_quetzalcoatl_alt_possessive:0 "the Feathered Serpent's"
+ 
+ #Patron deities
+ nahua_creator_god_name:1 "Ometeotl" #The popular concept of the all-encompassing divinity (teotl) as a god.
+ nahua_creator_god_name_possessive:1 "Ometeotl's"
+ nahua_health_god_name:0 "Ixtlilton" #Medicine and healing god. Unlike the rest of these, I cannot find any evidence that he was a thing before the Aztecs, but it fits really well otherwise
+ nahua_health_god_name_possessive:0 "Ixtlilton's"
+ nahua_fertility_god_name:0 "Xochiquetzal" #Big with the Toltecs, god of girl power but also of harvest, pleasure and luxury items
+ nahua_fertility_god_name_possessive:0 "Xochiquetzal's"
+ nahua_wealth_god_name:0 "Yacatecuhtli" #Big-nosed Aztec god of commerce and travellers 
+ nahua_wealth_god_name_possessive:0 "Yacatecuhtli's"
+ nahua_household_god_name:0 "Chantico" #Aztec hearth goddess, mainly important in Xochimilco (a city that predated the Aztecs)
+ nahua_household_god_name_possessive:0 "Chantico's"
+ nahua_fate_god_name:0 "Xolotl"
+ nahua_fate_god_name_possessive:0 "Xolotl's"
+ nahua_knowledge_god_name:0 "$nahua_god_quetzalcoatl$"
+ nahua_knowledge_god_name_possessive:0 "$nahua_god_quetzalcoatl_possessive$"
+ nahua_war_god_name:0 "Tlacahuepan" #Toltec War God, adopted by the Aztecs as a brother of Huitzilopochtli
+ nahua_war_god_name_possessive:0 "Tlacahuepan's"
+ nahua_trickster_god_name:0 "Huehuecoyotl" #Aka Old Old Coyote, god of mischief, dance, music, and uninhibited sex
+ nahua_trickster_god_name_possessive:0 "Huehuecoyotl's"
+ nahua_night_god_name:0 "$nahua_god_tezcatlipoca$"
+ nahua_night_god_name_possessive:0 "$nahua_god_tezcatlipoca_possessive$"
+ nahua_water_god_name:0 "$nahua_god_tlaloc$"
+ nahua_water_god_name_possessive:0 "$nahua_god_tlaloc_possessive$"
+ nahua_death_deity_name:0 "Mictlantecuhtli" #Death god worshiped all over Mesoamerica
+ nahua_death_deity_name_possessive:0 "Mictlantecuhtli's"
+ nahua_witchgodname:0 "Tlazolteotl"
+ nahua_witchgodname_possessive:0 "Tlazolteotl's"
+ nahua_devil_name:0 "Tlaltecuhtli" #Aztec primordial monster who Tezcatlipoca and Quetzalcoatl made the earth from, still demands sacrifices.
+ nahua_devil_name_possessive:0 "Tlaltecuhtli's"
+ 
+ #Lesser good gods (that I wanted to include because they're awesome but couldn't fit in the pantheon)
+ nahua_god_itzpapalotl:0 "Itzpapalotl"
+ nahua_god_tlahuizcalpantecuhtli:0 "Tlahuizcalpantecuhtli"
+ 
+ #Doctrines
+ doctrine_nahua_branch_name:0 "Patron God"
+ doctrine_nahua_branch_desc:0 "Few will dispute the three gods at the very top of the pantheon, but even wise men disagree as to the precise order of precedence among them."
+ nahua_branch_tlaloc_name:0 "Follower of Tlaloc"
+ nahua_branch_tlaloc_desc:0 "Tlaloc brings the rain which nourishes the maize, but also the lightning which strikes down the unvirtuous. His view is the most balanced and therefore the wisest."
+ nahua_branch_quetzalcoatl_name:0 "Follower of Quetzalcoatl"
+ nahua_branch_quetzalcoatl_desc:0 "In a universe of lies and suffering, the only truth can be found in art, for beauty comes from Quetzalcoatl, as does all knowledge."
+ nahua_branch_tezcatlipoca_name:0 "Follower of Tezcatlipoca"
+ nahua_branch_tezcatlipoca_desc:0 "Tezcatlipoca is both the silent night wind, and the thunderous roar of war. We are blind, deaf and naked before him, and he needs blood."
+
+ doctrine_parameter_hostility_override_nahua_branch_quetzalcoatl:0 "Considers followers of Quetzalcoatl to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue)|V]"
+ doctrine_parameter_hostility_override_nahua_branch_tezcatlipoca:0 "Considers followers of Tezcatlipoca to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue)|V]"
+ doctrine_parameter_hostility_override_nahua_branch_tlaloc:0 "Considers followers of Tlaloc to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue)|V]"
+ 
+ tenet_anahuac_pluralism_name:0 "Tolteca Pluralism"
+ tenet_anahuac_pluralism_desc:0 "The invaders from Cemanahuac consider every new god they come across merely a member of their pantheon they hadn't met yet."
+
+ cemanahuac_hostility_doctrine_name:0 ""
+ cemanahuac_hostility_doctrine_desc:0 ""
+
+  #Because Paradox was too lazy to localise these themselves...
+ doctrine_parameter_hostility_override_abrahamic_hostility_doctrine:1 "Abrahamic [faiths|E] are considered only [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]"
+ doctrine_parameter_hostility_override_pagan_hostility_doctrine:1 "Pagan [faiths|E] are considered only [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]"
+ 
+ invader_hostility_doctrine_name:0 ""
+ invader_hostility_doctrine_desc:0 ""
+ si_hostility_group_name:0 ""
+ 
+ #Faiths
+ cult_of_tlaloc:0 "Cult of Tlaloc"
+ cult_of_tlaloc_adj:0 "Tlaloc"
+ cult_of_tlaloc_desc:0 "Tlaloc, the great Rain-Bringer, espouses many of the practises found in the other Toltecatl faiths, and strikes an eerie balance between art and brutality."
+ cult_of_tlaloc_adherent:0 "Follower of Tlaloc"
+ cult_of_tlaloc_adherent_plural:0 "Followers of Tlaloc"
+ cult_of_quetzalcoatl:0 "Cult of Quetzalcoatl"
+ cult_of_quetzalcoatl_adj:0 "Quetzalcoatl"
+ cult_of_quetzalcoatl_desc:0 "Quetzalcoatl is an artisan god, and the followers of the Feathered Serpent take a kinder view on their new subjects, foregoing human sacrifice entirely."
+ cult_of_quetzalcoatl_adherent:0 "Follower of Quetzalcoatl"
+ cult_of_quetzalcoatl_adherent_plural:0 "Followers of Quetzalcoatl"
+ cult_of_tezcatlipoca:0 "Cult of Tezcatlipoca"
+ cult_of_tezcatlipoca_adj:0 "Tezcatlipoca"
+ cult_of_tezcatlipoca_desc:0 "Tezcatlipoca's brutal doctrine of humiliation and war inspires fear in the foreigners and fellow Nahua alike."
+ cult_of_tezcatlipoca_adherent:0 "Follower of Tezcatlipoca"
+ cult_of_tezcatlipoca_adherent_plural:0 "Followers of Tezcatlipoca"
+
+d_bzn_tecuetlaza:0 "The Jungle-born Spears"
+d_bzn_balam:0 "The Quetzal Scholars"
+d_bzn_itzcoatl:0 "The Crimson Host"
+d_bzn_hong:0 "Taiping Rebellion"
+d_bzn_ahmose:0 "The Last Pharaoh Host"
+d_bzn_yitzhak:0 "The Children of Abraham"
+
+jaguar_warrior:0 "Jaguar Warrior"
+bzn.jaguar.army:0 "Jungle Warriors"

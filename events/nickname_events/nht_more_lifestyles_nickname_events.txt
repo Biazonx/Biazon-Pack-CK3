@@ -1,0 +1,225 @@
+﻿###################
+# Nickname Events
+#
+###################
+
+namespace = nht_more_lifestyle_nicknames
+
+# Prowess Nicknames
+nht_more_lifestyle_nicknames.0001 = { # Prowess nickname for someone who's arrogant
+	type = character_event
+	title = nht_more_lifestyle_nicknames.0001.t
+	desc = nht_more_lifestyle_nicknames.0001.desc
+	theme = nht_prowess_offense_focus
+	left_portrait = root
+	
+	trigger = {
+		#is_ai = no
+		is_valid_for_narrow_yearly_events = yes
+		OR = { # Has no nickname or a bad nickname
+			has_any_nickname = no
+			has_bad_nickname = yes
+		}
+		NOR = {
+			has_character_flag = had_nickname_event
+			has_character_flag = nht_denied_nickname_event_prowess
+			has_trait = humble
+			has_trait = content
+			has_trait = shy
+		}
+		calc_true_if = {
+			amount >= 2
+			has_perk = nht_commander_perk
+			has_perk = nht_vanguard_perk
+			has_perk = nht_sentinel_perk
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 3
+			OR = {
+				has_trait = arrogant
+				has_trait = ambitious
+			}
+		}
+		modifier = {
+			factor = 3
+			has_perk = nht_commander_perk
+			has_perk = nht_vanguard_perk
+			has_perk = nht_sentinel_perk
+		}
+	}
+	
+	immediate = {
+		add_character_flag = {
+			flag = had_nickname_event
+		}
+	}
+
+
+	option = { # Valiant
+		name = nht_more_lifestyle_nicknames.0001.a
+		
+		set_nickname_effect = { NICKNAME = nick_the_valiant }
+		give_nht_self_nickname_effect = yes
+		add_prestige = medium_prestige_gain
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	
+	option = { # Fearless
+		name = nht_more_lifestyle_nicknames.0001.b
+		
+		set_nickname_effect = { NICKNAME = nick_the_fearless }
+		give_nht_self_nickname_effect = yes
+		add_prestige = medium_prestige_gain
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	
+	option = { # Indomitable
+		name = nht_more_lifestyle_nicknames.0001.c
+		
+		set_nickname_effect = { NICKNAME = nick_nht_the_indomitable }
+		give_nht_self_nickname_effect = yes
+		add_prestige = medium_prestige_gain
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = { # None
+		name = nht_more_lifestyle_nicknames.0001.d
+		flavor = {
+			desc = nht_more_lifestyle_nicknames.0001.tt
+		}
+		
+		remove_character_flag = had_nickname_event
+		add_piety = minor_piety_gain		
+		add_character_flag = {
+			flag = nht_denied_nickname_event_prowess
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+nht_more_lifestyle_nicknames.0002 = { # Prowess nickname when the character is humble
+	type = character_event
+	title = nht_more_lifestyle_nicknames.0001.t
+	desc = nht_more_lifestyle_nicknames.0002.desc
+	theme = nht_prowess_offense_focus
+	left_portrait = root
+	
+	trigger = {
+		#is_ai = no
+		is_valid_for_narrow_yearly_events = yes
+		OR = { # Has no nickname or a bad nickname
+			has_any_nickname = no
+			has_bad_nickname = yes
+		}
+		NOR = {
+			has_character_flag = had_nickname_event
+			has_character_flag = nht_denied_nickname_event_prowess
+			has_trait = arrogant
+			has_trait = ambitious
+		}
+		calc_true_if = {
+			amount >= 2
+			has_perk = strategist_perk
+			has_perk = overseer_perk
+			has_perk = gallant_perk
+		}
+		any_knight = { #just check if exists for the sake of it
+			is_available_healthy_ai_adult = yes
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 3
+			OR = {
+				has_trait = humble
+				has_trait = generous
+				has_trait = content
+			}
+		}
+		modifier = {
+			factor = 3
+			has_perk = strategist_perk
+			has_perk = overseer_perk
+			has_perk = gallant_perk
+		}
+	}
+	
+	immediate = {
+		add_character_flag = {
+			flag = had_nickname_event
+		}
+	}
+
+	option = { # Chivalrous
+		name = nht_more_lifestyle_nicknames.0002.a
+		
+		set_nickname_effect = { NICKNAME = nick_the_chivalrous }
+		give_nht_self_nickname_effect = yes
+		add_prestige = medium_prestige_gain
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	
+	option = { # Valorous
+		name = nht_more_lifestyle_nicknames.0002.b
+		
+		set_nickname_effect = { NICKNAME = nick_nht_the_valorous }
+		give_nht_self_nickname_effect = yes
+		add_prestige = medium_prestige_gain
+		
+		ai_chance = {
+			base = 100
+		}
+		
+	}
+	
+	option = { # Swordmaster
+		name = nht_more_lifestyle_nicknames.0002.c
+		
+		set_nickname_effect = { NICKNAME = nick_nht_the_swordmaster }
+		give_nht_self_nickname_effect = yes
+		add_prestige = medium_prestige_gain
+		
+		ai_chance = {
+			base = 100
+			
+		}
+	}
+
+	option = { # None
+		name = nht_more_lifestyle_nicknames.0002.d
+		flavor = {
+			desc = nht_more_lifestyle_nicknames.0002.tt
+		}
+		
+		remove_character_flag = had_nickname_event
+		add_piety = minor_piety_gain
+		add_character_flag = {
+			flag = nht_denied_nickname_event_prowess
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+}

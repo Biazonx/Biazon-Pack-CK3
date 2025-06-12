@@ -1,0 +1,187 @@
+﻿bzn_traveler_character = {
+	age = { 20 40 }
+	random_traits_list = {
+		count = 1
+		education_stewardship_1 = {}
+		education_stewardship_2 = {}
+		education_stewardship_3 = {}
+		education_stewardship_4 = {}
+		education_learning_1 = {}
+		education_learning_2 = {}
+		education_learning_3 = {}
+		education_learning_4 = {}
+	}
+	dynasty = none
+	random_traits = yes
+	culture = culture:han
+	gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+	stewardship = {
+		min_template_decent_skill
+		max_template_decent_skill
+	}
+	prowess = { 2 10 }
+	martial = { 2 10 }
+	diplomacy = { 5 13 }
+	learning = { 5 13 }
+	after_creation = {
+		random_list = {
+			40 = { add_trait = painter }
+			40 = { add_trait = tea_master }
+			20 = { add_trait = confucious }
+			}
+		random_list = {
+			12.5 = { set_character_faith = faith:pudgalavada }
+			12.5 = { set_character_faith = faith:azhaliism }
+			12.5 = { set_character_faith = faith:zenzong }
+			12.5 = { set_character_faith = faith:kegon }
+			12.5 = { set_character_faith = faith:tiantai }
+			12.5 = { set_character_faith = faith:jingtu }
+			12.5 = { set_character_faith = faith:vijna }
+			12.5 = { set_character_faith = faith:ari }
+		}
+	}	
+}
+
+bzn_new_samurai_character = {
+    age = { 20 40 }
+    random_traits_list = {
+        count = 1
+        education_martial_1 = {}
+        education_martial_2 = {}
+        education_martial_3 = {}
+        education_martial_4 = {}
+    }
+    dynasty = none
+    random_traits = yes
+    faith = faith:shin
+    culture = culture:japanese
+    stewardship = { 2 10 }
+    prowess = { 8 16 }
+    martial = { 8 16 }
+    diplomacy = { 3 10 }
+    learning = { 3 10 }
+	after_creation = {
+		random_list = {
+			65 = { add_trait = ronin }
+			35 = { add_trait = samurai }
+		}
+	}	
+}
+
+bzn_majin_character = {
+    age = { 20 }
+    random_traits_list = {
+        count = 1
+        education_martial_1 = {}
+        education_martial_2 = {}
+        education_martial_3 = {}
+		education_stewardship_1 = {}
+		education_stewardship_2 = {}
+		education_stewardship_3 = {}
+		education_learning_1 = {}
+		education_learning_2 = {}
+		education_learning_3 = {}
+		education_diplomacy_1 = {}
+		education_diplomacy_2 = {}
+		education_diplomacy_3 = {}
+		education_intrigue_1 = {}
+		education_intrigue_2 = {}
+		education_intrigue_3 = {}
+		
+    }
+    dynasty = none
+    random_traits = yes
+	faith = root.faith
+    culture = root.culture
+
+	after_creation = {
+		add_trait = majin_race
+		add_trait = thrall
+	}	
+}
+
+bzn_slave_character = {
+    age = { 20 40 }
+    random_traits_list = {
+        count = 1
+        education_martial_1 = {}
+        education_martial_2 = {}
+        education_martial_3 = {}
+		education_stewardship_1 = {}
+		education_stewardship_2 = {}
+		education_stewardship_3 = {}
+		education_learning_1 = {}
+		education_learning_2 = {}
+		education_learning_3 = {}
+		education_diplomacy_1 = {}
+		education_diplomacy_2 = {}
+		education_diplomacy_3 = {}
+		education_intrigue_1 = {}
+		education_intrigue_2 = {}
+		education_intrigue_3 = {}
+		
+    }
+    dynasty = none
+    random_traits = yes
+	faith = root.faith
+    culture = root.culture
+
+	after_creation = {
+		add_trait = thrall
+		random_list = {
+			25 = { add_trait = scarred }
+			25 = { add_trait = one_eyed }
+			25 = { add_trait = one_legged }
+			25 = { add_trait = wounded_1}
+		}
+	}	
+}
+
+bzn_hashishiyah_character = {
+	age = { 20 40 }
+	random_traits_list = {
+		count = 1
+		education_martial_1 = {}
+        education_martial_2 = {}
+        education_martial_3 = {}
+		education_stewardship_1 = {}
+		education_stewardship_2 = {}
+		education_stewardship_3 = {}
+		education_learning_1 = {}
+		education_learning_2 = {}
+		education_learning_3 = {}
+		education_diplomacy_1 = {}
+		education_diplomacy_2 = {}
+		education_diplomacy_3 = {}
+		education_intrigue_1 = {}
+		education_intrigue_2 = {}
+		education_intrigue_3 = {}
+	}
+	dynasty = none
+	random_traits = yes
+	faith = root.faith
+	culture = root.culture
+	
+	after_creation = {
+		add_trait = hashishiyah 
+		}
+}	
+
+bzn_islam_scholar_character = {
+	age = { 20 40 }
+	random_traits_list = {
+		count = 1
+		education_learning_1 = {}
+		education_learning_2 = {}
+		education_learning_3 = {}
+		education_learning_4 = {}
+	}
+	dynasty = none
+	random_traits = yes
+	faith = faith:ashari
+	culture = root.culture
+	
+	after_creation = {
+		add_trait = scholar
+		}
+}	

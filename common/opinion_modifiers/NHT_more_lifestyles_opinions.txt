@@ -1,0 +1,127 @@
+﻿nht_disrupted_line_succession_opinion = {
+	opinion = -60
+}
+
+nht_prefered_as_heir_opinion = {
+	opinion = -60
+}
+
+nht_sacked_holy_site_opinion = {
+	years = 20
+	decaying = yes
+	stacking = yes 
+	max = 100	
+}
+
+nht_sacked_holding_angry_opinion = {
+	years = 5
+	decaying = yes
+	stacking = yes 
+	max = 100	
+}
+
+nht_not_sacked_holding_grateful_opinion = {
+	years = 5
+	decaying = yes
+	stacking = yes 
+	max = 100	
+}
+
+
+nht_accepted_volunteer_opinion = {
+	years = 10
+	decaying = yes
+}
+
+nht_refused_volunteer_opinion = {
+	opinion = -10
+	years = 5
+	decaying = yes
+}
+
+nht_has_trade_agreement_opinion = {
+	opinion = 15
+}
+
+nht_has_canceled_trade_agreement_opinion = {
+	opinion = -15
+	years = 5
+	decaying = yes
+}
+
+nht_refused_trade_opinion = {
+	opinion = -10
+	years = 1
+	decaying = yes
+}
+
+nht_has_humiliated_rival_opinion = {
+	opinion = 15
+	years = 3
+	decaying = yes
+}
+
+nht_refused_training_opinion = {
+	opinion = -15
+	years = 1
+	decaying = yes
+}
+
+nht_tried_deceiving_opinion = {
+	opinion = -15
+	years = 5
+	decaying = yes
+}
+
+nht_has_trade_agreement_opinion_1 = {
+	opinion = 15
+}
+nht_has_trade_agreement_opinion_2 = {
+	opinion = 15
+}
+nht_has_trade_agreement_opinion_3 = {
+	opinion = 15
+}
+nht_has_trade_agreement_opinion_4 = {
+	opinion = 15
+}
+nht_has_trade_agreement_opinion_5 = {
+	opinion = 15
+}
+nht_has_trade_agreement_opinion_6 = {
+	opinion = 15
+}
+nht_has_trade_agreement_opinion_7 = {
+	opinion = 15
+}
+nht_has_trade_agreement_opinion_8 = {
+	opinion = 15
+}
+nht_has_trade_agreement_opinion_9 = {
+	opinion = 15
+}
+nht_has_trade_agreement_opinion_10 = {
+	opinion = 15
+}
+nht_has_trade_agreement_opinion_11 = {
+	opinion = 15
+}
+nht_has_trade_agreement_opinion_12 = {
+	opinion = 15
+}
+nht_has_trade_agreement_opinion_13 = {
+	opinion = 15
+}
+nht_has_trade_agreement_opinion_14 = {
+	opinion = 15
+}
+nht_has_trade_agreement_opinion_15 = {
+	opinion = 15
+}
+
+nht_sacked_county_for_provision_opinion = {
+	years = 10
+	decaying = yes
+	stacking = yes 
+	max = 100	
+}

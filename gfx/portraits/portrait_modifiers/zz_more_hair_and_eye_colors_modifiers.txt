@@ -1,0 +1,199 @@
+﻿more_hair_and_eye_colors_distribution = {
+	more_hair_and_eye_colors_distribution = {
+		dna_modifiers = {
+			morph = {
+				mode = add				
+				gene = eye_color_hue_mhec
+				template = eye_color_hue_mhec
+				range = { 0.0 1.0 }
+			}
+			morph = {
+				mode = add				
+				gene = eye_color_saturation_mhec
+				template = eye_color_saturation_mhec
+				range = { 0.45 1.0 }
+			}
+			morph = {
+				mode = add				
+				gene = eye_color_value_mhec
+				template = eye_color_value_mhec
+				range = { 0.45 1.0 }
+			}
+			morph = {
+				mode = add				
+				gene = hair_color_hue_mhec
+				template = hair_color_hue_mhec
+				range = { 0.0 1.0 }
+			}
+			morph = {
+				mode = add				
+				gene = hair_color_saturation_mhec
+				template = hair_color_saturation_mhec
+				range = { 0.45 1.0 }
+			}
+			morph = {
+				mode = add				
+				gene = hair_color_value_mhec
+				template = hair_color_value_mhec
+				range = { 0.45 1.0 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_game_rule = everyone_has_hair_eye_colors
+					has_game_rule = everyone_has_hair_eye_skin_colors
+				}
+				NOR = {
+					has_gene = { category = eye_color_hue_mhec template = eye_color_hue_mhec }
+					has_gene = { category = eye_color_saturation_mhec template = eye_color_saturation_mhec }
+					has_gene = { category = eye_color_value_mhec template = eye_color_value_mhec }
+					has_gene = { category = hair_color_hue_mhec template = hair_color_hue_mhec }
+					has_gene = { category = hair_color_saturation_mhec template = hair_color_saturation_mhec }
+					has_gene = { category = hair_color_value_mhec template = hair_color_value_mhec }
+					has_trait = red_hair_trait
+					has_trait = ginger_hair_trait
+					has_trait = orange_hair_trait
+					has_trait = brown_hair_trait
+					has_trait = blond_hair_trait
+					has_trait = yellow_hair_trait
+					has_trait = green_hair_trait
+					has_trait = cyan_hair_trait
+					has_trait = blue_hair_trait
+					has_trait = purple_hair_trait
+					has_trait = pink_hair_trait
+					has_trait = white_hair_trait
+					has_trait = black_hair_trait
+					has_trait = red_eye_trait
+					has_trait = orange_eye_trait
+					has_trait = brown_eye_trait
+					has_trait = yellow_eye_trait
+					has_trait = green_eye_trait
+					has_trait = natural_green_eye_trait
+					has_trait = cyan_eye_trait
+					has_trait = blue_eye_trait
+					has_trait = natural_blue_eye_trait
+					has_trait = purple_eye_trait
+					has_trait = pink_eye_trait
+					has_trait = white_eye_trait
+					has_trait = black_eye_trait
+					AND = {
+						has_trait = albino
+						OR = {
+							has_game_rule = albino_normal_hair_eye_colors
+							has_game_rule = albino_saturated_hair_eye_colors
+						}
+					}
+				}
+			}
+		}
+	}
+}
+albino_hair_and_eye_colors_distribution = {
+	albino_hair_and_eye_colors_distribution = {
+		dna_modifiers = {
+			morph = {
+				mode = add				
+				gene = eye_color_hue_mhec
+				template = eye_color_hue_mhec
+				range = { 0.98 1.0 }
+			}
+			morph = {
+				mode = add				
+				gene = eye_color_saturation_mhec
+				template = eye_color_saturation_mhec
+				range = { 0.5 1.0 }
+			}
+			morph = {
+				mode = add				
+				gene = eye_color_value_mhec
+				template = eye_color_value_mhec
+				range = { 0.5 1.0 }
+			}
+			morph = {
+				mode = add				
+				gene = hair_color_hue_mhec
+				template = vanilla_hair_color_hue_mhec
+				range = { 0.0 1.0 }
+			}
+			morph = {
+				mode = add				
+				gene = hair_color_saturation_mhec
+				template = vanilla_hair_color_saturation_mhec
+				range = { 0.0 1.0 }
+			}
+			morph = {
+				mode = add				
+				gene = hair_color_value_mhec
+				template = hair_color_value_mhec
+				range = { 0.5 1.0 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_trait = albino
+				has_game_rule = albino_saturated_hair_eye_colors
+			}
+		}
+	}
+}
+more_hair_and_eye_skin_colors_distribution = {
+	more_hair_and_eye_skin_colors_distribution = {
+		dna_modifiers = {
+			morph = {
+				mode = add				
+				gene = skin_color_hue_mhec
+				template = skin_color_hue_mhec
+				range = { 0.0 1.0 }
+			}
+			morph = {
+				mode = add				
+				gene = skin_color_saturation_mhec
+				template = skin_color_saturation_mhec
+				range = { 0.4 0.6 }
+			}
+			morph = {
+				mode = add				
+				gene = skin_color_value_mhec
+				template = skin_color_value_mhec
+				range = { 0.4 0.6 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_game_rule = everyone_has_hair_eye_skin_colors
+				}
+				NOR = {
+					has_gene = { category = skin_color_hue_mhec template = skin_color_hue_mhec }
+					has_gene = { category = skin_color_saturation_mhec template = skin_color_saturation_mhec }
+					has_gene = { category = skin_color_value_mhec template = skin_color_value_mhec }
+					has_trait = red_skin_trait
+					has_trait = orange_skin_trait
+					has_trait = brown_skin_trait
+					has_trait = yellow_skin_trait
+					has_trait = green_skin_trait
+					has_trait = cyan_skin_trait
+					has_trait = blue_skin_trait
+					has_trait = purple_skin_trait
+					has_trait = pink_skin_trait
+					has_trait = white_skin_trait
+					has_trait = black_skin_trait
+					AND = {
+						has_trait = albino
+						OR = {
+							has_game_rule = albino_normal_hair_eye_colors
+							has_game_rule = albino_saturated_hair_eye_colors
+						}
+					}
+				}
+			}
+		}
+	}
+}

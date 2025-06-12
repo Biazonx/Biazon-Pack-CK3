@@ -1,0 +1,106 @@
+﻿more_lifestyles_is_loaded = { always = yes }
+more_lifestyles_education_submod_is_loaded = { always = no }
+
+nht_fortified_barony_is_valid_trigger = {
+	title_province = {
+		NOT = { has_province_modifier = nht_reinforced_barony_modifier }
+	}
+	trigger_if = {
+		limit = {
+			holder = $CHARACTER$
+		}
+	}
+	trigger_else = {
+		holder.primary_title.tier = tier_barony
+	}
+}
+
+
+has_focus_nht_prowess = {
+	OR = {
+		has_focus = nht_prowess_commanding_focus
+		has_focus = nht_prowess_offense_focus
+		has_focus = nht_prowess_defense_focus
+	}
+}
+
+has_nht_prowess_lifestyle_trait_trigger = {
+	OR = {
+		has_trait = nht_commander
+		has_trait = nht_vanguard
+		has_trait = nht_sentinel
+	}
+}
+
+has_nht_leadership_lifestyle_trait_trigger = {
+	OR = {
+		has_trait = nht_founder
+		has_trait = nht_cosmopolitan
+		has_trait = nht_visionary
+	}
+}
+
+has_focus_nht_leadership = {
+	OR = {
+		has_focus = nht_sovereign_focus
+		has_focus = nht_traditions_focus
+		has_focus = nht_dynasty_focus
+	}
+}
+
+#Education triggers
+has_education_nht_prowess_trigger = {
+	OR = {
+		has_trait = education_nht_prowess_1
+		has_trait = education_nht_prowess_2
+		has_trait = education_nht_prowess_3
+		has_trait = education_nht_prowess_4
+		has_trait = education_nht_prowess_5
+	}
+}
+
+has_education_nht_leadership_trigger = {
+	OR = {
+		has_trait = education_nht_leadership_1
+		has_trait = education_nht_leadership_2
+		has_trait = education_nht_leadership_3
+		has_trait = education_nht_leadership_4
+		has_trait = education_nht_leadership_5
+	}
+}
+
+nht_can_start_new_lifestyle_tree_prowess_trigger = {
+	OR = {
+		NOR = {
+			has_perk = nht_orderly_maneuvers_perk		
+			has_perk = nht_ruthless_assault_perk
+		}
+		has_perk = nht_vanguard_perk
+	}
+	OR = {
+		NOT = { has_perk = nht_perpetual_mastery_perk }
+		has_perk = nht_commander_perk
+	}	
+	OR = {
+		NOT = { has_perk = nht_shieldbearer_perk }
+		has_perk = nht_sentinel_perk
+	}
+}
+
+nht_can_start_new_lifestyle_tree_leadership_trigger = {
+	OR = {
+		NOR = {
+			has_perk = nht_pluralistic_unity_perk
+			has_perk = nht_covenant_of_faith_perk
+		}
+		has_perk = nht_charismatic_perk
+	}	
+	OR = {
+		NOT = { has_perk = nht_leading_by_example_perk }
+		has_perk = nht_visionary_perk
+	}
+	OR = {
+		NOT = { has_perk = nht_eloquent_authority_perk }
+		has_perk = nht_founder_perk	
+	}
+}

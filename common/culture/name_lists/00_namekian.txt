@@ -1,0 +1,52 @@
+name_list_namekian = {
+
+	cadet_dynasty_names = {
+		"dynn_Moori"
+		"dynn_Tsuno"
+		"dynn_Cargo"
+		"dynn_Dende"
+		"dynn_Nail"
+		"dynn_Pikkon"
+		"dynn_Katatz"
+		"dynn_Kami"
+		"dynn_Slug"
+		"dynn_Cymbal"
+		"dynn_Drum"
+		"dynn_Tambourine"
+		"dynn_Piano"
+	}
+
+	dynasty_names = {
+		"dynn_Elder"
+		"dynn_WaterClan"
+		"dynn_DragonClan"
+		"dynn_WarriorClan"
+		"dynn_SpiritClan"
+		"dynn_MysticClan"
+		"dynn_SageClan"
+		"dynn_ForestClan"
+		"dynn_MountainClan"
+	}
+
+	male_names = {
+		Guru Moori Tsuno Cargo Dende Nail Pikkon Katatz Kami Slug
+		Cymbal Drum Tambourine Piano Porunga Katas Oboo Monna Esca Moolin
+		Cargot Jimal Pibra Duma Piccolo
+	}
+
+	female_names = {
+		Porunga Suna Elna Maree Denla
+        Escala Tsunala Moolina Nalira
+        Kamira Gurina Slugra Piccola
+        Monaki 
+	}
+
+	pat_grf_name_chance = 50
+	mat_grf_name_chance = 0
+	father_name_chance = 50
+
+	pat_grm_name_chance = 10
+	mat_grm_name_chance = 40
+	mother_name_chance = 0
+
+}

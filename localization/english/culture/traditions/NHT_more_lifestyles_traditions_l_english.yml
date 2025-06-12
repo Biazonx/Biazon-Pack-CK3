@@ -1,0 +1,12 @@
+﻿l_english:
+  
+ ########################
+ ###### Traditions ######
+ ########################    
+
+ nht_tradition_traders_name: "Expert Traders"
+ nht_tradition_traders_desc: "This culture sees trade and the pursuit of profit as the path to true influence. From official agreements between realms, to bustling marketplaces and clandestine deals in dimly lit alleys."
+ 
+ culture_parameter_nht_can_trade_freely_without_perk: "[characters|E] of this [culture|E] can use the [nht_negotiate_trade_agreement_interaction|E] [interaction|E] without the necessary perk"
+
+ nht_rulers_with_content_desc: "The [culture|E] does not have #V 5#! [rulers|E] with the [GetTrait('content').GetName( GetNullCharacter )] [trait|E]"

@@ -1,0 +1,127 @@
+﻿######################################
+# Standard actions for random events #
+######################################
+
+nht_prowess_lifestyle_progress_pulse = { # Fires 4 times per year
+	trigger = {
+		has_lifestyle = nht_prowess_lifestyle
+		is_landed = yes # Lifestyle events inherently assume you have one. Non-landed rulers shouldn't get lifestyle events, even if they still have a lifestyle.
+		exists = capital_province # Because in rare situations landed AI rulers can end up without a capital.
+		trigger_if = {
+			limit = {
+				is_ai = no
+			}
+			has_had_focus_for_days > 30
+		}
+		NOR = {
+			has_character_flag = had_recent_lifestyle_ongoing_event
+			has_game_rule = nht_disable_lifestyle_events
+			
+			# Must not currently be in a prowess event chain.
+			has_character_flag = is_in_nht_prowess_offense_event
+
+		}
+	}
+
+	first_valid_on_action = {
+		nht_prowess_lifestyle_ongoing_events # General event pool
+		nht_prowess_lifestyle_unavailable_events # Special event pool for unavailable characters (imprisoned, commanding an army, infirm, etc.)
+	}
+}
+
+#Ongoing events and story cycles
+nht_prowess_lifestyle_ongoing_events = {
+	trigger = {
+		is_available = yes
+	}
+
+	random_on_action = {
+		chance_to_happen = 10 # Roughly one event every 18 months
+
+		70 = nht_prowess_lifestyle_common_events
+		15 = nht_prowess_lifestyle_uncommon_events
+		10 = nht_prowess_lifestyle_special_events			
+		5 = nht_prowess_lifestyle_rare_events	
+	}
+}
+
+# Characters get a Common event roughly once every 24 months (2 years). Most lifestyle events should be Common events.
+nht_prowess_lifestyle_common_events = {
+	random_events = {
+		#OFFENSE
+		100 = nht_prowess_offense.0001 # Vengeful peasant attack you at the training ground
+		100 = nht_prowess_offense.0003 # A drunk man at inn brags about knowing you
+		100 = nht_prowess_offense.0005 # I give advice to knights to improve their skills
+		100 = nht_prowess_offense.0006 # Knights argues about best type of sword in the throne room
+		100 = nht_prowess_offense.0007 # Watching my soldiers and knights I wonder if I should improve one or the other	
+		100 = nht_prowess_offense.0008 # Bandits are roaming the lands
+		100 = nht_prowess_offense.0010 # Equipment in Armory need replacing (Stewardship Challenge)
+		
+		#DEFENSE
+
+
+
+		#CHIVALRY
+		100 = martial_chivalry.2010 # Getting challenged to a practice duel (Prowess Challenge)
+	}
+}
+
+# Characters get an Uncommon event roughly once every 120 months (10 years). Longer event chains and lucrative opporunities should be Uncommon events.
+nht_prowess_lifestyle_uncommon_events = {
+	random_events = {
+		100 = nht_prowess_offense.1001 # A Rival Dispute
+		50 = nht_prowess_special.3001 # Your training and realize your old
+		50 = martial_chivalry_special.1601 # Train a warhorse
+	}
+	fallback = nht_prowess_lifestyle_common_events
+}
+
+# Characters get a Rare event roughly once every 360 months (30 years). Character-defining events and easter egg events should be Rare events.
+nht_prowess_lifestyle_rare_events = {
+	random_events = {
+		150 = nht_more_lifestyle_nicknames.0001 # Prowess nickname for someone who's arrogant
+		150 = nht_more_lifestyle_nicknames.0002 # Prowess nickname when the character is humble
+		100 = nht_prowess_offense.2004 # Legendary Knight
+		100 = nht_prowess_offense.2001 # Knight's Gamble
+	}
+	fallback = nht_prowess_lifestyle_uncommon_events
+}
+
+nht_prowess_lifestyle_special_events = {
+	trigger = {
+		NOT = { has_character_flag = had_event_nht_special_prowess }
+		OR = { 
+			has_trait = one_eyed 
+			has_trait = one_legged
+			has_trait = blind
+			has_trait = infirm
+			has_trait = dwarf
+		}
+	}
+	
+	first_valid = {
+		nht_prowess_special.3005 # Blind	
+		nht_prowess_special.3002 # One-leged
+		nht_prowess_special.3003 # One-eyed
+		nht_prowess_special.3004 # Infirm
+		nht_prowess_special.3006 # Dwarf		
+	}
+	fallback = nht_prowess_lifestyle_common_events
+}
+
+# Special event pool for unavailable characters (imprisoned, commanding an army, infirm, etc.)
+nht_prowess_lifestyle_unavailable_events = {
+	trigger = {
+		is_available = no
+	}
+
+	random_events = {
+ 		# WARNING: All events in this pool *MUST* have custom is_available triggers defined.
+ 		# Otherwise we can wind up with weird things like imprisoned characters having a strategy discussion with their army commanders out on the campaign trail.
+ 		chance_to_happen = 10
+
+		100 = martial_authority.2040 # Resolving a dispute between some soldiers (Diplomacy Challenge)
+		100 = nht_prowess_offense.1004 # Raiding enemy lands (Martial Challenge)
+		100 = nht_prowess_offense.4001 #Is in prison
+	}
+}

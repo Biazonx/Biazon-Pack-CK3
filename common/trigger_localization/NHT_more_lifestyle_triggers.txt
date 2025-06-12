@@ -1,0 +1,19 @@
+﻿nht_prowess_lifestyle_perk_points = {
+	global = NHT_PROWESS_LIFESTYLE_PERK_POINTS_TRIGGER
+}
+
+nht_leadership_lifestyle_perk_points = {
+	global = NHT_LEADERSHIP_LIFESTYLE_PERK_POINTS_TRIGGER
+}
+
+has_nht_already_trained_recently = {
+	first_not = HAS_NHT_ALREADY_TRAINED_RECENTLY_WITH_KNIGHT
+}
+
+has_nht_barony_selected = {
+	first_not = NOT_HAS_NHT_BARONY_SELECTED
+}
+
+has_nht_eligble_barony = {
+	first = HAS_NHT_ELIGBLE_BARONY
+}

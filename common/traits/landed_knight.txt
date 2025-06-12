@@ -1,0 +1,46 @@
+gentry = {
+	icon = gentry.dds
+	category = fame
+	ruler_designer_cost = 150
+	
+	stewardship = 3
+	martial = 1
+	negate_prowess_penalty_add = 3
+	monthly_prestige = 1
+	men_at_arms_maintenance = -0.5
+	opinion_of_liege = 20
+	same_opinion = 5
+	fellow_vassal_opinion = -15	
+
+	monthly_county_control_growth_add = 1
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_gentry_desc
+			}
+			desc = trait_gentry_character_desc
+		}
+	}
+
+	# AI Values
+	ai_honor = 35
+	ai_boldness = 35
+	ai_greed = 35
+
+	compatibility = {
+		gallant = @pos_compat_medium
+		ambitious = @pos_compat_low
+		greedy = @pos_compat_low
+		diligent = @pos_compat_low
+		brave = @pos_compat_low
+		arrogant = @pos_compat_low
+		rowdy = @pos_compat_low
+		content = @neg_compat_medium
+		lazy = @neg_compat_medium
+		craven = @neg_compat_medium
+	}
+}

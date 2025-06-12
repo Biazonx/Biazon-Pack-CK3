@@ -1,0 +1,8 @@
+﻿l_english:
+ trait_thrall:0 "Thrall"
+ trait_thrall_desc:0 "This character has been enslaved, forced to serve their master. Thralls can put to use in the court, or be traded for gold."
+ trait_thrall_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has been enslaved, forced to serve their master [ROOT.Char.GetLiege.GetNameNoTooltip]. As a thrall, [ROOT.GetCharacter.GetFirstNameNoTooltip] can put to use in the court, or be traded for gold."
+
+trait_battle_thrall:0 "Slave Warrior"
+ trait_battle_thrall_desc:0 "This character has been enslaved, forced to serve their master. Thralls can put to use in the court, or be traded for gold."
+ trait_thrall_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has been enslaved, forced to serve their master [ROOT.Char.GetLiege.GetNameNoTooltip]. As a thrall, [ROOT.GetCharacter.GetFirstNameNoTooltip] can put to use in the court, or be traded for gold."

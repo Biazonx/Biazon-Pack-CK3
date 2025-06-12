@@ -1,0 +1,963 @@
+﻿nht_negotiate_trade_agreement_interaction = {
+	interface_priority = 30
+	category = interaction_category_diplomacy
+	common_interaction = yes
+	desc = nht_negotiate_trade_agreement_interaction_desc
+	icon = nht_trade_agreement
+
+	greeting = positive
+	notification_text = NHT_TRADE_AGREEMENT_NOTIFICATION
+	popup_on_receive = yes
+	ai_maybe = yes
+	use_diplomatic_range = yes
+	target_type = title
+	target_filter = actor_domain_titles_including_leases
+	
+	cooldown_against_recipient = { years = 5 }
+
+	is_shown = {
+		scope:actor = {
+			NOT = { government_has_flag = government_is_landless_adventurer }
+		}
+		# Scope:actor needs to have a specific perk	
+		scope:actor = {
+			is_adult = yes
+			is_ruler = yes
+			OR = {
+				has_perk = nht_commerce_maestro_perk
+				has_game_rule = nht_trade_agreement_interaction_no_requi
+				culture = { has_cultural_parameter = nht_can_trade_freely_without_perk }
+			}
+		}
+		# Scope:recipient must not be a lot of things
+		scope:recipient = {
+			is_adult = yes
+			is_ruler = yes			
+			NOR = {
+				this = scope:actor
+				is_at_war_with = scope:actor
+				any_liege_or_above = { this = scope:actor }
+				any_vassal_or_below = { this = scope:actor }			
+			}
+		}
+		NOR = { 
+			scope:actor = {
+				is_target_in_variable_list = {
+					name = is_in_trade_agreement_with_actor_list
+					target = scope:recipient
+				}
+			}
+			scope:recipient = {
+				is_target_in_variable_list = {
+					name = is_in_trade_agreement_with_actor_list
+					target = scope:actor
+				}
+			}		
+		}
+		# Check how many trade actor and recipient respectively and if available		
+		scope:actor = {
+			OR = {
+				NOT = { has_variable_list = is_in_trade_agreement_with_actor_list }
+				AND = {
+					has_variable_list = is_in_trade_agreement_with_actor_list
+					variable_list_size = {
+						name = is_in_trade_agreement_with_actor_list
+						value < nht_trade_agreement_number_limit_value
+					}
+				}
+			}
+		}
+		scope:recipient = {
+			OR = {
+				NOT = { has_variable_list = is_in_trade_agreement_with_actor_list }
+				AND = {
+					has_variable_list = is_in_trade_agreement_with_actor_list
+					variable_list_size = {
+						name = is_in_trade_agreement_with_actor_list
+						value < nht_trade_agreement_number_limit_value
+					}
+				}
+			}
+		}
+	}
+
+	can_be_picked_title = {
+		scope:target = { tier = tier_county }
+	}
+
+	can_send = {
+		scope:actor = {
+			custom_description = {
+				text = "character_interactions_hostile_actions_disabled_delay"
+				NOT = { has_character_flag = flag_trade_actions_disabled_delay }
+			}
+		}
+	}
+
+	on_send = {
+		scope:actor = {
+			add_character_flag = {
+				flag = flag_trade_actions_disabled_delay
+				days = 10
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {		
+		# Make sure that scope:actor is available and other things
+		scope:actor = {
+			is_available = yes
+			is_imprisoned = no
+			NOR = {
+				# Involved characters can't be on opposite sides in an active war.
+				is_at_war_with = scope:recipient
+				has_trait = incapable
+			}
+		}
+		scope:recipient = {
+			is_at_war = no
+			is_imprisoned = no
+		}
+	}
+
+	# Hooks can be used to force this through.
+	## Don't force-force this on/for the player (so no pain but less benefits), but AI regard weak hooks as compulsory from/for other AI.
+	send_options_exclusive = no
+	send_option = {
+		is_valid = {
+			scope:actor = { has_usable_hook = scope:recipient }
+		}
+		flag = hook
+		localization = SCHEME_HOOK
+	}
+	should_use_extra_icon = {
+		scope:actor = { has_usable_hook = scope:recipient }
+	}
+	extra_icon = "gfx/interface/icons/character_interactions/hook_icon.dds"
+	
+	on_auto_accept = {
+		nht_trade_agreement_interaction_modifier_effect = yes
+		scope:actor = {	
+			add_to_variable_list = {
+				name = nht_counties_in_trade_agreement_list
+				target = scope:target
+			}
+			add_to_variable_list = {
+				name = nht_counties_in_trade_agreement_list
+				target = scope:recipient.capital_county
+			}
+			add_to_variable_list = {
+				name = is_in_trade_agreement_with_actor_list
+				target = scope:recipient
+			}			
+			send_interface_toast = {
+				title = nht_accept_trade_agreement_interaction_notification
+				custom_tooltip = nht_refuse_trade_agreement_interaction_notification_tooltip
+				left_icon = scope:actor					
+				right_icon = scope:recipient
+			}
+		}		
+		scope:recipient = {
+			add_to_variable_list = {
+				name = nht_counties_in_trade_agreement_list
+				target = scope:target
+			}
+			add_to_variable_list = {
+				name = nht_counties_in_trade_agreement_list
+				target = scope:recipient.capital_county
+			}
+			add_to_variable_list = {
+				name = is_in_trade_agreement_with_actor_list
+				target = scope:actor
+			}
+			send_interface_toast = {
+				title = nht_accept_trade_agreement_interaction_notification
+				left_icon = scope:actor					
+				right_icon = scope:recipient
+			}		
+		}
+		custom_tooltip = {
+			text = nht_add_trade_county_modifier_tooltip
+			scope:target = {		
+				add_to_variable_list = {
+					name = nht_is_trade_county_actor_var_list
+					target = scope:recipient	
+				}
+				add_county_modifier = {
+					modifier = nht_trading_in_county_modifier
+				}
+			}
+		}	
+		custom_tooltip = {
+			text = nht_add_trade_county_recipient_modifier_tooltip	
+			scope:recipient.capital_county = {			
+				add_county_modifier = {
+					modifier = nht_trading_in_county_modifier
+				}
+			}
+		}
+	}
+	
+	on_accept = {
+		nht_trade_agreement_interaction_modifier_effect = yes
+		scope:actor = {	
+			add_to_variable_list = {
+				name = nht_counties_in_trade_agreement_list
+				target = scope:target
+			}
+			add_to_variable_list = {
+				name = nht_counties_in_trade_agreement_list
+				target = scope:recipient.capital_county
+			}
+			add_to_variable_list = {
+				name = is_in_trade_agreement_with_actor_list
+				target = scope:recipient
+			}			
+			send_interface_toast = {
+				title = nht_accept_trade_agreement_interaction_notification
+				custom_tooltip = nht_accept_trade_agreement_interaction_notification_tooltip
+				left_icon = scope:actor					
+				right_icon = scope:recipient
+			}
+		}		
+		scope:recipient = {
+			add_to_variable_list = {
+				name = nht_counties_in_trade_agreement_list
+				target = scope:target
+			}
+			add_to_variable_list = {
+				name = nht_counties_in_trade_agreement_list
+				target = scope:recipient.capital_county
+			}
+			add_to_variable_list = {
+				name = is_in_trade_agreement_with_actor_list
+				target = scope:actor
+			}
+			send_interface_toast = {
+				title = nht_accept_trade_agreement_interaction_notification
+				left_icon = scope:actor					
+				right_icon = scope:recipient
+			}		
+		}
+		custom_tooltip = {
+			text = nht_add_trade_county_modifier_tooltip
+			scope:target = {
+				add_to_variable_list = {
+					name = nht_is_trade_county_actor_var_list
+					target = scope:recipient	
+				}			
+				add_county_modifier = {
+					modifier = nht_trading_in_county_modifier
+				}
+			}
+		}	
+		custom_tooltip = {
+			text = nht_add_trade_county_recipient_modifier_tooltip	
+			scope:recipient.capital_county = {			
+				add_county_modifier = {
+					modifier = nht_trading_in_county_modifier
+				}
+			}
+		}	
+	}
+
+	on_decline = {
+		scope:actor = {
+			add_opinion = {
+				modifier = nht_refused_trade_opinion
+				target = scope:recipient
+			}
+			send_interface_toast = {
+				title = nht_refuse_trade_agreement_interaction_notification
+				custom_tooltip = nht_refuse_trade_agreement_interaction_notification_tooltip
+				left_icon = scope:actor					
+				right_icon = scope:recipient
+			}
+		}
+		scope:recipient = {
+			if = {
+				limit = {
+					is_ai = no
+				}
+				add_character_flag = {
+					flag = nht_trade_agreement_block
+					years = 5
+				}
+			}
+		}
+	}
+
+	# AI
+	## Standard Acceptance stuff
+	ai_accept = {
+		# AI should accept by default
+		base = 50
+		
+		modifier = {
+			trigger = {
+				always = scope:hook
+			}
+			add = 100
+			desc = SCHEME_WEAK_HOOK_USED
+		}
+		# Weight up for opinion.
+		opinion_modifier = {
+			who = scope:recipient
+			opinion_target = scope:actor
+			multiplier = 1
+			desc = AI_OPINION_REASON
+		}
+
+		modifier = {
+			desc = AI_NHT_SIDE_OF_DEAL_REASON
+			add = {
+				value = 10
+				if = {
+					limit = { 
+						scope:actor.monthly_character_income <= scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_2_value
+					}
+					add = -50
+				}
+				if = {
+					limit = { 
+						scope:actor.monthly_character_income > scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_2_value
+						scope:actor.monthly_character_income <= scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_7_value
+					}
+					add = -30
+				}
+				if = {
+					limit = { 
+						scope:actor.monthly_character_income > scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_8_value
+						scope:actor.monthly_character_income <= scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_9_value
+					}
+					add = -10
+				}
+				if = {
+					limit = { 
+						scope:actor.monthly_character_income > scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_9_value
+						scope:actor.monthly_character_income <= scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_10_value
+					}
+					add = 10
+				}
+				if = {
+					limit = { 
+						scope:actor.monthly_character_income > scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_10_value
+						scope:actor.monthly_character_income <= scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_11_value
+					}
+					add = 20
+				}
+				if = {
+					limit = { 
+						scope:actor.monthly_character_income > scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_11_value
+						scope:actor.monthly_character_income <= scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_13_value
+					}
+					add = 40
+				}
+				if = {
+					limit = { 
+						scope:actor.monthly_character_income > scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_13_value
+					}
+					add = 50
+				}
+			}
+		}
+
+		# Traits thingy
+		modifier = {
+			add = 20
+			scope:recipient = {
+				has_trait = greedy
+			}
+			desc = INTERACTION_NHT_GREEDY
+		}
+		modifier = {
+			add = 20
+			scope:recipient = {
+				has_trait = generous
+			}
+			desc = INTERACTION_NHT_GENEROUS
+		}
+		modifier = {
+			add = -20
+			scope:recipient = {
+				has_trait = paranoid
+			}
+			desc = INTERACTION_NHT_PARANOID
+		}
+		modifier = {
+			add = -10
+			scope:recipient = {
+				has_trait = arbitrary
+			}
+			desc = INTERACTION_NHT_ARBITRARY
+		}
+		modifier = {
+			add = 10
+			scope:recipient = {
+				has_trait = trusting
+			}
+			desc = INTERACTION_NHT_TRUSTING
+		}
+		modifier = {
+			add = 10
+			scope:recipient = {
+				has_trait = just
+			}
+			desc = INTERACTION_NHT_JUST
+		}
+
+		# Rivalry
+		modifier = { # Say no to rivals
+			add = -100
+			scope:recipient = {
+				has_relation_rival = scope:actor
+				NOT = { has_relation_nemesis = scope:actor }
+			}
+			desc = "ACTOR_RIVAL_TO_ME_REASON"
+		}
+		modifier = { # Say no to nemesis
+			add = -300
+			scope:recipient = {
+				has_relation_nemesis = scope:actor
+			}
+			desc = "ACTOR_NEMESIS_TO_ME_REASON"
+		}
+		modifier = {
+			desc = AI_DYNASTY_PRESTIGE_REASON
+			scope:actor = { has_dynasty = yes }
+			NOT = { scope:actor.dynasty = scope:recipient.dynasty }
+			scope:actor.dynasty = { dynasty_prestige_level >= 2 }
+			add = {
+				value = 10
+				if = {
+					limit = {
+						scope:actor.dynasty = { dynasty_prestige_level >= 3 }
+					}
+					add = 5
+				}
+				if = {
+					limit = {
+						scope:actor.dynasty = { dynasty_prestige_level >= 4 }
+					}
+					add = 5
+				}
+				if = {
+					limit = {
+						scope:actor.dynasty = { dynasty_prestige_level >= 5 }
+					}
+					add = 5
+				}
+				if = {
+					limit = {
+						scope:actor.dynasty = { dynasty_prestige_level >= 6 }
+					}
+					add = 5
+				}
+				if = {
+					limit = {
+						scope:actor.dynasty = { dynasty_prestige_level >= 7 }
+					}
+					add = 5
+				}
+				if = {
+					limit = {
+						scope:actor.dynasty = { dynasty_prestige_level >= 8 }
+					}
+					add = 5
+				}
+				if = {
+					limit = {
+						scope:actor.dynasty = { dynasty_prestige_level >= 9 }
+					}
+					add = 5
+				}
+				if = {
+					limit = {
+						scope:actor.dynasty = { dynasty_prestige_level >= 10 }
+					}
+					add = 5
+				}
+			}
+		}		
+		modifier = { #Faith compatibility
+			scope:recipient.faith = {
+				faith_hostility_level = {
+					target = scope:actor.faith
+					value > faith_fully_accepted_level
+				}
+			}
+			NOT = {
+				scope:recipient.ai_zeal <= -50
+			}
+			add = {
+				value = -20
+				if = {
+					limit = {
+						scope:recipient.faith = {
+							faith_hostility_level = {
+								target = scope:actor.faith
+								value >= faith_astray_level
+							}
+						}
+					}
+					subtract = 20
+				}
+				if = {
+					limit = {
+						scope:recipient.faith = {
+							faith_hostility_level = {
+								target = scope:actor.faith
+								value >= faith_hostile_level
+							}
+						}
+					}
+					subtract = 40
+				}
+				if = {
+					limit = {
+						scope:recipient.faith = {
+							faith_hostility_level = {
+								target = scope:actor.faith
+								value >= faith_evil_level
+							}
+						}
+					}
+					subtract = 60
+				}
+				if = {
+					limit = {
+						scope:recipient.ai_zeal <= -25
+					}
+					divide = 2
+				}
+			}
+			desc = MARRY_DIFFERENT_FAITH_REASON
+		}
+		# Recipient is a Claimant to Actor's titles.
+		modifier = {
+			scope:recipient = {
+				NOT = { government_has_flag = government_is_clan }
+				any_claim = {
+					holder = scope:actor
+				}
+				NOR = {
+					is_heir_of = scope:actor
+					ai_greed <= -25
+				}
+			}
+			add = {
+				value = -50
+				if = {
+					limit = {
+						scope:recipient.ai_greed >= 25
+					}
+					add = ai_greed
+				}
+				if = {
+					limit = {
+						NOT = {
+							scope:recipient.house = scope:actor.house
+						}
+					}
+					multiply = 2
+				}
+			}
+			desc = IS_CLAIMANT_TO_ACTORS_TITLES
+		}
+		#Actor has claims on recipient's titles.
+		modifier = {
+			scope:actor = {
+				any_claim = {
+					holder = scope:recipient
+				}
+			}
+			add = -25
+			desc = IS_CLAIMANT_TO_RECIPIENT_TITLES
+		}
+		modifier = {
+			scope:recipient = {
+				NOT = {
+					any_claim = {
+						holder = scope:actor
+					}
+				}
+			}
+			scope:recipient.house = scope:actor.house
+			add = -15
+			desc = IS_SAME_HOUSE_REASON
+		}
+		modifier = {
+			scope:recipient = {
+				has_opinion_modifier = {
+					target = scope:actor
+					modifier = declared_war
+				}
+			}
+			add = -100
+			desc = DECLARED_WAR_REASON
+		}
+		# Feud
+		modifier = {
+			add = -25
+			scope:recipient = {
+				existing_feud_against_target_trigger = { TARGET = scope:actor }
+			}
+			desc = MARRY_FAMILY_FEUD_REASON
+		}		
+		# Tier Differences.
+		## King -> Baron.
+		modifier = {
+			desc = AI_REFUSAL_RANK_DIFFERENCE
+			scope:actor = {
+				tier_difference = {
+					target = scope:recipient
+					value >= 4
+				}
+			}
+			add = -50
+		}
+		## Duke -> Baron.
+		modifier = {
+			desc = AI_REFUSAL_RANK_DIFFERENCE
+			scope:actor = {
+				tier_difference = {
+					target = scope:recipient
+					value = 3
+				}
+			}
+			add = -10
+		}
+		## Count -> Baron.
+		modifier = {
+			desc = AI_REFUSAL_RANK_DIFFERENCE
+			scope:actor = {
+				tier_difference = {
+					target = scope:recipient
+					value = 2
+				}
+			}
+			add = 5
+		}
+		## King <- Baron.
+		modifier = {
+			desc = AI_REFUSAL_RANK_DIFFERENCE
+			scope:actor = {
+				tier_difference = {
+					target = scope:recipient
+					value = -2
+				}
+			}
+			add = -10
+		}
+		## Duke <- Baron.
+		modifier = {
+			desc = AI_REFUSAL_RANK_DIFFERENCE
+			scope:actor = {
+				tier_difference = {
+					target = scope:recipient
+					value = -3
+				}
+			}
+			add = -50
+		}
+	}
+
+	## Performance-enhancement	
+	ai_potential = {
+		is_landed = yes
+		is_at_war = no
+		is_imprisoned = no
+		# Matches the regular minimum triggers.
+		has_perk = nht_commerce_maestro_perk
+	}
+
+	ai_target_quick_trigger = { adult = yes }
+	
+	ai_targets = {
+		ai_recipients = neighboring_rulers		
+		max = 3
+	}
+
+	## Frequency
+	ai_frequency = 60
+	
+	ai_will_do = {
+		base = 0
+
+		modifier = {
+			add = {
+				value = 10
+				if = {
+					limit = { 
+						scope:actor.monthly_character_income <= scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_2_value
+					}
+					add = -50
+				}
+				if = {
+					limit = { 
+						scope:actor.monthly_character_income > scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_2_value
+						scope:actor.monthly_character_income <= scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_9_value
+					}
+					add = -30
+				}
+				if = {
+					limit = { 
+						scope:actor.monthly_character_income > scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_9_value
+						scope:actor.monthly_character_income <= scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_10_value
+					}
+					add = -10
+				}
+				if = {
+					limit = { 
+						scope:actor.monthly_character_income > scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_10_value
+						scope:actor.monthly_character_income <= scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_11_value
+					}
+					add = 10
+				}
+				if = {
+					limit = { 
+						scope:actor.monthly_character_income > scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_11_value
+						scope:actor.monthly_character_income <= scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_12_value
+					}
+					add = 20
+				}
+				if = {
+					limit = { 
+						scope:actor.monthly_character_income > scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_12_value
+						scope:actor.monthly_character_income <= scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_14_value
+					}
+					add = 40
+				}
+				if = {
+					limit = { 
+						scope:actor.monthly_character_income > scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_14_value
+					}
+					add = 50
+				}
+			}
+		}
+		
+		# Factor for opinion.
+		modifier = {
+			add = -300
+			scope:actor = {
+				opinion = {
+					target = scope:recipient
+					value < very_high_positive_opinion
+				}
+			}
+		}
+		### Greedy hates.
+		modifier = {
+			add = 20
+			has_trait = greedy 
+		}	
+		### Generous likes.
+		modifier = {
+			add = 20
+			has_trait = generous
+		}
+		### Paranoid dislikes.
+		modifier = {
+			add = -20
+			has_trait = paranoid
+		}
+		### Arbitray dislikes.
+		modifier = {
+			add = -10
+			has_trait = arbitrary
+		}
+		### Trusting likes.
+		modifier = {
+			add = 10
+			has_trait = trusting
+		}
+		### Just likes.
+		modifier = {
+			add = 10
+			has_trait = just
+		}
+		### Just likes.
+		modifier = {
+			add = 10
+			has_trait = nht_visionary
+		}
+		modifier = { # Will not do if AI is at war
+			add = -5000
+			scope:recipient = { is_at_war = yes }
+		}		
+		## Don't trade with dead men.
+		modifier = {
+			add = 30
+			scope:recipient = { health <= poor_health }
+		}			
+		## Don't spam players when the decline block is active
+		modifier = {
+			factor = 0
+			scope:recipient = {
+				has_character_flag = nht_trade_agreement_block
+			}
+		}
+	}
+}
+
+nht_cancel_trade_agreement_interaction = {
+	interface_priority = 30
+	category = interaction_category_diplomacy
+	common_interaction = yes
+
+	popup_on_receive = yes
+	icon = nht_trade_agreement
+	
+	desc = nht_cancel_trade_agreement_interaction_desc	
+
+	notification_text = NHT_TRADE_AGREEMENT_NOTIFICATION
+
+	ai_maybe = yes
+
+	cooldown_against_recipient = { years = 10 }
+	
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }		
+		scope:actor = {
+			is_ruler = yes
+			is_adult = yes		
+		}
+		OR = { 
+			scope:actor = {
+				is_target_in_variable_list = {
+					name = is_in_trade_agreement_with_actor_list
+					target = scope:recipient
+				}
+			}
+			scope:recipient = {
+				is_target_in_variable_list = {
+					name = is_in_trade_agreement_with_actor_list
+					target = scope:actor
+				}
+			}		
+		}
+	}
+	
+	auto_accept = yes
+	
+	on_accept = {
+		scope:actor = { save_scope_as = first_ruler_in_trade_agreement }	
+		scope:recipient = {
+			add_opinion = {
+				modifier = nht_has_canceled_trade_agreement_opinion
+				target = scope:actor
+			}		
+			send_interface_message = {
+				type = nht_canceled_trade_agreement
+				title = msg_nht_canceled_trade_agreement
+				desc = msg_nht_canceled_trade_agreement_desc
+				left_icon = scope:actor
+			}
+			save_scope_as = second_ruler_in_trade_agreement
+		}	
+		nht_cancel_trade_agreement_character_modifier_effect = yes
+		
+		custom_tooltip = {
+			text = nht_remove_trade_county_modifier_tooltip
+			nht_remove_trade_agreement_county_modifier_effect = yes
+		}
+	}
+
+	## Performance-enhancement	
+	ai_potential = {
+		is_landed = yes
+		is_at_war = no
+		is_imprisoned = no
+		# Matches the regular minimum triggers.	
+		primary_title.tier >= tier_county
+	}
+
+	## Frequency
+	ai_frequency = 60
+
+	ai_targets = {
+		ai_recipients = neighboring_rulers		
+		max = 3
+	}
+	
+	ai_will_do = {
+		base = -1000
+
+		modifier = {
+			add = {
+				value = 0
+				if = {
+					limit = { 
+						scope:actor.monthly_character_income <= scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_2_value
+					}
+					add = 990
+				}
+				if = {
+					limit = { 
+						scope:actor.monthly_character_income > scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_2_value
+						scope:actor.monthly_character_income <= scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_9_value
+					}
+					add = 30
+				}
+				if = {
+					limit = { 
+						scope:actor.monthly_character_income > scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_9_value
+						scope:actor.monthly_character_income <= scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_10_value
+					}
+					add = 10
+				}
+				if = {
+					limit = { 
+						scope:actor.monthly_character_income > scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_10_value
+						scope:actor.monthly_character_income <= scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_11_value
+					}
+					add = -10
+				}
+				if = {
+					limit = { 
+						scope:actor.monthly_character_income > scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_11_value
+						scope:actor.monthly_character_income <= scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_12_value
+					}
+					add = -10
+				}
+				if = {
+					limit = { 
+						scope:actor.monthly_character_income > scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_12_value
+						scope:actor.monthly_character_income <= scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_14_value
+					}
+					add = -20
+				}
+				if = {
+					limit = { 
+						scope:actor.monthly_character_income > scope:recipient.nht_trade_agreement_interaction_recipient_montly_income_14_value
+					}
+					add = -30
+				}
+			}
+		}		
+		modifier = {	
+			scope:actor = {
+				opinion = {
+					target = scope:recipient
+					value >= very_high_negative_opinion
+				}
+			}
+			add = 1020
+		}
+		modifier = {	
+			scope:actor = {
+				opinion = {
+					target = scope:recipient
+					value >= high_negative_opinion
+				}
+			}
+			add = 990
+		}		
+		## Don't trade with dead men.
+		modifier = {
+			add = 30
+			scope:recipient = { health <= poor_health }
+		}		
+	}
+}

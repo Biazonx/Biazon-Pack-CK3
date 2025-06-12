@@ -1,0 +1,250 @@
+﻿l_english:
+
+    #Punic
+    punic_idolism:0 "Punic Paganism"
+    punic_idolism_adj:0 "Punic Paganism"
+    punic_idolism_adherent:0 "Punic Paganist"
+    punic_idolism_adherent_plural:0 "Punic Paganists"
+    punic_idolism_desc:0 "The Punics derived the original core of their religion from Phoenicia, but also developed their own pantheons. Their main goddess Tanit can be found on shields temples and many other buildings. The religion is also known as Western Phoenician or Carthaginian." 
+
+    punic_idolism_old:0 "Old Punic Paganism"
+    punic_idolism_old_adj:0 "Old Punic Paganism"
+    punic_idolism_adherent_old:0 "Old Punic Paganist"
+    punic_idolism_old_adherent_plural:0 "Old Punic Paganists"
+    punic_idolism_desc:0 "The Punics derived the original core of their religion from Phoenicia, but also developed their own pantheons. Their main goddess Tanit can be found on shields temples and many other buildings. The religion is also known as Western Phoenician or Carthaginian." 
+
+    punic_idolism_divine_realm:0 "Phoenician pantheon"
+    punic_idolism_religious_symbol:0 "Tanit"
+    punic_idolism_religious_text:0 "rituals"
+    
+    #punic gods/goddesses Localization
+
+    #An El Localization
+    punic_idolism_high_god_name:0 "Baal Hammon"
+    punic_idolism_high_god_name_possessive:0 "Baal Hammon's"
+    punic_idolism_high_god_name_alternate:0 "Baal Hammon"
+    punic_idolism_high_god_name_alternate_possessive:0 "Baal Hammon's"
+    punic_idolism_high_god_shehe:0 "He"
+    punic_idolism_high_god_herselfhimself:0 "Himself"
+    punic_idolism_high_god_herhis:0 "His"
+
+    #Creater god Localization
+    punic_idolism_creator_god_name:0 "Hammon"
+    punic_idolism_creator_god_name_possessive:0 "Hammon's"
+
+    #Health Goddess Eshmun
+    punic_idolism_health_god_name:0 "Eshmun"
+    punic_idolism_health_god_name_possessive:0 "Eshmun's"
+
+    #Fertility Goddess Tanit Localization
+    punic_idolism_fertility_god_name:0 "Tanit"
+    punic_idolism_fertility_god_name_possessive:0 "Tanit's"
+
+    #Wealth god Lugh Localization
+    punic_idolism_wealth_god_name:0 "Melqart"
+    punic_idolism_wealth_god_name_possessive:0 "Melqart's"
+
+    #Household god 
+    punic_idolism_household_god_name:0 "Tanit"
+    punic_idolism_household_god_name_possessive:0 "Tanit's"
+
+    #Fate god Mór-Ríoghain Localization
+    punic_idolism_fate_god_name:0 "Mór-Ríoghain"
+    punic_idolism_fate_god_name_possessive:0 "Mór-Ríoghain's"
+
+    #knowledge god ecnaLocalization
+    punic_idolism_knowledge_god_name:0 "Kusor"
+    punic_idolism_knowledge_god_name_possessive:0 "Kusor's"
+
+    #War god Tanit Localization
+    punic_idolism_war_god_name:0 "Tanit"
+    punic_idolism_war_god_name_possessive:0 "Tanit's"
+
+    #Trickster god Localization
+    punic_idolism_trickster_god_name:0 "a god"
+    punic_idolism_trickster_god_name_possessive:0 "a god's"
+
+    #Night goddess 
+    punic_idolism_night_god_name:0 "Hudis"
+    punic_idolism_night_god_name_possessive:0 "Hudis's"
+
+
+    punic_idolism_water_god_name:0 "Yam"
+    punic_idolism_water_god_name_possessive:0 "Yam's"
+
+    #evil gods names 
+    punic_idolism_evil_god_resjef:0 "Resjef" 
+    punic_idolism_evil_god_resjef:0 "Resjef"
+
+    punic_idolism_witchgodname_resjef:0 "Resjef"
+
+    #Devil god   
+    punic_idolism_devil_name:0 "Hawot" 
+    punic_idolism_devil_name_possessive:0 "Hawot's"
+
+    #Death god 
+    punic_idolism_death_deity_name:0 "Hawot"
+    punic_idolism_death_deity_name_possessive:0 "Hawot's"
+
+    #Good gods names 
+    punic_idolism_good_god_baal:0 "Baal Hammon" 
+    punic_idolism_good_god_reshef:0 "Reshef" 
+    punic_idolism_good_god_kusor:0 "Kusor" 
+    punic_idolism_good_god_melqart:0 "Melqart" 
+    punic_idolism_good_god_eshum:0 "Eshmun" 
+    punic_idolism_good_god_yam:0 "Yam" 
+    punic_idolism_good_god_tanit:0 "Tanit" 
+    punic_idolism_good_god_semes:0 "Semes"
+
+    #punic male priests  
+    punic_idolism_priest_male:0 "Priest"
+    punic_idolism_priest_male_plural:0 "Priest"
+
+    #punic female priests 
+    punic_idolism_priest_female:0 "Priestess" 
+    punic_idolism_priest_female_plural:0 "Priestess" 
+
+    #Druids  
+    punic_idolism_bishop_male:0 "Priest" 
+    punic_idolism_bishop_male_plural:0 "Priest" 
+
+    punic_idolism_religious_head_title:0 "High Priest"
+
+    #Semitic
+    semitic_idolism:0 "Din Knaania"
+    semitic_idolism_adj:0 "Din Knaania"
+    semitic_idolism_adherent:0 "Din Knaania polytheist"
+    semitic_idolism_adherent_plural:0 "Din Knaania polytheists"
+    semitic_idolism_desc:0 "The Western Branch of the Semitic ethno-linguistic family holds a different set of gods than their Mesopotamian and Arabian cousins. This branch also gave rise to the Punic pantheon through the expansive colonization effort by the Phoenicians, also known as Canaanites. " 
+
+    semitic_idolism_old:0 "Old Din Knaania"
+    semitic_idolism_old_adj:0 "Old Din Knaania"
+    semitic_idolism_adherent_old:0 "Old Din Knaaniat"
+    semitic_idolism_old_adherent_plural:0 "Old Din Knaaniats"
+    semitic_idolism_desc:0 "The Western Branch of the Semitic ethno-linguistic family holds a different set of gods than their Mesopotamian and Arabian cousins. This branch also gave rise to the Punic pantheon through the expansive colonization effort by the Phoenicians, also known as Canaanites. " 
+
+    semitic_idolism_religious_symbol:0 "to be done"
+    semitic_idolism_religious_text:0 "Katubei Ha-Qdusha"
+    
+    semitic_idolism_high_god_name:0 "Baal"
+    semitic_idolism_high_god_name_possessive:0 "$semitic_idolism_high_god_name$'s"
+    semitic_idolism_high_god_name_alternate:0 "$semitic_idolism_high_god_name$"
+    semitic_idolism_high_god_name_alternate_possessive:0 "$semitic_idolism_high_god_name$'s"
+    semitic_idolism_high_god_shehe:0 "He"
+    semitic_idolism_high_god_herselfhimself:0 "Himself"
+    semitic_idolism_high_god_herhis:0 "His"
+
+    #Creater god Localization
+    semitic_idolism_creator_god_name:0 "El"
+    semitic_idolism_creator_god_name_possessive:0 "$semitic_idolism_creator_god_name$'s"
+
+    #Health Goddess 
+    semitic_idolism_health_god_name:0 "Resheph"
+    semitic_idolism_health_god_name_possessive:0 "$semitic_idolism_health_god_name$s"
+
+    #Fertility Goddess  Localization
+    semitic_idolism_fertility_god_name:0 "Astarte"
+    semitic_idolism_fertility_god_name_possessive:0 "$semitic_idolism_fertility_god_name$'s"
+
+    #Wealth god  Localization
+    semitic_idolism_wealth_god_name:0 "Dagan"
+    semitic_idolism_wealth_god_name_possessive:0 "Dagan's"
+
+    #Household god 
+    semitic_idolism_household_god_name:0 "Kotharat"
+    semitic_idolism_household_god_name_possessive:0 "Kotharat's"
+
+    #Fate god Localization
+    semitic_idolism_fate_god_name:0 "Ashima"
+    semitic_idolism_fate_god_name_possessive:0 "Ashima's"
+
+    #knowledge god 
+    semitic_idolism_knowledge_god_name:0 "El Elyon"
+    semitic_idolism_knowledge_god_name_possessive:0 "El Elyon's"
+
+    #War god Astarte Localization
+    semitic_idolism_war_god_name:0 "Astarte"
+    semitic_idolism_war_god_name_possessive:0 "$semitic_idolism_war_god_name$'s"
+
+    #Trickster god Localization
+    semitic_idolism_trickster_god_name:0 "Ia"
+    semitic_idolism_trickster_god_name_possessive:0 "Ia's"
+
+    #Night goddess 
+    semitic_idolism_night_god_name:0 "Shalim"
+    semitic_idolism_night_god_name_possessive:0 "Shalim's"
+
+    semitic_idolism_water_god_name:0 "Yam"
+    semitic_idolism_water_god_name_possessive:0 "Yam's"
+
+    #evil gods names 
+    semitic_idolism_evil_god_yam:0 "Yamm" 
+    semitic_idolism_evil_god_mot:0 "Mot"
+
+    semitic_idolism_witchgodname_moloch:0 "Moloch"
+
+    #Devil god   
+    semitic_idolism_devil_name:0 "Hawot" 
+    semitic_idolism_devil_name_possessive:0 "Hawot's"
+
+    #Death god 
+    semitic_idolism_death_deity_name:0 "Mot"
+    semitic_idolism_death_deity_name_possessive:0 "$semitic_idolism_death_deity_name$'s"
+
+    #Good gods names 
+    semitic_idolism_good_god_baal:0 "Baal Hammon" 
+    semitic_idolism_good_god_reshef:0 "Reshef" 
+    semitic_idolism_good_god_kusor:0 "Kusor" 
+    semitic_idolism_good_god_melqart:0 "Melqart" 
+    semitic_idolism_good_god_eshum:0 "Eshmun" 
+    semitic_idolism_good_god_yam:0 "Yam" 
+    semitic_idolism_good_god_tanit:0 "Tanit" 
+    semitic_idolism_good_god_semes:0 "Semes"
+
+    #punic male priests  
+    semitic_idolism_priest_male:0 "Priest"
+    semitic_idolism_priest_male_plural:0 "Priests"
+
+    #punic female priests 
+    semitic_idolism_priest_female:0 "Priestess" 
+    semitic_idolism_priest_female_plural:0 "Priestesses" 
+
+    #Druids  
+    semitic_idolism_bishop_male:0 "Priest" 
+    semitic_idolism_bishop_male_plural:0 "Priests" 
+
+    semitic_idolism_religious_head_title:0 "High Priest"
+
+ #Gurzil
+ gurzil: "Gurzilism"
+ gurzil_adj: "Gurzilist"
+ gurzil_adherent: "Gurzilist"
+ gurzil_adherent_plural: "Gurzilists"
+ gurzil_desc: "Worship of the Libyan god Gurzil, the offspring of Amun and a cow."
+ gurzil_high_god_name: "Gurzil"
+ gurzil_high_god_name_possessive: "Gurzil's"
+ #African Solar
+ african_solar: "African Solarism"
+ african_solar_adj: "African Solarism"
+ african_solar_adherent: "African Solarist"
+ african_solar_adherent_plural: "African Solarists"
+ african_solar_desc: "Solar Worship in Africa can be seen to be one of the earliest religions on the planet, while the practices and myths surrounding the Sun and the Moon would vary depending on the tribe the most common elements include Ancestor Worship and Animal Sacrifice."
+ african_solar_high_god_name: "The Sun"
+ african_solar_devil_name: "the Darkness"
+ african_solar_devil_name_possessive: "the Darkness'"
+ #Msoura
+ msoura: "Äntism"
+ msoura_adj: "Antaean"
+ msoura_adherent: "Antaean"
+ msoura_adherent_plural: "Antaeans"
+ msoura_desc: "Änti is the Berber name of the Greek legendary hero Antaeus, a great giant who challenged all he could find in wrestling matches, kill them and collect their skulls so that he could one day built out of them a temple to his father Poseidon. It is said that he was eventually stopped by Hercules who crushed the great giant in a great hold. The worshipers of Änti are tasked with defending their holy site of Msoura, said to be the grave of the long dead sea Giant."
+ msoura_high_god_name: "Änti"
+ msoura_high_god_name_possessive: "Änti's"
+ #Mastimani
+ mastimani: "Mastimanism"
+ mastimani_adj: "Mastimanism"
+ mastimani_adherent: "Mastimanist"
+ mastimani_adherent_plural: "Mastimanists"
+ mastimani_desc: "Though similar to Hellenism with the worship of Jupiter (known as Mastiman) and Saturn, it differs mostly in the regards of sacrifice and the view of the gods. The practitioners of Mastimani sacrificed children to Saturn and Mastiman, along with an assortment of other human sacrifices. This was in order to appease the gods, who were feared by the devoted."
+ mastimani_high_god_name: "Mastiman"
+ mastimani_high_god_name_possessive: "Mastiman's"

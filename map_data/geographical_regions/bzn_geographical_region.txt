@@ -1,0 +1,42 @@
+world_europe_west_britannia = {
+	duchies = {
+		# England
+		d_bedford d_northumberland d_lancaster d_york d_norfolk d_hereford d_gloucester d_canterbury d_somerset
+		# Wales
+		d_gwynedd d_powys d_deheubarth d_cornwall
+		# Scotland
+		d_albany d_the_isles d_galloway d_western_isles d_lothian d_moray
+		#Ireland
+		d_meath d_ulster d_connacht d_leinster d_munster
+	}
+}
+custom_romania = {
+	#Romania
+	duchies = {
+		d_transylvania d_transylvanian_alps d_muntenia d_oltenia
+	}
+	counties = {
+		c_galati c_stoenesti
+	}
+}
+
+custom_teutonic = {
+	#Teutonic Order
+	duchies = {
+		d_prussia d_masuria d_pomerelia 
+	}
+}
+
+custom_yugoslavia = {
+	#Yugoslavia
+	duchies = {
+		d_duklja d_rashka d_macva d_slavonia d_croatia d_lower_bosna d_bosna d_dalmatia d_usora d_ragusa
+	}
+}
+
+custom_hussite = {
+	#Hussite Controlled Areas
+	duchies = {
+		d_bohemia d_moravia d_upper_silesia d_lower_silesia
+	}
+}

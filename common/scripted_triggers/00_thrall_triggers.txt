@@ -1,0 +1,44 @@
+﻿####MARRIAGE TRIGGER LIST###
+
+#can_become_thrall
+
+#MARRIAGE INTERACTION TRIGGERS
+
+#############################
+# GENERAL thrall TRIGGERS #
+#############################
+
+
+can_be_offered_as_thrall_to_character_trigger = {
+	trigger_if = {
+		limit = {
+			has_trait = thrall
+		}
+	}
+	NOT = {
+		has_character_flag = has_been_offered_as_thrall
+	}
+	is_ruler = no
+	is_landed = no
+	is_adult = yes
+}
+
+can_become_thrall_of_character_trigger = {
+	trigger_if = {
+		limit = {
+			NOT = { is_imprisoned_by = $CHARACTER$ }
+		}
+	}
+	trigger_if = {
+		limit = {
+			has_trait = thrall
+		}
+	}
+	NOR = {
+		is_concubine_of = $CHARACTER$
+		has_character_flag = has_been_offered_as_concubine
+	}
+	is_ruler = no
+	is_landed = no
+	is_adult = yes
+}

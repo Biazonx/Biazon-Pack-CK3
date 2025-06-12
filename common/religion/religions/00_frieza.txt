@@ -1,0 +1,107 @@
+frieza_religion = {
+    family = rf_pagan
+
+    doctrine = pagan_hostility_doctrine
+
+    # Main Group
+    doctrine = doctrine_temporal_head
+    doctrine = doctrine_gender_male_dominated
+    doctrine = doctrine_pluralism_fundamentalist
+    doctrine = doctrine_theocracy_lay_clergy
+
+    # Marriage
+    doctrine = doctrine_monogamy
+    doctrine = doctrine_divorce_disallowed
+    doctrine = doctrine_bastardry_legitimization
+    doctrine = doctrine_consanguinity_restricted
+
+    # Crimes
+    doctrine = doctrine_homosexuality_crime
+    doctrine = doctrine_adultery_men_crime
+    doctrine = doctrine_adultery_women_crime
+    doctrine = doctrine_kinslaying_close_kin_crime
+    doctrine = doctrine_deviancy_crime
+    doctrine = doctrine_witchcraft_shunned
+
+    # Clerical Functions
+    doctrine = doctrine_clerical_function_taxation
+    doctrine = doctrine_clerical_gender_either
+    doctrine = doctrine_clerical_marriage_disallowed
+    doctrine = doctrine_clerical_succession_temporal_appointment
+
+    # Pilgrimage
+    doctrine = doctrine_pilgrimage_mandatory
+
+    # Funeral Tradition
+    doctrine = doctrine_funeral_stoic
+
+    traits = {
+        virtues = { frieza_race ambitious callous arrogant }
+        sins = { compassionate humble trusting }
+    }
+
+    holy_order_names = {
+        { name = "holy_order_frieza_force" }
+        { name = "holy_order_elite_corps" }
+    }
+
+    custom_faith_icons = {
+        custom_faith_crown custom_faith_starburst custom_faith_sun
+    }
+
+    holy_order_maa = { imperial_guard }
+
+    localization = {
+        HighGodName = frieza_emperor
+        HighGodName2 = frieza_emperor_2
+        HighGodNamePossessive = frieza_emperor_possessive
+        HighGodNameSheHe = CHARACTER_HE
+        HighGodHerselfHimself = CHARACTER_HIMSELF
+        HighGodHerHis = CHARACTER_HIS
+        HighGodNameAlternate = lord_of_cold
+        HighGodNameAlternatePossessive = lord_of_cold_possessive
+
+        CreatorName = cold_lineage
+        CreatorNamePossessive = cold_lineage_possessive
+
+        HealthGodName = bio_engineering
+        FertilityGodName = empire_growth
+        WealthGodName = galactic_taxes
+        HouseholdGodName = planetary_governance
+        FateGodName = destiny_of_rule
+        KnowledgeGodName = cold_intellect
+        WarGodName = might_of_frieza
+
+        DevilName = saiyan_rebellion
+        EvilGodNames = { super_saiyan_myth }
+
+        HouseOfWorship = imperial_throne
+        HouseOfWorshipPlural = imperial_thrones
+        ReligiousSymbol = golden_emblem
+        ReligiousText = frieza_edicts
+        ReligiousHeadName = supreme_emperor
+        DivineRealm = galactic_capitol
+        PositiveAfterLife = throne_of_frieza
+        NegativeAfterLife = rebel_scrapyard
+
+        PriestMale = galactic_official
+        PriestFemale = galactic_official
+    }
+
+    faiths = {
+        frieza_faith = {
+            color = { 0.9 0.9 1.0 } # Pale icy blue
+            icon = "frieza_faith.dds"
+
+            holy_site = rome
+			holy_site = jerusalem
+			holy_site = constantinople
+			holy_site = albi
+			holy_site = cologne
+
+            doctrine = tenet_pursuit_of_power
+            doctrine = tenet_struggle_submission
+            doctrine = tenet_fp3_fedayeen
+        }
+    }
+}

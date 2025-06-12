@@ -1,0 +1,68 @@
+# Standard costs
+@maa_buy_cost = 120
+@maa_low_maintenance_cost = 1.0
+@maa_high_maintenance_cost = 5.0
+@cultural_maa_extra_ai_score = 60 # Equivalent to having 6 extra regiments beyond what the code scoring would indicate (see NEGATIVE_SCORE_PER_EXISTING_REGIMENT)
+
+saiyan_warriors = {
+    type = heavy_infantry
+
+    can_recruit = {
+        culture = culture:saiyan
+    }
+
+    damage = 45
+    toughness = 30
+    pursuit = 10
+    screen = 5
+
+    terrain_bonus = {
+        farmlands = { damage = 5 toughness = 5 }
+        plains = { damage = 5 toughness = 5 }
+        drylands = { damage = 5 toughness = 5 }
+    }
+
+    counters = {
+        skirmishers = 1
+        pikemen = 1
+    }
+
+    buy_cost = { gold = @maa_buy_cost }
+    low_maintenance_cost = { gold = 0.08 }
+    high_maintenance_cost = { gold = 0.7 }
+
+    stack = 100
+    ai_quality = { value = @cultural_maa_extra_ai_score }
+    icon = heavy_infantry
+}
+
+namekian_guardians = {
+    type = heavy_infantry
+
+    can_recruit = {
+        culture = culture:namekian
+    }
+
+    damage = 30
+    toughness = 40
+    pursuit = 10
+    screen = 20
+
+    terrain_bonus = {
+        plains = { damage = 4 toughness = 6 }
+        hills = { damage = 4 toughness = 6 }
+    }
+
+    counters = {
+        skirmishers = 1
+        pikemen = 1
+    }
+
+    buy_cost = { gold = @maa_buy_cost }
+    low_maintenance_cost = { gold = 0.08 }
+    high_maintenance_cost = { gold = 0.7 }
+
+    stack = 100
+    ai_quality = { value = @cultural_maa_extra_ai_score }
+    icon = heavy_infantry
+}

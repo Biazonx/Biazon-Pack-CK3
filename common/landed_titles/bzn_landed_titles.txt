@@ -1,0 +1,133 @@
+d_bzn_tecuetlaza = { # Tecuetlaza
+	color = { 100 100 100 }
+	capital = c_porto
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+}
+
+d_bzn_raditz = { # Raditz
+	color = { 100 100 100 }
+	capital = c_ansbach
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+}
+
+d_bzn_yitzhak = { # Yitzhak bar Shimon
+	color = { 100 100 100 }
+	capital = c_jerusalem
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+}
+
+d_bzn_cold = { # King Cold
+	color = { 100 100 100 }
+	capital = c_orbetello
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+}
+
+d_bzn_buu = { # Kid Buu
+	color = { 100 100 100 }
+	capital = c_zhongba
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+}
+
+d_bzn_piccolo = { # Piccolo
+	color = { 100 100 100 }
+	capital = c_hont
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+}
+
+d_bzn_ahmose = { # Ahmose
+	color = { 100 100 100 }
+	capital = c_cairo
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+}
+
+d_bzn_balam = { # Kinam Balam
+	color = { 100 100 100 }
+	capital = c_tangiers
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+}
+
+d_bzn_itzcoatl = { # Itzcoatl
+	color = { 100 100 100 }
+	capital = c_leon
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+}
+
+d_bzn_hong = { # Hong Xiuquan
+	color = { 100 100 100 }
+	capital = c_mangra
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+}
+
+k_romania = {
+	color = { 16 125 74 }
+	capital = c_campulung # Târgoviste
+}
+k_teutonic = {
+	color = { 82 114 115 }
+	capital = c_danzig # Gdansk
+}	
+
+e_yugoslavia = {
+	color = { 0 56 168 }
+	capital = c_usora # Belgrade
+}

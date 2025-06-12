@@ -1,0 +1,23 @@
+﻿namespace = super_saiyan
+
+super_saiyan.0003 = {
+	type = character_event
+	title = super_saiyan.0003.t
+	desc = super_saiyan.0003.d
+	theme = martial
+	override_background = courtyard
+
+	left_portrait = {
+		character = root
+		animation = zealous
+	}
+
+	option = {
+		name = super_saiyan.0003.a
+		
+		add_trait = super_saiyan_4
+		remove_trait = super_saiyan
+		remove_trait = super_saiyan_2
+		remove_trait = super_saiyan_3
+	}
+}

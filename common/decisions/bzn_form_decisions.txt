@@ -1,0 +1,265 @@
+form_romania_kingdom_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
+	}
+	desc = form_romania_kingdom_decision_desc
+	selection_tooltip = form_romania_kingdom_decision_tooltip
+	decision_group_type = major
+	
+	is_shown = {
+		NOT = { exists = title:k_romania.holder }
+		NOT = {  # Can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_formed_romania_kingdom
+			}
+		}
+		# No kings or emperors...
+		highest_held_title_tier <= tier_duchy
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_eastern_balkans }
+		}
+	}
+
+	is_valid = {
+		is_independent_ruler = yes
+		# Must be suitably prestigious.
+		prestige_level >= 2
+		# Must control core Romania
+		completely_controls_region = custom_romania
+	}
+
+	effect = { 
+	form_romania_scripted_effect = yes
+	}
+	
+	cost = {
+		gold = 250
+	}
+	
+	ai_potential = {
+		prestige_level >= 2
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+form_yugoslavia_empire_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
+	}
+	desc = form_yugoslavia_empire_decision_desc
+	selection_tooltip = form_yugoslavia_empire_decision_tooltip
+	decision_group_type = major
+	
+	is_shown = {
+		NOT = { exists = title:e_yugoslavia.holder }
+		NOT = {  # Can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_formed_yugoslavia_empire
+			}
+		}
+		# No kings or emperors...
+		highest_held_title_tier <= tier_kingdom
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_yugoslavia }
+		}
+	}
+
+	is_valid = {
+		is_independent_ruler = yes
+		# Must be suitably prestigious.
+		prestige_level >= 2
+		# Must control core Yugoslavia
+		completely_controls_region = custom_yugoslavia
+	}
+
+	effect = { 
+	form_yugoslavia_scripted_effect = yes
+	}
+	
+	cost = {
+		gold = 250
+	}
+	
+	ai_potential = {
+		prestige_level >= 2
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+bzn_embrace_german_culture_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_culture.dds"
+	}
+
+	decision_group_type = major
+
+	ai_check_interval = 0
+
+	is_shown = {
+		NOT = { exists = title:k_teutonic.holder }
+		NOT = {  # Can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_formed_teutonic_kingdom
+			}
+		}
+		OR = {
+			culture = culture:prussian
+			culture = culture:pomeranian
+		}
+		NOT = { culture = culture:german }
+	}
+
+	is_valid = {
+		OR = {
+			culture = culture:prussian
+			culture = culture:pommeranian
+		}
+		prestige_level >= 2
+		piety_level >= 2
+		completely_controls_region = custom_teutonic
+		highest_held_title_tier <= tier_duchy
+	}
+
+	desc = embrace_german_culture_decision_desc
+	cost = { gold = 250 piety = 250 }
+
+	effect = {
+		form_teutonic_scripted_effect = yes
+		set_culture = culture:german
+		set_character_faith = faith:catholic
+
+		every_courtier = {
+			set_culture = culture:german
+			set_character_faith = faith:catholic
+		}
+
+		every_vassal = {
+			set_culture = culture:german
+			set_character_faith = faith:catholic
+		}
+
+		every_realm_county = {
+			set_county_culture = culture:german
+			set_county_faith = faith:catholic
+		}
+	}
+
+	ai_potential = {
+		prestige_level >= 2
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+bzn_adopt_chinese_administration_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_culture.dds"
+    }
+    decision_group_type = major
+    ai_check_interval = 12
+    is_shown = {
+        NOT = { government_has_flag = government_is_administrative }
+        NOT = { government_has_flag = government_is_shogunate }
+        culture = culture:han
+        OR = {
+            has_government = feudal_government
+            has_government = tribal_government
+            has_government = clan_government
+        }
+    }
+    is_valid = {
+        primary_title = {
+            tier >= tier_kingdom
+        }
+        culture = culture:han
+        is_independent_ruler = yes
+    }
+    desc = adopt_chinese_administration_decision_desc
+    cost = { prestige = 500 }
+    effect = {
+        every_realm_province = {
+            limit = { has_holding_type = tribal_holding }
+            set_holding_type = castle_holding
+        }
+        change_to_administrative_effect = yes
+        every_vassal_or_below = {
+            limit = {
+                OR = {
+                    has_government = feudal_government
+                    has_government = tribal_government
+                    has_government = clan_government
+                }
+            }
+            change_to_administrative_effect = yes
+        }
+    }
+    ai_potential = {
+        always = yes
+    }
+    ai_will_do = {
+        base = 100
+    }
+}
+
+bzn_novgorod_republic_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_culture.dds"
+    }
+    decision_group_type = major
+    ai_check_interval = 0
+    is_shown = {
+        OR = {
+            culture = { has_cultural_pillar = heritage_north_germanic }
+            culture = { has_cultural_pillar = heritage_east_slavic }
+        }
+        NOT = { government_has_flag = government_is_administrative }
+    }
+    is_valid = {
+        has_primary_title = title:k_novgorod
+        culture = { has_cultural_pillar = heritage_east_slavic }
+        is_independent_ruler = yes
+        OR = {
+            has_government = feudal_government
+            has_government = tribal_government
+            has_government = clan_government
+        }
+    }
+    desc = novgorod_republic_decision_desc
+    cost = { prestige = 1000 gold = 500 }
+    effect = {
+        every_realm_province = {
+            limit = { has_holding_type = tribal_holding }
+            set_holding_type = castle_holding
+        }
+        change_to_administrative_effect = yes
+        every_vassal_or_below = {
+            limit = {
+                OR = {
+                    has_government = feudal_government
+                    has_government = tribal_government
+                    has_government = clan_government
+                }
+            }
+            change_to_administrative_effect = yes
+        }
+    }
+    ai_potential = {
+        always = yes
+    }
+    ai_will_do = {
+        base = 0
+    }
+}

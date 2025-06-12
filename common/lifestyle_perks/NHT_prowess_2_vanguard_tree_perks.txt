@@ -1,0 +1,221 @@
+﻿nht_ruthless_assault_perk = {
+	lifestyle = nht_prowess_lifestyle
+	tree = nht_offense
+	position = { 2 0 }
+	icon = node_nht_prowess
+
+	character_modifier = {
+		prowess = 2
+		attacker_advantage = 5
+	}
+
+	auto_selection_weight = {
+		value = 11
+		if = {
+			limit = {
+				has_education_nht_prowess_trigger = yes
+			}
+			add = 1989
+		}
+		if = {
+			limit = {
+				prowess >= 11
+			}
+			add = 1988
+		}
+		if = {
+			limit = {
+				prowess >= 20
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_focus = nht_prowess_offense_focus
+			}
+			multiply = 5
+		}
+		if = {
+			limit = {
+				NOT = { has_game_rule = nht_secondary_lifestyle }
+				nht_can_start_new_lifestyle_tree_prowess_trigger = no
+				NOT = { has_perk = nht_orderly_maneuvers_perk }
+			}
+			multiply = 0
+		}
+	}
+}
+nht_orderly_maneuvers_perk = {
+	lifestyle = nht_prowess_lifestyle
+	tree = nht_offense
+	position = { 0 0 }
+	icon = node_nht_prowess
+			
+	character_modifier = {
+		hard_casualty_modifier = -0.15
+	}
+}
+
+nht_rallying_call_perk = {
+	lifestyle = nht_prowess_lifestyle
+	tree = nht_offense
+	position = { 0 1 }
+	icon = node_nht_prowess
+	
+	parent = nht_orderly_maneuvers_perk
+	
+	government_character_modifier = {
+		flag = government_is_landless_adventurer
+		invert_check = yes
+		levy_size = 0.1
+	}
+	
+	government_character_modifier = {
+		flag = government_is_landless_adventurer
+		men_at_arms_cap = 1
+	}	
+}
+
+nht_spoils_of_war_perk = {
+	lifestyle = nht_prowess_lifestyle
+	tree = nht_offense
+	position = { 0 2 }
+	icon = node_nht_prowess
+	
+	parent = nht_rallying_call_perk
+
+	effect = {
+		if = {
+			limit = { 
+				NOT = { 
+					has_game_rule = nht_sack_holding_event_no_requi
+					has_game_rule = nht_sack_holding_event_no_requi_no_level
+					has_game_rule = nht_sack_holding_event_disabled
+				}
+			}
+			custom_description_no_bullet = { text = unlocks_nht_special_plunder_event_desc }
+		}
+		else = { add_character_modifier = nht_spoils_of_war_perk_modifier }
+	}	
+	character_modifier = {
+		movement_speed = 0.1
+	}
+}
+
+nht_inspire_fear_perk = {
+	lifestyle = nht_prowess_lifestyle
+	tree = nht_offense
+	position = { 2 1 }
+	icon = node_nht_prowess
+	
+	parent = nht_ruthless_assault_perk
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { is_landless_adventurer = yes }
+				desc = nht_inspire_fear_perk_adventurer_name
+			}
+			desc = nht_inspire_fear_perk_name
+		}
+	}
+	
+	character_modifier = {
+		dread_baseline_add = 15
+		dread_loss_mult = -0.15
+	}
+}
+
+nht_unrelenting_pursuit_perk = {
+	lifestyle = nht_prowess_lifestyle
+	tree = nht_offense
+	position = { 2 2 }
+	icon = node_nht_prowess
+	
+	parent = nht_inspire_fear_perk
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { is_landless_adventurer = yes }
+				desc = nht_unrelenting_pursuit_perk_adventurer_name
+			}
+			desc = nht_unrelenting_pursuit_perk_name
+		}
+	}
+	
+	character_modifier = {
+		heavy_cavalry_toughness_mult = 0.20
+		light_cavalry_toughness_mult = 0.20
+		heavy_cavalry_damage_mult = 0.20
+		light_cavalry_damage_mult = 0.20
+		camel_cavalry_toughness_mult = 0.20
+		camel_cavalry_damage_mult = 0.20	
+	}
+}
+
+nht_half_grip_perk = {
+	lifestyle = nht_prowess_lifestyle
+	tree = nht_offense
+	position = { 1 3 }
+	icon = node_nht_prowess
+
+	parent = nht_spoils_of_war_perk
+	parent = nht_unrelenting_pursuit_perk
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { is_landless_adventurer = yes }
+				desc = nht_half_grip_perk_adventurer_name
+			}
+			desc = nht_half_grip_perk_name
+		}
+	}
+	
+	effect = {
+		if = {
+			limit = { has_game_rule = nht_train_with_knight_interaction_enabled }
+			custom_description_no_bullet = { text = unlocks_nht_combat_training_interaction_desc }
+		}
+		else = { add_character_modifier = nht_train_with_knight_perk_modifier }
+	}
+	character_modifier = {
+		lifestyle_blademaster_xp_gain_mult = 0.15		
+	}
+}
+
+
+nht_ambush_expert_perk = {
+	lifestyle = nht_prowess_lifestyle
+	tree = nht_offense
+	position = { 1 4 }
+	icon = node_nht_prowess
+	
+	parent = nht_half_grip_perk
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { is_landless_adventurer = yes }
+				desc = nht_ambush_expert_perk_adventurer_name
+			}
+			desc = nht_ambush_expert_perk_name
+		}
+	}
+	
+	character_modifier = {
+		prowess = 2
+		uncontrolled_province_advantage = 3
+		
+	}
+}
+
+nht_vanguard_perk = {
+	lifestyle = nht_prowess_lifestyle
+	tree = nht_offense
+	position = { 1 5 }
+	icon = nht_vanguard_perk
+	
+	parent = nht_ambush_expert_perk
+	trait = nht_vanguard
+	effect = {
+		add_trait_force_tooltip = nht_vanguard
+	}
+}

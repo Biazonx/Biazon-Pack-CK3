@@ -1,0 +1,88 @@
+﻿saiyan_invite_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
+    }
+    desc = saiyan_invite_decision_desc
+    selection_tooltip = saiyan_invite_decision_tooltip
+
+    ai_check_interval = 120
+
+    cooldown = { years = 5 }
+
+    is_shown = {
+        is_landed_or_landless_administrative = yes
+        culture = culture:saiyan
+    }
+
+    is_valid_showing_failures_only = {
+        is_available = yes
+    }
+
+    effect = {
+        custom_tooltip = saiyan_invite_effect_tooltip
+        trigger_event = {
+            id = invite_saiyans.0001
+            days = { 3 10 }
+        }
+    }
+	
+	cost = { prestige = 100 }
+	
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 20
+    }
+}
+
+forge_dragon_balls_decision = { #Craft Artifacts
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_smith.dds" }
+	decision_group_type = major
+	desc = forge_dragon_balls_decision_desc
+	
+	ai_check_interval = 120
+	
+	cooldown = { years = 100 }
+
+	is_shown = {
+		has_trait = namekian_race
+		NOT = {  # Can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_forge_dragon_balls
+			}
+		}
+	}
+
+	is_valid = {
+		has_trait = namekian_race
+		prestige_level >= 2
+		piety_level >= 2
+	}
+
+	effect = {
+	create_artifact = {	
+		name = bzn_artifact_dragon_1_name
+		description = bzn_artifact_dragon_1_description
+		type = miscellaneous
+		visuals = bzn_artifact_dragon_1_visual
+		wealth = 100
+		quality = 100
+		template = general_unique_template
+		generate_history = no
+		modifier = artifact_development_growth_5_modifier
+		modifier = artifact_monthly_lifestyle_xp_3_modifier
+	}
+	}
+	cost = { gold = 250 }
+	
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 20
+	}
+}

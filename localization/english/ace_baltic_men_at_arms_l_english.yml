@@ -1,0 +1,15 @@
+﻿l_english:
+ 
+ kirwinikos:0 "Kirwīnīkōs"
+ kirwinikos_flavor:0 "#F Kirwīnīkōs are invaluable harriers, disrupting enemy flanks and chipping away at morale with their axes and spears.#"
+ lonkinikos:0 "Lonkīnīkōs"
+ lonkinikos_flavor:0 "#F Baltic Lonkīnīkōs can ambush invaders with a hail of arrows before melting back into the trees.#"
+ zemjones:0 "Zemjones"
+ zemjones_flavor:0 "#F The Zemjones are part of a class of free landholders. Dedicated defenders, they fight off invaders with spears and shields.#!"
+ kavelerija:0 "Kavelerija"
+ kavelerija_flavor:0 "#F Fast and agile, Lithuanian Kavelerija can easily raid the forests other cavalry avoid.#!"
+ 
+ culture_parameter_unlock_maa_kirwinikos:0 "Can recruit [GetMaA('kirwinikos').GetName] as [men_at_arms|E]"
+ culture_parameter_unlock_maa_lonkinikos:0 "Can recruit [GetMaA('lonkinikos').GetName] as [men_at_arms|E]"
+ culture_parameter_unlock_maa_zemjones:0 "Can recruit [GetMaA('zemjones').GetName] as [men_at_arms|E]"
+ culture_parameter_unlock_maa_kavelerija:0 "Can recruit [GetMaA('kavelerija').GetName] as [men_at_arms|E], if Lithuanian"

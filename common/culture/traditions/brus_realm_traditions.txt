@@ -1,0 +1,225 @@
+﻿tradition_brus_river_lifeblood = {
+	category = regional
+
+	layers = {
+		0 = steward
+		1 = western
+		4 = brus_ship_city.dds
+	}
+	
+	is_shown = {
+		has_cultural_pillar = heritage_east_slavic
+		NOR = {
+			culture_tradition:tradition_republican_legacy = { is_in_list = traits }
+			culture_tradition:tradition_maritime_mercantilism = { is_in_list = traits }
+		}
+	}
+	
+	can_pick = {
+		has_cultural_pillar = heritage_east_slavic
+	}
+	#Essentially a fusion of Republican Legacy and Maritime Mercantilism
+	parameters = {
+		trade_ports_enabled_for_tribals = yes
+		trade_ports_give_levies = yes
+		coastal_holding_bonuses = yes
+		can_make_republican_vassals = yes # The veche held some sway in Rus, most notably Republic of Novgorod
+		#republican_vassals_pay_more = yes
+	}
+	
+	character_modifier = {
+		diplomatic_range_mult = 0.10
+		development_growth_factor = 0.10
+	}
+	
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+			# River requirement.
+			if = {
+				limit = {
+					NOT = {
+						any_culture_county = {
+							percent >= 0.20
+							is_riverside_county = yes
+						}
+					}
+				}
+				add = {
+					value = tradition_unfulfilled_criteria_penalty
+					desc = river_percentage_desc
+				}
+			}
+			
+			multiply = tradition_replacement_cost_if_relevant
+		}
+	}
+	
+	ai_will_do = {
+		value = 0
+	}
+}
+
+tradition_brus_malleable_subjects = {
+	category = regional
+
+	layers = {
+		0 = diplo
+		1 = western
+		4 = malleable_subjects.dds
+	}
+	
+	is_shown = {
+		has_cultural_pillar = heritage_east_slavic
+		NOR = {
+			culture_tradition:tradition_fp2_malleable_subjects = { is_in_list = traits }
+			culture_tradition:tradition_loyal_soldiers = { is_in_list = traits }
+		}
+	}
+
+	can_pick = {
+		has_cultural_pillar = heritage_east_slavic
+	}
+	# Local version of the Iberian Malleable Subjects, but a bit toned down + partially replaced levies with taxes
+	parameters = {
+		#doesnt_care_about_culture_faith_in_factions = yes
+		harder_to_convert_county_culture_without_heritage = yes
+		easier_to_convert_county_culture_with_heritage = yes
+		powerful_foreign_knights_find_you_attractive = yes
+	}
+
+	character_modifier = {
+		mercenary_hire_cost_mult = -0.5
+		vassal_tax_contribution_mult = 0.10
+		#vassal_levy_contribution_mult = 0.10
+		#different_culture_opinion = 10
+		ignore_negative_opinion_of_culture = yes
+		opinion_of_liege = 5
+	}
+
+	culture_modifier = {
+		mercenary_count_mult = 2
+		cultural_acceptance_gain_mult = 0.2
+	}
+
+	cost = {
+		prestige = {
+			# Base cost.
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+			# Ethos requirement.
+			if = {
+				limit = {
+					NOR = {
+						culture_pillar:ethos_egalitarian = { is_in_list = traits }
+						culture_pillar:ethos_communal = { is_in_list = traits }
+					}
+				}
+				add = {
+					value = tradition_incompatible_ethos_penalty
+					desc = not_communal_or_egalitarian_desc
+				}
+			}
+			
+			multiply = tradition_replacement_cost_if_relevant
+		}
+	}
+	
+	ai_will_do = {
+		value = 0
+		# Players might want this, but the AI never does.
+	}
+}
+
+tradition_brus_rurikid = {
+	category = regional
+
+	layers = {
+		0 = diplo
+		1 = mena
+		4 = conversation.dds
+	}
+	
+	is_shown = {
+		has_cultural_pillar = heritage_east_slavic
+		
+		NOR = {
+			culture_tradition:tradition_family_entrepreneurship = { is_in_list = traits }
+			culture_tradition:tradition_mystical_ancestors = { is_in_list = traits }
+		}
+	}
+
+	can_pick = {
+		has_cultural_pillar = heritage_east_slavic
+	}
+
+	parameters = {
+		close_family_better_councillors = yes
+		close_family_better_court_positions = yes
+		penalty_for_revoking_titles_from_close_family = yes
+		cannot_disherit = yes
+		landing_house_members_gives_renown = yes
+		piety_penalty_for_revoking_titles_from_house_members = yes
+		can_use_ladder_elective = yes
+	}
+
+	character_modifier = {
+		dynasty_opinion = -10
+		close_relative_opinion = -5
+	}
+
+	cost = {
+		prestige = {
+			# Base cost.
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+			# Ethos requirement.
+			if = {
+				limit = {
+					NOR = {
+						culture_pillar:ethos_courtly = { is_in_list = traits }
+						culture_pillar:ethos_communal = { is_in_list = traits }
+					}
+				}
+				add = {
+					value = tradition_incompatible_ethos_penalty
+					desc = not_communal_or_courtly_desc
+				}
+			}
+			# Landed dynasty members requirement
+			if = {
+				limit = {
+					NOT = {
+						any_dynasty_member = {
+							count >= 5
+							is_landed = yes
+							culture = root
+						}
+					}
+				}
+				add = {
+					value = tradition_unfulfilled_criteria_penalty
+					desc = brus_landed_dynasty_req_desc
+				}
+			}
+
+			
+			multiply = tradition_replacement_cost_if_relevant
+		}
+	}
+	
+	ai_will_do = {
+		value = 0
+		# Players might want this, but the AI never does.
+	}
+}

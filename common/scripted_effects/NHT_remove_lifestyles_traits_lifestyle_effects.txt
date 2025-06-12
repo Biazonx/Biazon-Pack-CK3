@@ -1,0 +1,61 @@
+﻿# This is now a separate effect to increase compatibility handled in on_action
+# Remove all new perk-unlocked traits when resetting
+nht_remove_all_perk_more_lifestyles_traits_effect = {
+	if = {
+		limit = {
+			has_trait = nht_commander
+		}
+		remove_trait = nht_commander
+	}
+	if = {
+		limit = {
+			has_trait = nht_vanguard
+		}
+		remove_trait = nht_vanguard
+	}
+	if = {
+		limit = {
+			has_trait = nht_sentinel
+		}
+		remove_trait = nht_sentinel
+	}
+	if = {
+		limit = {
+			has_trait = nht_founder
+		}
+		remove_trait = nht_founder
+	}
+	if = {
+		limit = {
+			has_trait = nht_cosmopolitan
+		}
+		remove_trait = nht_cosmopolitan
+	}
+	if = {
+		limit = {
+			has_trait = nht_visionary
+		}
+		remove_trait = nht_visionary
+	}		
+}
+
+give_nht_self_nickname_effect = {
+	hidden_effect = {
+		random_list = {
+			30 = {
+				trigger_event = {
+					id = lifestyle_nicknames.0011
+					days = { 180 360 }	
+				}
+				modifier = {
+					factor = 2
+					OR = {
+						has_trait = arrogant
+						has_trait = humble
+					}
+				}
+			}
+			70 = {}
+		}
+	}
+}

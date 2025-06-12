@@ -1,0 +1,11 @@
+allow_raiding_any_government_effect = {  
+    if = {  
+        limit = { 
+			OR = {
+				has_trait = pirate_captain 
+				has_trait = slaver
+				} 
+			}
+        enable_raiding = yes  
+    }  
+}  

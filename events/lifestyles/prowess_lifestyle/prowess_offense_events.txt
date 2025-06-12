@@ -1,0 +1,1990 @@
+﻿#Events for offense lifestyle focus
+
+#OFFENSE REGULAR EVENTS
+	# 0001-0002 	- A practice duel with hidden grudge
+	# 0003-0004 	- A drunk fool in an inn
+	# 0005 	        - Give advice to knights
+	# 0005 	        - Knights argues about swords
+	# 0007 	        - Train Knights or Army?
+	# 0008-0009     - Bandits In My Lands
+	# 0010 	        - Inspect Armory ~~~~~~
+	
+#OFFENSE UNCOMMMON EVENTS
+	# 1001-1003  	- Rival dispute		
+
+	
+#OFFENSE RARE EVENTS
+	# 2001-2003  	- The Knight's Gamble		
+	# 2004       	- Legendary Knight
+	
+
+#OFFENSE UNAVAILABLE EVENTS
+	# 4001          - In Prison
+	# 1004-1012     - Raiding in Enemy Territory
+
+
+#PROWESS SPECIAL EVENTS
+	# 3001 	        - Old
+	# 3002 	        - One-legged
+	# 3003 	        - One-eyed
+	# 3004 	        - Infirm
+	# 3005 	        - Blind
+	# 3006 	        - Dwarf
+	
+	
+###########################
+# OFFENSE: REGULAR EVENTS #
+###########################
+
+namespace = nht_prowess_offense
+
+scripted_trigger nht_prowess_offense_1001_vassal_trigger = {
+	is_ai = yes
+	NOT = { this = root }
+	highest_held_title_tier <= root.highest_held_title_tier
+	NOR = {
+		has_relation_friend = root
+		has_relation_lover = root
+		has_relation_soulmate = root
+	}
+}
+
+scripted_trigger nht_prowess_offense_1001_liege_trigger = {
+	is_ai = yes
+	any_vassal = {
+		nht_prowess_offense_1001_vassal_trigger = yes
+	}
+}
+
+scripted_trigger nht_prowess_offense_1001_knight_trigger = {
+	is_ai = yes
+	NOT = { this = root }
+	NOR = {
+		has_relation_friend = root
+		has_relation_lover = root
+		has_relation_soulmate = root
+	}
+}
+
+#A practice duel with hidden grudge
+nht_prowess_offense.0001 = {
+	type = character_event
+	title = nht_prowess_offense.0001.t
+	desc = {
+		desc = nht_prowess_offense.0001.opening
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					prowess < scope:duel_opponent.prowess
+				}
+				desc = nht_prowess_offense.0001.hard_fight
+			}
+			triggered_desc = {
+				desc = nht_prowess_offense.0001.easy_fight
+			}
+		}
+		desc = nht_prowess_offense.0001.conclusion
+	}
+	
+	theme = nht_prowess_offense_focus
+	override_background = {
+		reference = courtyard
+	}
+	left_portrait = {
+		character = root
+		animation = aggressive_sword
+	}
+	
+	right_portrait = {
+		character = scope:duel_opponent
+		animation = anger
+	}
+
+	trigger = {
+		NOR = { 
+			has_character_flag = had_event_nht_offense_0001 
+			has_trait = blind
+		}
+		is_landed = yes
+		is_ruler = yes
+		exists = root.capital_province
+	}
+		
+
+	
+
+	weight_multiplier = {
+		base = 1
+		modifier = { #More likely to occur if the character has a little Dread
+			add = 1
+			dread > 10
+		}
+		modifier = { #More likely if you are into duels
+			add = 2
+			has_trait = lifestyle_blademaster		
+		}
+		upweight_for_focus_modifier = { FOCUS = nht_prowess_offense_focus }
+	}
+
+	immediate = {
+		add_character_flag = {
+			flag = had_event_nht_offense_0001
+			years = 10
+		}
+		add_character_flag = {
+			flag = is_in_nht_prowess_offense_event
+			days = 20
+		}
+		hidden_effect = {
+			create_character = {
+				save_scope_as = duel_opponent
+				location = root.capital_province
+				age = { 18 22 }
+				trait = brave
+				trait = vengeful
+				culture = root.culture
+				faith = root.faith
+				gender_female_chance = root_soldier_female_chance
+				prowess = 15
+			}
+		}
+	}
+
+	option = { #Kill them
+		name = nht_prowess_offense.0001.a
+		add_nht_prowess_lifestyle_xp = medium_lifestyle_experience
+		scope:duel_opponent = {
+			death = {
+				death_reason = death_duel
+				killer = root
+			}
+		}
+		add_dread = medium_dread_gain
+		stress_impact = {
+			forgiving = major_stress_impact_gain
+		}
+		custom_tooltip = nht_prowess_offense.0001.a.tt		
+		ai_chance = {
+			base = 50
+			ai_value_modifier = {
+				ai_vengefulness = 1
+				ai_rationality = -0.25
+				ai_zeal = 0.25
+				ai_energy = 0.25
+			}
+		}
+	}
+
+	option = { #Question him
+		name = nht_prowess_offense.0001.b
+		add_nht_prowess_lifestyle_xp = medium_lifestyle_experience
+		add_prestige = minor_prestige_gain
+		stress_impact = {
+			sadistic = medium_stress_impact_loss
+			vengeful = medium_stress_impact_gain
+			paranoid = minor_stress_impact_loss
+		}
+		custom_tooltip = nht_prowess_offense.0001.b.tt			
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_honor = 2
+				ai_compassion = 1
+				ai_energy = -0.25
+				ai_boldness = -0.25
+			}
+		}		
+	
+		hidden_effect = {
+			trigger_event = nht_prowess_offense.0002
+		}
+	}
+
+	after = {
+		hidden_effect = { add_focus_progress = standard_lifestyle_focus_progress }
+	}
+}
+
+#A practice duel with hidden grudge
+nht_prowess_offense.0002 = {
+	type = character_event
+	title = nht_prowess_offense.0002.t
+	desc = nht_prowess_offense.0002.desc
+	
+	theme = nht_prowess_offense_focus
+	
+	override_background = {
+		reference = courtyard
+	}
+
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+
+	right_portrait = {
+		character = scope:duel_opponent
+		animation = worry
+	}
+
+
+	option = { #Execute them
+		name = nht_prowess_offense.0002.a
+		scope:duel_opponent = {
+			death = {
+				death_reason = death_duel
+				killer = root
+			}
+		}
+		add_dread = medium_dread_gain
+		stress_impact = {
+			forgiving = major_stress_impact_gain
+			compassionate = medium_stress_impact_gain
+		}
+		ai_chance = {
+			base = 50
+			ai_value_modifier = {
+				ai_vengefulness = 1
+				ai_rationality = -0.25
+				ai_zeal = 0.25
+				ai_energy = 0.25
+			}
+		}
+	}
+
+	option = { #Imprison them
+		name = nht_prowess_offense.0002.b
+		imprison = {
+			target = scope:duel_opponent
+			type = dungeon
+		}
+		add_dread = minor_dread_gain
+		stress_impact = {
+			forgiving = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 50
+			ai_value_modifier = {
+				ai_vengefulness = 1
+				ai_rationality = -0.25
+				ai_zeal = 0.25
+				ai_energy = 0.25
+			}
+		}
+	}
+
+	option = { #Release him
+		name = nht_prowess_offense.0002.c
+
+		stress_impact = {
+			forgiving = major_stress_impact_loss
+			compassionate = medium_stress_impact_loss
+		}
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_honor = 2
+				ai_compassion = 1
+				ai_energy = -0.25
+				ai_boldness = -0.25
+			}
+		}
+	}
+}
+
+
+#A drunk fool in an inn
+nht_prowess_offense.0003 = {
+	type = character_event
+	title = nht_prowess_offense.0003.t
+	desc = nht_prowess_offense.0003.desc
+	theme = nht_prowess_offense_focus
+	override_background = {
+		reference = tavern
+	}
+	left_portrait = {
+		character = scope:nht_drunk_man
+		animation = wedding_drunk
+	}
+	
+	trigger = {
+		#Only once per character.
+		NOT = {
+			has_character_flag = had_event_nht_offense_0003
+		}
+		is_landed = yes
+		is_ruler = yes
+	}
+	
+	weight_multiplier = {
+		base = 1
+
+		upweight_for_focus_modifier = { FOCUS = nht_prowess_offense_focus }
+	}
+	
+	immediate = {
+		add_character_flag = {
+			flag = had_event_nht_offense_0003
+			years = 5
+		}
+		add_character_flag = {
+			flag = is_in_nht_prowess_offense_event
+			days = 30
+		}
+		hidden_effect = {
+			create_character = {
+				location = root.capital_province
+				save_scope_as = nht_drunk_man
+				culture = root.culture
+				faith = root.faith
+				gender_female_chance = root_soldier_female_chance
+				prowess = 15
+			}
+		}
+	}
+
+	option = { #Another fool
+		name = nht_prowess_offense.0003.a
+
+		hidden_effect = {
+			trigger_event = nht_prowess_offense.0004
+		}
+	}
+	option = { #Teach lesson
+		name = nht_prowess_offense.0003.b
+
+		hidden_effect = {
+			trigger_event = nht_prowess_offense.0004
+		}
+	}
+}
+
+nht_prowess_offense.0004 = {
+	type = character_event
+	title = nht_prowess_offense.0004.t
+	desc = nht_prowess_offense.0004.desc
+	theme = nht_prowess_offense_focus
+	override_background = {
+		reference = tavern
+	}
+	left_portrait = {
+		character = scope:nht_drunk_man
+		animation = wedding_drunk
+	}
+
+	option = { #Let this pass
+		name = nht_prowess_offense.0004.a
+		add_nht_prowess_lifestyle_xp = minor_lifestyle_experience
+		stress_impact = {
+			compassionate = minor_stress_impact_loss
+			forgiving = medium_stress_impact_loss
+			vengeful = medium_stress_impact_gain
+			wrathful = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 60
+			ai_value_modifier = {
+				ai_rationality = -0.1
+				ai_compassion = 1
+			}
+		}
+	}
+	
+	option = { #Become acquaintance
+		name = nht_prowess_offense.0004.b
+		add_courtier = scope:nht_drunk_man
+		add_nht_prowess_lifestyle_xp = minor_lifestyle_experience
+		stress_impact = {
+			compassionate = minor_stress_impact_gain
+			forgiving = medium_stress_impact_gain
+			vengeful = major_stress_impact_gain
+		}
+		ai_chance = {
+			base = 10
+			ai_value_modifier = {
+				ai_greed = 1
+				ai_rationality = 0.2
+				ai_boldness = 2
+			}
+		}
+	}
+
+	option = { #Locked away
+		name = nht_prowess_offense.0004.c
+		add_nht_prowess_lifestyle_xp = minor_lifestyle_experience
+		imprison = {
+			target = scope:nht_drunk_man
+			type = dungeon
+		}
+		stress_impact = {
+			compassionate = minor_stress_impact_gain
+			forgiving = medium_stress_impact_gain
+			vengeful = major_stress_impact_loss
+			wrathful = minor_stress_impact_loss
+		}
+		ai_chance = {
+			base = 20
+			ai_value_modifier = {
+				ai_greed = 1
+				ai_compassion = -1
+				ai_energy = -0.3
+				ai_rationality = 0.2
+			}
+		}
+	}
+	
+	option = { #Beat him
+		name = nht_prowess_offense.0004.d
+		add_nht_prowess_lifestyle_xp = minor_lifestyle_experience
+		scope:nht_drunk_man ?= { add_trait = wounded_1 }
+		stress_impact = {
+			compassionate = minor_stress_impact_gain
+			forgiving = minor_stress_impact_gain
+			sadistic = minor_stress_impact_loss
+			vengeful = major_stress_impact_loss
+			wrathful = minor_stress_impact_loss
+		}
+		ai_chance = {
+			base = 30
+			ai_value_modifier = {
+				ai_vengefulness = 1
+				ai_compassion = -1
+				ai_energy = -0.2
+				ai_rationality = 0.2
+			}
+		}		
+	}
+}
+
+#Give Advice to Knights
+nht_prowess_offense.0005 = {
+	type = character_event
+	title = nht_prowess_offense.0005.t
+	desc = nht_prowess_offense.0005.desc
+	
+	theme = nht_prowess_offense_focus
+	override_background = {
+		reference = courtyard
+	}
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}
+	lower_left_portrait = scope:nht_advice_first_knight
+	lower_right_portrait = scope:nht_advice_second_knight
+	
+	trigger = {
+		NOR = { 
+			has_character_flag = had_event_nht_prowess_offense_0005 
+			has_trait = blind
+		
+		}
+		is_landed = yes
+		is_ruler = yes
+
+		any_knight = {
+			count > 2
+			is_ai = yes
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+
+		upweight_for_focus_modifier = { FOCUS = nht_prowess_offense_focus }
+	}
+
+	immediate = {
+		add_character_flag = {
+			flag = had_event_nht_prowess_offense_0005
+			years = 10
+		}
+		random_knight = {
+			limit = {
+				is_available_adult = yes
+				is_ai = yes
+			}
+			weight = {
+				base = 1
+				modifier = {
+					add = 8
+					prowess <15
+				}
+				modifier = {
+					add = 20
+					prowess <10
+				}
+			}
+			save_scope_as = nht_advice_first_knight
+		}
+		random_knight = {
+			limit = {
+				is_available_adult = yes
+				is_ai = yes
+				NOT = { this = scope:nht_advice_first_knight }
+			}
+			save_scope_as = nht_advice_second_knight
+		}
+	}
+
+	option = { #Advice first knight
+		name = nht_prowess_offense.0005.a
+		add_nht_prowess_lifestyle_xp = medium_lifestyle_experience
+		custom_tooltip = nht_prowess_offense.0005.a.tt
+		
+		scope:nht_advice_first_knight ?= {
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = 10
+			}
+			random_list = {
+				35 = {
+					add_character_modifier = {
+						modifier = nht_advice_to_knight_modifier
+						years = 5
+					}
+				}
+				30 = {
+					add_character_modifier = {
+						modifier = nht_advice_to_knight_sec_modifier
+						years = 5
+					}
+				}
+				20 = {
+					add_prowess_skill = 1
+				}
+				5 = {
+					add_prowess_skill = 2
+				}
+				10 = {
+
+				}				
+			}
+		}
+		
+		ai_chance = {
+			base = 80
+		}
+	}
+
+	option = { #Advice second knight
+		name = nht_prowess_offense.0005.b
+		add_nht_prowess_lifestyle_xp = medium_lifestyle_experience	
+		custom_tooltip = nht_prowess_offense.0005.b.tt
+		
+		scope:nht_advice_second_knight ?= {
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = 10
+			}
+			random_list = {
+				35 = {
+					add_character_modifier = {
+						modifier = nht_advice_to_knight_modifier
+						years = 5
+					}
+				}
+				30 = {
+					add_character_modifier = {
+						modifier = nht_advice_to_knight_sec_modifier
+						years = 5
+					}
+				}
+				20 = {
+					add_prowess_skill = 1
+				}
+				5 = {
+					add_prowess_skill = 2
+				}
+				10 = {
+
+				}				
+			}
+		}
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_rationality = 1
+				ai_energy = 0.25
+			}
+		}
+	}
+}
+
+#Knights argues about swords
+nht_prowess_offense.0006 = {
+	type = character_event
+	title = nht_prowess_offense.0006.t
+	desc = nht_prowess_offense.0006.desc
+	
+	theme = nht_prowess_offense_focus
+	override_background = {
+		reference = throne_room
+	}
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	right_portrait = {
+		character = scope:nht_first_knight
+		animation = anger
+	}
+	lower_left_portrait = scope:nht_second_knight
+	lower_right_portrait = scope:nht_third_knight
+
+	trigger = {
+		NOT = { has_character_flag = had_event_nht_prowess_offense_0006 }
+		is_landed = yes
+		is_ruler = yes
+
+		any_knight = {
+			count > 3
+			is_available_adult = yes
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+
+		upweight_for_focus_modifier = { FOCUS = nht_prowess_offense_focus }
+	}
+
+	immediate = {
+		add_character_flag = {
+			flag = had_event_nht_prowess_offense_0006
+			years = 5
+		}
+		random_knight = {
+			limit = {
+				is_available_adult = yes
+			}
+			save_scope_as = nht_first_knight
+		}
+		random_knight = {
+			limit = {
+				is_available_adult = yes
+				NOT = { 
+					this = scope:nht_first_knight					
+				}
+			}
+			save_scope_as = nht_second_knight
+		}
+		random_knight = {
+			limit = {
+				is_available_adult = yes
+				NOR = { 
+					this = scope:nht_first_knight					
+					this = scope:nht_second_knight			
+				}
+			}
+			save_scope_as = nht_third_knight
+		}
+	}
+
+	option = { # first knight
+		name = nht_prowess_offense.0006.a
+		add_nht_prowess_lifestyle_xp = medium_lifestyle_experience
+		stress_impact = {
+			shy = minor_stress_impact_gain
+		}
+		scope:nht_first_knight ?= {
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = 10
+			}
+		}
+		scope:nht_second_knight ?= {
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = -10
+			}
+		}			
+		scope:nht_third_knight ?= {
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = -10
+			}
+		}
+		
+		ai_chance = {
+			base = 80
+			ai_value_modifier = {
+				ai_rationality = 0.25
+				ai_zeal = 0.25
+			}
+			opinion_modifier = {
+				opinion_target = scope:nht_first_knight
+			}
+		}
+	}
+
+	option = { # second knight
+		name = nht_prowess_offense.0006.b
+		add_nht_prowess_lifestyle_xp = medium_lifestyle_experience
+		stress_impact = {
+			shy = minor_stress_impact_gain
+		}
+		scope:nht_second_knight ?= {
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = 10
+			}
+		}
+		scope:nht_first_knight ?= {
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = -10
+			}
+		}
+		scope:nht_third_knight ?= {
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = -10
+			}
+		}
+		ai_chance = {
+			base = 80
+			
+			opinion_modifier = {
+				opinion_target = scope:nht_second_knight
+			}
+			
+			ai_value_modifier = {
+				ai_rationality = 0.25
+				ai_zeal = 0.25
+				ai_energy = 0.25
+			}
+		}
+	}
+
+	option = { # third knight
+		name = nht_prowess_offense.0006.c
+		add_nht_prowess_lifestyle_xp = medium_lifestyle_experience
+		stress_impact = {
+			shy = minor_stress_impact_gain
+		}
+		scope:nht_third_knight ?= {
+			add_opinion = {
+				target = root
+				modifier = pleased_opinion
+				opinion = 10
+			}
+		}
+		scope:nht_first_knight ?= {
+			add_opinion = {
+				target = root
+				modifier = disappointed_opinion
+				opinion = -10
+			}
+		}	
+		scope:nht_second_knight ?= {
+			add_opinion = {
+				target = root
+				modifier = disappointed_opinion
+				opinion = -10
+			}
+		}
+		
+		ai_chance = {
+			base = 80
+			ai_value_modifier = {
+				ai_rationality = 0.25
+				ai_zeal = 0.25
+			}
+			opinion_modifier = {
+				opinion_target = scope:nht_third_knight
+			}
+		}
+	}
+	option = { #Don't involve yourself
+		name = nht_prowess_offense.0006.d
+		add_nht_prowess_lifestyle_xp = minor_lifestyle_experience
+		stress_impact = {
+			base = minor_stress_gain
+			brave = minor_stress_impact_gain
+			gregarious = medium_stress_impact_gain
+			shy = medium_stress_impact_loss
+		}		
+		ai_chance = {
+			base = 30
+			ai_value_modifier = {
+				ai_honor = -0.5
+				ai_boldness = -0.5
+			}
+		}
+	}
+	option = { #You are above that
+		name = nht_prowess_offense.0006.e
+		scope:nht_third_knight ?= {
+			add_opinion = {
+				target = root
+				modifier = insult_opinion
+				opinion = -10
+			}
+		}
+		scope:nht_first_knight ?= {
+			add_opinion = {
+				target = root
+				modifier = insult_opinion
+				opinion = -10
+			}
+		}	
+		scope:nht_second_knight ?= {
+			add_opinion = {
+				target = root
+				modifier = insult_opinion
+				opinion = -10
+			}
+		}		
+		stress_impact = {
+			gregarious = medium_stress_impact_gain
+			shy = minor_stress_impact_gain			
+			ambitious = minor_stress_impact_loss 
+		}		
+		ai_chance = {
+			base = 10
+			ai_value_modifier = {
+				ai_rationality = 0.5
+				ai_boldness = 0.5
+			}			
+			modifier = {
+				factor = 3
+				has_trait = arbitrary
+			}
+			modifier = {
+				factor = 0.5
+				has_trait = patient
+			}
+		}
+	}
+}
+
+#Train Knights or Army?
+nht_prowess_offense.0007 = {
+	type = character_event
+	title = nht_prowess_offense.0007.t
+	desc = nht_prowess_offense.0007.desc
+	
+	theme = nht_prowess_offense_focus
+	override_background = { reference = courtyard }
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	trigger = {
+		NOT = { has_character_flag = had_event_nht_prowess_offense_0007 }
+		is_landed = yes
+		is_ruler = yes
+	}
+
+	weight_multiplier = {
+		base = 1
+
+		upweight_for_focus_modifier = { FOCUS = nht_prowess_offense_focus }
+	}
+
+	immediate = {
+		add_character_flag = {
+			flag = had_event_nht_prowess_offense_0007
+			years = 5
+		}
+	}
+
+	option = { #Improve Knights
+		name = nht_prowess_offense.0007.a
+		add_nht_prowess_lifestyle_xp = medium_lifestyle_experience
+		add_character_modifier = {
+			modifier = nht_improve_knights_advice_modifier
+			years = 5
+		}		
+		ai_chance = {
+			base = 80
+		}
+	}
+
+	option = { #Imrpove Army
+		name = nht_prowess_offense.0007.b	
+		add_nht_prowess_lifestyle_xp = medium_lifestyle_experience
+		add_character_modifier = {
+			modifier = nht_improve_armies_advice_modifier
+			years = 5
+		}
+		ai_chance = {
+			base = 80
+			ai_value_modifier = {
+				ai_rationality = 1
+				ai_energy = 0.25
+			}
+		}
+	}
+	
+	option = { #Do both
+		name = nht_prowess_offense.0007.c
+		add_nht_prowess_lifestyle_xp = medium_lifestyle_experience
+		trigger = {
+			OR = {
+				has_trait = organizer
+				has_trait = logistician
+				has_trait = flexible_leader
+			}	
+		}
+		stress_impact = {
+			lazy = medium_stress_impact_gain
+		}	
+		add_character_modifier = {
+			modifier = nht_improve_both_advice_modifier
+			years = 5
+		}
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_rationality = 2
+				ai_energy = 1
+			}
+		}
+	}
+
+	option = { #Don't do anything
+		name = nht_prowess_offense.0007.d
+		stress_impact = {
+			base = minor_stress_loss
+			lazy = medium_stress_impact_loss
+			diligent = major_stress_impact_gain
+		}
+		ai_chance = {
+			base = 0
+			ai_value_modifier = {
+				ai_rationality = 1
+				ai_energy = 0.25
+			}
+		}
+	}
+}
+
+############################
+# OFFENSE: UNCOMMON EVENTS #
+############################
+
+#Rival Dispute 
+nht_prowess_offense.1001 = {
+	type = character_event
+	title = nht_prowess_offense.1001.t
+	
+	desc = {
+		desc = nht_prowess_offense.1001.intro
+		first_valid = {
+			triggered_desc = {
+				trigger = { has_character_flag = nht_is_rival_vassal }
+				desc = nht_prowess_offense.1001.intro_first
+			}
+			triggered_desc = {
+				trigger = { NOT = { has_character_flag = nht_is_rival_vassal } }
+				desc = nht_prowess_offense.1001.intro_sec
+			}
+		}
+		desc = nht_prowess_offense.1001.desc
+		
+		first_valid = {
+			triggered_desc = {
+				trigger = { has_character_flag = nht_is_rival_vassal }
+				desc = nht_prowess_offense.1001.desc_alt_first
+			}
+			triggered_desc = {
+				trigger = { NOT = { has_character_flag = nht_is_rival_vassal } }
+				desc = nht_prowess_offense.1001.desc_alt_sec
+			}
+
+		}
+	}	
+
+	
+	theme = nht_prowess_offense_focus
+	override_background = {
+		reference = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = personality_vengeful
+	}
+
+	trigger = {
+		NOR = { 
+			has_character_flag = had_event_nht_prowess_offense_1001 
+			has_character_flag = nht_is_rival_vassal
+		}
+		is_landed = yes
+		is_ruler = yes
+		OR = { 
+			liege = {nht_prowess_offense_1001_vassal_trigger = yes }
+			any_knight = { nht_prowess_offense_1001_knight_trigger = yes }
+		}	
+	}
+
+	weight_multiplier = {
+		base = 1
+
+		upweight_for_focus_modifier = { FOCUS = nht_prowess_offense_focus }
+	}
+
+	immediate = {
+		add_character_flag = {
+			flag = had_event_nht_prowess_offense_1001
+			years = 10
+		}
+		add_character_flag = {
+			flag = is_in_nht_prowess_offense_event
+			days = 30
+		}
+		if = {
+			limit = {
+				liege = { nht_prowess_offense_1001_liege_trigger = yes }
+			}	
+			liege = {
+				random_vassal = {
+					limit = {
+						nht_prowess_offense_1001_vassal_trigger = yes
+					}
+					weight = {
+						base = 1
+						modifier = {
+							add = 3
+							OR = {
+								has_relation_potential_rival = root
+								has_relation_rival = root
+							}
+						}
+					}
+					save_scope_as = nht_rival_character
+				}
+				add_character_flag = {
+					flag = nht_is_rival_vassal
+					days = 20
+				}
+			}			
+		}	
+		else = {
+			random_knight = {
+				limit = {
+					nht_prowess_offense_1001_knight_trigger = yes
+				}
+				weight = {
+					base = 1
+					modifier = {
+						add = 3
+						OR = {
+							has_relation_potential_rival = root
+							has_relation_rival = root
+						}
+					}
+				}
+				save_scope_as = nht_rival_character
+			}	
+		}
+	}
+
+	option = { # Accept Challenge
+		name = nht_prowess_offense.1001.a
+		custom_tooltip = nht_prowess_offense.1001.a.tt
+		hidden_effect = {
+			trigger_event = nht_prowess_offense.1002
+		}
+		stress_impact = {	
+			craven = medium_stress_impact_gain
+		}
+		ai_chance = {
+			base = 80
+			opinion_modifier = {
+				opinion_target = scope:nht_rival_character
+			}			
+			ai_value_modifier = {
+				ai_honor = 1
+				ai_zeal = 1
+				ai_vengefulness = 1
+				ai_boldness = 0.5
+			}
+		}
+	}
+
+	option = { # Decline challenge like a coward
+		name = nht_prowess_offense.1001.b
+
+		add_prestige = minor_prestige_loss	
+		if = {
+			limit = {
+				any_relation = {
+					type = rival
+					this = root
+				}
+			}
+			every_relation = {
+				type = rival
+				limit = {
+					has_relation_rival = root
+				}
+				add_opinion = {
+					target = scope:nht_rival_character
+					modifier = nht_has_humiliated_rival_opinion
+					opinion = 15
+				}				
+			}
+		}
+		stress_impact = {
+			vengeful = minor_stress_impact_gain			
+			craven = minor_stress_impact_loss
+			forgiving = minor_stress_impact_loss
+		}
+	
+		ai_chance = {
+			base = 20
+			ai_value_modifier = {
+				ai_zeal = -0.25
+				ai_energy = -0.25
+			}
+		}
+	}
+}
+
+nht_prowess_offense.1002 = {
+	type = character_event
+	title = nht_prowess_offense.1002.t
+	
+	desc = nht_prowess_offense.1002.desc	
+
+	
+	theme = nht_prowess_offense_focus
+
+	override_background = {
+		reference = courtyard
+	}
+	
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = { has_trait = craven }
+			animation = worry
+		}
+		triggered_animation = {
+			trigger = { NOT = { has_trait = craven } }
+			animation = personality_bold
+		}
+	}
+	
+	right_portrait = {
+		character = scope:nht_rival_character
+		animation = rage
+	}	
+
+
+	option = { # Insult him
+		name = nht_prowess_offense.1002.a
+		hidden_effect = {
+			trigger_event = nht_prowess_offense.1003
+		}
+		ai_chance = {
+			base = 80
+
+		}
+	}
+
+	option = { # This feud ends now!
+		name = nht_prowess_offense.1002.b
+		hidden_effect = {
+			trigger_event = nht_prowess_offense.1003
+		}
+		ai_chance = {
+			base = 20
+		
+		}
+	}
+}
+
+nht_prowess_offense.1003 = {
+	type = character_event
+	title = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { has_variable = nht_win_duel_1 }
+				desc = nht_prowess_offense.1003.t.win
+			}
+			triggered_desc = {
+				trigger = { has_variable = nht_loose_duel_1 }
+				desc = nht_prowess_offense.1003.t.loose
+			}
+		}
+	}	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { has_variable = nht_win_duel_1 }
+				desc = nht_prowess_offense.1003.desc.win
+			}
+			triggered_desc = {
+				trigger = { has_variable = nht_loose_duel_1 }
+				desc = nht_prowess_offense.1003.desc.loose
+			}
+		}
+	}
+	theme = nht_prowess_offense_focus
+	override_background = {
+		reference = courtyard
+	}
+
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = { has_variable = nht_win_duel_1 }
+			scripted_animation = duel_celebrate
+		}
+		triggered_animation = {
+			trigger = { has_variable = nht_loose_duel_1 }
+			animation = fear
+		}
+	}	
+	right_portrait = {
+		character = scope:nht_rival_character
+		triggered_animation = {
+			trigger = { root = { has_variable = nht_win_duel_1 } }
+			animation = pain
+		}
+		triggered_animation = {
+			trigger = { root = { has_variable = nht_loose_duel_1 } }
+			scripted_animation = duel_celebrate
+		}
+	}	
+	
+	immediate = {
+		random_list = {
+			50 = { 
+				modifier = {
+					prowess_diff = {
+						target = scope:nht_rival_character
+						value <= -20
+					}				
+					add = -30
+				}
+				modifier = {
+					prowess_diff = {
+						target = scope:nht_rival_character
+						value <= -15
+					}				
+					add = -20
+				}
+				modifier = {
+					prowess_diff = {
+						target = scope:nht_rival_character
+						value <= -8
+					}				
+					add = -10
+				}
+				modifier = {
+					prowess_diff = {
+						target = scope:nht_rival_character
+						value <= -4
+					}				
+					add = -5
+				}
+				modifier = {
+					prowess_diff = {
+						target = scope:nht_rival_character
+						value <= 0
+					}				
+					add = -10
+				}
+				modifier = {
+					prowess_diff = {
+						target = scope:nht_rival_character
+						value <= 4
+					}				
+					add = 20
+				}
+
+				set_variable = {
+					name = nht_win_duel_1
+				}  
+			}
+			50 = { 	
+				modifier = {
+					prowess < scope:nht_rival_character.prowess				
+					add = 10
+				}
+				
+				set_variable = {
+					name = nht_loose_duel_1
+				}
+			}
+		}
+	}
+
+	option = { # Victory is sweet
+		name = nht_prowess_offense.1003.a
+		trigger = { has_variable = nht_win_duel_1 }
+		
+		add_nht_prowess_lifestyle_xp = medium_lifestyle_xp
+		add_prestige = medium_prestige_gain
+		scope:nht_rival_character = {
+			add_opinion = {
+				modifier = humiliated_opinion
+				target = root
+				opinion = -15
+			}
+		}
+		stress_impact = {
+			arrogant = medium_stress_impact_loss
+		}
+		ai_chance = {
+			base = 80	
+			ai_value_modifier = {
+				ai_rationality = 0.25
+				ai_zeal = 0.25
+			}
+		}
+	}
+
+	option = { # I have proven I'm the better person
+		name = nht_prowess_offense.1003.b
+		trigger = { has_variable = nht_win_duel_1  }
+		
+		add_nht_prowess_lifestyle_xp = medium_lifestyle_xp
+		add_prestige = medium_prestige_gain		
+		scope:nht_rival_character = {
+			add_opinion = {
+				modifier = humiliated_opinion
+				target = root
+				opinion = -15
+			}
+		}
+		stress_impact = {
+			arrogant = medium_stress_impact_loss
+		}
+		ai_chance = {
+			base = 20	
+		}
+	}
+
+	option = { # This rivalry should end.
+		name = nht_prowess_offense.1003.c	
+		trigger = {
+			has_relation_rival = scope:nht_rival_character
+			has_variable = nht_win_duel_1
+		}	
+		
+		remove_relation_rival = scope:nht_rival_character
+		add_nht_prowess_lifestyle_xp = medium_lifestyle_xp
+		add_prestige = medium_prestige_gain
+		stress_impact = {
+			vengeful = medium_stress_impact_gain
+			forgiving = medium_stress_impact_loss
+		}
+		ai_chance = {
+			base = 20	
+		}
+	}
+	
+	option = { # I will accept defeat with grace.
+		name = nht_prowess_offense.1003.d
+		trigger = { has_variable = nht_loose_duel_1 }
+		add_nht_prowess_lifestyle_xp = minor_lifestyle_xp
+		stress_impact = {
+			arrogant = medium_stress_impact_gain
+		}
+		ai_chance = {
+			base = 20	
+		}
+	}
+
+	option = { # This is not the end...
+		name = nht_prowess_offense.1003.e
+		trigger = { has_variable = nht_loose_duel_1 }
+	
+		add_nht_prowess_lifestyle_xp = minor_lifestyle_xp
+		add_opinion = {
+			modifier = humiliated_opinion
+			target = scope:nht_rival_character
+			opinion = -15
+		}
+		stress_impact = {
+			arrogant = minor_stress_impact_loss
+			forgiving = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 20	
+		}
+	}
+	after = {
+		if = {
+			limit = { has_variable = nht_win_duel_1 }
+			remove_variable = nht_win_duel_1
+		}
+		else_if = {
+			limit = { has_variable = nht_loose_duel_1 }
+			remove_variable = nht_loose_duel_1
+		}
+	}	
+}
+
+nht_prowess_offense.0008 = {
+	type = character_event
+	title = nht_prowess_offense.0008.t	
+	desc = nht_prowess_offense.0008.desc	
+	theme = nht_prowess_offense_focus
+	override_background = { reference = study }
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	trigger = {
+		NOT = { 
+			has_character_flag = had_event_nht_offense_0008
+		}
+		is_landed = yes
+		is_ruler = yes
+		exists = root.capital_province
+		any_held_title = {
+			tier = tier_county
+			NOT = { this = root.capital_county }
+		}
+	}
+	
+	weight_multiplier = {
+		base = 1
+		upweight_for_focus_modifier = { FOCUS = nht_prowess_offense_focus }
+	}	
+
+	immediate = {
+		add_character_flag = {
+			flag = had_event_nht_offense_0008
+			years = 5
+		}
+		random_held_county = {
+			limit = {
+				NOT = { this = root.capital_county }
+			}
+			save_scope_as = nht_selected_county
+		}
+	}
+		
+	option = { #
+		name = nht_prowess_offense.0008.a
+		add_nht_prowess_lifestyle_xp = medium_lifestyle_xp
+		add_prestige = medium_prestige_gain
+		add_character_modifier = {
+			modifier = nht_protecting_counties_modifier
+			years = 3
+		}
+		every_held_county = {
+			limit = { NOT = { county = root.capital_county } }
+			add_county_modifier = {
+				modifier = nht_appeased_counties_modifier
+				days = 3650
+			}
+		}
+		stress_impact = {
+			diligent = minor_stress_impact_loss
+			just = minor_stress_impact_loss
+			wrathful = medium_stress_impact_loss
+		}
+		ai_chance = {
+			base = 60
+			modifier = {
+				add = 20
+				martial <= decent_skill_rating
+			}
+			modifier = {
+				add = 80
+				martial <= mediocre_skill_rating
+			}
+			modifier = {
+				add = -200
+				is_at_war = yes
+			}
+			ai_value_modifier = {
+				ai_compassion = 0.75
+				ai_honor = 0.25
+			}			
+		}
+	}
+
+	option = { #
+		name = nht_prowess_offense.0008.b
+		add_nht_prowess_lifestyle_xp = minor_lifestyle_xp	
+		custom_tooltip = nht_one_county_attacked_0008_modifier_tooltip		
+		custom_tooltip = nht_every_county_0008_loose_modifier_tooltip
+		hidden_effect = {
+			set_variable = {
+				name = nht_event_0008_failure
+				days = 30
+			}
+			set_variable = {
+				name = nht_event_0008_great_failure
+				days = 30
+			}
+			trigger_event = {
+				id = nht_prowess_offense.0009
+				days = { 10 20 }
+			}
+		}
+		stress_impact = {
+			just = minor_stress_impact_gain
+			compassionate = minor_stress_impact_gain
+			wrathful = medium_stress_impact_gain
+			callous = minor_stress_impact_loss					
+		}
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 50
+				is_at_war = yes
+			}
+			ai_value_modifier = {
+				ai_compassion = -0.5
+				ai_honor = -0.25
+			}			
+		}
+	}
+
+	option = { #
+		name = nht_prowess_offense.0008.c
+		add_nht_prowess_lifestyle_xp = medium_lifestyle_xp
+		duel = {
+			skill = martial
+			value = high_skill_rating
+			# Success.
+			50 = {
+				desc = nht_prowess_offense.0008.c.tt.success
+				custom_tooltip = nht_every_county_0008_gain_modifier_tooltip				
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				modifier = {
+					add = 10
+					root = { has_trait = strategist }
+				}
+			
+				send_interface_toast = {
+					left_icon = root
+					title = nht.0008.counties_protected.win.tt				
+					add_prestige = medium_prestige_gain
+					stress_impact = {
+						wrathful = minor_stress_impact_loss					
+					}
+					scope:nht_selected_county = {
+						add_county_modifier = {
+							modifier = nht_protected_county_modifier
+							years = 5
+						}
+					}
+					every_held_county = {
+						limit = { NOT = { county = root.capital_county } }
+						add_county_modifier = {
+							modifier = nht_appeased_counties_modifier
+							days = 3650
+						}
+					}					
+				}
+			}
+			# Failure.
+			40 = {
+				desc = nht_prowess_offense.0008.c.tt.failure
+				custom_tooltip = nht_one_county_attacked_0008_modifier_tooltip				
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				modifier = {
+					add = 10
+					OR = {
+						has_trait = intellect_bad_1
+						has_trait = intellect_bad_2
+					}
+				}
+				modifier = {
+					add = 15
+					OR = {
+						has_trait = intellect_bad_3
+						has_trait = dull
+					}
+				}
+				set_variable = {
+					name = nht_event_0008_failure
+					days = 30
+				}
+				trigger_event = {
+					id = nht_prowess_offense.0009
+					days = { 10 20 }
+				}				
+			}
+			10 = {
+				desc = nht_prowess_offense.0008.c.tt.great_failure
+				custom_tooltip = nht_one_county_attacked_0008_modifier_tooltip
+				custom_tooltip = nht_every_county_0008_loose_modifier_tooltip			
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				modifier = {
+					add = 15
+					OR = {
+						has_trait = intellect_bad_1
+						has_trait = intellect_bad_2
+					}
+				}
+				modifier = {
+					add = 25
+					OR = {
+						has_trait = intellect_bad_3
+						has_trait = dull
+					}
+				}				
+				set_variable = {
+					name = nht_event_0008_failure
+					days = 30
+				}
+				set_variable = {
+					name = nht_event_0008_great_failure
+					days = 30
+				}
+				trigger_event = {
+					id = nht_prowess_offense.0009
+					days = { 10 20 }
+				}
+			}
+		}
+		stress_impact = {
+			diligent = minor_stress_impact_loss
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				add = -50
+				martial <= decent_skill_rating
+			}
+			modifier = {
+				add = -80
+				martial <= mediocre_skill_rating
+			}
+			modifier = {
+				add = 50
+				is_at_war = yes
+			}
+			ai_value_modifier = {
+				ai_boldness = 0.2
+				ai_energy = 0.2
+			}			
+		}
+	}
+
+	option = { #
+		trigger = { 
+			OR = {
+				has_trait = intellect_good_1
+				has_trait = intellect_good_2
+				has_trait = intellect_good_3
+			}
+		}	
+		name = nht_prowess_offense.0008.d	
+		duel = {
+			skill = martial
+			value = high_skill_rating
+			# Success.
+			70 = {
+				desc = nht_prowess_offense.0008.d.tt.sucess
+				custom_tooltip = nht_every_county_0008_gain_modifier_tooltip			
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				send_interface_toast = {
+					left_icon = root
+					title = nht.0008.counties_protected.win.tt				
+					add_prestige = medium_prestige_gain
+					stress_impact = {
+						wrathful = minor_stress_impact_loss					
+					}
+					scope:nht_selected_county = {
+						add_county_modifier = {
+							modifier = nht_protected_county_modifier
+							years = 5
+						}
+					}
+					every_held_county = {
+						limit = { NOT = { county = root.capital_county } }
+						add_county_modifier = {
+							modifier = nht_appeased_counties_modifier
+							days = 3650
+						}
+					}					
+				}
+			}
+			# Failure.
+			30 = {
+				desc = nht_prowess_offense.0008.d.tt.failure			
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				modifier = {
+					add = 5
+					has_trait = lazy
+				}
+				set_variable = {
+					name = nht_event_0008_failure
+					days = 30
+				}
+				trigger_event = {
+					id = nht_prowess_offense.0009
+					days = { 10 20 }
+				}				
+			}
+		}	
+		stress_impact = {
+			diligent = minor_stress_impact_loss
+		}
+		ai_chance = {
+			base = 150
+			
+			modifier = {
+				add = 50
+				is_at_war = yes
+			}
+			ai_value_modifier = {
+				ai_boldness = 0.5
+			}
+		}
+	}
+}
+
+
+nht_prowess_offense.0009 = {
+	type = character_event
+	title = nht_prowess_offense.0009.t
+	desc = nht_prowess_offense.0009.desc		
+	theme = nht_prowess_offense_focus
+	override_background = { reference = throne_room }
+	
+	left_portrait = {
+		character = root
+		animation = sadness
+	}
+
+	immediate = {
+		if = {
+			limit = { has_variable = nht_event_0008_failure }
+			scope:nht_selected_county = {
+				add_county_modifier = {
+					modifier = nht_ravaged_bandits_modifier
+					days = 3650
+				}
+			}
+		}
+		if = {
+			limit = { has_variable = nht_event_0008_great_failure }
+			every_held_county = {
+				limit = { NOT = { county = root.capital_county } }
+				add_county_modifier = {
+					modifier = nht_angry_counties_modifier
+					days = 3650
+				}
+			}
+		}
+	}
+	option = { # 	
+		name = nht_prowess_offense.0009.a
+	
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+nht_prowess_offense.0010 = {
+	type = character_event
+	title = nht_prowess_offense.0010.t	
+	desc = nht_prowess_offense.0010.desc	
+	theme = nht_prowess_offense_focus
+	override_background = { reference = armory }
+	
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}
+	
+	trigger = {
+		NOT = { 
+			has_character_flag = had_event_nht_offense_0010
+		}
+		is_landed = yes
+		is_ruler = yes
+		exists = root.capital_province
+	}
+	
+	weight_multiplier = {
+		base = 1
+		upweight_for_focus_modifier = { FOCUS = nht_prowess_offense_focus }
+	}	
+
+	immediate = {
+		add_character_flag = {
+			flag = had_event_nht_offense_0010
+			years = 5
+		}
+	}
+	option = { # 	
+		name = nht_prowess_offense.0010.a
+		trigger = {
+			OR = {
+				is_ai = no
+				short_term_gold >= major_gold_value_check
+			}
+		}
+		remove_short_term_gold = major_gold_value
+		add_nht_prowess_lifestyle_xp = medium_lifestyle_xp
+		add_character_modifier = {
+			modifier = nht_brand_new_equipments_modifier
+			years = 10
+		}		
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 20
+				has_trait = generous
+			}
+		}
+	}
+
+	option = { # 	
+		name = nht_prowess_offense.0010.b
+		remove_short_term_gold = medium_gold_value
+		add_nht_prowess_lifestyle_xp = minor_lifestyle_xp	
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 20
+				has_trait = generous
+			}
+		}
+	}
+
+	option = { # 	
+		name = nht_prowess_offense.0010.c
+		add_character_modifier = {
+			modifier = nht_worn_out_equipments_modifier
+			years = 5
+		}	
+		ai_chance = {
+			base = 20
+		}
+	}
+	
+	option = { # 	
+		name = nht_prowess_offense.0010.d
+		duel = {
+			skill = stewardship
+			value = decent_skill_rating
+
+			# Win
+			10 = {
+				desc = nht_prowess_offense.0010.c.win
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+				}
+				modifier = {
+					add = 10
+					stewardship >= very_high_skill_rating			
+				}
+				send_interface_toast = {
+					title = nht_prowess_offense.0010.c.win.title
+					left_icon = root
+					add_nht_prowess_lifestyle_xp = major_lifestyle_xp
+					add_character_modifier = {
+						modifier = nht_brand_new_equipments_modifier
+						years = 20
+					}
+				}
+			}
+			40 = {
+				desc = nht_prowess_offense.0010.c.win
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+				}
+				send_interface_toast = {
+					title = nht_prowess_offense.0010.c.win.title
+					left_icon = root
+					add_nht_prowess_lifestyle_xp = medium_lifestyle_xp
+				}
+			}
+			# Lose
+			50 = {
+				desc = nht_prowess_offense.0010.c.lose
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+				}
+				send_interface_toast = {
+					title = nht_prowess_offense.0010.c.lose.title
+					left_icon = root
+				}
+				add_character_modifier = {
+					modifier = nht_worn_out_equipments_modifier
+					years = 3
+				}
+			}
+		}	
+		ai_chance = {
+			base = 80
+			modifier = {
+				add = 10
+				stewardship >= high_skill_rating			
+			}
+			modifier = {
+				add = 40
+				stewardship >= very_high_skill_rating			
+			}
+			ai_value_modifier = {
+				ai_boldness = 1
+			}
+		}
+	}
+	
+	option = { # 	
+		name = nht_prowess_offense.0010.e
+		trigger = {
+			OR = {
+				has_trait = strategist 
+				has_trait = nht_commander
+				has_trait_rank = {
+					trait = education_martial
+					rank >= 2
+				}
+			}
+		}
+		add_prestige = medium_prestige_gain	
+		add_nht_prowess_lifestyle_xp = medium_lifestyle_xp	
+		
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_boldness = 0.5
+			}
+		}
+	}
+}

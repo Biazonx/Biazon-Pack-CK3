@@ -1,0 +1,277 @@
+﻿nht_train_with_knight_perk_modifier = {
+	icon = prowess_positive
+	prowess = 2
+}
+
+nht_swordsmanship_tutelage_perk_modifier = {
+	icon = prowess_positive
+	prowess = 2
+}
+
+nht_fortify_holding_perk_modifier = {
+	icon = martial_positive
+	additional_fort_level = 1
+}
+
+nht_spoils_of_war_perk_modifier = {
+	icon = martial_positive
+	army_damage_mult = -0.1
+}
+
+nht_commerce_maestro_perk_modifier = {
+	icon = stewardship_positive
+	tax_mult = 0.1
+}
+
+nht_joint_forces_perk_modifier = {
+	icon = martial_positive
+	levy_size = 0.2
+}
+
+nht_inheritance_instinct_perk_modifier = {
+	icon = health_positive
+	negate_health_penalty_add = 0.1
+}
+
+
+########################################################
+#     Send Soldiers Modifiers
+
+########################################################
+
+nht_trading_in_county_modifier = {
+	icon = icon_nht_trade_agreement	
+	development_growth_factor = 0.01
+	tax_mult = 0.01
+	epidemic_resistance = -2
+	stacking = yes
+}
+
+########################################################
+#     Send Soldiers Modifiers
+
+########################################################
+nht_reinforced_barony_modifier = {
+	icon = martial_positive
+	garrison_size = 0.2
+	additional_fort_level = 2
+	travel_danger = -10
+}
+
+
+nht_is_giving_soldiers_modifier = {
+	icon = martial_negative	
+	levy_size = -0.15
+	stacking = yes
+}
+
+nht_is_receiving_enormous_amount_soldiers_modifier = {
+	icon = martial_positive	
+	levy_size = 0.20
+}
+
+nht_is_receiving_very_large_amount_soldiers_modifier = {
+	icon = martial_positive	
+	levy_size = 0.17
+}
+
+nht_is_receiving_larger_amount_soldiers_modifier = {
+	icon = martial_positive	
+	levy_size = 0.16
+}
+
+nht_is_receiving_equal_amount_soldiers_modifier = {
+	icon = martial_positive	
+	levy_size = 0.15
+}
+
+nht_is_receiving_sliglty_small_amount_soldiers_modifier = {
+	icon = martial_positive	
+	levy_size = 0.12
+}
+
+nht_is_receiving_small_amount_soldiers_modifier = {
+	icon = martial_positive	
+	levy_size = 0.10
+}
+
+nht_is_receiving_very_small_amount_soldiers_modifier = {
+	icon = martial_positive	
+	levy_size = 0.07
+}
+
+nht_is_receiving_extremly_small_amount_soldiers_modifier = {
+	icon = martial_positive	
+	levy_size = 0.05
+}
+
+nht_is_receiving_max_small_amount_soldiers_modifier = {
+	icon = martial_positive	
+	levy_size = 0.03
+}
+
+
+
+########################################################
+#     Trade Agreement Modifiers
+
+########################################################
+
+nht_trade_agreement_1_amount_modifier = {
+	icon = icon_nht_trade_agreement	
+	tax_mult = 0.01
+	stacking = yes
+}
+
+nht_trade_agreement_2_amount_modifier = {
+	icon = icon_nht_trade_agreement	
+	tax_mult = 0.02
+	stacking = yes
+}
+
+nht_trade_agreement_3_amount_modifier = {
+	icon = icon_nht_trade_agreement	
+	tax_mult = 0.03
+	stacking = yes
+}
+
+nht_trade_agreement_4_amount_modifier = {
+	icon = icon_nht_trade_agreement	
+	tax_mult = 0.04
+	stacking = yes
+}
+
+nht_trade_agreement_5_amount_modifier = {
+	icon = icon_nht_trade_agreement	
+	tax_mult = 0.05
+	stacking = yes
+}
+
+nht_trade_agreement_6_amount_modifier = {
+	icon = icon_nht_trade_agreement	
+	tax_mult = 0.06
+	stacking = yes
+}
+
+nht_trade_agreement_7_amount_modifier = {
+	icon = icon_nht_trade_agreement	
+	tax_mult = 0.07
+	stacking = yes
+}
+
+nht_trade_agreement_8_amount_modifier = {
+	icon = icon_nht_trade_agreement	
+	tax_mult = 0.08
+	stacking = yes
+}
+
+nht_trade_agreement_9_amount_modifier = {
+	icon = icon_nht_trade_agreement	
+	tax_mult = 0.09
+	stacking = yes
+}
+
+nht_trade_agreement_10_amount_modifier = {
+	icon = icon_nht_trade_agreement	
+	tax_mult = 0.1
+	stacking = yes
+}
+
+nht_trade_agreement_11_amount_modifier = {
+	icon = icon_nht_trade_agreement	
+	tax_mult = 0.11
+	stacking = yes
+}
+
+nht_trade_agreement_12_amount_modifier = {
+	icon = icon_nht_trade_agreement	
+	tax_mult = 0.12
+	stacking = yes
+}
+
+nht_trade_agreement_13_amount_modifier = {
+	icon = icon_nht_trade_agreement	
+	tax_mult = 0.13
+	stacking = yes
+}
+
+nht_trade_agreement_14_amount_modifier = {
+	icon = icon_nht_trade_agreement	
+	tax_mult = 0.14
+	stacking = yes
+}
+
+nht_trade_agreement_15_amount_modifier = {
+	icon = icon_nht_trade_agreement	
+	tax_mult = 0.15
+	stacking = yes
+}
+
+########################################################
+#     Interactions
+
+########################################################
+
+
+nht_tutelage_training_modifier = {
+	icon = prowess_positive	
+	prowess = 2
+}
+
+
+nht_sword_training_modifier = {
+	icon = prowess_positive	
+	prowess = 1
+}
+
+nht_good_sword_training_modifier = {
+	icon = prowess_positive	
+	prowess = 2
+}
+
+nht_bad_sword_training_modifier = {
+	icon = health_negative
+	health = -0.5
+}
+
+nht_sword_training_health_modifier = {
+	icon = prowess_positive	
+	prowess = 1
+	health = 0.3
+}
+
+nht_good_sword_training_health_modifier = {
+	icon = prowess_positive	
+	prowess = 2
+	health = 0.3
+}
+
+nht_xp_lifestyle_vlow_modifier = {
+	monthly_lifestyle_xp_gain_mult = -0.3
+}
+
+nht_xp_lifestyle_low_modifier = {
+	monthly_lifestyle_xp_gain_mult = -0.15
+}
+
+nht_xp_lifestyle_high_modifier = {
+	monthly_lifestyle_xp_gain_mult = 0.15
+}
+
+nht_xp_lifestyle_high_1_modifier = {
+	monthly_lifestyle_xp_gain_mult = 0.3
+}
+
+nht_xp_lifestyle_high_2_modifier = {
+	monthly_lifestyle_xp_gain_mult = 0.5
+}
+
+nht_xp_lifestyle_high_3_modifier = {
+	monthly_lifestyle_xp_gain_mult = 0.8
+}
+
+nht_xp_lifestyle_high_4_modifier = {
+	monthly_lifestyle_xp_gain_mult = 1
+}
+
+

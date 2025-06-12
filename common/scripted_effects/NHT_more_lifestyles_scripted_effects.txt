@@ -1,0 +1,818 @@
+﻿
+nht_send_volunteer_solider_interaction_levy_give_modifier_effect = {
+		scope:actor = {
+			add_character_modifier = {
+				modifier = nht_is_giving_soldiers_modifier
+				years = 10
+			}
+		}
+}
+
+nht_send_volunteer_solider_interaction_levy_receive_modifier_effect = {
+	if = {
+		limit = { 
+			scope:actor.max_military_strength <= scope:recipient.send_volunteer_soldiers_interaction_recipient_far_weaker_value 
+			scope:recipient = {	NOT = { has_variable = nht_is_giving_soldiers_var } }
+		}
+		scope:recipient = {
+			add_character_modifier = {
+				modifier = nht_is_receiving_max_small_amount_soldiers_modifier
+				years = 10
+			}
+			set_variable = {
+				name = nht_is_giving_soldiers_var
+				value = scope:actor
+				years = 10
+			}	
+		}	
+	}
+	if = {
+		limit = { 
+			scope:actor.max_military_strength > scope:recipient.send_volunteer_soldiers_interaction_recipient_far_weaker_value 
+			scope:actor.max_military_strength <= scope:recipient.send_volunteer_soldiers_interaction_recipient_weaker_value
+			scope:recipient = {	NOT = { has_variable = nht_is_giving_soldiers_var } }
+		}
+		scope:recipient = {
+			add_character_modifier = {
+				modifier = nht_is_receiving_extremly_small_amount_soldiers_modifier
+				years = 10
+			}
+			set_variable = {
+				name = nht_is_giving_soldiers_var
+				value = scope:actor
+				years = 10
+			}	
+		}	
+	}
+	if = {
+		limit = { 
+			scope:actor.max_military_strength > scope:recipient.send_volunteer_soldiers_interaction_recipient_weaker_value 
+			scope:actor.max_military_strength <= scope:recipient.send_volunteer_soldiers_interaction_recipient_somewhat_weaker_value
+			scope:recipient = {	NOT = { has_variable = nht_is_giving_soldiers_var } }
+		}
+		scope:recipient = {
+			add_character_modifier = {
+				modifier = nht_is_receiving_very_small_amount_soldiers_modifier
+				years = 10
+			}
+			set_variable = {
+				name = nht_is_giving_soldiers_var
+				value = scope:actor
+				years = 10
+			}	
+		}	
+	}
+	if = {
+		limit = { 
+			scope:actor.max_military_strength > scope:recipient.send_volunteer_soldiers_interaction_recipient_somewhat_weaker_value
+			scope:actor.max_military_strength <= scope:recipient.send_volunteer_soldiers_interaction_recipient_almost_weaker_value
+			scope:recipient = {	NOT = { has_variable = nht_is_giving_soldiers_var } }
+		}
+		scope:recipient = {
+			add_character_modifier = {
+				modifier = nht_is_receiving_small_amount_soldiers_modifier
+				years = 10
+			}
+			set_variable = {
+				name = nht_is_giving_soldiers_var
+				value = scope:actor
+				years = 10
+			}	
+		}	
+	}
+	if = {
+		limit = { 
+			scope:actor.max_military_strength > scope:recipient.send_volunteer_soldiers_interaction_recipient_almost_weaker_value 
+			scope:actor.max_military_strength <= scope:recipient.send_volunteer_soldiers_interaction_recipient_almost_stronger_value 
+			scope:recipient = {	NOT = { has_variable = nht_is_giving_soldiers_var } }
+		}
+		scope:recipient = {
+			add_character_modifier = {
+				modifier = nht_is_receiving_sliglty_small_amount_soldiers_modifier
+				years = 10
+			}
+			set_variable = {
+				name = nht_is_giving_soldiers_var
+				value = scope:actor
+				years = 10
+			}	
+		}	
+	}
+	if = {
+		limit = { 
+			scope:actor.max_military_strength > scope:recipient.send_volunteer_soldiers_interaction_recipient_almost_stronger_value 
+			scope:actor.max_military_strength <= scope:recipient.send_volunteer_soldiers_interaction_recipient_somewhat_stronger_value
+			scope:recipient = {	NOT = { has_variable = nht_is_giving_soldiers_var } }
+		}
+		scope:recipient = {
+			add_character_modifier = {
+				modifier = nht_is_receiving_equal_amount_soldiers_modifier
+				years = 10
+			}
+			set_variable = {
+				name = nht_is_giving_soldiers_var
+				value = scope:actor
+				years = 10
+			}	
+		}	
+	}
+	if = {
+		limit = { 
+			scope:actor.max_military_strength > scope:recipient.send_volunteer_soldiers_interaction_recipient_somewhat_stronger_value 
+			scope:actor.max_military_strength <= scope:recipient.send_volunteer_soldiers_interaction_recipient_stronger_value
+			scope:recipient = {	NOT = { has_variable = nht_is_giving_soldiers_var } }
+		}
+		scope:recipient = {
+			add_character_modifier = {
+				modifier = nht_is_receiving_larger_amount_soldiers_modifier
+				years = 10
+			}
+			set_variable = {
+				name = nht_is_giving_soldiers_var
+				value = scope:actor
+				years = 10
+			}	
+		}	
+	}
+	if = {
+		limit = { 
+			scope:actor.max_military_strength > scope:recipient.send_volunteer_soldiers_interaction_recipient_stronger_value 
+			scope:actor.max_military_strength <= scope:recipient.send_volunteer_soldiers_interaction_recipient_far_stronger_value
+			scope:recipient = {	NOT = { has_variable = nht_is_giving_soldiers_var } }
+		}
+		scope:recipient = {
+			add_character_modifier = {
+				modifier = nht_is_receiving_very_large_amount_soldiers_modifier
+				years = 10
+			}
+			set_variable = {
+				name = nht_is_giving_soldiers_var
+				value = scope:actor
+				years = 10
+			}	
+		}	
+	}
+	if = {
+		limit = { 
+			scope:actor.max_military_strength > scope:recipient.send_volunteer_soldiers_interaction_recipient_far_stronger_value
+			scope:actor.max_military_strength <= scope:recipient.send_volunteer_soldiers_interaction_recipient_extremly_stronger_value
+			scope:recipient = {	NOT = { has_variable = nht_is_giving_soldiers_var } }
+		}
+		scope:recipient = {
+			add_character_modifier = {
+				modifier = nht_is_receiving_very_large_amount_soldiers_modifier
+				years = 10
+			}
+			set_variable = {
+				name = nht_is_giving_soldiers_var
+				value = scope:actor
+				years = 10
+			}	
+		}	
+	}
+	if = {
+		limit = { 
+			scope:actor.max_military_strength > scope:recipient.send_volunteer_soldiers_interaction_recipient_extremly_stronger_value
+			scope:recipient = {	NOT = { has_variable = nht_is_giving_soldiers_var } }
+		}
+		scope:recipient = {
+			add_character_modifier = {
+				modifier = nht_is_receiving_enormous_amount_soldiers_modifier
+				years = 10
+			}
+			set_variable = {
+				name = nht_is_giving_soldiers_var
+				value = scope:actor
+				years = 10
+			}	
+		}	
+	}
+}
+
+nht_send_volunteer_solider_interaction_refused_help_modifier_effect = {
+	scope:recipient = {
+		every_ally = {
+			limit = {
+				is_at_war = yes
+			}
+			add_opinion = {
+				modifier = nht_refused_volunteer_opinion
+				target = scope:recipient
+			}
+		}
+	}
+}
+
+nht_destroy_random_building_variable_effect = { # Province scope
+	if = {
+		limit = { has_variable = nht_destroyed_building_variable }
+		remove_variable = nht_destroyed_building_variable
+	}
+	random_list = { # Which building?
+		# Generic/Terrain
+		10 = { # outposts : Cheap
+			trigger = { has_building_or_higher = outposts_01 }
+			set_variable = {
+				name = nht_destroyed_building_variable
+				value = 0
+				months = 1
+			}
+		}
+		10 = { # logging_camps : Cheap
+			trigger = { has_building_or_higher = logging_camps_01 }
+			set_variable = {
+				name = nht_destroyed_building_variable
+				value = 1
+				months = 1
+			}
+		}
+		10 = { # peat_quarries : Cheap
+			trigger = { has_building_or_higher = peat_quarries_01 }
+			set_variable = {
+				name = nht_destroyed_building_variable
+				value = 2
+				months = 1
+			}
+		}
+		10 = { # hill_forts : Cheap
+			trigger = { has_building_or_higher = hill_forts_01 }
+			set_variable = {
+				name = nht_destroyed_building_variable
+				value = 3
+				months = 1
+			}
+		}
+		10 = { # plantations : Cheap
+			trigger = { has_building_or_higher = plantations_01 }
+			set_variable = {
+				name = nht_destroyed_building_variable
+				value = 4
+				months = 1
+			}
+		}
+		10 = { # quarries : Cheap
+			trigger = { has_building_or_higher = quarries_01 }
+			set_variable = {
+				name = nht_destroyed_building_variable
+				value = 5
+				months = 1
+			}
+		}
+		10 = { # hunting_grounds : Cheap
+			trigger = { has_building_or_higher = hunting_grounds_01 }
+			set_variable = {
+				name = nht_destroyed_building_variable
+				value = 6
+				months = 1
+			}
+		}
+		10 = { # military_camps : Cheap
+			trigger = { has_building_or_higher = military_camps_01 }
+			set_variable = {
+				name = nht_destroyed_building_variable
+				value = 7
+				months = 1
+			}
+		}
+		2 = { # pastures : Normal
+			trigger = { has_building_or_higher = pastures_01 }
+			set_variable = {
+				name = nht_destroyed_building_variable
+				value = 8
+				months = 1
+			}
+		}
+		2 = { # ramparts : Normal
+			trigger = { has_building_or_higher = ramparts_01 }
+			set_variable = {
+				name = nht_destroyed_building_variable
+				value = 9
+				months = 1
+			}
+		}
+		2 = { # curtain_walls : Normal
+			trigger = { has_building_or_higher = curtain_walls_01 }
+			set_variable = {
+				name = nht_destroyed_building_variable
+				value = 10
+				months = 1
+			}
+		}
+		2 = { # watchtowers : Normal
+			trigger = { has_building_or_higher = watchtowers_01 }
+			set_variable = {
+				name = nht_destroyed_building_variable
+				value = 11
+				months = 1
+			}
+		}
+		2 = { # cereal_fields : Normal
+			trigger = { has_building_or_higher = cereal_fields_01 }
+			set_variable = {
+				name = nht_destroyed_building_variable
+				value = 12
+				months = 1
+			}
+		}
+		2 = { # barracks : Normal
+			trigger = { has_building_or_higher = barracks_01 }
+			set_variable = {
+				name = nht_destroyed_building_variable
+				value = 13
+				months = 1
+			}
+		}
+		2 = { # camel_farms : Normal
+			trigger = { has_building_or_higher = camel_farms_01 }
+			set_variable = {
+				name = nht_destroyed_building_variable
+				value = 14
+				months = 1
+			}
+		}
+		2 = { # hill_farms : Normal
+			trigger = { has_building_or_higher = hill_farms_01 }
+			set_variable = {
+				name = nht_destroyed_building_variable
+				value = 15
+				months = 1
+			}
+		}
+		2 = { # elephant_pens : Normal
+			trigger = { has_building_or_higher = elephant_pens_01 }
+			set_variable = {
+				name = nht_destroyed_building_variable
+				value = 16
+				months = 1
+			}
+		}
+		2 = { # common_tradeport : Normal
+			trigger = { has_building_or_higher = common_tradeport_01 }
+			set_variable = {
+				name = nht_destroyed_building_variable
+				value = 17
+				months = 1
+			}
+		}
+		1 = { # orchards : Expensive
+			trigger = { has_building_or_higher = orchards_01 }
+			set_variable = {
+				name = nht_destroyed_building_variable
+				value = 18
+				months = 1
+			}
+		}
+		1 = { # farm_estates : Expensive
+			trigger = { has_building_or_higher = farm_estates_01 }
+			set_variable = {
+				name = nht_destroyed_building_variable
+				value = 19
+				months = 1
+			}
+		}
+		1 = { # regimental_grounds : Expensive
+			trigger = { has_building_or_higher = regimental_grounds_01 }
+			set_variable = {
+				name = nht_destroyed_building_variable
+				value = 20
+				months = 1
+			}
+		}
+		# Holding Type Specific : Normal
+		10 = { # monastic_schools : Normal
+			trigger = { has_building_or_higher = monastic_schools_01 }
+			set_variable = {
+				name = nht_destroyed_building_variable
+				value = 21
+				months = 1
+			}
+		}
+	}
+}
+
+nht_destroy_random_building_effect = {
+	if = {
+		limit = { has_variable = nht_destroyed_building_variable }
+		switch = {
+			trigger = var:nht_destroyed_building_variable
+			0 = { # outposts : Cheap
+				nht_destroy_building_effect = { BUILDING = outposts }
+			}
+			1 = { # logging_camps : Cheap
+				nht_destroy_building_effect = { BUILDING = logging_camps }
+			}
+			2 = { # peat_quarries : Cheap
+				nht_destroy_building_effect = { BUILDING = peat_quarries }
+			}
+			3 = { # hill_forts : Cheap
+				nht_destroy_building_effect = { BUILDING = hill_forts }
+			}
+			4 = { # plantations : Cheap
+				nht_destroy_building_effect = { BUILDING = plantations }
+			}
+			5 = { # quarries : Cheap
+				nht_destroy_building_effect = { BUILDING = quarries }
+			}
+			6 = { # hunting_grounds : Cheap
+				nht_destroy_building_effect = { BUILDING = hunting_grounds }
+			}
+			7 = { # military_camps : Cheap
+				nht_destroy_building_effect = { BUILDING = military_camps }
+			}
+			8 = { # pastures : Normal
+				nht_destroy_building_effect = { BUILDING = pastures }
+			}
+			9 = { # ramparts : Normal
+				nht_destroy_building_effect = { BUILDING = ramparts }
+			}
+			10 = { # curtain_walls : Normal
+				nht_destroy_building_effect = { BUILDING = curtain_walls }
+			}
+			11 = { # watchtowers : Normal
+				nht_destroy_building_effect = { BUILDING = watchtowers }
+			}
+			12 = { # cereal_fields : Normal
+				nht_destroy_building_effect = { BUILDING = cereal_fields }
+			}
+			13 = { # barracks : Normal
+				nht_destroy_building_effect = { BUILDING = barracks }
+			}
+			14 = { # camel_farms : Normal
+				nht_destroy_building_effect = { BUILDING = camel_farms }
+			}
+			15 = { # hill_farms : Normal
+				nht_destroy_building_effect = { BUILDING = hill_farms }
+			}
+			16 = { # elephant_pens : Normal
+				nht_destroy_building_effect = { BUILDING = elephant_pens }
+			}
+			17 = { # common_tradeport : Normal
+				nht_destroy_building_effect = { BUILDING = common_tradeport }
+			}
+			18 = { # orchards : Expensive
+				nht_destroy_building_effect = { BUILDING = orchards }
+			}
+			19 = { # farm_estates : Expensive
+				nht_destroy_building_effect = { BUILDING = farm_estates }
+			}
+			20 = { # regimental_grounds : Expensive
+				nht_destroy_building_effect = { BUILDING = regimental_grounds }
+			}
+			# Holding Type Specific : Normal
+			21 = { # monastic_schools : Normal
+				nht_destroy_building_effect = { BUILDING = monastic_schools }
+			}
+		}
+		remove_variable = nht_destroyed_building_variable
+	}
+}
+
+nht_destroy_one_building_effect = {
+	if = {
+		limit = { has_building = $BUILDING$_01 }
+		remove_building = $BUILDING$_01
+	}
+}
+
+nht_destroy_university_effect = {
+	if = {
+		limit = { has_building = $BUILDING$ }
+		remove_building = $BUILDING$
+	}
+}
+
+nht_destroy_two_building_effect = {
+	if = {
+		limit = { has_building = $BUILDING$_02 }
+		remove_building = $BUILDING$_02
+	}
+	else_if = {
+		limit = { has_building = $BUILDING$_01 }
+		remove_building = $BUILDING$_01
+	}
+}
+
+nht_destroy_three_building_effect = {
+	if = {
+		limit = { has_building = $BUILDING$_03 }
+		remove_building = $BUILDING$_03
+	}
+	else_if = {
+		limit = { has_building = $BUILDING$_02 }
+		remove_building = $BUILDING$_02
+	}
+	else_if = {
+		limit = { has_building = $BUILDING$_01 }
+		remove_building = $BUILDING$_01
+	}
+}
+
+nht_destroy_four_building_effect = {
+	if = {
+		limit = { has_building = $BUILDING$_04 }
+		remove_building = $BUILDING$_04
+	}
+	else_if = {
+		limit = { has_building = $BUILDING$_03 }
+		remove_building = $BUILDING$_03
+	}
+	else_if = {
+		limit = { has_building = $BUILDING$_02 }
+		remove_building = $BUILDING$_02
+	}
+	else_if = {
+		limit = { has_building = $BUILDING$_01 }
+		remove_building = $BUILDING$_01
+	}
+}
+
+nht_destroy_five_building_effect = {
+	if = {
+		limit = { has_building = $BUILDING$_05 }
+		remove_building = $BUILDING$_05
+	}
+	else_if = {
+		limit = { has_building = $BUILDING$_04 }
+		remove_building = $BUILDING$_04
+	}
+	else_if = {
+		limit = { has_building = $BUILDING$_03 }
+		remove_building = $BUILDING$_03
+	}
+	else_if = {
+		limit = { has_building = $BUILDING$_02 }
+		remove_building = $BUILDING$_02
+	}
+	else_if = {
+		limit = { has_building = $BUILDING$_01 }
+		remove_building = $BUILDING$_01
+	}
+}
+
+nht_destroy_building_effect = {
+	if = {
+		limit = { has_building = $BUILDING$_08 }
+		remove_building = $BUILDING$_08
+	}
+	else_if = {
+		limit = { has_building = $BUILDING$_07 }
+		remove_building = $BUILDING$_07
+	}
+	else_if = {
+		limit = { has_building = $BUILDING$_06 }
+		remove_building = $BUILDING$_06
+	}
+	else_if = {
+		limit = { has_building = $BUILDING$_05 }
+		remove_building = $BUILDING$_05
+	}
+	else_if = {
+		limit = { has_building = $BUILDING$_04 }
+		remove_building = $BUILDING$_04
+	}
+	else_if = {
+		limit = { has_building = $BUILDING$_03 }
+		remove_building = $BUILDING$_03
+	}
+	else_if = {
+		limit = { has_building = $BUILDING$_02 }
+		remove_building = $BUILDING$_02
+	}
+	else_if = {
+		limit = { has_building = $BUILDING$_01 }
+		remove_building = $BUILDING$_01
+	}
+}
+
+nht_destroy_every_buildings_effect = {
+	#City Buildings
+	nht_destroy_building_effect = { BUILDING = guild_halls }
+
+	#Duchy Buildings
+	nht_destroy_three_building_effect = { BUILDING = royal_garden }
+	nht_destroy_three_building_effect = { BUILDING = military_academy }
+	nht_destroy_three_building_effect = { BUILDING = march }
+	nht_destroy_three_building_effect = { BUILDING = siege_works }
+	nht_destroy_three_building_effect = { BUILDING = royal_armory }
+	nht_destroy_three_building_effect = { BUILDING = jousting_lists }
+	nht_destroy_three_building_effect = { BUILDING = blacksmiths }
+	nht_destroy_three_building_effect = { BUILDING = archery_ranges }
+	nht_destroy_three_building_effect = { BUILDING = tax_assessor }	
+	nht_destroy_three_building_effect = { BUILDING = leisure_palace }	
+	nht_destroy_three_building_effect = { BUILDING = royal_forest }		
+	nht_destroy_one_building_effect = { BUILDING = great_megalith }
+	
+	#Economy Buildings
+	nht_destroy_building_effect = { BUILDING = caravanserai } 
+	nht_destroy_building_effect = { BUILDING = watermills }
+	nht_destroy_building_effect = { BUILDING = windmills }	#
+	nht_destroy_building_effect = { BUILDING = common_tradeport }
+	nht_destroy_building_effect = { BUILDING = pastures }
+	nht_destroy_building_effect = { BUILDING = hunting_grounds }	
+	nht_destroy_building_effect = { BUILDING = farm_estates }	
+	nht_destroy_building_effect = { BUILDING = orchards }
+	nht_destroy_building_effect = { BUILDING = cereal_fields }
+	nht_destroy_building_effect = { BUILDING = logging_camps }
+	nht_destroy_building_effect = { BUILDING = peat_quarries }	
+	nht_destroy_building_effect = { BUILDING = hill_farms }	
+	nht_destroy_building_effect = { BUILDING = elephant_pens }
+	nht_destroy_building_effect = { BUILDING = plantations }
+	nht_destroy_building_effect = { BUILDING = quarries }
+
+	#Fortification Buildings
+	nht_destroy_building_effect = { BUILDING = wind_furnace } 
+	nht_destroy_building_effect = { BUILDING = workshops } #
+	nht_destroy_building_effect = { BUILDING = horse_pastures }
+	nht_destroy_building_effect = { BUILDING = hillside_grazing }
+	nht_destroy_building_effect = { BUILDING = warrior_lodges }
+	nht_destroy_building_effect = { BUILDING = military_camps } #
+	nht_destroy_building_effect = { BUILDING = regimental_grounds }
+	nht_destroy_building_effect = { BUILDING = outposts }
+	nht_destroy_building_effect = { BUILDING = barracks }	
+	nht_destroy_building_effect = { BUILDING = camel_farms }
+	nht_destroy_building_effect = { BUILDING = stables }
+	nht_destroy_building_effect = { BUILDING = smiths }		
+	
+	#Military Buildings	
+	nht_destroy_building_effect = { BUILDING = ramparts }
+	nht_destroy_building_effect = { BUILDING = curtain_walls }
+	nht_destroy_building_effect = { BUILDING = watchtowers }	
+	nht_destroy_building_effect = { BUILDING = hill_forts }
+	
+	#Temple Buildings
+	nht_destroy_building_effect = { BUILDING = monastic_schools }
+	nht_destroy_building_effect = { BUILDING = megalith }
+
+	#Tribal Buildings
+	nht_destroy_two_building_effect = { BUILDING = longhouses }
+	nht_destroy_two_building_effect = { BUILDING = war_camps }
+	nht_destroy_two_building_effect = { BUILDING = palisades }
+	nht_destroy_two_building_effect = { BUILDING = market_villages }
+
+	#Special Buildings
+	nht_destroy_one_building_effect = { BUILDING = holy_site_cathedral }
+	nht_destroy_one_building_effect = { BUILDING = holy_site_mosque }
+	nht_destroy_one_building_effect = { BUILDING = holy_site_pagan_grand_temple }
+	nht_destroy_one_building_effect = { BUILDING = holy_site_indian_grand_temple }
+	nht_destroy_one_building_effect = { BUILDING = holy_site_other_grand_temple }
+	nht_destroy_one_building_effect = { BUILDING = holy_site_mahabodhi_temple }
+	nht_destroy_one_building_effect = { BUILDING = holy_site_imam_ali_mosque }
+	nht_destroy_one_building_effect = { BUILDING = holy_site_great_mosque_of_mecca }
+	nht_destroy_one_building_effect = { BUILDING = holy_site_great_mosque_of_cordoba }
+	nht_destroy_one_building_effect = { BUILDING = holy_site_great_mosque_of_djenne }
+	nht_destroy_one_building_effect = { BUILDING = holy_site_great_mosque_of_samarra }
+	nht_destroy_one_building_effect = { BUILDING = holy_site_cologne_cathedral } 
+	nht_destroy_three_building_effect = { BUILDING = holy_site_canterbury_cathedral }
+	nht_destroy_one_building_effect = { BUILDING = holy_site_prophetic_mosque }
+	nht_destroy_one_building_effect = { BUILDING = doges_palace }
+	nht_destroy_one_building_effect = { BUILDING = walls_of_genoa }
+	nht_destroy_one_building_effect = { BUILDING = visby_ringmur }
+	nht_destroy_one_building_effect = { BUILDING = walls_of_benin }
+	nht_destroy_one_building_effect = { BUILDING = theodosian_walls }
+	nht_destroy_one_building_effect = { BUILDING = aurelian_walls }
+	nht_destroy_one_building_effect = { BUILDING = the_colosseum }
+	nht_destroy_one_building_effect = { BUILDING = iron_pillar_of_delhi }
+	nht_destroy_one_building_effect = { BUILDING = iron_pillar_of_dhar }
+	nht_destroy_one_building_effect = { BUILDING = the_pyramids }
+	nht_destroy_one_building_effect = { BUILDING = stonehenge }
+	nht_destroy_one_building_effect = { BUILDING = offas_dyke }
+	nht_destroy_one_building_effect = { BUILDING = hadrians_wall }
+	nht_destroy_one_building_effect = { BUILDING = petra }
+	nht_destroy_one_building_effect = { BUILDING = buddhas_of_bamian }
+	nht_destroy_two_building_effect = { BUILDING = alhambra }
+	nht_destroy_two_building_effect = { BUILDING = citadel_of_aleppo }
+	nht_destroy_one_building_effect = { BUILDING = house_of_wisdom }
+	nht_destroy_one_building_effect = { BUILDING = the_tower_of_london }
+	nht_destroy_one_building_effect = { BUILDING = notre_dame }
+	nht_destroy_one_building_effect = { BUILDING = brihadeeswarar_temple }
+	nht_destroy_one_building_effect = { BUILDING = shwedagon_pagoda }
+	nht_destroy_one_building_effect = { BUILDING = ananda_temple }
+	nht_destroy_one_building_effect = { BUILDING = the_friday_mosque }
+	nht_destroy_one_building_effect = { BUILDING = khajuraho }
+	nht_destroy_one_building_effect = { BUILDING = palace_of_aachen }
+	nht_destroy_two_building_effect = { BUILDING = hagia_sophia }
+	nht_destroy_one_building_effect = { BUILDING = dome_of_the_rock }
+	nht_destroy_one_building_effect = { BUILDING = temple_in_jerusalem }
+	nht_destroy_five_building_effect = { BUILDING = hall_of_heroes }
+	nht_destroy_university_effect = { BUILDING = generic_university }
+	nht_destroy_university_effect = { BUILDING = al_azhar_university }
+	nht_destroy_university_effect = { BUILDING = sankore_university }
+	nht_destroy_university_effect = { BUILDING = siena_university }
+	nht_destroy_university_effect = { BUILDING = nalanda_university }
+	nht_destroy_one_building_effect = { BUILDING = special_sicilian_parliament }
+	nht_destroy_one_building_effect = { BUILDING = special_greenhouse }
+	nht_destroy_two_building_effect = { BUILDING = hotin_fort }
+	nht_destroy_one_building_effect = { BUILDING = golden_gate_of_kiev }
+	nht_destroy_one_building_effect = { BUILDING = heddal_stave_church }
+	nht_destroy_two_building_effect = { BUILDING = temple_of_uppsala }
+	nht_destroy_one_building_effect = { BUILDING = lund_cathedral }
+	nht_destroy_one_building_effect = { BUILDING = danevirke }
+	nht_destroy_one_building_effect = { BUILDING = roman_wall_of_lugo }
+	nht_destroy_one_building_effect = { BUILDING = rock_of_gibraltar }
+	nht_destroy_one_building_effect = { BUILDING = aljaferia_palace }
+	nht_destroy_one_building_effect = { BUILDING = tower_of_hercules }
+	nht_destroy_one_building_effect = { BUILDING = city_wall_of_toledo }
+	nht_destroy_one_building_effect = { BUILDING = alcazar_of_segovia }
+	nht_destroy_one_building_effect = { BUILDING = holy_site_basilica_santiago }
+	
+	#Mines Buildings
+	nht_destroy_four_building_effect = { BUILDING = rammelsberg_mines }
+	nht_destroy_four_building_effect = { BUILDING = kutna_hora_mines }
+	nht_destroy_four_building_effect = { BUILDING = kremnica_mines }
+	nht_destroy_four_building_effect = { BUILDING = falun_mines }
+	nht_destroy_four_building_effect = { BUILDING = schwaz_mines } #
+	nht_destroy_four_building_effect = { BUILDING = argentiera_mines }
+	nht_destroy_four_building_effect = { BUILDING = kollur_mines }
+	nht_destroy_four_building_effect = { BUILDING = siderokausia_mines }
+	nht_destroy_four_building_effect = { BUILDING = mali_mines }	
+}
+
+
+nht_give_controversial_heir_trait_effect = {
+	if = {
+		limit = { 
+			OR = { 
+				scope:actor = { has_realm_law = equal_law }				
+				AND = {
+					scope:actor = { 
+						OR = {
+							has_realm_law = female_preference_law
+							has_realm_law = female_only_law
+						}
+					}
+					scope:recipient = { is_female = yes }
+				}	
+				AND = {
+					scope:actor = { 
+						OR = {
+							has_realm_law = male_preference_law
+							has_realm_law = male_only_law
+						}
+					}
+					scope:recipient = { is_male = yes }
+				}
+			}
+		}
+		if = {				
+			limit = { 
+				scope:recipient.house = scope:actor.house 
+				scope:recipient = { is_child_of = scope:actor }
+			}
+			add_trait = nht_controversial_heir_gender_equal_same_family
+		}
+		else_if = {				
+			limit = { 
+				scope:recipient.house = scope:actor.house		
+				scope:recipient = { NOT = { is_child_of = scope:actor } }
+			}
+			add_trait = nht_controversial_heir_gender_equal_same_house				
+		}
+		else_if = {				
+			limit = { 
+				NOT = {	scope:recipient.house = scope:actor.house }
+				scope:recipient.dynasty = scope:actor.dynasty
+			}
+			add_trait = nht_controversial_heir_gender_equal_same_dynasty
+		}
+		else_if = {				
+			limit = { NOT = { scope:recipient.dynasty = scope:actor.dynasty } }
+			add_trait = nht_controversial_heir_gender_equal_other_dynasty
+		}
+		else_if = {				
+			limit = { scope:recipient = { is_lowborn = yes } }
+			add_trait = nht_controversial_heir_gender_equal_lowborn
+		}	
+	}
+	else = {
+		if = {				
+			limit = { 
+				scope:recipient.house = scope:actor.house 
+				scope:recipient = { is_child_of = scope:actor }
+			}
+			add_trait = nht_controversial_heir_gender_unequal_same_family
+		}
+		else_if = {				
+			limit = { 	
+				scope:recipient.house = scope:actor.house 	
+				NOT = {	scope:recipient = {  is_child_of = scope:actor } }
+			}
+			add_trait = nht_controversial_heir_gender_unequal_same_house				
+		}
+		else_if = {				
+			limit = { 
+				NOT = {	scope:recipient.house = scope:actor.house }			
+				scope:recipient.dynasty = scope:actor.dynasty			
+			}
+			add_trait = nht_controversial_heir_gender_unequal_same_dynasty
+		}
+		else_if = {				
+			limit = { NOT = { scope:recipient.dynasty = scope:actor.dynasty } }
+			add_trait = nht_controversial_heir_gender_unequal_other_dynasty
+		}
+		else_if = {				
+			limit = { scope:recipient = { is_lowborn = yes } }
+			add_trait = nht_controversial_heir_gender_unequal_lowborn
+		}		
+	}	
+}	
+	

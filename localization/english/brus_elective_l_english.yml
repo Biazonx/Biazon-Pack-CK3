@@ -1,0 +1,22 @@
+﻿l_english:
+ brus_lestvitsa_elective_candidates:0 "Brothers, Children, and Claimaints"
+ brus_lestvitsa_elective_candidates_tooltip:0 "In order to be eligible, a character must either:\n$EFFECT_LIST_BULLET$Have a parent who held the title\n$EFFECT_LIST_BULLET$Be a brother of the current [ruler|E]\n$EFFECT_LIST_BULLET$#high Or#! Be an otherwise valid [claimant|E]"
+ brus_lestvitsa_elective_electors:0 "Princes and Vassals"
+ brus_lestvitsa_elective_electors_tooltip:0 "In order to have a say choosing the next #italic Knyaz#!, a ruler must be:\n$EFFECT_LIST_BULLET$A [de jure|E] [vassal|E] or [councillor|E] of the [title|E]\n$EFFECT_LIST_BULLET$The Ruler\n$EFFECT_LIST_BULLET$A [ruler|E] of the same [dynasty|E] and [rank|E]"
+
+ brus_lestvitsa_succession_law:1 "Ladder Elective"
+ brus_lestvitsa_succession_law_subname:0 "Lestvitsa"
+ brus_lestvitsa_succession_law_effects:0 "The [ruler|E], other [dynasty|E] [rulers|E], and adult [de_jure|E] vassals can nominate a [title_heir|E] from among the ruler's brothers, those whose fathers once held the title, and other valid [claimants|E]. Older brothers will be preferred over sons and discouraged from obtaining too many titles in the ladder."
+ 
+ # Elector strength modifiers
+ brus_elective_dynasty:0 "Same-[dynasty|E] [vassal|E]: $VALUE|=+0$"
+ brus_elective_powerful_vassal:0 "[powerful_vassal|E]: $VALUE|=+0$"
+ # Vote draw modifiers
+ brus_elective_brothers:0 "Brother of [ruler|E], modified by age: $VALUE|=+0$"
+ brus_elective_higher:0 "A higher ruler should not move down the ladder: $VALUE|=+0$"
+ brus_elective_multiple:0 "Inheriting another ladder title: $VALUE|=+0$"
+ brus_elective_realm_size:0 "Rules larger [realm|E]: $VALUE|=+0$"
+ brus_elective_father_ruled:0 "Father previously ruled here: $VALUE|=+0$"
+ brus_elective_vassal:0 "Vassal of different [ruler|E]: $VALUE|=+0$"
+ brus_elective_kiev:0 "Will be next Great Knyaz: $VALUE|=+0$"
+ brus_elective_local_vassal:0 "Local [vassal|E]: $VALUE|=+0$"

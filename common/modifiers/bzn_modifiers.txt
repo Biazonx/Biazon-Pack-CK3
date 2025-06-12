@@ -1,0 +1,13 @@
+hashishiyah_society = {
+	icon = outdoors_positive
+	diplomacy = 2  
+	learning = 2
+	stress_gain_mult = -0.25
+	general_opinion = 10
+}  
+
+brotherhood_guidance = {
+	icon = learning_positive
+	vassal_opinion = 15
+	monthly_piety_gain_mult = 0.1
+}

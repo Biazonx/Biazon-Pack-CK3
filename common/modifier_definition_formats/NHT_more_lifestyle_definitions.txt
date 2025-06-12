@@ -1,0 +1,16 @@
+﻿
+#For later
+monthly_nht_prowess_lifestyle_xp_gain_mult = {
+	decimals = 0
+	percent = yes
+}
+
+monthly_nht_leadership_lifestyle_xp_gain_mult = {
+	decimals = 0
+	percent = yes
+}
+
+lifestyle_blademaster_xp_gain_mult = {
+	decimals = 0
+	percent = yes
+}

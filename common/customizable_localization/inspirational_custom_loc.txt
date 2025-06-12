@@ -1,0 +1,791 @@
+﻿
+#New Custom Loc
+InspirationalArtifactRingName = {
+	type = artifact
+
+	text = {
+		trigger = {
+			has_artifact_feature = ring_centerpiece_decoder
+		}
+		localization_key = artifact_ring_decoder_name
+	}
+	text = {
+		trigger = {
+			has_artifact_feature = ring_centerpiece_signet
+		}
+		localization_key = artifact_ring_house_signet_name
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_artifact_feature = ring_centerpiece_cabochon
+				has_artifact_feature = ring_centerpiece_cameo
+				has_artifact_feature = ring_adornment_gems
+			}
+		}
+		localization_key = artifact_ring_default_name
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_artifact_feature = ring_adornment_gems
+			}
+		}
+		localization_key = artifact_ring_plain_name
+		fallback = yes
+	}
+}
+
+InspirationalArtifactRingDescription = {
+	type = artifact
+
+	text = {
+		trigger = {
+			has_artifact_feature = ring_decoration_adornment
+		}
+		localization_key = artifact_ring_adornment_description
+	}
+	text = {
+		trigger = {
+			has_artifact_feature_group = ring_centerpiece
+		}
+		localization_key = artifact_ring_centerpiece_description
+	}
+	text = {
+		trigger = {
+			has_artifact_feature = ring_decoration_centerpiece_and_adornment
+		}
+		localization_key = artifact_ring_centerpiece_adornment_description
+	}
+	text = {
+		localization_key = artifact_ring_plain_description
+		fallback = yes
+	}
+}
+
+InspirationalThroneNameSuffix = {
+	type = artifact
+
+	text = {
+		trigger = {
+			artifact_owner = { has_court_type = court_diplomatic }
+		}
+		localization_key = inspirational_diplomatic_throne_suffix
+	}
+	text = {
+		trigger = {
+			artifact_owner = { has_court_type = court_warlike }
+		}
+		localization_key = inspirational_warlike_throne_suffix
+	}
+	text = {
+		trigger = {
+			artifact_owner = { has_court_type = court_administrative }
+		}
+		localization_key = inspirational_administrative_throne_suffix
+	}
+	text = {
+		trigger = {
+			artifact_owner = { has_court_type = court_intrigue }
+		}
+		localization_key = inspirational_intrigue_throne_suffix
+	}
+	text = {
+		trigger = {
+			artifact_owner = { has_court_type = court_scholarly }
+		}
+		localization_key = inspirational_scholarly_throne_suffix
+	}
+	text = {
+		trigger = {
+			artifact_owner = { has_court_type = court_tribal }
+		}
+		localization_key = inspirational_tribal_throne_suffix
+	}
+}
+
+#Overridden Custom Loc 
+InspirationSmithType = {
+	type = character
+
+	text = { #
+		trigger = {
+			var:artifact_smith_type = flag:smith_type_brooch
+		}
+		localization_key = inspiration_smith_type_brooch
+	}
+
+	text = { #
+	trigger = {
+		var:artifact_smith_type = flag:smith_type_jewelry
+	}
+	localization_key = inspiration_smith_type_jewelry
+	}
+
+	text = { #
+	trigger = {
+		var:artifact_smith_type = flag:smith_type_ring
+	}
+	localization_key = inspiration_smith_type_ring
+	}
+
+	text = { #
+	trigger = {
+		var:artifact_smith_type = flag:smith_type_necklace
+	}
+	localization_key = inspiration_smith_type_necklace
+	}
+
+	text = { #
+		trigger = {
+			var:artifact_smith_type = flag:smith_type_regalia
+		}
+		localization_key = inspiration_smith_type_regalia
+	}
+
+	text = { #
+		trigger = {
+			var:artifact_smith_type = flag:smith_type_crown
+		}
+		localization_key = inspiration_smith_type_crown
+	}
+
+	text = { #
+		trigger = {
+			var:artifact_smith_type = flag:smith_type_goblet
+		}
+		localization_key = inspiration_smith_type_goblet
+	}
+
+	text = { #
+		trigger = {
+			var:artifact_smith_type = flag:smith_type_aquamanile
+		}
+		localization_key = inspiration_smith_type_aquamanile
+	}
+
+	text = { #
+	trigger = {
+		var:artifact_smith_type = flag:smith_type_incense_burner_sculpture
+	}
+	localization_key = inspiration_smith_type_incense_burner_sculpture
+	}
+}
+
+ArtifactPrefixGeneric = {
+	type = character
+
+	random_valid = yes
+
+	text = {
+		trigger = {	exists = scope:owner }
+		localization_key = artifact_name_prefix_owner_name
+	}
+	text = {
+		trigger = {
+			exists = scope:owner
+			OR = { # If it's from an adventure it shouldn't say the owner's culture
+				NOT = {
+					exists = scope:owner.var:adventure_artifact_location
+				}
+				AND = {
+					exists = scope:owner.var:adventure_artifact_location
+					scope:owner = {
+						any_sub_realm_barony = { this = scope:owner.var:adventure_artifact_location }
+					}
+				}
+			}
+		}
+		localization_key = artifact_name_prefix_owner_culture
+	}
+	text = {
+		trigger = {
+			exists = scope:owner
+			exists = scope:owner.var:adventure_artifact_location
+			scope:owner = {
+				NOT = {
+					any_sub_realm_barony = { this = scope:owner.var:adventure_artifact_location }
+				}
+			}
+		}
+		localization_key = artifact_name_prefix_location_culture
+	}
+	text = {
+		trigger = {
+			exists = scope:owner
+			exists = scope:owner.dynasty
+			trigger_if = {
+				limit = { exists = scope:inspiration }
+				NOT = { scope:inspiration = { has_inspiration_type = adventure_inspiration } }
+			}
+		}
+		localization_key = artifact_name_prefix_owner_dynasty
+	}
+	text = {
+		trigger = {
+			exists = scope:inspiration_owner
+			trigger_if = { # If it's a throne it shouldn't say it's the inspiration owner's throne...!
+				limit = {
+					exists = scope:inspiration_owner.var:artifact_artisan_type
+				}
+				NOT = { scope:inspiration_owner.var:artifact_artisan_type = flag:artisan_type_throne }
+			}
+		}
+		localization_key = artifact_name_prefix_inspiration_owner_name
+	}
+	text = {
+		trigger = {
+			exists = scope:quality
+			scope:quality >= 90
+		}
+		localization_key = artifact_name_prefix_descriptor_very_high_quality
+	}
+	text = {
+		trigger = {
+			exists = scope:quality
+			scope:quality >= 70
+		}
+		localization_key = artifact_name_prefix_descriptor_high_quality
+	}
+	text = {
+		trigger = {
+			exists = scope:quality
+			scope:quality > 70
+			trigger_if = { 
+				limit = {
+					exists = scope:newly_created_artifact
+				}
+				NOR = {
+					scope:newly_created_artifact = { artifact_slot_type = primary_armament }
+					scope:newly_created_artifact = { artifact_slot_type = armor }
+				}
+			}
+		}
+		localization_key = artifact_name_prefix_descriptor_high_quality_alt2 #splendid
+	}
+	text = {
+		trigger = {
+			exists = scope:quality
+			scope:quality > 70
+			trigger_if = { 
+				limit = {
+					exists = scope:newly_created_artifact
+				}
+				OR = {
+					scope:newly_created_artifact = { artifact_type = helmet }
+					scope:newly_created_artifact = { artifact_type = regalia }
+					scope:newly_created_artifact = { artifact_type = brooch }
+					scope:newly_created_artifact = { artifact_type = brooch_pedestal }
+					scope:newly_created_artifact = { artifact_type = ring }
+					scope:newly_created_artifact = { artifact_type = necklace }
+					scope:newly_created_artifact = { artifact_type = necklace_pedestal }
+					scope:newly_created_artifact = { artifact_type = tapestry }
+					scope:newly_created_artifact = { artifact_type = book }
+					scope:newly_created_artifact = { artifact_type = elixir }
+					scope:newly_created_artifact = { artifact_type = panacea }
+					scope:newly_created_artifact = { artifact_type = miscellaneous }
+				}
+			}
+		}
+		localization_key = artifact_name_prefix_descriptor_high_quality_alt1 #brilliant
+	}
+	text = {
+		trigger = {
+			exists = scope:quality
+			scope:quality < 85
+			scope:quality >= 55
+		}
+		localization_key = artifact_name_prefix_descriptor_medium_high_quality
+	}
+	text = {
+		trigger = {
+			exists = scope:quality
+			scope:quality < 70
+			scope:quality >= 40
+		}
+		localization_key = artifact_name_prefix_descriptor_low_medium_quality
+	}
+	text = {
+		trigger = {
+			exists = scope:quality
+			scope:quality < 70
+			scope:quality >= 40
+			trigger_if = { #It does not make sense to refer to these artifacts as "sturdy"
+				limit = {
+					exists = scope:newly_created_artifact
+				}
+				NOR = {
+					scope:newly_created_artifact = { artifact_type = regalia }
+					scope:newly_created_artifact = { artifact_type = brooch }
+					scope:newly_created_artifact = { artifact_type = brooch_pedestal }
+					scope:newly_created_artifact = { artifact_type = ring }
+					scope:newly_created_artifact = { artifact_type = necklace }
+					scope:newly_created_artifact = { artifact_type = necklace_pedestal }
+					scope:newly_created_artifact = { artifact_type = wall_big }
+					scope:newly_created_artifact = { artifact_type = tapestry }
+					scope:newly_created_artifact = { artifact_type = helmet }
+					scope:newly_created_artifact = { artifact_type = wall_small }
+					scope:newly_created_artifact = { artifact_type = book }
+					scope:newly_created_artifact = { artifact_type = elixir }
+					scope:newly_created_artifact = { artifact_type = panacea }
+					scope:newly_created_artifact = { artifact_type = miscellaneous }
+				}
+			}
+		}
+		localization_key = artifact_name_prefix_descriptor_medium_quality
+	}
+	text = {
+		trigger = {
+			exists = scope:quality
+			scope:quality < 70
+			scope:quality >= 40
+			trigger_if = { #Version for non-"sturdy" artifacts
+				limit = {
+					exists = scope:newly_created_artifact
+				}
+				OR = {
+					scope:newly_created_artifact = { artifact_type = regalia }
+					scope:newly_created_artifact = { artifact_type = brooch }
+					scope:newly_created_artifact = { artifact_type = brooch_pedestal }
+					scope:newly_created_artifact = { artifact_type = ring }
+					scope:newly_created_artifact = { artifact_type = necklace }
+					scope:newly_created_artifact = { artifact_type = necklace_pedestal }
+					scope:newly_created_artifact = { artifact_type = wall_big }
+					scope:newly_created_artifact = { artifact_type = tapestry }
+					scope:newly_created_artifact = { artifact_type = helmet }
+					scope:newly_created_artifact = { artifact_type = wall_small }
+					scope:newly_created_artifact = { artifact_type = book }
+					scope:newly_created_artifact = { artifact_type = elixir }
+					scope:newly_created_artifact = { artifact_type = panacea }
+					scope:newly_created_artifact = { artifact_type = miscellaneous }
+				}
+			}
+		}
+		localization_key = artifact_name_prefix_descriptor_medium_alt_version_quality
+		fallback = yes
+	}
+	text = {
+		trigger = {
+			exists = scope:quality
+			scope:quality < 70
+			scope:quality >= 40
+			trigger_if = { 
+				limit = {
+					exists = scope:newly_created_artifact
+				}
+				OR = {
+					scope:newly_created_artifact = { artifact_type = axe }
+					scope:newly_created_artifact = { artifact_type = spear }
+					scope:newly_created_artifact = { artifact_type = sword }
+					scope:newly_created_artifact = { artifact_type = dagger }
+				}
+			}
+		}
+		localization_key = artifact_name_prefix_descriptor_medium_quality_blades_only
+	}
+	text = {
+		trigger = {
+			exists = scope:quality
+			scope:quality < 55
+			scope:quality >= 20
+		}
+		localization_key = artifact_name_prefix_descriptor_low_medium_quality
+	}
+	text = {
+		trigger = {
+			exists = scope:quality
+			scope:quality < 40
+			scope:quality >= 10
+			trigger_if = { 
+				limit = {
+					exists = scope:newly_created_artifact
+				}
+				OR = {
+					scope:newly_created_artifact = { artifact_type = axe }
+					scope:newly_created_artifact = { artifact_type = spear }
+					scope:newly_created_artifact = { artifact_type = sword }
+					scope:newly_created_artifact = { artifact_type = dagger }
+				}
+			}
+		}
+		localization_key = artifact_name_prefix_descriptor_low_quality_blades_only
+	}
+	text = {
+		trigger = {
+			exists = scope:quality
+			scope:quality < 40
+			scope:quality >= 10
+		}
+		localization_key = artifact_name_prefix_descriptor_low_quality
+	}
+	text = {
+		trigger = {
+			exists = scope:quality
+			scope:quality < 10
+		}
+		localization_key = artifact_name_prefix_descriptor_very_low_quality
+	}
+
+}
+
+ArtifactPrefixGenericAfterCreation = {
+	type = character
+
+	random_valid = yes
+
+	text = {
+		trigger = {
+			exists = scope:owner
+		}
+		localization_key = artifact_name_prefix_artifact_scope_owner_name
+	}
+	text = {
+		trigger = {
+			exists = scope:owner.culture
+		}
+		localization_key = artifact_name_prefix_artifact_scope_owner_culture
+	}
+	text = {
+		trigger = {
+			exists = scope:owner.dynasty
+		}
+		localization_key = artifact_name_prefix_artifact_scope_owner_dynasty
+	}
+	text = {
+		trigger = {
+			exists = var:quality
+			var:quality >= 90
+		}
+		localization_key = artifact_name_prefix_descriptor_very_high_quality
+	}
+	text = {
+		trigger = {
+			exists = var:quality
+			var:quality >= 70
+		}
+		localization_key = artifact_name_prefix_descriptor_high_quality
+	}
+	text = {
+		trigger = {
+			exists = var:quality
+			var:quality > 70
+			trigger_if = { 
+				limit = {
+					exists = scope:newly_created_artifact
+				}
+				NOR = {
+					scope:newly_created_artifact = { artifact_slot_type = primary_armament }
+					scope:newly_created_artifact = { artifact_slot_type = armor }
+				}
+			}
+		}
+		localization_key = artifact_name_prefix_descriptor_high_quality_alt2 #splendid
+	}
+	text = {
+		trigger = {
+			exists = var:quality
+			var:quality > 70
+			trigger_if = { 
+				limit = {
+					exists = scope:newly_created_artifact
+				}
+				OR = {
+					scope:newly_created_artifact = { artifact_type = helmet }
+					scope:newly_created_artifact = { artifact_type = regalia }
+					scope:newly_created_artifact = { artifact_type = brooch }
+					scope:newly_created_artifact = { artifact_type = ring }
+					scope:newly_created_artifact = { artifact_type = necklace }
+					scope:newly_created_artifact = { artifact_type = tapestry }
+					scope:newly_created_artifact = { artifact_type = book }
+					scope:newly_created_artifact = { artifact_type = elixir }
+					scope:newly_created_artifact = { artifact_type = panacea }
+					scope:newly_created_artifact = { artifact_type = miscellaneous }
+				}
+			}
+		}
+		localization_key = artifact_name_prefix_descriptor_high_quality_alt1 #brilliant
+	}
+	text = {
+		trigger = {
+			exists = var:quality
+			var:quality < 85
+			var:quality >= 55
+		}
+		localization_key = artifact_name_prefix_descriptor_medium_high_quality
+	}
+	text = {
+		trigger = {
+			exists = var:quality
+			var:quality < 70
+			var:quality >= 40
+		}
+		localization_key = artifact_name_prefix_descriptor_low_medium_quality
+	}
+	text = {
+		trigger = {
+			exists = var:quality
+			var:quality < 70
+			var:quality >= 40
+			trigger_if = { #It does not make sense to refer to these artifacts as "sturdy"
+				limit = {
+					exists = scope:newly_created_artifact
+				}
+				NOR = {
+					scope:newly_created_artifact = { artifact_type = regalia }
+					scope:newly_created_artifact = { artifact_type = brooch }
+					scope:newly_created_artifact = { artifact_type = brooch_pedestal }
+					scope:newly_created_artifact = { artifact_type = ring }
+					scope:newly_created_artifact = { artifact_type = necklace }
+					scope:newly_created_artifact = { artifact_type = necklace_pedestal }
+					scope:newly_created_artifact = { artifact_type = wall_big }
+					scope:newly_created_artifact = { artifact_type = tapestry }
+					scope:newly_created_artifact = { artifact_type = helmet }
+					scope:newly_created_artifact = { artifact_type = wall_small }
+					scope:newly_created_artifact = { artifact_type = book }
+					scope:newly_created_artifact = { artifact_type = elixir }
+					scope:newly_created_artifact = { artifact_type = panacea }
+					scope:newly_created_artifact = { artifact_type = miscellaneous }
+				}
+			}
+		}
+		localization_key = artifact_name_prefix_descriptor_medium_quality
+		fallback = yes
+	}
+	text = {
+		trigger = {
+			exists = var:quality
+			var:quality < 70
+			var:quality >= 40
+			trigger_if = { #Version for non-"sturdy" artifacts
+				limit = {
+					exists = scope:newly_created_artifact
+				}
+				OR = {
+					scope:newly_created_artifact = { artifact_type = regalia }
+					scope:newly_created_artifact = { artifact_type = brooch }
+					scope:newly_created_artifact = { artifact_type = brooch_pedestal }
+					scope:newly_created_artifact = { artifact_type = ring }
+					scope:newly_created_artifact = { artifact_type = necklace }
+					scope:newly_created_artifact = { artifact_type = wall_big }
+					scope:newly_created_artifact = { artifact_type = tapestry }
+					scope:newly_created_artifact = { artifact_type = helmet }
+					scope:newly_created_artifact = { artifact_type = wall_small }
+					scope:newly_created_artifact = { artifact_type = book }
+					scope:newly_created_artifact = { artifact_type = elixir }
+					scope:newly_created_artifact = { artifact_type = panacea }
+					scope:newly_created_artifact = { artifact_type = miscellaneous }
+				}
+			}
+		}
+		localization_key = artifact_name_prefix_descriptor_medium_alt_version_quality
+	}
+	text = {
+		trigger = {
+			exists = var:quality
+			var:quality < 55
+			var:quality >= 20
+		}
+		localization_key = artifact_name_prefix_descriptor_low_medium_quality
+	}
+	text = {
+		trigger = {
+			exists = var:quality
+			var:quality < 40
+		}
+		localization_key = artifact_name_prefix_descriptor_low_quality
+	}
+	text = {
+		trigger = {
+			exists = var:quality
+			var:quality < 15
+		}
+		localization_key = artifact_name_prefix_descriptor_very_low_quality
+	}
+
+}
+
+ArtifactAdverbWealth = {
+	type = character
+
+	random_valid = yes
+	
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					exists = scope:wealth
+					scope:wealth >= 85
+				}
+				AND = {
+					exists = var:wealth
+					var:wealth >= 85
+				}
+			}
+		}
+		localization_key = adverb_wealth_extravagant
+	}
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					exists = scope:wealth
+					scope:wealth >= 85
+				}
+				AND = {
+					exists = var:wealth
+					var:wealth >= 85
+				}
+			}
+		}
+		localization_key = adverb_wealth_masterful
+	}
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					exists = scope:wealth
+					scope:wealth >= 75
+					scope:wealth < 85
+
+				}
+				AND = {
+					exists = var:wealth
+					var:wealth >= 75
+					var:wealth < 85
+				}
+			}
+		}
+		localization_key = adverb_wealth_opulent
+	}
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					exists = scope:wealth
+					scope:wealth >= 65
+					scope:wealth < 75
+
+				}
+				AND = {
+					exists = var:wealth
+					var:wealth >= 65
+					var:wealth < 75
+				}
+			}
+		}
+		localization_key = adverb_wealth_wonderful
+	}
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					exists = scope:wealth
+					scope:wealth >= 55
+					scope:wealth < 65
+
+				}
+				AND = {
+					exists = var:wealth
+					var:wealth >= 55
+					var:wealth < 65
+				}
+			}
+		}
+		localization_key = adverb_wealth_elegant
+	}
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					exists = scope:wealth
+					scope:wealth >= 55
+					scope:wealth < 65
+
+				}
+				AND = {
+					exists = var:wealth
+					var:wealth >= 55
+					var:wealth < 65
+				}
+			}
+		}
+		localization_key = adverb_wealth_lavish
+	}
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					exists = scope:wealth
+					scope:wealth >= 45
+					scope:wealth < 55
+
+				}
+				AND = {
+					exists = var:wealth
+					var:wealth >= 45
+					var:wealth < 55
+				}
+			}
+		}
+		localization_key = adverb_wealth_beautiful
+	}
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					exists = scope:wealth
+					scope:wealth >= 35
+					scope:wealth < 45
+
+				}
+				AND = {
+					exists = var:wealth
+					var:wealth >= 35
+					var:wealth < 45
+				}
+			}
+		}
+		localization_key = adverb_wealth_rich
+	}
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					exists = scope:wealth
+					scope:wealth >= 25
+					scope:wealth < 35
+
+				}
+				AND = {
+					exists = var:wealth
+					var:wealth >= 25
+					var:wealth < 35
+				}
+			}
+		}
+		localization_key = adverb_wealth_ornate
+	}
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					exists = scope:wealth
+					scope:wealth >= 15
+					scope:wealth < 25
+
+				}
+				AND = {
+					exists = var:wealth
+					var:wealth >= 15
+					var:wealth < 25
+				}
+			}
+		}
+		localization_key = adverb_wealth_fancy
+	}
+	text = {
+		trigger = { always = no }
+		localization_key = adverb_wealth_plain
+		fallback = yes
+	}
+}

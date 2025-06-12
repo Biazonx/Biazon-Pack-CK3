@@ -1,0 +1,83 @@
+﻿l_english:
+
+ trait_pure_saiyan: "Pure Saiyan"
+ trait_pure_saiyan_desc: "This character is apart of an invading race of people from space, the feared Saiyans."
+ trait_pure_saiyan_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] is apart of an invading race of people from space, the feared Saiyans."
+ 
+trait_namekian_race: "Namekian"
+trait_namekian_race_desc: "This character is part of a race of beings from another world, the mystical Namekians, known for their regenerative powers and wisdom."
+trait_namekian_race_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] is part of a race of beings from another world, the mystical Namekians, known for their regenerative powers and wisdom."
+
+ trait_hybrid_saiyan: "Hybrid Saiyan"
+ trait_hybrid_saiyan_desc: "This character is the result of a Saiyan settling down with a Human. A harmonious mixture of Saiyan & Human blood flows within the character."
+ trait_hybrid_saiyan_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] is the result of a Saiyan settling down with a Human. A harmonious mixture of Saiyan & Human blood flows within [ROOT.GetCharacter.GetHerHim]."
+ 
+ trait_saiyan_tail: "Saiyan Tail"
+ trait_saiyan_tail_desc: "This character possesses a tail, a mark of their Saiyan lineage."
+ trait_saiyan_tail_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] possesses a tail, a mark of [ROOT.GetCharacter.GetHerHis] Saiyan lineage."
+ 
+ trait_oozaru: "Oozaru"
+ trait_oozaru_desc: "This character is capable of transforming into the fearsome Oozaru, thanks to their Saiyan tail. Whether or not they can control themselves is up for debate..."
+ trait_oozaru_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] is capable of transforming into the fearsome Oozaru, thanks to their Saiyan tail. Whether or not [ROOT.GetCharacter.GetSheHe] can control [ROOT.GetCharacter.GetHerselfHimself] is up for debate..."
+ trait_track_oozaru: "Control"
+ trait_track_oozaru_desc: "Controlling the Oozaru is a rocky path but one any Saiyan worth their salt has traversed."
+ 
+ trait_ki_control: "Ki Control"
+ trait_ki_control_desc: "This character can control Ki freely. This massive advantage in combat also possesses significant benefits to normal life as well."
+ trait_ki_control_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] can control Ki freely. This massive advantage in combat also possesses significant benefits to normal life as well."
+ 
+ trait_legendary_super_saiyan: "Legendary Super Saiyan"
+ trait_legendary_super_saiyan_desc: "Once every thousand years, a Legendary Saiyan is born. This character is that same legend. A true devil."
+ trait_legendary_super_saiyan_character_desc: "Once every thousand years, a Legendary Saiyan is born. [ROOT.GetCharacter.GetFirstNameNoTooltip] is that same legend. A true devil."
+ 
+ trait_super_saiyan: "Super Saiyan"
+ trait_super_saiyan_desc: "A legendary transformation said to have been a myth. This character has awakened into the legendary Super Saiyan via rage or training, either way they are a force to be reckoned with."
+ trait_super_saiyan_character_desc: "A legendary transformation said to have been a myth. [ROOT.GetCharacter.GetFirstNameNoTooltip] has awakened into the legendary Super Saiyan via rage or training, either way [ROOT.GetCharacter.GetSheHe] is a force to be reckoned with."
+ 
+ trait_super_saiyan_2: "Super Saiyan 2"
+ trait_super_saiyan_2_desc: "A Super Saiyan who has ascended past Super Saiyan, Super Saiyan 2 for short. This form is an incredible upgrade to the original Super Saiyan transformation."
+ trait_super_saiyan_2_character_desc: "A Super Saiyan who has ascended past Super Saiyan, Super Saiyan 2 for short. This form is an incredible upgrade to the original Super Saiyan transformation."
+ 
+ trait_super_saiyan_3: "Super Saiyan 3"
+ trait_super_saiyan_3_desc: "A level of Super Saiyan further beyond the rest. It's immense power is a great thing to wield but... even it has it's drawbacks."
+ trait_super_saiyan_3_character_desc: "A level of Super Saiyan further beyond the rest. It's immense power is a great thing to wield but... even it has it's drawbacks."
+ 
+ trait_super_saiyan_4: "Super Saiyan 4"
+ trait_super_saiyan_4_desc: "The result of controlling the Oozaru while in a 'Golden Oozaru' state. This fourth level of Super Saiyan packs a serious punch and is not to be played with."
+ trait_super_saiyan_4_character_desc: "The result of controlling the Oozaru while in a 'Golden Oozaru' state. This fourth level of Super Saiyan packs a serious punch and is not to be played with."
+ 
+ trait_super_saiyan_god: "Super Saiyan God"
+ trait_super_saiyan_god_desc: "A transformation achieved by 5 righetous Saiyans pouring their energy into another. This godly state is frighteningly powerful for it's small size."
+ trait_super_saiyan_god_character_desc: "A transformation achieved by 5 righetous Saiyans pouring their energy into another. This godly state is frighteningly powerful for it's small size."
+ 
+ trait_low_class_warrior: "Low-Class Warrior"
+ trait_low_class_warrior_desc: "The lowest rank of Saiyans. Making up a majority of Saiyans, they are the standard."
+ trait_low_class_warrior_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] is apart of the lowest rank of Saiyans. Making up a majority of Saiyans, they are the standard."
+ 
+ trait_mid_class_warrior: "Mid-Class Warrior"
+ trait_mid_class_warrior_desc: "The middle rank of Saiyans. Surprisingly a rare occurance in typical Saiyan hierarchy. Mid-Class Saiyans are more respected than the Low-Class, by not by much."
+ trait_mid_class_warrior_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] is apart of the middle rank of Saiyans. Surprisingly a rare occurance in typical Saiyan hierarchy. Mid-Class Saiyans are more respected than the Low-Class, by not by much."
+ 
+ trait_elite_class_warrior: "Elite-Class Warrior"
+ trait_elite_class_warrior_desc: "The highest rank of Saiyans. Extraordinarily rare, Elites are exclusive to Royal Saiyans and their trusted guards who rest at their sides."
+ trait_elite_class_warrior_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] is apart of the highest rank of Saiyans. Extraordinarily rare, Elites are exclusive to Royal Saiyans and their trusted guards who rest at their sides."
+ 
+ trait_scarlet_eyes: "Scarlet Eyes"
+ trait_scarlet_eyes_desc: "This character possesses the unique trait of their eyes turning scarlet when they are emotionally agitated. This trait is unique and the scarlet color of the eyes is hunted due to it's immense worth."
+ trait_scarlet_eyes_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] possesses the unique trait of [ROOT.GetCharacter.GetHerHis] eyes turning scarlet when [ROOT.GetCharacter.GetSheHe] is emotionally agitated. This trait is unique to the Kurta Clan and the scarlet color of the eyes is hunted due to it's immense worth."
+
+ trait_majin_race: "Majin"
+ trait_majin_race_desc: "Born from chaos and molded by magic, Majins are resilient, unpredictable beings. Their regenerative bodies and whimsical nature make them both durable and dangerous."
+ trait_majin_race_character_desc: "[ROOT.GetCharacter.GetFirstName] is a magical Majin, playful yet nearly indestructible."
+
+ trait_frieza_race: "Frieza Race"
+ trait_frieza_race_desc: "This character belongs to the mysterious and terrifying Frieza race — cold, powerful, and capable of immense destruction."
+ trait_frieza_race_character_desc: "[ROOT.GetCharacter.GetFirstName] is a member of the Frieza race, exuding raw power and calculated malice."
+ 
+ trait_golden_form: "Golden Form"
+ trait_golden_form_desc: "This character has ascended into the perfected Golden Form — a radiant and fearsome transformation that amplifies strength, speed, and dominance. It represents mastery of their race's potential."
+ trait_golden_form_character_desc: "[ROOT.GetCharacter.GetFirstName] body shines with divine golden energy, a testament to unmatched power and discipline."
+ 
+ trait_frieza_full: "Full Power"
+ trait_frieza_full_desc: "This character has unleashed their full power, pushing their body to its physical limits. Their aura radiates raw destruction, but sustaining this form comes at a cost."
+ trait_frieza_full_character_desc: "[ROOT.GetCharacter.GetFirstName] is brimming with overwhelming energy, their muscles straining under the intensity of their unleashed might."

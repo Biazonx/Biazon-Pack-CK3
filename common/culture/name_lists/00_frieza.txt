@@ -1,0 +1,48 @@
+name_list_frieza = {
+
+	cadet_dynasty_names = {
+		"dynn_Cooler"
+		"dynn_KingCold"
+		"dynn_Kuriza"
+		"dynn_Frost"
+		"dynn_Chill"
+		"dynn_Icicle"
+		"dynn_Hail"
+		"dynn_Snow"
+		"dynn_Glacius"
+		"dynn_Blizzard"
+		"dynn_Arctica"
+		"dynn_Nieve"
+	}
+
+	dynasty_names = {
+		"dynn_ColdClan"
+		"dynn_IceEmpire"
+		"dynn_ArcticDynasty"
+		"dynn_GlacierHouse"
+		"dynn_NovaClan"
+		"dynn_CryoLineage"
+		"dynn_TyrantDynasty"
+		"dynn_PolarLords"
+		"dynn_WinterBlood"
+	}
+
+	male_names = {
+		Frieza Cooler KingCold Kuriza Frost Chill Hail Snow Icicle Glacius
+		Blizzard Subzero Tundra Arktos Cryon Boreal Shiver Nix Permafrost
+	}
+
+	female_names = {
+		Frieza Frostina Snowla Glacia Nevara Arctika Blizzara Crya Nivella
+		Subzera Hailine Shivera Tundrina Icela Kuriza
+	}
+
+	pat_grf_name_chance = 50
+	mat_grf_name_chance = 0
+	father_name_chance = 50
+
+	pat_grm_name_chance = 10
+	mat_grm_name_chance = 40
+	mother_name_chance = 0
+
+}

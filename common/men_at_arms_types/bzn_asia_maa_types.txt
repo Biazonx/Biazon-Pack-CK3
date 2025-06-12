@@ -1,0 +1,123 @@
+naginata = {
+	type = heavy_infantry
+
+	damage = 33
+	toughness = 20
+	pursuit = 15
+	screen = 17
+
+	terrain_bonus = {
+		forest = { damage = 4 toughness = 6 }
+		hills = { damage = 3 toughness = 8 }
+		mountains = { damage = 5 toughness = 12 }
+	}
+
+	counters = {
+		pikemen = 1
+	}
+
+	can_recruit = {
+		NOR = {
+			government_has_flag = government_is_nomadic
+			government_has_flag = government_is_herder
+		}
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_naginata }
+		NOT = {
+			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
+		}
+	}
+
+	should_show_when_unavailable = {
+		government_allows = subject_men_at_arms
+	}
+
+	buy_cost = { gold = mountaineer_recruitment_cost }
+	low_maintenance_cost = { gold = mountaineer_low_maint_cost }
+	high_maintenance_cost = { gold = mountaineer_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_moderate
+
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = naginata
+}
+
+yumi = {
+	type = archers
+	
+	damage = 20
+	toughness = 10
+	pursuit = 0
+	screen = 0
+	
+	terrain_bonus = {
+		hills = { damage = 12 toughness = 4 }
+		forest = { damage = 4 toughness = 6 }
+	}
+
+	counters = {
+		skirmishers = 1
+		heavy_cavalry = 1
+	}
+
+	can_recruit = {
+		NOR = {
+			government_has_flag = government_is_nomadic
+			government_has_flag = government_is_herder
+		}
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_yumi }
+	}
+
+	should_show_when_unavailable = {
+		government_allows = subject_men_at_arms
+	}
+
+	buy_cost = { gold = longbowmen_recruitment_cost }
+	low_maintenance_cost = { gold = longbowmen_low_maint_cost }
+	high_maintenance_cost = { gold = longbowmen_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_moderate
+
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = yumi
+}
+
+yari = {
+	type = pikemen
+
+	damage = 22
+	toughness = 25
+	pursuit = 0
+	screen = 10
+
+	terrain_bonus = {
+		hills = { damage = 3 toughness = 8 }
+		mountains = { damage = 5 toughness = 12 }
+		desert_mountains = { damage = 5 toughness = 12 }
+	}
+
+	counters = {
+		light_cavalry = 1
+		archers = 1
+	}
+
+	can_recruit = {
+		NOR = {
+			government_has_flag = government_is_nomadic
+			government_has_flag = government_is_herder
+		}
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_yari }
+	}
+
+	should_show_when_unavailable = {
+		government_allows = subject_men_at_arms
+	}
+
+	buy_cost = { gold = luojuzi_recruitment_cost }
+	low_maintenance_cost = { gold = luojuzi_low_maint_cost }
+	high_maintenance_cost = { gold = luojuzi_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_moderate
+
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = yari
+}

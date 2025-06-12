@@ -1,0 +1,31 @@
+﻿l_english:
+
+ take_thrall_interaction:0 "Enslave"
+ take_thrall_interaction_desc:0 "Take [recipient.GetShortUINameNoTooltip] as your [GetTrait('thrall').GetName( GetPlayer )]"
+
+ buy_thrall:1 "Buy Thrall"
+ buy_thrall_desc:1 "Buy a thrall from [recipient.GetShortUINameNoTooltip]"
+ BUY_THRALL_NOTIFICATION:1 "I think [secondary_actor.GetShortUIName] would serve me well as a thrall. Will you let me buy [secondary_actor.GetHerHim]?"
+ buy_thrall_offer_rejected_title:1 "Your offer to buy a thrall was rejected"
+
+ actor_secondary_buy_thrall:0 "Thrall"
+
+ thrall_offered_invalidated_consort:1 "The thrall is already a consort of someone else"
+ thrall_offered_invalidated_betrothed:1 "The thrall is betrothed to someone else"
+
+ sell_thrall:1 "Sell Thrall"
+ sell_thrall_desc:1 "Sell a thrall to [recipient.GetShortUINameNoTooltip]"
+ SELL_THRALL_NOTIFICATION:1 "I think [secondary_actor.GetShortUIName] would serve you well as a thrall. Are you interested in buying [secondary_actor.GetHerHim] for a fair sum?"
+ sell_thrall_offer_rejected_title:1 "Your offer to sell a thrall was rejected"
+ 
+ actor_secondary_sell_thrall:0 "Thrall"
+ thrall_offered_title:0 "Thrall Sold"
+
+ pay_thrall_ransom:1 "Pay Thrall Ransom"
+ pay_thrall_ransom_desc:1 "Pay the thrall ransom for [recipient.GetShortUINameNoTooltip]"
+ PAY_THRALL_RANSOM_PROPOSAL:1 "I want [recipient.GetShortUIName] to be freed. Would you consider releasing [recipient.GetHerHim] in exchange for gold?"
+ recipient_secondary_pay_thrall_ransom_interaction:0 "[Thrall|E]"
+ recipient_secondary_pay_thrall_ransom:0 "Thrall"
+
+ free_thrall_interaction:1 "Free Thrall"
+ free_thrall_interaction_desc:1 "Free [recipient.GetShortUINameNoTooltip] from Thralldom"

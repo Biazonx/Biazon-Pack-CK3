@@ -1,0 +1,60 @@
+﻿# ROOT = ruler
+
+brus_title_succession_laws = {
+	brus_lestvitsa_succession_law = {
+		flag = elective_succession_law
+		title_allegiance_opinion = 10
+
+		can_have = {
+			OR = {
+				government_has_flag = government_is_feudal
+				government_has_flag = government_is_clan
+				government_has_flag = government_is_tribal
+			}
+			highest_held_title_tier >= tier_duchy
+		}
+		can_pass = {
+			can_change_title_law_trigger = yes
+			culture = { has_cultural_parameter = can_use_ladder_elective }
+		}
+		can_title_have = {
+			can_title_have_law_general_trigger = yes
+		}
+		succession = {
+			order_of_succession = election
+			election_type = brus_lestvitsa_elective
+		}
+		can_remove_from_title = {
+			custom_tooltip = {
+				text = brus_elective_removal
+				holder = {
+					OR = {
+						culture = { has_innovation = innovation_heraldry }
+						culture = { has_innovation = innovation_table_of_princes }
+					}
+				}
+			}
+		}
+		on_pass = {
+			root = {
+					if = {
+						limit = { 
+							has_realm_law = confederate_partition_succession_law 
+							culture = { has_innovation = innovation_hereditary_rule }
+						}
+						add_realm_law_skip_effects = partition_succession_law
+					}
+				}
+		}
+		revoke_cost = { prestige = change_title_succession_law_prestige_cost }
+		pass_cost = {
+			prestige = 1000
+		}
+		modifier = {
+			vassal_limit = 10
+			powerful_vassal_opinion = 5
+			title_creation_cost_mult = 0.25
+		}
+	}
+}
+

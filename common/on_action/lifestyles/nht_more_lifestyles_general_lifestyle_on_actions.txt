@@ -1,0 +1,164 @@
+﻿# This is essentially to remove the need to overwrite the remove_all_perk_lifestyle_traits_effect
+# By adding a separate but similar effect to remove the new lifestyles traits
+on_perks_refunded = {
+	on_actions = {	
+		nht_more_lifestyles_on_perks_refunded
+	}
+}
+
+nht_more_lifestyles_on_perks_refunded = {
+	effect = {
+		nht_remove_all_perk_more_lifestyles_traits_effect = yes
+	}
+}
+
+
+quarterly_playable_pulse = {
+	on_actions = {
+		## Game Rule Passive XP
+		on_nht_prowess_passive_lifestyle_experience_pulse
+		on_nht_leadership_passive_lifestyle_experience_pulse
+		
+		## Lifestyles Events
+		nht_prowess_lifestyle_progress_pulse
+		
+		## Secondary Lifestyles
+		on_nht_secondary_prowess_lifestyle_xp
+		on_nht_secondary_leadership_lifestyle_xp
+	}
+}
+
+on_nht_prowess_passive_lifestyle_experience_pulse = {
+	trigger = {
+		NOT = { has_game_rule = nht_passive_prowess_lifestyle_xp_default }
+		OR = { 
+			has_lifestyle = martial_lifestyle
+			has_lifestyle = wanderer_lifestyle
+		}
+		is_adult = yes
+		
+		is_playable_character = yes # Non-playable rulers shouldn't get lifestyle events, even if they still have a lifestyle.
+		exists = capital_province # Because in rare situations landed AI rulers can end up without a capital.		
+	}
+	
+	effect = {
+		if = {
+			limit = { has_game_rule = nht_passive_prowess_lifestyle_xp_vlow	}
+			add_nht_prowess_lifestyle_xp = 9
+		}
+		else_if = {
+			limit = { has_game_rule = nht_passive_prowess_lifestyle_xp_low }
+			add_nht_prowess_lifestyle_xp = 15
+		}
+		else_if = {
+			limit = { has_game_rule = nht_passive_prowess_lifestyle_xp_medium }
+			add_nht_prowess_lifestyle_xp = 30
+		}
+		else_if = {
+			limit = { has_game_rule = nht_passive_prowess_lifestyle_xp_high	}
+			add_nht_prowess_lifestyle_xp = 48
+		}
+		else_if = {
+			limit = { has_game_rule = nht_passive_prowess_lifestyle_xp_vhigh }
+			add_nht_prowess_lifestyle_xp = 75
+		}
+	}
+}
+
+
+on_nht_secondary_prowess_lifestyle_xp = {
+	trigger = {
+		has_game_rule = nht_secondary_lifestyle
+		OR = { 
+			has_lifestyle = martial_lifestyle
+			has_lifestyle = intrigue_lifestyle	
+			has_lifestyle = wanderer_lifestyle
+		}
+		is_adult = yes
+		is_playable_character = yes # Non-playable rulers shouldn't get lifestyle events, even if they still have a lifestyle.
+		exists = capital_province # Because in rare situations landed AI rulers can end up without a capital.	
+	}
+	
+	effect = {
+		if = {
+			limit = { has_game_rule = nht_secondary_lifestyle }
+			add_nht_prowess_lifestyle_xp = 48
+		}
+	}
+}
+
+on_nht_secondary_leadership_lifestyle_xp = {
+	trigger = {
+		has_game_rule = nht_secondary_lifestyle
+		OR = { 
+			has_lifestyle = diplomacy_lifestyle
+			has_lifestyle = stewardship_lifestyle
+			has_lifestyle = learning_lifestyle		
+		}
+		is_adult = yes
+		is_playable_character = yes # Non-playable rulers shouldn't get lifestyle events, even if they still have a lifestyle.
+		exists = capital_province # Because in rare situations landed AI rulers can end up without a capital.		
+	}
+	
+	effect = {
+		if = {
+			limit = { has_game_rule = nht_secondary_lifestyle }
+			add_nht_leadership_lifestyle_xp = 48
+		}
+	}
+}
+
+on_nht_leadership_passive_lifestyle_experience_pulse = {
+	trigger = {
+		NOT = { has_game_rule = nht_passive_leadership_lifestyle_xp_default }
+		OR = {
+			has_lifestyle = diplomacy_lifestyle
+			has_lifestyle = stewardship_lifestyle			
+		}		
+		is_adult = yes
+		is_playable_character = yes # Non-playable rulers shouldn't get lifestyle events, even if they still have a lifestyle.
+		exists = capital_province # Because in rare situations landed AI rulers can end up without a capital.	
+	}
+	
+	effect = {
+		if = {
+			limit = { has_game_rule = nht_passive_leadership_lifestyle_xp_vlow	}
+			add_nht_leadership_lifestyle_xp = 9
+		}
+		else_if = {
+			limit = { has_game_rule = nht_passive_leadership_lifestyle_xp_low }
+			add_nht_leadership_lifestyle_xp = 15
+		}
+		else_if = {
+			limit = { has_game_rule = nht_passive_leadership_lifestyle_xp_medium }
+			add_nht_leadership_lifestyle_xp = 30
+		}
+		else_if = {
+			limit = { has_game_rule = nht_passive_leadership_lifestyle_xp_high	}
+			add_nht_leadership_lifestyle_xp = 48
+		}
+		else_if = {
+			limit = { has_game_rule = nht_passive_leadership_lifestyle_xp_vhigh }
+			add_nht_leadership_lifestyle_xp = 75
+		}
+	}
+}
+
+#on_title_gain = {
+#	on_actions = {
+#		## Bonus for Prowess Lifestyle based on Prowess
+#		on_title_gain_add_nht_prowess_lifestyle_bonus
+#
+#	}
+#}
+
+#on_title_gain_add_nht_prowess_lifestyle_bonus = {
+#	trigger = {
+#		is_ai = no
+#		has_lifestyle = nht_prowess_lifestyle					
+#		is_adult = yes
+#	}
+#	effect = {
+#
+#	}
+#}

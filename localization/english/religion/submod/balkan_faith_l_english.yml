@@ -1,0 +1,439 @@
+﻿l_english:
+
+    #dacian
+    dacian_idolism:0 "Balkanism"
+    dacian_idolism_adj:0 "Balkanism"
+    dacian_idolism_adherent:0 "Balkanismist"
+    dacian_idolism_adherent_plural:0 "Balkanismists"
+    dacian_idolism_desc:0 "The tribes who dwell in the Balkan lands have a diverse set of beliefs, rites, and festivals, which in recent times have influenced and been influenced by Hellenic and Roman ideas." 
+
+    dacian_idolism_old:0 "Old Balkanism"
+    dacian_idolism_old_adj:0 "Old Balkanism"
+    dacian_idolism_adherent_old:0 "Old Balkanismist"
+    dacian_idolism_old_adherent_plural:0 "Old Balkanismists"
+    dacian_idolism_old_desc:0 "The tribes who dwell in the Balkan lands have a diverse set of beliefs, rites, and festivals, which in recent times have influenced and been influenced by Hellenic and Roman ideas." 
+
+    dacian_idolism_religious_head_title:0 "High Priest"
+    dacian_idolism_divine_realm:0 "Zalmoxis Realm"
+    dacian_idolism_religious_symbol:0 "Dacian draco"
+    dacian_idolism_religious_text:0 "Rituals and ceremonies"
+    #roman_pantheon_the_gods:0 "Roman pantheon of gods"
+
+    #dacian gods/goddesses Localization
+
+    #Gebeleizis Localization
+    dacian_idolism_high_god_name:0 "Gebeleizis"
+    dacian_idolism_high_god_name_possessive:0 "Gebeleizis's"
+    dacian_idolism_high_god_name_alternate:0 "Gebeleizis"
+    dacian_idolism_high_god_name_alternate_possessive:0 "Gebeleizis's"
+    dacian_idolism_high_god_shehe:0 "He"
+    dacian_idolism_high_god_herselfhimself:0 "Himself"
+    dacian_idolism_high_god_herhis:0 "His"
+
+    #Creater god Localization
+    dacian_idolism_creator_god_name:0 "Zalmoxis"
+    dacian_idolism_creator_god_name_possessive:0 "Zalmoxis's"
+
+    #Health Goddess Derzelas
+    dacian_idolism_health_god_name:0 "Derzelas"
+    dacian_idolism_health_god_name_possessive:0 "Derzelas's"
+
+    #Fertility God Dionysus Localization
+    dacian_idolism_fertility_god_name:0 "Dionysus"
+    dacian_idolism_fertility_god_name_possessive:0 "Dionysus's"
+
+    #Wealth god Dionysus Localization
+    dacian_idolism_wealth_god_name:0 "Dionysus"
+    dacian_idolism_wealth_god_name_possessive:0 "Dionysus's"
+
+    #Household god Kotys
+    dacian_idolism_household_god_name:0 "Kotys"
+    dacian_idolism_household_god_name_possessive:0 "Kotys's"
+
+    #Fate god Ursitoare Localization
+    dacian_idolism_fate_god_name:0 "Ursitoare"
+    dacian_idolism_fate_god_name_possessive:0 "Ursitoare's"
+
+    #knowledge god Zalmoxis Localization
+    dacian_idolism_knowledge_god_name:0 "Zalmoxis"
+    dacian_idolism_knowledge_god_name_possessive:0 "Zalmoxis's"
+
+    #War god Pleistoros Localization
+    dacian_idolism_war_god_name:0 "Pleistoros"
+    dacian_idolism_war_god_name_possessive:0 "Pleistoros's"
+
+    #Trickster god Pleistoros Localization
+    dacian_idolism_trickster_god_name:0 "Pleistoros"
+    dacian_idolism_trickster_god_name_possessive:0 "Pleistoros's"
+
+    #Night goddess Bendis Localization
+    dacian_idolism_night_god_name:0 "Bendis"
+    dacian_idolism_night_god_name_possessive:0 "Bendis's"
+
+    #Water god Gebeleizis Localization
+    dacian_idolism_water_god_name:0 "Gebeleizis"
+    dacian_idolism_water_god_name_possessive:0 "Gebeleizis's"
+
+    #evil gods names 
+    dacian_idolism_evil_god_spirits:0 "Spirits" 
+    dacian_idolism_evil_god_spirits:0 "Spirits"
+
+    #witch goddess
+    dacian_idolism_witchgodname_zalmoxis:0 "Zalmoxis"
+    dacian_idolism_witchgodname_zalmoxis_possesive:0 "Zalmoxis's"
+
+    #Devil god   #For now there is just no thing like a devil god in the dacian religion
+    dacian_idolism_devil_name:0 "Zalmoxis" 
+    dacian_idolism_devil_name_possessive:0 "Zalmoxis's"
+
+    #Death god Zalmoxis 
+    dacian_idolism_death_deity_name:0 "Zalmoxis"
+    dacian_idolism_death_deity_name_possessive:0 "Zalmoxis's"
+
+    #Good gods names 
+    dacian_idolism_good_god_zalmoxis:0 "Zalmoxis" 
+    dacian_idolism_good_god_gebeleizis:0 "Gebeleizis" 
+    dacian_idolism_good_god_ursitoare:0 "Uristoare" 
+    dacian_idolism_good_god_pleistoros:0 "Pleistoros" 
+    dacian_idolism_good_god_dionysus:0 "Dionysus" 
+    dacian_idolism_good_god_derzelas:0 "Derzelas" 
+    dacian_idolism_good_god_bendis:0 "Bendis" 
+    dacian_idolism_good_god_sabazios:0 "Sabazios"
+
+    #dacian priest flamen vestals
+
+    #dacian priest 
+    dacian_idolism_priest_male:0 "Priest"
+    dacian_idolism_priest_male_plural:0 "Priests"
+
+    #dacian priestess 
+    dacian_idolism_priest_female:0 "Priestess" 
+    dacian_idolism_priest_female_plural:0 "Priestesses" 
+
+    #dacian high priest
+    dacian_idolism_bishop_male:0 "Priest" 
+    dacian_idolism_bishop_male_plural:0 "Priests" 
+
+    #roman names
+    #males
+    reserved_male_names:0 "Dacian male names"
+    #Female 
+    reserved_female_names:0 "Dacian female names"
+
+    #holy orders: 
+    holy_order_sons_of_Pleistoros:0 "Sons of Pleistoros"
+    holy_order_Protectors_of_zalmoxis:0 "Protectors of Zalmoxis"
+
+    
+    #Zalmoxism
+    zalmoxism:0 "Zalmoxianism"
+    zalmoxism_adj:0 "Zalmoxian"
+    zalmoxism_adherent:0 "Zalmoxianist"
+    zalmoxism_adherent_plural:0 "Zalmoxianists"
+    zalmoxism_desc:0 "The greatest deity is Zalmoxis, whose worship is faciliated by a class of priests. It is he who instructed his followers about the immortality of human souls, and how after death, people merely change their location and are reborn elsewhere. Orpheus, the Thracian bard of Greek legend, is also an important figure of veneration." 
+
+    zalmoxism_old:0 "Old Zalmoxianism"
+    zalmoxism_old_adj:0 "Old Zalmoxian"
+    zalmoxism_adherent_old:0 "Old Zalmoxianist"
+    zalmoxism_old_adherent_plural:0 "Old Zalmoxianists"
+    zalmoxism_old_desc:0 "The greatest deity is Zalmoxis, whose worship is faciliated by a class of priests. It is he who instructed his followers about the immortality of human souls, and how after death, people merely change their location and are reborn elsewhere. Orpheus, the Thracian bard of Greek legend, is also an important figure of veneration." 
+
+    zalmoxism_religious_head_title:0 "High Priest"
+    zalmoxism_divine_realm:0 "Zalmoxis Realm"
+    zalmoxism_religious_symbol:0 "Dacian draco"
+    zalmoxism_religious_text:0 "Rituals and ceremonies"
+    #roman_pantheon_the_gods:0 "Roman pantheon of gods"
+
+    #dacian gods/goddesses Localization
+
+    #Gebeleizis Localization
+    zalmoxism_high_god_name:0 "Zalmoxis"
+    zalmoxism_high_god_name_possessive:0 "Zalmoxis's"
+    zalmoxism_high_god_name_alternate:0 "Zalmoxis"
+    zalmoxism_high_god_name_alternate_possessive:0 "Zalmoxis's"
+    zalmoxism_high_god_shehe:0 "He"
+    zalmoxism_high_god_herselfhimself:0 "Himself"
+    zalmoxism_high_god_herhis:0 "His"
+    
+    #Creater god Localization
+    zalmoxism_creator_god_name:0 "$zalmoxism_high_god_name$"
+    zalmoxism_creator_god_name_possessive:0 "$zalmoxism_high_god_name_possessive$"
+
+    #Health Goddess Derzelas
+    zalmoxism_health_god_name:0 "$zalmoxism_high_god_name$"
+    zalmoxism_health_god_name_possessive:0 "$zalmoxism_high_god_name_possessive$"
+
+    #Fertility God Dionysus Localization
+    zalmoxism_fertility_god_name:0 "$zalmoxism_high_god_name$"
+    zalmoxism_fertility_god_name_possessive:0 "$zalmoxism_high_god_name_possessive$"
+
+    #Wealth god Dionysus Localization
+    zalmoxism_wealth_god_name:0 "$zalmoxism_high_god_name$"
+    zalmoxism_wealth_god_name_possessive:0 "$zalmoxism_high_god_name_possessive$"
+
+    #Household god Kotys
+    zalmoxism_household_god_name:0 "$zalmoxism_high_god_name$"
+    zalmoxism_household_god_name_possessive:0 "$zalmoxism_high_god_name_possessive$"
+
+    #Fate god Ursitoare Localization
+    zalmoxism_fate_god_name:0 "$zalmoxism_high_god_name$"
+    zalmoxism_fate_god_name_possessive:0 "$zalmoxism_high_god_name_possessive$"
+
+    #knowledge god Zalmoxis Localization
+    zalmoxism_knowledge_god_name:0 "$zalmoxism_high_god_name$"
+    zalmoxism_knowledge_god_name_possessive:0 "$zalmoxism_high_god_name_possessive$"
+
+    #War god Nergal Localization
+    zalmoxism_war_god_name:0 "$zalmoxism_high_god_name$"
+    zalmoxism_war_god_name_possessive:0 "$zalmoxism_high_god_name_possessive$"
+
+    #Trickster god Pleistoros Localization
+    zalmoxism_trickster_god_name:0 "Trickster"
+    zalmoxism_trickster_god_name_possessive:0 "Trickster"
+
+    #Night goddess Bendis Localization
+    zalmoxism_night_god_name:0 "$zalmoxism_high_god_name$"
+    zalmoxism_night_god_name_possessive:0 "$zalmoxism_high_god_name_possessive$"
+
+    #Water god Gebeleizis Localization
+    zalmoxism_water_god_name:0 "$zalmoxism_high_god_name$"
+    zalmoxism_water_god_name_possessive:0 "$zalmoxism_high_god_name_possessive$"
+
+    #evil gods names 
+    zalmoxism_evil_god_spirits:0 "Spirits" 
+    zalmoxism_evil_god_spirits:0 "Spirits"
+
+    #witch goddess
+    zalmoxism_witchgodname_zalmoxis:0 "$zalmoxism_high_god_name$"
+    zalmoxism_witchgodname_zalmoxis_possesive:0 "$zalmoxism_high_god_name_possessive$"
+
+    #Devil god   #For now there is just no thing like a devil god in the dacian religion
+    zalmoxism_devil_name:0 "$zalmoxism_high_god_name$" 
+    zalmoxism_devil_name_possessive:0 "$zalmoxism_high_god_name_possessive$"
+
+    #Death god Zalmoxis 
+    zalmoxism_death_deity_name:0 "$zalmoxism_high_god_name$"
+    zalmoxism_death_deity_name_possessive:0 "$zalmoxism_high_god_name_possessive$"
+
+    #Good gods names 
+    zalmoxism_good_god_zalmoxis:0 "Zalmoxis" 
+    zalmoxism_good_god_gebeleizis:0 "Zalmoxis" 
+    zalmoxism_good_god_ursitoare:0 "Zalmoxis" 
+    zalmoxism_good_god_pleistoros:0 "Zalmoxis" 
+    zalmoxism_good_god_dionysus:0 "Zalmoxis" 
+    zalmoxism_good_god_derzelas:0 "Zalmoxis" 
+    zalmoxism_good_god_bendis:0 "Zalmoxis" 
+    zalmoxism_good_god_sabazios:0 "Zalmoxis"
+
+    #dacian priest flamen vestals
+
+    #dacian priest 
+    zalmoxism_priest_male:0 "Priest"
+    zalmoxism_priest_male_plural:0 "Priests"
+
+    #dacian priestess 
+    zalmoxism_priest_female:0 "Priestess" 
+    zalmoxism_priest_female_plural:0 "Priestesses" 
+
+    #dacian high priest
+    zalmoxism_bishop_male:0 "Priest" 
+    zalmoxism_bishop_male_plural:0 "Priests" 
+
+ roman_illyrian_idolism_religious_symbol:0 "Offer altar"
+
+ #Pannonian - Bolaurism
+ pannonian_faith:0 "Vidasianism"
+ pannonian_faith_adj:0 "Vidasian"
+ pannonian_faith_adherent:0 "Vidasian"
+ pannonian_faith_adherent_plural:0 "Vidasians"
+ pannonian_faith_desc:0 "Indigenous beliefs of Pannonian folks, the nature god Silvanus is one of the most prominently attested deities in Pannonia." 
+
+ paeonian_faith:0 "Dyalism"
+ paeonian_faith_adj:0 "Dyalist"
+ paeonian_faith_adherent:0 "Dyalist"
+ paeonian_faith_adherent_plural:0 "Dyalists"
+ paeonian_faith_desc:0 "Pannonian adopted the cult of Dionysus, known amongst them as Dyalus or Dryalus, and Herodotus mentions that the Thracian and Paeonian women offered sacrifice to Queen Artemis (probably Bendis)."
+
+ #Bendism
+ bendism_faith:0 "Bendism"
+ bendism_faith_adj:0 "Bendist"
+ bendism_faith_adherent:0 "Bendist"
+ bendism_faith_adherent_plural:0 "Bendists"
+ bendism_faith_desc:0 "Encouraged by the Great Mother’s greatness, her Bendist adherents honour her by achieving victories in war and holding night-time races.\n\n#weak Although Bendis, a name for the Thracian Great Mother, was worshipped in southern Thrace and Paeonia, she was most popularly worshipped among the Bithynians. This Thracian tribe had long settled in the northwest of Anatolia at this time. The Bithynians dedicated an entire month in her honour called Bendideios and is attested on coins issued by Nikomedes I where she is depicted as a warrior goddess holding two javelins.\n\nWorship of Bendis had spread to Athens by the Peloponnesian War. In a festival dedicated to her, the worshippers set out from Athens and Piraeus to sacrifice a pig during the day. During the evening, they held a race on horseback between Athens and Piraeus and passed burning logs among each other. During the night, the worshippers enjoyed a feast that was possibly of an orgiastic nature.#!"
+
+ #Odrysian - Mezenism
+ odrysian_faith:0 "Mezenism"
+ odrysian_faith_adj:0 "Mezenist"
+ odrysian_faith_adherent:0 "Mezenist"
+ odrysian_faith_adherent_plural:0 "Mezenists"
+ odrysian_faith_desc:0 "Local belief that covers the central & eastern parts of Thrace, roughly corresponding to the core territories of the Odrysian kingdom."
+
+ #Tithanism
+ tithanism_faith:0 "Tithanism"
+ tithanism_faith_adj:0 "Tithanist"
+ tithanism_faith_adherent:0 "Tithanist"
+ tithanism_faith_adherent_plural:0 "Tithanists"
+ tithanism_faith_desc:0 "Thracian word of 'titha' meaning 'light/ radiance'." 
+
+ # Sabazaic
+ sabazaic_faith:0 "Sabazaism"
+ sabazaic_faith_adj:0 "Sabazaic"
+ sabazaic_faith_adherent:0 "Sabazaic"
+ sabazaic_faith_adherent_plural:0 "Sabazaics"
+ sabazaic_faith_desc:0 "Local belief that covers parts of western Thrace, including parts of the Nestos and Strymon valleys, and the plain around Serdica." # TODO
+
+ # Pleistorism
+ pleistorism_faith:0 "Pleistorism"
+ pleistorism_faith_adj:0 "Pleistorist"
+ pleistorism_faith_adherent:0 "Pleistorist"
+ pleistorism_faith_adherent_plural:0 "Pleistorists"
+ pleistorism_faith_desc:0 "Covers southeastern Thrace, corresponding to the Thynian culture. The Apsinthioi were said to worship the war god Pleistorus, and they and the Kainoi allegedly practised human sacrifice." # TODO
+
+ # Thrausian - Perperanism
+ thrausian_faith:0 "Perperanism"
+ thrausian_faith_adj:0 "Perperan"
+ thrausian_faith_adherent:0 "Perperan"
+ thrausian_faith_adherent_plural:0 "Perperans"
+ thrausian_faith_desc:0 "Local belief that covers parts of south-eastern Thrace where megaliths have been found in large quantities."
+
+ #Iapodian - Bindenism
+ iapodian_faith:0 "Bindenism"
+ iapodian_faith_adj:0 "Bindenic"
+ iapodian_faith_adherent:0 "Bindenist"
+ iapodian_faith_adherent_plural:0 "Bindenists"
+ iapodian_faith_desc:0 "The original religion of Iapodes is scarcely known, and it appears to be similar with other eastward Illyrians." # TODO #TODO
+
+ #Illyrian - Bolauranism
+ illyrian_faith:0 "Bolauranism"
+ illyrian_faith_adj:0 "Bolauric"
+ illyrian_faith_adherent:0 "Bolaurist"
+ illyrian_faith_adherent_plural:0 "Bolaurists"
+ illyrian_faith_desc:0 "Serpent cult which covers southern Illyria and the coast as far as Liburnia."
+
+ histrian_faith:0 "Sentonism"
+ histrian_faith_adj:0 "Sentonic"
+ histrian_faith_adherent:0 "Sentonist"
+ histrian_faith_adherent_plural:0 "Sentonists"
+ histrian_faith_desc:0 "Local belief that covers parts of Istrian Region."
+
+ liburnian_faith:0 "Anzotism"
+ liburnian_faith_adj:0 "Anzotisc"
+ liburnian_faith_adherent:0 "Anzotist"
+ liburnian_faith_adherent_plural:0 "Anzotists"
+ liburnian_faith_desc:0 "Local belief that covers parts of which covers southern Illyria and the coast as far as Liburnia."
+
+ camunic_high_god_name:0 "Reitia"
+ camunic_high_god_name_possessive:0 "Reitia's"
+ camunic_high_god_she_he:0 "She"
+ camunic_high_god_alternate:0 "the Allmother"
+ camunic_high_god_alternate_possessive:0 "the Allmother's"
+ camunic_good_god_sun:0 "the God Sun"
+ camunic_devil_name:0 "the Goddess Moon"
+ camunic_devil_name_possessive:0 "the Goddess Moon's"
+ camunic_evil_goddess_moon:0 "the Goddess Moon"
+ camunic_evil_goddess_moon_possessive:0 "of the Goddess Moon's"
+ camunic_death_deity_name:0 "the Goddess Moon"
+ camunic_death_deity_name_possessive:0 "the Goddess Moon's"
+ camunic_divine_realm:0 "the Realm of the Rose"
+ camunic_positive_afterlife:0 "Reitia's arms"
+ camunic_religious_symbol:0 "Rosa Camuna"
+ camunic_religious_text:0 "heroic sagas"
+ camunic_religious_head_title:0 "Reitia's Incarnate"
+ camunic_religious_head_title_name:0 "Rosal Leader"
+ camunic_priest_male:0 "Rose Disciple"
+ camunic_priest_male_plural:0 "Rose Disciples"
+ camunic_priest_female:0 "Rose Disciple"
+ camunic_priest_female_plural:0 "Rose Disciples"
+ camunic_priest_neuter:0 "Rose Disciple"
+ camunic_priest_neuter_plural:0 "Rose Disciples"
+ camunic_bishop_male:0 "Rose High Follower"
+ camunic_bishop_male_plural:0 "Rose High Followers"
+ camunic_bishop_female:0 "Rose High Follower"
+ camunic_bishop_female_plural:0 "Rose High Followers"
+ camunic_bishop_neuter:0 "Rose High Follower"
+ camunic_bishop_neuter_plural:0 "Rose High Followers"
+
+ camunic_creator_god_name:0 "Reitia"
+ camunic_creator_god_name_possessive:0 "Reitia's"
+ camunic_health_god_name:0 "Kernunnus"
+ camunic_health_god_name_possessive:0 "Kernunnus'"
+ camunic_fertility_god_name:0 "Kernunnus"
+ camunic_fertility_god_name_possessive:0 "Kernunnus'"
+ camunic_wealth_god_name:0 "the God Sun"
+ camunic_wealth_god_name_possessive:0 "the God Sun's"
+ camunic_household_god_name:0 "Reitia"
+ camunic_household_god_name_possessive:0 "Reitia's"
+ camunic_fate_god_name:0 "the Rosa Camuna"
+ camunic_fate_god_name_possessive:0 "the Rosa Camuna's"
+ camunic_knowledge_god_name:0 "the Rosa Camuna"
+ camunic_knowledge_god_name_possessive:0 "the Rosa Camuna's"
+ camunic_war_god_name:0 "Kernunnus"
+ camunic_war_god_name_possessive:0 "Kernunnus'"
+ camunic_trickster_god_name:0 "the Goddess Moon"
+ camunic_trickster_god_name_possessive:0 "the Goddess Moon's"
+ camunic_night_god_name:0 "the Goddess Moon"
+ camunic_night_god_name_possessive:0 "the Goddess Moon's"
+ camunic_water_god_name:0 "the Rosa Camuna"
+ camunic_water_god_name_possessive:0 "the Rosa Camuna's"
+ 
+ camunic_house_of_worship:0 "Temple of the Rosa Camuna"
+ camunic_house_of_worship_plural:0 "Temples of the Rosa Camuna"
+
+ camunic_pagan:0 "Camunism"
+ camunic_pagan_adj:0 "Camunic"
+ camunic_pagan_adherent:0 "Camunist"
+ camunic_pagan_adherent_plural:0 "Camunists"
+
+ camunic_pagan_old:0 "Old Camunism"
+ camunic_pagan_old_adj:0 "Old Camunic"
+ camunic_pagan_old_adherent:0 "Old Camunist"
+ camunic_pagan_old_adherent_plural:0 "Old Camunists"
+
+ venetic_paganism:0 "Venetism"
+ venetic_paganism_adj:0 "Venetist"
+ venetic_paganism_adherent:0 "Venetist"
+ venetic_paganism_adherent_plural:0 "Venetists"
+ venetic_paganism_desc:0 "Before the arrival of the Romans, the religion followed across the northeast of the Italian peninsula, from the coast of the Adriatic, to the Alpine mountains, was a polytheistic religion, sharing many deities with both other Italic peoples, and with the Celts and Illyrians. Notable Venetic deities include Reitia, Trimusiate, Altino and Enaios."
+ venetic_paganism_old:0 "Old Venetism"
+ venetic_paganism_old_adj:0 "Old Venetist"
+ venetic_paganism_old_adherent:0 "Venetic Pagan"
+ venetic_paganism_old_adherent_plural:0 "Venetic Pagans"
+ 
+ raetic_pagan:0 "Raetism"
+ raetic_pagan_adj:0 "Raetic"
+ raetic_pagan_adherent:0 "Raetist"
+ raetic_pagan_adherent_plural:0 "Raetists"
+ raetic_pagan_desc:0 "For thousands of years, untill the Romans arrived to conquer them, the Raetians followed a polytheistic belief system. Though little else is known of their faith, votive offerings to the ancient Raetic Gods were widespread."
+ raetic_pagan_old:0 "Old Raetism"
+ raetic_pagan_old_adj:0 "Old Raetic"
+ raetic_pagan_old_adherent:0 "Old Raetist"
+ raetic_pagan_old_adherent_plural:0 "Old Raetists"
+
+ reitia:0 "Reitia"
+ reitia_possessive: "Reitias"
+ trumusijates:0 "Tumusiates"
+ trumusijates_possesssive:0 "Tumusiates'"
+ bouleno:0 "Bouleno"
+ bouleno_possessive:0 "Boulenos"
+ fladukia:0 "Fladukia"
+ fladukia_possessive:0 "Fladukias"
+ vetusa:0 "Vetusa"
+ vetusa_possessive:0 "Vetusas"
+ 
+ reitian_bible:0 "Sainates Writes"
+ reitian_high_priest:0 "Klovetes Soubes"
+ reitian_high_circle:0 "Sacred Council"
+ reitian_priests:0 "Klovetebos"
+ reitian_priest:0 "Klovetes"
+ reitian_priestess:0 "Klovetes"
+ reitian_priests:0 "Klovetebos"
+ 
+ retic_evil_god:0 "Manos" #based on some interpretations, manos could also just mean hand
+
+ venetic_eternity:0 "Keilomnos" #my guess based on proto-italic Kailom
+ venetic_hell:0 "Anguninos" ##my guess based on proto-italic əngʷnis
+
+ holy_order_rosa_camuna:1 "Knights of the Rosa Camuna"
+ holy_order_faithful_of_reitia:0 "Faithful of Reitia"
+ holy_order_warriors_of_kernunnus:0 "Warriors of Kernunnus"
+ holy_order_guardians_of_the_realm_of_the_rose:0 "Guardians of the Realm of the Rose"

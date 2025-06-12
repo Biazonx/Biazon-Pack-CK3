@@ -1,0 +1,17 @@
+oge_slavery = {
+	
+	categories = {
+		historicity faith
+	}
+	
+	default = oge_slavery_enabled
+
+	oge_slavery_enabled = {
+	
+	}
+	
+	oge_slavery_disabled = {
+		
+	}
+
+}

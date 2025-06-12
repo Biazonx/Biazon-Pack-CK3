@@ -1,0 +1,3 @@
+﻿NCharacter = {
+    FOCUS_ADULT_COOLDOWN_MONTHS = 12
+}

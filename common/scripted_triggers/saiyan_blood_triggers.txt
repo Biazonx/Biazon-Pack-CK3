@@ -1,0 +1,7 @@
+﻿is_pure_saiyan = {
+	has_trait = pure_saiyan
+}
+
+is_hybrid_saiyan = {
+	has_trait = hybrid_saiyan
+}

@@ -1,0 +1,230 @@
+d_bzn_tecuetlaza = { # Tecuetlaza
+	867.1.1 = {
+		liege = 0
+		holder = bzn_tecuetlaza
+		government = landless_adventurer_government
+		succession_laws = { landless_adventurer_succession_law }
+		effect = {
+			create_landless_adventurer_title_history_effect = yes
+			set_variable = { name = adventurer_creation_reason value = flag:historical }
+		}
+	}
+	867.10.1 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 867.10.1 }
+		}
+	}
+	900.1.1 = {
+		holder = 0
+	}
+}
+
+d_bzn_yitzhak = { # Yitzhak bar Shimon
+	867.1.1 = {
+		liege = 0
+		holder = bzn_yitzhak
+		government = landless_adventurer_government
+		succession_laws = { landless_adventurer_succession_law }
+		effect = {
+			create_landless_adventurer_title_history_effect = yes
+			set_variable = { name = adventurer_creation_reason value = flag:historical }
+		}
+	}
+	867.10.1 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 867.10.1 }
+		}
+	}
+	900.1.1 = {
+		holder = 0
+	}
+}
+
+
+d_bzn_piccolo = { # Piccolo
+	867.1.1 = {
+		liege = 0
+		holder = bzn_piccolo
+		government = landless_adventurer_government
+		succession_laws = { landless_adventurer_succession_law }
+		effect = {
+			create_landless_adventurer_title_history_effect = yes
+			set_variable = { name = adventurer_creation_reason value = flag:historical }
+		}
+	}
+	867.10.1 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 867.10.1 }
+		}
+	}
+	900.1.1 = {
+		holder = 0
+	}
+}
+
+d_bzn_cold = { # King Cold
+	867.1.1 = {
+		liege = 0
+		holder = bzn_cold
+		government = landless_adventurer_government
+		succession_laws = { landless_adventurer_succession_law }
+		effect = {
+			create_landless_adventurer_title_history_effect = yes
+			set_variable = { name = adventurer_creation_reason value = flag:historical }
+		}
+	}
+	867.10.1 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 867.10.1 }
+		}
+	}
+	900.1.1 = {
+		holder = 0
+	}
+}
+
+d_bzn_buu = { # Kid Buu
+	867.1.1 = {
+		liege = 0
+		holder = bzn_buu
+		government = landless_adventurer_government
+		succession_laws = { landless_adventurer_succession_law }
+		effect = {
+			create_landless_adventurer_title_history_effect = yes
+			set_variable = { name = adventurer_creation_reason value = flag:historical }
+		}
+	}
+	867.10.1 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 867.10.1 }
+		}
+	}
+	900.1.1 = {
+		holder = 0
+	}
+}
+
+
+
+d_bzn_raditz = { # Raditz
+	867.1.1 = {
+		liege = 0
+		holder = bzn_raditz
+		government = landless_adventurer_government
+		succession_laws = { landless_adventurer_succession_law }
+		effect = {
+			create_landless_adventurer_title_history_effect = yes
+			set_variable = { name = adventurer_creation_reason value = flag:historical }
+		}
+	}
+	867.10.1 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 867.10.1 }
+		}
+	}
+	900.1.1 = {
+		holder = 0
+	}
+}
+
+d_bzn_ahmose = { # Ahmose
+	867.1.1 = {
+		liege = 0
+		holder = bzn_ahmose
+		government = landless_adventurer_government
+		succession_laws = { landless_adventurer_succession_law }
+		effect = {
+			create_landless_adventurer_title_history_effect = yes
+			set_variable = { name = adventurer_creation_reason value = flag:historical }
+		}
+	}
+	867.10.1 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 867.10.1 }
+		}
+	}
+	900.1.1 = {
+		holder = 0
+	}
+}
+
+d_bzn_balam = { # Kinam Balam
+	1066.1.1 = {
+		liege = 0
+		holder = bzn_balam
+		government = landless_adventurer_government
+		succession_laws = { landless_adventurer_succession_law }
+		effect = {
+			create_landless_adventurer_title_history_effect = yes
+			set_variable = { name = adventurer_creation_reason value = flag:historical }
+		}
+	}
+	1066.10.1 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 1066.10.1 }
+		}
+	}
+	1100.1.1 = {
+		holder = 0
+	}
+}
+
+d_bzn_itzcoatl = { # Itzcoatl
+	1178.1.1 = {
+		liege = 0
+		holder = bzn_itzcoatl
+		government = landless_adventurer_government
+		succession_laws = { landless_adventurer_succession_law }
+		effect = {
+			create_landless_adventurer_title_history_effect = yes
+			set_variable = { name = adventurer_creation_reason value = flag:historical }
+		}
+	}
+	1178.10.1 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 1178.10.1 }
+		}
+	}
+	1200.1.1 = {
+		holder = 0
+	}
+}
+
+d_bzn_hong = { # Hong Xiuquan
+	1178.1.1 = {
+		liege = 0
+		holder = bzn_hong
+		government = landless_adventurer_government
+		succession_laws = { landless_adventurer_succession_law }
+		effect = {
+			create_landless_adventurer_title_history_effect = yes
+			set_variable = { name = adventurer_creation_reason value = flag:historical }
+		}
+	}
+	1178.10.1 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 1178.10.1 }
+		}
+	}
+	1200.1.1 = {
+		holder = 0
+	}
+}
+
+k_romania = {
+	867.1.1 = { change_development_level = 3 }
+	1066.1.1 = { change_development_level = 7 }
+	1178.1.1 = { change_development_level = 24 }
+}
+
+k_teutonic = {
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 10 }
+	1178.1.1 = { change_development_level = 24 }
+}
+
+e_yugoslavia = {
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 10 }
+	1178.1.1 = { change_development_level = 24 }
+}

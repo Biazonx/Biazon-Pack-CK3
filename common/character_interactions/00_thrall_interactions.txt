@@ -1,0 +1,1962 @@
+﻿
+
+###
+#	SPECIAL NOTE
+#
+#	When evaluating whether or not the AI can send this interaction to the
+#	player, the AI will use the ai_accept value and send a proposal to the 
+#	player IF AND ONLY IF the player, as an AI actor, would have positive
+#	ai_accept value. This is a special case for this specific interaction, 
+#	and is being calculated specifically in code.  
+#
+
+
+take_thrall_interaction = {
+	interface_priority = 30
+	icon = thrall
+
+	category = interaction_category_prison
+
+	desc = take_thrall_interaction_desc
+
+	is_shown = {
+		scope:recipient = {
+			is_imprisoned_by = scope:actor
+			NOT = { has_trait = thrall has_trait = battle_thrall }
+			NOT = { is_landed = yes }
+		}
+
+		scope:actor = { is_adult = yes }
+
+		NOT = {
+			AND = { 
+				scope:recipient = {
+					is_female = yes
+				}
+			}
+		}
+
+		NOT = {
+			has_game_rule = oge_slavery_disabled
+		}
+
+	}
+
+	is_valid_showing_failures_only = {
+		scope:recipient = {
+			custom_description = {
+				text = "currently_being_tortured"
+				NOT = { has_character_flag = is_being_tortured }
+			}
+		}
+		cannot_release_former_regent_whilst_old_regent_holds_power_trigger = {
+			PRISONER = scope:recipient
+			REGENT = scope:recipient.var:imprisoned_by_diarch
+		}
+	}
+
+	is_highlighted = {
+		OR = {
+			scope:actor = { has_trait = sadistic }
+			scope:actor = { has_relation_rival = scope:recipient }
+			scope:recipient = {
+				any_claim = {
+					holder = scope:actor
+				}
+			}
+		}
+	}
+
+	on_accept = {
+
+		scope:recipient = {
+			add_trait = thrall
+			release_from_prison = yes
+		}
+
+		scope:actor = {
+			add_courtier = scope:recipient
+		}
+
+	}
+
+	auto_accept = yes
+
+	ai_targets = {
+		ai_recipients = prisoners
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 10
+
+		modifier = {
+			has_trait = sadistic
+			add = 20
+		}
+		ai_value_modifier = {
+			ai_compassion = tiny_chance_impact_negative_ai_value #Adds +50 for highly uncompassionate characters, -50 for highly compassionate characters
+		}
+		opinion_modifier = {
+			opinion_target = scope:recipient
+			multiplier = -0.25
+		}
+		modifier = { # More likely if it's a nice thrall
+			add = 50
+			scope:recipient = {
+				OR = {
+					num_of_good_genetic_traits > 0
+					fertility > 0.2
+					age < 36
+				}
+			}
+		}
+
+		#Scope:target has caused internal strife in the realm
+		character_hates_scope_due_to_strife_modifier = { TARGET = scope:recipient }
+		modifier = { # Family Feud
+			exists = scope:actor.house
+			exists = scope:recipient.house
+			scope:actor = {
+				house.house_head = {
+					any_owned_story = {
+						story_type = story_cycle_house_feud
+						has_variable = house_feud_house
+						var:house_feud_house = scope:recipient.house
+					}
+				}
+				has_opinion_modifier = {
+					modifier = house_feud_opinion
+					target = scope:recipient.house.house_head
+				}
+			}
+			add = 30
+		}
+	}
+
+	ai_frequency = 3
+}
+
+
+buy_thrall = {
+	category = interaction_category_diplomacy
+	icon = thrall
+
+	desc = buy_thrall_desc
+
+	ai_targets = {
+		ai_recipients = neighboring_rulers
+	}
+	ai_target_quick_trigger = {
+		adult = yes
+	}
+	ai_frequency = 12
+
+	greeting = positive
+	notification_text = BUY_THRALL_NOTIFICATION
+
+	#interface = thrall_list
+
+	needs_recipient_to_open = yes
+
+	populate_actor_list = {
+		scope:recipient = {
+			every_courtier = {
+				limit = {
+					OR ={ has_trait = thrall has_trait = battle_thrall }
+				}
+				add_to_list = characters
+			}
+			every_prisoner = {
+				limit = {
+					NOT = { is_in_list = characters }
+					has_trait = thrall
+					has_trait = battle_thrall
+				}
+				add_to_list = characters
+			}
+		}
+	}
+
+	is_shown = {
+		NOT = { scope:actor = scope:recipient }
+		scope:recipient = {
+			is_adult = yes
+			NOT = {
+				has_trait = thrall
+			}
+		}
+		NOT = {
+			has_game_rule = oge_slavery_disabled
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		custom_description = {
+			text = sell_thrall_available_character_opp
+			object = scope:recipient
+			scope:actor = {
+				OR = {
+					any_courtier = {
+						can_be_offered_as_thrall_to_character_trigger = yes
+					}
+					any_prisoner = {
+						can_be_offered_as_thrall_to_character_trigger = yes
+					}
+				}
+			}
+		}
+	}
+
+	can_be_picked = {
+		is_adult = yes
+	}
+
+	can_send = {
+		custom_description = {
+			text = character_unavailable_to_be_offered_as_thrall
+			object = scope:secondary_actor
+			scope:secondary_actor = {
+				can_be_offered_as_thrall_to_character_trigger = yes
+			}
+		}
+	}
+
+	auto_accept = no
+
+	ai_accept = {
+		base = 50
+		
+		modifier = {
+			add = {
+				value = 100
+			}
+			scope:recipient = {
+				gold < 100
+			}
+			desc = AI_NEEDS_GOLD_REASON
+		}
+
+		modifier = {
+			add = {
+				value = -50
+			}
+			scope:secondary_actor = {
+				is_lowborn = no
+				trigger_if = {
+					limit = {
+						is_female = yes
+					}
+					age < define:NChildbirth|MAX_FEMALE_REPRODUCTION_AGE
+				}
+			}
+			desc = AI_DYNASTY_PRESTIGE_REASON_NOBLE
+		}
+
+		modifier = {
+			add = {
+				value = 50
+				multiply = scope:secondary_actor.num_of_bad_genetic_traits
+			}
+			scope:secondary_actor = {
+				OR = {
+					num_of_bad_genetic_traits > 0
+				}
+				trigger_if = {
+					limit = {
+						is_female = yes
+					}
+					age < define:NChildbirth|MAX_FEMALE_REPRODUCTION_AGE
+				}
+			}
+			desc = AI_NEGATIVE_TRAIT_REASON
+		}
+
+		modifier = {
+			add = {
+				value = 50
+			}
+			scope:secondary_actor = {
+				is_lowborn = yes
+				num_of_good_genetic_traits = 0
+				trigger_if = {
+					limit = {
+						is_female = yes
+					}
+					age < define:NChildbirth|MAX_FEMALE_REPRODUCTION_AGE
+				}
+			}
+			desc = AI_DYNASTY_PRESTIGE_REASON_LOWBORN_NO_POSITIVE_TRAIT
+		}
+
+		opinion_modifier = { # Opinion of you
+			who = scope:recipient
+			opinion_target = scope:actor
+			multiplier = 1.0
+			desc = AI_OPINION_REASON
+		}
+
+		opinion_modifier = { # Opinion of thrall
+			who = scope:recipient
+			opinion_target = scope:secondary_actor
+			multiplier = 0.25
+			desc = AI_OPINION_REASON
+		}
+
+		compare_modifier = { # Recipient is reluctant to buy old women (procreation is a key factor)
+			trigger = {
+				scope:secondary_actor = {
+					age > 29
+					is_female = yes
+				}
+			}
+			target = scope:secondary_actor
+			value = age
+			multiplier = -5.0
+			step = 1
+			offset = -29
+			desc = MARRY_AGE
+		}
+
+
+		modifier = {
+			add = -50
+			scope:recipient = {
+				is_attracted_to_gender_of = scope:secondary_actor
+			}
+			desc = AI_ATTRACTION_REASON
+		}
+
+		modifier = { # A Recipient is more likely to agree if you're their liege
+			add = 60
+			
+			scope:recipient = {
+				target_is_liege_or_above = scope:actor
+			}
+			desc = LIEGE_REASON
+		}
+
+		#More/Less likely based on difference in rank between actor and recipient
+		modifier = {
+			add = 20
+			scope:actor = {
+				tier_difference = {
+					target = scope:recipient
+					value = 1
+				}
+			}
+			desc = AI_RANK_DIFF
+		}
+		modifier = {
+			add = 30
+			scope:actor = {
+				tier_difference = {
+					target = scope:recipient
+					value = 2
+				}
+			}
+			desc = AI_RANK_DIFF
+		}
+		modifier = {
+			add = 40
+			scope:actor = {
+				tier_difference = {
+					target = scope:recipient
+					value = 3
+				}
+			}
+			desc = AI_RANK_DIFF
+		}
+		modifier = {
+			add = 50
+			scope:actor = {
+				tier_difference = {
+					target = scope:recipient
+					value = 4
+				}
+			}
+			desc = AI_RANK_DIFF
+		}
+		modifier = {
+			add = 60
+			scope:actor = {
+				tier_difference = {
+					target = scope:recipient
+					value = 5
+				}
+			}
+			desc = AI_RANK_DIFF
+		}
+		modifier = {
+			add = -20
+			scope:actor = {
+				tier_difference = {
+					target = scope:recipient
+					value = -1
+				}
+			}
+			desc = AI_RANK_DIFF
+		}
+		modifier = {
+			add = -30
+			scope:actor = {
+				tier_difference = {
+					target = scope:recipient
+					value = -2
+				}
+			}
+			desc = AI_RANK_DIFF
+		}
+		modifier = {
+			add = -40
+			scope:actor = {
+				tier_difference = {
+					target = scope:recipient
+					value = -3
+				}
+			}
+			desc = AI_RANK_DIFF
+		}
+		modifier = {
+			add = -50
+			scope:actor = {
+				tier_difference = {
+					target = scope:recipient
+					value = -4
+				}
+			}
+			desc = AI_RANK_DIFF
+		}
+		modifier = {
+			add = -60
+			scope:actor = {
+				tier_difference = {
+					target = scope:recipient
+					value = -5
+				}
+			}
+			desc = AI_RANK_DIFF
+		}
+		
+		modifier = {
+			add = intimidated_reason_value
+			scope:recipient = {
+				target_is_liege_or_above = scope:actor
+				has_dread_level_towards = {
+					target = scope:actor
+					level = 1
+				}
+			}
+			desc = INTIMIDATED_REASON
+		}
+		modifier = {
+			add = cowed_reason_value
+			scope:recipient = {
+				target_is_liege_or_above = scope:actor
+				has_dread_level_towards = {
+					target = scope:actor
+					level = 2
+				}
+			}
+			desc = COWED_REASON
+		}
+		
+		modifier = {
+			add = intimidated_external_reason_value
+			scope:recipient = {
+				NOT = { target_is_liege_or_above = scope:actor }
+				has_dread_level_towards = {
+					target = scope:actor
+					level = 1
+				}
+			}
+			desc = INTIMIDATED_REASON
+		}
+		modifier = {
+			add = cowed_external_reason_value
+			scope:recipient = {
+				NOT = { target_is_liege_or_above = scope:actor }
+				has_dread_level_towards = {
+					target = scope:actor
+					level = 2
+				}
+			}
+			desc = COWED_REASON
+		}
+		modifier = {
+			add = -250
+			scope:secondary_actor = {
+				has_std_trigger = yes
+			}
+			desc = AI_STD_REASON
+		}
+		modifier = {
+			add = -250
+			scope:secondary_actor = {
+				has_epidemic_disease_trigger = yes
+			}
+			desc = AI_CONTAGIOUS_REASON
+		}
+		modifier = {
+			add = -5000
+			scope:secondary_actor = {
+				fertility <= 0
+			}
+			desc = AI_FERTILITY_REASON
+		}
+		modifier = {
+			scope:hook = yes
+			add = 500
+			scope:actor = { NOT = { has_strong_hook = scope:recipient } }
+			desc = SCHEME_WEAK_HOOK_USED
+		}
+		modifier = {
+			scope:hook = yes
+			add = 1000
+			scope:actor = { has_strong_hook = scope:recipient }
+			desc = SCHEME_STRONG_HOOK_USED
+		}
+	}
+
+	ai_potential = {
+		is_adult = yes
+		NOT = { has_trait = incapable }
+		is_at_war = no
+		NOR = {
+			has_trait = greedy
+			ai_greed > very_high_positive_ai_value
+		}
+	}
+
+	ai_will_do = {
+		base = 0
+		
+
+		modifier = { # If secondary_actor is close to actor, a good character, or if actor should take them as thrall
+			add = -100
+			scope:secondary_actor = {
+				is_of_minor_interest_trigger = {
+					CHARACTER = scope:actor
+				}
+				AND = {
+					can_become_thrall_of_character_trigger = { CHARACTER = scope:actor }
+				}
+			}
+		}
+		
+		modifier = { # More likely if it's a neighboring ruler that you want to like you
+			add = 50
+			scope:recipient = {
+				any_neighboring_top_liege_realm_owner = { this = scope:actor }
+				max_military_strength > scope:actor.max_military_strength
+			}
+		}
+		
+		modifier = { # More likely if its your friend and it's a nice thrall
+			add = 50
+			scope:recipient = {
+				OR = {
+					has_relation_friend = scope:actor
+					has_relation_best_friend = scope:actor
+				}
+			}
+			scope:secondary_actor = {
+				fertility > 0.2
+				age < 36
+				OR = {
+					has_trait = lustful
+					num_of_good_genetic_traits > 0
+				}
+			}
+		}
+
+		modifier = { # Faith considerations
+			factor = 0
+			scope:recipient = {
+				faith = {
+					faith_hostility_level = {
+						target = scope:actor.faith
+						value >= faith_hostile_level
+					}
+				}
+				NOR = {
+					has_relation_friend = scope:actor
+					has_relation_best_friend = scope:actor
+				}
+			}
+		}
+	}
+
+	on_send = {
+		scope:secondary_actor = { # to block the same character from being offered twice
+			add_character_flag = {
+				flag = has_been_offered_as_thrall
+				days = 5
+			}
+		}
+	}
+	
+	on_accept = {
+		thrall_offer_on_accept_effect = yes
+		
+		scope:actor = {
+			add_courtier = scope:secondary_actor
+		}
+		
+		scope:actor = {
+			pay_short_term_gold = {
+				target = scope:recipient
+				gold = {
+					add = {
+						value = 20
+						multiply = scope:secondary_actor.num_of_good_genetic_traits
+					}
+					add = {
+						value = scope:secondary_actor.prowess
+					}
+					add = {
+						value = scope:secondary_actor.stewardship
+					}
+					add = {
+						value = scope:secondary_actor.learning
+					}
+					add = {
+						value = scope:secondary_actor.martial
+						multiply = 0.5
+					}
+					add = {
+						value = scope:secondary_actor.diplomacy
+						multiply = 0.5
+					}
+				}
+			}
+		}
+	}
+
+	on_decline = {
+		scope:actor = {
+			send_interface_toast = {
+				type = event_generic_neutral
+				title = buy_thrall_offer_rejected_title
+				right_icon = scope:recipient
+				left_icon = scope:secondary_actor
+			}
+		}
+	}
+
+	send_options_exclusive = no
+	send_option = {
+		is_valid = {
+			scope:actor = {
+				has_usable_hook = scope:recipient
+			}
+		}
+		flag = hook
+		localization = SCHEME_HOOK
+	}
+	should_use_extra_icon = {
+		scope:actor = { has_usable_hook = scope:recipient }
+	}
+	extra_icon = "gfx/interface/icons/character_interactions/hook_icon.dds"
+}
+
+
+sell_thrall = {
+	category = interaction_category_diplomacy
+	icon = thrall
+
+	desc = sell_thrall_desc
+
+	ai_targets = {
+		ai_recipients = neighboring_rulers
+	}
+	ai_target_quick_trigger = {
+		adult = yes
+	}
+	ai_frequency = 20
+
+	greeting = positive
+	notification_text = SELL_THRALL_NOTIFICATION
+
+	#interface = thrall_list
+
+	needs_recipient_to_open = yes
+
+	populate_actor_list = {
+		scope:actor = {
+			every_courtier = {
+				limit = {
+					OR ={ has_trait = thrall has_trait = battle_thrall }
+				}
+				add_to_list = characters
+			}
+			every_prisoner = {
+				limit = {
+					NOT = { is_in_list = characters }
+					has_trait = thrall
+				}
+				add_to_list = characters
+			}
+		}
+	}
+
+	is_shown = {
+		NOT = { scope:actor = scope:recipient }
+		scope:recipient = {
+			is_adult = yes
+			NOT = {
+				has_trait = thrall
+				has_trait = battle_thrall
+			}
+		}
+		NOT = {
+			has_game_rule = oge_slavery_disabled
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		custom_description = {
+			text = sell_thrall_available_character_opp
+			object = scope:recipient
+			scope:actor = {
+				OR = {
+					any_courtier = {
+						can_be_offered_as_thrall_to_character_trigger = yes
+					}
+					any_prisoner = {
+						can_be_offered_as_thrall_to_character_trigger = yes
+					}
+				}
+			}
+		}
+	}
+
+	can_be_picked = {
+		is_adult = yes
+	}
+
+	can_send = {
+		custom_description = {
+			text = character_unavailable_to_be_offered_as_thrall
+			object = scope:secondary_actor
+			scope:secondary_actor = {
+				can_be_offered_as_thrall_to_character_trigger = yes
+			}
+		}
+	}
+
+	auto_accept = no
+
+	ai_accept = {
+		base = 50
+		
+		modifier = {
+			add = {
+				value = 50
+				multiply = scope:secondary_actor.num_of_good_genetic_traits
+			}
+			scope:secondary_actor = {
+				num_of_good_genetic_traits > 0
+				trigger_if = {
+					limit = {
+						is_female = yes
+					}
+					age < define:NChildbirth|MAX_FEMALE_REPRODUCTION_AGE
+				}
+			}
+			desc = AI_POSITIVE_TRAIT_REASON
+		}
+
+		modifier = {
+			add = {
+				value = 50
+			}
+			scope:secondary_actor = {
+				is_lowborn = no
+				trigger_if = {
+					limit = {
+						is_female = yes
+					}
+					age < define:NChildbirth|MAX_FEMALE_REPRODUCTION_AGE
+				}
+			}
+			desc = AI_DYNASTY_PRESTIGE_REASON_NOBLE
+		}
+
+		modifier = {
+			add = {
+				value = -50
+				multiply = scope:secondary_actor.num_of_bad_genetic_traits
+			}
+			scope:secondary_actor = {
+				OR = {
+					num_of_bad_genetic_traits > 0
+				}
+				trigger_if = {
+					limit = {
+						is_female = yes
+					}
+					age < define:NChildbirth|MAX_FEMALE_REPRODUCTION_AGE
+				}
+			}
+			desc = AI_NEGATIVE_TRAIT_REASON
+		}
+
+		modifier = {
+			add = {
+				value = -50
+			}
+			scope:secondary_actor = {
+				is_lowborn = yes
+				num_of_good_genetic_traits = 0
+				trigger_if = {
+					limit = {
+						is_female = yes
+					}
+					age < define:NChildbirth|MAX_FEMALE_REPRODUCTION_AGE
+				}
+			}
+			desc = AI_DYNASTY_PRESTIGE_REASON_LOWBORN_NO_POSITIVE_TRAIT
+		}
+
+		opinion_modifier = { # Opinion of you
+			who = scope:recipient
+			opinion_target = scope:actor
+			multiplier = 1.0
+			desc = AI_OPINION_REASON
+		}
+
+		opinion_modifier = { # Opinion of thrall
+			who = scope:recipient
+			opinion_target = scope:secondary_actor
+			multiplier = 0.25
+			desc = AI_OPINION_REASON
+		}
+
+		compare_modifier = { # Recipient is reluctant to buy old women (procreation is a key factor)
+			trigger = {
+				scope:secondary_actor = {
+					age > 29
+					is_female = yes
+				}
+			}
+			target = scope:secondary_actor
+			value = age
+			multiplier = -5.0
+			step = 1
+			offset = -29
+			desc = MARRY_AGE
+		}
+
+
+		modifier = {
+			add = 50
+			scope:recipient = {
+				is_attracted_to_gender_of = scope:secondary_actor
+			}
+			desc = AI_ATTRACTION_REASON
+		}
+
+		modifier = { # A Recipient is more likely to agree if you're their liege
+			add = 40
+			
+			scope:recipient = {
+				target_is_liege_or_above = scope:actor
+			}
+			desc = LIEGE_REASON
+		}
+
+		#More/Less likely based on difference in rank between actor and recipient
+		modifier = {
+			add = 20
+			scope:actor = {
+				tier_difference = {
+					target = scope:recipient
+					value = 1
+				}
+			}
+			desc = AI_RANK_DIFF
+		}
+		modifier = {
+			add = 30
+			scope:actor = {
+				tier_difference = {
+					target = scope:recipient
+					value = 2
+				}
+			}
+			desc = AI_RANK_DIFF
+		}
+		modifier = {
+			add = 40
+			scope:actor = {
+				tier_difference = {
+					target = scope:recipient
+					value = 3
+				}
+			}
+			desc = AI_RANK_DIFF
+		}
+		modifier = {
+			add = 50
+			scope:actor = {
+				tier_difference = {
+					target = scope:recipient
+					value = 4
+				}
+			}
+			desc = AI_RANK_DIFF
+		}
+		modifier = {
+			add = 60
+			scope:actor = {
+				tier_difference = {
+					target = scope:recipient
+					value = 5
+				}
+			}
+			desc = AI_RANK_DIFF
+		}
+		modifier = {
+			add = -20
+			scope:actor = {
+				tier_difference = {
+					target = scope:recipient
+					value = -1
+				}
+			}
+			desc = AI_RANK_DIFF
+		}
+		modifier = {
+			add = -30
+			scope:actor = {
+				tier_difference = {
+					target = scope:recipient
+					value = -2
+				}
+			}
+			desc = AI_RANK_DIFF
+		}
+		modifier = {
+			add = -40
+			scope:actor = {
+				tier_difference = {
+					target = scope:recipient
+					value = -3
+				}
+			}
+			desc = AI_RANK_DIFF
+		}
+		modifier = {
+			add = -50
+			scope:actor = {
+				tier_difference = {
+					target = scope:recipient
+					value = -4
+				}
+			}
+			desc = AI_RANK_DIFF
+		}
+		modifier = {
+			add = -60
+			scope:actor = {
+				tier_difference = {
+					target = scope:recipient
+					value = -5
+				}
+			}
+			desc = AI_RANK_DIFF
+		}
+		
+		modifier = {
+			add = intimidated_reason_value
+			scope:recipient = {
+				target_is_liege_or_above = scope:actor
+				has_dread_level_towards = {
+					target = scope:actor
+					level = 1
+				}
+			}
+			desc = INTIMIDATED_REASON
+		}
+		modifier = {
+			add = cowed_reason_value
+			scope:recipient = {
+				target_is_liege_or_above = scope:actor
+				has_dread_level_towards = {
+					target = scope:actor
+					level = 2
+				}
+			}
+			desc = COWED_REASON
+		}
+		
+		modifier = {
+			add = intimidated_external_reason_value
+			scope:recipient = {
+				NOT = { target_is_liege_or_above = scope:actor }
+				has_dread_level_towards = {
+					target = scope:actor
+					level = 1
+				}
+			}
+			desc = INTIMIDATED_REASON
+		}
+		modifier = {
+			add = cowed_external_reason_value
+			scope:recipient = {
+				NOT = { target_is_liege_or_above = scope:actor }
+				has_dread_level_towards = {
+					target = scope:actor
+					level = 2
+				}
+			}
+			desc = COWED_REASON
+		}
+		modifier = {
+			add = -250
+			scope:secondary_actor = {
+				has_std_trigger = yes
+			}
+			desc = AI_STD_REASON
+		}
+		modifier = {
+			add = -250
+			scope:secondary_actor = {
+				has_epidemic_disease_trigger = yes
+			}
+			desc = AI_CONTAGIOUS_REASON
+		}
+		modifier = {
+			add = -5000
+			scope:secondary_actor = {
+				fertility <= 0
+			}
+			desc = AI_FERTILITY_REASON
+		}
+		modifier = {
+			scope:hook = yes
+			add = 500
+			scope:actor = { NOT = { has_strong_hook = scope:recipient } }
+			desc = SCHEME_WEAK_HOOK_USED
+		}
+		modifier = {
+			scope:hook = yes
+			add = 1000
+			scope:actor = { has_strong_hook = scope:recipient }
+			desc = SCHEME_STRONG_HOOK_USED
+		}
+	}
+
+	ai_potential = {
+		is_adult = yes
+		NOT = { has_trait = incapable }
+		is_at_war = no
+		NOR = {
+			has_trait = greedy
+			ai_greed > very_high_positive_ai_value
+		}
+	}
+
+	ai_will_do = {
+		base = 0
+		
+
+		modifier = { # If secondary_actor is close to actor, a good character, or if actor should take them as thrall
+			add = -100
+			scope:secondary_actor = {
+				is_of_minor_interest_trigger = {
+					CHARACTER = scope:actor
+				}
+				AND = {
+					can_become_thrall_of_character_trigger = { CHARACTER = scope:actor }
+				}
+			}
+		}
+
+		modifier = { # If secondary_actor could be an agent...
+			add = 25
+			any_scheme = {
+				scheme_target = scope:recipient
+				save_temporary_scope_as = scheme_check
+			}
+			scope:secondary_actor = {
+				is_valid_as_agent_in_scheme = scope:scheme_check
+			}
+		}
+		
+		modifier = { # More likely if it's a neighboring ruler that you want to like you
+			add = 50
+			scope:recipient = {
+				any_neighboring_top_liege_realm_owner = { this = scope:actor }
+				max_military_strength > scope:actor.max_military_strength
+			}
+		}
+		
+		modifier = { # More likely if its your friend and it's a nice thrall
+			add = 50
+			scope:recipient = {
+				OR = {
+					has_relation_friend = scope:actor
+					has_relation_best_friend = scope:actor
+				}
+			}
+			scope:secondary_actor = {
+				fertility > 0.2
+				age < 36
+				OR = {
+					has_trait = lustful
+					num_of_good_genetic_traits > 0
+				}
+			}
+		}
+
+		modifier = { # Faith considerations
+			factor = 0
+			scope:recipient = {
+				faith = {
+					faith_hostility_level = {
+						target = scope:actor.faith
+						value >= faith_hostile_level
+					}
+				}
+				NOR = {
+					has_relation_friend = scope:actor
+					has_relation_best_friend = scope:actor
+				}
+			}
+		}
+	}
+
+	on_send = {
+		scope:secondary_actor = { # to block the same character from being offered twice
+			add_character_flag = {
+				flag = has_been_offered_as_thrall
+				days = 5
+			}
+		}
+	}
+	
+	on_accept = {
+		thrall_offer_on_accept_effect = yes
+		
+		scope:recipient = {
+			add_courtier = scope:secondary_actor
+		}
+		
+		scope:recipient = {
+			pay_short_term_gold = {
+				target = scope:actor
+				gold = {
+					add = {
+						value = 20
+						multiply = scope:secondary_actor.num_of_good_genetic_traits
+					}
+					add = {
+						value = scope:secondary_actor.prowess
+					}
+					add = {
+						value = scope:secondary_actor.stewardship
+					}
+					add = {
+						value = scope:secondary_actor.learning
+					}
+					add = {
+						value = scope:secondary_actor.martial
+						multiply = 0.5
+					}
+					add = {
+						value = scope:secondary_actor.diplomacy
+						multiply = 0.5
+					}
+				}
+			}
+		}
+	}
+
+	on_decline = {
+		scope:actor = {
+			send_interface_toast = {
+				type = event_generic_neutral
+				title = sell_thrall_offer_rejected_title
+				right_icon = scope:recipient
+				left_icon = scope:secondary_actor
+			}
+		}
+	}
+
+	send_options_exclusive = no
+	send_option = {
+		is_valid = {
+			scope:actor = {
+				has_usable_hook = scope:recipient
+			}
+		}
+		flag = hook
+		localization = SCHEME_HOOK
+	}
+	should_use_extra_icon = {
+		scope:actor = { has_usable_hook = scope:recipient }
+	}
+	extra_icon = "gfx/interface/icons/character_interactions/hook_icon.dds"
+}
+
+free_thrall_interaction = {
+	category = interaction_category_diplomacy
+	use_diplomatic_range = no	
+	icon = thrall
+	
+	is_shown = {
+		scope:recipient = {
+			is_courtier_of = scope:actor
+			has_trait = thrall
+			has_trait = battle_thrall 
+		}
+	}
+
+	desc = free_thrall_interaction_desc
+
+	auto_accept = yes
+
+	ai_targets = {
+		ai_recipients = dynasty
+	}
+	
+	ai_targets = {
+		ai_recipients = family
+	}
+	
+	ai_targets = {
+		ai_recipients = spouses
+	}
+
+	ai_frequency = 1
+
+	ai_will_do = {
+		base = 0
+
+		modifier = { # Relatives and friends shall be freed.
+			add = 100
+			scope:recipient = {
+				OR = {
+					is_heir_of = scope:actor
+					is_child_of = scope:actor
+					is_grandchild_of = scope:actor
+					is_great_grandchild_of = scope:actor
+					is_consort_of = scope:actor
+					is_parent_of = scope:actor
+					is_grandparent_of = scope:actor
+					is_great_grandparent_of = scope:actor
+					has_relation_friend = scope:actor
+					any_spouse = {
+						OR = {
+							is_heir_of = scope:actor
+							is_child_of = scope:actor
+							is_grandchild_of = scope:actor
+							is_great_grandchild_of = scope:actor
+							is_parent_of = scope:actor
+							is_grandparent_of = scope:actor
+							is_great_grandparent_of = scope:actor
+							has_relation_friend = scope:actor
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	on_accept = {
+		scope:actor = {
+			stress_impact = {
+				compassionate = minor_stress_impact_gain
+			}
+		}
+		
+		scope:recipient = {
+
+			remove_trait = thrall
+			remove_trait = battle_thrall
+			if = {	
+				limit = {
+					has_character_modifier = thrall_fields
+				}
+				remove_character_modifier = thrall_fields
+			}
+			else_if = {	
+				limit = {
+					has_character_modifier = thrall_stables
+				}
+				remove_character_modifier = thrall_stables
+			}
+			else_if = {	
+				limit = {
+					has_character_modifier = thrall_cleaning
+				}
+				remove_character_modifier = thrall_cleaning
+			}
+			else_if = {	
+				limit = {
+					has_character_modifier = thrall_serving
+				}
+				remove_character_modifier = thrall_serving
+			}
+			else_if = {	
+				limit = {
+					has_character_modifier = thrall_respected
+				}
+				remove_character_modifier = thrall_respected
+			}
+
+			# Figure out where we should go now that we're no longer a thrall.
+			if = {
+				limit = {
+					is_councillor_of = scope:actor
+				}
+				# Then they should remain in court
+			}
+			else_if = { #Dismiss to relevant court, or to pool
+				limit = {
+					any_close_family_member = {
+						is_landed = yes
+					}
+				}
+				random_close_family_member = {
+					limit = {
+						is_child_of = scope:recipient
+						is_landed = yes
+					}
+					alternative_limit = {
+						is_parent_of = scope:recipient
+						is_landed = yes
+					}
+					alternative_limit = {
+						is_landed = yes
+					}
+					add_courtier = scope:recipient
+				}
+			}
+			else = {
+				move_to_pool = yes
+			}
+		}
+	}
+}
+
+pay_thrall_ransom = {
+	interface_priority = 50
+	common_interaction = yes
+	use_diplomatic_range = no
+	category = interaction_category_diplomacy
+	icon = thrall
+
+	redirect = {
+		scope:recipient = {
+			save_scope_as = secondary_recipient
+			if = {
+				limit = {
+					exists = liege
+				}
+				liege = { save_scope_as = recipient }
+			}
+		}
+	}
+
+	desc = pay_thrall_ransom_interaction_desc
+
+	greeting = positive
+	notification_text = PAY_THRALL_RANSOM_PROPOSAL
+	
+	is_shown = {
+		exists = scope:recipient
+		scope:secondary_recipient = {
+			OR ={ has_trait = thrall has_trait = battle_thrall }
+			NOT = {
+				this = scope:actor
+			}
+			liege = scope:recipient
+			OR = {
+				is_close_family_of = scope:actor # And anyone who is your close family
+				dynasty = { # And anyone from your Dynasty
+					this = scope:actor.dynasty
+				}
+				any_spouse = { # And anyone married to one of your close kin or dynasty members
+					OR = {
+						is_close_family_of = scope:actor
+						dynasty = {
+							this = scope:actor.dynasty
+						}
+					}
+				}
+				has_relation_lover = scope:actor # And Lovers
+				has_relation_friend = scope:actor # And Friends
+			}
+		}
+		NOT = {
+			scope:actor = scope:recipient
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:recipient = { is_busy_in_events_localised = yes } #Imprisoner
+		scope:secondary_recipient = { is_busy_in_events_localised = yes } #thrall
+		scope:recipient = {
+			custom_description = {
+				text = "currently_being_tortured"
+				NOT = { has_character_flag = is_being_tortured }
+			}
+		}
+		cannot_release_former_regent_whilst_old_regent_holds_power_trigger = {
+			PRISONER = scope:recipient
+			REGENT = scope:recipient.var:imprisoned_by_diarch
+		}
+	}
+
+
+
+	on_accept = {
+		
+		scope:actor = {
+			add_courtier = scope:secondary_recipient
+		}
+		
+		scope:actor = {
+			pay_short_term_gold = {
+				target = scope:recipient
+				gold = {
+					add = {
+						value = 20
+						multiply = scope:secondary_recipient.num_of_good_genetic_traits
+					}
+					add = {
+						value = scope:secondary_recipient.prowess
+					}
+					add = {
+						value = scope:secondary_recipient.stewardship
+					}
+					add = {
+						value = scope:secondary_recipient.learning
+					}
+					add = {
+						value = scope:secondary_recipient.martial
+						multiply = 0.5
+					}
+					add = {
+						value = scope:secondary_recipient.diplomacy
+						multiply = 0.5
+					}
+					multiply = 3
+				}
+			}
+		}
+
+		scope:secondary_recipient = {
+			remove_trait = thrall
+			if = {	
+				limit = {
+					has_character_modifier = thrall_fields
+				}
+				remove_character_modifier = thrall_fields
+			}
+			else_if = {	
+				limit = {
+					has_character_modifier = thrall_stables
+				}
+				remove_character_modifier = thrall_stables
+			}
+			else_if = {	
+				limit = {
+					has_character_modifier = thrall_cleaning
+				}
+				remove_character_modifier = thrall_cleaning
+			}
+			else_if = {	
+				limit = {
+					has_character_modifier = thrall_serving
+				}
+				remove_character_modifier = thrall_serving
+			}
+			else_if = {	
+				limit = {
+					has_character_modifier = thrall_respected
+				}
+				remove_character_modifier = thrall_respected
+			}
+		}
+	}
+
+	on_decline = {
+		# If a player declines this ransom offer, wait 10 years before sending another one (they presumably have reasons for keeping that character in prison).
+		if = {
+			limit = { scope:recipient = { is_ai = no } }
+			scope:secondary_recipient = {
+				add_character_flag = {
+					flag = character_ransom_refused_by_player
+					years = 10
+				}
+			}
+		}		
+
+		# Trigger notification event
+		scope:actor = {
+			trigger_event = char_interaction.0141
+		}
+	}
+	
+	
+
+	#Use hook
+	send_option = {
+		is_valid = {
+			exists = scope:recipient
+			scope:actor = {
+				has_usable_hook = scope:recipient
+			}
+		}
+		flag = hook
+		localization = SCHEME_HOOK
+	}
+	should_use_extra_icon = {
+		scope:actor = { has_usable_hook = scope:recipient }
+	}
+	extra_icon = "gfx/interface/icons/character_interactions/hook_icon.dds"
+
+	send_options_exclusive = no
+	
+	localization_values = {
+		CURRENT_GOLD = scope:actor.gold
+	}
+	
+	ai_accept = {
+		base = 50
+		modifier = {
+			add = 50
+			scope:favor = yes
+			scope:recipient.top_liege = scope:actor.top_liege
+			desc = "FAVOR_POSITIVE_REASON"
+		}
+		modifier = {
+			add = 0
+			scope:favor = yes
+			NOT = { scope:recipient.top_liege = scope:actor.top_liege }
+			desc = "NO_USE_FOR_A_FAVOR_REASON"
+		}
+		modifier = { # Say no to rivals
+			add = -55
+			scope:recipient = {
+				has_relation_rival = scope:secondary_recipient
+			}
+			desc = "RIVAL_TO_ME_REASON"
+		}
+		modifier = { # Say no to rivals
+			add = -300
+			scope:recipient = {
+				has_relation_nemesis = scope:secondary_recipient
+			}
+			desc = "NEMESIS_TO_ME_REASON"
+		}
+		modifier = { # At war
+			add = -300
+			scope:recipient = {
+				is_at_war_with = scope:actor
+			}
+			desc = "IS_AT_WAR_REASON"
+		}
+		modifier = { # At war
+			add = -300
+			scope:recipient = {
+				is_at_war = yes
+				any_primary_war_enemy = {
+					scope:secondary_recipient = {
+						liege ?= prev
+					}
+				}
+			}
+			desc = "IS_POW_REASON"
+		}
+		modifier = { # At war
+			add = -300
+			scope:recipient = {
+				is_at_war_with = scope:secondary_recipient
+			}
+			desc = "IS_AT_WAR_WITH_TARGET_REASON"
+		}
+		#opinion_modifier = { # A lot more likely if Recipient likes Actor
+		#	who = scope:recipient
+		#	opinion_target = scope:actor
+		#	multiplier = 1.0
+		#	desc = AI_OPINION_REASON
+		#}
+		#opinion_modifier = { # A lot more likely if Recipient likes secondary_recipient/prisoner
+		#	who = scope:recipient
+		#	opinion_target = scope:secondary_recipient
+		#	multiplier = 1.0
+		#	desc = AI_OPINION_REASON
+		#}
+		modifier = {
+			scope:hook = yes
+			add = 100
+			desc = SCHEME_WEAK_HOOK_USED
+		}
+		modifier = { # An Intimidated recipient is significantly more likely to accept an offer from the liege
+			add = 40
+			trigger = {
+				scope:recipient = {
+					target_is_liege_or_above = scope:actor
+					has_dread_level_towards = {
+						target = scope:actor
+						level = 1
+					}
+				}
+			}
+			desc = INTIMIDATED_REASON
+		}
+
+		modifier = { # An Cowed recipient is significantly more likely to accept an offer from the liege
+			add = 100
+			trigger = {
+				scope:recipient = {
+					target_is_liege_or_above = scope:actor
+					has_dread_level_towards = {
+						target = scope:actor
+						level = 2
+					}
+				}
+			}
+			desc = COWED_REASON
+		}
+	}
+
+	auto_accept = {
+		custom_description = {
+			text = "spending_hook"
+			subject = scope:actor
+			object = scope:recipient
+			scope:hook = yes
+			scope:actor = { has_strong_hook = scope:recipient }
+		}
+	}
+	
+	
+	# AI
+	ai_targets = {
+		ai_recipients = family
+	}
+	ai_targets = {
+		ai_recipients = spouses
+	}
+	ai_targets = {
+		ai_recipients = scripted_relations
+	}
+	ai_targets = {
+		ai_recipients = liege
+	}
+	ai_targets = {
+		ai_recipients = neighboring_rulers
+		ai_recipients = peer_vassals
+		max = 5
+	}
+	ai_frequency = 6
+
+	ai_potential = {
+		gold >= 25
+	}
+
+	ai_target_quick_trigger = {
+		prison = yes
+	}
+
+	ai_will_do = {
+		base = 0
+
+		
+		modifier = {
+			add = -100
+			has_relation_rival = scope:secondary_recipient
+		}
+		
+		modifier = {
+			add = -300
+			has_relation_nemesis = scope:secondary_recipient
+		}
+		
+		
+		modifier = { # Ransom your primary heir first
+			add = 10
+			OR = {
+				scope:gold = yes
+				scope:extortionate_gold = yes
+				AND = {
+					scope:actor = {
+						gold >= 25
+					}
+					scope:secondary_recipient = {
+						time_in_prison = { years > 1 }
+					}
+					OR = {
+						scope:current_gold = yes
+					}
+				}
+				AND = {
+					scope:recipient = {
+						OR = {
+							is_vassal_of = scope:actor
+							AND = {
+								exists = liege
+								liege = scope:actor
+							}
+						}
+					}
+				}
+			}
+			scope:secondary_recipient = {
+				is_primary_heir_of = scope:actor
+			}
+		}
+		
+		modifier = { # Only ransom people you care about... unless you're very compassionate
+			factor = 0
+			ai_compassion < high_positive_ai_value
+			scope:secondary_recipient = {
+				NOR = {
+					is_heir_of = scope:actor
+					is_child_of = scope:actor
+					is_grandchild_of = scope:actor
+					is_great_grandchild_of = scope:actor
+					is_consort_of = scope:actor
+					is_parent_of = scope:actor
+					is_grandparent_of = scope:actor
+					is_great_grandparent_of = scope:actor
+					has_relation_friend = scope:actor
+					has_relation_lover = scope:actor
+					has_secret_relation_lover = scope:actor
+					any_spouse = {
+						OR = {
+							is_heir_of = scope:actor
+							is_child_of = scope:actor
+							is_grandchild_of = scope:actor
+							is_great_grandchild_of = scope:actor
+							is_parent_of = scope:actor
+							is_grandparent_of = scope:actor
+							is_great_grandparent_of = scope:actor
+							has_relation_friend = scope:actor
+						}
+					}
+				}
+			}
+		}
+		
+		modifier = { # If you're very compassionate, well, then you ransom most people you can!
+			factor = 0
+			ai_compassion >= high_positive_ai_value
+			scope:secondary_recipient = {
+				NOR = {
+					is_heir_of = scope:actor
+					is_close_or_extended_family_of = scope:actor
+					is_consort_of = scope:actor
+					has_relation_friend = scope:actor
+					has_relation_lover = scope:actor
+					has_secret_relation_lover = scope:actor
+					any_spouse = {
+						OR = {
+							is_heir_of = scope:actor
+							is_close_or_extended_family_of = scope:actor
+							has_relation_friend = scope:actor
+						}
+					}
+				}
+			}
+		}
+		
+		modifier = { # If you're very greedy... then they're a little bit more restrictive!
+			factor = 0
+			ai_greed >= high_positive_ai_value
+			scope:secondary_recipient = {
+				NOR = { # Very Greedy rulers only ransom people in their own realm, or their heir
+					is_courtier_of = scope:actor
+					is_vassal_or_below_of = scope:actor
+					is_heir_of = scope:actor
+				}
+				NOR = {
+					is_heir_of = scope:actor
+					is_close_or_extended_family_of = scope:actor
+					is_consort_of = scope:actor
+					has_relation_friend = scope:actor
+					has_relation_lover = scope:actor
+					has_secret_relation_lover = scope:actor
+					any_spouse = {
+						OR = {
+							is_heir_of = scope:actor
+							is_close_or_extended_family_of = scope:actor
+							has_relation_friend = scope:actor
+						}
+					}
+				}
+			}
+		}
+		
+		# Some exceptions!
+		modifier = { # Lustful characters want to ransom lovers
+			add = 100
+			has_trait = lustful
+			ai_greed <= 50
+			scope:secondary_recipient = {
+				has_relation_lover = scope:actor
+			}
+			OR = {
+				scope:gold = yes
+				scope:extortionate_gold = yes
+				AND = {
+					scope:actor = {
+						gold >= 25
+					}
+					scope:secondary_recipient = {
+						time_in_prison = { years > 1 }
+					}
+					OR = {
+						scope:current_gold = yes
+						scope:extortionate_current_gold = yes
+					}
+				}
+			}
+		}
+		
+		modifier = { # Loyal characters want to ransom their relations
+			add = 100
+			has_trait = loyal
+			scope:secondary_recipient = {
+				OR = {
+					has_relation_lover = scope:actor
+					has_relation_friend = scope:actor
+				}
+			}
+			OR = {
+				scope:gold = yes
+				scope:extortionate_gold = yes
+				AND = {
+					scope:actor = {
+						gold >= 25
+					}
+					scope:secondary_recipient = {
+						time_in_prison = { years > 1 }
+					}
+					OR = {
+						scope:current_gold = yes
+						scope:extortionate_current_gold = yes
+					}
+				}
+			}
+		}
+		
+		modifier = { # Certain characters will try to ransom their liege!
+			add = 100
+			ai_greed <= very_high_negative_ai_value
+			ai_compassion >= very_high_negative_ai_value
+			NOT = { exists = joined_faction }
+			is_at_war = no
+			OR = {
+				has_trait = loyal
+				ai_honor >= high_positive_ai_value
+			}
+			scope:secondary_recipient = {
+				is_liege_or_above_of = scope:actor
+			}
+			OR = {
+				scope:gold = yes
+				scope:extortionate_gold = yes
+				# They won't offer current gold, only full ransoms
+			}
+		}
+		
+		modifier = { # Favors only relevant within the realm
+			add = -100
+			scope:favor = yes
+			scope:recipient = {
+				NOR = {
+					is_vassal_of = scope:actor
+					AND = {
+						exists = liege
+						liege = scope:actor
+					}
+				}
+			}
+		}
+		
+		modifier = { # Don't spam the player with cheapskate offers
+			add = -100
+			scope:current_gold = yes
+			scope:recipient = {
+				is_ai = no
+			}
+			scope:secondary_recipient = {
+				highest_held_title_tier >= tier_duchy
+			}
+		}
+
+		# Struggle Agenda
+		modifier = {
+			scope:secondary_recipient = {
+				any_character_struggle = {
+					involvement = involved
+				}
+			}
+			scope:actor = {
+				any_character_struggle = {
+					involvement = involved
+				}
+			}
+			add = {
+				value = 0
+				if = {
+					limit = {
+						scope:actor = {
+							any_character_struggle = {
+								phase_has_catalyst = catalyst_ransom_important
+							}
+							has_character_flag = agenda_towards_escalation
+						}
+					}
+					add = -100
+				}
+				else_if = {
+					limit = {
+						scope:actor = {
+							any_character_struggle = {
+								phase_has_catalyst = catalyst_ransom_important
+							}
+						}
+					}
+					add = 200
+				}
+			}
+		}
+		
+		modifier = { # Don't give away prisoners for free
+			factor = 0
+			NOR = {
+				scope:favor = yes
+				scope:extortionate_gold = yes
+				scope:extortionate_current_gold = yes
+				scope:gold = yes
+				AND = {
+					scope:actor = {
+						gold >= 25
+					}
+					scope:current_gold = yes
+				}
+			}
+		}
+		
+		modifier = { # Don't annoy players
+			factor = 0
+			scope:recipient = { is_ai = no }
+			OR = {
+				scope:recipient = { is_at_war = yes }
+				scope:secondary_recipient = { has_character_flag = character_ransom_refused_by_player }
+			}
+		}
+	}
+}
+

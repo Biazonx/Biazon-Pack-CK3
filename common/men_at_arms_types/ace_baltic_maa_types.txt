@@ -1,0 +1,151 @@
+﻿@cultural_maa_extra_ai_score = 80
+
+kirwinikos = {#Kirwīnīkōs
+	type = skirmishers
+
+	damage = 25
+	toughness = 21
+	pursuit = 5
+	screen = 20
+	
+	can_recruit = {
+		culture = { has_cultural_parameter = unlock_maa_kirwinikos }
+	}
+
+	terrain_bonus = {
+		forest = { damage = 6 toughness = 6 }
+		taiga = { damage = 5 toughness = 5 }
+	}
+	
+	counters = {
+		heavy_infantry = 1
+	}
+
+	winter_bonus = {
+		normal_winter = { toughness = 6 screen = 6 }
+		harsh_winter = { toughness = 5 screen = 5 }
+	}
+	
+	buy_cost = { gold = 80 }
+	low_maintenance_cost = { gold = 0.33 }
+	high_maintenance_cost = { gold = 1 }
+	
+	stack = 100
+	ai_quality = { value = 45 }
+	icon = skirmishers
+}
+
+lonkinikos = {
+	type = archers
+	
+	damage = 28
+	toughness = 12
+	pursuit = 5
+	screen = 5
+	
+	terrain_bonus = {
+		hills = { damage = 5 toughness = 2 screen = 2 }
+		forest = { damage = 5 toughness = 2 screen = 2 }
+		taiga = { damage = 5 toughness = 2 screen = 2 }
+	}
+
+	counters = {
+		skirmishers = 1
+	}
+	
+	winter_bonus = {
+		normal_winter = { toughness = 3 screen = 6 }
+		harsh_winter = { toughness = 2 screen = 4 }
+	}
+
+	can_recruit = {
+		culture = { has_cultural_parameter = unlock_maa_lonkinikos }
+	}
+
+	buy_cost = { gold = 58 }
+	low_maintenance_cost = { gold = 0.21 }
+	high_maintenance_cost = { gold = 0.63 }
+	
+	stack = 100
+	ai_quality = { value = 40 }
+	icon = bowmen
+}
+
+zemjones = {
+	type = pikemen
+	
+	damage = 18
+	toughness = 21
+	pursuit = 6
+	screen = 0
+	
+	can_recruit = {
+		culture = { has_cultural_parameter = unlock_maa_zemjones }
+	}
+	
+	terrain_bonus = {
+		hills = { damage = 7 toughness = 4 pursuit = 7 }
+		forest = { damage = 5 toughness = 3 pursuit = 5 }
+		taiga = { damage = 3 toughness = 2 pursuit = 3 }
+	}
+
+	counters = {
+		light_cavalry = 1
+		archers = 1
+	}
+
+	winter_bonus = {
+		normal_winter = { damage = 3 pursuit = 4 }
+		harsh_winter = { damage = 2 pursuit = 3 }
+	}
+
+	buy_cost = { gold = 60 }
+	low_maintenance_cost = { gold = 0.24 }
+	high_maintenance_cost = { gold = 0.72 }
+	
+	stack = 100
+	ai_quality = { value = 40 }
+	icon = bondi
+}
+
+kavelerija = {
+	type = light_cavalry
+	
+	damage = 22
+	toughness = 15
+	pursuit = 40
+	screen = 30
+
+	can_recruit = {
+		culture = { has_cultural_parameter = unlock_maa_kavelerija }
+		OR = {
+			completely_controls = title:c_kernave
+			completely_controls = title:c_vilnius
+			completely_controls = title:c_nalsia
+		}
+	}
+	
+	terrain_bonus = {
+		plains = { damage = 5 }
+		forest = { damage = 10 }
+		mountains = { damage = -10 pursuit = -25 }
+		desert_mountains = { damage = -15 pursuit = -25 }
+		wetlands = { damage = -10 toughness = -5 pursuit = -25 screen = -20 }
+	}
+
+	counters = {
+		archers = 1
+	}
+
+	winter_bonus = {
+		harsh_winter = { damage = -5 }
+	}
+
+	buy_cost = { gold = 90 }
+	low_maintenance_cost = { gold = 0.37 }
+	high_maintenance_cost = { gold = 1.11 }
+	
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = light_cavalry
+}

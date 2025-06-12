@@ -1,0 +1,274 @@
+﻿l_english:
+
+ saiyan_religion:0 "Invader"
+ saiyan_religion_adj:0 "Saiyan Invader"
+ saiyan_religion_adherent:0 "Invader"
+ saiyan_religion_adherent_plural:0 "Invaders"
+ saiyan_religion_desc:0 "The belief system of the invading Saiyan Race. Defined by it's brutish and unrelenting call to fight, the faith is relentless and to be feared or unwillingly accepted."
+
+ saiyan_high_god_name:0 "Yamoshi"
+ saiyan_high_god_name_2:0 "Yamoshi" # Optional translation alt
+ saiyan_high_god_name_possessive:0 "Yamoshi's"
+ saiyan_high_god_name_alternate:0 "Super Saiyan"
+ saiyan_high_god_name_alternate_possessive:0 "Super Saiyan's"
+ saiyan_devil_name:0 "Frieza"
+ saiyan_devil_name_possessive:0 "Frieza's"
+ saiyan_devil_shehe:0 "he"
+ saiyan_devil_herselfhimself:0 "himself"
+ saiyan_devil_herhis:0 "his"
+ saiyan_evil_god_arcosians:0 "Arcosians"
+ saiyan_evil_god_arcosians_possessive:0 "Acrosians'"
+ saiyan_evil_god_tuffles:0 "Tuffles"
+ saiyan_death_deity_name:0 "Death"
+ saiyan_death_deity_name_possessive:0 "Death's"
+ saiyan_death_deity_herhis:0 "its"
+
+ saiyan_creator_god_name:0 "Sadala"
+ saiyan_creator_god_name_possessive:0 "Sadala's"
+ saiyan_health_god_name:0 "Sadala"
+ saiyan_health_god_name_possessive:0 "Sadala's"
+ saiyan_fertility_god_name:0 "Vegeta"
+ saiyan_fertility_god_name_possessive:0 "Vegeta's"
+ saiyan_wealth_god_name:0 "Vegeta"
+ saiyan_wealth_god_name_possessive:0 "Vegeta's"
+ saiyan_household_god_name:0 "Sadala"
+ saiyan_household_god_name_possessive:0 "Sadala's"
+ saiyan_fate_god_name:0 "Yamoshi"
+ saiyan_fate_god_name_possessive:0 "Yamoshi's"
+ saiyan_knowledge_god_name:0 "Yamoshi"
+ saiyan_knowledge_god_name_possessive:0 "Yamoshi's"
+ saiyan_war_god_name:0 "Oozaru"
+ saiyan_war_god_name_possessive:0 "Oozaru's"
+ saiyan_trickster_god_name:0 "Vegeta"
+ saiyan_trickster_god_name_possessive:0 "Vegeta"
+ saiyan_night_god_name:0 "Oozaru"
+ saiyan_night_god_name_possessive:0 "Oozaru's"
+ saiyan_water_god_name:0 "Sadala"
+ saiyan_water_god_name_possessive:0 "Sadala's"
+
+ paganism_house_of_worship:0 "temple"
+ paganism_house_of_worship_2:0 "$paganism_house_of_worship$" # Optional translation alt
+ paganism_house_of_worship_3:0 "$paganism_house_of_worship$" # Optional translation alt
+ paganism_house_of_worship_plural:0 "temples"
+ saiyan_religious_symbol:0 "Full Moon"
+ saiyan_religious_symbol_2:0 "$saiyan_religious_symbol$" # Optional translation alt
+ saiyan_religious_symbol_3:0 "$saiyan_religious_symbol$" # Optional translation alt
+ saiyan_religious_text:0 "Legends"
+ saiyan_religious_text_2:0 "$saiyan_religious_text$" # Optional translation alt
+ saiyan_religious_text_3:0 "$saiyan_religious_text$" # Optional translation alt
+ saiyan_religious_head_title:0 "King"
+ saiyan_religious_head_title_name:0 "Kingdom of the Saiyans"
+ paganism_devotee:0 "devotee"
+ paganism_devoteeplural:0 "devotees"
+ saiyan_priest_male:0 "Elite"
+ saiyan_priest_male_plural:0 "Elites"
+ saiyan_priest_female:0 "Elite"
+ saiyan_priest_female_plural:0 "Elites"
+ saiyan_priest_neuter:0 "Elite"
+ saiyan_priest_neuter_plural:0 "Elites"
+ saiyan_divine_realm:0 "Otherworld"
+ saiyan_divine_realm_2:0 "$saiyan_divine_realm$"
+ saiyan_divine_realm_3:0 "$saiyan_divine_realm$" # Optional translation alt
+ saiyan_positive_afterlife:0 "Otherworld"
+ saiyan_positive_afterlife_2:0 "Heaven" # Optional translation alt
+ saiyan_positive_afterlife_3:0 "$saiyan_positive_afterlife$" # Optional translation alt
+ saiyan_negative_afterlife:0 "Hell"
+ saiyan_negative_afterlife_2:0 "$saiyan_negative_afterlife_afterlife$" # Optional translation alt
+ saiyan_negative_afterlife_3:0 "$saiyan_negative_afterlife_afterlife$" # Optional translation alt
+ saiyan_witchgodname:0 "Super Saiyan God"
+ saiyan_witchgodname_possessive:0 "Super Saiyan God's"
+ 
+ saiyan_pantheon_1:0 "The Saiyan Gods"
+
+
+ saiyan_faith:0 "Invader"
+ saiyan_faith_adj:0 "Saiyan Invader"
+ saiyan_faith_adherent:0 "Invader"
+ saiyan_faith_adherent_plural:0 "Invaders"
+
+ namekian_religion:0 "Spiritualist"
+ namekian_religion_adj:0 "Namekian Spiritualist"
+ namekian_religion_adherent:0 "Spiritualist"
+ namekian_religion_adherent_plural:0 "Spiritualists"
+ namekian_religion_desc:0 "The peaceful faith of the Namekian people, devoted to the balance of nature, wisdom, and spiritual harmony. Guardians of sacred knowledge and the mystical Dragon Balls."
+
+ namekian_high_god:0 "Porunga"
+ namekian_high_god_2:0 "Porunga"
+ namekian_high_god_possessive:0 "Porunga's"
+ namekian_high_god_alternate:0 "The Great Dragon"
+ namekian_high_god_alternate_possessive:0 "The Great Dragon's"
+
+ namekian_devil_name:0 "Corrupt Spirits"
+ namekian_devil_name_possessive:0 "Corrupt Spirits'"
+ namekian_devil_shehe:0 "they"
+ namekian_devil_herselfhimself:0 "themselves"
+ namekian_devil_herhis:0 "their"
+
+ namekian_evil_spirits:0 "Dark Forces"
+ namekian_corrupt_dragons:0 "Fallen Dragons"
+
+ namekian_creator_god:0 "The Ancestor"
+ namekian_creator_god_possessive:0 "The Ancestor's"
+
+ namekian_health_god:0 "Healer Spirits"
+ namekian_health_god_possessive:0 "Healer Spirits'"
+
+ namekian_growth_god:0 "The Green Mother"
+ namekian_growth_god_possessive:0 "The Green Mother's"
+
+ namekian_prosperity_god:0 "The Great Harvest"
+ namekian_prosperity_god_possessive:0 "The Great Harvest's"
+
+ namekian_home_god:0 "Guardian Spirits"
+ namekian_home_god_possessive:0 "Guardian Spirits'"
+
+ namekian_destiny_god:0 "The Flow of Fate"
+ namekian_destiny_god_possessive:0 "The Flow of Fate's"
+
+ namekian_knowledge_god:0 "The Wise Elder"
+ namekian_knowledge_god_possessive:0 "The Wise Elder's"
+
+ namekian_guardian_god:0 "The Warrior Spirit"
+ namekian_guardian_god_possessive:0 "The Warrior Spirit's"
+
+ namekian_house_of_worship:0 "Sanctuary"
+ namekian_house_of_worship_2:0 "$namekian_house_of_worship$"
+ namekian_house_of_worship_3:0 "$namekian_house_of_worship$"
+ namekian_house_of_worship_plural:0 "Sanctuaries"
+
+ namekian_dragon_symbol:0 "Dragon Emblem"
+
+ namekian_sacred_scrolls:0 "Sacred Scrolls"
+
+ namekian_grand_elder:0 "Grand Elder"
+
+ namekian_elder:0 "Elder"
+ namekian_elder_plural:0 "Elders"
+
+ namekian_divine_realm:0 "The Spirit World"
+ namekian_divine_realm_2:0 "$namekian_divine_realm$"
+ namekian_divine_realm_3:0 "$namekian_divine_realm$"
+
+ namekian_spirit_world:0 "The Spirit World"
+ namekian_spirit_world_2:0 "$namekian_spirit_world$"
+ namekian_spirit_world_3:0 "$namekian_spirit_world$"
+
+ namekian_void:0 "The Void"
+
+ namekian_positive_afterlife:0 "The Spirit World"
+ namekian_negative_afterlife:0 "The Void"
+
+ namekian_witchgodname:0 "Mystic Elder"
+ namekian_witchgodname_possessive:0 "Mystic Elder's"
+
+ namekian_pantheon_1:0 "The Great Spirits"
+
+ namekian_faith:0 "Spiritualist"
+ namekian_faith_adj:0 "Namekian Spiritualist"
+ namekian_faith_adherent:0 "Spiritualist"
+ namekian_faith_adherent_plural:0 "Spiritualists"
+
+ # Religion Group & Faith Names
+ majin_religion:0 "Chaos Cult"
+ majin_religion_adj:0 "Majin"
+ majin_religion_adherent:0 "Majin Cultist"
+ majin_religion_adherent_plural:0 "Majin Cultists"
+ majin_religion_desc:0 "A hedonistic and chaotic faith born of ancient magic. Majin followers embrace destruction, transformation, and the pursuit of pleasure through magical means."
+
+ # High God
+ majin_high_god:0 "Majin Buu"
+ majin_high_god_2:0 "Majin Buu"
+ majin_high_god_possessive:0 "Majin Buu's"
+ majin_dark_force:0 "The Dark Force"
+ majin_dark_force_possessive:0 "The Dark Force's"
+
+ # Creator & Lesser Gods
+ majin_origin:0 "The Primordial Magic"
+ majin_origin_possessive:0 "The Primordial Magic's"
+
+ majin_body:0 "The Ever-Bubbling"
+ majin_pleasure:0 "The Candy Crafter"
+ majin_conquest:0 "The Devourer"
+ majin_flame:0 "The Laughing Flame"
+ majin_will:0 "The Will of Buu"
+ majin_magic:0 "The Sorcerer's Tome"
+ majin_violence:0 "The Pink Storm"
+
+ # Devil & Evil Gods
+ anti_majin_force:0 "Sacred Guardians"
+ sacred_guardians:0 "Sacred Guardians"
+
+ # Worship
+ majin_temple:0 "Temple of Madness"
+ majin_temples:0 "Temples of Madness"
+ majin_seal:0 "Majin Seal"
+ majin_grimoire:0 "Grimoire of Chaos"
+ majin_overlord:0 "Overlord"
+
+ # Afterlife
+ majin_chaos_realm:0 "Realm of Chaos"
+ majin_unity:0 "Unity of Candy"
+ seal_of_damnation:0 "The Seal of Damnation"
+
+ # Clergy
+ majin_blessed:0 "Blessed"
+ majin_blessed_plural:0 "Blessed Ones"
+
+ # Faith Name
+ majin_faith:0 "Majin Cult"
+ majin_faith_adj:0 "Majin"
+ majin_faith_adherent:0 "Majin Cultist"
+ majin_faith_adherent_plural:0 "Majin Cultists"
+
+ # Religion Group & Faith Names
+ frieza_religion:0 "Imperial Order"
+ frieza_religion_adj:0 "Imperial"
+ frieza_religion_adherent:0 "Imperial Subject"
+ frieza_religion_adherent_plural:0 "Imperial Subjects"
+ frieza_religion_desc:0 "An authoritarian faith centered around the divine right of the Cold family to rule the galaxy. Power, order, and absolute loyalty to the Frieza bloodline are sacred tenets."
+
+ # High God
+ frieza_emperor:0 "Emperor Frieza"
+ frieza_emperor_2:0 "Frieza"
+ frieza_emperor_possessive:0 "Frieza's"
+ lord_of_cold:0 "The Lord of Cold"
+ lord_of_cold_possessive:0 "The Lord of Cold's"
+
+ # Creator & Lesser Gods
+ cold_lineage:0 "The Cold Lineage"
+ cold_lineage_possessive:0 "The Cold Lineage's"
+
+ bio_engineering:0 "The Genetic Designers"
+ empire_growth:0 "The Expanding Empire"
+ galactic_taxes:0 "The Treasury"
+ planetary_governance:0 "The Planetary Overseers"
+ destiny_of_rule:0 "The Mandate of Frieza"
+ cold_intellect:0 "The Calculated Mind"
+ might_of_frieza:0 "The Frieza Force"
+
+ # Devil & Evil Gods
+ saiyan_rebellion:0 "The Saiyan Rebellion"
+ super_saiyan_myth:0 "The Super Saiyan Myth"
+
+ # Worship
+ imperial_throne:0 "Imperial Throne"
+ imperial_thrones:0 "Imperial Thrones"
+ golden_emblem:0 "Golden Emblem"
+ frieza_edicts:0 "Edicts of Frieza"
+ supreme_emperor:0 "Supreme Emperor"
+
+ # Afterlife
+ galactic_capitol:0 "The Galactic Capitol"
+ throne_of_frieza:0 "Throne of Frieza"
+ rebel_scrapyard:0 "The Rebel Scrapyard"
+
+ # Clergy
+ galactic_official:0 "Galactic Official"
+ galactic_official_plural:0 "Galactic Officials"
+
+ # Faith Name
+ frieza_faith:0 "Cold Supremacy"
+ frieza_faith_adj:0 "Imperial"
+ frieza_faith_adherent:0 "Cold Loyalist"
+ frieza_faith_adherent_plural:0 "Cold Loyalists"
+

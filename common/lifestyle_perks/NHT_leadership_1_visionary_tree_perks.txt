@@ -1,0 +1,277 @@
+﻿nht_leading_by_example_perk = {
+	lifestyle = nht_leadership_lifestyle
+	tree = nht_visionary
+	position = { 2 0 }
+	icon = node_nht_leadership
+	
+	auto_selection_weight = {
+		value = 11
+		if = {
+			limit = {
+				more_lifestyles_education_submod_is_loaded = yes
+				has_education_nht_leadership_trigger = yes
+			}
+			add = 1989
+		}
+		if = {
+			limit = {
+				more_lifestyles_education_submod_is_loaded = no
+				has_education_stewardship_trigger = yes
+			}
+			add = 1989
+		}
+		if = {
+			limit = {
+				has_focus = nht_sovereign_focus
+			}
+			multiply = 5
+		}		
+		if = {
+			limit = {
+				has_trait = intellect_good_2
+			}
+			multiply = 4
+		}		
+		if = {
+			limit = {
+				has_trait = intellect_good_3
+			}
+			multiply = 5
+		}		
+		if = {
+			limit = {
+				has_trait = diligent
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				NOT = { has_game_rule = nht_secondary_lifestyle }
+				nht_can_start_new_lifestyle_tree_leadership_trigger = no
+			}
+			multiply = 0
+		}
+	}
+
+	government_character_modifier = {
+		flag = government_is_landless_adventurer
+		invert_check = yes
+		court_grandeur_baseline_add = 15
+	}
+	
+	government_character_modifier = {
+		flag = government_is_landless_adventurer
+		domicile_monthly_piety_add = 0.1
+	}
+
+	government_character_modifier = {
+		flag = government_is_administrative
+		governor_xp_gain_mult = 0.1
+	}
+}
+
+
+nht_impressed_court_perk = {
+	lifestyle = nht_leadership_lifestyle
+	tree = nht_visionary
+	position = { 0 1.25 }
+	icon = node_nht_leadership
+
+	parent = nht_leading_by_example_perk
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { is_landless_adventurer = yes }
+				desc = nht_impressed_court_perk_adventurer_name
+			}
+			desc = nht_impressed_court_perk_name
+		}
+	}
+
+	government_character_modifier = {
+		flag = government_is_landless_adventurer
+		invert_check = yes
+		vassal_opinion = 10
+		courtier_and_guest_opinion = 15
+	}
+	
+	government_character_modifier = {
+		flag = government_is_landless_adventurer
+		courtier_and_guest_opinion = 20
+	}
+}
+
+
+nht_visionary_admirer_perk = {
+	lifestyle = nht_leadership_lifestyle
+	tree = nht_visionary
+	position = { 0 2.5 }
+	icon = node_nht_leadership
+
+	parent = nht_impressed_court_perk
+
+	character_modifier = {
+		liege_opinion = 10
+	}
+
+	government_character_modifier = {
+		flag = government_is_landless_adventurer
+		invert_check = yes
+		liege_opinion = 10
+	}
+	
+	government_character_modifier = {
+		flag = government_is_landless_adventurer
+		domicile_travel_speed = 0.2
+	}
+}
+
+
+nht_regal_prosperity_perk = {
+	lifestyle = nht_leadership_lifestyle
+	tree = nht_visionary
+	position = { 2 1.25 }
+	icon = node_nht_leadership
+
+	parent = nht_leading_by_example_perk
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { is_landless_adventurer = yes }
+				desc = nht_regal_prosperity_perk_adventurer_name
+			}
+			desc = nht_regal_prosperity_perk_name
+		}
+	}
+
+	character_modifier = {
+		monthly_prestige_gain_mult = 0.05
+	}
+
+	government_character_modifier = {
+		flag = government_is_landless_adventurer
+		invert_check = yes
+		character_capital_county_monthly_development_growth_add = 0.2
+	}
+	
+	government_character_modifier = {
+		flag = government_is_landless_adventurer
+		diplomacy_per_prestige_level = 1
+		monthly_prestige_gain_mult = 0.1
+	}
+}
+
+
+nht_serenity_embrace_perk = {
+	lifestyle = nht_leadership_lifestyle
+	tree = nht_visionary
+	position = { 2 2.5 }
+	icon = node_nht_leadership
+
+	parent = nht_regal_prosperity_perk
+
+	character_modifier = {
+		stress_gain_mult = -0.1
+		stress_loss_mult = 0.1
+	}
+}
+
+
+nht_effective_architecture_perk = {
+	lifestyle = nht_leadership_lifestyle
+	tree = nht_visionary
+	position = { 4 1.25 }
+	icon = node_nht_leadership
+
+	parent = nht_leading_by_example_perk
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { is_landless_adventurer = yes }
+				desc = nht_effective_architecture_perk_adventurer_name
+			}
+			desc = nht_effective_architecture_perk_name
+		}
+	}
+
+	government_character_modifier = {
+		flag = government_is_landless_adventurer
+		invert_check = yes
+		build_gold_cost = -0.05
+		holding_build_gold_cost = -0.1
+	}
+	
+	government_character_modifier = {
+		flag = government_is_landless_adventurer
+		domicile_build_gold_cost = -0.2
+	}
+}
+
+
+nht_agile_construction_perk = {
+	lifestyle = nht_leadership_lifestyle
+	tree = nht_visionary
+	position = { 4 2.5 }
+	icon = node_nht_leadership
+
+	parent = nht_effective_architecture_perk
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { is_landless_adventurer = yes }
+				desc = nht_agile_construction_perk_adventurer_name
+			}
+			desc = nht_agile_construction_perk_name
+		}
+	}
+
+	government_character_modifier = {
+		flag = government_is_landless_adventurer
+		invert_check = yes
+		build_speed = -0.3
+		build_piety_cost = -0.1
+		build_prestige_cost = -0.1
+	}
+	
+	government_character_modifier = {
+		flag = government_is_landless_adventurer
+		domicile_build_speed = -0.2
+	}
+}
+
+
+nht_on_grand_course_perk = {
+	lifestyle = nht_leadership_lifestyle
+	tree = nht_visionary
+	position = { 2 3.75 }
+	icon = node_nht_leadership
+
+	parent = nht_visionary_admirer_perk
+	parent = nht_serenity_embrace_perk
+	parent = nht_agile_construction_perk
+
+	government_character_modifier = {
+		flag = government_is_landless_adventurer
+		invert_check = yes
+		cultural_head_fascination_mult = 0.15
+	}
+	
+	government_character_modifier = {
+		flag = government_is_landless_adventurer
+		stewardship_per_prestige_level = 1
+		domicile_monthly_gold_add = 0.7
+	}
+}
+
+nht_visionary_perk = {
+	lifestyle = nht_leadership_lifestyle
+	tree = nht_visionary
+	position = { 2 5 }
+	icon = nht_visionary_perk
+
+	parent = nht_on_grand_course_perk
+	trait = nht_visionary
+	effect = {
+        add_trait_force_tooltip = nht_visionary
+	}	
+}

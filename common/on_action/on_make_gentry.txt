@@ -1,0 +1,30 @@
+﻿on_title_gain = {
+    on_actions = {
+        on_make_gentry
+    }
+}
+
+on_make_gentry = {
+    trigger = {
+        has_character_modifier = veteran_modifier
+    }
+    effect = {
+            add_trait = gentry
+            remove_character_modifier = veteran_modifier
+    }
+}
+
+#prevent inhereting heir from getting gentry
+# on_title_gain_inheritance = {
+#     on_remove_gentry
+# }
+
+# on_remove_gentry = {
+#     trigger = {
+#         has_trait = gentry
+#     }
+
+#     effect = {
+#         remove_trait = gentry
+#     }
+# }

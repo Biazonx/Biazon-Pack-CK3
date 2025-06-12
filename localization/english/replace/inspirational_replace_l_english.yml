@@ -1,0 +1,46 @@
+﻿l_english:
+
+#Decisions
+ commission_artifact_decision:0 "Commission Local Artisan"
+
+#Necklace
+ artifact_necklace_name:1 "[SCOPE.Custom( 'ArtifactPrefixGeneric' )|U] [newly_created_artifact.GetFeatureText( 'decoration_material_gem' )|U] [newly_created_artifact.GetFeatureText( 'decoration_material_wire' )|U] Necklace"
+
+#Ring
+ artifact_ring_name:0 "[SCOPE.Custom( 'ArtifactPrefixGeneric' )|U] [newly_created_artifact.Custom( 'InspirationalArtifactRingName' )]"
+ feature_ring_decoration_centerpiece_and_adornment:0 "is topped with [Artifact.GetFeatureText( 'ring_centerpiece' )] and is [Artifact.GetFeatureText( 'ring_adornment' )]"
+
+#Revert Prize Names
+ tournament_prize_armor_name:0 "$artifact_armor_name$"
+ tournament_prize_weapon_name:0 "$artifact_name_prefix$ [newly_created_artifact.GetType|U]"
+ tournament_prize_bow_name:0 "$artifact_name_prefix$ [newly_created_artifact.GetType|U]"
+ tournament_prize_ring_name:0 "$artifact_ring_name$"
+ tournament_prize_necklace_name:0 "$artifact_necklace_name$"
+ tournament_prize_brooch_name:0 "$artifact_brooch_name$"
+ tournament_prize_goblet_name:0 "$artifact_name_prefix$ Goblet"
+ tournament_prize_bowl_name:0 "$artifact_name_prefix$ Bowl"
+ tournament_prize_plate_name:0 "$artifact_name_prefix$ Plate"
+ tournament_prize_urn_name:0 "$artifact_name_prefix$ Urn"
+ tournament_prize_statuette_name:0 "$artifact_name_prefix$ Statuette"
+ tournament_prize_tun_barrel_name:0 "$artifact_name_prefix$ Wine Tun"
+ tournament_prize_scepter_name:0 "$artifact_name_prefix$ Scepter"
+
+#Fixes
+ fund_inspiration.2080.a:0 ""[rival.GetFirstNameNoTooltip] #EMP will#! ensure its quality, [inspiration_owner.GetFirstNameNoTooltip].""
+ fund_inspiration.2080.b:0 ""Stick to your own duties, [rival.GetFirstNameNoTooltip].""
+ fund_inspiration.2080.success:0 "[rival.GetFirstNameNoTooltip] improves [inspiration_owner.GetFirstNamePossessiveNoTooltip] work"
+ fund_inspiration.2080.failure:0 "[rival.GetFirstNameNoTooltip] stifles [inspiration_owner.GetFirstNameNoTooltip]"
+
+ feature_book_topic_hunter_nature:0 "[Artifact.GetOwner.Custom('ArtifactArticleWealth')|U] manuscript flush with detailed illustrations and [Artifact.GetOwner.Custom('ArtifactBookContentQuality')] insights in the art of hunting and the beauty of the natural world."
+
+ custom_loc_dynasty_prestige_level_0:0 "unknown"
+ custom_loc_dynasty_prestige_level_1:0 "obscure"
+ custom_loc_dynasty_prestige_level_2:0 "insignificant"
+ custom_loc_dynasty_prestige_level_3:0 "noteworthy"
+ custom_loc_dynasty_prestige_level_4:0 "reputable"
+ custom_loc_dynasty_prestige_level_5:0 "well-known"
+ custom_loc_dynasty_prestige_level_6:0 "significant"
+ custom_loc_dynasty_prestige_level_7:0 "famous"
+ custom_loc_dynasty_prestige_level_8:0 "glorious"
+ custom_loc_dynasty_prestige_level_9:0 "fabled"
+ custom_loc_dynasty_prestige_level_10:0 "legendary"

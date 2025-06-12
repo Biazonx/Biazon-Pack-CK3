@@ -1,0 +1,13 @@
+﻿l_english:
+ saiyan_invite_decision:0 "Recruit Saiyans"
+ saiyan_invite_decision_desc:0 "You did not invade this planet alone, did you? Of course not! It's smarter if we fill our councils and armies with Saiyans rather than these pitiful Earthlings."
+ saiyan_invite_decision_tooltip:0 "You will recruit the 3 finest Saiyans you can find."
+ saiyan_invite_effect_tooltip:0 "3 Able-bodied Saiyans will join your court."
+ saiyan_invite_decision_confirm:0 "Commence the recruitment!"
+ 
+ forge_dragon_balls_decision:0 "Forge the Dragon Balls"
+ forge_dragon_balls_decision_confirm:0 "Begin the sacred ritual"
+ forge_dragon_balls_decision_tooltip:0 "You will begin forging the legendary Dragon Balls through intense spiritual focus."
+ forge_dragon_balls_decision_desc:0 "The Dragon Balls are sacred relics of the Namekian people. With enough wisdom, piety, and strength of will, you may recreate them — bringing their divine power back into the world."
+ bzn_artifact_dragon_1_name:0 "The Dragon Balls"
+ bzn_artifact_dragon_1_description:0 "Seven glowing orbs, each etched with a star, forged in the sacred traditions of the Namekians. Said to hum with the energy of the Great Dragon, these artifacts radiate wisdom, spiritual power, and divine presence."

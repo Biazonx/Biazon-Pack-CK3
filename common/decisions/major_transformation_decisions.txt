@@ -1,0 +1,404 @@
+﻿regenerative_slumber_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+    }
+
+    decision_group_type = major
+	selection_tooltip = regenerative_slumber_tooltip
+	desc = regenerative_slumber_decision_desc
+	
+    ai_check_interval = 240
+
+    cooldown = { years = 5 }
+
+    is_shown = {
+		has_trait = majin_race
+    }
+	
+	is_valid = {
+		has_trait = majin_race
+	}
+
+    effect = {
+		remove_trait = wounded_1
+		remove_trait = wounded_2
+		remove_trait = wounded_3
+		remove_trait = ergotism
+		remove_trait = pneumonic
+		remove_trait = dysentery
+		add_stress = -70
+		add_character_modifier = {
+            modifier = modifier_sleeping
+            years = 1
+        }
+	}
+
+    cost = { piety = 100 }
+
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 20
+    }
+}
+
+create_majin_minion_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+    }
+
+    decision_group_type = major
+	selection_tooltip = create_majin_minion_tooltip
+	desc = create_majin_minion_desc
+	
+    ai_check_interval = 120
+
+    cooldown = { years = 5 }
+
+    is_shown = {
+		has_trait = majin_race
+    }
+	
+	is_valid = {
+		has_trait = majin_race
+	}
+
+    effect = {
+		trigger_event = {
+            id = bzn_decisions.0007
+            days = { 5 10 }
+        }
+        trigger_event = {
+            id = bzn_decisions.0008
+            days = { 5 10 }
+        }
+        trigger_event = {
+            id = bzn_decisions.0009
+            days = { 5 10 }
+        }
+	}
+
+    cost = { piety = 100 }
+
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 20
+    }
+}
+
+god_ritual_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+    }
+    desc = god_ritual_decision_desc
+    selection_tooltip = god_ritual_decision_tooltip
+    decision_group_type = major
+
+    ai_check_interval = 120
+
+    is_shown = {
+		OR = {
+		has_trait = pure_saiyan
+		has_trait = hybrid_saiyan
+		}
+        NOT = {
+			has_trait = super_saiyan
+            has_trait = super_saiyan_2
+			has_trait = legendary_super_saiyan
+            has_trait = super_saiyan_4
+        }
+    }
+
+    is_valid = {
+		has_trait = super_saiyan_3
+        prestige_level >= 3
+    }
+	
+	    cost = { prestige = 1000 }
+		
+    effect = {
+        custom_tooltip = god_ritual_effect_tooltip
+
+        trigger_event = {
+            id = super_saiyan.0003
+            days = { 3 5 }
+        }
+    }
+
+    ai_potential = { always = yes }
+
+    ai_will_do = { base = 20 }
+}
+
+super_saiyan_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+    }
+    desc = super_saiyan_decision_desc
+    selection_tooltip = super_saiyan_decision_tooltip
+    decision_group_type = major
+
+    ai_check_interval = 120
+
+    is_shown = {
+        OR = {
+            has_trait = pure_saiyan
+            has_trait = hybrid_saiyan
+        }
+        NOT = {
+            has_trait = super_saiyan
+            has_trait = super_saiyan_2
+            has_trait = super_saiyan_3
+            has_trait = legendary_super_saiyan
+            has_trait = super_saiyan_4
+        }
+    }
+
+    is_valid = {
+        OR = {
+            has_trait = pure_saiyan
+            has_trait = hybrid_saiyan
+        }
+        prestige_level >= 2
+    }
+
+    cost = {
+        prestige = 1000
+    }
+
+    effect = {
+        remove_trait = oozaru
+        remove_trait = saiyan_tail
+        add_trait = super_saiyan
+    }
+
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 20
+    }
+}
+
+
+super_saiyan_2_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+    }
+    desc = super_saiyan_2_decision_desc
+    selection_tooltip = super_saiyan_decision_tooltip
+    decision_group_type = major
+
+    ai_check_interval = 120
+
+    is_shown = {
+		OR = {
+		has_trait = pure_saiyan
+		has_trait = hybrid_saiyan
+		}
+        NOT = {
+            has_trait = super_saiyan_2
+            has_trait = super_saiyan_3
+			has_trait = legendary_super_saiyan
+            has_trait = super_saiyan_4
+        }
+    }
+
+    is_valid = {
+		OR = {
+		has_trait = pure_saiyan
+		has_trait = hybrid_saiyan
+		}
+        prestige_level >= 2
+		has_trait = super_saiyan
+    }
+	
+	    cost = { prestige = 1000 }
+		
+    effect = {
+		remove_trait = saiyan_tail
+		remove_trait = super_saiyan
+        add_trait = super_saiyan_2
+    }
+
+    ai_potential = { always = yes }
+
+    ai_will_do = { base = 20 }
+}
+
+super_saiyan_3_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+    }
+    desc = super_saiyan_3_decision_desc
+    selection_tooltip = super_saiyan_decision_tooltip
+    decision_group_type = major
+
+    ai_check_interval = 120
+
+    is_shown = {
+		OR = {
+		has_trait = pure_saiyan
+		has_trait = hybrid_saiyan
+		}
+        NOT = {
+			has_trait = super_saiyan
+            has_trait = super_saiyan_3
+			has_trait = legendary_super_saiyan
+            has_trait = super_saiyan_4
+        }
+    }
+
+    is_valid = {
+		OR = {
+		has_trait = pure_saiyan
+		has_trait = hybrid_saiyan
+		}
+        prestige_level >= 3
+		has_trait = super_saiyan_2
+    }
+	
+	    cost = { prestige = 1000 }
+		
+    effect = {
+		remove_trait = saiyan_tail
+		remove_trait = super_saiyan
+		remove_trait = super_saiyan_2
+        add_trait = super_saiyan_3
+    }
+
+    ai_potential = { always = yes }
+
+    ai_will_do = { base = 20 }
+}
+
+full_power_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+    }
+    desc = full_power_decision_desc
+    selection_tooltip = full_power_decision_tooltip
+    decision_group_type = major
+
+    ai_check_interval = 120
+
+    is_shown = {
+        has_trait = frieza_race
+        NOT = {
+            has_trait = frieza_full
+            has_trait = golden_form
+        }
+	}
+    is_valid = {
+        has_trait = frieza_race
+        prestige_level >= 2
+    }
+
+    cost = {
+        prestige = 1000
+    }
+
+    effect = {
+        add_trait = frieza_full
+    }
+
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 20
+    }
+}
+
+golden_form_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+    }
+    desc = golden_form_decision_desc
+    selection_tooltip = golden_form_decision_tooltip
+    decision_group_type = major
+
+    ai_check_interval = 120
+
+    is_shown = {
+        has_trait = frieza_race
+        NOT = {
+            has_trait = golden_form
+        }
+    }
+
+    is_valid = {
+        has_trait = frieza_race
+        prestige_level >= 3
+    }
+
+    cost = {
+        prestige = 3000
+    }
+
+    effect = {
+		remove_trait = frieza_full
+        add_trait = golden_form
+    }
+
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 20
+    }
+}
+
+absorption_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+    }
+
+    decision_group_type = major
+	selection_tooltip = absorption_decision_tooltip
+	desc = absorption_decision_desc
+	
+    ai_check_interval = 120
+
+    cooldown = { months = 6 }
+
+    is_shown = {
+		has_trait = majin_race
+    }
+	
+	is_valid = {
+		has_trait = majin_race
+	}
+	
+	cost = { piety = 100 }
+	
+    effect = {
+		add_prowess_skill = 2
+		random_prisoner = { death }
+		
+		random_list = {
+			90 = { }
+			5 = { add_trait = strong }
+			5 = { add_trait = shrewd }
+		}
+	}
+
+    cost = { piety = 100 }
+
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 20
+    }
+}
+

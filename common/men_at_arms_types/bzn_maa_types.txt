@@ -1,0 +1,22 @@
+servile_soldiers = {
+	type = skirmishers
+	
+	damage = 10
+	toughness = 16
+	pursuit = 10
+	screen = 16
+
+	can_recruit = {
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_servile_soldiers }
+	}
+
+	buy_cost = { gold = 30 }
+	low_maintenance_cost = { gold = 0.03 }
+	high_maintenance_cost = { gold = 0.15 }
+	provision_cost = provisions_cost_infantry_cheap
+
+	stack = 200
+	ai_quality = { value = -400 }
+	icon = skirmishers
+
+}

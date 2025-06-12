@@ -1,0 +1,130 @@
+﻿basic_training_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_activity.dds"
+    }
+
+    sort_order = 62
+	
+    ai_check_interval = 120
+
+    cooldown = { years = 1 }
+
+    is_shown = {
+        is_adult = yes
+    }
+	
+	desc = basic_training_decision_desc
+
+    is_valid_showing_failures_only = {
+        is_available = yes
+    }
+
+    effect = {
+        custom_tooltip = basic_training_effect_tooltip
+
+        trigger_event = {
+            id = basic_training.0002
+            days = { 4 7 }
+        }
+    }
+
+    cost = { prestige = 100 }
+
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 20
+    }
+}
+
+oozaru_training_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_activity.dds"
+    }
+
+    sort_order = 63
+	
+    ai_check_interval = 120
+
+    cooldown = { years = 1 }
+
+    is_shown = {
+		NOT = { has_trait = oozaru  has_trait = super_saiyan has_trait = legendary_super_saiyan}
+		has_trait = saiyan_tail
+        is_adult = yes
+    }
+	
+	is_valid = {
+		has_trait = saiyan_tail
+	}
+	desc = basic_training_decision_desc
+
+    is_valid_showing_failures_only = {
+        is_available = yes
+    }
+
+    effect = {
+		random_list = {
+			50 = {
+			add_prowess_skill = 1
+			}
+			50 = {
+			add_prowess_skill = 1
+			add_trait = oozaru
+			}
+		}
+	}
+
+    cost = { prestige = 200 }
+
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 20
+    }
+}
+
+namekian_fusion_decision = { 
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_activity.dds"
+    }
+	decision_group_type = major
+	ai_check_interval = 120
+	desc = namekian_fusion_decision_desc
+	
+	 is_shown = {
+		NOT = { 
+			has_character_modifier = modifier_namek_warrior
+			has_character_modifier = modifier_dragon_clan
+		}
+        has_trait = namekian_race
+    }
+
+    is_valid = {
+		prestige_level >= 2
+        has_trait = namekian_race
+    }
+	
+	effect = {
+        custom_tooltip = namekian_fusion_effect_tooltip
+
+        trigger_event = {
+            id = basic_training.0001
+            days = { 4 7 }
+        }
+    }
+
+    cost = { prestige = 500 }
+
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 20
+    }
+}

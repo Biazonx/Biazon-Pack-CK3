@@ -1,0 +1,85 @@
+﻿transform_into_oozaru_interaction = {
+		category = interaction_category_hostile
+		common_interaction = no
+		icon = icon_combat
+		desc = transform_into_oozaru_interaction_desc
+		ai_maybe = yes
+
+		is_shown = {
+			scope:actor = {
+				has_trait = oozaru
+				NOT = { has_character_flag = used_oozaru }
+			}
+			scope:recipient = scope:actor
+		}
+    		is_valid = {
+			scope:actor = {
+				has_trait = oozaru
+			}
+		}
+		
+		on_accept = {
+			scope:actor = {
+				add_character_modifier = {
+					modifier = modifier_oozaru_transformation
+					months = 12
+				}
+				add_character_flag = {
+					flag = used_oozaru
+					months = 18
+				}
+			}
+		}
+
+    		ai_targets = {
+			ai_recipients = self
+    		}
+    		ai_frequency = 18
+    		ai_will_do = {
+        		base = 100
+    		}
+		auto_accept = yes
+}
+	
+transform_into_giant_interaction = {
+		category = interaction_category_hostile
+		common_interaction = no
+		icon = icon_combat
+		desc = transform_into_giant_interaction_desc
+		ai_maybe = yes
+
+		is_shown = {
+			scope:actor = {
+				has_trait = namekian_race
+				NOT = { has_character_flag = used_giant }
+			}
+			scope:recipient = scope:actor
+		}
+    		is_valid = {
+			scope:actor = {
+				has_trait = namekian_race
+			}
+		}
+		
+		on_accept = {
+			scope:actor = {
+				add_character_modifier = {
+					modifier = modifier_giant_transformation
+					months = 12
+				}
+				add_character_flag = {
+					flag = used_giant
+					months = 18
+				}
+			}
+		}
+
+    		ai_targets = {
+			ai_recipients = self
+    		}
+    		ai_frequency = 18
+    		ai_will_do = {
+        		base = 100
+    		}
+		auto_accept = yes
+}

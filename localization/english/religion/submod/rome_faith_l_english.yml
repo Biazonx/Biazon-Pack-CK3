@@ -1,0 +1,2754 @@
+﻿l_english:
+
+    #cdr
+    romanic_pagan_old:0 "Cultus Deorum"
+    romanic_pagan_old_adj:0 "Cultus Deorum"
+    romanic_pagan_old_adherent:0 "Cultus Deorumist"
+    romanic_pagan_old_adherent_plural:0 "Cultus Deorumists"
+    romanic_pagan_old_desc:0 "The Roman faith, also known as Cultus Deorum or Cult of the Gods, was the most common form of pre-Christian Rome taking influence from both of its neighbors, Greek idolism and the Etruscan faith. Despite having many similarities with the Greeks, the Roman faith was primarily based on ancestral worship and justice."
+    
+    romanism_religion:0 "Italic"
+    romanism_religion_adj:0 "Italic"
+    romanism_religion_adherent: "Romanist"
+    romanism_religion_adherent_plural: "Romanists"
+    romanism_religion_desc:0 "The Religion of the Italian or Roman was characterised by a vast pantheon of Gods and Goddesses. It was said to be founded as a direct negotiation between a Sabine King and the Gods, therefore relying heavily on proper ritual and pratice to appease their Gods."
+    
+    romanic_pagan_old_old:0 "Old Cultus Deorum"
+    romanic_pagan_old_old_adj:0 "Old Cultus Deorum"
+    romanic_pagan_old_adherent_old:0 "Old Cultus Deorumist"
+    romanic_pagan_old_old_adherent_plural:0 "Old Cultus Deorumists"
+    romanic_pagan_old_old_desc:0 "The Roman faith, also known as Cultus Deorum or Cult of the Gods, was the most common form of pre-Christian Rome taking influence from both of its neighbors, Greek idolism and the Etruscan faith. Despite having many similarities with the Greeks, the Roman faith was primarily based on ancestral worship and justice." 
+
+    cdr_idolism_religious_head_title:0 "Pontifex Maximus"
+    cdr_idolism_religious_head_title_name:0 "Collegium Pontificum"
+    cdr_idolism_divine_realm:0 "Deii Consentes"
+    cdr_idolism_idolism_religious_symbol:0 "Offer altar"
+    cdr_idolism_religious_text:0 "Ritus and Caerimoniae"
+
+    #jupiter Localization
+    cdr_idolism_high_god_name:0 "Jupiter"
+    cdr_idolism_high_god_name_2:0 "Jove"
+    cdr_idolism_high_god_name_possessive:0 "Jupiter's"
+    cdr_idolism_high_god_name_alternate:0 "Jupiter The Best and Greatest"
+    cdr_idolism_high_god_name_alternate_possessive:0 "$cdr_idolism_high_god_name_alternate$'s"
+    cdr_idolism_high_god_shehe:0 "He"
+    cdr_idolism_high_god_herselfhimself:0 "Himself"
+    cdr_idolism_high_god_herhis:0 "His"
+
+    #Creater god Localization
+    cdr_idolism_creator_god_name:0 "Chaos"
+    cdr_idolism_creator_god_name_possessive:0 "Chaos's"
+
+    #Health Goddess Bona Dea
+    cdr_idolism_health_god_name:0 "Bona Dea"
+    cdr_idolism_health_god_name_possessive:0 "Bona Dea's"
+
+    #Fertility Goddess Ceres Localization
+    cdr_idolism_fertility_god_name:0 "Venus"
+    cdr_idolism_fertility_god_name_possessive:0 "Venus's"
+
+    #Wealth god Mercurius Localization
+    cdr_idolism_wealth_god_name:0 "Mercurius"
+    cdr_idolism_wealth_god_name_possessive:0 "Mercurius's"
+ 
+    #Household god Lares 
+    cdr_idolism_household_god_name:0 "Lares"
+    cdr_idolism_household_god_name_possessive:0 "Lares's"
+
+    #Fate god Janus Localization
+    cdr_idolism_fate_god_name:0 "Janus"
+    cdr_idolism_fate_god_name_possessive:0 "Janus's"
+
+    #knowledge god Minerva Localization
+    cdr_idolism_knowledge_god_name:0 "Minerva"
+    cdr_idolism_knowledge_god_name_possessive:0 "Minerva's"
+
+    #War god Mars Localization
+    cdr_idolism_war_god_name:0 "Mars"
+    cdr_idolism_war_god_name_possessive:0 "Mars's"
+
+    #Trickster god Mendacius Localization
+    cdr_idolism_trickster_god_name:0 "Mendacius"
+    cdr_idolism_trickster_god_name_possessive:0 "Mendacius's"
+
+    #Night goddess Latona Localization
+    cdr_idolism_night_god_name:0 "Latona"
+    cdr_idolism_night_god_name_possessive:0 "Latona's"
+
+    #Water god Neptunus Localization
+    cdr_idolism_water_god_name:0 "Neptunus"
+    cdr_idolism_water_god_name_possessive:0 "Neptunus's"
+
+    #evil gods names 
+    cdr_idolism_evil_god_trivia:0 "Trivia" 
+    cdr_idolism_evil_god_discordia:0 "Discordia"
+
+    #witch goddess
+    cdr_idolism_witchgodname_trivia:0 "Trivia"
+    cdr_idolism_witchgodname_trivia_possesive:0 "Trivia's"
+
+    #Devil god   
+    cdr_idolism_devil_name:0 "Orcus" 
+    cdr_idolism_devil_name_possessive:0 "$cdr_idolism_devil_name$'s"
+
+    #Death god Dīs Pater 
+    cdr_idolism_death_deity_name:0 "Dīs Pater"
+    cdr_idolism_death_deity_name_possessive:0 "Dīs Pater's"
+
+    #Good gods names 
+    cdr_idolism_good_god_juno:0 "Juno" 
+    cdr_idolism_good_god_bona_dea:0 "Bona Dea" 
+    cdr_idolism_good_god_minerva:0 "Minerva" 
+    cdr_idolism_good_god_mercury:0 "Mercurius" 
+    cdr_idolism_good_god_neptune:0 "Neptunus" 
+    cdr_idolism_good_god_mars:0 "Mars" 
+    cdr_idolism_good_god_apollo:0 "Apollo" 
+    cdr_idolism_good_god_Venus:0 "Venus"
+
+    #Cdr priest flamen vestals
+
+    #Cdr priest 
+    cdr_idolism_priest_male:0 "Priest"
+    cdr_idolism_priest_male_plural:0 "Priests"
+    cdr_idolism_priest_alternate_plural:0 "Priest"
+
+    #Cdr vestals 
+    cdr_idolism_priest_female:0 "Vestal" 
+    cdr_idolism_priest_female_plural:0 "Vestals" 
+
+    #Cdr flamen  
+    cdr_idolism_bishop_male:0 "flamen" 
+    cdr_idolism_bishop_male_plural:0 "flamens" 
+
+    #roman names
+    #males
+    reserved_male_names:0 "Cultus Deorum male names"
+    #Female 
+    reserved_female_names:0 "Cultus Deorum female names"
+
+    #holy orders: 
+    holy_order_sons_of_mars:0 "Sons of Mars"
+    holy_order_Protectors_of_dei_consentes:0 "Protectors of Dei Consentes"
+    holy_order_joviani:0 "Jovians"
+    holy_order_herculiani:0 "Herculians"
+    #eluesinian mysteries
+     
+    eluesinian_mysteries:0 "Eleusinian Mysteries"
+    eluesinian_mysteries_adj:0 "Eleusinian Mysteries"
+    eluesinian_mysteries_adherent:0 "Eleusinian Cultist"
+    eluesinian_mysteries_adherent_plural:0 "Eleusinian Mysteries cultists"
+
+    eluesinian_mysteries_old:0 "Old Eleusinian Mysteries"
+    eluesinian_mysteries_old_adj:0 "Old Eleusinian Mysteries"
+    eluesinian_mysteries_adherent_old:0 "Old Eleusinian Cultist"
+    eluesinian_mysteries_old_adherent_plural:0 "Old Eleusinian Mysteries Cultists"
+    eluesinian_mysteries_old_desc:0 "The Eleusinian mysteries were a cult dedicated to the worship of Demeter and her daughter Persephone. The cult is believed to have origins in the Mycenean period. Like many Graeco-Roman mystery cults, the Eleusinian mysteries put a heavy emphasis on the afterlife, both after death and the travel to it using drugs."
+    eluesinian_mysteries_desc:0 "The Eleusinian mysteries were a cult dedicated to the worship of Demeter and her daughter Persephone. The cult is believed to have origins in the Mycenean period. Like many Graeco-Roman mystery cults, the Eleusinian mysteries put a heavy emphasis on the afterlife, both after death and the travel to it using drugs." 
+    eluesinian_mysteries_divine_realm:0 "Deii Consentes"
+    eluesinian_mysteries_religious_head_title:0 "Hierophantes"
+    eluesinian_mysteries_religious_symbol:0 "Offer altar"
+    eluesinian_mysteries_religious_text:0 "Sibylline Books"
+
+    #Demeter Localization
+    eluesinian_mysteries_high_god_name:0 "Demeter"
+    eluesinian_mysteries_high_god_name_possessive:0 "Demeter's"
+    eluesinian_mysteries_high_god_name_alternate:0 "Demeter Pelasgis"
+    eluesinian_mysteries_high_god_name_alternate_possessive:0 "Demeter Pelasgis's"
+    eluesinian_mysteries_high_god_shehe:0 "She"
+    eluesinian_mysteries_high_god_herselfhimself:0 "Herself"
+    eluesinian_mysteries_high_god_herhis:0 "Her"
+
+    #Creater god Localization
+    eluesinian_mysteries_creator_god_name:0 "Chaos"
+    eluesinian_mysteries_creator_god_name_possessive:0 "Chaos's"
+
+    #Health Goddess Bona Dea
+    eluesinian_mysteries_health_god_name:0 "Bona Dea"
+    eluesinian_mysteries_health_god_name_possessive:0 "Bona Dea's"
+
+    #Fertility Goddess Ceres Localization
+    eluesinian_mysteries_fertility_god_name:0 "Venus"
+    eluesinian_mysteries_fertility_god_name_possessive:0 "Venus's"
+
+    #Wealth god Mercurius Localization
+    eluesinian_mysteries_wealth_god_name:0 "Mercurius"
+    eluesinian_mysteries_god_name_possessive:0 "Mercurius's"
+
+    #Household god Lares 
+    eluesinian_mysteries_household_god_name:0 "Lares"
+    eluesinian_mysteries_household_god_name_possessive:0 "Lares's"
+
+    #Fate god Janus Localization
+    eluesinian_mysteries_fate_god_name:0 "Janus"
+    eluesinian_mysteries_fate_god_name_possessive:0 "Janus's"
+
+    #knowledge god Minerva Localization
+    eluesinian_mysteries_knowledge_god_name:0 "Minerva"
+    eluesinian_mysteries_knowledge_god_name_possessive:0 "Minerva's"
+
+    #War god Mars Localization
+    eluesinian_mysteries_war_god_name:0 "Mars"
+    eluesinian_mysteries_war_god_name_possessive:0 "Mars's"
+
+    #Trickster god Mendacius Localization
+    eluesinian_mysteries_trickster_god_name:0 "Mendacius"
+    eluesinian_mysteries_trickster_god_name_possessive:0 "Mendacius's"
+
+    #Night goddess Latona Localization
+    eluesinian_mysteries_night_god_name:0 "Latona"
+    eluesinian_mysteries_night_god_name_possessive:0 "Latona's"
+
+    #Water god Neptunus Localization
+    eluesinian_mysteries_water_god_name:0 "Neptunus"
+    eluesinian_mysteries_water_god_name_possessive:0 "Neptunus's"
+
+    #evil gods names 
+    eluesinian_mysteries_evil_god_trivia:0 "Trivia" 
+    eluesinian_mysteries_evil_god_discordia:0 "Discordia"
+
+    #Devil god   
+    eluesinian_mysteries_devil_name:0 "Orcus" 
+    eluesinian_mysteries_devil_name_possessive:0 "Orcus's"
+
+    #witch goddess
+    eluesinian_mysteries_witchgodname_trivia:0 "Trivia"
+    eluesinian_mysteries_witchgodname_trivia_possesive:0 "Trivia's"
+
+    #Death god Dīs Pater 
+    eluesinian_mysteries_death_deity_name:0 "Dīs Pater"
+    eluesinian_mysteries_death_deity_name_possessive:0 "Dīs Pater's"
+
+    #Good gods names 
+          
+    eluesinian_mysteries_good_god_demeter:0 "Demeter" 
+    eluesinian_mysteries_good_god_venus:0 "Venus" 
+    eluesinian_mysteries_good_god_minerva:0 "Minerva" 
+    eluesinian_mysteries_good_god_mercury:0 "Mercurius" 
+    eluesinian_mysteries_good_god_jupiter:0 "Jupiter" 
+    eluesinian_mysteries_good_god_mars:0 "Mars" 
+    eluesinian_mysteries_good_god_apollo:0 "Apollo" 
+    eluesinian_mysteries_good_god_juno:0 "Juno"
+
+    #Eluesinian Mysteries priest 
+    eluesinian_mysteries_priest_male:0 "Dadouchos"
+    eluesinian_mysteries_priest_male_plural:0 "Dadouchos"
+    #Eluesinian Mysteries priestess 
+    eluesinian_mysteries_priest_female:0 "Dadouchousa Prietess" 
+    eluesinian_mysteries_priest_female_plural:0 "Dadouchousa Prietesses" 
+
+    #holy order Eluesinian Mysteries 
+    holy_order_protectors_of_eluesinian_mysteries:0 "Protectors of Eluesinian Mysteries"
+
+    #Mithras Mysteries 
+    mithraic_mysteries:0 "Mithraism"
+    mithraic_mysteries_adj:0 "Mithraism"
+    mithraic_mysteries_adherent:0 "Mithraic Cultist"
+    mithraic_mysteries_adherent_plural:0 "Syndexioi"
+
+    mithraic_mysteries_old:0 "Old Mithraism"
+    mithraic_mysteries_old_adj:0 "Old Mithraism"
+    mithraic_mysteries_adherent_old:0 "Old Mithraic Cultist"
+    #mithraic_mysteries_old_adherent_plural:0 "Old Syndexioi"
+    mithraic_mysteries_old_adherent_plural:0 "Old Mithraic Cultist"
+    mithraic_mysteries_old_desc:0 "The Mithraic Cult, also known as the Mithraic mysteries, was a Roman mystery cult that worshiped the solar-esque bull-slaying god Mithras that came into prominence by the legions stationed in the east and their resettlement near the Danube. Despite holding the name of Persian Mithra, the connection between the two is heavily debated, as some scholars claim that Mithras is more related with the Sogdian Manichaean Mithra and the Semitic gods Shamash and Nergal." 
+
+    mithraic_mysteries_desc:0 "The Mithraic Cult, also known as the Mithraic mysteries, was a Roman mystery cult that worshiped the solar-esque bull-slaying god Mithras that came into prominence by the legions stationed in the east and their resettlement near the Danube. Despite holding the name of Persian Mithra, the connection between the two is heavily debated, as some scholars claim that Mithras is more related with the Sogdian Manichaean Mithra and the Semitic gods Shamash and Nergal." 
+    mithraic_mysteries_divine_realm:0 "Deii Consentes"
+    mithraic_mysteries_religious_head_title:0 "Hierophantes"
+    mithraic_mysteries_religious_symbol:0 "Offer altar"
+    mithraic_mysteries_religious_text:0 "Mitrhraic mysteries"
+
+    #Mithras Localization
+    mithraic_mysteries_high_god_name:0 "Mithras"
+    mithraic_mysteries_high_god_name_possessive:0 "Mithras's"
+    mithraic_mysteries_high_god_name_alternate:0 "Mithras"
+    mithraic_mysteries_high_god_name_alternate_possessive:0 "Mithras's"
+    mithraic_mysteries_high_god_shehe:0 "He"
+    mithraic_mysteries_high_god_herselfhimself:0 "Himself"
+    mithraic_mysteries_high_god_herhis:0 "His"
+
+    #Creater god Localization
+    mithraic_mysteries_creator_god_name:0 "Chaos"
+    mithraic_mysteries_creator_god_name_possessive:0 "Chaos's"
+
+    #Health Goddess Bona Dea
+    mithraic_mysteries_health_god_name:0 "Bona Dea"
+    mithraic_mysteries_health_god_name_possessive:0 "Bona Dea's"
+
+    #Fertility Goddess Ceres Localization
+    mithraic_mysteries_fertility_god_name:0 "Venus"
+    mithraic_mysteries_fertility_god_name_possessive:0 "Venus's"
+
+    #Wealth god Mercurius Localization
+    mithraic_mysteries_wealth_god_name:0 "Mercurius"
+    mithraic_mysteries_god_name_possessive:0 "Mercurius's"
+
+    #Household god Lares 
+    mithraic_mysteries_household_god_name:0 "Lares"
+    mithraic_mysteries_household_god_name_possessive:0 "Lares's"
+
+    #Fate god Janus Localization
+    mithraic_mysteries_fate_god_name:0 "Janus"
+    mithraic_mysteries_fate_god_name_possessive:0 "Janus's"
+
+    #knowledge god Minerva Localization
+    mithraic_mysteries_knowledge_god_name:0 "Minerva"
+    mithraic_mysteries_knowledge_god_name_possessive:0 "Minerva's"
+
+    #War god Mars Localization
+    mithraic_mysteries_war_god_name:0 "Mars"
+    mithraic_mysteries_war_god_name_possessive:0 "Mars's"
+
+    #Trickster god Mendacius Localization
+    mithraic_mysteries_trickster_god_name:0 "Mendacius"
+    mithraic_mysteries_trickster_god_name_possessive:0 "Mendacius's"
+
+    #Night goddess Latona Localization
+    mithraic_mysteries_night_god_name:0 "Latona"
+    mithraic_mysteries_night_god_name_possessive:0 "Latona's"
+
+    #Water god Neptunus Localization
+    mithraic_mysteries_water_god_name:0 "Neptunus"
+    mithraic_mysteries_water_god_name_possessive:0 "Neptunus"
+
+    #evil gods names 
+    mithraic_mysteries_evil_god_trivia:0 "Trivia" 
+    mithraic_mysteries_evil_god_discordia:0 "Discordia"
+
+    #witch goddess
+    mithraic_mysteries_witchgodname_trivia:0 "Trivia"
+    mithraic_mysteries_witchgodname_trivia_possesive:0 "Trivia's"
+
+    #Devil god   
+    mithraic_mysteries_devil_name:0 "Orcus" 
+    mithraic_mysteries_devil_name_possessive:0 "Orcus's"
+
+    #Death god Dīs Pater 
+    mithraic_mysteries_death_deity_name:0 "Dīs Pater"
+    mithraic_mysteries_death_deity_name_possessive:0 "Dīs Pater's"
+
+    #Good gods names 
+          
+    mithraic_mysteries_good_god_mithras:0 "Mithras" 
+    mithraic_mysteries_good_god_venus:0 "Venus" 
+    mithraic_mysteries_good_god_minerva:0 "Minerva" 
+    mithraic_mysteries_good_god_mercury:0 "Mercurius" 
+    mithraic_mysteries_good_god_jupiter:0 "Jupiter" 
+    mithraic_mysteries_good_god_mars:0 "Mars" 
+    mithraic_mysteries_good_god_apollo:0 "Apollo" 
+    mithraic_mysteries_good_god_juno:0 "Juno"
+
+    #Mithraic Mysteries priest 
+    mithraic_mysteries_priest_male:0 "Mithraic priest"
+    mithraic_mysteries_priest_male_plural:0 "Mithraic priest's"
+    #Mithraic priestess 
+    mithraic_mysteries_priest_female:0 "Dadouchousa Prietess" 
+    mithraic_mysteries_priest_female_plural:0 "Mithraic Prietesses" 
+
+    #holy order Mithraic Mysteries 
+    holy_order_protectors_of_mithraic_mysteries:0 "Protectors of Mithras"
+
+    #Isis Mysteries 
+    mysteries_of_isis:0 "Cult of Isis"
+    mysteries_of_isis_adj:0 "Cult of Isis"
+    mysteries_of_isis_adherent:0 "Isis Mysteries Cultist"
+    mysteries_of_isis_adherent_plural:0 "Isis Mysteries Cultists"
+
+    mysteries_of_isis_old:0 "Old Cult of Isis"
+    mysteries_of_isis_old_adj:0 "Old Cult of Isis"
+    mysteries_of_isis_adherent_old:0 "Old Isis Mysteries Cultist"
+    mysteries_of_isis_old_adherent_plural:0 "Old Isis Mysteries Cultists"
+    mysteries_of_isis_old_desc:0 "The cult of Isis saw emergence during the 3rd century BC to around the 2nd century AD. It incorporated several traditional Egyptian elements such as putting heavy emphasis on rebirth and the afterlife and shaving the head until bald and castration of the self." 
+
+    mysteries_of_isis_desc:0 "The cult of Isis saw emergence during the 3rd century BC to around the 2nd century AD. It incorporated several traditional Egyptian elements such as putting heavy emphasis on rebirth and the afterlife and shaving the head until bald and castration of the self." 
+    mysteries_of_isis_divine_realm:0 "Deii Consentes"
+    mysteries_of_isis_religious_head_title:0 "Hierophantes"
+    mysteries_of_isis_religious_symbol:0 "ankh symbol"
+    mysteries_of_isis_religious_text:0 "Ritual book in Hieroglyphs"
+
+    #Isis Localization
+    mysteries_of_isis_high_god_name:0 "Isis"
+    mysteries_of_isis_high_god_name_possessive:0 "Isis's"
+    mysteries_of_isis_high_god_name_alternate:0 "Isis"
+    mysteries_of_isis_high_god_name_alternate_possessive:0 "Isis's"
+    mysteries_of_isis_high_god_shehe:0 "She"
+    mysteries_of_isis_high_god_herselfhimself:0 "Herself"
+    mysteries_of_isis_high_god_herhis:0 "Her"
+
+    #Creater god Localization
+    mysteries_of_isis_creator_god_name:0 "Chaos"
+    mysteries_of_isis_creator_god_name_possessive:0 "Chaos's"
+
+    #Health Goddess Bona Dea
+    mysteries_of_isis_health_god_name:0 "Bona Dea"
+    mysteries_of_isis_health_god_name_possessive:0 "Bona Dea's"
+
+    #Fertility Goddess Ceres Localization
+    mysteries_of_isis_fertility_god_name:0 "Venus"
+    mysteries_of_isis_fertility_god_name_possessive:0 "Venus's"
+
+    #Wealth god Mercurius Localization
+    mysteries_of_isis_wealth_god_name:0 "Mercurius"
+    mysteries_of_isis_god_name_possessive:0 "Mercurius"
+
+    #Household god Lares 
+    mysteries_of_isis_household_god_name:0 "Lares"
+    mysteries_of_isis_household_god_name_possessive:0 "Lares's"
+
+    #Fate god Janus Localization
+    mysteries_of_isis_fate_god_name:0 "Janus"
+    mysteries_of_isis_fate_god_name_possessive:0 "Janus's"
+
+    #knowledge god Minerva Localization
+    mysteries_of_isis_knowledge_god_name:0 "Minerva"
+    mysteries_of_isis_knowledge_god_name_possessive:0 "Minerva's"
+
+    #War god Mars Localization
+    mysteries_of_isis_war_god_name:0 "Mars"
+    mysteries_of_isis_war_god_name_possessive:0 "Mars's"
+
+    #Trickster god Mendacius Localization
+    mysteries_of_isis_trickster_god_name:0 "Mendacius"
+    mysteries_of_isis_trickster_god_name_possessive:0 "Mendacius's"
+
+    #Night goddess Latona Localization
+    mysteries_of_isis_night_god_name:0 "Latona"
+    mysteries_of_isis_night_god_name_possessive:0 "Latona's"
+
+    #Water god Neptunus Localization
+    mysteries_of_isis_water_god_name:0 "Neptunus"
+    mysteries_of_isis_water_god_name_possessive:0 "Neptunus's"
+
+    #evil gods names 
+    mysteries_of_isis_evil_god_trivia:0 "Trivia" 
+    mysteries_of_isis_evil_god_discordia:0 "Discordia"
+
+    #Devil god   
+    mysteries_of_isis_devil_name:0 "Orcus" 
+    mysteries_of_isis_devil_name_possessive:0 "Orcus's"
+
+    #witch goddess
+    mysteries_of_isis_witchgodname_trivia:0 "Trivia"
+    mysteries_of_isis_witchgodname_trivia_possesive:0 "Trivia's"
+
+    #Death god Dīs Pater 
+    mysteries_of_isis_death_deity_name:0 "Dīs Pater"
+    mysteries_of_isis_death_deity_name_possessive:0 "Dīs Pater's"
+
+    #Good gods names 
+          
+    mysteries_of_isis_good_god_demeter:0 "Isis" 
+    mysteries_of_isis_good_god_venus:0 "Venus" 
+    mysteries_of_isis_good_god_minerva:0 "Minerva" 
+    mysteries_of_isis_good_god_mercury:0 "Mercurius" 
+    mysteries_of_isis_good_god_jupiter:0 "Jupiter" 
+    mysteries_of_isis_good_god_mars:0 "Mars" 
+    mysteries_of_isis_good_god_apollo:0 "Apollo" 
+    mysteries_of_isis_good_god_juno:0 "Juno"
+
+    #Isis Mysteries priest 
+    mysteries_of_isis_priest_male:0 "Isis mysteries priest"
+    mysteries_of_isis_priest_male_plural:0 "Isis mysteries priests"
+    #Isis Mysteries priestess 
+    mysteries_of_isis_priest_female:0 "Isis mysterie priestess" 
+    mysteries_of_isis_priest_female_plural:0 "Isis mysterie priestess's" 
+
+    #holy order Isis Mysteries 
+    holy_order_protectors_of_isis_mysteries:0 "Protectors of Isis Mysteries"
+
+    #Serapis Cult
+    cult_of_serapis:0 "Cult of Serapis"
+    cult_of_serapis_adj:0 "Cult of Serapis"
+    cult_of_serapis_adherent:0 "Serapis Cultist"
+    cult_of_serapis_adherent_plural:0 "Serapis Cultists"
+
+    cult_of_serapis_old:0 "Old Cult of Serapis"
+    cult_of_serapis_old_adj:0 "Old Cult of Serapis"
+    cult_of_serapis_adherent_old:0 "Old Serapis Cultist"
+    cult_of_serapis_old_adherent_plural:0 "Old Serapis Cultists"
+    cult_of_serapis_old_desc:0 "The cult of Serapis was pushed forward during the third century BC on the orders of Greek Pharaoh Ptolemy I Soter of the Ptolemaic Kingdom and made him patron of the ptolomic dynasty and Alexandria. In roman times Serapis continued to increase in popularity" 
+
+    cult_of_serapis_desc:0 "The cult of Serapis was pushed forward during the third century BC on the orders of Greek Pharaoh Ptolemy I Soter of the Ptolemaic Kingdom and made him patron of the ptolomic dynasty and Alexandria. In roman times Serapis continued to increase in popularity" 
+    cult_of_serapis_divine_realm:0 "Deii Consentes"
+    cult_of_serapis_religious_head_title:0 "Hierophantes"
+    cult_of_serapis_religious_symbol:0 "no symbol"
+    cult_of_serapis_religious_text:0 "Mysterie cult of Serapis"
+
+    #Serapis Cult Localization
+    cult_of_serapis_high_god_name:0 "Serapis"
+    cult_of_serapis_high_god_name_possessive:0 "Serapis's"
+    cult_of_serapis_high_god_name_alternate:0 "Serapis"
+    cult_of_serapis_high_god_name_alternate_possessive:0 "Serapis's"
+    cult_of_serapis_high_god_shehe:0 "He"
+    cult_of_serapis_high_god_herselfhimself:0 "Himself"
+    cult_of_serapis_high_god_herhis:0 "His"
+
+    #Creater god Localization
+    cult_of_serapis_creator_god_name:0 "Chaos"
+    cult_of_serapis_creator_god_name_possessive:0 "Chaos's"
+
+    #Health Goddess Bona Dea
+    cult_of_serapis_health_god_name:0 "Bona Dea"
+    cult_of_serapis_health_god_name_possessive:0 "Bona Dea"
+
+    #Fertility Goddess Ceres Localization
+    cult_of_serapis_fertility_god_name:0 "Venus"
+    cult_of_serapis_fertility_god_name_possessive:0 "Venus's"
+
+    #Wealth god Mercurius Localization
+    cult_of_serapis_wealth_god_name:0 "Mercurius"
+    cult_of_serapis_god_name_possessive:0 "Mercurius's"
+
+    #Household god Lares 
+    cult_of_serapis_household_god_name:0 "Lares"
+    cult_of_serapis_household_god_name_possessive:0 "Lares's"
+
+    #Fate god Janus Localization
+    cult_of_serapis_fate_god_name:0 "Janus"
+    cult_of_serapis_fate_god_name_possessive:0 "Janus's"
+
+    #knowledge god Minerva Localization
+    cult_of_serapis_knowledge_god_name:0 "Minerva"
+    cult_of_serapis_knowledge_god_name_possessive:0 "Minerva's"
+
+    #War god Mars Localization
+    cult_of_serapis_war_god_name:0 "Mars"
+    cult_of_serapis_war_god_name_possessive:0 "Mars"
+
+    #Trickster god Mendacius Localization
+    cult_of_serapis_trickster_god_name:0 "Mendacius"
+    cult_of_serapis_trickster_god_name_possessive:0 "Mendacius's"
+
+    #Night goddess Latona Localization
+    cult_of_serapis_night_god_name:0 "Latona"
+    cult_of_serapis_night_god_name_possessive:0 "Latona's"
+
+    #Water god Neptunus Localization
+    cult_of_serapis_water_god_name:0 "Neptunus"
+    cult_of_serapis_water_god_name_possessive:0 "Neptunus's"
+
+    #evil gods names 
+    cult_of_serapis_evil_god_trivia:0 "Trivia" 
+    cult_of_serapis_evil_god_discordia:0 "Discordia"
+
+    #Devil god   
+    cult_of_serapis_devil_name:0 "Orcus" 
+    cult_of_serapis_devil_name_possessive:0 "Orcus's"
+
+    #witch goddess
+    cult_of_serapis_witchgodname_trivia:0 "Trivia"
+    cult_of_serapis_witchgodname_trivia_possesive:0 "Trivia's"
+
+    #Death god Dīs Pater 
+    cult_of_serapis_death_deity_name:0 "Dīs Pater"
+    cult_of_serapis_death_deity_name_possessive:0 "Dīs Pater's"
+
+    #Good gods names 
+          
+    cult_of_serapis_good_god_serapis:0 "Serapis" 
+    cult_of_serapis_good_god_venus:0 "Venus" 
+    cult_of_serapis_good_god_minerva:0 "Minerva" 
+    cult_of_serapis_good_god_mercury:0 "Mercurius" 
+    cult_of_serapis_good_god_jupiter:0 "Jupiter" 
+    cult_of_serapis_good_god_mars:0 "Mars" 
+    cult_of_serapis_good_god_apollo:0 "Apollo" 
+    cult_of_serapis_good_god_juno:0 "Juno"
+
+    #Serapis cult priest 
+    cult_of_serapis_priest_male:0 "Serapist priest"
+    cult_of_serapis_priest_male_plural:0 "Serapist priests"
+    #Serapis cult priestess 
+    cult_of_serapis_priest_female:0 "Serapist priestess" 
+    cult_of_serapis_priest_female_plural:0 "Serapis priestess's" 
+
+    #holy order Serapis cult
+    holy_order_protectors_of_serapis_cult:0 "Protectors of Serapis"
+
+    #Sol invictus Cult
+    sol_invictus_cult:0 "Cult of Sol Invictus"
+    sol_invictus_cult_adj:0 "Cult of Sol Invictus"
+    sol_invictus_cult_adherent:0 "Sol Invictus Cultists"
+    sol_invictus_cult_adherent_plural:0 "Sol Invictus Cultists"
+
+    sol_invictus_cult_old:0 "Old Cult of Sol Invictus"
+    sol_invictus_cult_old_adj:0 "Old Cult of Sol Invictus"
+    sol_invictus_cult_adherent_old:0 "Old Sol Invictus Cultist"
+    sol_invictus_cult_old_adherent_plural:0 "Old Sol Invictus Cultists"
+    sol_invictus_cult_old_desc:0 "The Cult of Sol Invictus, or the Unconquered Sun, was the emerging pseudo-monotheistic cult during the 3rd century AD. The cult first promoted during the reign of Elagabalus, who renamed himself after the god, following the mass adoption of the Syriac sun god by many legions stationed in the east as their own personal god. However, the cult gained much greater renown following its establishment as the official state religion by Emperor Aurelianus." 
+
+    sol_invictus_cult_desc:0 "The Cult of Sol Invictus, or the Unconquered Sun, was the emerging pseudo-monotheistic cult during the 3rd century AD. The cult first promoted during the reign of Elagabalus, who renamed himself after the god, following the mass adoption of the Syriac sun god by many legions stationed in the east as their own personal god. However, the cult gained much greater renown following its establishment as the official state religion by Emperor Aurelianus." 
+    sol_invictus_cult_divine_realm:0 "Deii Consentes"
+    sol_invictus_cult_religious_head_title:0 "Hierophantes"
+    sol_invictus_cult_religious_symbol:0 "Unconquerable sun"
+    sol_invictus_cult_religious_text:0 "Ritus and Caerimoniae"
+
+    #Serapis Cult Localization
+    sol_invictus_cult_high_god_name:0 "Sol"
+    sol_invictus_cult_high_god_name_possessive:0 "Sol"
+    sol_invictus_cult_high_god_name_alternate:0 "unconquerable sun"
+    sol_invictus_cult_high_god_name_alternate_possessive:0 "unconquerable sun's"
+    sol_invictus_cult_high_god_shehe:0 "He"
+    sol_invictus_cult_high_god_herselfhimself:0 "Himself"
+    sol_invictus_cult_high_god_herhis:0 "His"
+
+    #Creater god Localization
+    sol_invictus_cult_creator_god_name:0 "Chaos"
+    sol_invictus_cult_creator_god_name_possessive:0 "Chaos's"
+
+    #Health Goddess Bona Dea
+    sol_invictus_cult_health_god_name:0 "Bona Dea"
+    sol_invictus_cult_health_god_name_possessive:0 "Bona Dea"
+
+    #Fertility Goddess Ceres Localization
+    sol_invictus_cult_fertility_god_name:0 "Venus"
+    sol_invictus_cult_fertility_god_name_possessive:0 "Venus's"
+
+    #Wealth god Mercurius Localization
+    sol_invictus_cult_wealth_god_name:0 "Mercurius"
+    sol_invictus_cult_god_name_possessive:0 "Mercurius"
+
+    #Household god Lares 
+    sol_invictus_cult_household_god_name:0 "Lares"
+    sol_invictus_cult_household_god_name_possessive:0 "Lares's"
+
+    #Fate god Janus Localization
+    sol_invictus_cult_fate_god_name:0 "Janus"
+    sol_invictus_cult_fate_god_name_possessive:0 "Janus's"
+
+    #knowledge god Minerva Localization
+    sol_invictus_cult_knowledge_god_name:0 "Minerva"
+    sol_invictus_cult_knowledge_god_name_possessive:0 "Minerva's"
+
+    #War god Mars Localization
+    sol_invictus_cult_war_god_name:0 "Mars"
+    sol_invictus_cult_war_god_name_possessive:0 "Mars's"
+
+    #Trickster god Mendacius Localization
+    sol_invictus_cult_trickster_god_name:0 "Mendacius"
+    sol_invictus_cult_trickster_god_name_possessive:0 "Mendacius's"
+
+    #Night goddess Latona Localization
+    sol_invictus_cult_night_god_name:0 "Latona"
+    sol_invictus_cult_night_god_name_possessive:0 "Latona's"
+
+    #Water god Neptunus Localization
+    sol_invictus_cult_water_god_name:0 "Neptunus"
+    sol_invictus_cult_water_god_name_possessive:0 "Neptunus"
+
+    #evil gods names 
+    sol_invictus_cult_evil_god_trivia:0 "Trivia" 
+    sol_invictus_cult_evil_god_discordia:0 "Discordia"
+
+    #witch goddess
+    sol_invictus_cult_witchgodname_trivia:0 "Trivia"
+    sol_invictus_cult_witchgodname_trivia_possesive:0 "Trivia's"
+
+    #Devil god   
+    sol_invictus_cult_devil_name:0 "Orcus" 
+    sol_invictus_cult_devil_name_possessive:0 "Orcus's"
+
+    #Death god Dīs Pater 
+    sol_invictus_cult_death_deity_name:0 "Dīs Pater"
+    sol_invictus_cult_death_deity_name_possessive:0 "Dīs Pater's"
+
+    #Good gods names 
+          
+    sol_invictus_cult_good_god_sol_invictus:0 "Sol Invictus" 
+    sol_invictus_cult_good_god_venus:0 "Venus" 
+    sol_invictus_cult_good_god_minerva:0 "Minerva" 
+    sol_invictus_cult_good_god_mercury:0 "Mercurius" 
+    sol_invictus_cult_good_god_jupiter:0 "Jupiter" 
+    sol_invictus_cult_good_god_mars:0 "Mars" 
+    sol_invictus_cult_good_god_apollo:0 "Apollo" 
+    sol_invictus_cult_good_god_juno:0 "Juno"
+
+    #Serapis cult priest 
+    sol_invictus_cult_priest_male:0 "Sol Invictus priest"
+    sol_invictus_cult_priest_male_plural:0 "Sol Invictuspriests"
+    #Serapis cult priestess 
+    sol_invictus_cult_priest_female:0 "Sol Invictus priestess" 
+    sol_invictus_cult_priest_female_plural:0 "Sol Invictus priesterss's" 
+
+    #holy order of Sol Invictus 
+    holy_order_protectors_of_sol_invictus:0 "Protectors of Sol Invictus"
+
+    #Imperial cult
+    romanic_pagan_imperial:0 "Cult of Imperial"
+    romanic_pagan_imperial_adj:0 "Cult of Imperial"
+    romanic_pagan_imperial_adherent:0 "Imperial Cultist"
+    romanic_pagan_imperial_adherent_plural:0 "Imperial Cultists"
+
+    romanic_pagan_imperial_old:0 "Old Imperial Cult"
+    romanic_pagan_imperial_old_adj:0 "Old Imperial Cult"
+    romanic_pagan_imperial_adherent_old:0 "Old Imperial Cultist"
+    romanic_pagan_imperial_old_adherent_plural:0 "Old Imperial Cultists"
+    romanic_pagan_imperial_old_desc:0 "The Imperial Cult was the dejure state religion of the early Roman Empire that saw the worship of the living emperor as Divi Filius, or as the Son of god. Emperor Octavianus Augustus popularized the term following the deification of Iulius Caesar, his adoptive father. The title would continue throughout the following centuries until it ceased to be used as Christianity became the state religion of the Empire." 
+
+    romanic_pagan_imperial_desc:0 "The Imperial Cult was the dejure state religion of the early Roman Empire that saw the worship of the living emperor as Divi Filius, or as the Son of god. Emperor Octavianus Augustus popularized the term following the deification of Iulius Caesar, his adoptive father. The title would continue throughout the following centuries until it ceased to be used as Christianity became the state religion of the Empire." 
+    imperial_cult_religious_head_title:0 "Divus Imperator"
+    imperial_cult_religious_head_title_name:0 "Collegium Augustalis"
+    imperial_cult_divine_realm:0 "Deii Consentes"
+    imperial_cult_religious_symbol:0 "Offer altar"
+    imperial_cult_religious_text:0 "Ritus and Caerimoniae"
+    
+
+    #Imperial Cult gods/goddesses Localization
+
+    #Augustus Localization
+    imperial_cult_high_god_name:0 "Augustus"
+    imperial_cult_high_god_name_possessive:0 "Augustus's"
+    imperial_cult_high_god_name_alternate:0 "Divus Augustus"
+    imperial_cult_high_god_name_alternate_possessive:0 "Divus Augustus's"
+    imperial_cult_high_god_shehe:0 "He"
+    imperial_cult_high_god_herselfhimself:0 "Himself"
+    imperial_cult_high_god_herhis:0 "His"
+
+    #Creater god Localization
+    imperial_cult_creator_god_name:0 "Chaos"
+    imperial_cult_creator_god_name_possessive:0 "Chaos's"
+
+    #Health Goddess Bona Dea
+    imperial_cult_health_god_name:0 "Bona Dea"
+    imperial_cult_health_god_name_possessive:0 "Bona Dea"
+
+    #Fertility Goddess Ceres Localization
+    imperial_cult_fertility_god_name:0 "Venus"
+    imperial_cult_fertility_god_name_possessive:0 "Venus's"
+
+    #Wealth god Mercurius Localization
+    imperial_cult_wealth_god_name:0 "Mercurius"
+    imperial_cult_wealth_god_name_possessive:0 "Mercurius"
+
+    #Household god Lares 
+    imperial_cult_household_god_name:0 "Lares"
+    imperial_cult_household_god_name_possessive:0 "Lares's"
+
+    #Fate god Janus Localization
+    imperial_cult_fate_god_name:0 "Janus"
+    imperial_cult_fate_god_name_possessive:0 "Janus's"
+
+    #knowledge god Minerva Localization
+    imperial_cult_knowledge_god_name:0 "Minerva"
+    imperial_cult_knowledge_god_name_possessive:0 "Minerva's"
+
+    #War god Mars Localization
+    imperial_cult_war_god_name:0 "Mars"
+    imperial_cult_war_god_name_possessive:0 "Mars"
+
+    #Trickster god Mendacius Localization
+    imperial_cult_trickster_god_name:0 "Mendacius"
+    imperial_cult_trickster_god_name_possessive:0 "Mendacius's"
+
+    #Night goddess Latona Localization
+    imperial_cult_night_god_name:0 "Latona"
+    imperial_cult_night_god_name_possessive:0 "Latona's"
+
+    #Water god Neptunus Localization
+    imperial_cult_water_god_name:0 "Neptunus"
+    imperial_cult_water_god_name_possessive:0 "Neptunus"
+
+    #evil gods names 
+    imperial_cult_evil_god_trivia:0 "Trivia" 
+    imperial_cult_evil_god_discordia:0 "Discordia"
+
+    #witch goddess
+    imperial_cult_witchgodname_trivia:0 "Trivia"
+    imperial_cult_witchgodname_trivia_possesive:0 "Trivia's"
+
+    #Devil god   
+    imperial_cult_devil_name:0 "Orcus" 
+    imperial_cult_devil_name_possessive:0 "Orcus's"
+
+    #Death god Dīs Pater 
+    imperial_cult_death_deity_name:0 "Dīs Pater"
+    imperial_cult_death_deity_name_possessive:0 "Dīs Pater's"
+
+    #Good gods names 
+    imperial_cult_good_god_juno:0 "Juno" 
+    imperial_cult_good_god_augustus:0 "Augustus" 
+    imperial_cult_good_god_minerva:0 "Minerva" 
+    imperial_cult_good_god_hadrianus:0 "Hadrianus" 
+    imperial_cult_good_god_neptune:0 "Neptunus" 
+    imperial_cult_good_god_mars:0 "Mars" 
+    imperial_cult_good_god_trajanus:0 "Trajanus" 
+    imperial_cult_good_god_Venus:0 "Venus"
+
+    #Imperial Cult priest flamen vestals
+
+    #Imperial Cult priest 
+    imperial_cult_priest_male:0 "Augustales"
+    imperial_cult_priest_male_plural:0 "Augustales"
+
+    #Imperial Cult vestals 
+    imperial_cult_priest_female:0 "Vestal" 
+    imperial_cult_priest_female_plural:0 "Vestals" 
+
+    #Imperial Cult flamen  
+    imperial_cult_bishop_male:0 "flamen" 
+    imperial_cult_bishop_male_plural:0 "flamens" 
+
+    #holy order Imperial cult
+    holy_order_protectors_of_divus_augusti:0 "Protectors of Divus Augusti"
+
+
+    roman_illyrian_idolism:0 "Roman-Illyrian Paganism"
+    roman_illyrian_idolism_adj:0 "Roman-Illyrian Paganism"
+    roman_illyrian_idolism_adherent:0 "Roman Illyrianist"
+    roman_illyrian_idolism_adherent_plural:0 "Roman Illyrianists"
+
+    roman_illyrian_idolism_old:0 "Old Roman-Illyrian Paganism"
+    roman_illyrian_idolism_old_adj:0 "Old Roman-Illyrian Paganism"
+    roman_illyrian_idolism_adherent_old:0 "Old Roman Illyrian Polytheist"
+    roman_illyrian_idolism_old_adherent_plural:0 "Old Roman Illyrian Polytheists"
+    roman_illyrian_idolism_old_desc:0 "Illyrian gods and goddess adopted by the Romans after conquering the Illyrian tribes" 
+
+    roman_illyrian_idolism_desc:0 "Illyrian gods and goddess adopted by the Romans after conquering the Illyrian tribes" 
+    roman_illyrian_idolism_religious_head_title:0 "Pontifex Maximus"
+    roman_illyrian_idolism_divine_realm:0 "Deii Consentes"
+    roman_illyrian_idolism_religious_symbol:0 "Offer altar"
+    roman_illyrian_idolism_religious_text:0 "Ritus and Caerimoniae"
+
+     #Roman Illyrian gods/goddesses Localization
+
+    #jupiter parthinus Localization
+    roman_illyrian_idolism_high_god_name:0 "Jupiter Parthinus"
+    roman_illyrian_idolism_high_god_name_possessive:0 "Jupiter Parthinus's"
+    roman_illyrian_idolism_high_god_name_alternate:0 "Pater Jupiter Parhinus"
+    roman_illyrian_idolism_high_god_name_alternate_possessive:0 "Pater Jupiter Parthinus's"
+    roman_illyrian_idolism_high_god_shehe:0 "He"
+    roman_illyrian_idolism_high_god_herselfhimself:0 "Himself"
+    roman_illyrian_idolism_high_god_herhis:0 "His"
+
+    #Creater god Localization
+    roman_illyrian_idolism_creator_god_name:0 "Chaos"
+    roman_illyrian_idolism_creator_god_name_possessive:0 "Chaos's"
+
+    #Health Goddess Bona Dea
+    roman_illyrian_idolism_health_god_name:0 "Bona Dea"
+    roman_illyrian_idolism_health_god_name_possessive:0 "Bona Dea"
+
+    #Fertility Goddess Anzotica Localization
+    roman_illyrian_idolism_fertility_god_name:0 "Anzotica"
+    roman_illyrian_idolism_fertility_god_name_possessive:0 "Anzotica's"
+
+    #Wealth god Latra Localization
+    roman_illyrian_idolism_wealth_god_name:0 "Latra"
+    roman_illyrian_idolism_wealth_god_name_possessive:0 "Latra's"
+
+    #Household god Lares 
+    roman_illyrian_idolism_household_god_name:0 "Lares"
+    roman_illyrian_idolism_household_god_name_possessive:0 "Lares's"
+
+    #Fate god Janus Localization
+    roman_illyrian_idolism_fate_god_name:0 "Janus"
+    roman_illyrian_idolism_fate_god_name_possessive:0 "Janus's"
+
+    #knowledge god Minerva Localization
+    roman_illyrian_idolism_knowledge_god_name:0 "Minerva"
+    roman_illyrian_idolism_knowledge_god_name_possessive:0 "Minerva's"
+
+    #War god Armatus Localization
+    roman_illyrian_idolism_war_god_name:0 "Armatus"
+    roman_illyrian_idolism_war_god_name_possessive:0 "Armatus's"
+
+    #Trickster god Mendacius Localization
+    roman_illyrian_idolism_trickster_god_name:0 "Mendacius"
+    roman_illyrian_idolism_trickster_god_name_possessive:0 "Mendacius's"
+
+    #Night goddess Latona Localization
+    roman_illyrian_idolism_night_god_name:0 "Latona"
+    roman_illyrian_idolism_night_god_name_possessive:0 "Latona's"
+
+    #Water god Aecorna Localization
+    roman_illyrian_idolism_water_god_name:0 "Aecorna"
+    roman_illyrian_idolism_water_god_name_possessive:0 "Aecorna's"
+
+    #evil gods names 
+    roman_illyrian_idolism_evil_god_trivia:0 "Trivia" 
+    roman_illyrian_idolism_evil_god_discordia:0 "Discordia"
+
+    #witch goddess
+    roman_illyrian_idolism_witchgodname_trivia:0 "Trivia"
+    roman_illyrian_idolism_witchgodname_trivia_possesive:0 "Trivia's"
+
+    #Devil god   
+    roman_illyrian_idolism_devil_name:0 "Orcus" 
+    roman_illyrian_idolism_devil_name_possessive:0 "Orcus's"
+
+    #Death god Dīs Pater 
+    roman_illyrian_idolism_death_deity_name:0 "Dīs Pater"
+    roman_illyrian_idolism_death_deity_name_possessive:0 "Dīs Pater's"
+
+    #Good gods names 
+    roman_illyrian_idolism_good_god_juno:0 "Juno" 
+    roman_illyrian_idolism_good_god_bona_dea:0 "Bona Dea" 
+    roman_illyrian_idolism_good_god_minerva:0 "Minerva" 
+    roman_illyrian_idolism_good_god_mercury:0 "Mercurius" 
+    roman_illyrian_idolism_good_god_neptune:0 "Neptunus" 
+    roman_illyrian_idolism_good_god_mars:0 "Mars" 
+    roman_illyrian_idolism_good_god_apollo:0 "Apollo" 
+    roman_illyrian_idolism_good_god_Venus:0 "Venus"
+
+    #Roman Illyrian priest flamen vestals
+
+    #Roman Illyrian priest 
+    roman_illyrian_idolism_priest_male:0 "Priest"
+    roman_illyrian_idolism_priest_male_plural:0 "Priests"
+
+    #Roman Illyrian vestals 
+    roman_illyrian_idolism_priest_female:0 "Vestal" 
+    roman_illyrian_idolism_priest_female_plural:0 "Vestals" 
+
+    #Roman Illyrian flamen  
+    roman_illyrian_idolism_bishop_male:0 "flamen" 
+    roman_illyrian_idolism_bishop_male_plural:0 "flamens" 
+
+    #roman names
+    #males
+    reserved_male_names:0 "Roman Illyrian male names"
+    #Female 
+    reserved_female_names:0 "Roman Illyrian female names"
+
+    #holy orders: 
+    holy_order_sons_of_armatus:0 "Sons of Armatus"
+    holy_order_Protectors_of_dei_consentes:0 "Protectors of Dei Consentes"
+
+  #mycenaean
+    mycenaean_idolism:0 "Mycenaeanism"
+    mycenaean_idolism_adj:0 "Mycenaeanism"
+    mycenaean_idolism_adherent:0 "Mycenaeanist"
+    mycenaean_idolism_adherent_plural:0 "Mycenaeanists"
+    mycenaean_idolism_desc:0 "The original faith of the Greeks before the Bronze Age Collapse. Similarly to other early Indo-European religions, once the Greeks settled down, they had adopted or at the very least were influenced by the neighboring trade power of the Minoans on Crete." 
+
+    mycenaean_idolism_old:0 "Old Mycenaeanism"
+    mycenaean_idolism_old_adj:0 "Old Mycenaeanism"
+    mycenaean_idolism_adherent_old:0 "Old Mycenaeanist"
+    mycenaean_idolism_old_adherent_plural:0 "Old Mycenaeanists"
+    mycenaean_idolism_old_desc:0 "TThe original faith of the Greeks before the Bronze Age Collapse. Similarly to other early Indo-European religions, once the Greeks settled down, they had adopted or at the very least were influenced by the neighboring trade power of the Minoans on Crete." 
+
+    mycenaean_idolism_religious_head_title:0 "High Priest"
+    mycenaean_idolism_divine_realm:0 "$hellenism_divine_realm$"
+    mycenaean_idolism_idolism_religious_symbol:0 "Bull"
+    mycenaean_idolism_religious_text:0 "$hellenism_religious_text$"
+    
+
+    #mycenaean gods/goddesses Localization
+
+    #Poseidon Localization
+    mycenaean_idolism_high_god_name:0 "Poseidon"
+    mycenaean_idolism_high_god_name_possessive:0 "Poseidon's"
+    mycenaean_idolism_high_god_name_alternate:0 "Poseidon"
+    mycenaean_idolism_high_god_name_alternate_possessive:0 "Poseidon's"
+    mycenaean_idolism_high_god_shehe:0 "He"
+    mycenaean_idolism_high_god_herselfhimself:0 "Himself"
+    mycenaean_idolism_high_god_herhis:0 "His"
+
+    #Creater god Localization
+    mycenaean_idolism_creator_god_name:0 "Gaia"
+    mycenaean_idolism_creator_god_name_possessive:0 "Gaia's"
+
+    #Health Goddess Paean
+    mycenaean_idolism_health_god_name:0 "Paean"
+    mycenaean_idolism_health_god_name_possessive:0 "Paean's"
+
+    #Fertility Goddess Ceres Localization
+    mycenaean_idolism_fertility_god_name:0 "Aphrodite"
+    mycenaean_idolism_fertility_god_name_possessive:0 "Aphrodite's"
+
+    #Wealth god Hermes Localization
+    mycenaean_idolism_wealth_god_name:0 "Hermes"
+    mycenaean_idolism_wealth_god_name_possessive:0 "Hermes's"
+
+    #Household god Despotas 
+    mycenaean_idolism_household_god_name:0 "Despotas"
+    mycenaean_idolism_household_god_name_possessive:0 "Despotas's"
+
+    #Fate god the Moirai Localization
+    mycenaean_idolism_fate_god_name:0 "the Moirai"
+    mycenaean_idolism_fate_god_name_possessive:0 "the Moirai's"
+
+    #knowledge god Athena Localization
+    mycenaean_idolism_knowledge_god_name:0 "Athena"
+    mycenaean_idolism_knowledge_god_name_possessive:0 "Athena's"
+
+    #War god Ares Localization
+    mycenaean_idolism_war_god_name:0 "Ares"
+    mycenaean_idolism_war_god_name_possessive:0 "Ares's"
+
+    #Trickster god Mendacius Localization
+    mycenaean_idolism_trickster_god_name:0 "Mendacius"
+    mycenaean_idolism_trickster_god_name_possessive:0 "Mendacius's"
+
+    #Night goddess Nyx Localization
+    mycenaean_idolism_night_god_name:0 "Nyx"
+    mycenaean_idolism_night_god_name_possessive:0 "Nyx's"
+
+    #Water god Poseidon Localization
+    mycenaean_idolism_water_god_name:0 "Poseidon"
+    mycenaean_idolism_water_god_name_possessive:0 "Poseidon's"
+
+    #evil gods names 
+    mycenaean_idolism_evil_god_menoetius:0 "Menoetius" 
+    mycenaean_idolism_evil_god_the_erinyes":0 "The Erinyes"
+
+    #witch goddess
+    mycenaean_idolism_witchgodname_hekate:0 "Hekate"
+    mycenaean_idolism_witchgodname_hekate_possesive:0 "Hekate's"
+
+    #Devil god   
+    mycenaean_idolism_devil_name:0 "Orcus" 
+    mycenaean_idolism_devil_name_possessive:0 "Orcus's"
+
+    #Death god Dīs Pater 
+    mycenaean_idolism_death_deity_name:0 "Hades"
+    mycenaean_idolism_death_deity_name_possessive:0 "Hades's"
+
+    #Good gods names 
+    mycenaean_idolism_good_god_zeus:0 "Zeus" 
+    mycenaean_idolism_good_god_artemis:0 "Artemis" 
+    mycenaean_idolism_good_god_posidaeia:0 "Posidaeia" 
+    mycenaean_idolism_good_god_hermes:0 "Hermes" 
+    mycenaean_idolism_good_god_potnia:0 "Potnia" 
+    mycenaean_idolism_good_god_hera:0 "Hera" 
+    mycenaean_idolism_good_god_diwia:0 "Diwia" 
+    mycenaean_idolism_good_god_hephaestus:0 "Hephaestus"
+
+    #mycenaean priest flamen vestals
+
+    #mycenaean priest 
+    mycenaean_idolism_priest_male:0 "Priest"
+    mycenaean_idolism_priest_male_plural:0 "Priest"
+
+    #mycenaean vestals 
+    mycenaean_idolism_priest_female:0 "Priestess" 
+    mycenaean_idolism_priest_female_plural:0 "Priestesses" 
+
+    #mycenaean  
+    mycenaean_idolism_bishop_male:0 "Fetial" 
+    mycenaean_idolism_bishop_male_plural:0 "Fetials" 
+
+    #roman names
+    #males
+    reserved_male_names:0 "Mycenaean male names"
+    #Female 
+    reserved_female_names:0 "Mycenaean female names"
+
+    #holy orders: 
+    holy_order_sons_of_ares:0 "Sons of Ares"
+    holy_order_Protectors_of_pantes_theoi:0 "Protectors of Pantes Theoi"
+    holy_order_agememnons_finest:0 "Agememnons Finest"
+
+    romano_hispanic_idolism:0 "Roman-Iberian Paganism"
+    romano_hispanic_idolism_adj:0 "Roman-Iberian Paganism"
+    romano_hispanic_idolism_adherent:0 "Roman-Iberian Paganist"
+    romano_hispanic_idolism_adherent_plural:0 "Roman-Iberian Paganists"
+    romano_hispanic_idolism_desc:0 "Following the Roman conquest of Hispania, a unique religious landscape emerged, blending Roman traditions with the pre-existing beliefs of the Iberian peoples. This fusion gave rise to the Romano-Hispanic faith, characterized by syncretism and the veneration of local deities alongside their Roman counterparts." 
+
+    romano_hispanic_idolism_old:0 "Old Roman-Iberian Paganism"
+    romano_hispanic_idolism_old_adj:0 "Old Roman-Iberian Paganism"
+    romano_hispanic_idolism_adherent_old:0 "Old Roman-Iberian Paganist"
+    romano_hispanic_idolism_old_adherent_plural:0 "Old Roman-Iberian Paganists"
+    romano_hispanic_idolism_old_desc:0 "Following the Roman conquest of Hispania, a unique religious landscape emerged, blending Roman traditions with the pre-existing beliefs of the Iberian peoples. This fusion gave rise to the Romano-Hispanic faith, characterized by syncretism and the veneration of local deities alongside their Roman counterparts." 
+
+    romano_hispanic_idolism_religious_head_title:0 "Pontifex Maximus"
+    romano_hispanic_idolism_divine_realm:0 "Deii Consentes"
+    romano_hispanic_idolism_religious_symbol:0 "Bull surounded by laurels"
+    romano_hispanic_idolism_religious_text:0 "Combination of Roman Rituals, Caerimoniae and Germanic rituals "
+
+    #Romano germanic gods/goddesses Localization
+
+    #Jupiter Solutorius 
+    romano_hispanic_idolism_high_god_name:0 "Jupiter Solutorius"
+    romano_hispanic_idolism_high_god_name_possessive:0 "$romano_hispanic_idolism_high_god_name$'s"
+    romano_hispanic_idolism_high_god_name_alternate:0 "$romano_hispanic_idolism_high_god_name$"
+    romano_hispanic_idolism_high_god_name_alternate_possessive:0 "$romano_hispanic_idolism_high_god_name$'s"
+    romano_hispanic_idolism_high_god_shehe:0 "He"
+    romano_hispanic_idolism_high_god_herselfhimself:0 "Himself"
+    romano_hispanic_idolism_high_god_herhis:0 "His"
+
+    #Creater god Localization
+    romano_hispanic_idolism_creator_god_name:0 "Chaos"
+    romano_hispanic_idolism_creator_god_name_possessive:0 "$romano_hispanic_idolism_creator_god_name$'s"
+
+    #Health God Arancio
+    romano_hispanic_idolism_health_god_name:0 "Arancio"
+    romano_hispanic_idolism_health_god_name_possessive:0 "$romano_hispanic_idolism_health_god_name$'s"
+
+    #Fertility Goddess Nabia Localization
+    romano_hispanic_idolism_fertility_god_name:0 "Nabia"
+    romano_hispanic_idolism_fertility_god_name_possessive:0 "$romano_hispanic_idolism_fertility_god_name$'s"
+
+    #Wealth god Latra Localization
+    #Lucubo
+    romano_hispanic_idolism_wealth_god_name:0 "Lucubo"
+    romano_hispanic_idolism_wealth_god_name_possessive:0 "$romano_hispanic_idolism_wealth_god_name$'s"
+
+    #Household god Trebaruna 
+    romano_hispanic_idolism_household_god_name:0 "Trebaruna"
+    romano_hispanic_idolism_household_god_name_possessive:0 "$romano_hispanic_idolism_household_god_name$'s"
+
+    #Fate god Endovelicus Localization
+    romano_hispanic_idolism_fate_god_name:0 "Endovelicus"
+    romano_hispanic_idolism_fate_god_name_possessive:0 "$romano_hispanic_idolism_fate_god_name$'s"
+
+    #knowledge god Minerva Localization
+    romano_hispanic_idolism_knowledge_god_name:0 "Minerva"
+    romano_hispanic_idolism_knowledge_god_name_possessive:0 "$romano_hispanic_idolism_knowledge_god_name$'s"
+
+    #War god Mars Localization
+    romano_hispanic_idolism_war_god_name:0 "Mars Neto"
+    romano_hispanic_idolism_war_god_name_possessive:0 "$romano_hispanic_idolism_war_god_name$'s"
+
+    #Trickster god Mercurius Cissonius Localization
+    romano_hispanic_idolism_trickster_god_name:0 "Lucubo"
+    romano_hispanic_idolism_trickster_god_name_possessive:0 "$romano_hispanic_idolism_trickster_god_name$'s"
+
+    #Night goddess Nox Localization
+    romano_hispanic_idolism_night_god_name:0 "Nox"
+    romano_hispanic_idolism_night_god_name_possessive:0 "$romano_hispanic_idolism_night_god_name$'s"
+
+    #Water god Nabia Localization
+    romano_hispanic_idolism_water_god_name:0 "Nabia"
+    romano_hispanic_idolism_water_god_name_possessive:0 "$romano_hispanic_idolism_water_god_name$'s"
+
+    #evil gods names 
+    romano_hispanic_idolism_evil_god_discordia:0 "Discordia" 
+    romano_hispanic_idolism_evil_god_orcus:0 "Orcus"
+
+    #witch goddess
+    romano_hispanic_idolism_witchgodname_trivia:0 "Diana Trivia"
+    romano_hispanic_idolism_witchgodname_trivia_possesive:0 "$romano_hispanic_idolism_witchgodname_trivia$'s"
+
+    #Devil god   
+    romano_hispanic_idolism_devil_name:0 "Orcus" 
+    romano_hispanic_idolism_devil_name_possessive:0 "$romano_hispanic_idolism_devil_name$'s"
+
+    #Death god Dīs Pater 
+    romano_hispanic_idolism_death_deity_name:0 "Endovelicus "
+    romano_hispanic_idolism_death_deity_name_possessive:0 "$romano_germanic_idolism_death_deity_name$'s"
+
+
+    #Romano Hispanic priest flamen vestals
+
+    #Romano Hispanic priest 
+    romano_hispanic_idolism_priest_male:0 "Priest"
+    romano_hispanic_idolism_priest_male_plural:0 "Priests"
+
+    #Romano Hispanic vestals 
+    romano_hispanic_idolism_priest_female:0 "Vestal" 
+    romano_hispanic_idolism_priest_female_plural:0 "Vestals" 
+
+    #Romano Hispanic flamen  
+    romano_hispanic_idolism_bishop_male:0 "flamen" 
+    romano_hispanic_idolism_bishop_male_plural:0 "flamens" 
+
+    #roman names
+    #males
+    reserved_male_names:0 "Romano Hispanic male names"
+    #Female 
+    reserved_female_names:0 "Romano Hispanic female names"
+
+    #holy orders: 
+    holy_order_sons_of_mars_thincsus:0 "Sons of Mars Thincsus"
+    holy_order_Protectors_of_dei_consentes:0 "Protectors of Dei Consentes"
+
+    cultus_orientis:0 "Punic-Roman Paganism"
+    cultus_orientis_adj:0 "Punic-Roman Paganism"
+    cultus_orientis_adherent:0 "Punic-Roman Paganist"
+    cultus_orientis_adherent_plural:0 "Punic-Roman Paganists"
+    cultus_orientis_desc:0 "During the Roman rule over the foreign lands of Carthaginian North Africa and the region that is now known as Syria, several mystery cults started to emerge through the fusion of the Greco-Roman deities with their local counterparts. Chief among these were those of Jupiter fusing with aspects of the Semitic storm gods Hadad and Baal and the Hurrian weather god Teshub."
+
+    cultus_orientis_old:0 "Old Punic-Roman Paganism"
+    cultus_orientis_old_adj:0 "Old Punic-Roman Paganism"
+    cultus_orientis_adherent_old:0 "Old Punic-Roman Paganist"
+    cultus_orientis_old_adherent_plural:0 "Old Punic-Roman Paganists"
+    cultus_orientis_old_desc:0 "During the Roman rule over the foreign lands of Carthaginian North Africa and the region that is now known as Syria, several mystery cults started to emerge through the fusion of the Greco-Roman deities with their local counterparts. Chief among these were those of Jupiter fusing with aspects of the Semitic storm gods Hadad and Baal and the Hurrian weather god Teshub."
+
+    cultus_orientis_religious_head_title:0 "Pontifex Maximus"
+    cultus_orientis_divine_realm:0 "Deii Consentes"
+    cultus_orientis_religious_symbol:0 "Bull surounded by laurels"
+    cultus_orientis_religious_text:0 "Combination of Roman Rituals, Caerimoniae and Germanic rituals "
+
+    #Romano germanic gods/goddesses Localization
+
+    #Jupiter  Dolichenus
+    cultus_orientis_high_god_name:0 "Jupiter Dolichenus"
+    cultus_orientis_high_god_name_possessive:0 "$cultus_orientis_high_god_name$'s"
+    cultus_orientis_high_god_name_alternate:0 "Jupiter Optimus Maximus Dolichenus"
+    cultus_orientis_high_god_name_alternate_possessive:0 "$cultus_orientis_high_god_name_alternate$'s"
+    cultus_orientis_high_god_shehe:0 "He"
+    cultus_orientis_high_god_herselfhimself:0 "Himself"
+    cultus_orientis_high_god_herhis:0 "His"
+
+    #Creater god Localization
+    cultus_orientis_creator_god_name:0 "Chaos"
+    cultus_orientis_creator_god_name_possessive:0 "$cultus_orientis_creator_god_name$'s"
+
+    #Health God Eshmun
+    cultus_orientis_health_god_name:0 "Eshmun"
+    cultus_orientis_health_god_name_possessive:0 "$cultus_orientis_health_god_name$'s"
+
+    #Fertility Goddess Venus Localization
+    #Venus was a popular cult in the whole empire only evidence of putting names together is Venus Victrix who is equalized with Ishtar 
+    #To be save we just use Venus
+    cultus_orientis_fertility_god_name:0 "Juno Caelestis"
+    cultus_orientis_fertility_god_name_possessive:0 "$cultus_orientis_fertility_god_name$'s"
+
+    #Wealth god Latra Localization
+    #Mercurius Sobrius
+    cultus_orientis_wealth_god_name:0 "Mercurius Sobrius"
+    cultus_orientis_wealth_god_name_possessive:0 "$cultus_orientis_wealth_god_name$'s"
+
+    #Household god Lares 
+    cultus_orientis_household_god_name:0 "Lares"
+    cultus_orientis_household_god_name_possessive:0 "$cultus_orientis_household_god_name$'s"
+
+    #Fate god Janus Localization
+    cultus_orientis_fate_god_name:0 "Janus"
+    cultus_orientis_fate_god_name_possessive:0 "$cultus_orientis_fate_god_name$'s"
+
+    #knowledge god Minerva Localization
+    cultus_orientis_knowledge_god_name:0 "Minerva"
+    cultus_orientis_knowledge_god_name_possessive:0 "$cultus_orientis_knowledge_god_name$'s"
+
+    #War god Mars Localization
+    cultus_orientis_war_god_name:0 "$cultus_orientis_fertility_god_name$"
+    cultus_orientis_war_god_name_possessive:0 "$cultus_orientis_fertility_god_name$'s"
+
+    #Trickster god Mercurius Sobrius Localization
+    cultus_orientis_trickster_god_name:0 "Mercurius Sobrius"
+    cultus_orientis_trickster_god_name_possessive:0 "$cultus_orientis_trickster_god_name$'s"
+
+    #Night goddess Nox Localization
+    cultus_orientis_night_god_name:0 "Nox"
+    cultus_orientis_night_god_name_possessive:0 "$cultus_orientis_night_god_name$'s"
+
+    #Water god Neptune Localization
+    cultus_orientis_water_god_name:0 "Neptune"
+    cultus_orientis_water_god_name_possessive:0 "$cultus_orientis_water_god_name$'s"
+
+    #evil gods names 
+    cultus_orientis_evil_god_discordia:0 "Discordia" 
+    cultus_orientis_evil_god_orcus:0 "Orcus"
+
+    #witch goddess
+    cultus_orientis_witchgodname_trivia:0 "Diana Trivia"
+    cultus_orientis_witchgodname_trivia_possesive:0 "$cultus_orientis_witchgodname_trivia$'s"
+
+    #Devil god   
+    cultus_orientis_devil_name:0 "Orcus" 
+    cultus_orientis_devil_name_possessive:0 "$cultus_orientis_devil_name$'s"
+
+    #Death god Dīs Pater 
+    cultus_orientis_death_deity_name:0 "Persephone"
+    cultus_orientis_death_deity_name_possessive:0 "$romano_germanic_idolism_death_deity_name$'s"
+
+
+    #Romano Hispanic priest flamen vestals
+
+    #Romano Hispanic priest 
+    cultus_orientis_priest_male:0 "Priest"
+    cultus_orientis_priest_male_plural:0 "Priests"
+
+    #Romano Hispanic vestals 
+    cultus_orientis_priest_female:0 "Vestal" 
+    cultus_orientis_priest_female_plural:0 "Vestals" 
+
+    #Romano Hispanic flamen  
+    cultus_orientis_bishop_male:0 "flamen" 
+    cultus_orientis_bishop_male_plural:0 "flamens" 
+
+    #roman names
+    #males
+    reserved_male_names:0 "Romano Hispanic male names"
+    #Female 
+    reserved_female_names:0 "Romano Hispanic female names"
+
+    #holy orders: 
+    holy_order_sons_of_mars_thincsus:0 "Sons of Mars Thincsus"
+    holy_order_Protectors_of_dei_consentes:0 "Protectors of Dei Consentes"
+
+    gallo_roman_idolism:0 "Gallo-Roman Paganism"
+    gallo_roman_idolism_adj:0 "Gallo-Roman Paganism"
+    gallo_roman_idolism_adherent:0 "Gallo-Romanist"
+    gallo_roman_idolism_adherent_plural:0 "Gallo-Romanists"
+    gallo_roman_idolism_desc:0 "Fusion of the traditional religious practices of the Gauls, who were originally Celtic speakers, and the Roman and Hellenistic religions introduced to the region under Roman Imperial rule. It was the result of selective acculturation." 
+
+    gallo_roman_idolism_old:0 "Gallo Roman Old"
+    gallo_roman_idolism_old_adj:0 "Gallo Roman Old"
+    gallo_roman_idolism_adherent_old:0 "Old Gallo Roman Polytheist"
+    gallo_roman_idolism_old_adherent_plural:0 "Old Gallo Roman Polytheists"
+    gallo_roman_idolism_old_desc:0 "Fusion of the traditional religious practices of the Gauls, who were originally Celtic speakers, and the Roman and Hellenistic religions introduced to the region under Roman Imperial rule. It was the result of selective acculturation." 
+
+    gallo_roman_idolism_religious_head_title:0 "Pontifex Maximus"
+    gallo_roman_idolism_divine_realm:0 "Deii Consentes"
+    gallo_roman_idolism_religious_symbol:0 "Offer altar"
+    gallo_roman_idolism_religious_text:0 "Ritus and Caerimoniae"
+
+    #Gallo Roman gods/goddesses Localization
+
+    #jupiter parthinus Localization
+    gallo_roman_idolism_high_god_name:0 "Jupiter Teranus"
+    gallo_roman_idolism_high_god_name_possessive:0 "Jupiter Teranus's"
+    gallo_roman_idolism_high_god_name_alternate:0 "Jupiter Teranus"
+    gallo_roman_idolism_high_god_name_alternate_possessive:0 "Jupiter Teranus's"
+    gallo_roman_idolism_high_god_shehe:0 "He"
+    gallo_roman_idolism_high_god_herselfhimself:0 "Himself"
+    gallo_roman_idolism_high_god_herhis:0 "His"
+
+    #Creater god Localization
+    gallo_roman_idolism_creator_god_name:0 "Chaos"
+    gallo_roman_idolism_creator_god_name_possessive:0 "Chaos's"
+
+    #Health Goddess Apollo Grannus
+    gallo_roman_idolism_health_god_name:0 "Apollo Grannus"
+    gallo_roman_idolism_health_god_name_possessive:0 "Apollo Grannus's"
+
+    #Fertility Goddess Venus Localization
+    gallo_roman_idolism_fertility_god_name:0 "Venus"
+    gallo_roman_idolism_fertility_god_name_possessive:0 "Venus's"
+
+    #Wealth god Latra Localization
+    gallo_roman_idolism_wealth_god_name:0 "Mercurius Cissonius"
+    gallo_roman_idolism_wealth_god_name_possessive:0 "Mercurius Cissonius's"
+
+    #Household god Lares 
+    gallo_roman_idolism_household_god_name:0 "Lares"
+    gallo_roman_idolism_household_god_name_possessive:0 "Lares's"
+
+    #Fate god Janus Localization
+    gallo_roman_idolism_fate_god_name:0 "Janus"
+    gallo_roman_idolism_fate_god_name_possessive:0 "Janus's"
+
+    #knowledge god Minerva Localization
+    gallo_roman_idolism_knowledge_god_name:0 "Minerva Belisama"
+    gallo_roman_idolism_knowledge_god_name_possessive:0 "Minerva Belisama's"
+
+    #War god Mars Localization
+    gallo_roman_idolism_war_god_name:0 "Mars Lenus"
+    gallo_roman_idolism_war_god_name_possessive:0 "Mars Lenus's"
+
+    #Trickster god Mercurius Cissonius Localization
+    gallo_roman_idolism_trickster_god_name:0 "Mercurius Cissonius"
+    gallo_roman_idolism_trickster_god_name_possessive:0 "Mercurius Cissonius's"
+
+    #Night goddess Latona Localization
+    gallo_roman_idolism_night_god_name:0 "Latona"
+    gallo_roman_idolism_night_god_name_possessive:0 "Latona's"
+
+    #Water god Neptunus Localization
+    gallo_roman_idolism_water_god_name:0 "Neptunus"
+    gallo_roman_idolism_water_god_name_possessive:0 "Neptunus's"
+
+    #evil gods names 
+    gallo_roman_idolism_evil_god_trivia:0 "Trivia" 
+    gallo_roman_idolism_evil_god_discordia:0 "Discordia"
+
+    #witch goddess
+    gallo_roman_idolism_witchgodname_trivia:0 "Trivia"
+    gallo_roman_idolism_witchgodname_trivia_possesive:0 "Trivia's"
+
+    #Devil god   
+    gallo_roman_idolism_devil_name:0 "Orcus" 
+    gallo_roman_idolism_devil_name_possessive:0 "Orcus's"
+
+    #Death god Dīs Pater 
+    gallo_roman_idolism_death_deity_name:0 "Dīs Pater"
+    gallo_roman_idolism_death_deity_name_possessive:0 "Dīs Pater's"
+
+    #Good gods names 
+    gallo_roman_idolism_good_god_juno:0 "Juno" 
+    gallo_roman_idolism_good_god_apollo_anextlomarus:0 "Apollo Anextlomarus" 
+    gallo_roman_idolism_good_god_gobannos:0 "Gobannos" 
+    gallo_roman_idolism_good_god_mercurius_visucius:0 "Mercurius Visucius" 
+    gallo_roman_idolism_good_god_mars_loucetius:0 "Mars Loucetius" 
+    gallo_roman_idolism_good_god_mars_intarabus:0 "Mars Intarabus" 
+    gallo_roman_idolism_good_god_apollo_granus:0 "Apollo Grannus" 
+    gallo_roman_idolism_good_god_venus:0 "Venus"
+
+    #Gallo Roman  priest flamen vestals
+
+    #Roman Illyrian priest 
+    gallo_roman_idolism_priest_male:0 "Priest"
+    gallo_roman_idolism_priest_male_plural:0 "Priests"
+
+    #Roman Illyrian vestals 
+    gallo_roman_idolism_priest_female:0 "Vestal" 
+    gallo_roman_idolism_priest_female_plural:0 "Vestals" 
+
+    #Roman Illyrian flamen  
+    gallo_roman_idolism_bishop_male:0 "flamen" 
+    gallo_roman_idolism_bishop_male_plural:0 "flamens" 
+
+    #roman names
+    #males
+    reserved_male_names:0 "Gallo Roman male names"
+    #Female 
+    reserved_female_names:0 "Gallo Roman female names"
+
+    #holy orders: 
+    holy_order_sons_of_mars_lenus:0 "Sons of Mars Lenus"
+    holy_order_Protectors_of_dei_consentes:0 "Protectors of Dei Consentes"
+    
+    romano_british_idolism:0 "Romano British"
+    romano_british_idolism_adj:0 "Romano British"
+    romano_british_idolism_adherent:0 "Romano British Polytheist"
+    romano_british_idolism_adherent_plural:0 "Romano British Polytheists"
+    romano_british_idolism_desc:0 "Even before the Romans conquered the British tribes the Romans and the Celts had syncretism between their religions. Later on in the roman imperial era Syncretism was completed by building temples on british holy sites with the most famous of Sulis Minerva" 
+
+    romano_british_idolism_old:0 "Romano British Old"
+    romano_british_idolism_old_adj:0 "Romano British Old"
+    romano_british_idolism_adherent_old:0 "Old Romano British Polytheist"
+    romano_british_idolism_old_adherent_plural:0 "Old Romano British Polytheists"
+    romano_british_idolism_old_desc:0 "Even before the Romans conquered the British tribes the Romans and the Celts had syncretism between their religions. Later on in the roman imperial era Syncretism was completed by building temples on british holy sites with the most famous of Sulis Minerva" 
+
+    romano_british_idolism_religious_head_title:0 "Pontifex Maximus"
+    romano_british_idolism_divine_realm:0 "Deii Consentes"
+    romano_british_idolism_religious_symbol:0 "Offer altar"
+    romano_british_idolism_religious_text:0 "Ritus and Caerimoniae"
+
+     #Romano British gods/goddesses Localization
+
+    #jupiter parthinus Localization
+    romano_british_idolism_high_god_name:0 "Jupiter Taran"
+    romano_british_idolism_high_god_name_possessive:0 "Jupiter Taran's"
+    romano_british_idolism_high_god_name_alternate:0 "Jupiter Taran"
+    romano_british_idolism_high_god_name_alternate_possessive:0 "Jupiter Taran's"
+    romano_british_idolism_high_god_shehe:0 "He"
+    romano_british_idolism_high_god_herselfhimself:0 "Himself"
+    romano_british_idolism_high_god_herhis:0 "His"
+
+    #Creater god Localization
+    romano_british_idolism_creator_god_name:0 "Chaos"
+    romano_british_idolism_creator_god_name_possessive:0 "Chaos's"
+
+    #Health God Apollo Belenus
+    romano_british_idolism_health_god_name:0 "Apollo Belenus"
+    romano_british_idolism_health_god_name_possessive:0 "Apollo Belenus"
+
+    #Fertility Goddess Venus Localization
+    romano_british_idolism_fertility_god_name:0 "Venus"
+    romano_british_idolism_fertility_god_name_possessive:0 "Venus's"
+
+    #Wealth god Latra Localization
+    romano_british_idolism_wealth_god_name:0 "Mercurius Lugus"
+    romano_british_idolism_wealth_god_name_possessive:0 "Mercurius Lugus's"
+
+    #Household god Lares 
+    romano_british_idolism_household_god_name:0 "Lares"
+    romano_british_idolism_household_god_name_possessive:0 "Lares's"
+
+    #Fate god Janus Localization
+    romano_british_idolism_fate_god_name:0 "Janus"
+    romano_british_idolism_fate_god_name_possessive:0 "Janus's"
+
+    #knowledge god Minerva Localization
+    romano_british_idolism_knowledge_god_name:0 "Sulis Minerva"
+    romano_british_idolism_knowledge_god_name_possessive:0 "Sulis Minerva's"
+
+    #War god Mars Localization
+    romano_british_idolism_war_god_name:0 "Mars Cocidius"
+    romano_british_idolism_war_god_name_possessive:0 "Mars Cocidius's"
+
+    #Trickster god Mercurius Cissonius Localization
+    romano_british_idolism_trickster_god_name:0 "Mercurius Lugus"
+    romano_british_idolism_trickster_god_name_possessive:0 "Mercurius Lugus's"
+
+    #Night goddess Latona Localization
+    romano_british_idolism_night_god_name:0 "Latona"
+    romano_british_idolism_night_god_name_possessive:0 "Latona's"
+
+    #Water god Neptunus Localization
+    romano_british_idolism_water_god_name:0 "Neptunus"
+    romano_british_idolism_water_god_name_possessive:0 "Neptunus's"
+
+    #evil gods names 
+    romano_british_idolism_evil_god_trivia:0 "Trivia" 
+    romano_british_idolism_evil_god_discordia:0 "Discordia"
+
+    #witch goddess
+    romano_british_idolism_witchgodname_trivia:0 "Trivia"
+    romano_british_idolism_witchgodname_trivia_possesive:0 "Trivia's"
+
+    #Devil god   
+    romano_british_idolism_devil_name:0 "Orcus" 
+    romano_british_idolism_devil_name_possessive:0 "Orcus's"
+
+    #Death god Dīs Pater 
+    romano_british_idolism_death_deity_name:0 "Dīs Pater"
+    romano_british_idolism_death_deity_name_possessive:0 "Dīs Pater's"
+
+    #Good gods names 
+    romano_british_idolism_good_god_juno:0 "Juno" 
+    romano_british_idolism_good_god_minerva_brigantia:0 "Minerva Brigantia" 
+    romano_british_idolism_good_god_minerva:0 "Minerva" 
+    romano_british_idolism_good_god_mercurius_lugus:0 "Mercurius Lugus" 
+    romano_british_idolism_good_god_mars_nodens:0 "Mars Nodens" 
+    romano_british_idolism_good_god_mars_intarabus:0 "Mars Intarabus" 
+    romano_british_idolism_good_god_apollo_belenus:0 "Apollo Belenus" 
+    romano_british_idolism_good_god_venus:0 "Venus"
+
+    #Roman Illyrian priest flamen vestals
+
+    #Roman Illyrian priest 
+    romano_british_idolism_priest_male:0 "Priest"
+    romano_british_idolism_priest_male_plural:0 "Priests"
+
+    #Roman Illyrian vestals 
+    romano_british_idolism_priest_female:0 "Vestal" 
+    romano_british_idolism_priest_female_plural:0 "Vestals" 
+
+    #Roman Illyrian flamen  
+    romano_british_idolism_bishop_male:0 "flamen" 
+    romano_british_idolism_bishop_male_plural:0 "flamens" 
+
+    #roman names
+    #males
+    reserved_male_names:0 "Romano British male names"
+    #Female 
+    reserved_female_names:0 "Romano British female names"
+
+    #holy orders: 
+    holy_order_sons_of_mars_nodens:0 "Sons of Mars Nodens"
+    holy_order_Protectors_of_dei_consentes:0 "Protectors of Dei Consentes"
+
+    romano_germanic_idolism:0 "Romano-Germanic Paganism"
+    romano_germanic_idolism_adj:0 "Romano-Germanic Paganism"
+    romano_germanic_idolism_adherent:0 "Romano-Germanic Polytheist"
+    romano_germanic_idolism_adherent_plural:0 "Romano-Germanic Polytheists"
+    romano_germanic_idolism_desc:0 "Even before the Romans conquered the germanic tribes the Romans and the Celts had syncretism between their religions. Later on in the roman imperial era Syncretism was completed by building temples on germanic holy sites" 
+
+    romano_germanic_idolism_old:0 "Romano Germanic Old"
+    romano_germanic_idolism_old_adj:0 "Romano Germanic Old"
+    romano_germanic_idolism_adherent_old:0 "Old Romano Germanic Polytheist"
+    romano_germanic_idolism_old_adherent_plural:0 "Old Romano Germanic Polytheists"
+    romano_germanic_idolism_old_desc:0 "Even before the Romans conquered the germanic tribes the Romans and the Celts had syncretism between their religions. Later on in the roman imperial era Syncretism was completed by building temples on germanic holy sites" 
+
+    romano_germanic_idolism_religious_head_title:0 "Germano Pontifex Maximus"
+    romano_germanic_idolism_divine_realm:0 "Deii Consentes"
+    romano_germanic_idolism_religious_symbol:0 "Valknut surounded by laurels"
+    romano_germanic_idolism_religious_text:0 "Combination of Roman Rituals, Caerimoniae and Germanic rituals "
+
+     #Romano germanic gods/goddesses Localization
+
+    #Mercuruis Hranno Localization
+    #Equalization between Mercurius and Odin the high god of the germanic tribes 
+    romano_germanic_idolism_high_god_name:0 "Mercurius Hranno"
+    romano_germanic_idolism_high_god_name_possessive:0 "$romano_germanic_idolism_high_god_name$'s"
+    romano_germanic_idolism_high_god_name_alternate:0 "romano_germanic_idolism_high_god_name"
+    romano_germanic_idolism_high_god_name_alternate_possessive:0 "$romano_germanic_idolism_high_god_name$'s"
+    romano_germanic_idolism_high_god_shehe:0 "He"
+    romano_germanic_idolism_high_god_herselfhimself:0 "Himself"
+    romano_germanic_idolism_high_god_herhis:0 "His"
+
+    #Creater god Localization
+    romano_germanic_idolism_creator_god_name:0 "Lumirus"
+    romano_germanic_idolism_creator_god_name_possessive:0 "$romano_germanic_idolism_creator_god_name$'s"
+
+    #Health God Eira
+    romano_germanic_idolism_health_god_name:0 "Eira"
+    romano_germanic_idolism_health_god_name_possessive:0 "$romano_germanic_idolism_health_god_name$'s"
+
+    #Fertility Goddess Venus Localization
+    #Venus was a popular cult in the whole empire only evidence of putting names together is Venus Victrix who is equalized with Ishtar 
+    #To be save we just use Venus
+    romano_germanic_idolism_fertility_god_name:0 "Isis Freia"
+    romano_germanic_idolism_fertility_god_name_possessive:0 "$romano_germanic_idolism_fertility_god_name$'s"
+
+    #Wealth god Latra Localization
+    #Tellus and Nerthum where Equalized not sure if it's Nerthum Tellus or Tellus Nerthum
+    romano_germanic_idolism_wealth_god_name:0 "Tellus Nerthum"
+    romano_germanic_idolism_wealth_god_name_possessive:0 "$romano_germanic_idolism_fertility_god_name$'s"
+
+    #Household god Frigga 
+    romano_germanic_idolism_household_god_name:0 "Frigga"
+    romano_germanic_idolism_household_god_name_possessive:0 "$romano_germanic_idolism_household_god_name$'s"
+
+    #Fate god Fata Germanicae Localization
+    romano_germanic_idolism_fate_god_name:0 "Fata Germanicae"
+    romano_germanic_idolism_fate_god_name_possessive:0 "$romano_germanic_idolism_fate_god_name$'s"
+
+    #knowledge god Vothinus Localization
+    romano_germanic_idolism_knowledge_god_name:0 "Vothinus"
+    romano_germanic_idolism_knowledge_god_name_possessive:0 "$romano_germanic_idolism_knowledge_god_name$'s"
+
+    #War god Mars Localization
+    romano_germanic_idolism_war_god_name:0 "Mars Thincsus"
+    romano_germanic_idolism_war_god_name_possessive:0 "$romano_germanic_idolism_war_god_name$'s"
+
+    #Trickster god Mercurius Cissonius Localization
+    romano_germanic_idolism_trickster_god_name:0 "Locius"
+    romano_germanic_idolism_trickster_god_name_possessive:0 "$romano_germanic_idolism_trickster_god_name$'s"
+
+    #Night goddess Nyx Localization
+    romano_germanic_idolism_night_god_name:0 "Nyx"
+    romano_germanic_idolism_night_god_name_possessive:0 "$romano_germanic_idolism_night_god_name$'s"
+
+    #Water god Neptunus Localization
+    romano_germanic_idolism_water_god_name:0 "Nertus"
+    romano_germanic_idolism_water_god_name_possessive:0 "$romano_germanic_idolism_water_god_name$'s"
+
+    #evil gods names 
+    romano_germanic_idolism_evil_god_surturus:0 "Surturus" 
+    romano_germanic_idolism_evil_god_imirus:0 "Imirus"
+
+    #witch goddess
+    romano_germanic_idolism_witchgodname_trivia:0 "Trivia"
+    romano_germanic_idolism_witchgodname_trivia_possesive:0 "$romano_germanic_idolism_witchgodname_trivia$'s"
+
+    #Devil god   
+    romano_germanic_idolism_devil_name:0 "Locius" 
+    romano_germanic_idolism_devil_name_possessive:0 "$romano_germanic_idolism_devil_name$'s"
+
+    #Death god Dīs Pater 
+    romano_germanic_idolism_death_deity_name:0 "Hela"
+    romano_germanic_idolism_death_deity_name_possessive:0 "$romano_germanic_idolism_death_deity_name$'s"
+
+
+    #Romano Germanic priest flamen vestals
+
+    #Romano Germanic priest 
+    romano_germanic_idolism_priest_male:0 "Priest"
+    romano_germanic_idolism_priest_male_plural:0 "Priests"
+
+    #Romano Germanic vestals 
+    romano_germanic_idolism_priest_female:0 "Vestal" 
+    romano_germanic_idolism_priest_female_plural:0 "Vestals" 
+
+    #Romano Germanic flamen  
+    romano_germanic_idolism_bishop_male:0 "flamen" 
+    romano_germanic_idolism_bishop_male_plural:0 "flamens" 
+
+    #roman names
+    #males
+    reserved_male_names:0 "Romano Germanic male names"
+    #Female 
+    reserved_female_names:0 "Romano Germanic female names"
+
+    #holy orders: 
+    holy_order_sons_of_mars_thincsus:0 "Sons of Mars Thincsus"
+    holy_order_Protectors_of_dei_consentes:0 "Protectors of Dei Consentes"
+
+
+
+    #Graeco Egyptian
+    graeco_egyptian_idolism:0 "Graeco-Egyptianism"
+    graeco_egyptian_idolism_adj:0 "Graeco-Egyptianism"
+    graeco_egyptian_idolism_adherent:0 "Graeco-Egyptianist"
+    graeco_egyptian_idolism_adherent_plural:0 "Graeco-Egyptianists"
+    graeco_egyptian_idolism_desc:0 "The Graeco-Egyptian faith is a powerful force in North Egyptian society, and it plays an important role in the lives of the greek people in North Egypt. The Graeco Egyptian faith helps to unite the Greek and Egyptian people, and it provides them with a sense of identity and purpose. The Graeco Egyptians have maintained their own unique religious traditions for centuries." 
+
+    graeco_egyptian_idolism_old:0 "Old Graeco-Egyptianism"
+    graeco_egyptian_idolism_old_adj:0 "Old Graeco-Egyptianism"
+    graeco_egyptian_idolism_adherent_old:0 "Old Graeco-Egyptianist"
+    graeco_egyptian_idolism_old_adherent_plural:0 "Old Graeco-Egyptianists"
+    graeco_egyptian_idolism_old_desc:0 "The Graeco Egyptian faith is a powerful force in North Egyptian society, and it plays an important role in the lives of the greek people in North Egypt. The Graeco Egyptian faith helps to unite the Greek and Egyptian people, and it provides them with a sense of identity and purpose. The Graeco Egyptians have maintained their own unique religious traditions for centuries." 
+
+    graeco_egyptian_idolism_religious_head_title:0 "Supreme priest"
+    graeco_egyptian_idolism_divine_realm:0 "Vdekje"
+    graeco_egyptian_idolism_religious_symbol:0 "Sun"
+    graeco_egyptian_idolism_religious_text:0 "Mythology"
+    #roman_pantheon_the_gods:0 "Roman pantheon of gods"
+
+    #dacian gods/goddesses Localization
+
+    #Zeus Amon Localization
+    graeco_egyptian_idolism_high_god_name:0 "Zeus Amon"
+    graeco_egyptian_idolism_high_god_name_possessive:0 "Zeus Amon's"
+    graeco_egyptian_idolism_high_god_name_alternate:0 "$graeco_egyptian_idolism_high_god_name$"
+    graeco_egyptian_idolism_high_god_name_alternate_possessive:0 "$graeco_egyptian_idolism_high_god_name$'s"
+    graeco_egyptian_idolism_high_god_shehe:0 "He"
+    graeco_egyptian_idolism_high_god_herselfhimself:0 "Himself"
+    graeco_egyptian_idolism_high_god_herhis:0 "His"
+
+    #Creater god Localization
+    graeco_egyptian_idolism_creator_god_name:0 "$graeco_egyptian_idolism_high_god_name$"
+    graeco_egyptian_idolism_creator_god_name_possessive:0 "$graeco_egyptian_idolism_high_god_name$'s"
+
+    #Health Goddess 
+    graeco_egyptian_idolism_health_god_name:0 "Imhotep"
+    graeco_egyptian_idolism_health_god_name_possessive:0 "$graeco_egyptian_idolism_health_god_name$'s"
+
+    #Fertility God Isis Localization
+    graeco_egyptian_idolism_fertility_god_name:0 "Isis"
+    graeco_egyptian_idolism_fertility_god_name_possessive:0 "$graeco_egyptian_idolism_fertility_god_name$'s"
+
+    #Wealth god En Localization
+    graeco_egyptian_idolism_wealth_god_name:0 "Hermes"
+    graeco_egyptian_idolism_wealth_god_name_possessive:0 "$graeco_egyptian_idolism_wealth_god_name$'s"
+
+    #Household god Kotys
+    graeco_egyptian_idolism_household_god_name:0 "Agathos Daimon"
+    graeco_egyptian_idolism_household_god_name_possessive:0 "$graeco_egyptian_idolism_household_god_name$'s"
+
+    #Fate god En Localization
+    graeco_egyptian_idolism_fate_god_name:0 "Hermes Trismegistos"
+    graeco_egyptian_idolism_fate_god_name_possessive:0 "$graeco_egyptian_idolism_fate_god_name$'s"
+
+    #knowledge god En Localization
+    graeco_egyptian_idolism_knowledge_god_name:0 "$graeco_egyptian_idolism_fate_god_name$"
+    graeco_egyptian_idolism_knowledge_god_name_possessive:0 "$graeco_egyptian_idolism_fate_god_name$'s"
+
+    #War god Ares Localization
+    graeco_egyptian_idolism_war_god_name:0 "Ares"
+    graeco_egyptian_idolism_war_god_name_possessive:0 "$graeco_egyptian_idolism_war_god_name$'s"
+
+    #Trickster god Daedalus Localization
+    graeco_egyptian_idolism_trickster_god_name:0 "Harpocrates"
+    graeco_egyptian_idolism_trickster_god_name_possessive:0 "$graeco_egyptian_idolism_trickster_god_name$'s"
+
+    #Night goddess Bendis Localization
+    graeco_egyptian_idolism_night_god_name:0 "Bendis"
+    graeco_egyptian_idolism_night_god_name_possessive:0 "Bendis's"
+
+    #Water god Gebeleizis Localization
+    graeco_egyptian_idolism_water_god_name:0 "Isis Pelagia"
+    graeco_egyptian_idolism_water_god_name_possessive:0 "$graeco_egyptian_idolism_water_god_name$'s"
+
+    #evil gods names 
+    graeco_egyptian_idolism_evil_god_antaios:0 "Menoetius" 
+    
+    #witch goddess
+    graeco_egyptian_idolism_witchgodname_hermes:0 "Hermes Trismegistos"
+    graeco_egyptian_idolism_witchgodname_hermes_possesive:0 "$graeco_egyptian_idolism_witchgodname_hermes$'s"
+
+    #Devil god
+    graeco_egyptian_idolism_devil_name:0 "Orcus" 
+    graeco_egyptian_idolism_devil_name_possessive:0 "$graeco_egyptian_idolism_devil_name$'s"
+
+    #Death god Zalmoxis 
+    graeco_egyptian_idolism_death_deity_name:0 "Serapis"
+    graeco_egyptian_idolism_death_deity_name_possessive:0 "$graeco_egyptian_idolism_death_deity_name$'s"
+
+    
+    #dacian priest flamen vestals
+
+    #dacian priest 
+    graeco_egyptian_idolism_priest_male:0 "Priest"
+    graeco_egyptian_idolism_priest_male_plural:0 "Priests"
+
+    #dacian priestess 
+    graeco_egyptian_idolism_priest_female:0 "Priestess" 
+    graeco_egyptian_idolism_priest_female_plural:0 "Priestesses" 
+
+    #dacian high priest
+    graeco_egyptian_idolism_bishop_male:0 "Priest" 
+    graeco_egyptian_idolism_bishop_male_plural:0 "Priests" 
+
+    graeco_egyptian_idolism_religious_head_title:0 "High Priest"
+
+    #roman names
+    #males
+    reserved_male_names:0 "Graeco Egyptian male names"
+    #Female 
+    reserved_female_names:0 "Graeco Egyptian female names"
+
+    #holy orders: 
+    holy_order_sons_of_hermes_trismegistus:0 "Sons of Hermes Trismegistos"
+    holy_order_Protectors_of_zeus_amon:0 "Protectors of Zeus Amon"
+
+ holy_site_leptis_name:0 "Leptis"
+ holy_site_leptis_effect_name:0 "From [holy_site|E] #weak ($holy_site_leptis_name$)#!"
+ holy_site_enna_name:0 "Enna"
+ holy_site_enna_effect_name:0 "From [holy_site|E] #weak ($holy_site_enna_name$)#!"
+ holy_site_naples_name:0 "Naples"
+ holy_site_naples_effect_name:0 "From [holy_site|E] #weak ($holy_site_enna_name$)#!"
+ holy_site_etna_name:0 "Mount Etna"
+ holy_site_etna_effect_name:0 "From [holy_site|E] #weak ($holy_site_etna_name$)#!"
+ holy_site_orvieto_name:0 "Orvieto"
+ holy_site_orvieto_effect_name:0 "From [holy_site|E] #weak ($holy_site_orvieto_name$)#!"
+ holy_site_pisa_name:0 "Pisa"
+ holy_site_pisa_effect_name:0 "From [holy_site|E] #weak ($holy_site_pisa_name$)#!"
+ holy_site_adria_name:0 "Atria"
+ holy_site_adria_effect_name:0 "From [holy_site|E] #weak ($holy_site_adria_name$)#!"
+ holy_site_bologna_name:0 "Bologna"
+ holy_site_bologna_effect_name:0 "From [holy_site|E] #weak ($holy_site_bologna_name$)#!"
+
+    #Alexandrian Cult 
+    alexandrian_cult:0 "Cult of Alexanderos"
+    alexandrian_cult_adj:0 "Cult of Alexanderos"
+    alexandrian_cult_adherent:0 "Alexanderos Cultist"
+    alexandrian_cult_adherent_plural:0 "Alexanderos Cultists"
+    alexandrian_cult_desc:0 "After the death of Alexander the great he was deified by the greeks, now known as Alexandros Megalos" 
+
+    alexandrian_cult_old:0 "Old Cult of Alexanderos"
+    alexandrian_cult_old_adj:0 "Old Cult of Alexanderos"
+    alexandrian_cult_adherent_old:0 "Old Alexandrian Cultist"
+    alexandrian_cult_old_adherent_plural:0 "Old  Alexandrian Cultists"
+    alexandrian_cult_old_desc:0 "After the death of Alexander the great he was deified by the greeks, now known as Alexandros Megalos" 
+
+    alexandrian_cult_religious_head_title:0 "Supreme priest"
+    alexandrian_cult_divine_realm:0 "Vdekje"
+    alexandrian_cult_religious_symbol:0 "Sun"
+    alexandrian_cult_religious_text:0 "Mythology"
+    #roman_pantheon_the_gods:0 "Roman pantheon of gods"
+
+    #dacian gods/goddesses Localization
+
+    #Zeus Amon Localization
+    alexandrian_cult_high_god_name:0 "Alexandros Maglos"
+    alexandrian_cult_high_god_name_possessive:0 "$alexandrian_cult_high_god_name$'s"
+    alexandrian_cult_high_god_name_alternate:0 "$alexandrian_cult_high_god_name$"
+    alexandrian_cult_high_god_name_alternate_possessive:0 "$alexandrian_cult_high_god_name$'s"
+    alexandrian_cult_high_god_shehe:0 "He"
+    alexandrian_cult_high_god_herselfhimself:0 "Himself"
+    alexandrian_cult_high_god_herhis:0 "His"
+
+    #Creater god Localization
+    alexandrian_cult_creator_god_name:0 "Zeus Amon"
+    alexandrian_cult_creator_god_name_possessive:0 "$alexandrian_cult_creator_god_name$'s"
+
+    #Health Goddess 
+    alexandrian_cult_health_god_name:0 "Imhotep"
+    alexandrian_cult_health_god_name_possessive:0 "$alexandrian_cult_health_god_name$'s"
+
+    #Fertility God Isis Localization
+    alexandrian_cult_fertility_god_name:0 "Isis"
+    alexandrian_cult_fertility_god_name_possessive:0 "$alexandrian_cult_fertility_god_name$'s"
+
+    #Wealth god En Localization
+    alexandrian_cult_wealth_god_name:0 "Hermes"
+    alexandrian_cult_wealth_god_name_possessive:0 "$alexandrian_cult_wealth_god_name$'s"
+
+    #Household god Kotys
+    alexandrian_cult_household_god_name:0 "Agathos Daimon"
+    alexandrian_cult_household_god_name_possessive:0 "$alexandrian_cult_household_god_name$'s"
+
+    #Fate god En Localization
+    alexandrian_cult_fate_god_name:0 "Hermes Trismegistos"
+    alexandrian_cult_fate_god_name_possessive:0 "$alexandrian_cult_fate_god_name$'s"
+
+    #knowledge god En Localization
+    alexandrian_cult_knowledge_god_name:0 "$alexandrian_cult_fate_god_name$"
+    alexandrian_cult_knowledge_god_name_possessive:0 "$alexandrian_cult_fate_god_name$'s"
+
+    #War god Ares Localization
+    alexandrian_cult_war_god_name:0 "Ares"
+    alexandrian_cult_war_god_name_possessive:0 "$alexandrian_cult_war_god_name$'s"
+
+    #Trickster god Daedalus Localization
+    alexandrian_cult_trickster_god_name:0 "Harpocrates"
+    alexandrian_cult_trickster_god_name_possessive:0 "$alexandrian_cult_trickster_god_name$'s"
+
+    #Night goddess Bendis Localization
+    alexandrian_cult_night_god_name:0 "Bendis"
+    alexandrian_cult_night_god_name_possessive:0 "Bendis's"
+
+    #Water god Gebeleizis Localization
+    alexandrian_cult_water_god_name:0 "Isis Pelagia"
+    alexandrian_cult_water_god_name_possessive:0 "$alexandrian_cult_water_god_name$'s"
+
+    #evil gods names 
+    alexandrian_cult_evil_god_menoetius:0 "Menoetius" 
+    
+
+    #witch goddess
+    alexandrian_cult_witchgodname_hermes:0 "Hermes Trismegistos"
+    alexandrian_cult_witchgodname_hermes_possesive:0 "$alexandrian_cult_witchgodname_hermes$'s"
+
+    #Devil god
+    alexandrian_cult_devil_name:0 "Orcus" 
+    alexandrian_cult_devil_name_possessive:0 "$alexandrian_cult_devil_name$'s"
+
+    #Death god Zalmoxis 
+    alexandrian_cult_death_deity_name:0 "Serapis"
+    alexandrian_cult_death_deity_name_possessive:0 "$alexandrian_cult_death_deity_name$'s"
+
+    
+    #dacian priest flamen vestals
+
+    #dacian priest 
+    alexandrian_cult_priest_male:0 "Priest"
+    alexandrian_cult_priest_male_plural:0 "Priests"
+
+    #dacian priestess 
+    alexandrian_cult_priest_female:0 "Priestess" 
+    alexandrian_cult_priest_female_plural:0 "Priestesses" 
+
+    #dacian high priest
+    alexandrian_cult_bishop_male:0 "Priest" 
+    alexandrian_cult_bishop_male_plural:0 "Priests" 
+
+    alexandrian_cult_religious_head_title:0 "High Priest"
+
+    #roman names
+    #males
+    reserved_male_names:0 "Graeco Egyptian male names"
+    #Female 
+    reserved_female_names:0 "Graeco Egyptian female names"
+
+    #holy orders: 
+    holy_order_sons_of_dionysus:0 "Sons of Dionysus"
+    holy_order_Protectors_of_alexandros_megalos:0 "Protectors of Alexandros Megalos"
+
+ bacchism:0 "Bacchism"
+ bacchism_adj:0 "Bacchism"
+ bacchism_adherent:0 "Bacchist"
+ bacchism_adherent_plural:0 "Bacchists"
+ bacchism_desc:0 "Bacchics venerate Dionysus (Bacchus) by taking part in debauched secret rituals including feasting, flagellation, group sex and animal sacrifice - though it is whispered humans have also been forced to the altar."
+
+ bacchism_old:0 "Old Bacchism"
+ bacchism_old_adj:0 "Old Bacchism"
+ bacchism_old_adherent:0 "Old Bacchist"
+ bacchism_old_adherent_plural:0 "Old Bacchists"
+
+ orphism:0 "Orphism"
+ orphism_adj:0 "Orphism"
+ orphism_adherent:0 "Orphicist"
+ orphism_adherent_plural:0 "Orphicists"
+ orphism_desc:0 "Orphism is in some ways a reconstructed form of the Bacchanalia - its adherents worship both Dionysus and the mythical poet Orpheus, and place emphasis on wisdom, nature and purity of the soul."
+
+ orphism_old:0 "Old Orphism"
+ orphism_old_adj:0 "Old Orphism"
+ orphism_old_adherent:0 "Old Orphicist"
+ orphism_old_adherent_plural:0 "Old Orphicists"
+
+ pythagoreanism:0 "Pythagoreanism"
+ pythagoreanism_adj:0 "Pythagoreanism"
+ pythagoreanism_adherent:0 "Pythagoreanist"
+ pythagoreanism_adherent_plural:0 "Pythagoreanists"
+ pythagoreanism_desc:0 "The disciples of the philosopher Pythagoras place great stock in numerical links to the universe. They value honesty, knowledge, restraint, selflessness and rational inquiry."
+
+ pythagoreanism_old:0 "Old Pythagoreanism"
+ pythagoreanism_old_adj:0 "Old Pythagoreanism"
+ pythagoreanism_old_adherent:0 "Old Pythagoreanist"
+ pythagoreanism_old_adherent_plural:0 "Old Pythagoreanists"
+
+ bacchism_high_god_name:0 "Bacchus"
+ bacchism_high_god_name_possessive:0 "Bacchus'"
+ bacchism_high_god_name_alternate:0 "The Liberator"
+ bacchism_high_god_name_alternate_possessive:0 "The Liberator's"
+
+ orphism_high_god_name:0 "Dionysus"
+ orphism_high_god_name_possessive:0 "Dionysus'"
+ orphism_high_god_name_alternate:0 "The Twice-Born"
+ orphism_high_god_name_alternate_possessive:0 "The Twice-Born's"
+
+ pythagoreanism_high_god_name:0 "Pythia"
+ pythagoreanism_high_god_name_possessive:0 "Pythia's"
+ pythagoreanism_high_god_name_alternate:0 "The Oracle of Delphi"
+ pythagoreanism_high_god_name_alternate_possessive:0 "The Oracle of Delphi's"
+
+ mithraism_high_god_name:0 "Mithras"
+ mithraism_high_god_name_possessive:0 "Mithras'"
+ mithraism_high_god_name_alternate:0 "The Truth and Light"
+ mithraism_high_god_name_alternate_possessive:0 "The Truth and Light's"
+
+ eleusinian_high_god_name:0 "Demeter"
+ eleusinian_high_god_name_possessive:0 "Demeter's"
+ eleusinian_high_god_name_alternate:0 "The Harvest Mother"
+ eleusinian_high_god_name_alternate_possessive:0 "The Harvest Mother's"
+
+ sol_invictus_high_god_name:0 "Sol Invictus"
+ sol_invictus_high_god_name_possessive:0 "Sol Invictus'"
+ sol_invictus_high_god_name_alternate:0 "The Unconquered Sun"
+ sol_invictus_high_god_name_alternate_possessive:0 "The Unconquered Sun's"
+
+ hellenism_positive_afterlife:0 "Elysium"
+ hellenism_negative_afterlife:0 "Tartarus"
+
+ roman_high_god_name:0 "Jupiter"
+ roman_high_god_name_possessive:0 "Jupiter's"
+ roman_high_god_name_alternate:0 "Jove"
+ roman_high_god_name_alternate_possessive:0 "Jove's"
+ roman_good_god_juno:0 "Juno"
+ roman_good_god_apollo:0 "Apollo"
+ roman_good_god_diana:0 "Diana"
+ roman_good_god_ceres:0 "Ceres"
+ roman_good_god_proserpina:0 "Proserpina"
+ roman_good_god_sol:0 "Sol"
+ roman_good_god_saturn:0 "Saturn"
+ roman_good_god_vulcan:0 "Vulcan"
+ roman_good_god_luna:0 "Luna"
+ roman_good_god_faunus:0 "Faunus"
+ roman_good_god_aurora:0 "Aurora"
+ roman_good_god_victoria:0 "Victoria"
+ roman_good_god_lucina:0 "Lucina"
+ roman_good_god_cupid:0 "Cupid"
+ roman_good_god_caelus:0 "Caelus"
+ roman_devil_name:0 "Orcus"
+ roman_devil_name_possessive:0 "Orcus'"
+ roman_evil_god_dirae:0 "the Dirae"
+ roman_evil_god_mors:0 "Mors"
+ roman_evil_god_discordia:0 "Discordia"
+ roman_evil_god_janus:0 "Janus"
+ roman_death_deity_name:0 "Pluto"
+ roman_death_deity_name_possessive:0 "Pluto's"
+
+ roman_creator_god_name:0 "Terra"
+ roman_creator_god_name_possessive:0 "Terra's"
+ roman_health_god_name:0 "Vejovis"
+ roman_health_god_name_possessive:0 "Vejovis'"
+ roman_fertility_god_name:0 "Venus"
+ roman_fertility_god_name_possessive:0 "Venus'"
+ roman_wealth_god_name:0 "Dīs Pater"
+ roman_wealth_god_name_possessive:0 "Dīs Pater's"
+ roman_household_god_name:0 "Vesta"
+ roman_household_god_name_possessive:0 "Vesta's"
+ roman_fate_god_name:0 "the Parcae"
+ roman_fate_god_name_possessive:0 "the Parcaes'"
+ roman_knowledge_god_name:0 "Minerva"
+ roman_knowledge_god_name_possessive:0 "Minerva's"
+ roman_war_god_name:0 "Mars"
+ roman_war_god_name_possessive:0 "Mars'"
+ roman_trickster_god_name:0 "Mercury"
+ roman_trickster_god_name_possessive:0 "Mercury's"
+ roman_night_god_name:0 "Nox"
+ roman_night_god_name_possessive:0 "Nox's"
+ roman_water_god_name:0 "Neptune"
+ roman_water_god_name_possessive:0 "Neptune's"
+
+ bacchism_religious_text:0 "Bacchanalia"
+ orphism_religious_text:0 "Orphic Poems"
+ pythagoreanism_religious_text:0 "Golden Verses"
+ 
+ bacchism_religious_symbol:0 "thyrsus"
+ orphism_religious_symbol:0 "chelys"
+ pythagoreanism_religious_symbol:0 "pentagram"
+
+ aventine_priest_male:0 "flamen cerealis"
+ aventine_priest_male_plural:0 "flamines cerealis"
+ aventine_priest_female:0 "flaminica cerealis"
+ aventine_priest_female_plural:0 "flamines cerealis"
+ aventine_priest:0 "flamen cerealis"
+ aventine_priest_plural:0 "flamines cerealis"
+ aventine_bishop_male:0 "plebian aedile"
+ aventine_bishop_male_plural:0 "plebian aedile"
+ aventine_bishop_female:0 "plebian aedile"
+ aventine_bishop_female_plural:0 "plebian aediles"
+ aventine_bishop:0 "plebian aedile"
+ aventine_bishop_plural:0 "plebian aediles"
+ 
+ aventine_high_god_name:0 "Ceres"
+ aventine_high_god_name_possessive:0 "Ceres'"
+ aventine_high_god_alternate:0 "Tellus"
+ aventine_high_god_alternate_possessive:0 "Tellus'"
+ aventine_devil_name:0 "daemons"
+ aventine_devil_name_possessive:0 "daemons'"
+ aventine_creator_god_name:0 "Ceres"
+ aventine_creator_god_name_possessive:0 "Ceres'"
+ aventine_health_god_name:0 "Ceres"
+ aventine_health_god_name_possessive:0 "Ceres'"
+ aventine_fertility_god_name:0 "Ceres"
+ aventine_fertility_god_name_possessive:0 "Ceres'"
+ aventine_wealth_god_name:0 "Ceres"
+ aventine_wealth_god_name_possessive:0 "Ceres'"
+ aventine_household_god_name:0 "Liber"
+ aventine_household_god_name_possessive:0 "Liber's"
+ aventine_fate_god_name:0 "Liber"
+ aventine_fate_god_name_possessive:0 "Liber's"
+ aventine_knowledge_god_name:0 "Ceres"
+ aventine_knowledge_god_name_possessive:0 "Ceres'"
+ aventine_war_god_name:0 "Liber"
+ aventine_war_god_name_possessive:0 "Liber's"
+ aventine_trickster_god_name:0 "Liber"
+ aventine_trickster_god_name_possessive:0 "Liber's"
+ aventine_night_god_name:0 "Libera"
+ aventine_night_god_name_possessive:0 "Libera"
+ aventine_water_god_name:0 "Neptune"
+ aventine_water_god_name_possessive:0 "Neptune's"
+ witchgodname_aventine:0 "Ceres"
+ aventine_death_name:0 "Libera"
+ aventine_death_name_possessive:0 "Libera"
+ 
+ aventine:0 "Cult of Aventine"
+ aventine_adj:0 "Cult of Aventine"
+ aventine_adherent:0 "Aventine"
+ aventine_adherent_plural:0 "Aventines"
+ aventine_desc:0 "The Aventine was the joint cult of Ceres, Liber and Libera. The Cult was established as direct competition to the Capitoline and Archaic Triad, seen as the Gods most supportive of the plight of the plebians. The support of these Gods was seen as confirmation of the righteousness of the Plebs in the Conflict of the Orders."
+
+ neoplatonism_high_god_name:0 "The One"
+ neoplatonism_high_god_name_possessive:0 "The One's"
+ neoplatonism_high_god_alternate:0 "The Good"
+ neoplatonism_high_god_alternate_possessive:0 "The Good's"
+ neoplatonism_devil_name:0 "Darkness"
+ neoplatonism_devil_name_possessive:0 "Darkness'"
+ neoplatonism_creator_god_name:0 "Demiurge"
+ neoplatonism_creator_god_name_possessive:0 "Demiurge's"
+ neoplatonism_health_god_name:0 "Hypercosmic Gods"
+ neoplatonism_health_god_name_possessive:0 "Hypercosmic Gods'"
+ neoplatonism_fertility_god_name:0 "Hypercosmic Gods"
+ neoplatonism_fertility_god_name_possessive:0 "Hypercosmic Gods'"
+ neoplatonism_wealth_god_name:0 "Demiurge"
+ neoplatonism_wealth_god_name_possessive:0 "Demiurge's"
+ neoplatonism_household_god_name:0 "The One"
+ neoplatonism_household_god_name_possessive:0 "The One's"
+ neoplatonism_fate_god_name:0 "The One"
+ neoplatonism_fate_god_name_possessive:0 "The One's"
+ neoplatonism_knowledge_god_name:0 "The One"
+ neoplatonism_knowledge_god_name_possessive:0 "The One's"
+ neoplatonism_war_god_name:0 "Demiurge"
+ neoplatonism_war_god_name_possessive:0 "Demiurge's"
+ neoplatonism_trickster_god_name:0 "The One"
+ neoplatonism_trickster_god_name_possessive:0 "The One's"
+ neoplatonism_night_god_name:0 "Demiurge"
+ neoplatonism_night_god_name_possessive:0 "Demiurge's"
+ neoplatonism_water_god_name:0 "Demiurge"
+ neoplatonism_water_god_name_possessive:0 "Demiurge's"
+ witchgodname_neoplatonism:0 "Demiurge"
+ neoplatonism_death_name:0 "Demiurge"
+ neoplatonism_death_name_possessive:0 "Demiurge's"
+ 
+ neoplatonism:0 "Platonism"
+ neoplatonism_adj:0 "Platonist"
+ neoplatonism_adherent:0 "Platonist"
+ neoplatonism_adherent_plural:0 "Platonists"
+ neoplatonism_desc:0 "Platonists see the world as derived entirely from a single principle; The One. From this unknowable substience emerged the Demiurge which manifested the material world. All people emenated from The One, and therefore can return to The One, such is the ultimate goal of Platonists. Only through philosophical contemplation can one achieve the perfection necessary to once again become part of the universe."
+ 
+ neoplatonism_old:0 "Defunct Platonism"
+ neoplatonism_adj_old:0 "Defunct Platonist"
+ neoplatonism_adherent_old:0 "Old Platonist"
+ neoplatonism_adherent_plural_old:0 "Old Platonists"
+
+ neoplatonism_religious_head_title: "Philosopher"
+ neoplatonism_religious_head_title_name: "Academy"
+ neoplatonism_priest_neuter: "Philosopher"
+ neoplatonism_priest_neuter_plural: "Philosophers"
+
+ stoicism: "Stoicism"
+ stoicism_adj: "Stoic"
+ stoicism_adherent: "Stoic"
+ stoicism_adherent_plural: "Stoics"
+ stoicism_desc: "Stoicism is a school of Hellenistic philosophy founded by Zeno of Citium in Athens in the early 3rd century BC. It is a philosophy of personal ethics informed by its system of logic and its views on the natural world. According to its teachings, as social beings, the path to #italic eudaimonia#! (happiness, or blessedness) is found in accepting the moment as it presents itself, by not allowing oneself to be controlled by the desire for pleasure or fear of pain, by using one's mind to understand the world and to do one's part in nature's plan, and by working together and treating others fairly and justly."
+ 
+ lares_high_god_name:0 "Mater Larum"
+ lares_high_god_name_possessive:0 "Mater Larum's"
+ lares_high_god_alternate:0 "Mother of the Lares"
+ lares_high_god_alternate_possessive:0 "Mother of the Lares'"
+ lares_devil_name:0 "daemons"
+ lares_devil_name_possessive:0 "daemons'"
+ lares_creator_god_name:0 "Mater Larum"
+ lares_creator_god_name_possessive:0 "Mater Larum's"
+ lares_health_god_name:0 "Lares Compitalicii"
+ lares_health_god_name_possessive:0 "Lares Compitalicii's"
+ lares_fertility_god_name:0 "Lares Patrii"
+ lares_fertility_god_name_possessive:0 "Lares Patrii's"
+ lares_wealth_god_name:0 "Lares Rurales"
+ lares_wealth_god_name_possessive:0 "Lares Rurales'"
+ lares_household_god_name:0 "Lares Domestici"
+ lares_household_god_name_possessive:0 "Lares Domestici's"
+ lares_fate_god_name:0 "Lares Augusti"
+ lares_fate_god_name_possessive:0 "Lares Augusti's"
+ lares_knowledge_god_name:0 "Lares Privati"
+ lares_knowledge_god_name_possessive:0 "Lares Privati's"
+ lares_war_god_name:0 "Lar Militaris"
+ lares_war_god_name_possessive:0 "Lar Militaris'"
+ lares_trickster_god_name:0 "Lares"
+ lares_trickster_god_name_possessive:0 "Lares'"
+ lares_night_god_name:0 "Lares"
+ lares_night_god_name_possessive:0 "Lares'"
+ lares_water_god_name:0 "Lares Permarini"
+ lares_water_god_name_possessive:0 "Lares Permarini's"
+ witchgodname_lares:0 "Lares Familiares"
+ lares_death_name:0 "Lares Familiares"
+ lares_death_name_possessive:0 "Lares Familiares'"
+ 
+ lares_priest_male:0 "Arval"
+ lares_priest_male_plural:0 "Arvales"
+ lares_priest_female:0 "Arval"
+ lares_priest_female_plural:0 "Arvales"
+ lares_priest:0 "Arval"
+ lares_priest_plural:0 "Arvales"
+ lares_bishop_male:0 "Vllicus"
+ lares_bishop_male_plural:0 "Vllici"
+ lares_bishop_female:0 "Vllica"
+ lares_bishop_female_plural:0 "Vllici"
+ lares_bishop:0 "Vllicus"
+ lares_bishop_plural:0 "Vllici"
+ lares_house_of_worship:0 "Lararium"
+ lares_house_of_worship_plural:0 "Lararia"
+ lares_religious_symbol:0 "Lares"
+ 
+ lares:0 "Cult of Lares"
+ lares_adj:0 "Cult of Lares"
+ lares_adherent:0 "Lararia"
+ lares_adherent_plural:0 "Lararia"
+ lares_desc:0 "The Lares were guardian deities in Rome which while having limited scope, were extremely important for the lives of Romans. The Lares had many domains, and were given cultic worship for familial success, a strong household, protection of cities and good harvest among many other reasons. Even after Christianisation the worship of Lares continued in many peasant cults or in private."
+ 
+ lares_old:0 "Lares Worshippers"
+ lares_adj_old:0 "Old Lararia"
+ lares_adherent_old:0 "Old Larem"
+ lares_adherent_plural_old:0 "Old Larems"
+ 
+ consentes_high_god_name:0 "Jupiter"
+ consentes_high_god_name_possessive:0 "Jupiter's"
+ consentes_high_god_alternate:0 "Iovis"
+ consentes_high_god_alternate_possessive:0 "Iovis'"
+ consentes_devil_name:0 "daemons"
+ consentes_devil_name_possessive:0 "daemons'"
+ consentes_creator_god_name:0 "Gaia"
+ consentes_creator_god_name_possessive:0 "Gaia's"
+ consentes_health_god_name:0 "Apollo"
+ consentes_health_god_name_possessive:0 "Apollo's"
+ consentes_fertility_god_name:0 "Venus"
+ consentes_fertility_god_name_possessive:0 "Venus's"
+ consentes_wealth_god_name:0 "Minerva"
+ consentes_wealth_god_name_possessive:0 "Minerva's"
+ consentes_household_god_name:0 "Vesta"
+ consentes_household_god_name_possessive:0 "Vesta's"
+ consentes_fate_god_name:0 "Apollo"
+ consentes_fate_god_name_possessive:0 "Apollo's"
+ consentes_knowledge_god_name:0 "Minerva"
+ consentes_knowledge_god_name_possessive:0 "Minerva's"
+ consentes_war_god_name:0 "Mars"
+ consentes_war_god_name_possessive:0 "Mars'"
+ consentes_trickster_god_name:0 "Mercury"
+ consentes_trickster_god_name_possessive:0 "Mercury's"
+ consentes_night_god_name:0 "Diana"
+ consentes_night_god_name_possessive:0 "Diana's"
+ consentes_water_god_name:0 "Neptune"
+ consentes_water_god_name_possessive:0 "Neptune's"
+ witchgodname_consentes:0 "Apollo"
+ consentes_death_name:0 "Pluto"
+ consentes_death_name_possessive:0 "Pluto's"
+ 
+ consentes_house_of_worship:0 "Consentium"
+ consentes_house_of_worship_plural:0 "Consentiums"
+ 
+ consentes:0 "Dii Consentes"
+ consentes_adj:0 "Consentes"
+ consentes_adherent:0 "Consente"
+ consentes_adherent_plural:0 "Consentes"
+ consentes_desc:0 "The Dii Consentes is the designation for the twelve principle Gods of Roman religion; Jupiter, Juno, Neptune, Minerva, Mars, Venus, Apollo, Diana, Vulcan, Vesta, Mercury and Ceres. Each God and Goddess was omnipresent in Roman Society and their cults were of extreme importance to religious and temporal functions."
+
+ sacra_familiae_high_god_name:0 "Genius"
+ sacra_familiae_high_god_name_possessive:0 "Genius's"
+ sacra_familiae_high_god_alternate:0 "Genius"
+ sacra_familiae_high_god_alternate_possessive:0 "Genius'"
+ sacra_familiae_devil_name:0 "Dishonour"
+ sacra_familiae_devil_name_possessive:0 "Dishonour's"
+ sacra_familiae_creator_god_name:0 "Mos Maiorum"
+ sacra_familiae_creator_god_name_possessive:0 "Mos Maiorum's"
+ sacra_familiae_health_god_name:0 "Disciplina"
+ sacra_familiae_health_god_name_possessive:0 "Disciplina's"
+ sacra_familiae_fertility_god_name:0 "Genius"
+ sacra_familiae_fertility_god_name_possessive:0 "Genius'"
+ sacra_familiae_wealth_god_name:0 "Dignitas"
+ sacra_familiae_wealth_god_name_possessive:0 "Dignitas'"
+ sacra_familiae_household_god_name:0 "Genius"
+ sacra_familiae_household_god_name_possessive:0 "Genius'"
+ sacra_familiae_fate_god_name:0 "Fides"
+ sacra_familiae_fate_god_name_possessive:0 "Fides'"
+ sacra_familiae_knowledge_god_name:0 "Genius"
+ sacra_familiae_knowledge_god_name_possessive:0 "Genius'"
+ sacra_familiae_war_god_name:0 "Disciplina"
+ sacra_familiae_war_god_name_possessive:0 "Disciplina's"
+ sacra_familiae_trickster_god_name:0 "Genius"
+ sacra_familiae_trickster_god_name_possessive:0 "Genius'"
+ sacra_familiae_night_god_name:0 "Genius"
+ sacra_familiae_night_god_name_possessive:0 "Genius'"
+ sacra_familiae_water_god_name:0 "Genius"
+ sacra_familiae_water_god_name_possessive:0 "Genius'"
+ witchgodname_sacra_familiae:0 "Genius"
+ sacra_familiae_death_name:0 "Shades"
+ sacra_familiae_death_name_possessive:0 "Shades'"
+ 
+ sacra_familiae_devotee_male:0 "Vir"
+ sacra_familiae_devotee_male_plural:0 "Virs"
+ sacra_familiae_devotee_female:0 "Vir"
+ sacra_familiae_devotee_female_plural:0 "Virs"
+ sacra_familiae_devotee:0 "Vir"
+ sacra_familiae_devotee_plural:0 "Virs"
+ sacra_familiae_priest_male:0 "Familias"
+ sacra_familiae_priest_male_plural:0 "Familias"
+ sacra_familiae_priest_female:0 "Familias"
+ sacra_familiae_priest_female_plural:0 "Familias"
+ sacra_familiae_priest:0 "Familias"
+ sacra_familiae_priest_plural:0 "Familias"
+ sacra_familiae_bishop_male:0 "Familias"
+ sacra_familiae_bishop_male_plural:0 "Familias"
+ sacra_familiae_bishop_female:0 "Familias"
+ sacra_familiae_bishop_female_plural:0 "Familias"
+ sacra_familiae_bishop:0 "Familias"
+ sacra_familiae_bishop_plural:0 "Familias"
+ sacra_familiae_house_of_worship:0 "Lararium"
+ sacra_familiae_house_of_worship_plural:0 "Lararia"
+ sacra_familiae_religious_symbol:0 "Genius"
+ sacra_familiae_religious_text:0 "Mos Maiorum"
+ sacra_familiae_religious_head_title:0 "Pater Familias"
+ sacra_familiae_religious_head_title_name:0 "Gens"
+ 
+ sacra_familiae:0 "Sacra Familiae"
+ sacra_familiae_adj:0 "Familiae"
+ sacra_familiae_adherent:0 "Familia"
+ sacra_familiae_adherent_plural:0 "Familiae"
+ sacra_familiae_desc:0 "The Sacra Familiae were the private religious duties of the familia. To Romans the Familia was the core building block of society, maintaining familial hierarchies and values were necessary for good social order. Part of this was Sacra Familiae, in which rituals were conducted which worshipped the Genius as a power which was infused in all family members, alongside shades and ancestral Gods and heros."
+
+ galli_high_god_name:0 "Cybele"
+ galli_high_god_name_possessive:0 "Cybele's"
+ galli_high_god_alternate:0 "Magna Mater"
+ galli_high_god_alternate_possessive:0 "Magna Mater's"
+ galli_devil_name:0 "daemons"
+ galli_devil_name_possessive:0 "daemons'"
+ galli_creator_god_name:0 "Cybele"
+ galli_creator_god_name_possessive:0 "Cybele's"
+ galli_health_god_name:0 "Attis"
+ galli_health_god_name_possessive:0 "Attis'"
+ galli_fertility_god_name:0 "Cybele"
+ galli_fertility_god_name_possessive:0 "Cybele's"
+ galli_wealth_god_name:0 "Cybele"
+ galli_wealth_god_name_possessive:0 "Cybele's"
+ galli_household_god_name:0 "Cybele"
+ galli_household_god_name_possessive:0 "Cybele's"
+ galli_fate_god_name:0 "Attis"
+ galli_fate_god_name_possessive:0 "Attis'"
+ galli_knowledge_god_name:0 "Attis"
+ galli_knowledge_god_name_possessive:0 "Attis'"
+ galli_war_god_name:0 "Magna Mater"
+ galli_war_god_name_possessive:0 "Magna Mater's"
+ galli_trickster_god_name:0 "daemons"
+ galli_trickster_god_name_possessive:0 "daemons"
+ galli_night_god_name:0 "Cybele"
+ galli_night_god_name_possessive:0 "Cybele's"
+ galli_water_god_name:0 "Cybele"
+ galli_water_god_name_possessive:0 "Cybele's"
+ witchgodname_galli:0 "Cybele"
+ galli_death_name:0 "Attis"
+ galli_death_name_possessive:0 "Attis'"
+ 
+ galli_house_of_worship:0 "Megalesion"
+ galli_house_of_worship_plural:0 "Megalesions"
+ 
+ galli_priest_male:0 "Gallus"
+ galli_priest_male_plural:0 "Galli"
+ galli_priest_female:0 "Gallus"
+ galli_priest_female_plural:0 "Galli"
+ galli_priest:0 "Gallus"
+ galli_priest_plural:0 "Galli"
+ galli_bishop_male:0 "Archigallus"
+ galli_bishop_male_plural:0 "Archigalli"
+ galli_bishop_female:0 "Archigallus"
+ galli_bishop_female_plural:0 "Archigalli"
+ galli_bishop:0 "Archigallus"
+ galli_bishop_plural:0 "Archigalli"
+ 
+ galli:0 "Cult of Magna Mater"
+ galli_adj:0 "Cult of Magna Mater"
+ galli_adherent:0 "Gallist"
+ galli_adherent_plural:0 "Gallists"
+ galli_desc:0 "The Galli were the priesthood of the goddess Cybele, who were imported to Rome as part of a campaign of spiritual warfare against the Catharginians. They were distinct from typical Romans through their anatolian practices of gender non-conformity and the castration of their priests, despite this they were seen as incredibly important in the Roman religious enviroment."
+ 
+ samnite_high_god_name:0 "Sabus"
+ samnite_high_god_name_possessive:0 "Sabus'"
+ samnite_high_god_alternate:0 "Sabus"
+ samnite_high_god_alternate_possessive:0 "Sabus'"
+ samnite_devil_name:0 "daemons"
+ samnite_devil_name_possessive:0 "daemons'"
+ samnite_creator_god_name:0 "Novensides"
+ samnite_creator_god_name_possessive:0 "Novensides'"
+ samnite_health_god_name:0 "Vejovis"
+ samnite_health_god_name_possessive:0 "Vejovis'"
+ samnite_fertility_god_name:0 "Feronia"
+ samnite_fertility_god_name_possessive:0 "Feronia's"
+ samnite_wealth_god_name:0 "Pales"
+ samnite_wealth_god_name_possessive:0 "Pales'"
+ samnite_household_god_name:0 "Lares"
+ samnite_household_god_name_possessive:0 "Lares'"
+ samnite_fate_god_name:0 "Sancus"
+ samnite_fate_god_name_possessive:0 "Sancus'"
+ samnite_knowledge_god_name:0 "Suri"
+ samnite_knowledge_god_name_possessive:0 "Suri's"
+ samnite_war_god_name:0 "Vacuna"
+ samnite_war_god_name_possessive:0 "Vacuna's"
+ samnite_trickster_god_name:0 "Angitia"
+ samnite_trickster_god_name_possessive:0 "Angitia's'"
+ samnite_night_god_name:0 "Luna"
+ samnite_night_god_name_possessive:0 "Luna's"
+ samnite_water_god_name:0 "Fons"
+ samnite_water_god_name_possessive:0 "Fons'"
+ witchgodname_samnite:0 "Angitia"
+ samnite_death_name:0 "Ops"
+ samnite_death_name_possessive:0 "Ops'"
+ 
+ samnite_priest_male:0 "Meddix"
+ samnite_priest_male_plural:0 "Meddixes"
+ samnite_priest_female:0 "Meddix"
+ samnite_priest_female_plural:0 "Meddixes"
+ samnite_priest:0 "Meddix"
+ samnite_priest_plural:0 "Meddixes"
+ samnite_bishop_male:0 "Tuticus Meddix"
+ samnite_bishop_male_plural:0 "Tuticus Meddixes"
+ samnite_bishop_female:0 "Tuticus Meddix"
+ samnite_bishop_female_plural:0 "Tuticus Meddixes"
+ samnite_bishop:0 "Tuticus Meddix"
+ samnite_bishop_plural:0 "Tuticus Meddixes"
+ 
+ samnite:0 "Samnitism"
+ samnite_adj:0 "Samnitism"
+ samnite_adherent:0 "Samnitist"
+ samnite_adherent_plural:0 "Samnitists"
+ samnite_desc:0 "The Samnites or Sabines were an ancient Italic people who were early rivals of the Romans, their religion was remarkabley similar to the Romans and many of their Gods would be adapted into later Roman worship. However alongside Animal sacrifices, it is speculated that the Sabines engaged in Human sacrifice and possibly child sacrifice."
+
+ indigitamenta_high_god_name:0 "The Indigitamenta"
+ indigitamenta_high_god_name_possessive:0 "The Indigitamenta's"
+ indigitamenta_high_god_alternate:0 "The Indigitamenta"
+ indigitamenta_high_god_alternate_possessive:0 "The Indigitamenta's"
+ indigitamenta_devil_name:0 "daemons"
+ indigitamenta_devil_name_possessive:0 "daemons'"
+ indigitamenta_creator_god_name:0 "The Indigitamenta"
+ indigitamenta_creator_god_name_possessive:0 "The Indigitamenta"
+ indigitamenta_health_god_name:0 "The Indigitamenta"
+ indigitamenta_health_god_name_possessive:0 "The Indigitamenta"
+ indigitamenta_fertility_god_name:0 "The Indigitamenta"
+ indigitamenta_fertility_god_name_possessive:0 "The Indigitamenta"
+ indigitamenta_wealth_god_name:0 "The Indigitamenta"
+ indigitamenta_wealth_god_name_possessive:0 "The Indigitamenta"
+ indigitamenta_household_god_name:0 "Domiduca"
+ indigitamenta_household_god_name_possessive:0 "Domiduca's"
+ indigitamenta_fate_god_name:0 "The Indigitamenta"
+ indigitamenta_fate_god_name_possessive:0 "The Indigitamenta"
+ indigitamenta_knowledge_god_name:0 "The Indigitamenta"
+ indigitamenta_knowledge_god_name_possessive:0 "The Indigitamenta"
+ indigitamenta_war_god_name:0 "The Indigitamenta"
+ indigitamenta_war_god_name_possessive:0 "The Indigitamenta"
+ indigitamenta_trickster_god_name:0 "The Indigitamenta"
+ indigitamenta_trickster_god_name_possessive:0 "The Indigitamenta"
+ indigitamenta_night_god_name:0 "Iana"
+ indigitamenta_night_god_name_possessive:0 "Iana's"
+ indigitamenta_water_god_name:0 "The Indigitamenta"
+ indigitamenta_water_god_name_possessive:0 "The Indigitamenta"
+ witchgodname_indigitamenta:0 "The Indigitamenta"
+ indigitamenta_death_name:0 "Nenia"
+ indigitamenta_death_name_possessive:0 "Nenia"
+ 
+ indigitamenta:0 "Indigitamenta"
+ indigitamenta_adj:0 "Indigitamenta"
+ indigitamenta_adherent:0 "Indigete"
+ indigitamenta_adherent_plural:0 "Indigetes"
+ indigitamenta_desc:0 "The Indigitamenta were a list of minor deities which encompassed the domains of Fertility, Childbirth, Agriculture, Love and Personal Protection. They were recorded in the Indigitamenta for purposes of invocation in certain scenarios for assistance of specialised minor Gods rather then overarching Higher Gods, done through hymns, chants and magical incantations."
+
+ sibylline_high_god_name:0 "Libri Sibyllini"
+ sibylline_high_god_name_possessive:0 "Libri Sibyllini's"
+ sibylline_high_god_alternate:0 "Sibylline Books"
+ sibylline_high_god_alternate_possessive:0 "Sibylline Books'"
+ sibylline_devil_name:0 "daemons"
+ sibylline_devil_name_possessive:0 "daemons'"
+ sibylline_creator_god_name:0 "Ceres"
+ sibylline_creator_god_name_possessive:0 "Ceres'"
+ sibylline_health_god_name:0 "Apollo"
+ sibylline_health_god_name_possessive:0 "Apollo's"
+ sibylline_fertility_god_name:0 "Magna Mater"
+ sibylline_fertility_god_name_possessive:0 "Magna Mater's"
+ sibylline_wealth_god_name:0 "Libri Sibyllini"
+ sibylline_wealth_god_name_possessive:0 "Libri Sibyllini's"
+ sibylline_household_god_name:0 "Libri Sibyllini"
+ sibylline_household_god_name_possessive:0 "Libri Sibyllini's"
+ sibylline_fate_god_name:0 "Libri Sibyllini"
+ sibylline_fate_god_name_possessive:0 "Libri Sibyllini's"
+ sibylline_knowledge_god_name:0 "Libri Sibyllini"
+ sibylline_knowledge_god_name_possessive:0 "Libri Sibyllini's"
+ sibylline_war_god_name:0 "Libri Sibyllini"
+ sibylline_war_god_name_possessive:0 "Libri Sibyllini's"
+ sibylline_trickster_god_name:0 "Libri Sibyllini's"
+ sibylline_trickster_god_name_possessive:0 "Libri Sibyllini's"
+ sibylline_night_god_name:0 "Libri Sibyllini"
+ sibylline_night_god_name_possessive:0 "Libri Sibyllini's"
+ sibylline_water_god_name:0 "Libri Sibyllini"
+ sibylline_water_god_name_possessive:0 "Libri Sibyllini's"
+ witchgodname_sibylline:0 "Cumean Sibyl"
+ sibylline_death_name:0 "Libri Sibyllini"
+ sibylline_death_name_possessive:0 "Libri Sibyllini's"
+ 
+ sibylline_religious_text:0 "Sibylline Books"
+ sibylline_priest_male:0 "quindecim"
+ sibylline_priest_male_plural:0 "quindecimae"
+ sibylline_priest_female:0 "sibylla"
+ sibylline_priest_female_plural:0 "sibyllis"
+ sibylline_priest:0 "quindecim"
+ sibylline_priest_plural:0 "quindecimae"
+ sibylline_bishop_male:0 "quindecim"
+ sibylline_bishop_male_plural:0 "quindecimae"
+ sibylline_bishop_female:0 "sibylla"
+ sibylline_bishop_female_plural:0 "sibyllis"
+ sibylline_bishop:0 "quindecim"
+ sibylline_bishop_plural:0 "quindecimae"
+
+ sibylline:0 "Cult of Sibylline"
+ sibylline_adj:0 "Cult of Sibylline"
+ sibylline_adherent:0 "Sibylist"
+ sibylline_adherent_plural:0 "Sibylists"
+ sibylline_desc:0 "The Sibylline Books were prophetic texts that were consulted in times of crisis in Rome. Believed to have been purchased by the last King of the city. They were watched over by fifteen ex-politicans. The Sibylline books were consulted in various of the major crises of Rome, such as the Punic Wars, the conspiracy to assassinate Caesar and the Great Fire of Rome. In times it gave instructions for the enlistment of non-Latin Gods in Roman efforts, such as Apollo and Cybele, and as such the keepers of the books also controlled their respective cults."
+ 
+ sibylline_old:0 "False Sibylline Books"
+ sibylline_adj_old:0 "False Sibylline"
+ sibylline_adherent:0 "False Sibyl"
+ sibylline_adherent_plural:0 "False Sibyls" 
+
+ vestal_high_god_name:0 "Vesta"
+ vestal_high_god_name_possessive:0 "Vesta's"
+ vestal_high_god_alternate:0 "Vesta"
+ vestal_high_god_alternate_possessive:0 "Vesta's"
+ vestal_devil_name:0 "daemons"
+ vestal_devil_name_possessive:0 "daemons"
+ vestal_creator_god_name:0 "Vesta"
+ vestal_creator_god_name_possessive:0 "Vesta"
+ vestal_health_god_name:0 "Vesta"
+ vestal_health_god_name_possessive:0 "Vesta"
+ vestal_fertility_god_name:0 "Vesta"
+ vestal_fertility_god_name_possessive:0 "Vesta"
+ vestal_wealth_god_name:0 "Vesta"
+ vestal_wealth_god_name_possessive:0 "Vesta"
+ vestal_household_god_name:0 "Vesta"
+ vestal_household_god_name_possessive:0 "Vesta"
+ vestal_fate_god_name:0 "Vesta"
+ vestal_fate_god_name_possessive:0 "Vesta"
+ vestal_knowledge_god_name:0 "Vesta"
+ vestal_knowledge_god_name_possessive:0 "Vesta"
+ vestal_war_god_name:0 "Dii"
+ vestal_war_god_name_possessive:0 "Dii"
+ vestal_trickster_god_name:0 "Vesta"
+ vestal_trickster_god_name_possessive:0 "Vesta"
+ vestal_night_god_name:0 "Vesta"
+ vestal_night_god_name_possessive:0 "Vesta"
+ vestal_water_god_name:0 "Vesta"
+ vestal_water_god_name_possessive:0 "Vesta"
+ witchgodname_vestal:0 "Vesta"
+ vestal_death_name:0 "Vesta"
+ vestal_death_name_possessive:0 "Vesta"
+
+ holy_order_armati_sacerdotes:0 "Armati Sacerdotes"
+ holy_order_salii:0 "Salii"
+ 
+ vestal:0 "Cult of Vestal"
+ vestal_adj:0 "Cult of Vestal"
+ vestal_adherent:0 "Vestalist"
+ vestal_adherent_plural:0 "Vestalists"
+ vestal_desc:0 "The Vesta was the Goddess of the hearth, home and family, but her cult the Vestal Virgins was highly importance for the spiritual continuance of Rome. The Vestal Virigins maintained the sacred fire of Rome, which if extinquished would bring woe upon the city of Rome. They also conducted rituals of purification among Rome's populace."
+
+ pythian_faith:0 "Pythodorianism"
+ pythian_faith_adj:0 "Pythodorian"
+ pythian_faith_adherent:0 "Pythodorian"
+ pythian_faith_adherent_plural:0 "Pythodorians"
+ pythian_faith_desc:0 "Continuing centuries-old religious practice, Pythodorians uphold the traditions of local festivals and rites and take heed to consult the Oracle at Delphi before making major decisions.\n\n#weak Classical Greek religious practices were very decentralised, with each city-state having its own patron deities and religious festivals. For example, Athens saw Athena as its patron goddess while Sparta had Ares and Artemis as patron deities.\n\nDespite these differences, the Pythodorians are nevertheless united in their reverence for the famed [flavor_oracle_of_delphi|E], whose prophecies figure extensively in the myths and histories of the Greek cities.#!"
+
+ pythian_faith_religious_head_title:0 "High Priest"
+ pythian_faith_religious_head_title_name:0 "High Priest"
+
+ soterism_faith:0 "Soterism"
+ soterism_faith_adj:0 "Soterist"
+ soterism_faith_adherent:0 "Soterist"
+ soterism_faith_adherent_plural:0 "Soterists"
+ soterism_faith_desc:0 "Believing that their rulers are more than just mortal flesh and blood, Soterists support the recent phenomenon of ruler cults that has arisen since the Macedonian conquest of the east.\n\n#weak Soterism found its roots in the Diadochi wars (323-281 BC) as vulnerable cities had to appease several strongmen at the same time. This usually manifested in lavish honours awarded to the Kings, their relatives and their friends. In one instance, King Antigonus Monophthalmus and his son Demetrius were each recognised as a 'Sōtēr' or Saviour and were honoured with a festival and altar following their liberation of Athens.\n\nThe influence of Soterism was much more profound in the eastern Greek realms than in the mainland or the western colonies. Influenced by Persian and Egyptian traditions, Seleukid and Ptolemaic kings supported the proliferation of ruler cults within their realms and appointed relatives or favourites as priests within these cults.#!"
+
+ epirote_faith:0 "Naïsm"
+ epirote_faith_adj:0 "Naïst"
+ epirote_faith_adherent:0 "Naïst"
+ epirote_faith_adherent_plural:0 "Naïsts"
+ epirote_faith_desc:0 "Maintaining their ancient rural shrines and sacred groves, the Naïsts proudly continue traditions that have elsewhere fallen away over the preceding centuries.\n\n#weak Epirus was home to the oldest of the Greek oracles, located at the sanctuary of Dodona. While not as famous as its [Concept('flavor_oracle_of_delphi','Delphic')|E] counterpart, it nevertheless served as a religious capital for the Epirotes and attracted numerous pilgrims who wished to glean wisdom from the leaves rustling in the great oak.\n\nAlthough much of Epirus would become urbanised by the 3rd century BC, the region retained a distinctly pastoral identity as rural cults continued to be celebrated in the cities. Whereas the archaic mother goddess Dione was relegated to a mere aspect of Hera elsewhere in Greece, she continued to be worshipped at Dodona along with Zeus Naios.#!"
+
+ macedonian_faith:0 "Propatorism"
+ macedonian_faith_adj:0 "Propatorist"
+ macedonian_faith_adherent:0 "Propatorist"
+ macedonian_faith_adherent_plural:0 "Propatorists"
+ macedonian_faith_desc:0 "The Propatorists show great reverence for the past, whether it be through upholding ancient rites of passage, or their cult worship of Herakles Patroos, whom they claim is the illustrious ancestor to Macedonia's royal clans."
+
+ arcadian_faith:0 "Lykaionism"
+ arcadian_faith_adj:0 "Lykaionian"
+ arcadian_faith_adherent:0 "Lykaionian"
+ arcadian_faith_adherent_plural:0 "Lykaionians"
+ arcadian_faith_desc:0 "The Lykaionians are commonly found worshipping in caves or atop mountains, their rustic traditions very much inspired by the isolation and pastoralism of Arcadia.\n\n#weak Arcadia has a sparse and idyllic landscape, its fertile valleys lying beneath rugged mountains that separate it from the rest of the Peloponnese. It was perhaps best known in antiquity as the domain of the nature-god Pan, though it also possessed important cult centres to Zeus Lykaios and Despoina.\n\nOn account of the region's natural features, Arcadian religious practices and myths developed a unique pastoral bent as well as some more intriguing features, such as the alleged lycanthropy and cannibalism taking place high on Mount Lykaion."
+
+ cabeiric_faith:0 "Kabeirism"
+ cabeiric_faith_adj:0 "Kabeiric"
+ cabeiric_faith_adherent:0 "Kabeiric"
+ cabeiric_faith_adherent_plural:0 "Kabeirics"
+ cabeiric_faith_desc:0 "The Kabeirics seek initiation into the mysteries of the chthonic Cabeiri, or Great Gods, through secret rites and torchlit ceremonies devoted to these enigmatic deities."
+
+ delian_faith:0 "Kykladism"
+ delian_faith_adj:0 "Kykladian"
+ delian_faith_adherent:0 "Kykladian"
+ delian_faith_adherent_plural:0 "Kykladians"
+ delian_faith_desc:0 "Often considered stepping stones for greater powers, the islands of the Cyclades maintain a distinctly inward focus and enjoy a special relationship with the Sanctuary of Apollo on Delos from which they often borrow gold."
+
+ spartan_faith:0 "Tyndaridism"
+ spartan_faith_adj:0 "Tyndarid"
+ spartann_faith_adherent:0 "Tyndarid"
+ spartan_faith_adherent_plural:0 "Tyndarids"
+ spartan_faith_desc:0 "Tyndaridism represents a return to the 'old ways' of the Spartans, that is, extreme conservatism coupled with a distaste for personal wealth, an obsession with personal discipline and, of course, an irreconcilable desire to enslave Messenia."
+
+ hellenism_positive_afterlife:0 "Elysium"
+ hellenism_negative_afterlife:0 "Underworld"
+
+ aristotelian:0 "Aristotelianism"
+ aristotelian_adj:0 "Aristotelianism"
+ aristotelian_adherent:0 "Aristotelianist"
+ aristotelian_adherent_plural:0 "Aristotelianists"
+ aristotelian_desc:0 "The followers of philosophical tradition inspired by the work of Aristotle, usually characterized by deductive logic and an analytic inductive method in the study of natural philosophy and metaphysics."
+
+ aristotelian_old:0 "Old Aristotelianism"
+ aristotelian_old_adj:0 "Old Aristotelianism"
+ aristotelian_old_adherent:0 "Old Aristotelianism"
+ aristotelian_old_adherent_plural:0 "Old Aristotelianism"
+
+ cynicism:0 "Cynicism"
+ cynicism_adj:0 "Cynicism"
+ cynicism_adherent:0 "Cynicist"
+ cynicism_adherent_plural:0 "Cynicists"
+ cynicism_desc:0 "The Cynics rejected all conventional desires for wealth, power, glory, social recognition, conformity, and worldly possessions and even flouted such conventions openly and derisively in public."
+
+ cynicism_old:0 "Old Cynicism"
+ cynicism_old_adj:0 "Old Cynicism"
+ cynicism_old_adherent:0 "Old Cynicist"
+ cynicism_old_adherent_plural:0 "Old Cynicists"
+
+ pyrrhonism:0 "Pyrrhonism"
+ pyrrhonism_adj:0 "Pyrrhonism"
+ pyrrhonism_adherent:0 "Pyrrhonist"
+ pyrrhonism_adherent_plural:0 "Pyrrhonists"
+ pyrrhonism_desc:0 "The disciples of Ancient Greek school of philosophical skepticism which rejects dogma and advocates the suspension of judgement over the truth of all beliefs."
+
+ pyrrhonism_old:0 "Old Pyrrhonism"
+ pyrrhonism_old_adj:0 "Old Pyrrhonism"
+ pyrrhonism_old_adherent:0 "Old Pyrrhonist"
+ pyrrhonism_old_adherent_plural:0 "Old Pyrrhonists"
+
+ kyrenaism:0 "Kyrenaicism"
+ kyrenaism_adj:0 "Kyrenaicism"
+ kyrenaism_adherent:0 "Kyrenaicist"
+ kyrenaism_adherent_plural:0 "Kyrenaicists"
+ kyrenaism_desc:0 "Sensual hedonist Greek school of philosophy founded in the 4th century BCE, supposedly by Aristippus of Cyrene."
+
+ kyrenaism_old:0 "Old Kyrenaism"
+ kyrenaism_old_adj:0 "Old Kyrenaism"
+ kyrenaism_old_adherent:0 "Old Kyrenaist"
+ kyrenaism_old_adherent_plural:0 "Old Kyrenaists"
+
+ #romanic
+ romanic_pagan_old_old:0 "Ancient Roman Religion"
+ romanic_pagan_old_old_adj:0 "Ancient Romanic"
+ romanic_pagan_old_adherent:0 "Ancient Romannist"
+ romanic_pagan_old_adherent_plural:0 "Ancient Romannists"
+ romanic_pagan_old:0 "Roman Pantheon"
+ romanic_pagan_old_adj:0 "Romanic"
+ romanic_pagan_old_adherent:0 "Romannist"
+ romanic_pagan_old_adherent_plural:0 "Romanists"
+ romanic_pagan_imperial:0 "Imperial Pantheon"
+ romanic_pagan_imperial_adj:0 "Imperial Pantheon"
+ romanic_pagan_imperial_adherent:0 "Imperial"
+ romanic_pagan_imperial_adherent_plural:0 "Imperials"
+ romanic_pagan:2 "Roman Pantheon"
+ romanic_pagan_adj:0 "Roman Pantheon"
+ romanic_pagan_adherent:0 "Romanist"
+ romanic_pagan_adherent_plural:0 "Romanists"
+ romanism_religion:0 "Roman Pantheon"
+ romanism_religion_adj:0 "Roman Pantheon"
+ romanism_religion_adherent: "Romanist"
+ romanism_religion_adherent_plural: "Romanists"
+ romanism_religion_desc:0 "The Religion of the Romans was characterised by a vast pantheon of Gods and Goddesses. It was said to be founded as a direct negotiation between a Sabine King and the Gods, therefore relying heavily on proper ritual and pratice to appease their Gods."
+ romanism_pantheon:0 "Pantheon Gods"
+ romanism_high_god_name:0 "Saturn"
+ romanism_high_god_name_possessive:0 "Saturn's"
+ romanism_high_god_name_alternate:0 "Father Time"
+ romanism_high_god_name_alternate_possessive:0 "Father Time's"
+ romanism_good_god_neptune:0 "Neptune"
+ romanism_good_god_minerva:0 "Minerva"
+ romanism_good_god_mars:0 "Mars"
+ romanism_good_god_mercury:0 "Mercury"
+ romanism_good_god_cupid:0 "Cupid"
+ romanism_devil_name:0 "Dis Pater"
+ romanism_devil_name_possessive:0 "Dis Pater's"
+ romanism_evil_god_inferi:0 "di Inferi"
+ romanism_house_of_worship:0 "Tempus"
+ romanism_house_of_worship_plural:0 "Tempus"
+ romanism_religious_symbol:0 "laurel"
+ romanism_religious_text:0 "sacred chronicles"
+ old_religious_head_title:1 "Pontifex Maximus"
+ old_religious_head_title_name:0 "Official Priests"
+ imperial_religious_head_title:0 "Ruler"
+ imperial_religious_head_title_name:0 "Imperial"
+ romanism_devotee_male:0 "Devotee"
+ romanism_devotee_male_plural:0 "Devotees"
+ romanism_devotee_female:0 "Devotee"
+ romanism_devotee_female_plural:0 "Devotees"
+ romanism_devotee_neuter:0 "Devotee"
+ romanism_devotee_neuter_plural:0 "Devotees"
+ romanism_devotee:0 "Devotee"
+ romanism_devotee_plural:0 "Devotees"
+ romanism_priest_male:0 "Flamen"
+ romanism_priest_male_plural:0 "Flamens"
+ romanism_priest_female:0 "Vestal"
+ romanism_priest_female_plural:0 "Vestals"
+ romanism_priest_neuter:0 "Diviner"
+ romanism_priest_neuter_plural:0 "Diviners"
+ romanism_priest:0 "Flamen"
+ romanism_priest_plural:0 "Flamens"
+ romanism_bishop_male:0 "Pontifex"
+ romanism_bishop_male_plural:0 "Pontifices"
+ romanism_bishop_female:0 "Pontifex"
+ romanism_bishop_female_plural:0 "Pontifices"
+ romanism_bishop:0 "Pontifex"
+ romanism_bishop_plural:0 "Pontifices"
+ romanism_bishop_neuter:0 "Pontifex"
+ romanism_bishop_neuter_plural:0 "Pontifices"
+ romanism_priest_alternate_plural:0 "Flamens"
+ 
+ romanism_death_deity_name:0 "Dis Pater"
+ romanism_positive_afterlife:0 "Underworld"
+ romanism_negative_afterlife:0 "Underworld"
+ romanism_death_deity_name_possessive:0 "Dis Pater's"
+ romanism_divine_realm:0 "Underworld"
+ romanism_witchgodname_hekate:0 "Trivia"
+ romanism_witchgodname_hekate_possessive:0 "Trivia's"
+
+ romanism_creator_god_name:0 "Jupiter"
+ romanism_creator_god_name_possessive:0 "Jupiter's"
+ romanism_health_god_name:0 "Aesculapius"
+ romanism_health_god_name_possessive:0 "Aesculapius'"
+ romanism_fertility_god_name:0 "Ceres"
+ romanism_fertility_god_name_possessive:0 "Ceres'"
+ romanism_wealth_god_name:0 "Pluto"
+ romanism_wealth_god_name_possessive:0 "Pluto's"
+ romanism_household_god_name:0 "Vesta"
+ romanism_household_god_name_possessive:0 "Vesta's"
+ romanism_fate_god_name:0 "the Parcae"
+ romanism_fate_god_name_possessive:0 "the Parcae's"
+ romanism_knowledge_god_name:0 "Minerva"
+ romanism_knowledge_god_name_possessive:0 "Minerva's"
+ romanism_war_god_name:0 "Mars"
+ romanism_war_god_name_possessive:0 "Mars'"
+ romanism_trickster_god_name:0 "Mercury"
+ romanism_trickster_god_name_possessive:0 "Mercury's"
+ romanism_night_god_name:0 "Nox"
+ romanism_night_god_name_possessive:0 "Nox's"
+ romanism_water_god_name:0 "Neptune"
+ romanism_water_god_name_possessive:0 "Neptune's"
+
+ holy_order_armati_sacerdotes:0 "Armati Sacerdotes"
+ holy_order_salii:0 "Salii"
+
+ hellenism_good_god_persephone:0 "Persephone"
+ hellenism_good_god_eileithyia:0 "Eileithyia"
+ hellenism_good_god_dionysus:0 "Dionysus"
+ hellenism_good_god_helios:0 "Helios"
+ hellenism_good_god_selene:0 "Selene"
+ hellenism_good_god_pan:0 "Pan"
+ hellenism_good_god_eos:0 "Eos"
+ hellenism_good_god_nike:0 "Nike"
+ hellenism_good_god_hephaestus:0 "Hephaestus"
+ hellenism_good_god_eros:0 "Eros"
+ hellenism_good_god_ouranos:0 "Ouranos"
+
+ hellenism_evil_god_eris:0 "Eris"
+ hellenism_evil_god_deimos:0 "Deimos"
+ hellenism_evil_god_phobos:0 "Phobos"
+ hellenism_evil_god_thanatos:0 "Thanatos"
+
+ mithraism_house_of_worship:0 "Mithraeum"
+ mithraism_house_of_worship_plural:0 "Mithraea"
+ sol_invictus_house_of_worship:0 "sun temple"
+ sol_invictus_house_of_worship_plural:0 "sun temples"
+
+ mithraism_religious_text:0 "Mithras Liturgy"
+ bacchism_religious_text:0 "Bacchanalia"
+ orphism_religious_text:0 "Orphic Poems"
+ pythagoreanism_religious_text:0 "Golden Verses"
+ roman_religious_text:0 "Res Divinae"
+ eleusinian_religious_text:0 "Hymn to Demeter"
+ sol_invictus_religious_text:0 "Natalis Invicti"
+
+ mithraism_religious_symbol:0 "Phrygian cap"
+ bacchism_religious_symbol:0 "thyrsus"
+ orphism_religious_symbol:0 "chelys"
+ pythagoreanism_religious_symbol:0 "pentagram"
+ eleusinian_religious_symbol:0 "wheat sheaf"
+ sol_invictus_religious_symbol:0 "solar crown"

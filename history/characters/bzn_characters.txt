@@ -1,0 +1,356 @@
+bzn_tecuetlaza = {
+    name = "Tecuetlaza"
+    dynasty = house_of_tecuhtli # We'll create this dynasty later
+	diplomacy = 8
+	martial = 8
+	stewardship = 7
+	intrigue = 6
+	learning = 6
+	prowess = 6
+	religion = "cult_of_tlaloc"
+    culture = "nahuatl"
+	trait = ambitious
+	trait = eccentric
+	trait = callous
+	trait = education_stewardship_4
+	trait = strong
+	trait = sungodblood
+	
+    830.1.1 = {
+        birth = yes
+    }
+    866.1.1 = {
+		add_prestige = 4000 #Giving him prestige to get him on the way for Separatist Uprising
+		spawn_army = {
+			men_at_arms = {
+				type = jaguar_warrior
+				stacks = 10
+				}
+			levies = 5000
+			location = capital_province
+			inheritable = no
+			uses_supply = yes
+			name = bzn.jaguar.army
+			}
+		}
+	900.1.1 = {
+		death = "900.1.1"
+	}
+}
+
+bzn_yitzhak = {
+    name = "Yitzhak bar Shimon"
+    dynasty = house_of_tecuhtli # We'll create this dynasty later
+	diplomacy = 8
+	martial = 6
+	stewardship = 5
+	intrigue = 7
+	learning = 8
+	prowess = 6
+	religion = "nazarene"
+    culture = "hebrew"
+	trait = zealous
+	trait = compassionate
+	trait = chaste
+	trait = education_learning_4
+	trait = pilgrim
+	
+    840.1.1 = {
+        birth = yes
+    }
+    866.1.1 = {
+		add_gold = 200
+		add_piety = 1500
+		add_prestige = 1000
+		}
+	
+	900.1.1 = {
+		death = "900.1.1"
+	}
+}
+
+
+bzn_raditz = {
+    name = "Raditz"
+    dynasty = house_of_tecuhtli # We'll create this dynasty later
+	diplomacy = 5
+	martial = 5
+	stewardship = 6
+	intrigue = 5
+	learning = 5
+	prowess = 6
+	religion = "saiyan_faith"
+    culture = "saiyan"
+	trait = arrogant
+	trait = stubborn
+	trait = sadistic
+	trait = education_martial_4
+	trait = pure_saiyan
+	trait = saiyan_tail
+	trait = ki_control
+	trait = mid_class_warrior
+	
+    837.1.1 = {
+        birth = yes
+    }
+    866.1.1 = {
+		add_gold = 200
+		}
+	
+	900.1.1 = {
+		death = "900.1.1"
+	}
+}
+
+bzn_piccolo = {
+    name = "Piccolo"
+    dynasty = house_of_tecuhtli # We'll create this dynasty later
+	diplomacy = 5
+	martial = 7
+	stewardship = 5
+	intrigue = 8
+	learning = 6
+	prowess = 9
+	religion = "namekian_faith"
+    culture = "namekian"
+	trait = calm
+	trait = temperate
+	trait = just
+	trait = education_martial_4
+	trait = namekian_race
+	trait = intellect_good_2
+	trait = ki_control
+	
+    847.1.1 = {
+        birth = yes
+    }
+    866.1.1 = {
+		add_gold = 200
+		}
+	
+	900.1.1 = {
+		death = "900.1.1"
+	}
+}
+
+bzn_cold = {
+    name = "King Cold"
+    dynasty = house_of_tecuhtli # We'll create this dynasty later
+	diplomacy = 6
+	martial = 6
+	stewardship = 9
+	intrigue = 8
+	learning = 8
+	prowess = 5
+	religion = "frieza_faith"
+    culture = "frieza"
+	trait = calm
+	trait = arrogant
+	trait = impatient
+	trait = education_diplomacy_4
+	trait = frieza_race
+	trait = family_first
+	trait = ki_control
+	
+    827.1.1 = {
+        birth = yes
+    }
+    866.1.1 = {
+		add_gold = 300
+		add_prestige = 1000
+		}
+	
+	900.1.1 = {
+		death = "900.1.1"
+	}
+}
+
+bzn_buu = {
+    name = "Kid Buu"
+    dynasty = house_of_tecuhtli # We'll create this dynasty later
+	diplomacy = 5
+	martial = 6
+	stewardship = 6
+	intrigue = 5
+	learning = 5
+	prowess = 5
+	religion = "majin_faith"
+    culture = "majin"
+	trait = sadistic
+	trait = wrathful
+	trait = impatient
+	trait = education_intrigue_4
+	trait = majin_race
+	trait = ki_control
+	
+    847.1.1 = {
+        birth = yes
+    }
+    866.1.1 = {
+		add_gold = 200
+		}
+	
+	900.1.1 = {
+		death = "900.1.1"
+	}
+}
+
+bzn_ahmose = {
+    name = "Ahmose"
+    dynasty = house_of_tecuhtli # We'll create this dynasty later
+	diplomacy = 10
+	martial = 11
+	stewardship = 8
+	intrigue = 6
+	learning = 9
+	prowess = 9
+	religion = "pharaonic"
+    culture = "ancient_egyptian"
+	trait = vengeful
+	trait = ambitious
+	trait = paranoid
+	trait = education_martial_4
+	trait = witch
+	
+    820.1.1 = {
+        birth = yes
+    }
+    866.1.1 = {
+		add_prestige = 4000
+		spawn_army = {
+			men_at_arms = {
+				type = Maryannu
+				stacks = 5
+				}
+			levies = 9500
+			location = capital_province
+			inheritable = no
+			uses_supply = yes
+			name = bzn.nile.army
+		}#Giving him prestige to get him on the way for Separatist Uprising
+	}
+	900.1.1 = {
+		death = "900.1.1"
+	}
+}
+
+bzn_balam = {
+    name = "Kinam Balam"
+    dynasty = house_of_tecuhtli # We'll create this dynasty later
+	diplomacy = 5
+	martial = 7
+	stewardship = 5
+	intrigue = 7
+	learning = 6
+	prowess = 8
+	religion = "cult_of_quetzalcoatl"
+    culture = "otomitl"
+	trait = ambitious
+	trait = patient
+	trait = diligent
+	trait = education_learning_4
+	trait = shrewd
+	trait = sungodblood
+	
+    1036.1.1 = {
+        birth = yes
+    }
+    1065.1.1 = {
+		add_prestige = 4000 #Giving him prestige to get him on the way for Separatist Uprising
+		spawn_army = {
+			men_at_arms = {
+				type = jaguar_warrior
+				stacks = 15
+				}
+			levies = 6500
+			location = capital_province
+			inheritable = no
+			uses_supply = yes
+			name = bzn.jaguar.army
+		}
+	}
+	1100.1.1 = {
+		death = "1100.1.1"
+	}
+}
+
+bzn_itzcoatl = {
+    name = "Itzcoatl"
+    dynasty = house_of_tecuhtli # We'll create this dynasty later
+	diplomacy = 5
+	martial = 6
+	stewardship = 5
+	intrigue = 5
+	learning = 5
+	prowess = 6
+	religion = "cult_of_tezcatlipoca"
+    culture = "nahuatl"
+	trait = ambitious
+	trait = wrathful
+	trait = sadistic
+	trait = education_martial_5
+	trait = sungodblood
+	
+    1158.1.1 = {
+        birth = yes
+    }
+    1177.1.1 = {
+		add_prestige = 4000 #Giving him prestige to get him on the way for Separatist Uprising
+		spawn_army = {
+			men_at_arms = {
+				type = jaguar_warrior
+				stacks = 20
+				}
+			levies = 8000
+			location = capital_province
+			inheritable = no
+			uses_supply = yes
+			name = bzn.jaguar.army
+		}
+	}
+	1250.1.1 = {
+		death = "1250.1.1"
+	}
+}
+
+bzn_hong = {
+    name = "Hong Xiuquan"
+    dynasty = house_of_tecuhtli # We'll create this dynasty later
+	diplomacy = 5
+	martial = 10
+	stewardship = 5
+	intrigue = 5
+	learning = 7
+	prowess = 8
+	religion = "taiping"
+    culture = "han"
+	trait = zealous
+	trait = brave
+	trait = eccentric
+	trait = education_diplomacy_5
+	trait = holy_warrior
+	trait = inquisitor
+	
+    1142.1.1 = {
+        birth = yes
+    }
+    1177.1.1 = {
+		add_prestige = 4000
+		add_piety = 4000
+		add_pressed_claim = title:k_xia
+		spawn_army = {
+			levies = 20000
+			men_at_arms = {
+				type = trebuchet
+				stacks = 20
+				}
+			location = capital_province
+			inheritable = no
+			uses_supply = yes
+			name = bzn.heaven
+		}
+	}
+	1250.1.1 = {
+		death = "1250.1.1"
+	}
+}

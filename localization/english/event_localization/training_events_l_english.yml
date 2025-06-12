@@ -1,0 +1,23 @@
+﻿l_english:
+
+ basic_training.0001.t:0 "Training: Yes or No?"
+ basic_training.0001.d:0 "My servants are a call away from prepping a proper training location. Should I still go ahead with training?"
+ basic_training.0001.a:0 "Absolutely! Let's get even stronger!"
+ basic_training.0001.b:0 "Let us begin."
+ basic_training.0001.c:0 "Maybe another time."
+ 
+ basic_training.0002.t:0 "Training: Proper Regimen"
+ basic_training.0002.d:0 "I stand out in the empty field and ask myself. How hard shall I train this time around? Pushing myself past my limits comes with great exhaustion, so perhaps a standard workout will do?"
+ basic_training.0002.a:0 "Let's push past my limits!"
+ basic_training.0002.b:0 "No need for such extremity."
+ 
+ basic_training.0003.t:0 "Training: Saiyan Regimen"
+ basic_training.0003.d:0 "I stand out in the empty field, itching for a good fight. Just how hard shall I train this time?"
+ basic_training.0003.a:0 "Let's focus on Super Saiyan."
+ basic_training.0003.b:0 "Let's go all-out!"
+ basic_training.0003.c:0 "Keep it simple this time."
+ 
+ basic_training.0004.t:0 "Training: Super Saiyan Training"
+ basic_training.0004.d:0 "Transforming into Super Saiyan, I ready myself up to train with all I have."
+ basic_training.0004.a:0 "Time to go beyond!"
+ basic_training.0004.b:0 "GO EVEN FURTHER BEYOND!"

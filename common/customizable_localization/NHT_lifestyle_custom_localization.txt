@@ -1,0 +1,32 @@
+﻿LifestyleFocus = {
+	type = character
+
+	text = {
+		trigger = { has_lifestyle = martial_lifestyle }
+		localization_key = LifestyleFocus_martial
+	}
+	text = {
+		trigger = { has_lifestyle = diplomacy_lifestyle }
+		localization_key = LifestyleFocus_diplomacy
+	}
+	text = {
+		trigger = { has_lifestyle = intrigue_lifestyle }
+		localization_key = LifestyleFocus_intrigue
+	}
+	text = {
+		trigger = { has_lifestyle = stewardship_lifestyle }
+		localization_key = LifestyleFocus_stewardship
+	}
+	text = {
+		trigger = { has_lifestyle = learning_lifestyle }
+		localization_key = LifestyleFocus_learning
+	}
+	text = {
+		trigger = { has_lifestyle = nht_prowess_lifestyle }
+		localization_key = LifestyleFocus_prowess
+	}
+	text = {
+		trigger = { has_lifestyle = nht_leadership_lifestyle }
+		localization_key = LifestyleFocus_leadership
+	}
+}

@@ -1,0 +1,7 @@
+court_position_thrall = {
+	name = COURT_POSITION_CATEGORY_THRALL
+}
+
+court_position_gentry = {
+	name = COURT_POSITION_CATEGORY_GENTRY
+}

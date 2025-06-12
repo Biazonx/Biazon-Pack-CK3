@@ -1,0 +1,348 @@
+﻿l_english:
+
+ # GENERIC
+ GOD_EVIL:0 "Evil"
+ GOD_EVIL_possessive:0 "Evil's"
+
+ # ANATOLIAN
+
+ # Luwian
+ GOD_TARQUDE: "Tarqude" # Storm god, associated with war
+ GOD_TARQUDE_possessive: "Tarqude's"
+
+ GOD_ARMA: "Arma" # Moon god
+ GOD_ARMA_possessive: "Arma's"
+
+ GOD_NATRO: "Natro" # Carian Apollo
+ GOD_NATRO_possessive: "Natro's"
+
+ GOD_MASSARIS: "Massaris" # Carian Dionysus
+ GOD_MASSARIS_possessive: "Massaris'"
+
+ GOD_ARTIMI: "Artimi" # Carian Artemis
+ GOD_ARTIMI_possessive: "Artimi's"
+
+ # HELLENIC
+
+ # Olympian
+ GOD_ZEUS: "Zeus"
+ GOD_ZEUS_possessive: "Zeus'"
+
+ GOD_APOLLO:0 "Apollo"
+ GOD_APOLLO_possessive:0 "Apollo's"
+
+ GOD_APHRODITE:0 "Aphrodite"
+ GOD_APHRODITE_possessive:0 "Aphrodite's"
+
+ GOD_HEPHAESTUS:0 "Hephaestus"
+ GOD_HEPHAESTUS_possessive:0 "Hephaestus'"
+
+ GOD_HESTIA:0 "Hestia"
+ GOD_HESTIA_possessive:0 "Hestia's"
+
+ GOD_LACHESIS:0 "Lachesis"
+ GOD_LACHESIS_possessive:0 "Lachesis'"
+
+ GOD_ATHENA:0 "Athena"
+ GOD_ATHENA_possessive:0 "Athena's"
+
+ GOD_ARES:0 "Ares"
+ GOD_ARES_possessive:0 "Ares'"
+
+ GOD_HERMES:0 "Hermes"
+ GOD_HERMES_possessive:0 "Hermes"
+
+ GOD_NYX:0 "Nyx"
+ GOD_NYX_possessive:0 "Nyx's"
+
+ GOD_POSEIDON:0 "Poseidon"
+ GOD_POSEIDON_possessive:0 "Poseidon's"
+
+ GOD_HADES:0 "Hades"
+ GOD_HADES_possessive:0 "Hades'"
+
+ GOD_HEKATE:0 "Hekate"
+ GOD_HEKATE_possessive:0 "Hekate's"
+
+ # GREAT MOTHER
+ GOD_THE_GREAT_MOTHER:0 "The Great Mother"
+ GOD_THE_GREAT_MOTHER_possessive:0 "The Great Mother's"
+
+ GOD_METER:0 "Meter"
+ GOD_METER_possessive:0 "Meter's"
+
+ # Phrygian
+ GOD_HOSIOS:0 "Hosios"
+ GOD_HOSIOS_possessive:0 "Hosios'"
+
+ GOD_SABAZIOS:0 "Sabazios"
+ GOD_SABAZIOS_possessive:0 "Sabazios'"
+
+ GOD_DIKAIOS:0 "Dikaios"
+ GOD_DIKAIOS_possessive:0 "Dikaios'"
+
+ GOD_MEIS:0 "Meis"
+ GOD_MEIS_possessive:0 "Meis's"
+
+ GOD_MA:0 "Ma"
+ GOD_MA_possessive:0 "Ma's"
+
+ GOD_KYBELE:0 "Kybele"
+ GOD_KYBELE_possessive:0 "Kybele's"
+
+ GOD_METER_AREZASTIS:0 "Meter Arezastis"
+ GOD_METER_AREZASTIS_possessive:0 "Meter Arezastis'"
+
+ GOD_ATTIS:0 "Attis"
+ GOD_ATTIS_possessive:0 "Attis'"
+
+ GOD_ANGDISTIS:0 "Angdistis"
+ GOD_ANGDISTIS_possessive:0 "Angistis'"
+
+ GOD_AGDISTIS:0 "Agdistis"
+ GOD_AGDISTIS_possessive:0 "Agistis'"
+
+ GOD_HOSIOS_AND_DIKAIOS:0 "Hosios and Dikaios"
+ GOD_HOSIOS_AND_DIKAIOS_possessive:0 "Hosios and Dikaios'"
+
+ GOD_SOZON:0 "Sozon"
+ GOD_SOZON_possessive:0 "Sozon's"
+
+ GOD_MATAR:0 "Matar"
+ GOD_MATAR_possessive:0 "Matar's"
+
+ GOD_MATAR_KUBELEYE:0 "Matar Kubeleye"
+ GOD_MATAR_AREYASTIN:0 "Matar Areyastin"
+ GOD_MATARS_ATTENDANTS:0 "Matar's Attendants"
+
+ GOD_ANDISSI:0 "Andissi"
+
+ GOD_SAWAZIS:0 "Sawazis"
+ GOD_SAWAZIS_possessive:0 "Sawazis'"
+
+ GOD_MEN:0 "Mēn"
+ GOD_MEN_possessive:0 "Mēn's"
+
+ # Iapodian
+ GOD_BINDOS:0 "Bindos" # God of springs and seas
+ GOD_BINDOS_possessive:0 "Bindos'"
+
+ # Illyrian
+ GOD_ANA:0 "Ana" # possibly the Illyrian name for the great mother goddess
+ GOD_ANA_possessive:0 "Ana's"
+
+ GOD_BOLAUROS:0 "Bolauros" # Derived from *bolaur, hypothetical root of South Slavic blavor, Romanian balaur and Albanian bullar
+ GOD_BOLAUROS_possessive:0 "Bolauros'"
+
+ GOD_MEDAUROS:0 "Medauros" # possibly a war god
+ GOD_MEDAUROS_possessive:0 "Medauros'"
+
+ GOD_RHEDON:0 "Rhedon" # possibly a god of the sea and protector of travellers and sailors
+ GOD_RHEDON_possessive:0 "Rhedon's"
+
+ # Liburnian
+ GOD_ICA:0 "Ica" # ?
+ GOD_ICA_possessive:0 "Ica's"
+
+ GOD_IUTOSSICA:0 "Iutossica" # ?
+ GOD_IUTOSSICA_possessive:0 "Iutossica's"
+
+ GOD_ANZOTICA:0 "Anzotica" # Liburnian Venus
+ GOD_ANZOTICA_possessive:0 "Anzotica's"
+
+ # Pannonian
+ GOD_ARMATOS:0 "Armatos" # war god
+ GOD_ARMATOS_possessive:0 "Armatos'"
+
+ GOD_TADENOS:0 "Tadenos" # Dalmatian Apollo?
+ GOD_TADENOS_possessive:0 "Tadenos'"
+
+ GOD_THANA:0 "Thana" # Pannonian goddess of forestry and hunting
+ GOD_THANA_possessive:0 "Thana's"
+
+ GOD_VIDASOS:0 "Vidasos" # Pannonian god of nature and fertility
+ GOD_VIDASOS_possessive:0 "Vidasos'"
+
+ # Paeonian
+ GOD_DYALOS:0 "Dyalos" # Paeonian Dionysus
+ GOD_DYALOS_possessive:0 "Dyalos'"
+
+ GOD_AKESSAMENOS:0 "Akessámenos" # attested in the Iliad, possibly a health deity
+ GOD_AKESSAMENOS_possessive:0 "Akessamenos'"
+
+ GOD_AXIOS:0 "Axios" # personification of the river Axius
+ GOD_AXIOS_possessive:0 "Axios'"
+
+ # Dardanian
+ GOD_ANDIO:0 "Andio" # Derived from the Latin form Andinus, possibly associated with water and health
+ GOD_ANDIO_possessive:0 "Andio's"
+
+ # Thracian
+ GOD_BENDIS:0 "Bendis"
+ GOD_BENDIS_possessive:0 "Bendis'"
+
+ GOD_ZERYNTHIA:0 "Zerynthia"
+ GOD_ZERYNTHIA_possessive:0 "Zerynthia's"
+
+ GOD_RESKYNTHIS:0 "Reskynthis"
+ GOD_RESKYNTHIS_possessive:0 "Reskynthis'"
+
+ GOD_BRAURO:0 "Brauro"
+ GOD_BRAURO_possessive:0 "Brauro's"
+
+ GOD_KOTYTO:0 "Kotyto"
+ GOD_KOTYTO_possessive:0 "Kotyto's"
+
+ GOD_HYPTA:0 "Hypta"
+ GOD_HYPTA_possessive:0 "Hypta's"
+
+ GOD_SUREGETES:0 "Suregetes"
+ GOD_SUREGETES_possessive:0 "Suregetes'"
+
+ GOD_DELOPTES:0 "Deloptes"
+ GOD_DELOPTES_possessive:0 "Deloptes'"
+
+ GOD_PERKE:0 "Perke"
+ GOD_PERKE_possessive:0 "Perke's"
+
+ GOD_ZBELTHIOURDOUS:0 "Zbelthiourdous"
+ GOD_ZBELTHIOURDOUS_possessive:0 "Zbelthiourdous'"
+
+ GOD_ZUML:0 "Zuml"
+ GOD_ZUML_possessive:0 "Zuml"
+
+ # Getic
+
+ GOD_DARZALAS:0 "Darzalas" # Derzelas, chthonic god of abundance and the underworld, health and human spirit's vitality
+ GOD_DARZALAS_possessive:0 "Darzalas'"
+
+ GOD_ZALMOXIS:0 "Zalmoxis" # chief deity of the Getae
+ GOD_ZALMOXIS_possessive:0 "Zalmoxis'"
+
+ GOD_GEBELEIZIS:0 "Gebeleizis" # Getic deity sometimes equated with Zalmoxis
+ GOD_GEBELEIZIS_possessive:0 "Gebeleizis'"
+
+ # Lydian
+ GOD_ARTIMUS:0 "Artimuś" # supreme goddess, goddess of wild nature
+ GOD_ARTIMUS_possessive:0 "Artimuś'"
+
+ GOD_QALIJANS:0 "Qalijãns" # moon god, consort of Artimus
+ GOD_QALIJANS_possessive:0 "Qalijãns'"
+
+ GOD_LEFS:0 "Lefs" # Lydian Zeus
+ GOD_LEFS_possessive:0 "Lefs'"
+
+ GOD_LAMETRUS:0 "Lamẽtrus" # Lydian Demeter
+ GOD_LAMETRUS_possessive:0 "Lamẽtrus'"
+
+ GOD_PAKIS:0 "Pakiš" # Lydian Bacchus
+ GOD_PAKIS_possessive:0 "Pakiš'"
+
+ GOD_SANTAS:0 "Sãntas" # possibly a hero-figure equivalent to Herakles, with Luwic/Carian origins
+ GOD_SANTAS_possessive:0 "Sãntas'"
+
+ GOD_THE_MARIWJAS:0 "The Mariwjas" # minor demons associated with darkness who accompany Santas; possibly of Luwic/Carian origins
+ GOD_THE_MARIWJAS_possessive:0 "The Mariwjas'"
+
+ GOD_MALIS:0 "Mališ" # Lydian Athena, possibly has Luwic/Carian origins
+ GOD_MALIS_possessive:0 "Mališ'"
+
+ GOD_KUFAWS:0 "Kufaws" # possibly the consort of Santas & daughter of Artimus; may have had characteristic of Artemis & Kybele, and acted as a feminine equivalent to Pakis
+ GOD_KUFAWS_possessive:0 "Kufaws'"
+
+ # Celtic
+ GOD_TARANIS:0 "Taranis"
+ GOD_TARANIS_possessive:0 "Taranis'"
+
+ GOD_KERNOUNOS:0 "Kernounos"
+ GOD_KERNOUNOS_possessive:0 "Kernounos'"
+
+ GOD_BELENOS:0 "Belenos"
+ GOD_BELENOS_possessive:0 "Belenos'"
+
+ GOD_THE_THREE_MOTHERS:0 "The Three Mothers"
+ GOD_THE_THREE_MOTHERS_possessive:0 "The Three Mothers'"
+
+ GOD_LUGOS:0 "Lugos"
+ GOD_LUGOS_possessive:0 "Lugos'"
+
+ GOD_EPONA:0 "Epona"
+ GOD_EPONA_possessive:0 "Epona's"
+
+ GOD_OGMIOS:0 "Ogmios"
+ GOD_OGMIOS_possessive:0 "Ogmios'"
+
+ GOD_TEUTATIS:0 "Teutatis"
+ GOD_TEUTATIS_possessive:0 "Teutatis'"
+
+ GOD_MAPONOS:0 "Maponos"
+ GOD_MAPONOS_possessive:0 "Maponos'"
+
+ GOD_NODENS:0 "Nodens"
+ GOD_NODENS_possessive:0 "Nodens'"
+
+ GOD_THE_SERPENT:0 "The Serpent"
+ GOD_THE_SERPENT_possessive:0 "The Serpent's"
+
+ GOD_SKORDOS:0 "Skordos"
+ GOD_SKORDOS_possessive:0 "Skordos'"
+
+ GOD_ORGIA:0 "Orgia"
+ GOD_ORGIA_possessive:0 "Orgia's"
+
+ altino:0 "Altino"
+ altino_possessive:0 "Altinos'"
+ alkomno:0 "Alkomno"
+ alkomno_possessive:0 "Alkomnos'"
+ einaios:0 "Einaios"
+ einaios_possessive:0 "Einaios'"
+ tianus:0 "Tianus"
+ tianus_possessive:0 "Tianus'"
+ taranis:0 "Taranis"
+ taranis_possessive:0 "Taranis'"
+ athari:0 "Athari"
+ athari_possessive:0 "Atharis"
+ thiuthi:0 "Thiuthi"
+ thiuthi_possessive:0 "Thiuthis"
+ kusenku:0 "Kusenku"
+ kusenku_possessive:0 "Kusenkus"
+ ssinikhe:0 "Ssinikhe"
+ ssinikhe_possessive:0 "Ssinikhes"
+ ethsu:0 "Ethsu"
+ ethsu_possessive:0 "Ethsus"
+
+ dyeus-phter:0 "Dyéus-Phtér"
+ dyeus:0 "Dyéus"
+ dyeus-phter_possessive:0 "Dyéus-Phtér's"
+ sehul:0 "Séhul"
+ sehul_possessive:0 "Séhul's"
+ dheghom:0 "Dhéghom"
+ dheghom_possessive:0 "Dhéghom's"
+ hewsos:0 "Héwsos"
+ hewsos_possessive:0 "Héwsos'"
+ hngwnis:0 "Hngwnis"
+ hngwnis_possessive:0 "Hngwnis'"
+ perkwunos:0 "Perkwunos"
+ perkwunos_possessive:0 "Perkwunos'"
+ ngwhi:0 "Ngwhi"
+ ngwhi_possessive:0 "Ngwhi's"
+ mehnot:0 "Mehnot"
+ mehnot_possessive:0 "Mehnots"
+ pehuson:0 "Péhuson"
+ pehuson_possessive:0 "Péhusons"
+ yemhos:0 "Yemos"
+ yemhos_possessive:0 "Yemos'"
+ monus:0 "Monus"
+ monus_possessive:0 "Monus'"
+ heryo-men:0 "Heryo-men"
+ heryo-men_possessive:0 "Heryo-men's"
+ prihyeh:0 "Prihyéh"
+ prihyeh_possessive:0 "Prihyéh's"
+ the_fates:0 "The Fates"
+ the_fates_possessive:0 "The Fates'"
+ welnos:0 "Welnos"
+ welnos_possessive:0 "Welnos'"
+ hepom_nepots:0 "Hepom Nepōts"
+ hepom_nepots_possessive:0 "Hepom Nepōts'"
+ rudlos:0 "Rudlos"
+ rudlos_possessive:0 "Rudlos'"

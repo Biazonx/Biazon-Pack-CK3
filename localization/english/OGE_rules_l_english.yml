@@ -1,0 +1,7 @@
+﻿l_english:
+
+ rule_oge_slavery:0 "Slavery"
+ setting_oge_slavery_enabled:0 "Enabled"
+ setting_oge_slavery_enabled_desc:0 "Can enslave prisoners through an interaction."
+ setting_oge_slavery_disabled:1 "Disabled"
+ setting_oge_slavery_disabled_desc:0 "Hides the enslavement interaction, preventing slaves from being made in game."

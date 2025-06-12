@@ -1,0 +1,3 @@
+﻿mz_requires_full_nudity = {
+	global_not = MZ_REQUIRES_FULL_NUDITY
+}

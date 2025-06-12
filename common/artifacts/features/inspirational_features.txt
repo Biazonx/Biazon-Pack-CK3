@@ -1,0 +1,90 @@
+﻿
+
+#################################################################
+# ring Features - Decorations, Centerpieces, Adornments		#
+#################################################################
+
+# ring_decoration
+ring_decoration_none = {
+	group = ring_decoration
+	trigger = {	artifact_value_trigger = { VALUE = scope:wealth MIN = 0 MAX = 20 } }
+	weight = 10
+}
+ring_decoration_adornment = {
+	group = ring_decoration
+	trigger = {	artifact_value_trigger = { VALUE = scope:wealth MIN = 10 MAX = 50 } }
+	weight = 20
+}
+ring_decoration_centerpiece = {
+	group = ring_decoration
+	trigger = {	artifact_value_trigger = { VALUE = scope:wealth MIN = 25 MAX = 75 } }	
+	weight = 40
+}
+ring_decoration_centerpiece_and_adornment = {
+	group = ring_decoration
+	trigger = {	artifact_value_trigger = { VALUE = scope:wealth MIN = 50 MAX = 999 } }	
+	weight = 60
+}
+
+# ring_centerpiece
+ring_centerpiece_signet = {
+	trigger = { 
+		has_variable = artifact_signet_ring 
+		exists = scope:owner.house
+		# Don't award own sigil in tournaments
+		NAND = {
+			scope:owner.involved_activity.activity_host ?= scope:owner
+			scope:owner.involved_activity ?= { has_activity_type = activity_tournament }
+		}
+	}
+	group = ring_centerpiece
+	weight = 50
+}
+ring_centerpiece_decoder = {
+	trigger = { has_variable = artifact_decoder_ring }
+	group = ring_centerpiece
+	weight = 50
+}
+ring_centerpiece_cabochon = {
+	group = ring_centerpiece
+	weight = 50
+}
+ring_centerpiece_cameo = {
+	group = ring_centerpiece
+	trigger = {	artifact_value_trigger = { VALUE = scope:wealth MIN = 70 MAX = 999 } }
+	weight = 50
+}
+ring_centerpiece_religious = {
+	group = ring_centerpiece
+	weight = 50
+}
+
+# ring_adornment
+ring_adornment_gems = {
+	group = ring_adornment
+	trigger = {	artifact_value_trigger = { VALUE = scope:wealth MIN = 40 MAX = 999 } }
+	weight = 33
+}	
+ring_adornment_filigree = {
+	group = ring_adornment
+	weight = 33
+}
+ring_adornment_motto = {
+	group = ring_adornment
+	trigger = {
+		exists = scope:owner.house
+		NAND = {
+			scope:owner.involved_activity.activity_host ?= scope:owner
+			scope:owner.involved_activity ?= { has_activity_type = activity_tournament }
+		}
+	}
+	weight = 33
+}
+ring_adornment_religious = {
+	group = ring_adornment
+	weight = 33
+}
+ring_adornment_runes = {
+	group = ring_adornment	
+	weight = 33
+}

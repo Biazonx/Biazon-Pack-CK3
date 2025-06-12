@@ -1,0 +1,53 @@
+﻿#
+# artifact_county_opinion_1_modifier = { county_opinion_add = 3 }
+# artifact_county_opinion_2_modifier = { county_opinion_add = 6 }
+# artifact_county_opinion_3_modifier = { county_opinion_add = 9 }
+# artifact_county_opinion_4_modifier = { county_opinion_add = 12 }
+#
+ artifact_scheme_discovery_chance_1_modifier = { scheme_discovery_chance_mult = 0.025 }
+ artifact_scheme_discovery_chance_2_modifier = { scheme_discovery_chance_mult = 0.05 }
+ artifact_scheme_discovery_chance_3_modifier = { scheme_discovery_chance_mult = 0.075 }
+ artifact_scheme_discovery_chance_4_modifier = { scheme_discovery_chance_mult = 0.10 }
+ 
+#artifact_martial_penalty_negate_1_modifer = { negate_martial_penalty_add = 1 }
+#artifact_martial_penalty_negate_2_modifer = { negate_martial_penalty_add = 2 }
+#
+# artifact_liege_opinion_1_modifier = { liege_opinion = 2 }
+# artifact_liege_opinion_2_modifier = { liege_opinion = 4 }
+# artifact_liege_opinion_3_modifier = { liege_opinion = 6 }
+# artifact_liege_opinion_4_modifier = { liege_opinion = 8 }
+#
+# artifact_fellow_vassal_opinion_1_modifier = { fellow_vassal_opinion = 2 }
+# artifact_fellow_vassal_opinion_2_modifier = { fellow_vassal_opinion = 4 }
+# artifact_fellow_vassal_opinion_3_modifier = { fellow_vassal_opinion = 6 }
+# artifact_fellow_vassal_opinion_4_modifier = { fellow_vassal_opinion = 8 }
+#
+ artifact_house_opinion_1_modifier = { dynasty_house_opinion = 2 }
+ artifact_house_opinion_2_modifier = { dynasty_house_opinion = 4 }
+ artifact_house_opinion_3_modifier = { dynasty_house_opinion = 6 }
+ artifact_house_opinion_4_modifier = { dynasty_house_opinion = 8 }
+
+ inspirational_artifact_diplomacy_per_prestige_level_modifier = { 
+	icon = diplomacy_positive
+	diplomacy_per_prestige_level = 1 
+ }
+ inspirational_artifact_martial_per_prestige_level_modifier = { 
+	icon = martial_positive
+	martial_per_prestige_level = 1 
+ }
+ inspirational_artifact_stewardship_per_prestige_level_modifier = { 
+	icon = stewardship_positive
+	stewardship_per_prestige_level = 1 
+ }
+ inspirational_artifact_intrigue_per_prestige_level_modifier = { 
+	icon = intrigue_positive
+	intrigue_per_prestige_level = 1 
+ }
+ inspirational_artifact_learning_per_prestige_level_modifier = { 
+	icon = learning_positive
+	learning_per_prestige_level = 1 
+ }
+ inspirational_artifact_prowess_per_prestige_level_modifier = { 
+	icon = prowess_positive
+	prowess_per_prestige_level = 1 
+ }

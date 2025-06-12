@@ -1,0 +1,37 @@
+﻿pool_saiyans = {
+	valid_character = {
+		has_same_culture_as = scope:base
+	}
+	
+	character_score = {
+		base = 3
+		
+		compare_modifier = {
+			value = prowess
+		}
+		
+		modifier = { # Give them a fair chance to start a Dynasty
+			factor = 0
+			health < 2
+		}
+		modifier = { # Give them a fair chance to start a Dynasty
+			factor = 0
+			fertility < 0.2
+		}
+	}
+	
+	
+	config = {
+		age = { 16 30 }
+		background = commander
+	}
+	
+	selection_count = 25
+	
+	pool = faith
+	gender = random
+	culture = character
+}
+
+
+

@@ -1,0 +1,8 @@
+﻿#############################################
+# CHARACTER NICKNAMES
+#############################################
+
+#  More Lifestyles Events Nicknames
+nick_nht_the_indomitable = {}
+nick_nht_the_valorous = {}
+nick_nht_the_swordmaster = {}

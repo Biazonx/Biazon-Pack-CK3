@@ -1,0 +1,384 @@
+﻿set_interesting_traits_and_modifiers_effect = {
+
+### 5% chance of a Physical Damage Trait for 30+ older
+	if = {
+		limit = {
+			age >= 30
+		}
+		random_list = {
+			95 = { }
+			5 = {
+				random_list = {
+					100 = {	add_trait = one_eyed	}
+					100 = {	add_trait = scarred		}
+					100 = {	add_trait = one_legged	}
+					100 = {	trigger = {
+								NOT = { has_trait = beauty_good_1 }
+								NOT = { has_trait = beauty_good_2 }
+								NOT = { has_trait = beauty_good_3 }
+							}
+							add_trait = disfigured	}
+					100 = {	add_trait = deviant		}
+					100 = {	add_trait = impotent	}
+					100 = {	add_trait = comfort_eater	}
+					100 = {	add_trait = weak		}
+					100 = {	add_trait = blind		}
+				}
+			}
+		}
+	}
+### 5% chance of a Coping Damage Trait for 30+ older
+	if = {
+		limit = {
+			age >= 30
+		}
+		random_list = {
+			95 = { }
+			5 = {
+				random_list = {
+					100 = {	add_trait = confider		}
+					100 = {	add_trait = contrite		}
+					100 = {	add_trait = drunkard		}
+					100 = {	add_trait = fornicator		}
+					100 = {	trigger = { is_male = yes }
+							add_trait = eunuch			}
+					100 = {	add_trait = flagellant		}
+					100 = {	trigger = { can_be_hashishiyah = yes	}
+							add_trait = hashishiyah		}
+					100 = {	add_trait = improvident		}
+					100 = {	add_trait = inappetetic		}
+					100 = {	add_trait = irritable		}
+					100 = {	add_trait = journaller		}
+					100 = {	add_trait = profligate		}
+					100 = {	add_trait = reclusive		}
+					100 = {	add_trait = rakish			}
+					100 = {	add_trait = sodomite		}
+				}
+			}
+		}
+	}
+
+## BODY EFFECT - GLUTTONOUS
+	random_list = {
+		60 = {
+			trigger = {
+				has_trait = gluttonous
+			}
+			change_current_weight = 150
+		}
+		30 = {
+			trigger = {
+				has_trait = gluttonous
+			}
+			change_current_weight = 100
+		}
+		10 = {
+			trigger = {
+				has_trait = gluttonous
+			}
+			change_current_weight = 50
+		}
+	}
+## BODY EFFECT - GREGARIOUS
+	random_list = {
+		60 = {
+			trigger = {
+				has_trait = gregarious
+			}
+			change_current_weight = 80
+		}
+		30 = {
+			trigger = {
+				has_trait = gregarious
+			}
+			change_current_weight = 40
+		}
+		10 = {
+			trigger = {
+				has_trait = gregarious
+			}
+			change_current_weight = 20
+		}
+	}
+## BODY EFFECT - WEAK
+	random_list = {
+		60 = {
+			trigger = {
+				has_trait = weak
+			}
+			change_current_weight = -50
+		}
+		30 = {
+			trigger = {
+				has_trait = weak
+			}
+			change_current_weight = -30
+		}
+		10 = {
+			trigger = {
+				has_trait = weak
+			}
+			change_current_weight = -20
+		}
+	}
+## CULTURALS
+	random_list = {
+		5 = {
+			modifier = {
+				add = 9
+				culture = {
+					has_cultural_parameter = loyal_trait_more_common
+				}
+			}
+			add_trait = loyal
+		}
+		5 = {
+			modifier = {
+				add = 9
+				culture = {
+					has_cultural_parameter = disloyal_trait_more_common
+				}
+			}
+			add_trait = disloyal
+		}
+		90 = {}
+	}
+
+# Some get health conditions.
+	random = {
+		chance = 5
+		random_list = {
+			# Depression.
+			100 = {
+				random_list = {
+					100 = { add_trait = depressed_genetic }
+					100 = { add_trait = depressed_1 }
+				}
+			}
+			# Schizophrenia.
+			100 = {
+				random_list = {
+					100 = { add_trait = lunatic_genetic }
+					100 = { add_trait = lunatic_1 }
+				}
+			}
+			# Epilepsy.
+			100 = {
+				random_list = {
+					100 = { add_trait = possessed_genetic }
+					100 = { add_trait = possessed_1 }
+				}
+			}
+			# Leprosy.
+			100 = { add_trait = leper }
+			# Syphilis.
+			100 = { add_trait = great_pox }
+			# Lover's Pox.
+			100 = { add_trait = lovers_pox }
+			# Eunuch.
+			100 = {
+				trigger = { is_male = yes }
+				add_trait = eunuch
+			}
+		}
+	}
+
+}
+
+set_good_congenitals_physics_effect = {
+
+		random = {	chance = 2
+					add_trait = strong			}
+		random = {	chance = 2
+					add_trait = shrewd			}
+		random = {	chance = 3
+					if = {
+						limit = { is_female = yes	}
+						add_trait = fecund			}
+					}
+		random = {	chance = 3
+					add_trait = whole_of_body	}
+
+### 10% chance of a good congenital
+	random_list = {
+		95 = { }
+		5 = {
+			random_list = {
+				50 = {	add_trait = intellect_good_1	}
+				35 = {	add_trait = intellect_good_2	}
+				15 = {	add_trait = intellect_good_3	}
+			}
+		}
+	}
+	random_list = {
+		95 = { }
+		5 = {
+			trigger = {
+				NOT = { has_trait = dwarf 				}
+				NOT = { has_trait = hunchbacked			}
+			}
+			random_list = {
+				55 = {	add_trait = physique_good_1		}
+				35 = {	add_trait = physique_good_2		}
+				10 = {	add_trait = physique_good_3		}
+			}
+		}
+	}
+	random_list = {
+		95 = { }
+		5 = {
+			trigger = {
+				NOT = { has_trait = disfigured 			}
+				NOT = { has_trait = albino 				}
+				NOT = { has_trait = scaly 				}
+				NOT = { has_trait = dwarf 				}
+				NOT = { has_trait = giant 				}
+				NOT = { has_trait = hunchbacked			}
+			}
+			random_list = {
+				55 = {	add_trait = beauty_good_1		}
+				35 = {	add_trait = beauty_good_2		}
+				10 = {	add_trait = beauty_good_3		}
+			}
+		}
+	}
+}
+
+set_bad_congenitals_physics_effect = {
+
+	random = {	chance = 1
+			if = {
+				limit = {
+					NOT = { has_trait = beauty_good_1 }
+					NOT = { has_trait = beauty_good_2 }
+					NOT = { has_trait = beauty_good_3 }
+				}	
+				add_trait = albino			
+				}
+			}
+	random = {	chance = 1
+			if = {
+				limit = {
+					NOT = { has_trait = beauty_good_1 }
+					NOT = { has_trait = beauty_good_2 }
+					NOT = { has_trait = beauty_good_3 }
+					NOT = { has_trait = physique_good_1 }
+					NOT = { has_trait = physique_good_2 }
+					NOT = { has_trait = physique_good_3 }
+				}	
+				add_trait = hunchbacked		
+				}
+			}
+	random = {	chance = 1
+			if = {
+				limit = {
+					NOT = { has_trait = beauty_good_1 }
+					NOT = { has_trait = beauty_good_2 }
+					NOT = { has_trait = beauty_good_3 }
+				}	
+				add_trait = scaly			
+				}
+			}
+	random = {	chance = 1
+			if = {
+				limit = {
+					NOT = { has_trait = physique_good_1 }
+					NOT = { has_trait = physique_good_2 }
+					NOT = { has_trait = physique_good_3 }
+				}	
+				add_trait = clubfooted		
+				}
+			}
+	random = {	chance = 1
+				add_trait = lisping			}
+	random = {	chance = 1
+				add_trait = stuttering		}
+	random = {	chance = 1
+				add_trait = wheezing		}
+	random = {	chance = 1
+				add_trait = spindly			}
+	random = {	chance = 1
+				add_trait = bleeder			}
+
+	random_list = {
+		97 = { }
+		3 = {
+			random_list = {
+				100 = {
+					if = {		
+						limit = {
+							NOT = { has_trait = beauty_good_1 }
+							NOT = { has_trait = beauty_good_2 }
+							NOT = { has_trait = beauty_good_3 }
+						}	
+						add_trait = giant
+						}
+					}
+				100 = {	
+					if = {
+						limit = {
+							NOT = { has_trait = beauty_good_1 }
+							NOT = { has_trait = beauty_good_2 }
+							NOT = { has_trait = beauty_good_3 }
+						}	
+						add_trait = dwarf
+						}
+					}
+				}
+			}
+		}
+	
+
+### 10% chance of a bad congenital
+	random_list = {
+		95 = { }
+		5 = {
+			if = {
+				limit = {
+					NOT = { has_trait = intellect_good_1 }
+					NOT = { has_trait = intellect_good_2 }
+					NOT = { has_trait = intellect_good_3 }
+				}
+				random_list = {
+					50 = {	add_trait = intellect_bad_1	}
+					35 = {	add_trait = intellect_bad_2	}
+					15 = {	add_trait = intellect_bad_3	}
+				}
+			}
+		}
+	}
+	random_list = {
+		95 = { }
+		5 = {
+			if = {
+				limit = {
+					NOT = { has_trait = intellect_good_1 }
+					NOT = { has_trait = intellect_good_2 }
+					NOT = { has_trait = intellect_good_3 }
+				}
+				random_list = {
+					50 = {	add_trait = intellect_bad_1	}
+					35 = {	add_trait = intellect_bad_2	}
+					15 = {	add_trait = intellect_bad_3	}
+				}
+			}
+		}
+	}
+	random_list = {
+		95 = { }
+		5 = {
+			if = {
+				limit = {
+					NOT = { has_trait = physique_good_1 }
+					NOT = { has_trait = physique_good_2 }
+					NOT = { has_trait = physique_good_3 }
+				}
+				random_list = {
+					50 = {	add_trait = physique_bad_1	}
+					35 = {	add_trait = physique_bad_2	}
+					15 = {	add_trait = physique_bad_3	}
+				}
+			}
+		}
+	}
+}

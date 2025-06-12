@@ -1,0 +1,471 @@
+﻿l_english:
+
+baltic_pagan:0 "Romuva"
+baltic_pagan_adj:0 "Romuvanas"
+baltic_pagan_adherent:0 "Romuvanas"
+baltic_pagan_adherent_plural:0 "Romuvanai"
+baltic_pagan_desc:0 "The terms Romuva came from medieval written sources in East Prussia mentioning the pagan Baltic temple Romowe. The word has meanings of "temple" and "sanctuary", but, further, also "abode of inner peace"."
+
+baltic_pagan_old:0 "Neromuva"
+baltic_pagan_old_adj:0 "Neromuvanas"
+baltic_pagan_old_adherent:0 "Neromuvanas"
+baltic_pagan_old_adherent_plural:0 "Neromuvanai"
+
+baltic_divine_realm:0 "Dausų Vartai"
+baltic_house_of_worship:0 "alka"
+baltic_house_of_worship_plural:0 "alkos"
+baltic_negative_afterlife:0 "Tamsybių Laukus"
+baltic_positive_afterlife:0 "Dausos"
+baltic_bishop_female:0 "burtininkė"
+baltic_bishop_female_plural:0 "burtininkės"
+baltic_bishop_male:0 "burtininkas"
+baltic_bishop_male_plural:0 "burtininkai"
+baltic_bishop_neuter:0 "$baltic_bishop_male$"
+baltic_bishop_neuter_plural:0 "$baltic_bishop_male_plural$"
+baltic_devotee_female:0 "atsidavėlutė"
+baltic_devotee_female_plural:0 "atsidavėlutės"
+baltic_devotee_male:0 "atsidavėlis"
+baltic_devotee_male_plural:0 "atsidavėliai"
+baltic_devotee_neuter:0 "$baltic_devotee_male$"
+baltic_devotee_neuter_plural:0 "$baltic_devotee_male_plural$"
+baltic_priest_alternate_plural:0 "seniūnaičiai"
+baltic_priest_female:0 "vaidilė"
+baltic_priest_female_plural:0 "vaidilės"
+baltic_priest_male:0 "vaidila"
+baltic_priest_male_plural:0 "vaidilos"
+baltic_priest_neuter:0 "$baltic_priest_male$"
+baltic_priest_neuter_plural:0 "$baltic_priest_male_plural$"
+baltic_religious_head_title:0 "Krivis"
+baltic_religious_head_title_name:0 "Kriviai"
+baltic_religious_symbol:0 "aušros medis"
+baltic_religious_text:0 "dainos"
+
+baltic_creator_god_name:0 "$baltic_high_god_name$"
+baltic_creator_god_name_possessive:0 "$baltic_high_god_name_possessive$"
+baltic_death_deity_name:0 "$baltic_evil_god_Giltine$"
+baltic_death_deity_name_possessive:0 "$baltic_evil_god_Giltine$'s"
+baltic_devil_name:0 "$baltic_evil_god_Velnias$"
+baltic_devil_name_possessive:0 "$baltic_evil_god_Velnias$'"
+baltic_fate_god_name:0 "$baltic_good_god_Laima$"
+baltic_fate_god_name_possessive:0 "$baltic_good_god_Laima$'s"
+baltic_fertility_god_name:0 "$baltic_good_god_Zemyna$"
+baltic_fertility_god_name_possessive:0 ""$baltic_good_god_Zemyna$'s"
+baltic_health_god_name:0 "$baltic_good_god_Saule$"
+baltic_health_god_name_possessive:0 "$baltic_good_god_Saule$'s"
+baltic_high_god_name:0 "Dievas"
+baltic_high_god_name_possessive:0 "Dievas'"
+baltic_high_god_name_alternate:0 "Praamžius"
+baltic_high_god_name_alternate_possessive:0 "Praamžius'"
+baltic_household_god_name:0 "$baltic_good_god_Dimstipatis$"
+baltic_household_god_name_possessive:0 "$baltic_good_god_Dimstipatis$'"
+baltic_knowledge_god_name:0 "$baltic_high_god_name$"
+baltic_knowledge_god_name_possessive:0 "$baltic_high_god_name_possessive$"
+baltic_night_god_name:0 "$baltic_good_god_Menulis$"
+baltic_night_god_name_possessive:0 "$baltic_good_god_Menulis$'"
+baltic_trickster_god_name:0 "$baltic_evil_god_Pinciukas$"
+baltic_trickster_god_name_possessive:0 "$baltic_evil_god_Pinciukas$'"
+baltic_war_god_name:0 "$baltic_good_god_Perkunas$"
+baltic_war_god_name_possessive:0 "$baltic_good_god_Perkunas$'"
+baltic_water_god_name:0 "$baltic_evil_god_Bangputys$"
+baltic_water_god_name_possessive:0 "$baltic_evil_god_Bangputys$'"
+baltic_wealth_god_name:0 "$baltic_good_god_Dalia$"
+baltic_wealth_god_name_possessive:0 "$baltic_good_god_Dalia$'s"
+baltic_witch_god_name:0 "$baltic_evil_god_Ragana$"
+
+baltic_good_god_Ausrine:0 "Aušrinė" #goddess morning star
+baltic_good_god_Austrinis:0 "Auštrinis" #god of the northeast wind
+baltic_good_god_Bicbirbis:0 "Bičbirbis" #god of bees
+baltic_good_god_Dalia:0 "Dalia" #goddess of fate, wealth
+baltic_good_god_Dimstipatis:0 "Dimstipatis" #god of the hearth
+baltic_good_god_Ezerinis:0 "Ežerinis" #god of lakes
+baltic_good_god_Gabija:0 "Gabija" #goddess of fire
+baltic_good_god_Laima:0 "Laima" #goddess of fate, life
+baltic_good_god_Laukpatis:0 "Laukpatis" #god of fields
+baltic_good_god_Menulis:0 "Mėnulis" #god of the moon
+baltic_good_god_Perkunas:0 "Perkūnas" #god of thunder
+baltic_good_god_Saule:0 "Saulė" #goddess of the sun, fetility, health
+baltic_good_god_Vakarine:0 "Vakarinė" #goddess of evening star
+baltic_good_god_Vaizgantas:0 "Vaižgantas" #goddess of flax
+baltic_good_god_Zemepatis:0 "Žemėpatis" #god of land and farmers
+baltic_good_god_Zemyna:0 "Žemyna" #goddess of earth
+
+baltic_evil_god_Aitvaras:0 "Aitvaras" #god of luck
+baltic_evil_god_Bangputys:0 "Bangpūtys" #god of seas, storms
+baltic_evil_god_Drebkulis:0 "Drebkulis" #god of earthquakes
+baltic_evil_god_Giltine:0 "Giltinė" #goddess of death
+baltic_evil_god_Magyla:0 "Magyla" #goddess of anger, calamity
+baltic_evil_god_Medeina:0 "Medeina" #goddess of forest
+baltic_evil_god_Pagirnis:0 "Pagirnis" #god of snakes
+baltic_evil_god_Pinciukas:0 "Pinčiukas" #god of tricks
+baltic_evil_god_Ragana:0 "Ragana" #goddess of witches
+baltic_evil_god_Slogutis:0 "Slogutis" #god of pain, misery, nightmare
+baltic_evil_god_Vejopatis:0 "Vėjopatis" #god of wind
+baltic_evil_god_Veliona:0 "Veliona" #goddess of eternity, spirits, the deceased
+baltic_evil_god_Velnias:0 "Velnias" #god of underworld, devil
+
+latvian_pagan:0 "Dievišķība" #divinity
+latvian_pagan_adj:0 "Dievišķis" #divine
+latvian_pagan_adherent:0 "Dievišķis" #divine
+latvian_pagan_adherent_plural:0 "Dievišķi" #divines
+latvian_pagan_old:0 "Nedievišķība"
+latvian_pagan_old_adj:0 "Nedievišķis"
+latvian_pagan_old_adherent:0 "Nedievišķis"
+latvian_pagan_old_adherent_plural:0 "Nedievišķi"
+latvian_divine_realm:0 "Debeskalns"
+latvian_house_of_worship:0 "elks"
+latvian_house_of_worship_plural:0 "elki"
+latvian_negative_afterlife:0 "Aizsaule" #beyond the sun
+latvian_positive_afterlife:0 "Aizsaule"
+latvian_bishop_female:0 "burve"
+latvian_bishop_female_plural:0 "burves"
+latvian_bishop_male:0 "burvis"
+latvian_bishop_male_plural:0 "burvji"
+latvian_bishop_neuter:0 "$latvian_bishop_male$"
+latvian_bishop_neuter_plural:0 "$latvian_bishop_male_plural$"
+latvian_devotee_female:0 "bhakta"
+latvian_devotee_female_plural:0 "bhaktas"
+latvian_devotee_male:0 "bhakts"
+latvian_devotee_male_plural:0 "bhakti"
+latvian_devotee_neuter:0 "$latvian_devotee_male$"
+latvian_devotee_neuter_plural:0 "$latvian_devotee_male_plural$"
+latvian_priest_alternate_plural:0 "vecie"
+latvian_priest_female:0 "vaidelote"
+latvian_priest_female_plural:0 "vaidelotes"
+latvian_priest_male:0 "vaidelotis"
+latvian_priest_male_plural:0 "vaideloti"
+latvian_priest_neuter:0 "$latvian_priest_male$"
+latvian_priest_neuter_plural:0 "$latvian_priest_male_plural$"
+latvian_religious_head_title:0 "Krīvs"
+latvian_religious_head_title_name:0 "Krīvi"
+latvian_religious_symbol:0 "austras koks"
+latvian_religious_text:0 "dainas"
+
+latvian_creator_god_name:0 "$latvian_high_god_name$"
+latvian_creator_god_name_possessive:0 "$latvian_high_god_name_possessive$"
+latvian_death_deity_name:0 "$latvian_evil_god_Mara$"
+latvian_death_deity_name_possessive:0 "$latvian_evil_god_Mara$'s"
+latvian_devil_name:0 "$latvian_evil_god_Velns$"
+latvian_devil_name_possessive:0 "$latvian_evil_god_Velns$'"
+latvian_fate_god_name:0 "$latvian_good_god_Laima$"
+latvian_fate_god_name_possessive:0 "$latvian_good_god_Laima$'s"
+latvian_fertility_god_name:0 "$latvian_good_god_Ceroklis$"
+latvian_fertility_god_name_possessive:0 "$latvian_good_god_Ceroklis$'"
+latvian_health_god_name:0 "$latvian_good_god_Saule$"
+latvian_health_god_name_possessive:0 "$latvian_good_god_Saule$'s"
+latvian_high_god_name:0 "Dievs"
+latvian_high_god_name_possessive:0 "Dievs'"
+latvian_high_god_name_alternate:0 "Debess Dievs"
+latvian_high_god_name_alternate_possessive:0 "Debess Dievs'"
+latvian_household_god_name:0 "$latvian_good_god_Ceroklis$"
+latvian_household_god_name_possessive:0 "$latvian_good_god_Ceroklis$'"
+latvian_knowledge_god_name:0 "$latvian_good_god_Zalktis$"
+latvian_knowledge_god_name_possessive:0 "$latvian_good_god_Zalktis$'"
+latvian_night_god_name:0 "$latvian_good_god_Meness$"
+latvian_night_god_name_possessive:0 "$latvian_good_god_Meness$'"
+latvian_trickster_god_name:0 "$latvian_evil_god_Vadatajs$"
+latvian_trickster_god_name_possessive:0 "$latvian_evil_god_Vadatajs$'"
+latvian_war_god_name:0 "$latvian_good_god_Perkons$"
+latvian_war_god_name_possessive:0 "$latvian_good_god_Perkons$'"
+latvian_water_god_name:0 "$latvian_high_god_name$"
+latvian_water_god_name_possessive:0 "$latvian_high_god_name$'"
+latvian_wealth_god_name:0 "$latvian_good_god_Jumis$"
+latvian_wealth_god_name_possessive:0 "$latvian_good_god_Jumis$'"
+latvian_witch_god_name:0 "$latvian_evil_god_Ragana$"
+
+latvian_good_god_Auseklis:0 "Auseklis" #god of morning star
+latvian_good_god_Ceroklis:0 "Ceroklis" #god of fertility, fields, hospitality
+latvian_good_god_Dekla:0 "Dēkla" #goddess of destiny
+latvian_good_god_Jumis:0 "Jumis" #god of harvest
+latvian_good_god_Karta:0 "Kārta" #goddess of destiny
+latvian_good_god_Laima:0 "Laima" #goddess of destiny, mother of happiness
+latvian_good_god_Meness:0 "Mēness" #god of the moon
+latvian_good_god_Perkons:0 "Pērkons" #god of thunder
+latvian_good_god_Rieteklis:0 "Rieteklis" #god of evening star
+latvian_good_god_Saule:0 "Saule" #goddess of the sun
+latvian_good_god_Usins:0 "Ūsiņš" #god of light, spring, horses
+latvian_good_god_Zalktis:0 "Zalktis" #goddess of wisdom
+
+latvian_evil_god_Lauma:0 "Lauma" #fairies, threat to men
+latvian_evil_god_Lietuvens:0 "Lietuvēns" #evil night spirit
+latvian_evil_god_Mara:0 "Māra" #goddess of earth, the dead
+latvian_evil_god_Ragana:0 "Ragana" #goddess of witchcraft
+latvian_evil_god_Vadatajs:0 "Vadātājs" #evil spirit that misleads
+latvian_evil_god_Velns:0 "Velns" #god of underworld, devil
+
+prussian_pagan:0 "Drūwis"
+prussian_pagan_adj:0 "Druwīngi"
+prussian_pagan_adherent:0 "Druwīngi"
+prussian_pagan_adherent_plural:0 "Druwīngjai"
+prussian_pagan_old:0 "Nidrūwis"
+prussian_pagan_old_adj:0 "Nidruwīngi"
+prussian_pagan_old_adherent:0 "Nidruwīngi"
+prussian_pagan_old_adherent_plural:0 "Nidruwīngjai"
+prussian_divine_realm:0 "Dāngunsun"
+prussian_house_of_worship:0 "ālkan"
+prussian_house_of_worship_plural:0 "alkāi"
+prussian_negative_afterlife:0 "Dāngunsun"
+prussian_positive_afterlife:0 "Dāngunsun"
+prussian_bishop_female:0 "burrewini"
+prussian_bishop_female_plural:0 "burrewinjas"
+prussian_bishop_male:0 "burrewis"
+prussian_bishop_male_plural:0 "burrewjai"
+prussian_bishop_neuter:0 "$prussian_bishop_neuter$"
+prussian_bishop_neuter_plural:0 "$prussian_bishop_neuter_plural$"
+prussian_devotee_female:0 "seīliska"
+prussian_devotee_female_plural:0 "seīliskas"
+prussian_devotee_male:0 "seīlisks"
+prussian_devotee_male_plural:0 "seīliskai"
+prussian_devotee_neuter:0 "$prussian_devotee_neuter$"
+prussian_devotee_neuter_plural:0 "$prussian_devotee_neuter_plural$"
+prussian_priest_alternate_plural:0 "wārskaitai"
+prussian_priest_female:0 "waīdilini"
+prussian_priest_female_plural:0 "waīdilinjas"
+prussian_priest_male:0 "waīdils"
+prussian_priest_male_plural:0 "waīdilai"
+prussian_priest_neuter:0 "$prussian_priest_male$"
+prussian_priest_neuter_plural:0 "$prussian_priest_male_plural$"
+prussian_religious_head_title:0 "Kriwwis"
+prussian_religious_head_title_name:0 "Kriwwjai"
+prussian_religious_symbol:0 "bāba"
+prussian_religious_text:0 "dāinas"
+
+prussian_creator_god_name:0 "$prussian_high_god_name$"
+prussian_creator_god_name_possessive:0 "$prussian_high_god_name_possessive$"
+prussian_death_deity_name:0 "$prussian_evil_god_Pikuls$"
+prussian_death_deity_name_possessive:0 "$prussian_evil_god_Pikuls$'"
+prussian_devil_name:0 "$prussian_evil_god_Patals$"
+prussian_devil_name_possessive:0 "$prussian_evil_god_Patals$'"
+prussian_fate_god_name:0 "$prussian_good_god_Dallja$"
+prussian_fate_god_name_possessive:0 "$prussian_good_god_Dallja$'s"
+prussian_fertility_god_name:0 "$prussian_good_god_Patrimps$"
+prussian_fertility_god_name_possessive:0 "$prussian_good_god_Patrimps$'s"
+prussian_health_god_name:0 "$prussian_good_god_Ausauts$"
+prussian_health_god_name_possessive:0 "$prussian_good_god_Ausauts$'"
+prussian_high_god_name:0 "Dēiws"
+prussian_high_god_name_possessive:0 "Dēiws's"
+prussian_high_god_name_alternate:0 "Ukapirms"
+prussian_high_god_name_alternate_possessive:0 "Ukapirms'"
+prussian_household_god_name:0 "$prussian_good_god_Paskaits$"
+prussian_household_god_name_possessive:0 "$prussian_good_god_Paskaits$'"
+prussian_knowledge_god_name:0 "$prussian_high_god_name$"
+prussian_knowledge_god_name_possessive:0 "$prussian_high_god_name_possessive$"
+prussian_night_god_name:0 "$prussian_good_god_Meniks$"
+prussian_night_god_name_possessive:0 "$prussian_good_god_Meniks$'"
+prussian_trickster_god_name:0 "$prussian_evil_god_Pikuls$"
+prussian_trickster_god_name_possessive:0 "$prussian_evil_god_Pikuls$'"
+prussian_war_god_name:0 "$prussian_good_god_Perkuns$"
+prussian_war_god_name_possessive:0 "$prussian_good_god_Perkuns$'"
+prussian_water_god_name:0 "$prussian_good_god_Autrimps$"
+prussian_water_god_name_possessive:0 "$prussian_good_god_Autrimps$'"
+prussian_wealth_god_name:0 "$prussian_good_god_Pilwits$"
+prussian_wealth_god_name_possessive:0 "$prussian_good_god_Pilwits$'"
+prussian_witch_god_name:0 "$prussian_evil_god_Pikuls$"
+
+prussian_good_god_Ausauts:0 "Āušauts" #god of health
+prussian_good_god_Autrimps:0 "Autrīmps" #god of the sea
+prussian_good_god_Bardaits:0 "Bardaīts" #god of ships
+prussian_good_god_Betaina:0 "Betāina" #goddess of evening star
+prussian_good_god_Dallja:0 "Dalljā" #goddess of fate
+prussian_good_god_Deinaina:0 "Deināina" #goddess of morning star
+prussian_good_god_Kurka:0 "Kurka" #god of harvest and grain
+prussian_good_god_Meniks:0 "Mēniks" #god of moon
+prussian_good_god_Paskaits:0 "Paskaits" #god of earth, house protector
+prussian_good_god_Patrimps:0 "Patrīmps" #god of youth, fertility and luck
+prussian_good_god_Pergrubris:0 "Pergrubris" #god of plants
+prussian_good_god_Perkuns:0 "Perkūns" #god of thunder
+prussian_good_god_Pilwits:0 "Pilwīts" #god of wealth
+prussian_good_god_Sauli:0 "Saūli" #goddess of sun
+prussian_good_god_Swaikstiks:0 "Swāikstiks" #god of light
+
+prussian_evil_god_Bangputtis:0 "Bangpūttis" #god of the storm
+prussian_evil_god_Kauks:0 "Kaūks" #god of the hunt
+prussian_evil_god_Patals:0 "Patals" #god of death
+prussian_evil_god_Pikuls:0 "Pikuls" #god of death
+prussian_evil_god_Wetra:0 "Wētra" #god of wind
+
+sudovian_pagan:0 "Visamoksna" #all-knowing
+sudovian_pagan_adj:0 "Visamokingas"
+sudovian_pagan_adherent:0 "Visamokingas"
+sudovian_pagan_adherent_plural:0 "Visamokingai"
+sudovian_pagan_desc:0 "Visamoksna is was the spiritual belief system of the Sudovians which held nature in high reverence. The natural world, including forests, rivers, and groves, was considered sacred and inhabited by spirits and deities. Trees, particularly oak trees, were often seen as dwelling places for gods and spirits."
+sudovian_pagan_old:0 "Nevisamoksna"
+sudovian_pagan_old_adj:0 "Nevisamokingas"
+sudovian_pagan_old_adherent:0 "Nevisamokingas"
+sudovian_pagan_old_adherent_plural:0 "Nevisamokingai"
+sudovian_divine_realm:0 "Deiv'anīsta"
+sudovian_house_of_worship:0 "alkas"
+sudovian_house_of_worship_plural:0 "alkai"
+sudovian_negative_afterlife:0 "Perklantīsna"
+sudovian_positive_afterlife:0 "Sventamed'an"
+sudovian_bishop_female:0 "daininīkina"
+sudovian_bishop_female_plural:0 "daininīkinos"
+sudovian_bishop_male:0 "daininīkas"
+sudovian_bishop_male_plural:0 "daininīkai"
+sudovian_bishop_neuter:0 "$sudovian_bishop_male$"
+sudovian_bishop_neuter_plural:0 "$sudovian_bishop_male$"
+sudovian_devotee_female:0 "deivotina"
+sudovian_devotee_female_plural:0 "deivotinos"
+sudovian_devotee_male:0 "deivotas"
+sudovian_devotee_male_plural:0 "deivotai"
+sudovian_devotee_neuter:0 "$sudovian_devotee_male$"
+sudovian_devotee_neuter_plural:0 "$sudovian_devotee_male_plural$"
+sudovian_priest_alternate_plural:0 "sventinīkai"
+sudovian_priest_female:0 "vaidilina"
+sudovian_priest_female_plural:0 "vaidilinos"
+sudovian_priest_male:0 "vaidilis"
+sudovian_priest_male_plural:0 "vaidiles"
+sudovian_priest_neuter:0 "$sudovian_priest_male$"
+sudovian_priest_neuter_plural:0 "$sudovian_priest_male_plural$"
+sudovian_religious_head_title:0 "Vorskaitas"
+sudovian_religious_head_title_name:0 "Vorskaitai"
+sudovian_religious_symbol:0 "lauksna"
+sudovian_religious_text:0 "dainos"
+
+sudovian_creator_god_name:0 "$sudovian_good_god_Vokapirmas$"
+sudovian_creator_god_name_possessive:0 "$sudovian_good_god_Vokapirmas$'"
+sudovian_death_deity_name:0 "$sudovian_evil_god_Pikulas$"
+sudovian_death_deity_name_possessive:0 "$sudovian_evil_god_Pikulas$'"
+sudovian_devil_name:0 "$sudovian_evil_god_Kaukas$"
+sudovian_devil_name_possessive:0 "$sudovian_evil_god_Kaukas$'"
+sudovian_fate_god_name:0 "$sudovian_good_god_Laima$"
+sudovian_fate_god_name_possessive:0 "$sudovian_good_god_Laima$'s"
+sudovian_fertility_god_name:0 "$sudovian_good_god_Zeminele$"
+sudovian_fertility_god_name_possessive:0 "$sudovian_good_god_Zeminele$'s"
+sudovian_health_god_name:0 "$sudovian_good_god_Saule$"
+sudovian_health_god_name_possessive:0 "$sudovian_good_god_Saule$'s"
+sudovian_high_god_name:0 "Deivas"
+sudovian_high_god_name_possessive:0 "Deivas'"
+sudovian_high_god_name_alternate:0 "Visamokas" #all-knowing
+sudovian_high_god_name_alternate_possessive:0 "Visamokas"
+sudovian_household_god_name:0 "$sudovian_good_god_Puskaitis$"
+sudovian_household_god_name_possessive:0 "$sudovian_good_god_Puskaitis$'"
+sudovian_knowledge_god_name:0 "$sudovian_good_god_Budte$"
+sudovian_knowledge_god_name_possessive:0 "$sudovian_good_god_Budte$'s"
+sudovian_night_god_name:0 "$sudovian_good_god_Menukas$"
+sudovian_night_god_name_possessive:0 "$sudovian_good_god_Menukas$'"
+sudovian_trickster_god_name:0 "$Vargasegjantai$"
+sudovian_trickster_god_name_possessive:0 "$Vargasegjantai$'s"
+sudovian_war_god_name:0 "$sudovian_good_god_Perkunas$"
+sudovian_war_god_name_possessive:0 "$sudovian_good_god_Perkunas$'"
+sudovian_water_god_name:0 "$sudovian_good_god_Perkunas$"
+sudovian_water_god_name_possessive:0 "$sudovian_good_god_Perkunas$'"
+sudovian_wealth_god_name:0 "$sudovian_good_god_Dalia$"
+sudovian_wealth_god_name_possessive:0 "$sudovian_good_god_Dalia$'s"
+sudovian_witch_god_name:0 "$sudovian_evil_god_Aitvaras$"
+
+sudovian_good_god_Budte:0 "Budte" #goddess of wisdom
+sudovian_good_god_Dalia:0 "Dalia" #goddess of destiny
+sudovian_good_god_Laima:0 "Laima" #goddess of fate
+sudovian_good_god_Menukas:0 "Mēnukas" #god of moon
+sudovian_good_god_Perkunas:0 "Perkūnas" #god of thunder Perkūnija hill
+sudovian_good_god_Puskaitis:0 "Pūškaitis" #god of household
+sudovian_good_god_Saule:0 "Saule" #goddess of sun
+sudovian_good_god_Vokapirmas:0 "Vōkapirmas" #god of creation
+sudovian_good_god_Zeminele:0 "Zemīnele" #goddess of earth
+
+sudovian_evil_god_Aitvaras:0 "Aitvaras" #hobgoblin
+sudovian_evil_god_Kaukas:0 "Kaukas" #devil
+sudovian_evil_god_Pikulas:0 "Pikulas" #god of death
+sudovian_evil_god_Vargasegjantai:0 "Vargasegjantai" #evil-doers
+
+maramate_pagan:0 "Mārišķība" #Mārāhood
+maramate_pagan_adj:0 "Mārišķis"
+maramate_pagan_adherent:0 "Mārišķis"
+maramate_pagan_adherent_plural:0 "Mārišķi"
+maramate_pagan_desc:0 "Mārišķība, often referred to as the mother faith of the Latvian tribes, is an ancient spiritual tradition rooted in the pre-Christian beliefs of the Latvian people. This indigenous religion, part of the broader Baltic paganism, centers around nature worship, polytheism, and the veneration of ancestors."
+maramate_pagan_old:0 "Nemārišķība"
+maramate_pagan_old_adj:0 "Nemārišķis"
+maramate_pagan_old_adherent:0 "Nemārišķis"
+maramate_pagan_old_adherent_plural:0 "Nemārišķi"
+maramate_divine_realm:0 "Māras zeme"
+maramate_house_of_worship:0 "elke"
+maramate_house_of_worship_plural:0 "elkes"
+maramate_negative_afterlife:0 "Viņsaule"
+maramate_positive_afterlife:0 "Viņsaule"
+maramate_bishop_female:0 "burve"
+maramate_bishop_female_plural:0 "burves"
+maramate_bishop_male:0 "burvis"
+maramate_bishop_male_plural:0 "burvji"
+maramate_bishop_neuter:0 "$maramate_bishop_female$"
+maramate_bishop_neuter_plural:0 "$maramate_bishop_female_plural$"
+maramate_devotee_female:0 "bhakta"
+maramate_devotee_female_plural:0 "bhaktas"
+maramate_devotee_male:0 "bhakts"
+maramate_devotee_male_plural:0 "bhakti"
+maramate_devotee_neuter:0 "$maramate_devotee_female$"
+maramate_devotee_neuter_plural:0 "$maramate_devotee_female_plural$"
+maramate_priest_alternate_plural:0 "vecie"
+maramate_priest_female:0 "vaidelote"
+maramate_priest_female_plural:0 "vaidelotes"
+maramate_priest_male:0 "vaidelotis"
+maramate_priest_male_plural:0 "vaideloti"
+maramate_priest_neuter:0 "$maramate_priest_female$"
+maramate_priest_neuter_plural:0 "$maramate_priest_female_plural$"
+maramate_religious_head_title:0 "Krīve"
+maramate_religious_head_title_name:0 "Krīves"
+maramate_religious_symbol:0 "zalktis"
+maramate_religious_text:0 "dainas"
+
+maramate_creator_god_name:0 "$maramate_evil_god_Zemes_mate$"
+maramate_creator_god_name_possessive:0 "$maramate_evil_god_Zemes_mate$'s"
+maramate_death_deity_name:0 "$maramate_evil_god_Velu_mate$"
+maramate_death_deity_name_possessive:0 "$maramate_evil_god_Velu_mate$'s"
+maramate_devil_name:0 "$maramate_evil_god_Velna_mate$"
+maramate_devil_name_possessive:0 "$maramate_evil_god_Velna_mate$'s"
+maramate_fate_god_name:0 "$maramate_good_god_Laimas_mate$"
+maramate_fate_god_name_possessive:0 "$maramate_good_god_Laimas_mate$'s"
+maramate_fertility_god_name:0 "$maramate_good_god_Lauku_mate$"
+maramate_fertility_god_name_possessive:0 "$maramate_good_god_Lauku_mate$'s"
+maramate_health_god_name:0 "$maramate_good_god_Muza_mate$"
+maramate_health_god_name_possessive:0 "$maramate_good_god_Muza_mate$'s"
+maramate_high_god_name:0 "Māra"
+maramate_high_god_name_possessive:0 "Māra"
+maramate_high_god_name_alternate:0 "Māršava"
+maramate_high_god_name_alternate_possessive:0 "Māršava's"
+maramate_household_god_name:0 "$maramate_good_god_Pirts_mate$"
+maramate_household_god_name_possessive:0 "$maramate_good_god_Pirts_mate$'s"
+maramate_knowledge_god_name:0 "$maramate_good_god_Debess_mate$"
+maramate_knowledge_god_name_possessive:0 "$maramate_good_god_Debess_mate$'s"
+maramate_night_god_name:0 "$maramate_evil_god_Nakts_mate$"
+maramate_night_god_name_possessive:0 "$maramate_evil_god_Nakts_mate$'s"
+maramate_trickster_god_name:0 "$maramate_evil_god_Skauga_mate$"
+maramate_trickster_god_name_possessive:0 "$maramate_evil_god_Skauga_mate$'s"
+maramate_war_god_name:0 "$maramate_good_god_Kara_mate$"
+maramate_war_god_name_possessive:0 "$maramate_good_god_Kara_mate$'s"
+maramate_water_god_name:0 "$maramate_good_god_Udens_mate$"
+maramate_water_god_name_possessive:0 "$maramate_good_god_Udens_mate$'s"
+maramate_wealth_god_name:0 "$maramate_good_god_Gausa_mate$"
+maramate_wealth_god_name_possessive:0 "$maramate_good_god_Gausa_mate$'s"
+maramate_witch_god_name:0 "$maramate_evil_god_Naves_mate$"
+
+maramate_good_god_Aru_mate:0 "Āru Māte" #mother of fields
+maramate_good_god_Bangu_mate:0 "Bangu Māte" #mother of waves
+maramate_good_god_Dabas_mate:0 "Dabas Māte" #mother of nature
+maramate_good_god_Darza_mate:0 "Darza Māte" #mother of gardens
+maramate_good_god_Debess_mate:0 "Dēbess Māte" #mother of heaven
+maramate_good_god_Gausa_mate:0 "Gausa Māte" #mother of prosperity
+maramate_good_god_Juras_mate:0 "Jūras Māte" #mother of the sea
+maramate_good_god_Kara_mate:0 "Kara Māte" #mother of war
+maramate_good_god_Laika_mate:0 "Laika Māte" #mother of weather
+maramate_good_god_Laimas_mate:0 "Laimas Māte" #mother of fortune
+maramate_good_god_Lauku_mate:0 "Lauku Māte" #mother of harvest
+maramate_good_god_Meza_mate:0 "Meža Māte" #mother of forest
+maramate_good_god_Muza_mate:0 "Mūža Māte" #mother of life
+maramate_good_god_Naudas_mate:0 "Naudas Māte" #mother of money
+maramate_good_god_Pirts_mate:0 "Pirts Māte" #mother of the bathhouse
+maramate_good_god_Sniega_mate:0 "Sniega Māte" #mother of snow
+maramate_good_god_Tirgus_mate:0 "Tirgus Māte" #mother of the market
+maramate_good_god_Udens_mate:0 "Ūdens Māte" #mother of water
+maramate_good_god_Upes_mate:0 "Upes Māte" #mother of rivers
+maramate_good_god_Veja_mate:0 "Vēja Māte" #mother of wind
+
+maramate_evil_god_Kapu_mate:0 "Kapu Māte" #mother of cemetaries
+maramate_evil_god_Miga_mate:0 "Miga Māte" #mother of sleep
+maramate_evil_god_Nakts_mate:0 "Nakts Māte" #mother of night
+maramate_evil_god_Naves_mate:0 "Navēs Māte" #mother of death
+maramate_evil_god_Skauga_mate:0 "Skauģa Māte" #mother of envy
+maramate_evil_god_Smilsu_mate:0 "Smilšu Māte" #mother of sand
+maramate_evil_god_Uguns_mate:0 "Ūguns Māte" #mother of fire
+maramate_evil_god_Velna_mate:0 "Velna Māte" #mother of devil
+maramate_evil_god_Velu_mate:0 "Veļu Māte" #mother of the dead, underworld
+maramate_evil_god_Zemes_mate:0 "Zemes Māte" #mother of earth

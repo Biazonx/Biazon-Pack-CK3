@@ -1,0 +1,23 @@
+﻿inspirational_commission_artificer_decision_valid = {
+	first_not = inspiraitonal_commission_artificer_decision_valid_not
+}
+
+inspirational_commission_artificer_blacksmith_valid = {
+	first_not = inspirational_commission_artificer_blacksmith_valid_not
+}
+
+inspirational_commission_artificer_goldsmith_valid = {
+	first_not = inspirational_commission_artificer_goldsmith_valid_not
+}
+
+inspirational_commission_artificer_artisan_valid = {
+	first_not = inspirational_commission_artificer_artisan_valid_not
+}
+
+inspirational_commission_artificer_weaver_valid = {
+	first_not = inspirational_commission_artificer_weaver_valid_not
+}
+
+inspirational_commission_artificer_author_valid = {
+	first_not = inspirational_commission_artificer_author_valid_not
+}

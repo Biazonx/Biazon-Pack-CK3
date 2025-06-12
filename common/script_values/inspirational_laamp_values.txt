@@ -1,0 +1,45 @@
+﻿laamp_inspiration_cost = {
+	value = basic_fund_inspiration_cost
+	save_temporary_scope_as = inspiration_owner
+
+	# If we have a cultural tradition which makes funding certain types of Inspiration more expensive, add to the cost here.
+	if = {
+		limit = {
+			# Must always have a inspiration owner to have cost modifiers.
+			exists = scope:inspiration_owner
+
+			# Local artisans charge a fixed fee so the cost matches up with the cost listed in the "Comission Artifact" decision.
+			NOT = { 
+				scope:inspiration_owner = {
+					has_character_flag = local_artisan
+				}
+			}
+		}
+
+		# If the Inspiration Owner has a cultural tradition which makes funding certain types of Inspiration more expensive, add to the cost here.
+		if = {
+			limit = { scope:inspiration_owner = { culture = { has_cultural_parameter = more_expensive_weapon_inspiration } } }
+			add = {
+				value = basic_fund_inspiration_cost
+				multiply = more_expensive_inspirations_multiplier_value
+			}
+		}
+
+		# Modify the cost based on the Inspiration Owner's relevant skills
+		multiply = {
+			# Get the squared value of our inspiration skill's averages (0 = 0, 5 = 25, 10 = 100, 20 = 400)
+			value = scope:inspiration_owner.weapon_inspiration_average_skill_value
+			multiply = scope:inspiration_owner.weapon_inspiration_average_skill_value
+
+			# Reduce by a factor of 100 to get the base cost multiplier (0 = 0, 5 = 0.25, 10 = 1.00, 20 = 2.00)
+			multiply = 0.01
+
+			# Additional modifier so it's easy to tweak overall cost.
+			multiply = inspiration_cost_skill_multiplier
+
+			# Min cost cannot drop beyond 50%
+			min = 0.5
+		}
+	}
+	round = yes
+}

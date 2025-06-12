@@ -1,0 +1,16 @@
+﻿l_english:
+ nht_more_lifestyle_nicknames.0001.t: "The Warrior's Moniker"
+ nht_more_lifestyle_nicknames.0001.desc: "Seated in my resplendent throne room, I reflect upon the legends of great warriors who have carved their names into history. They are known not only by their deeds but also by their chosen epithets. Perhaps it's time I acquire a second name to etch my legacy into the annals of time. But what shall it be?"
+ nht_more_lifestyle_nicknames.0001.a: "How about $nick_the_valiant$"
+ nht_more_lifestyle_nicknames.0001.b: "I shall be known as $nick_the_fearless$"
+ nht_more_lifestyle_nicknames.0001.c: "Let it be $nick_nht_the_indomitable$"
+ nht_more_lifestyle_nicknames.0001.d: "On second thought, perhaps not."
+ nht_more_lifestyle_nicknames.0001.tt: "You decide that a warrior's [cognomen|E] should be earned, not taken."
+
+ nht_more_lifestyle_nicknames.0002.t: "Knightly Consideration"
+ nht_more_lifestyle_nicknames.0002.desc: "In the midst of a quiet conversation with one of my loyal knights , a curious question emerges. ‘My liege, everyone knows of your great feats, perhaps you should be known by a second name as my great rulers before you.’ The thought lingers in the air as we converse."
+ nht_more_lifestyle_nicknames.0002.a: "$nick_the_chivalrous$ has a certain ring to it."
+ nht_more_lifestyle_nicknames.0002.b: "$nick_nht_the_valorous$ It captures the essence of my bravery."
+ nht_more_lifestyle_nicknames.0002.c: "$nick_nht_the_swordmaster$ It embodies my mastery of the battlefield."
+ nht_more_lifestyle_nicknames.0002.d: "Perhaps not. Let's set this notion aside for now."
+ nht_more_lifestyle_nicknames.0002.tt: "A great name must be won through valorous exploits, not merely chosen." 

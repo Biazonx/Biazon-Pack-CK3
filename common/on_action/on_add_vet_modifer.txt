@@ -1,0 +1,27 @@
+﻿on_combat_end_winner = {
+    on_actions = {
+        on_add_vet_modifier
+    }
+}
+
+on_combat_end_loser = {
+    on_actions = {
+        on_add_vet_modifier
+    }
+}
+
+on_add_vet_modifier = {
+    effect = {
+        every_side_knight = {
+            if = {
+                limit = {
+                    is_ruler = no
+                    NOT = {
+                        father = { is_army_owner = root.army_owner }
+                    }
+                }
+                add_character_modifier = veteran_modifier
+            }
+        }
+    }
+}

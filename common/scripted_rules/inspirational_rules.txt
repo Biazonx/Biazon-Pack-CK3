@@ -1,0 +1,41 @@
+﻿# Should AI for this character repair the artifact
+# Before getting here in code we check: if Durability <= NInventory::ARTIFACT_LOW_DURABILITY, if Artifact is equipped, if Character can afford this
+# root: character (Artifact Owner)
+# scope:artifact: the artifact
+ai_should_repair_artifact = {
+	NOR = {
+		root = {
+			is_at_war = yes
+		}
+		scope:artifact = {
+			OR = {
+				AND = {
+					artifact_slot_type = miscellaneous
+					rarity = common
+				}
+				AND = {
+					artifact_slot_type = miscellaneous
+					is_equipped = no
+				}
+				has_variable = ai_to_ai_destroy_in_sieges
+			}
+		}
+	}
+}
+
+can_traverse_river = {
+	OR = {
+		culture = {
+			OR = {
+				has_innovation = innovation_longboats
+				has_innovation = innovation_african_canoes
+				has_cultural_parameter = can_travel_along_rivers
+			}
+		}
+		AND = {
+			exists = dynasty
+			dynasty = { has_dynasty_modifier = fp1_legacy_of_piracy_modifier }
+		}
+		has_trait_with_flag = trait_can_travel_along_rivers
+	}
+}

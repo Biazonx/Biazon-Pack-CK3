@@ -1,0 +1,310 @@
+﻿l_english:
+
+ ##################################################
+ #### Common Events
+ ####
+ ##################################################
+
+ #Hidden Grudge
+ nht_prowess_offense.0001.t: "Hidden Grudge"
+ nht_prowess_offense.0001.opening: "The sun hung low in the sky as I entered the training ground, ready for another day of honing my skills. Among the eager recruits was a young soldier, a face I hadn't seen before. Stepping onto the field, seemingly just another trainee eager to test [duel_opponent.GetHerHis] mettle."
+ nht_prowess_offense.0001.hard_fight: "\n\nOur blades clashed, and at first, it seemed like a routine practice duel. However, as the duel progressed, it became evident that something was amiss. [duel_opponent.GetHerHis] strikes transformed from feeble attempts to wild and unrelenting attacks, far beyond what was expected in a training bout. The crowd fell silent, sensing the intensity of the battle."
+ nht_prowess_offense.0001.easy_fight: "\n\nOur blades clashed, and at first, it seemed like a routine practice duel. But as the seconds ticked by, it became evident that something was amiss. [duel_opponent.GetHerHis] strikes, while wild and unrelenting, were predictable and easily parried. Nevertheless far beyond what was expected in a training bout, the rage in [duel_opponent.GetHerHis] eyes was an indication it was no common duel."
+ nht_prowess_offense.0001.conclusion: "\n\nWith every ounce of skill and experience, I fought to disarm [duel_opponent.GetHerHim], realizing that this had turned into a life-and-death struggle. Finally, [duel_opponent.GetHerHis] sword hit the ground, and the crowd erupted into hushed whispers."
+ nht_prowess_offense.0001.a: "I strike [duel_opponent.GetHerHim] down where [duel_opponent.GetSheHe] stands."
+ nht_prowess_offense.0001.a.tt: "Decapitation in a single strike is a sure way of making an impression on the footmen — and the nobles — present." 
+ nht_prowess_offense.0001.b: "Question him first."
+ nht_prowess_offense.0001.b.tt: "I might learn [duel_opponent.GetHerHis] intentions."
+ 
+ nht_prowess_offense.0002.t: "A Soldier's Hidden Agenda"
+ nht_prowess_offense.0002.desc: "It doesn't take long to get the truth out of the young soldier. A few days ago the young [duel_opponent.GetWomanMan] enroleed to become a soldier and get close to me, waiting for the right time to take revenge.\n\n[duel_opponent.GetName] explained his story, blaiming his recent misfortune on me, eyes filled with hate. While very young there is cause for execution, at the very least imprisonment, it doesn't seem as if [duel_opponent.GetSheHe] would let the matter go if left unchecked."
+ nht_prowess_offense.0002.a: "Execute [duel_opponent.GetHerHim]!"
+ nht_prowess_offense.0002.b: "Throw [duel_opponent.GetHerHim] in the dungeon…"
+ nht_prowess_offense.0002.c: "He deserves a second chance, it's unlikely [duel_opponent.GetSheHe]'ll get past the soldiers now."
+ 
+ #A drunk fool in an inn
+ nht_prowess_offense.0003.t: "A Loud Mouth"
+ nht_prowess_offense.0003.desc: "After a long day of training, I sit quietly with several of my knights at a table in a local inn. The smell of wine, the laughter and the music all seem to indicate a good evening, until a [nht_drunk_man.GetWomanMan], I have never seen before, starts to flaunt his prowess, talking about [nht_drunk_man.GetHerHis] wild adventures, and even boasting of knowing the [ROOT.Char.GetTitleAsNameNoTooltip] of these lands. Clearly, [nht_drunk_man.GetSheHe] doesn't recognise my face. \n\n“I tell you all, I saved [ROOT.Char.GetTitleAsNameNoTooltip] from a giant beast with my own hands!, he even offered the hand of [ROOT.Char.GetHerHis] daughter, but I refused!”"
+ nht_prowess_offense.0003.a: "Another fool."
+ nht_prowess_offense.0003.b: "Perhaps I should teach [nht_drunk_man.GetHerHim] a lesson..."
+
+ nht_prowess_offense.0004.t: "A Loud Mouth"
+ nht_prowess_offense.0004.desc: "As I walk toward the bar to get another drink, the drunk fool stumble onto me and angrily says.\n\n“Do you know who I am? I can ask for my friend [ROOT.Char.GetName] to teach you a lesson.” \n\nAs the people around looked up at me the room fell silent. Clearly he's not in the right state of mind to call out anyone."
+ nht_prowess_offense.0004.a: "“I will let this pass once”"
+ nht_prowess_offense.0004.b: "“Maybe you could become a real acquaintance of the [ROOT.Char.GetTitleAsNameNoTooltip]….”"
+ nht_prowess_offense.0004.c: "“A time in locked away will sober [nht_drunk_man.GetHerHim] up...”"
+ nht_prowess_offense.0004.d: "Order this [nht_drunk_man.GetWomanMan] to be beaten, to teach [nht_drunk_man.GetHerHim] a lesson."
+ 
+ #Give Advice to Knights
+ nht_prowess_offense.0005.t: "Training Observations"
+ nht_prowess_offense.0005.desc: "As I watch two of my $knight_culture_player_plural_no_tooltip$, [nht_advice_first_knight.GetName] and [nht_advice_second_knight.GetName], spar in the castle courtyard, I find myself considering their individual strengths and weaknesses. [nht_advice_first_knight.GetName] exhibits admirable footwork and precision, [nht_advice_first_knight.GetHerHis] tendency to telegraph strikes could however be exploited. On the other hand, [nht_advice_second_knight.GetName] occasionally forsakes defense, leaving vulnerabilities exposed in the heat of battle. They are two promising knights with distinct paths for improvement."
+ nht_prowess_offense.0005.a: "[nht_advice_first_knight.GetName], refine your feints and unpredictability."
+ nht_prowess_offense.0005.a.tt: "[nht_advice_first_knight.GetName] might learn." 
+ nht_prowess_offense.0005.b: "[nht_advice_second_knight.GetName], prioritize a more balanced approach."
+ nht_prowess_offense.0005.b.tt: "[nht_advice_second_knight.GetName] might learn."  
+ nht_advice_to_knight_modifier: "Advice Given"
+ nht_advice_to_knight_sec_modifier: "Advice Given"
+
+ #Knights argues about swords
+ nht_prowess_offense.0006.t: "A Matter of Opinion"
+ nht_prowess_offense.0006.desc: "Stepping into the grand throne room, I'm met with the unexpected sight of three $knight_culture_player_plural_no_tooltip$ engaged in a fervent argument on which type of sword is best.\n\n[nht_first_knight.GetName], a staunch advocate for cut-and-thrust blades, passionately defends their versatility, emphasizing how these weapons excel in both offensive and defensive maneuvers.\n\n[nht_second_knight.GetName], a proponent of thin cut-centric swords, argues that their precision and speed make them ideal for precise strikes and finesse on the battlefield.\n\nMeanwhile, [nht_third_knight.GetName], a devotee of the longsword, lauds its reach and power, believing it provides the ultimate advantage in combat. The atmosphere crackles with intensity as each knight defends their chosen weapon with unwavering conviction."
+ nht_prowess_offense.0006.a: "[nht_first_knight.GetName] is right!"
+ nht_prowess_offense.0006.b: "[nht_second_knight.GetName] knows what [nht_second_knight.GetSheHe]'s talking about."
+ nht_prowess_offense.0006.c: "Everyone should listen to [nht_third_knight.GetName]."
+ nht_prowess_offense.0006.d: "I shouldn't get involved in this…"
+ nht_prowess_offense.0006.e: "A futile debate" 
+
+ #Train Knights or Army?
+ nht_prowess_offense.0007.t: "One Man's Job"
+ nht_prowess_offense.0007.desc: "None can stand long without a strong army. As I watch both my men-at-arms and my knights I see areas of improvements to both but my time is limited.\n\nShould I devote my efforts to the training of our knights, refining their combat skills or is it wiser to focus on bolstering the strength and cohesion of my entire army so that they are well-prepared."
+ nht_prowess_offense.0007.a: "The knights will lead the way."
+ nht_prowess_offense.0007.b: "It's better to prepare the entire army."
+ nht_prowess_offense.0007.c: "Both need improvements." 
+ nht_prowess_offense.0007.d: "I should rest instead." 
+ nht_improve_armies_advice_modifier: "Trained Army" 
+ nht_improve_knights_advice_modifier: "Trained Knights" 
+ nht_improve_both_advice_modifier: "Trained Army and Knights" 
+
+ #Bandits In My Lands
+ nht_prowess_offense.0008.t: "Bandits In My Lands"
+ nht_prowess_offense.0008.desc: "I sit at my desk, pouring over reports of increasing bandit activity in my lands. The situation has grown dire. Several villages have suffered from these marauding outlaws, and it's clear that my control over the region is slipping.\n\nTheir raids have been erratic, finding them would require sending soldiers in every corner of my realm, it would leave me weaker for some time…"
+ nht_prowess_offense.0008.a: "I will send soldier all over my lands!"
+ nht_prowess_offense.0008.b: "I have more important plans..."
+ nht_prowess_offense.0008.c: "I can strategically place my soldiers." 
+ nht_prowess_offense.0008.c.tt.success: "You succeed"
+ nht_prowess_offense.0008.c.tt.failure: "You somewhat fail"
+ nht_prowess_offense.0008.c.tt.great_failure: "You fail completely"
+ nht_prowess_offense.0008.d: "I can figure out where there attack next will be."
+ nht_prowess_offense.0008.d.tt.sucess: "The bandits are caught"
+ nht_prowess_offense.0008.d.tt.failure: "You fail"
+ nht_one_county_attacked_0008_modifier_tooltip: "One of your [county|E] will be raided."
+ nht_every_county_0008_gain_modifier_tooltip: "Every held [county|E] will gain #P 15#! [county_opinion|E] for #V 10#! years."
+ nht_every_county_0008_loose_modifier_tooltip: "Every held [county|E] will loose #N 15#! [county_opinion|E] for #V 10#! years."
+ nht_appeased_counties_modifier: "Protected from Bandits"
+ nht_protecting_counties_modifier: "Protecting the Lands"
+ nht.0008.counties_protected.win.tt: "Counties Proteccted"
+ 
+ nht_prowess_offense.0009.t: "Bandits In My Lands"
+ nht_prowess_offense.0009.desc: "I recieve news that one of my province has been attacked by a large band of bandits, who have burned the crops, looted the villages, and killed many people."
+ nht_prowess_offense.0009.desc_great_failure: "Anger as spread all over my lands..."
+ nht_prowess_offense.0009.a: "I have no time for this."
+ nht_ravaged_bandits_modifier: "Ravaged by Bandits"
+ nht_angry_counties_modifier: "Abandonned"
+ nht_protected_county_modifier: "Protected by Ruler"
+ 
+ #Arms of the Realm
+ nht_prowess_offense.0010.t: "Arms of the Realm"
+ nht_prowess_offense.0010.desc: "Peering through the dimly lit armory, the echoes of my footsteps reverberate through the room. Rows upon rows of gleaming swords and polished armor. I walk among them, inspecting their quality. Alongside the finely crafted shields stand worn, battle-scarred equipment of yesteryears.\n\nThe equipment surely needs to be replaced but they are also expensive. Very expensive. Each piece of equipment costs a hefty sum of gold, and I have only so much to spare. One or the other could be needed sooner than I think."
+ nht_prowess_offense.0010.a: "My soldiers deserve the best equipment possible."
+ nht_prowess_offense.0010.b: "Replace what is necessary."
+ nht_prowess_offense.0010.c: "Gold is more useful than steel in these times."
+ nht_prowess_offense.0010.d: "I can spare gold somewhere else." 
+ nht_prowess_offense.0010.e: "I could adapt my tactics to rely less on that equipment."  
+ nht_worn_out_equipments_modifier: "Rely on old Equipment"
+ nht_brand_new_equipments_modifier: "New Equipment"
+ nht_prowess_offense.0010.c.win: "Success"
+ nht_prowess_offense.0010.c.win.title: "Success"
+ nht_prowess_offense.0010.c.great.win: "Great Success"
+ nht_prowess_offense.0010.c.great.win.title: "Great Success" 
+ nht_prowess_offense.0010.c.lose: "Failure"
+ nht_prowess_offense.0010.c.lose.title: "Failure"
+ 
+ ##################################################
+ #### Uncommon Events
+ ####
+ ##################################################
+ 
+ #Rival Dispute 
+ nht_prowess_offense.1001.t: "A Heated Dispute"
+ nht_prowess_offense.1001.intro: "Tensions have been escalating between me and [nht_rival_character.GetName] for months now. "
+ nht_prowess_offense.1001.intro_first: "The control and power on [nht_rival_character.GetSheHe] has on [nht_rival_character.GetHerHis] lands has fueled a bitter rivalry. It's become clear that words alone won't resolve our differences." 
+ nht_prowess_offense.1001.intro_sec: "Our feuds and differences of opinions won't be resolved by words alone."
+ nht_prowess_offense.1001.desc: "\n\nOne day, as I'm reviewing the latest maps and resource reports, an urgent message arrives. It's from [nht_rival_character.GetName], challenging me to a duel to settle the dispute once and for all. The message is laced with taunts and insults, making it clear that this is a matter of personal pride as much as "
+ nht_prowess_offense.1001.desc_alt_first: "“it is about control."
+ nht_prowess_offense.1001.desc_alt_sec: "it is about honnor."  
+ nht_prowess_offense.1001.a: "I can't back down from this challenge. Prepare for the duel."
+ nht_prowess_offense.1001.a.tt: "The outcome of this duel will vary depending on your prowess skill and that of your adversary"
+ nht_prowess_offense.1001.b: "I won't let [nht_rival_character.GetName] provoke me and lower myself to [nht_rival_character.GetHerHim]."
+ nht_has_humiliated_rival_opinion: "Has Humiliated Rival"  
+ 
+ nht_prowess_offense.1002.t: "A Duel of Honor"
+ nht_prowess_offense.1002.desc: "My heart pounds in my chest as I stand on the training grounds, the clash of weapons and the cheers of onlookers fading into the background. The dispute between me and my rival commander, [nht_rival_character.GetName], has reached a boiling point. It's time to settle this once and for all, to prove my skill and defend my honor."
+ nht_prowess_offense.1002.a: "You can still flee coward!"
+ nht_prowess_offense.1002.b: "This feud ends now!"
+
+ nht_prowess_offense.1003.t.win: "Triumphant Duel"
+ nht_prowess_offense.1003.t.loose: "A Costly Duel"
+ nht_prowess_offense.1003.desc.win: "The sun beats down on the dueling grounds as I face off against [nht_rival_character.GetName]. We circle each other, our weapons at the ready, determination etched into our faces. The crowd has gathered to witness the clash between two rivals, the tension is palpable.\n\nThe duel is fierce, but I manage to outmaneuver [nht_rival_character.GetName], using my offensive prowess to gain the upper hand. With a well-placed strike, I disarm my opponent, sending [nht_rival_character.GetName]'s weapon flying. The crowd erupts in cheers as I stand victorious, proving my worth and skill."
+ nht_prowess_offense.1003.desc.loose: "The duel with [nht_rival_character.GetName] is an intense and grueling battle. Despite my offensive prowess, [nht_rival_character.GetName] proves to be a formidable opponent. We clash swords, each blow taking a toll on my strength and resolve.\n\nAs the duel drags on, fatigue sets in, and I make a critical mistake. [nht_rival_character.GetName] seizes the opportunity and lands a powerful strike, disarming me and sending me to the ground. The crowd falls silent as I lay defeated, my honor tarnished, and the disputed territory slipping from my grasp." 
+ nht_prowess_offense.1003.a: "Victory is sweet. I will be magnanimous in my triumph."
+ nht_prowess_offense.1003.b: "I have proven I'm the better [ROOT.Char.GetWomanMan]."
+ nht_prowess_offense.1003.c: "This rivalry should end." 
+ nht_prowess_offense.1003.d: "I will accept defeat with grace."
+ nht_prowess_offense.1003.e: "This is not the end..."
+
+
+ ###Raiding in Enemy Territory
+ nht_prowess_offense.1004.t: "In Enemy Territory"
+ nht_prowess_offense.1004.desc: "Deep in enemy territory, the camp is bustling with life. The rhythmic sound of boots on the ground, the clinging of steel against steel, and the laughter of men around fires fill the air. The sun has disappeared for hours now, but my advisors and I are still deep in discussion, plotting our next moves.\n\n“My lord, it is paramount that we cripple their supply lines” one advisor insists.\n\n“It is much more important to weaken their morale, by raiding the countryside” counters another.\n\nBoth are unwilling to shift their views."
+ nht_prowess_offense.1004.a: "Disrupt supply lines is more essential."
+ nht_prowess_offense.1004.b: "Raiding their countryside will give us a better advantage."
+ nht_prowess_offense.1004.c: "It's best to wait."
+ nht_prowess_offense.1004.d: "We will do both, here's how…"
+ nht_prowess_offense.1004.d.tt.sucess: "The tactic is a success"
+ nht_prowess_offense.1004.d.tt.failure: "The tactic is a failure"
+ #Large Town
+ nht_prowess_offense.1006.t: "Raiding the Countryside"
+ nht_prowess_offense.1006.desc: "Deep in enemy territory, as the camp buzzes with activity, my decision to raid the countryside is met with a divided council of advisors. The atmosphere is charged with debate as one advisor argues for hitting multiple smaller settlements, emphasizing the element of surprise and the potential for spreading confusion among the enemy. \n\nOn the other side of the council, another advisor advocates for targeting a large town, citing the potential for greater plunder and the psychological impact it would have on the enemy. The weight of this choice rests heavily on my shoulders, knowing that our actions could shape the course of this war."
+ nht_prowess_offense.1006.a: "We will hit multiple small settlements."
+ nht_prowess_offense.1006.b: "Targeting a large town will deliver a stronger message."
+ 
+ nht_prowess_offense.1007.t.smallset.win: "Settlement Victories"
+ nht_prowess_offense.1007.t.smallset.loss: "Setbacks in Small Settlements" 
+ nht_prowess_offense.1007.desc.smallset.win: "Our decision to raid multiple small settlements proves to be a masterstroke. Under the cover of darkness, our forces strike swiftly and silently. The element of surprise works in our favor as we catch the enemy off guard, pillaging their resources and causing chaos. The raids go smoothly, and our troops return to camp with valuable supplies, leaving the enemy disoriented and weakened."
+ nht_prowess_offense.1007.desc.smallset.loss: "Despite our hopes for success, the raids on the small settlements do not go as planned. One of our groups encounters unexpectedly strong resistance, leading to a costly skirmish. Another group is discovered prematurely, forcing a hasty retreat. The element of surprise eludes us, and our forces return to camp with minimal gains, their morale shaken by the unexpected setbacks."
+ nht_prowess_offense.1007.a.smallset.win: "Our strategy paid off."
+ nht_prowess_offense.1007.b.smallset.win: "We'll continue these swift strikes."
+ nht_prowess_offense.1007.c.smallset.loss: "I must reassess our strategy."
+ nht_prowess_offense.1007.d.smallset.loss: "We must regroup."
+ nht_smallset_positive_modifier: "Successful Raid"
+ nht_smallset_negative_modifier: "Unsuccessful Raid"
+
+ nht_prowess_offense.1008.t.town.win: "Triumphant Raid"
+ nht_prowess_offense.1008.t.town.loss: "Misfortune Strikes in the Large Town" 
+ nht_prowess_offense.1008.desc.town.win: "My decision to raid the large town unfolds as a brilliant success. Under the cover of night, our forces infiltrate the town with precision, overwhelming the unprepared defenders. The raid yields a bounty of plunder and valuable resources, boosting our morale and depleting the enemy's strength. As we retreat to our camp, the town smolders behind us, serving as a stark warning to our adversaries."
+ nht_prowess_offense.1008.desc.town.loss: "My ambitious raid on the large town takes a disastrous turn. Despite our careful planning, the defenders prove to be more formidable than expected, rallying quickly and mounting a fierce resistance. Our forces are caught in a protracted battle, suffering heavy casualties and failing to secure the anticipated plunder. We retreat in disarray, leaving the large town almost intact."  
+ nht_prowess_offense.1008.a.town.win: "Our coffers are replenished and morale is high."
+ nht_prowess_offense.1008.b.town.win: "I'll build on this momentum."
+ nht_prowess_offense.1008.c.town.loss: "We need to regroup and recover."
+ nht_prowess_offense.1008.d.town.loss: "I will need to rethink our strategy." 
+ nht_town_positive_modifier: "Successful Raid"
+ nht_town_negative_modifier: "Unsuccessful Raid"
+ #Raid 
+ nht_prowess_offense.1009.t: "Disrupting Enemy Lines"
+ nht_prowess_offense.1009.desc: "As the moon rises over our camp in enemy territory, the debate among my advisors continues. The atmosphere is tense. One advisor passionately argues for launching our disruption of the enemy lines under the cover of night, emphasizing the element of surprise and confusion it would bring. \n\nMeanwhile, another advisor insists on a daytime assault, highlighting the potential for greater visibility and control. The decision weighs heavily on my shoulders, it might give us the advantage needed in this war."
+ nht_prowess_offense.1009.a: "We strike under the cloak of night."
+ nht_prowess_offense.1009.b: "A daytime assault is the safer option."
+ 
+ nht_prowess_offense.1010.t.night.win: "Nighttime Raid"
+ nht_prowess_offense.1010.t.night.loss: "Darkness Betrayed Us" 
+ nht_prowess_offense.1010.desc.night.win: "My decision to launch a nighttime strike proves to be a brilliant tactical move. Under the shroud of darkness, our forces advance silently and swiftly, catching the enemy off guard. The element of surprise works in our favor as we cripple their supply lines, sow chaos, and return with valuable spoils."
+ nht_prowess_offense.1010.desc.night.loss: "My decision to strike under the cloak of night ends in disappointment. Despite careful planning, unforeseen obstacles thwart our mission. An enemy patrol stumbles upon our position, triggering a chaotic skirmish. The element of surprise eludes us, and we suffer heavy casualties while achieving minimal disruption to the enemy's operations."  
+ nht_prowess_offense.1010.a.night.win: "Our nighttime raid was a triumph."
+ nht_prowess_offense.1010.b.night.win: "This will surely impact them."
+ nht_prowess_offense.1010.c.night.loss: "It did not go as planned."
+ nht_prowess_offense.1010.d.night.loss: "We'll learn from our mistakes."
+ nht_nighttime_raid_positive_modifier: "Successful Raid"
+ nht_nighttime_raid_negative_modifier: "Unsuccessful Raid"
+ 
+ 
+ nht_prowess_offense.1011.t.day.win: "Triumphant Daytime Assault"
+ nht_prowess_offense.1011.t.day.loss: "Missteps in the Daylight" 
+ nht_prowess_offense.1011.desc.day.win: "Opting for a daytime assault proves to be a strategic masterstroke. With the advantage of visibility, my forces coordinate their actions flawlessly. We seize control of key positions, disrupt the enemy's supply lines, and deliver a decisive blow to their operations. The mission unfolds smoothly, boosting our morale and leaving the enemy in disarray."
+ nht_prowess_offense.1011.desc.day.loss: "My decision to launch a daytime assault ends in disappointment. Despite careful planning, unforeseen complications derail the mission. The enemy is better prepared than I anticipated, and our forces struggle to gain ground. The daytime visibility works against us, and we suffer heavy casualties without achieving our intended disruption."
+ nht_prowess_offense.1011.a.day.win: "We've crippled the enemy."
+ nht_prowess_offense.1011.b.day.win: "I will press our advantage."
+ nht_prowess_offense.1011.c.day.loss: "It did not go as planned."
+ nht_prowess_offense.1011.d.day.loss: "We will learn from our mistakes."
+ nht_daytime_raid_positive_modifier: "Successful Raid"
+ nht_daytime_raid_negative_modifier: "Unsuccessful Raid"
+ #Do both
+ nht_prowess_offense.1012.t.both.win: "Double Triumph"
+ nht_prowess_offense.1012.t.both.loss: "Double Trouble"
+ nht_prowess_offense.1012.desc.both.win: "My decision to strike under the cloak of night and raid multiple small settlements while also assaulting a large town proved to be a masterful combination of tactics. Under the cover of darkness, my forces advance silently and swiftly, catching the enemy off guard in the city, while the settlements cannot organize under the multiple attacks. The element of surprise worked in our favor as we disrupted their supply lines, sowed chaos and returned to camp with valuable spoils, the enemies were disoriented and weakened." 
+ nht_prowess_offense.1012.desc.both.loss: "Despite our hopes for success, the combination of launching a raid on multiple small settlements and a city turned into a nightmare. One of our groups encounters unexpectedly strong resistance in one settlement, leading to a costly skirmish. Meanwhile, the element of surprise eludes us in another city, and my forces are discovered prematurely, forcing a hasty retreat. My strategy failed, and they returned to camp with little to no gains, the morale in the camp shaken by the unexpected setbacks." 
+ nht_prowess_offense.1012.a.both.win: "My strategy paid off brilliantly." 
+ nht_prowess_offense.1012.b.both.win: "I must use the momentum" 
+ nht_prowess_offense.1012.c.both.loss: "I must reassess the strategy." 
+ nht_prowess_offense.1012.d.both.loss: "A small setback..." 
+ nht_hightened_troop_morale_modifier: "Strong Morale" 
+ nht_lost_troop_morale_modifier: "Weakened Morale" 
+ 
+ ##################################################
+ #### Rare Events
+ ####
+ ##################################################
+ 
+ # The Knight's Gamble
+ nht_prowess_offense.2001.t: "The Knight's Gamble"
+ nht_prowess_offense.2001.desc: "Amid the clashing of swords and the heat of the training yard, my attention is drawn to [nht_gamble_knight.GetName], a renowned knight known for [nht_gamble_knight.GetHerHis] exceptional swordsmanship. [nht_gamble_knight.GetSheHe] watches me with a glint of confidence in [nht_gamble_knight.GetHerHis] eyes, and I acknowledge [nht_gamble_knight.GetHerHis] presence with a nod.\n\n“How about a friendly wager today, my [ROOT.Char.GetLadyLord]?” [nht_gamble_knight.GetSheHe] says confidently waving [nht_gamble_knight.GetHerHis] prized weapon. “Your gold against my weapon”."
+ nht_prowess_offense.2001.a: "Agreed!"
+ nht_prowess_offense.2001.a.tt.success: "You gain an [artifact|E]"
+ nht_prowess_offense.2001.a.tt.failure: "You loose [gold|E]"
+ nht_prowess_offense.2001.b: "I shouldn't bet, a friendly duel will do."
+ nht_prowess_offense.2001.c: "I have trained enough today."
+ #Accept
+ nht_prowess_offense.2002.t.win: "Triumphant Duel"
+ nht_prowess_offense.2002.t.loss: "A Knight's Humble Loss"
+ nht_prowess_offense.2002.intro: "I accept [nht_gamble_knight.GetTitledFirstNamePossessive] challenge, confident in my own skills and eager to test them against a renowned warrior. After quickly agreeing on the stakes, we then enter the training yard, where a crowd of curious onlookers has gathered. The clash of our blades fills the training yard as we engage in a fierce duel."
+ nht_prowess_offense.2002.desc.win: "\n\nBoth of us exchanging blows and parries. [nht_gamble_knight.GetSheHe] is quick and agile, but I am strong and determined. I spot an opening and strike, knocking [nht_gamble_knight.GetHerHis] weapon out of [nht_gamble_knight.GetHerHis] hand. I raise my sword in triumph, as the crowd cheers."
+ nht_prowess_offense.2002.desc.loss: "\n\nBoth of us exchanging blows and parries. [nht_gamble_knight.GetSheHe] is quick and agile, but I am strong and determined. However, I make a fatal mistake and leave myself exposed. [nht_gamble_knight.GetSheHe] seizes the opportunity and strikes, disarming me with a swift move. I drop my sword in defeat, as the crowd gasps."
+ nht_prowess_offense.2002.a.win: "A well-fought duel. Your weapon is now mine."
+ nht_prowess_offense.2002.b.win: "Strick [nht_gamble_knight.GetHerHim] down."
+ nht_prowess_offense.2002.c.win: "You are a formidable opponent, [nht_gamble_knight.GetName] keep your weapon." 
+ nht_prowess_offense.2002.d.loss: "A well deserved sum of gold."
+ nht_prowess_offense.2002.e.loss: "He cheated, the wager is off!"
+ nht_prowess_offense.2002.f.loss: "Maybe I should train more with [nht_gamble_knight.GetHerHim]."  
+ nht_artifact.2002.t: "Artifact Won"
+ artifact_nht_weapon_description: "A weapon prized by his owner."
+ #Decline
+ nht_prowess_offense.2003.t: "The Knight’s Honor"
+ nht_prowess_offense.2003.intro: "I decline [nht_gamble_knight.GetTitledFirstNamePossessive] challenge, not wanting to risk my gold or [nht_gamble_knight.GetHerHis] weapon. I suggest a friendly duel instead, with no stakes involved. [nht_gamble_knight.GetSheHe] agrees, though [nht_gamble_knight.GetSheHe] seems slightly disappointed.\n\nAs we entered the training yard, a crowd of curious onlookers gathered." 
+ nht_prowess_offense.2003.desc.win: "\n\nThe duel is fierce, with both of us exchanging blows and parries. [nht_gamble_knight.GetSheHe] is quick and agile, but I am stronger. I manage to land a decisive hit on [nht_gamble_knight.GetHerHis] shoulder, making [nht_gamble_knight.GetHerHim] drop [nht_gamble_knight.GetHerHis] sword.\n\nPerhaps I should have really bet on it…"
+ nht_prowess_offense.2003.desc.loss: "\n\nThe duel is fierce, both of us exchanging blows and parries. [nht_gamble_knight.GetSheHe] is quick and agile, it seems more than I am. In a brilliant maneuver [nht_gamble_knight.GetSheHe] managed to disarm me with a clever feint. I have no other choice but to concede defeat, as the crowd cheers for [nht_gamble_knight.GetHerHim]."
+ nht_prowess_offense.2003.a: "A worthy opponent."
+ nht_prowess_offense.2003.b: "I made the right choice."
+ nht_prowess_offense.2003.c: "Let us drink to our friendship." 
+ nht_prowess_offense.2003.d.loss: "He was lucky…"
+ 
+ #Legendary Knight Arrives
+ nht_prowess_offense.2004.t: "Legendary Knight Arrives"
+ nht_prowess_offense.2004.desc: "Word reaches me that a legendary $knight_culture_player_no_tooltip$, [legendary_knight.GetName], renowned far and wide for [legendary_knight.GetHerHis] unparalleled skills, has arrived in my capital. The very mention of [legendary_knight.GetHerHis] name carries with it tales of valor and extraordinary feats on the battlefield. As I ponder the implications of [legendary_knight.GetHerHis] presence, an opportunity appears. I could ask for [legendary_knight.GetName] to train me or even join my court!"
+ nht_prowess_offense.2004.a: "I will ask him to train me."
+ nht_prowess_offense.2004.b: "I will invite [legendary_knight.GetName] to join my court."
+
+ ##################################################
+ #### Special Events
+ ####
+ ##################################################
+
+ nht_prowess_special.3001.t: "A Painful Revelation" #Too old
+ nht_prowess_special.3001.desc: "I clutch my aching knee as I sit on the edge of the training ground, sweat dripping down my face. The pain radiating from my joint is a harsh reminder of my age and limitations. The younger trainees effortlessly execute moves I struggle to replicate, my eyes seem slower. As I ponder my situation, the realization sinks in that perhaps I might be too old for this."
+ nht_prowess_special.3001.a: "I'll push through the pain and prove them wrong!"
+ nht_prowess_special.3001.b:  "Maybe it's time to hang up my training gear."
+
+ nht_prowess_special.3002.t: "Adapting to New Realities" #One Leged
+ nht_prowess_special.3002.desc: "I sit in my chamber, gazing at the empty space where my leg used to be. Lately, I often question my abilities and my future. Can I be a warrior with such a disadvantage ? Can I keep up with the demands of battle and training with this disability?"
+ nht_prowess_special.3002.a: "I will find a way to adapt and continue my training!"
+ nht_prowess_special.3002.b: "Maybe it's time to consider other paths…"
+
+ nht_prowess_special.3003.t: "The Lone Watcher" #One Eyed
+ nht_prowess_special.3003.desc: "I find myself in the training courtyard, one eye ever watchful, the other forever lost to me. Can I truly excel in the art of combat with limited depth perception? Can I compete when I can only see half of what my opponent does?"
+ nht_prowess_special.3003.a: "I shall become a master of perception with this solitary eye."
+ nht_prowess_special.3003.b: "Perhaps it's time to explore different talents that do not rely on my sight."
+
+ #Infirm
+ nht_prowess_special.3004.desc: "The sun beats down on the training grounds, swords clang, and the shouts of the instructors fill the air. I watch from the sidelines, a growing sense of unease gnawing at me. Am I still fit for this? Can I keep up with the relentless duel training that others require of themselves? And, more importantly, is it even worth it?"
+ nht_prowess_special.3004.a: "A true warrior perseveres. I won't give up."
+ nht_prowess_special.3004.b: "Maybe it's time to consider other paths."
+
+ nht_prowess_special.3005.t: "Mastering the Darkness" #Blind
+ nht_prowess_special.3005.desc: "I sit in the quiet stillness of my chamber, enveloped in eternal darkness. I sit in the quiet stillness of my chamber, enveloped in eternal darkness. While I have advisors and servants to help me, there are those who have none and still manage to carry on. Can I find a way to thrive, to train, and to contribute, despite the absence of sight?"
+ nht_prowess_special.3005.a: "I shall become a master of my other senses."
+ nht_prowess_special.3005.b: "It's time to explore a different path, one that aligns with my unique perspective."
+
+ nht_prowess_special.3006.t: "Dwarf Among Giants" #Dwarf
+ nht_prowess_special.3006.desc: " I stand amidst towering figures, my fellow warriors, and friends. As a dwarf, I often find myself wrestling with questions of stature and strength in this world of towering races. Can I hold my own in battle, or am I forever destined to be the underdog?"
+ nht_prowess_special.3006.a: "My size may be small, but my heart and skill are mighty!"
+ nht_prowess_special.3006.b: "Perhaps I can use my agility and cunning to my advantage in ways they can't."
+
+ ##################################################
+ #### Unavailable Events
+ ####
+ ##################################################
+
+ #In Captivity wonder about my skill
+ nht_prowess_offense.4001.t: "In Captivity"
+ nht_prowess_offense.4001.desc: "I sit in my cramped prison cell, the cold and dampness seeping into my bones. The days blend together. The harsh conditions of my captivity have already taken a toll on my physique. My muscles have atrophied, and my once-sharp reflexes seemed to have dulled. If I get out will I still be a master of my craft? Or just a shadow of my former self."
+ nht_prowess_offense.4001.a: "This wretched place won’t take more from me!"
+ nht_prowess_offense.4001.b: "Perhaps it's time to accept that my days of mastery are behind me…"
+

@@ -1,0 +1,27 @@
+﻿l_english:
+ basic_training_decision:0 "Martial Arts Training"
+ basic_training_decision_desc:0 "Training your fighting skills is a great way to not only strengthen yourself permanently, but also unlock deeper powers within yourself."
+ basic_training_decision_tooltip:0 "You will start training."
+ basic_training_effect_tooltip:0 "There are slim chances that you will gain a new power..."
+ basic_training_decision_confirm:0 "Let us begin!"
+
+oozaru_training_decision:0 "Oozaru Training"
+oozaru_training_decision_desc:0 "Your Saiyan heritage grants you a hidden, primal power. Through focused training, you may awaken the mighty Oozaru form and sharpen your physical might."
+oozaru_training_decision_tooltip:0 "Begin training to unlock your hidden Saiyan potential."
+oozaru_training_decision_confirm:0 "Harness the beast within!"
+
+modifier_namek_warrior:0 "Warrior Fused"
+modifier_dragon_clan:0 "Dragon Fused"
+modifier_namek_warrior_desc:0 "You have fused with a Warrior Clan Namekian, gaining martial prowess."
+modifier_dragon_clan_desc:0 "You have fused with a Dragon Clan Namekian, gaining spiritual insight and wisdom."
+basic_training.0001.t:0 "The Path of Fusion"
+basic_training.0001.d:0 "Before you stand two Namekians — one from the Warrior Clan, the other from the Dragon Clan. Both offer themselves to you in the sacred rite of fusion. Their power can become one with yours... but only one may be chosen."
+
+basic_training.0001.a:0 "Fuse with the Warrior Clan Namekian"
+basic_training.0001.b:0 "Fuse with the Dragon Clan Namekian"
+
+namekian_fusion_decision:0 "Namekian Fusion"
+namekian_fusion_decision_desc:0 "Fuse with another Namekian to unlock your hidden potential. You must choose a warrior or a sage."
+namekian_fusion_decision_tooltip:0 "You will start fusing."
+namekian_fusion_effect_tooltip:0 "Fuse with another Namekian to unlock your hidden potential. You must choose a warrior or a sage."
+namekian_fusion_decision_confirm:0 "Let us begin!"

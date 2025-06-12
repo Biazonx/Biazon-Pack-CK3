@@ -1,0 +1,345 @@
+﻿
+# Prowess OUTCOMES
+education_nht_prowess_1 = {
+	minimum_age = 16
+	prowess = 2
+	#category = education
+	monthly_nht_prowess_lifestyle_xp_gain_mult = 0.1
+	
+	culture_modifier = {
+		parameter = poorly_educated_leaders_distrusted
+		feudal_government_opinion = -10
+	}
+	
+	culture_modifier = {
+		parameter = prowess_traits_more_valued
+		same_culture_opinion = 1
+		monthly_prestige = 0.1
+	}
+	
+	ruler_designer_cost = 0
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_education_nht_prowess_1_desc
+			}
+			desc = trait_education_nht_prowess_1_character_desc
+		}
+	}
+
+	group = education_nht_prowess
+	level = 1
+
+	shown_in_ruler_designer = no
+	
+}
+education_nht_prowess_2 = { 
+	minimum_age = 16
+	prowess = 4
+	#category = education
+	monthly_nht_prowess_lifestyle_xp_gain_mult = 0.2
+	
+	culture_modifier = {
+		parameter = prowess_traits_more_valued
+		same_culture_opinion = 2
+		monthly_prestige = 0.2
+	}
+	
+	ruler_designer_cost = 20
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_education_nht_prowess_2_desc
+			}
+			desc = trait_education_nht_prowess_2_character_desc
+		}
+	}
+
+	group = education_nht_prowess
+	level = 2
+	add_commander_trait = yes
+	
+	shown_in_ruler_designer = no
+}
+education_nht_prowess_3 = {
+	minimum_age = 16
+	prowess = 6
+	#category = education
+	monthly_nht_prowess_lifestyle_xp_gain_mult = 0.3
+	
+	culture_modifier = {
+		parameter = prowess_traits_more_valued
+		same_culture_opinion = 3
+		monthly_prestige = 0.3
+	}
+	
+	ruler_designer_cost = 40
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_education_nht_prowess_3_desc
+			}
+			desc = trait_education_nht_prowess_3_character_desc
+		}
+	}
+
+	group = education_nht_prowess
+	level = 3
+	add_commander_trait = yes
+
+	shown_in_ruler_designer = no
+}
+education_nht_prowess_4 = { #Brilliant strategist
+	minimum_age = 16
+	prowess = 8
+	#category = education
+	monthly_nht_prowess_lifestyle_xp_gain_mult = 0.4
+	
+	culture_modifier = {
+		parameter = prowess_traits_more_valued
+		same_culture_opinion = 4
+		monthly_prestige = 0.4
+	}
+	
+	culture_modifier = {
+		parameter = elephant_bonuses_for_rank_4_education
+		elephant_cavalry_damage_mult = 0.2
+		elephant_cavalry_toughness_mult = 0.1
+		elephant_cavalry_pursuit_add = 20
+		jungle_advantage = 5
+	}
+	
+	ruler_designer_cost = 80
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_education_nht_prowess_4_desc
+			}
+			desc = trait_education_nht_prowess_4_character_desc
+		}
+	}
+
+	group = education_nht_prowess
+	level = 4
+	add_commander_trait = yes
+
+	shown_in_ruler_designer = no
+}
+education_nht_prowess_5 = {
+	minimum_age = 16
+	prowess = 10
+	martial = 3
+	#category = education
+	monthly_nht_prowess_lifestyle_xp_gain_mult = 0.5
+	monthly_martial_lifestyle_xp_gain_mult = 0.25
+	army_siege_value_mult = 0.5
+	movement_speed = 0.2
+	
+	culture_modifier = {
+		parameter = prowess_traits_more_valued
+		same_culture_opinion = 5
+		monthly_prestige = 0.5
+	}
+	
+	culture_modifier = {
+		parameter = elephant_bonuses_for_rank_4_education
+		elephant_cavalry_damage_mult = 0.2
+		elephant_cavalry_toughness_mult = 0.1
+		elephant_cavalry_pursuit_add = 20
+		jungle_advantage = 5
+	}
+	
+	ruler_designer_cost = 150
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_education_nht_prowess_5_desc
+			}
+			desc = trait_education_nht_prowess_5_character_desc
+		}
+	}
+
+	random_creation_weight = 0
+	group = education_nht_prowess
+	level = 5
+	add_commander_trait = yes
+
+	shown_in_ruler_designer = no
+}
+
+
+# LEADERSHIP OUTCOMES
+education_nht_leadership_1 = {
+	minimum_age = 16
+	stewardship = 2
+	#category = education
+	monthly_nht_leadership_lifestyle_xp_gain_mult = 0.1
+	
+	ruler_designer_cost = 0
+	
+	culture_modifier = {
+		parameter = poorly_educated_leaders_distrusted
+		feudal_government_opinion = -10
+	}
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_education_nht_leadership_1_desc
+			}
+			desc = trait_education_nht_leadership_1_character_desc
+		}
+	}
+
+	group = education_nht_leadership
+	level = 1
+
+	shown_in_ruler_designer = no
+}
+education_nht_leadership_2 = { 
+	minimum_age = 16
+	stewardship = 4
+	diplomacy = 1
+	#category = education
+	monthly_nht_leadership_lifestyle_xp_gain_mult = 0.2
+	
+	ruler_designer_cost = 20
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_education_nht_leadership_2_desc
+			}
+			desc = trait_education_nht_leadership_2_character_desc
+		}
+	}
+
+	group = education_nht_leadership
+	level = 2
+
+	shown_in_ruler_designer = no
+}
+education_nht_leadership_3 = {
+	minimum_age = 16
+	stewardship = 6
+	diplomacy = 2
+	#category = education
+	monthly_nht_leadership_lifestyle_xp_gain_mult = 0.3
+	
+	ruler_designer_cost = 40
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_education_nht_leadership_3_desc
+			}
+			desc = trait_education_nht_leadership_3_character_desc
+		}
+	}
+
+	group = education_nht_leadership
+	level = 3
+
+	shown_in_ruler_designer = no
+}
+education_nht_leadership_4 = {
+	minimum_age = 16
+	stewardship = 8
+	diplomacy = 3
+	#category = education
+	monthly_nht_leadership_lifestyle_xp_gain_mult = 0.4
+	
+	culture_modifier = {
+		parameter = elephant_bonuses_for_rank_4_education
+		world_innovation_elephants_development_growth_factor = 0.3
+		elephant_cavalry_recruitment_cost_mult = -0.2
+		elephant_cavalry_maintenance_mult = -0.2
+		jungle_construction_gold_cost = -0.2
+	}
+	
+	ruler_designer_cost = 80
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_education_nht_leadership_4_desc
+			}
+			desc = trait_education_nht_leadership_4_character_desc
+		}
+	}
+
+	group = education_nht_leadership
+	level = 4
+
+	shown_in_ruler_designer = no
+}
+education_nht_leadership_5 = {
+	minimum_age = 16
+	stewardship = 10
+	diplomacy = 4
+	#category = education
+	monthly_nht_leadership_lifestyle_xp_gain_mult = 0.5
+	monthly_stewardship_lifestyle_xp_gain_mult = 0.20
+	monthly_diplomacy_lifestyle_xp_gain_mult = 0.20
+	vassal_tax_mult = 0.25
+	
+	culture_modifier = {
+		parameter = elephant_bonuses_for_rank_4_education
+		world_innovation_elephants_development_growth_factor = 0.3
+		elephant_cavalry_recruitment_cost_mult = -0.2
+		elephant_cavalry_maintenance_mult = -0.2
+		jungle_construction_gold_cost = -0.2
+	}
+	
+	ruler_designer_cost = 150
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_education_nht_leadership_5_desc
+			}
+			desc = trait_education_nht_leadership_5_character_desc
+		}
+	}
+
+	random_creation_weight = 0
+	group = education_nht_leadership
+	level = 5
+
+	shown_in_ruler_designer = no
+}

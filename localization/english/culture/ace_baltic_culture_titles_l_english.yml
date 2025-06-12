@@ -1,0 +1,26 @@
+﻿l_english:
+
+### Grand Duchies ###
+ grand_duke:0 "$king_feudal_male_grand_duke_independent$"
+ grand_duchess:0 "$king_feudal_female_grand_duke_independent$"
+ grand_duchy:0 "$kingdom_feudal_grand_duke_independent$"
+
+### Estonian ###
+ king_estonian_male:0 "$king$"
+ king_estonian_female:0 "$king_female$"
+ kingdom_estonian:0 "$kingdom$"
+
+### Russian ###
+# Feudal 
+ count_feudal_male_russian:0 "Petty $title_prince$"
+ count_feudal_female_russian:0 "Petty $title_princess$"
+ county_feudal_russian:0 "Petty $title_principality$"
+ duke_feudal_male_russian:0 "$title_prince$"
+ duke_feudal_female_russian:0 "$title_princess$"
+ duchy_feudal_russian:0 "$title_principality$"
+ king_feudal_male_russian:0 "$king_feudal_male_grand_prince_independent$"
+ king_feudal_female_russian:0 "$king_feudal_female_grand_prince_independent$"
+ kingdom_feudal_russian:0 "$kingdom_feudal_grand_prince_independent$"
+ emperor_feudal_male_russian:0 "$king_feudal_male_grand_prince_independent$"
+ emperor_feudal_female_russian:0 "$king_feudal_female_grand_prince_independent$"
+ empire_feudal_russian:0 "Great Realm"

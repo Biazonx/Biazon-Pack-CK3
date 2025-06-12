@@ -1,0 +1,67 @@
+﻿l_english:
+  
+ ########################
+ ####### Decisions ######
+ ########################    
+ 
+ nht_reinforce_barony_perk_decision: "Fortify Holding"
+ nht_reinforce_barony_perk_decision_tooltip: "Build fortification in one of your [barony|E]."
+ nht_reinforce_barony_perk_decision_desc: "In these troubled times, many would love to see my dynasty fall. It would be wise to fortify one’s position against potential enemies before they come."
+ nht_reinforce_barony_perk_decision_confirm: "Fortify Holding"
+ 
+ 
+ ## Has been left out of the previous update
+ nht_capital_wall_perk_decision: "Construct Capital Wall"
+ nht_capital_wall_perk_decision_tooltip: "Build a [special_building|E] in your [capital|E]."
+ nht_capital_wall_perk_decision_desc: "In these troubled times, many would love to see my dynasty fall. It would be wise to fortify one’s position against potential enemies before they come. By building a wall around my capital, both a symbol of my  strength and ensure the prosperity of my realm."
+ nht_capital_wall_perk_decision_confirm: "Prepare Construction"
+
+ nht_sack_countryside_provisions_decision: "Sack Countryside for Provisions"
+ nht_sack_countryside_provisions_decision_tooltip: "Search and sack one of the [county|E] arond you for to find provisions."
+ nht_sack_countryside_provisions_decision_desc: "My camp need to eat, so do I. Resources are plentiful here and ripe for the taking in [ROOT.Char.GetCurrentLocation.GetName]..."
+ nht_sack_countryside_provisions_decision_confirm: "Sack Countryside"
+ nht_sack_countryside_provisions_decision_effect_tt: "You, your [GetCourtPositionType('second_camp_officer').GetName()], or your [GetCourtPositionType('master_of_spoils_camp_officer').GetName()], may search and sack the [county|E] for [provisions|E]"
+
+ nht_sack_countryside_provisions.0001.t: "Sacking the Countryside of [loot_province.GetNameNoTooltip]"
+ nht_sack_countryside_provisions.0001.desc: "I order my soldiers to scour the surrounding [loot_province.Custom('TerrainTypeProvince')] for anything of value. Food, gold, or supplies—everything is up for grabs.\n\n"
+
+ nht_sack_countryside_provisions.0001.winter_sack: "[loot_province.GetName] offers little in the way of supplies in winter. The cold bites deep, and the [loot_province.Custom('GetTerrainTypePlural')] lie frozen under a thick blanket of snow. Not much to be found here..."
+ nht_sack_countryside_provisions.0001.poor_sack: "The [loot_province.Custom('GetProvinceGroundDesc')] and [loot_province.Custom('GetTerrainTypePlural')] of [loot_province.GetName] seem barren. No food, no riches. Only desolation. Perhaps we can salvage something of use, but it will not be easy."
+ nht_sack_countryside_provisions.0001.decent_sack: "While [loot_province.GetName] is no land of plenty, we might find enough scattered resources and stray livestock. We’ll take what we can."
+ nht_sack_countryside_provisions.0001.rich_sack: "[loot_province.GetName] is ripe for plundering! Fields rich with crops, granaries stocked, and villagers hiding valuables. The bounty will be ours!"
+ nht_sack_countryside_provisions.0001.limited_sack: "The terrain of [loot_province.GetName] offers some hope. It's not much, but with patience, we'll find supplies."
+
+ nht_sack_countryside_provisions.0001.withered_land_sack: "[loot_province.GetName] seems cursed. Its fields are cracked and dry, the villagers gaunt and weary. Even the livestock appear feeble. We’ll be lucky to scrape together even the barest amount from this place."
+ nht_sack_countryside_provisions.0001.scarred_battlefield_sack: "The [loot_province.Custom('GetTerrainTypePlural')] of [loot_province.GetName] still bear the scars of recent war. Many of the villages lie in ruin, their inhabitants already stripped of everything they owned. There's little left for us, though some stragglers may yet have hidden valuables."
+ nht_sack_countryside_provisions.0001.protected_village_sack: "The peasants of [loot_province.GetName] seem to have been tipped off to our coming. They’ve barricaded themselves in, and their lord's forces stand vigilant. We will have to tread carefully if we are to find anything without incurring further wrath."
+ nht_sack_countryside_provisions.0001.unprepared_village_sack: "[loot_province.GetName] is ripe for the taking. The locals are completely unprepared for our assault, and their stockpiles are untouched. We can loot to our heart’s content."
+ nht_sack_countryside_provisions.0001.opportunistic_sack: "As we approach [loot_province.GetName], we discover that the local lord is absent, off attending to matters elsewhere. His soldiers are few, and the villagers are disorganized. This is the perfect time to take advantage of the chaos."
+
+ nht_sack_countryside_provisions.0001.a: "I’ll lead the search myself."
+ nht_sack_countryside_provisions.0001.a_personal_success: "I personally find supplies to sustain us."
+ nht_sack_countryside_provisions.0001.a_personal_failure: "I find nothing of value."
+
+ nht_sack_countryside_provisions.0001.limit_loot: "Limit the looting to avoid angering the local lord."
+ nht_sack_countryside_provisions.0001.limit_loot_desc: "I order my men to be restrained in their sacking. We’ll take enough to sustain ourselves but leave the villagers with something. This way, the local lord won’t be too quick to retaliate."
+ nht_sack_countryside_provisions.0001.limit_loot_success: "The looting goes smoothly. We’ve taken enough to get by without stirring up too much ire."
+ nht_sack_countryside_provisions.0001.limit_loot_failure: "Despite our restraint, rumors of our actions have already reached the lord of [loot_province.GetName], and he’s not pleased."
+
+ nht_sack_countryside_provisions.0001.b: "Let the scouts lead the pillaging."
+ nht_sack_countryside_provisions.0001.b.named: "Scouts knows the area well; let them handle the looting."
+ nht_sack_countryside_provisions.0001.b.success: "The scouts gathers a sizable haul."
+ nht_sack_countryside_provisions.0001.b.failure: "The scouts finds nothing worthwhile."
+ 
+ nht_sack_countryside_provisions.0001.c: "Send my soldiers to ransack the area."
+ nht_sack_countryside_provisions.0001.c.named: "Send [second_camp_officer.GetFirstNameNoTooltip] to lead the sacking."
+ nht_sack_countryside_provisions.0001.c.success: "[second_camp_officer.GetFirstNameNoTooltip] returns with plunder."
+ nht_sack_countryside_provisions.0001.c.failure: "[second_camp_officer.GetFirstNameNoTooltip] finds nothing."
+
+ nht_sack_countryside_provisions.0001.d: "Have the Master of Spoils oversee the looting."
+ nht_sack_countryside_provisions.0001.d.named: "[master_of_spoils_camp_officer.GetFirstNameNoTooltip], as the keeper of the camp’s resources, will ensure we seize the most valuable goods."
+ nht_sack_countryside_provisions.0001.d.success: "[master_of_spoils_camp_officer.GetFirstNameNoTooltip] returns with well-organized spoils—precious metals, livestock, and even some rare goods from the local merchants."
+ nht_sack_countryside_provisions.0001.d.failure: "[master_of_spoils_camp_officer.GetFirstNameNoTooltip] misjudges the value of the loot, bringing back little of consequence. Our camp will see no major profit from this raid."
+ 
+ nht_sack_countryside_provisions.0001.e: "I have reconsidered the matter."
+ 
+ nht_sack_countryside_provisions.0001.no_provisions_tt: "No [provision|E] found."
+

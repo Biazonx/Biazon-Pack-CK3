@@ -1,0 +1,182 @@
+﻿
+# Used to trigger the correct events when funding an inspired character
+
+inspiration_start_events = {
+	on_actions = {
+		inspirational_start_events
+	}
+}
+
+inspiration_completed_events = {
+	on_actions = {
+		inspirational_clean_variables_events
+	}
+}
+
+inspiration_ongoing_events = {
+	on_actions = {
+		inspirational_ongoing_events
+	}
+}
+
+inspirational_start_events = {
+	first_valid = {
+		fund_inspiration.0073 #Smith - Jewelry Type
+	}
+}
+
+inspirational_clean_variables_events = {
+	events = {
+		delay = { days = 2 }
+		inspirational.0001
+	}
+}
+
+inspirational_ongoing_events = {
+	random_events = {
+		100 = 0
+		100 = inspirational.0003 #signet ring
+		100 = inspirational.0002 #decoder ring
+	}
+}
+
+
+#combat on actions to more often and correctly upgrade weapons and armor
+on_combat_end_winner = {
+	on_actions = {
+		inspirational_combat_end_winner
+	}
+}
+
+inspirational_combat_end_winner = {
+	effect = {
+		if = {
+			limit = {
+				exists = side_commander
+				side_commander = {
+					any_character_artifact = {
+						is_equipped = yes
+						artifact_slot_type = primary_armament
+					}
+				}
+			}
+			side_commander = {
+				random = {
+					chance = 10
+					trigger_event = {
+						id = inspirational.0010
+						days = { 15 30 }
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_side_knight = {
+					any_character_artifact = {
+						is_equipped = yes
+						artifact_slot_type = primary_armament
+					}
+				}
+			}
+			every_side_knight = {
+				random = {
+					chance = 5
+					trigger_event = {
+						id = inspirational.0010
+						days = { 15 30 }
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = side_commander
+				side_commander = {
+					any_character_artifact = {
+						is_equipped = yes
+						artifact_slot_type = armor
+					}
+				}
+			}
+			side_commander = {
+				random = {
+					chance = 10
+					trigger_event = {
+						id = inspirational.0020
+						days = { 15 30 }
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_side_knight = {
+					any_character_artifact = {
+						is_equipped = yes
+						artifact_slot_type = armor
+					}
+				}
+			}
+			every_side_knight = {
+				limit = {
+					any_character_artifact = {
+						is_equipped = yes
+						artifact_slot_type = armor
+					}
+				}
+				random = {
+					chance = 5
+					trigger_event = {
+						id = inspirational.0020
+						days = { 15 30 }
+					}
+				}
+			}
+		}
+	}
+}
+
+#yearly on action to passively improve artificers
+three_year_playable_pulse = {
+	on_actions = {
+		inspirational_improve_artificer_on_action
+	}
+}
+
+inspirational_improve_artificer_on_action = {
+	effect= {
+		if = {
+			limit = {
+				employs_court_position = court_artificer_court_position
+			}
+			every_court_position_holder = {
+				type = court_artificer_court_position
+				limit = {
+					NOT = { exists = inspiration }
+				}
+				random = {
+					chance = {
+						value = 10
+						add = {
+							value = this.aptitude:court_artificer_court_position
+							multiply = 10
+						}
+					}
+					save_scope_as = artificer
+					root = {
+						send_interface_message = {
+							type = event_generic_good_with_text
+							title = inspirational_artificier_improved
+							desc = inspirational_artificier_improved_desc
+							left_icon = scope:artificer
+							scope:artificer = {
+								inspirational_improve_artificer_effect = yes
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+﻿#Nahua holy sites:
+
+giza = { #Should be obvious :)
+	county = c_giza
+
+	character_modifier = {
+		monthly_piety_gain_mult = 0.2
+		knight_effectiveness_mult = 0.1
+	}
+}
+
+#Cordoba - big city
+
+paris = { #big city
+	county = c_ile_de_france 
+	character_modifier = {
+		monthly_prestige_gain_mult = 0.1
+	}
+}
+
+#Rome - big and holy city
+
+hodh = {
+	county = c_hodh #big city
+	character_modifier = {
+		diplomacy_per_prestige_level = 1
+	}
+}

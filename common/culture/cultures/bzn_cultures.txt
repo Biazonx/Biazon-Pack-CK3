@@ -1,0 +1,132 @@
+﻿##############################################
+# 
+# Partial adaptation of *some* cultures from the Rajas of Asia mod.
+# Not all cultures have been adapted to reduce potential compatibility issues and save time.
+# 
+##############################################
+
+
+
+japanese = {
+    color = { 225 169 188 }  # Light pink color representing Japan
+	
+	parents = { han }
+    # Core cultural attributes
+    ethos = ethos_communal
+    heritage = heritage_japanese # Changed from Chinese to Japanese
+    language = language_japanese  # Changed from Chinese to Japanese
+    martial_custom = martial_custom_male_only
+
+    # Naming conventions
+    name_list = name_list_japanese # Changed from Han to Japanese
+
+    # Graphical representations
+    coa_gfx = { chinese_group_coa_gfx }  # More appropriate than Chinese
+    building_gfx = { indian_building_gfx  }  # Changed from Indian
+    clothing_gfx = { mongol_clothing_gfx }  # Changed from Mongol
+    unit_gfx = { mongol_unit_gfx }  # Changed from Mongol
+
+    # Cultural traditions
+    traditions = {
+        tradition_bushido  # Way of the warrior - most important
+        tradition_isolationist  # Historical sakoku policy
+        tradition_fp3_enlightened_magnates
+        tradition_mystical_ancestors  # Shinto influence
+        tradition_collective_lands  # Village commune system
+    }
+
+    # Ethnic composition
+    ethnicities = {
+        100 = asian  # Changed from 10 to 100 for primary ethnicity
+    }
+}
+
+han = {
+	color = han
+	
+	ethos = ethos_bureaucratic
+	heritage = heritage_chinese
+	language = language_chinese
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_family_entrepreneurship
+		tradition_mystical_ancestors
+		tradition_court_eunuchs
+		tradition_philosopher_culture
+		tradition_ep3_cultivated_sophistication
+	}
+	
+	name_list = name_list_han
+	
+	coa_gfx = { chinese_group_coa_gfx }
+	building_gfx = { indian_building_gfx }
+	clothing_gfx = { mongol_clothing_gfx }
+	unit_gfx = { mongol_unit_gfx }
+	
+	ethnicities = {
+		10 = asian
+	}
+}
+
+german = {	#obsolete
+	color = { 0.5 0.5 0.5 }
+	
+	ethos = ethos_bellicose
+	heritage = heritage_central_germanic
+	language = language_high_german
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_ruling_caste
+		tradition_astute_diplomats
+		tradition_stand_and_fight
+		tradition_equitable
+		tradition_warrior_culture
+		tradition_marchfield
+	}
+	
+	name_list = name_list_german
+
+	coa_gfx = { german_group_coa_gfx western_coa_gfx } 
+	building_gfx = { western_building_gfx } 
+	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx } 
+	unit_gfx = { western_unit_gfx } 		
+
+	ethnicities = {
+		25 = caucasian_blond
+		15 = caucasian_ginger
+		35 = caucasian_brown_hair
+		25 = caucasian_dark_hair
+	}
+}
+
+celt = {
+	color = gaelic
+	
+	parents = { irish pictish gaelic }
+	
+	ethos = ethos_spiritual
+	heritage = heritage_goidelic
+	language = language_goidelic
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_fishermen
+		tradition_irish_cliathairi
+		tradition_fp1_northern_stories
+		tradition_strong_kinship
+		tradition_mendicant_mystics
+	}
+
+	name_list = name_list_gaelic
+	
+	coa_gfx = { scottish_coa_gfx western_coa_gfx }
+	building_gfx = { western_building_gfx }
+	clothing_gfx = { northern_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+	
+	ethnicities = {
+		5 = caucasian_blond
+		30 = caucasian_ginger
+		35 = caucasian_brown_hair
+		30 = caucasian_dark_hair
+	}
+}

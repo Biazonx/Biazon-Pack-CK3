@@ -1,0 +1,52 @@
+﻿modifier_oozaru_transformation = {
+    icon = monkey_mixed
+    desc = modifier_oozaru_transformation_desc
+    prowess = 8
+	dread_baseline_add = 15
+}
+
+modifier_giant_transformation = {
+    icon = martial_positive
+    desc = modifier_giant_transformation_desc
+    prowess = 8
+	dread_baseline_add = 15
+}
+
+modifier_namek_warrior = {
+	icon = martial_positive
+	desc = modifier_namek_warrior_desc
+	martial = 2
+    prowess = 3
+    monthly_prestige_gain_mult = 0.1
+}
+
+modifier_dragon_clan = {
+	icon = learning_positive
+	desc = modifier_dragon_clan_desc
+	learning = 3
+    stewardship = 2
+    monthly_piety_gain_mult = 0.1
+}
+
+modifier_special_force = {
+	icon = flame_positive
+	desc = modifier_special_force_desc
+	martial = 1
+	stewardship = 1
+    monthly_prestige_gain_mult = 0.1
+}
+
+modifier_sleeping = {
+	icon = social_negative
+	desc = modifier_sleeping_desc
+	diplomacy = -10
+	martial = -10
+}
+
+galactic_trade_hub = {
+	icon = economy_positive
+	desc = galactic_trade_hub
+	monthly_income = 5
+	general_opinion = 10
+	mercenary_hire_cost_mult = -0.25
+}

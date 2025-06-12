@@ -1,0 +1,3384 @@
+﻿kinnaur = {
+	county = c_kamru
+
+	character_modifier = {
+		name = holy_site_kinnaur_effect_name
+		hills_provisions_use_mult = -0.1
+		mountains_provisions_use_mult = -0.1
+		hills_attrition_mult = -0.1
+		mountains_attrition_mult = -0.1
+	}
+}
+
+mizoram = {
+	county = c_thabeik_taung
+	
+	character_modifier = {
+		name = holy_site_mizoram_effect_name
+		diplomacy_per_piety_level = 1
+		monthly_piety = 0.5
+	}
+}
+
+tamasna = {
+	county = c_tamasna
+	
+	character_modifier = {
+		name = holy_site_tamasna_effect_name
+		prowess_per_piety_level = 1
+		max_combat_roll = 4
+	}
+}
+
+ceuta = {
+	county = c_ceuta 
+
+	character_modifier = {
+		name = holy_site_ceuta_effect_name
+		same_faith_opinion = 5
+		domain_tax_same_faith_mult = 0.1
+	}
+}
+
+mila = {
+	county = c_satif 
+
+	character_modifier = {
+		name = holy_site_mila_effect_name
+		same_faith_opinion = 5
+		domain_tax_same_faith_mult = 0.1
+	}
+}
+
+ravenna = {
+	county = c_ravenna
+	
+	character_modifier = {
+		monthly_piety_gain_mult = 0.2
+	}
+}
+
+abwab = {
+	county = c_abwab
+
+	character_modifier = {
+		name = holy_site_abwab_effect_name
+		prowess_per_piety_level = 1
+		supply_duration = 0.2
+	}
+}
+	
+
+naples = {
+	county = c_napoli
+	
+	character_modifier = {
+		name = holy_site_naples_effect_name
+		stewardship = 1
+		coastal_advantage = 5
+	}
+}
+
+orvieto = {
+	county = c_orvieto
+	
+	character_modifier = {
+		name = holy_site_orivento_effect_name
+		intrigue = 1
+		learning = 1
+	}
+}
+
+adria = {
+	county = c_polesine
+	
+	character_modifier = {
+		name = holy_site_adria_effect_name
+		coastal_advantage = 10
+	}
+}
+
+pisa = {
+	county = c_pisa
+	
+	character_modifier = {
+		name = holy_site_pisa_effect_name
+		development_growth_factor = 0.2
+	}
+}
+
+leptis = {
+	county = c_tripolitana
+	
+	character_modifier = {
+		name = holy_site_leptis_effect_name
+		prowess_per_prestige_level = 1
+		prowess_per_piety_level = 1
+	}
+}
+
+enna = {
+	county = c_agrigento
+	
+	character_modifier = {
+		name = holy_site_enna_effect_name
+		monthly_piety_gain_mult = 0.2
+	}
+}
+
+etna = {
+	county = c_messina
+	
+	character_modifier = {
+		name = holy_site_etna_effect_name
+		monthly_piety_gain_mult = 0.2
+	}
+}
+
+bologna = {
+	county = c_bologna
+	
+	character_modifier = {
+		name = holy_site_bologna_effect_name
+		prowess_per_piety_level = 1
+	}
+}
+
+heliopolis = {
+	county = c_cairo
+	barony = b_cairo
+
+	character_modifier = {
+		name = holy_site_heliopolis_effect_name
+		church_holding_build_gold_cost = -0.1
+	}
+}
+
+sofia = {
+	county = c_sredets
+
+	character_modifier = {
+		name = holy_site_sofia_effect_name
+		clergy_opinion = 5
+	}
+}
+
+shiraz  = {
+	county = c_shiraz
+
+	character_modifier = {
+	   monthly_piety_gain_mult = 0.1
+	}
+}
+
+# Bacchic
+
+ionia = { # Temple of Dionysus, Teos
+	county = c_ionia
+	
+	character_modifier = {
+		name = holy_site_ionia_effect_name
+		fertility = 0.1
+		health = 0.1
+	}
+}
+
+
+zherkovo = { # Temple of Orpheus, Tatul
+	county = c_zherkovo
+	
+	character_modifier = {
+		name = holy_site_zherkovo_effect_name
+		martial_per_piety_level = 1
+		knight_effectiveness_mult = 0.1
+	}
+}
+
+siracusa = { # Villa Romana del Casale
+	county = c_siracusa
+	
+	character_modifier = {
+		name = holy_site_siracusa_effect_name
+		naval_movement_speed_mult = 0.2
+		raid_speed = 0.1
+	}
+}
+
+pangaion_hills = {
+	county = c_serres
+	barony = b_chrysopolis
+	character_modifier = {
+		name = holy_site_pangaion_hills_effect_name
+		development_growth_factor = 0.1 # Oracle of Dionysus
+	}
+}
+pimpleia = {
+	county = c_veria
+	barony = b_veria
+	character_modifier = {
+		name = holy_site_pimpleia_effect_name
+		diplomacy_per_prestige_level = 1 # Birthplace and early abode of Orpheus, legendary musician and poet
+	}
+}
+
+tripolitana = { # Leptis Magna
+	county = c_tripolitana
+	
+	character_modifier = {
+		name = holy_site_tripolitana_effect_name
+		martial = 1
+		prowess_per_prestige_level = 1
+	}
+}
+
+venaissin = { # Arles
+	county = c_marseille
+	barony = b_arles
+	
+	character_modifier = {
+		name = holy_site_venaissin_effect_name
+		diplomacy = 1
+		councillor_opinion = 5
+	}
+}
+
+# Pythagorean
+
+chios = { # Samos, Pythagoras' birthplace
+	county = c_chios
+	barony = b_samos
+	
+	character_modifier = {
+		name = holy_site_chios_effect_name
+		learning = 2
+	}
+}
+
+rossano = { # Crotone, where Pythagoras and his followers settled
+	county = c_rossano
+	barony = b_cotrone
+	
+	character_modifier = {
+		name = holy_site_rossano_effect_name
+		stress_loss_mult = 0.2
+		life_expectancy = 1
+	}
+}
+
+tyana = { # Tyana, birthplace of the Neopythagorean Apollonius
+	county = c_cappadocia
+	
+	character_modifier = {
+		name = holy_site_tyana_effect_name
+		martial = 1
+		levy_size = 0.1
+	}
+}
+
+dublin = {
+	county = c_dublin
+	
+	character_modifier = {
+		name = holy_site_dublin_effect_name
+		cultural_head_fascination_mult = 0.05
+		monthly_county_control_growth_factor = 0.05
+	}
+}
+lough_gur = {
+	county = c_thomond
+
+	character_modifier = {
+		name = holy_site_lough_gur_effect_name
+		development_growth_factor = 0.1
+		stewardship = 1
+	}
+ }
+
+ailech = {
+	county = c_ailech
+	
+	character_modifier = {
+		monthly_piety_gain_mult = 0.1
+	}
+}
+isle_of_man = { 
+	county = c_isle_of_man
+
+	character_modifier = {
+		name = holy_site_isle_of_man_effect_name
+		clergy_opinion = 5
+	}
+}
+gowrie = {
+	county = c_gowrie
+
+	character_modifier = {
+		name = holy_site_gowrie_effect_name
+		diplomacy = 1
+		martial = 1
+	}
+} 
+
+cornwall = {
+	county = c_cornwall
+
+	character_modifier = {
+		monthly_piety_gain_mult = 0.2
+	}
+	
+}
+
+bath = {
+	county = c_somerset
+	
+	character_modifier = {
+		name = holy_site_bath_effect_name
+		cultural_head_fascination_mult = 0.05
+		monthly_county_control_growth_factor = 0.05
+	}
+}
+
+vannes = {
+	county = c_vannes
+	
+	character_modifier = {
+		name = holy_site_vannes_effect_name
+		diplomacy = 1
+		stewardship = 1
+	}
+} 
+
+
+aachen = {
+	county = c_aachen
+
+	character_modifier = {
+		monthly_piety_gain_mult = 0.1
+	}
+}
+
+ile_de_france = {
+	county = c_ile_de_france
+
+	character_modifier = {
+		monthly_piety_gain_mult = 0.2
+	}
+}
+
+montpellier = {
+	county = c_montpellier 
+
+	character_modifier = {
+		name = holy_site_montpellier_effect_name
+		martial = 2
+	}
+}
+
+
+zaragoza = {
+	county = c_zaragoza 
+
+	character_modifier = {
+		name = holy_site_zaragoza_effect_name
+		clergy_opinion = 5
+	}
+}
+
+astorga = {
+	county = c_astorga 
+
+	character_modifier = {
+		monthly_piety_gain_mult = 0.2
+	}
+}
+
+lisboa = {
+	county = c_lisboa
+
+	character_modifier = {
+		monthly_piety_gain_mult = 0.1
+	}
+} 
+
+toledo = {
+	county = c_toledo
+
+	character_modifier = {
+		name = holy_site_toledo_effect_name
+		diplomacy = 1
+		martial = 1
+	}
+}
+
+cartagena = {
+	county = c_murcia
+
+	character_modifier = {
+		name = holy_site_cartagena_effect_name
+		development_growth_factor = 0.1
+		stewardship = 1
+	}
+}
+
+sidon = {
+ 	county = c_beirut
+
+	character_modifier = {
+		monthly_piety_gain_mult = 0.2
+	}
+}
+
+tyre = {
+ 	county = c_acre
+ 	character_modifier = {
+		name = holy_site_tyre_effect_name
+		clergy_opinion = 5
+	}
+} 
+
+
+palermo = {
+	county = c_palermo
+	character_modifier = {
+		name = holy_site_palermo_effect_name
+		diplomacy = 1
+		martial = 1
+	}
+}
+nicosia = {
+	county = c_nicosia
+	character_modifier = {
+		name = holy_site_nicosia_effect_name
+		development_growth_factor = 0.1
+		stewardship = 1
+	}
+}
+
+
+fufluna = {
+	county = c_pisa
+	barony = b_piombino
+
+ 	character_modifier = {
+ 		name = holy_site_fufluna_effect_name
+ 		clergy_opinion = 5
+ 	}
+ }
+
+arezzo = {
+ 	county = c_arezzo
+
+	character_modifier = {
+		monthly_piety_gain_mult = 0.2
+	}
+	
+}
+
+
+
+hofgeismar ={
+	county = c_kassel
+    	barony = b_hofgeismar
+ 	character_modifier = {
+ 		name = holy_site_hofgeismar_effect_name
+ 		clergy_opinion = 5
+ 	}
+}
+augsburg ={
+	county = c_augsburg
+
+	character_modifier = {
+		monthly_piety_gain_mult = 0.2
+	}
+}
+
+
+ur = {
+	county = c_akhadid
+
+	character_modifier = {
+		monthly_piety_gain_mult = 0.2
+	}
+}
+
+ninive = { 
+	county = c_ninive
+
+	character_modifier = {
+		name = holy_site_ninive_effect_name
+		diplomacy = 1
+		martial = 1
+	}
+}
+
+susa = {
+	county = c_tustar
+	barony = b_as-sus
+
+	character_modifier = {
+	   monthly_piety_gain_mult = 0.1
+   }
+}
+
+ebla = { 
+	county = c_aleppo
+
+	character_modifier = {
+		name = holy_site_ebla_effect_name
+		stewardship = 2
+	}
+}
+
+
+nippur = { 
+	county = c_batiha
+	character_modifier = {
+		name = holy_site_nippur_effect_name
+		diplomacy = 1
+		martial = 1
+	}
+}
+uruk  = {
+	county = c_qadisiya
+
+	character_modifier = {
+	   monthly_piety_gain_mult = 0.1
+   	}
+}
+
+lagash = {
+	county = c_rusafa
+	character_modifier = {
+		name = holy_site_lagash_effect_name
+		stewardship = 2
+	}
+}
+
+
+sarmizegetusa = {
+	county = c_hunyad
+
+	character_modifier = {
+		name = holy_site_sarmizegetusa_effect_name
+		martial = 2
+	}
+}
+
+aidava = {
+	county = c_naissus
+	barony = b_pirot
+
+	character_modifier = {
+	   monthly_piety_gain_mult = 0.1
+   	}
+}
+
+capidava = {
+	county = c_constanta
+
+	character_modifier = {
+		name = holy_site_capidava_effect_name
+		cultural_head_fascination_mult = 0.05
+		monthly_county_control_growth_factor = 0.05
+	}
+}
+
+zargidava = {
+	county = c_stoenesti
+	barony = b_bacau
+
+	character_modifier = {
+		name = holy_site_zargidava_effect_name
+		direct_vassal_opinion = 5
+	}
+}
+
+philippopolis = { 
+	county = c_philippopolis
+
+	character_modifier = {
+		name = holy_site_philippopolis_effect_name
+		clergy_opinion = 5
+	}
+}
+
+dvin = {
+	county = c_dvin
+
+	character_modifier = {
+		monthly_piety_gain_mult = 0.1
+		learning = 1
+	}
+}
+
+kutaisi = {
+	county = c_odishi
+
+	character_modifier = {
+		name = holy_site_kutaisi_effect_name
+		cultural_head_fascination_mult = 0.05
+		monthly_county_control_growth_factor = 0.05
+	}
+}
+
+tortomi = {
+	county = c_tao
+
+	character_modifier = {
+		name = holy_site_tortomi_effect_name
+		diplomacy = 1
+		martial = 1
+	}
+}
+
+hereti = {
+ 	county = c_hereti
+
+ 	character_modifier = {
+ 		name = holy_site_hereti_effect_name
+ 		clergy_opinion = 5
+ 	}
+ }
+
+
+dyrrachion = {
+	county = c_dyrrachion
+
+	character_modifier = {
+		name = holy_site_dyrrachion_effect_name
+		cultural_head_fascination_mult = 0.05
+		monthly_county_control_growth_factor = 0.05
+	}
+ }
+
+venice = {
+	county = c_venezia
+
+	character_modifier = {
+		name = holy_site_venice_effect_name
+		clergy_opinion = 5
+	}
+ }
+
+split = {
+	county = c_cetina
+	barony = b_split
+
+	character_modifier = {
+		name = holy_site_split_effect_name
+		diplomacy = 1
+		martial = 1
+	}
+ }
+
+
+london = {
+	county = c_middlesex
+
+	character_modifier = {
+		name = holy_site_london_effect_name
+		cultural_head_fascination_mult = 0.05
+		monthly_county_control_growth_factor = 0.05
+	}
+ }
+
+
+suffolk = {
+	county = c_suffolk
+
+	character_modifier = {
+		name = holy_site_suffolk_effect_name
+		clergy_opinion = 5
+	}
+ }
+
+york = {
+	county = c_north_riding
+	barony = b_york
+
+	character_modifier = {
+		name = holy_site_york_effect_name
+		diplomacy = 1
+		martial = 1
+	}
+ }
+
+devon = {
+	county = c_devon
+
+	character_modifier = {
+		name = holy_site_devon_effect_name
+		development_growth_factor = 0.1
+		stewardship = 1
+	}
+ }
+
+
+chandax = {
+	county = c_chandax
+
+	character_modifier = {
+		name = holy_site_chandax_effect_name
+		cultural_head_fascination_mult = 0.05
+		monthly_county_control_growth_factor = 0.05
+	}
+}
+
+troy= {
+	county = c_abydos
+
+	character_modifier = {
+		name = holy_site_troy_effect_name
+		development_growth_factor = 0.1
+		stewardship = 1
+	}
+ }
+
+corinth = {
+	county = c_korinthos
+
+	character_modifier = {
+		monthly_piety_gain_mult = 0.2
+	}
+}
+
+
+hattusha = {
+	county = c_galatia
+	#barony = b_pteria
+	character_modifier = {
+		name = holy_site_hattusha_effect_name
+		cultural_head_fascination_mult = 0.05
+		monthly_county_control_growth_factor = 0.05
+	}
+}
+
+ebora = {
+	county = c_beja
+	barony = b_evora
+	character_modifier = {
+		name = holy_site_ebora_effect_name
+		clergy_opinion = 5
+	}
+}
+
+caesarobriga = {
+	county = c_toledo
+	character_modifier = {
+		name = holy_site_caesarobriga_effect_name
+		controlled_province_advantage = 5
+		same_faith_opinion = 5
+	}
+}
+
+emerita = {
+	county = c_merida
+	character_modifier = {
+		name = holy_site_emirita_effect_name
+		forest_advantage = 5
+		retreat_losses = -0.1
+	}
+}
+
+tyras = {
+	county = c_cetatea_alba
+
+	character_modifier = {
+		name = holy_site_tyras_effect_name
+		diplomacy = 1
+		martial = 1
+	}
+}
+
+kalos_limen = {
+	county = c_kalos_limen
+
+	character_modifier = {
+		name = holy_site_kalos_limen_effect_name
+		development_growth_factor = 0.1
+		stewardship = 1
+	}
+}
+dionysopolis = { 
+	county = c_mesembria
+	barony = b_karvuna
+
+	character_modifier = {
+		name = holy_site_dionysopolis_effect_name
+		cultural_head_fascination_mult = 0.05
+		monthly_county_control_growth_factor = 0.05
+	}
+}
+kremnoi = {
+	county = c_tana
+	barony = b_taganrog
+	
+	character_modifier = {
+		monthly_piety_gain_mult = 0.2
+	}
+}
+
+elbrus = { # Elbrus, the holiest mountain of the Caucasus - sacred to the Alans, and also near their capital of Maghas
+	county = c_maghas
+	
+	character_modifier = {
+		name = holy_site_elbrus_effect_name
+		fertility = 0.1
+		health = 0.1
+	}
+}
+
+kashgar = { # Kashgar, capital of the old Shule Kingdom and stronghold of the Saka people
+	county = c_kashgar
+	
+	character_modifier = {
+		name = holy_site_kashgar_effect_name
+		county_opinion_add = 5
+		monthly_county_control_growth_factor = 0.1
+	}
+}
+
+gurganj = { # Gurganj, capital of Khwarazm and an important Silk Road trade hub
+	county = c_gurganj
+	
+	character_modifier = {
+		name = holy_site_gurganj_effect_name
+		domain_tax_same_faith_mult = 0.1
+	}
+}
+
+gurgan = { # 
+	county = c_gurgan
+	
+	character_modifier = {
+		name = holy_site_gurgan_effect_name
+		domain_tax_same_faith_mult = 0.1
+	}
+}
+
+derbent = { # Derbent, capital of Dagestan and location of the Gates of Alexander - once sacked by the Alans
+	county = c_derbent
+	
+	character_modifier = {
+		name = holy_site_derbent_effect_name
+		levy_size = 0.1
+		raid_speed = 0.1
+	}
+}
+
+exampaeus = { # Exampaeus, location of the great bronze cauldron and regarded as the centre of the Earth
+	county = c_kherson
+	
+	character_modifier = {
+		name = holy_site_exampaeus_effect_name
+		world_steppe_development_growth_factor = 0.25
+		levy_reinforcement_rate_same_faith = 0.25
+	}
+}
+
+arduba = {
+	county = c_rama
+	barony = b_travnik 
+
+	character_modifier = {
+		name = holy_site_arduba_effect_name
+		clergy_opinion = 5
+	}
+}
+
+delminium = {
+	county = c_zavrsje
+	barony = b_duvno 
+	character_modifier = {
+		name = holy_site_delminium_effect_name
+		diplomacy = 1
+		martial = 1
+	}
+}
+
+segestica = {
+	county = c_zagreb
+	barony = b_sisak
+	character_modifier = {
+		name = holy_site_kent_effect_name
+		religious_vassal_opinion = 5
+		sway_scheme_power_mult = 0.1
+	}
+}
+
+tomorr = { # The Albanian/Illyrian equivalent of Mt. Olympus
+	county = c_antipatreia
+	barony = b_antipatreia
+	
+	character_modifier = {
+		name = holy_site_tomorr_effect_name
+		monthly_piety_gain_mult = 0.2
+	}
+}
+
+rozafa = { # An ancient Illyrian stronghold mythically build by the immurement of one of the builder's wives
+	county = c_duklja
+	barony = b_skadar
+	
+	character_modifier = {
+		name = holy_site_rozafa_effect_name
+		stewardship_per_piety_level = 2
+	}
+}
+
+rodons_cape = { # A site supposedly sacred to the deity Rodon
+	county = c_arbanon
+	barony = b_lezhe
+	
+	character_modifier = {
+		name = holy_site_rodons_cape_effect_name
+		naval_movement_speed_mult = 0.2
+		embarkation_cost_mult = -0.25
+	}
+}
+
+
+elkukalni = {
+	county = c_palanga
+	character_modifier = {
+		name = holy_site_elkukalni_effect_name
+		hills_advantage = 5
+		monthly_county_control_growth_factor = 0.1
+	}
+}
+pokaini = {
+	county = c_zemigalians
+	character_modifier = {
+		name = holy_site_pokaini_effect_name
+		forest_advantage = 5
+		retreat_losses = -0.1
+	}
+}
+
+
+kukaveitis = {
+	county = c_kernave
+	barony = b_kernave
+	character_modifier = {
+		name = holy_site_kukaveitis_effect_name
+		monthly_piety_gain_mult = 0.1
+		short_reign_duration_mult = -0.25
+	}
+}
+
+stelmuze = {
+	county = c_selpils
+	character_modifier = {
+		name = holy_site_stelmuze_effect_name
+		intrigue_per_prestige_level = 1
+		knight_effectiveness_mult = 0.2
+	}
+}
+
+rambynas = {
+	county = c_memel
+	barony = b_taurage
+	character_modifier = {
+		name = holy_site_rambynas_effect_name
+		hard_casualty_modifier = -0.1
+		prowess_per_prestige_level = 1
+	}
+}
+romowe = {
+	county = c_konigsberg
+	barony = b_konigsberg
+	character_modifier = {
+		name = holy_site_romowe_effect_name
+		controlled_province_advantage = 5
+		same_faith_opinion = 5
+	}
+}
+
+naura = {
+	county = c_volkovysk
+	character_modifier = {
+		name = holy_site_naura_effect_name
+		monthly_prestige_gain_mult = 0.2
+		prowess = 2
+	}
+}
+sventakupselai = {
+	county = c_angerburg
+	barony = b_suvalkai
+	character_modifier = {
+		name = holy_site_sventakupsela_effect_name
+		martial_per_piety_level = 1
+		personal_scheme_power_mult = 0.1
+	}
+}
+
+# Sramanic
+
+sravasti = { # Sravasti (or Savatthi), possibly the origin point of the Ajivika school
+	county = c_sravasti
+	barony = b_sravasti
+	
+	character_modifier = {
+		name = holy_site_sravasti_effect_name
+		same_faith_opinion = 10
+	}
+}
+
+magadha = { # Pataliputra, ancient capital of the Maurya Empire and location of the sacred Barabar Caves
+	county = c_magadha
+	barony = b_pataliputra
+	
+	character_modifier = {
+		name = holy_site_magadha_effect_name
+		stress_loss_mult = 0.2
+		monthly_piety_gain_mult = 0.1
+	}
+}
+
+mahishaka = { # Dwarasamudra, to represent Ajivika influence in Karnata
+	county = c_mahishaka
+	barony = b_dwarasamudra
+	
+	character_modifier = {
+		name = holy_site_mahishaka_effect_name
+		stewardship_per_piety_level = 1
+		domain_tax_same_faith_mult = 0.05
+	}
+}
+
+cholamandalam = { # Tanjavur, to represent Ajivika influence in Tamilakam
+	county = c_cholamandalam
+	barony = b_tanjavur
+	
+	character_modifier = {
+		name = holy_site_cholamandalam_effect_name
+		defender_advantage = 5
+		prowess = 1
+	}
+}
+
+rohana = { # Magampura, to represent Ajivika influence in Lanka
+	county = c_rohana
+	barony = b_magampura
+	
+	character_modifier = {
+		name = holy_site_rohana_effect_name
+		monthly_county_control_growth_factor = 0.1
+	}
+}
+
+bhumilka = { # Vamanasthali, to represent Ajivika influence in Gujarat
+	county = c_bhumilka
+	barony = b_vamanasthali
+	
+	character_modifier = {
+		name = holy_site_bhumilka_effect_name
+		development_growth_factor = 0.1
+	}
+}
+
+#Christian
+toulouse = { # Toulouse, major hotbed of heresy for both the Henricians and Cathars
+	county = c_toulouse
+	barony = b_toulouse
+	
+	character_modifier = {
+		name = holy_site_toulouse_effect_name
+		levy_size = 0.1
+		defender_advantage = 5
+	}
+}
+
+macon = { # Cluny, possibly Henry's birthplace - others include Lausanne, Bruys and Le Mans
+	county = c_macon
+	barony = b_cluny
+	
+	character_modifier = {
+		name = holy_site_macon_effect_name
+		diplomacy_per_piety_level = 1
+	}
+}
+
+# Sikh
+
+lahur = { # Lahur, the Punjab capital and eventual location of Amritsar, the holiest Sikh shrine and home of the Golden Temple
+	county = c_lahur
+	
+	character_modifier = {
+		name = holy_site_lahur_effect_name
+		same_faith_opinion = 10
+		levy_reinforcement_rate_same_faith = 0.25
+	}
+}
+
+ashmaka = { # Nanded, Guru Gobind Singh's capital and a focal point of Sikhism in central India
+	county = c_ashmaka
+	
+	character_modifier = {
+		name = holy_site_ashmaka_effect_name
+		controlled_province_advantage = 10
+		monthly_county_control_growth_factor = 0.1
+	}
+}
+
+jagatipur = { # Jagatipur, representing Guru Nanak's 1514-1518 journey and the various Himalayan shrines in the region
+	county = c_jagatipur
+	
+	character_modifier = {
+		name = holy_site_jagatipur_effect_name
+		learning_per_piety_level = 1
+		monthly_piety_gain_mult = 0.1
+	}
+}
+
+debul = { # Debul, representing the Nanakpanthis' stronghold in the Sindh
+	county = c_debul
+	
+	character_modifier = {
+		name = holy_site_debul_effect_name
+		county_opinion_add = 5
+		domain_tax_same_faith_mult = 0.1
+	}
+}
+
+dehradun = { # Dehradun, where Ram Rai and his followers settled (now Uttarakhand)
+	county = c_garwhal
+	
+	character_modifier = {
+		name = holy_site_dehradun_effect_name
+		different_faith_opinion = 10
+		different_culture_opinion = 10
+	}
+}
+
+# Maulvi
+
+aror = { # Aror, site of the battle of Aror (c711), in which Muhammad ibn Qasim began the Muslim advance into India
+	county = c_aror
+	
+	character_modifier = {
+		name = holy_site_aror_effect_name
+		different_faith_opinion = 10
+		different_culture_opinion = 10
+	}
+}
+
+# Hindokushan holy sites added by Shautora
+
+chitral = { # Site of Tirich Mir, home of the Goddess Krumai.
+	county = c_chitral
+	barony = b_chitral
+
+	character_modifier = {
+		name = holy_site_athens_effect_name
+		monthly_piety_gain_mult = 0.2
+	}
+}
+
+taxila = { # Ancient capital of Gandhara, and the site of possibly the first ever university.
+	county = c_udabhanda
+	barony = b_attak
+	
+	character_modifier = {
+		name = holy_site_delphi_effect_name
+		learning_per_piety_level = 1
+	}
+}
+
+kushteki = { # Home to the great (chief?) temple of Imra/Mandeo, and home to the iron rod that was the axis mundi.
+	county = c_munjan
+	barony = b_munjan
+	
+	character_modifier = {
+		name = holy_site_kushteki_effect_name
+		stewardship_per_piety_level = 1
+		clergy_opinion = 10
+	}
+}
+
+# Nardain (Mardan)?  Apparently there was a temple here.
+
+zamindawar = { # Home to the great temple of Zun, the name 'Zamindawar' being a reference to his epithet, 'Giver of Justice'
+	county = c_zamindawar
+	barony = b_zamindawar
+	
+	character_modifier = {
+		name = holy_site_zamindawar_effect_name
+		monthly_piety_gain_mult = 0.2
+		clergy_opinion = 10
+	}
+}
+
+asyut = { # Asyut, a centre of Hermetic learning in Egypt
+	county = c_asyut
+	
+	character_modifier = {
+		name = holy_site_asyut_effect_name
+		learning = 1
+		learning_per_piety_level = 1
+	}
+}
+
+takrit = {
+	county = c_takrit
+
+	character_modifier = {
+		name = holy_site_takrit_effect_name
+		build_speed = -0.1
+		stewardship = 1
+	}
+}
+
+sardan = {
+	county = c_sardan
+
+	character_modifier = {
+		name = holy_site_sardan_effect_name
+		dread_baseline_add = 5
+		monthly_tyranny = -0.1
+		tyranny_gain_mult = -0.1
+	}
+}
+
+raqqa = {
+	county = c_raqqa
+
+	character_modifier = {
+		name = holy_site_raqqa_effect_name
+		knight_effectiveness_mult = 0.1
+		knight_limit = 1
+	}
+}
+
+tiberias = {
+	county = c_tiberias
+
+	character_modifier = {
+		name = holy_site_tiberias_effect_name
+		same_faith_opinion = 5
+		same_culture_opinion = 5
+	}
+}
+
+homs = {
+	county = c_homs
+
+	character_modifier = {
+		name = holy_site_homs_effect_name
+		fertility = 0.5
+		stress_loss_mult = 0.2
+	}
+}
+
+negev = {
+	county = c_negev
+
+	character_modifier = {
+		name = holy_site_negev_effect_name
+		desert_advantage = 5
+		desert_mountains_advantage = 5
+		drylands_advantage = 5
+	}
+}
+
+ghazza = {
+	county = c_ghazza
+
+	character_modifier = {
+		name = holy_site_ghazza_effect_name
+		learning = 1
+		clergy_opinion = 5
+	}
+}
+
+chania = {
+	county = c_chania
+
+	character_modifier = {
+		name = holy_site_chania_effect_name
+		direct_vassal_opinion = 10
+	}
+}
+
+glamorgan = {
+	county = c_glamorgan
+
+	character_modifier = {
+		name = holy_site_glamorgan_effect_name
+		monthly_piety_gain_per_knight_mult = 0.02
+		monthly_prestige_gain_per_knight_mult = 0.02
+	}
+}
+
+denbighshire = {
+	county = c_denbighshire
+
+	character_modifier = {
+		name = holy_site_denbighshire_effect_name
+		short_reign_duration_mult = -0.25
+		personal_scheme_power_add = 5
+	}
+}
+
+sir_faesyfed = {
+	county = c_sir_faesyfed
+
+	character_modifier = {
+		name = holy_site_sir_faesyfed_effect_name
+		same_faith_opinion = 5
+		defender_advantage = 5
+	}
+}
+
+geneva = {
+	county = c_geneva
+
+	character_modifier = {
+		name = holy_site_geneva_effect_name
+		religious_vassal_opinion = 5
+		sway_scheme_power_mult = 0.1
+	}
+}
+
+anjou = {
+	county = c_anjou
+
+	character_modifier = {
+		name = holy_site_anjou_effect_name
+		religious_vassal_opinion = 5
+		sway_scheme_power_mult = 0.1
+	}
+}
+
+tours = {
+	county = c_tourraine
+
+	character_modifier = {
+		name = holy_site_tours_effect_name
+		religious_vassal_opinion = 5
+		sway_scheme_power_mult = 0.1
+	}
+}
+
+wittenberg = {
+	county = c_wittenberg
+
+	character_modifier = {
+		name = holy_site_wittenberg_effect_name
+		religious_vassal_opinion = 5
+		monthly_piety_gain_per_knight_mult = 0.01
+		heavy_infantry_damage_mult = 0.05
+	}
+}
+
+kunlun = { # Kunlun (probably Mount Kailash), sacred to many eastern faiths and symbolic of the Chinese god Xiwangmu
+	county = c_kyunglung
+	
+	character_modifier = {
+		name = holy_site_kunlun_effect_name
+		defender_advantage = 5
+		prowess_per_piety_level = 1
+	}
+}
+
+buzhou = { # Mount Buzhou, which supported the heavens and is symbolic of the Chinese god Gonggong
+	county = c_yarkand
+	
+	character_modifier = {
+		name = holy_site_buzhou_effect_name
+		defender_advantage = 5
+		prowess_per_piety_level = 1
+	}
+}
+
+abydos = {
+	county = c_asyut
+	barony = b_ibshaya
+	
+	character_modifier = {
+		name = holy_site_abydos_effect_name
+		monthly_piety_gain_per_happy_powerful_vassal_mult = 0.02
+	}
+}
+
+luxor = {
+	county = c_qus
+	barony = b_qina
+	
+	character_modifier = {
+		name = holy_site_luxor_effect_name
+		monthly_piety_gain_per_knight_mult = 0.01
+		prowess_per_piety_level = 1
+	}
+}
+
+abu_simbel = {
+	county = c_qasr_ibrim
+	barony = b_qasr_ibrim
+	
+	character_modifier = {
+		name = holy_site_abu_simbel_effect_name
+		monthly_county_control_growth_factor = 0.1
+	}
+}
+
+kucha = { # Kucha, home of the Kizil Caves, an ancient Buddhist shrine in Xinjiang (and the oldest in China)
+	county = c_kucha
+	barony = b_kucha
+	
+	character_modifier = {
+		name = holy_site_kucha_effect_name
+		different_faith_opinion = 10
+		different_culture_opinion = 10
+	}
+}
+
+mohadavasaka = { # Mohadavasaka, location of the Devni Mori shrines and an important Buddhist centre in Gujarat
+	county = c_mohadavasaka
+	
+	character_modifier = {
+		name = holy_site_mohadavasaka_effect_name
+		domain_tax_same_faith_mult = 0.1
+	}
+}
+
+manyakheta = { # Manyakheta, location of Aihole, an important Buddhist temple complex in Northern Karnata
+	county = c_kalyani
+	barony = b_manyakheta
+	
+	character_modifier = {
+		name = holy_site_manyakheta_effect_name
+		prowess = 1
+		levy_reinforcement_rate_same_faith = 0.2
+	}
+}
+
+hebron = {
+	county = c_hebron
+	barony = b_hebron
+	
+	character_modifier = {
+		name = holy_site_hebron_effect_name
+		monthly_county_control_growth_factor = 0.1
+	}
+}
+
+qom = {
+	county = c_qom
+	barony = b_qom
+	
+	character_modifier = {
+		name = holy_site_qom_effect_name
+		stewardship = 1
+		sway_scheme_power_mult = 0.2
+	}
+}
+
+tus = {
+	county = c_tus
+	barony = b_tus
+	
+	character_modifier = {
+		name = holy_site_tus_effect_name
+		monthly_piety_gain_per_knight_mult = 0.01
+		prowess_per_piety_level = 1
+	}
+}
+
+hebron = {
+	county = c_hebron
+	barony = b_hebron
+}
+
+bukhara = {
+	county = c_bukhara
+	barony = b_bukhara
+}
+
+millawanda = {
+	county = c_lycaonia
+	barony = b_ikonion
+	
+	character_modifier = {
+		name = holy_site_millawanda_effect_name
+		monthly_piety_gain_per_knight_mult = 0.01
+	}
+}
+
+knossos = {
+	county = c_chandax
+	barony = b_iraklio
+	
+	character_modifier = {
+		name = holy_site_knossos_effect_name
+		stewardship = 1
+		coastal_advantage = 5
+	}
+}
+
+arrapha = {
+	county = c_kirkuk
+	barony = b_kirkuk
+	
+	character_modifier = {
+		name = holy_site_arrapha_effect_name
+		diplomacy_per_piety_level = 1
+	}
+}
+
+halman = {
+	county = c_hama
+	
+	character_modifier = {
+		name = holy_site_halman_effect_name
+		stewardship = 1
+	}
+}
+
+luluban = {
+	county = c_kermanshah
+	
+	character_modifier = {
+		name = holy_site_luluban_effect_name
+		intrigue_per_piety_level = 1
+	}
+}
+
+simurrum = {
+	county = c_iskaf
+	barony = b_bandanijan
+	
+	character_modifier = {
+		name = holy_site_simurrum_effect_name
+		monthly_piety_gain_per_knight_mult = 0.02
+		knight_effectiveness_mult = 0.1
+	}
+}
+
+ugarit = {
+	county = c_saone
+	barony = b_latakia
+	
+	character_modifier = {
+		name = holy_site_ugarit_effect_name
+		health = 0.1
+	}
+}
+
+mari = {
+	county = c_al-haditha
+	barony = b_ana
+	
+	character_modifier = {
+		name = holy_site_mari_effect_name
+		monthly_piety_gain_per_knight_mult = 0.01
+		knight_effectiveness_mult = 0.1
+	}
+}
+
+emar = {
+	county = c_dausar
+	
+	character_modifier = {
+		name = holy_site_emar_effect_name
+		diplomacy = 1
+		powerful_vassal_opinion = 5
+	}
+}
+
+tyre = {
+	county = c_tyrus
+	
+	character_modifier = {
+		name = holy_site_tyre_effect_name
+		fertility = 0.10
+		monthly_lifestyle_xp_gain_mult = 0.15
+	}
+}
+
+byblos = {
+	county = c_gibelet
+	
+	character_modifier = {
+		name = holy_site_byblos_effect_name
+		diplomacy_per_piety_level = 1
+	}
+}
+
+
+pappa = {
+	county = c_limisol
+	barony = b_kourion
+	
+	character_modifier = {
+		name = holy_site_pappa_effect_name
+		same_faith_opinion = 10
+	}
+}
+
+philia = {
+	county = c_limisol
+	barony = b_limisol
+	
+	character_modifier = {
+		name = holy_site_philia_effect_name
+		development_growth_factor = 0.1
+		stewardship = 1
+	}
+}
+
+nagar = {
+	county = c_khabur
+	barony = b_mijdal
+	
+	character_modifier = {
+		name = holy_site_nagar_effect_name
+		development_growth_factor = 0.1
+		church_holding_build_gold_cost = -0.1
+	}
+}
+
+enare = {
+	county = c_aanaarjavri
+	barony = b_aanaarjavri
+
+	character_modifier = {
+		name = holy_site_enare_effect_name
+		taiga_max_combat_roll = 4
+		high_boreal_max_combat_roll = 4
+		archers_toughness_mult = 0.1
+	}
+}
+
+urkesh = {
+	county = c_tall_basma
+	barony = b_saird
+	
+	character_modifier = {
+		name = holy_site_urkesh_effect_name
+		monthly_piety_gain_mult = 0.05
+		learning_per_piety_level = 1
+	}
+}
+
+liyan = {
+	county = c_mandestan
+	barony = b_bushkanat
+	
+	character_modifier = {
+		name = holy_site_liyan_effect_name
+		diplomacy_per_piety_level = 1
+	}
+}
+
+anshan = {
+	county = c_istakhr
+	barony = b_istakhr
+	
+	character_modifier = {
+		name = holy_site_anshan_effect_name
+		stewardship = 1
+	}
+}
+
+susan = {
+	county = c_tib
+	barony = b_as-sus
+	
+	character_modifier = {
+		name = holy_site_susan_effect_name
+		martial_per_piety_level = 1
+		knight_effectiveness_mult = 0.1
+	}
+}
+
+pylos = {
+	county = c_messenia
+	barony = b_modon
+	
+	character_modifier = {
+		name = holy_site_pylos_effect_name
+		stewardship = 1
+		sway_scheme_power_mult = 0.2
+	}
+}
+
+thera = {
+	county = c_naxos
+	barony = b_thera
+	
+	character_modifier = {
+		name = holy_site_thera_effect_name
+		direct_vassal_opinion = 5
+	}
+}
+
+apasa = {
+	county = c_nicopolis
+	barony = b_angelokastron
+	
+	character_modifier = {
+		name = holy_site_apasa_effect_name
+		monthly_prestige_gain_mult = 0.1
+	}
+}
+
+lemnos = {
+	county = c_lesbos
+	barony = b_lemnos
+	
+	character_modifier = {
+		name = holy_site_lemnos_effect_name
+		learning = 1
+		tyranny_gain_mult = -0.2
+	}
+}
+
+zakros = {
+	county = c_chandax
+	barony = b_ierapetra
+	
+	character_modifier = {
+		name = holy_site_zakros_effect_name
+		diplomacy = 1
+		clergy_opinion = 5
+	}
+}
+
+dodona = {
+	county = c_epeiros
+	barony = b_ioaninna
+	
+	character_modifier = {
+		name = holy_site_dodona_effect_name
+		fertility = 0.15
+	}
+}
+
+olympos = {
+	county = c_rhodos
+	barony = b_karpathos
+	
+	character_modifier = {
+		name = holy_site_olympos_effect_name
+		stewardship = 1
+		courtier_and_guest_opinion = 5
+	}
+}
+
+delphi = {
+	county = c_boeotia
+	barony = b_amfissa
+	
+	character_modifier = {
+		name = holy_site_delphi_effect_name
+		martial = 1
+		hard_casualty_modifier = -0.1
+	}
+}
+
+olympia = {
+	county = c_arcadia
+	barony = b_arcadia
+	
+	character_modifier = {
+		name = holy_site_olympia_effect_name
+		monthly_piety_gain_mult = 0.1
+	}
+}
+
+delos = {
+	county = c_naxos
+	barony = b_tinos
+	
+	character_modifier = {
+		name = holy_site_delos_effect_name
+		stress_loss_mult = 0.2
+		life_expectancy = 1
+	}
+}
+
+lunden = { #For Anglicans, also first documented coronation is that of William the conqueror in Westminster Abbey which is located in Lunden/London
+	county = c_middlesex
+	barony = b_lunden
+
+	character_modifier = {
+		learning_per_piety_level = 2
+		knight_effectiveness_mult = 0.2
+	}
+}
+
+omine = {
+	county = c_kii
+	
+	character_modifier = {
+		name = holy_site_omine_effect_name
+		diplomacy_per_piety_level = 1
+	}
+}
+
+sipylos = { # Mount Sipylos 
+	county = c_smyrna
+	barony = b_magnesia
+
+	character_modifier = {
+		name = holy_site_sipylos_effect_name
+		fertility = 0.1
+	}
+}
+
+mylasa = { # site of the sanctuary of Zeus Karios mentioned by Herodotus. Labraunda is located nearby 
+	county = c_caria
+	barony = b_mylasa
+
+	character_modifier = {
+		name = holy_site_mylasa_effect_name
+		cultural_head_fascination_mult = 0.05
+		monthly_county_control_change_factor = 0.05
+	}
+}
+
+alabanda = {
+	county = c_ionia
+	barony = b_tralleis
+
+	character_modifier = {
+		name = holy_site_alabanda_effect_name
+		light_cavalry_pursuit_mult = 0.1
+		light_cavalry_toughness_mult = 0.1
+	}
+}
+
+hierapolis = { # location of a famous Ploutonion
+	county = c_chonae
+	barony = b_chonae
+
+	character_modifier = {
+		name = holy_site_hierapolis_effect_name
+		intrigue_per_piety_level = 1
+	}
+}
+
+sardis = {
+	county = c_lydia
+	barony = b_sardes
+
+	character_modifier = {
+		name = holy_site_sardis_effect_name
+		domain_tax_mult = 0.05
+	}
+}
+
+mount_ida = {
+	county = c_chania
+	barony = b_rethymno
+
+	character_modifier = {
+		name = holy_site_mount_ida_effect_name
+		prowess = 1
+	}
+}
+
+thermopylai = {
+	county = c_boeotia
+	barony = b_boudounitsa
+
+	character_modifier = {
+		name = holy_site_thermopylai_effect_name
+		defender_advantage = 5
+	}
+}
+limnai = { # sanctuary of Artemis Limnatis
+	county = c_messenia
+	barony = b_kalamata
+
+	character_modifier = {
+		name = holy_site_limnai_effect_name
+		monthly_county_control_change_factor = 0.1
+	}
+}
+
+kos = { # Asklepieion of Kos
+	county = c_rhodos
+	barony = b_kos
+
+	# The Asklepieion was the site of a prominent medical school
+	character_modifier = {
+		name = holy_site_kos_effect_name
+		negate_learning_penalty_add = 2
+		negate_health_penalty_add = 0.1
+	}
+}
+
+didyma = {
+	county = c_ionia
+	barony = b_iassus
+
+	# The sanctuary was desecrated and left abandoned by the Persians, priests all over will be grateful if we can prevent this from happening again 
+	character_modifier = {
+		name = holy_site_didyma_effect_name
+		clergy_opinion = 5
+		personal_scheme_power_mult = 0.1
+	}
+}
+
+aigai = { # The Tombs of the Argead kings.
+	county = c_veria
+	barony = b_veria
+
+	# The Argeads are an illustrious dynasty. Holding onto Aigai will increase our standing in the world!
+	character_modifier = {
+		name = holy_site_aigai_effect_name
+		short_reign_duration_mult = -0.1
+		monthly_prestige_gain_mult = 0.05
+	}
+}
+
+dion = { # Major sanctuary to Zeus Olympios
+	county = c_thessalia
+	barony = b_ellason
+
+	# The Macedonians held victory feasts and purification rites of the army here
+	character_modifier = {
+		name = holy_site_dion_effect_name
+		martial_per_piety_level = 1
+		knight_effectiveness_mult = 0.2
+	}
+}
+
+
+lykosoura = { # Sanctuary of Despoina, the sanctuaries of Zeus and Pan are located nearby on Mt Lykaion
+	county = c_arcadia
+	barony = b_karytaina
+
+	# The people of Arcadia can unite behind their common reverence for Mt Lykaion and Lykosoura
+	character_modifier = {
+		name = holy_site_lykosoura_effect_name
+		controlled_province_advantage = 5
+		county_opinion_add = 5
+	}
+}
+
+kichyros = { # Nekromanteion
+	county = c_thessalia
+	barony = b_platamon
+
+	# Communing with your dead relatives is a handy way of getting closure
+	character_modifier = {
+		name = holy_site_kichyros_effect_name
+		close_relative_opinion = 5
+		stress_loss_mult = 0.1
+	}
+}
+
+paneas = { # Baniyas
+	county = c_tortosa
+	barony = b_baniyassyria
+
+	character_modifier = {
+		name = holy_site_paneas_effect_name
+		close_relative_opinion = 5
+		stress_loss_mult = 0.1
+	}
+}
+
+thebai = {
+	county = c_boeotia
+	barony = b_thebeshellas
+	
+	character_modifier = {
+		name = holy_site_thebai_effect_name
+		intrigue = 1
+		learning = 1
+	}
+}
+
+mount_dindymon = {
+	county = c_kyzikos
+
+	# The cult of Meter Dindymene was alleged to have been founded by the Argonauts
+	character_modifier = {
+		name = holy_site_mount_dindymon_effect_name
+		supply_duration = 0.25
+		prowess = 1
+	}
+}
+
+herakleia_pontike = { # location of a Metroon (i.e. a sanctuary to the Great Mother)
+	county = c_honorias
+	barony = b_herakleia
+
+	# We will liberate our brethren by defeating the Heracleans once and for all!
+	character_modifier = {
+		name = holy_site_mount_ida_effect_name
+		clergy_opinion = 10
+		monthly_prestige_gain_mult = 0.2
+	}
+}
+
+pangaion = { # sacred mountain with links to the myths of Orpheus and Rhesus, possibly hosted an oracle of Dionysus
+	county = c_serres
+	barony = b_kavala
+
+	# Pangaion is best known for its gold mines
+	character_modifier = {
+		name = holy_site_pangaion_effect_name
+		domain_tax_mult = 0.05
+	}
+}
+
+shiloto = { # important peak sanctuary and royal residence, in Roman times the sanctuary was dedicated to the worship of Apollo Karsenos
+	county = c_thracemess
+	barony = b_burgas
+
+	# The sanctuary is at the crossroads between the Thracian tribes and Greek colonies
+	character_modifier = {
+		name = holy_site_shiloto_effect_name
+		diplomacy_per_piety_level = 1
+	}
+}
+starosel = { # major sanctuary in the Hebros valley
+	county = c_kran
+	barony = b_kopsis
+
+	# Possibly connected with the Odrysian royal dynasty
+	character_modifier = {
+		name = holy_site_starosel_effect_name
+		monthly_county_control_change_factor = 0.1
+	}
+}
+ioros = { # speculative location of the famous Krestonian oracle of Dionysus, not too far from where the Derveni papyri were found
+	county = c_thessalonika
+	barony = b_gynaikokastron
+
+	# Krestonia was once inhabited by the Thracian Bisaltai, the oracle there was used to predict whether the harvests would be fruitful
+	character_modifier = {
+		name = holy_site_ioros_effect_name
+		different_culture_opinion = 5
+	}
+}
+
+zlata_panega = { # site of a large Roman-era shrine of Asklepios, bearing local epithets such as Saldoouissēnos, Saldokelēnos and Saldēnos
+	county = c_vratsa
+	barony = b_lom
+
+	#The sanctuary attracts a visitors from across Thrace, including magistrates and bureaucrats
+	character_modifier = {
+		name = holy_site_zlata_panega_effect_name
+		negate_diplomacy_penalty_add = 1
+	}
+}
+
+dolno_dryanovo = { # megalithic sanctuary and possible oracle site
+	county = c_pirin
+	barony = b_scaptopara
+
+	# The area contains several rock formations which, according to folk tradition, provide good fortune to those who squeeze between them 
+	character_modifier = {
+		name = holy_site_dolno_dryanovo_effect_name
+		mountains_min_combat_roll = 2
+		valley_min_combat_roll = 2
+		personal_scheme_power_mult = 0.05
+	}
+}
+tatul = { # megalithic sanctuary and tomb
+	county = c_beroe
+	barony = b_haskovo
+	# The sanctuary appears to have centred around the worship of a deceased hero
+	character_modifier = {
+		name = holy_site_tatul_effect_name
+		martial = 1
+		monthly_prestige_gain_mult = 0.1
+	}
+}
+yaylata = { # site in northwestern Thrace famous for its rock cut tombs and cave dwellings
+	county = c_mesembria
+	barony = b_karvuna
+
+	# Save time and money by using existing caves for your houses and temples! 
+	character_modifier = {
+		name = holy_site_yaylata_effect_name
+		build_speed = -0.1
+		build_gold_cost = -0.05
+	}
+}
+
+ruse = { # Hellenistic & Roman sanctuary of Apollo and the Thracian Hero 
+	county = c_arcadia
+	barony = b_arcadia
+
+	#The site is associated with the Thracian rider
+	character_modifier = {
+		name = holy_site_ruse_effect_name
+		monthly_piety_gain_per_knight_mult = 0.01
+		monthly_prestige_gain_per_knight_mult = 0.01
+	}
+}
+
+astibos = { # historic Paeonian capital; the king would ritually bathe in the nearby Astibos river 
+	county = c_strumica
+	barony = b_shtip
+
+	# Controlling both the city and the river grants us greater standing!
+	character_modifier = {
+		name = holy_site_astibos_effect_name
+		monthly_piety_gain_mult = 0.1
+	}
+}
+keilaiskos = { # Sanctuary of Asclepius Keiladeēnos/Keilaiskēnos, close to the hypothetical Agrianian capital at Pernik
+	county = c_velbazhd
+	barony = b_pernik
+
+	# Controlling this region is the first step to restoring the Agrianian kingdom
+	character_modifier = {
+		name = holy_site_keilaiskos_effect_name
+		title_creation_cost_mult = -0.1
+	}
+}
+
+rhizon = { # Important ethnic site for all of the Illyrians, Ancient Cyclopean City Walls. Important site of a war god.
+	county = c_travunia
+	barony = b_risan
+
+	character_modifier = {
+		name = holy_site_rhizon_effect_name
+		monthly_county_control_change_factor = 0.1
+	}
+}
+
+lissos = { # Place where Kadmos is supposed to have died and turned into a serpent, Teuta Line Promise (yikes)
+	county = c_mosynopolis
+	barony = b_mosynopolis
+
+	character_modifier = {
+		name = holy_site_lissos_effect_name
+		diplomatic_range_mult = 0.1
+	}
+}
+
+salona = { # God of wine + it was helenistic emporium, later place of importance for Liber, who seems to have ties to a native deity.
+	county = c_cetina
+	barony = b_solin
+
+	character_modifier = {
+		name = holy_site_salona_effect_name
+		cultural_head_fascination_mult = 0.05
+	}
+}
+
+phlanona = { #Extensive cult of Sentona during Roman Times - Local Goddess of Travellers, also other local cults of Ica etc. around it (Albona)
+	county = c_pula
+	#barony = b_labin #Simmilar case as with Ainona, here Albona could potentially also serve as a holysite.
+
+	character_modifier = {
+		name = holy_site_phlanona_effect_name
+		embarkation_cost_mult = -0.05
+	}
+}
+
+ainona = { #https://www.spottinghistory.com/view/10085/roman-temple-of-nin/, Important place of worship of Illyrian Minor Goddesses
+	county = c_zadar
+	barony = b_nin
+
+	character_modifier = {
+		name = holy_site_ainona_effect_name
+		monthly_piety_gain_mult = 0.05 #Place of multiple cults, Roman, Illyrian and Greek
+	}
+}
+
+treveson = { #Privilice: Shrine to Bindo, the most famous that survived.
+	county = c_treviso
+	barony = b_treviso
+
+	character_modifier = {
+		name = holy_site_treveson_effect_name
+		monthly_piety_gain_mult = 0.05 #Seemingly important holysite, main for Iapodes.
+	}
+}
+
+opacic = { # A primitive (and possibly early) relief of Silvanus and Diana
+	county = c_zavrsje
+	barony = b_glamoc
+
+	# Displays Silvanus and Diana as a couple.
+	character_modifier = {
+		name = holy_site_opacic_effect_name
+		fertility = 0.1
+	}
+}
+
+topusko = { # The only mention of Vidasus and Thana
+	county = c_modrus
+	barony = b_topusko
+
+	# Hunting and living in forests ultimately requires a lot of strength.
+	character_modifier = {
+		name = holy_site_topusko_effect_name
+		prowess_per_prestige_level = 1
+	}
+}
+
+varazdinske = { # The site of three altars to Silvanus
+	county = c_zagorje
+	barony = b_garestin
+
+	# These deities are forest deities and should give benefits in forests.
+	character_modifier = {
+		name = holy_site_varazdinske_effect_name
+		forest_advantage = 5
+	}
+}
+
+osijek = { # The site of an inscription to Silvanus
+	county = c_vukovar
+	barony = b_osijek
+
+	# Hunting often occurs in forests.
+	character_modifier = {
+		name = holy_site_osijek_effect_name
+		lifestyle_hunter_xp_gain_mult = 0.3
+	}
+}
+
+viminicium = { # The site of an inscription to Silvanus
+	county = c_beograd
+	barony = b_smederevo
+
+	# This region saw a lot of fortification.
+	character_modifier = {
+		name = holy_site_viminicium_effect_name
+		additional_fort_level = 1
+	}
+}
+
+singidunum = { # Capital of the Scordisci
+	county = c_beograd
+	barony = b_beograd
+
+	# The Scordisci formed an integrated society from Celts, Thracians and Illyrians.
+	character_modifier = {
+		name = holy_site_singidunum_effect_name
+		cultural_head_acceptance_gain_mult = 0.1
+		minority_vassal_opinion = 5
+	}
+}
+
+tylis = { # The Celtic kingdom in Thrace
+	county = c_pomoravlje
+	barony = b_glubocica
+
+	# Tylis extorted neighbouring states for their money.
+	character_modifier = {
+		name = holy_site_tylis_effect_name
+		max_loot_mult = 0.1
+	}
+}
+
+serdika = { # The votive relief that is used as the faith icon was found here.
+	county = c_sredets
+	barony = b_sredets
+
+	# The long travels of the Celts has taught them how to travel safely and efficiently.
+	character_modifier = {
+		name = holy_site_serdika_effect_name
+		character_travel_safety_mult = 0.05
+	}
+}
+
+scardus = { # The mountain that has the same name as the god.
+	county = c_debar
+
+	# 'Conquering' the mountain teaches the Celts how to live there and breeds respect.
+	character_modifier = {
+		name = holy_site_scardus_effect_name
+		mountains_development_growth_factor = 0.2
+		county_opinion_add = 5
+	}
+}
+
+polai = { #Greatest Istrian City during roman times, sophisticated local heritage and religion + Hellenising myth about deriving from Colchidans.
+	county = c_pula
+	barona = b_pula
+
+	character_modifier = {
+		name = holy_site_polai_effect_name
+		diplomatic_range_mult = 0.1 #Hellenising myth about deriving from Colchidans, instead of Lissos as a Holysite
+	}
+}
+
+nauporton = { #Aemona-Nauportus-Fuzine Gods
+	county = c_ljubljana # TODO: Fix once that place is in the mod!
+	barony = b_ljubljana #Because it can be moved to Aemona later when romans arrive?
+
+	character_modifier = {
+		name = holy_site_nauporton_effect_name
+		naval_movement_speed_mult = 0.1 #Both Arquornia and Laburus were deities of water traffic
+	}
+}
+
+poetovio = { #Multiple mentions, not only of MITHRAISM but earlier Illyric cults. It was important city (Today Ptuj) which produced many statues.
+	county = c_zagorje #https://en.wikipedia.org/wiki/Aquae_Iasae
+	barony = b_krizevci #https://en.wikipedia.org/wiki/Illyrian_religion#Liburnia_and_Istria - Illyrian Mithraism
+
+	character_modifier = {
+		name = holy_site_poetovio_effect_name
+		development_growth_factor = 0.10 #The city had influenced those around it, not only through religious sculpture but also economy. No Salona.
+	}
+}
+
+verona = {
+	county = c_verona
+
+	character_modifier = {
+		name = holy_site_verona_effect_name
+		monthly_prestige_gain_mult = 0.1
+		fertility = 0.1	
+	}
+}
+mantua = {
+	county = c_mantua
+
+	character_modifier = {
+		name = holy_site_mantua_effect_name
+		defender_advantage = 5		
+		men_at_arms_maintenance = -0.05	
+	}
+}
+
+brescia = {
+	county = c_brescia
+	
+	character_modifier = {
+		name = holy_site_brescia_effect_name
+		knight_effectiveness_mult = 0.2
+		martial_per_piety_level = 1
+	}
+}
+
+friuli = {
+	county = c_friuli
+	barony = b_caorle
+	
+	character_modifier = {
+		name = holy_site_friuli_effect_name
+		direct_vassal_opinion = 5
+		tax_mult = 0.15
+	}
+}
+
+trent = {
+	county = c_trent
+	barony = b_trento
+	
+	character_modifier = {
+		name = holy_site_trent_effect_name
+		diplomacy_per_piety_level = 1
+		monthly_piety = 0.5
+	}
+}
+
+innsbruck = {
+	county = c_innsbruck
+	
+	character_modifier = {
+		name = holy_site_innsbruck_effect_name
+		monthly_prestige = 0.5
+		build_gold_cost = -0.1
+	}
+}
+
+volterra = {
+	county = c_firenze
+	barony = b_volterra
+	
+	character_modifier = {
+		name = holy_site_volterra_effect_name
+		development_growth_factor = 0.15
+		monthly_lifestyle_xp_gain_mult = 0.1
+	}
+}
+
+chartres = {
+	county = c_chartres
+		
+	character_modifier = {
+		name = holy_site_chartres_effect_name
+		learning_per_prestige_level = 1
+	}
+}
+
+failaka = {
+	county = c_basra
+	barony = b_bajlan
+	
+	character_modifier = {
+		name = holy_site_failaka_effect_name
+		stewardship = 1
+		county_opinion_add = 5
+	}
+}
+
+hili = {
+	county = c_az-dhahira
+	barony = b_hafit
+	
+	character_modifier = {
+		name = holy_site_hili_effect_name
+		stewardship_per_piety_level = 1
+	}
+}
+
+dilmun = {
+	county = c_uwal
+	
+	character_modifier = {
+		name = holy_site_dilmun_effect_name
+		monthly_piety_gain_mult = 0.1
+	}
+}
+
+wasuki = {
+	county = c_upper_khabur
+	barony = b_ras_al-ain
+	
+	character_modifier = {
+		name = holy_site_wasuki_effect_name
+		monthly_piety_gain_mult = 0.1
+	}
+}
+
+#Rumani
+
+craiova = { # Craiova, representing various pre- and early Christian shrines in Oltenia
+	county = c_craiova
+	
+	character_modifier = {
+		name = holy_site_craiova_effect_name
+		defender_advantage = 5
+		prowess = 1
+	}
+}
+
+suceava = { # Suceava, representing various pre- and early Christian shrines in Bukovina
+	county = c_suceava
+	
+	character_modifier = {
+		name = holy_site_suceava_effect_name
+		dread_baseline_add = 5
+		intrigue = 1
+	}
+}
+
+# Hussite
+
+praha = { # Prague, the Czech capital and focal point of the Hussite Wars - Jan Hus was born in Husinec, but that's too close to warrant being another holy site
+	county = c_praha
+	barony = b_praha
+	
+	character_modifier = {
+		name = holy_site_praha_effect_name
+		defender_advantage = 10
+		levy_reinforcement_rate_same_faith = 0.25
+	}
+}
+
+# Maronite
+
+tripoli = { # Tripoli, representing Mount Lebanon and the various Maronite holy sites in Kfarhay, Yanouh, Mayfouq and the Qadisha Valley
+	county = c_tripoli
+	
+	character_modifier = {
+		name = holy_site_tripoli_effect_name
+		mountains_advantage = 5
+		defender_advantage = 5
+	}
+}
+
+# Paulician (and Bogomilist)
+
+philippopolis = { # Philippopolis and Alexiopolis, cities built for Paulician converts; represents their heretical stronghold in Bulgaria
+	county = c_philippopolis
+	barony = b_philippopolis
+	
+	character_modifier = {
+		name = holy_site_philippopolis_effect_name
+		same_faith_opinion = 10
+		domain_tax_same_faith_mult = 0.1
+	}
+}
+
+tondrak = { # Tondrak, the volcanic region around Mount Tondrak and the Tondrakians' heretical stronghold
+	county = c_vaspurakan
+	
+	character_modifier = {
+		name = holy_site_tondrak_effect_name
+		domain_tax_same_faith_mult = 0.2
+		levy_reinforcement_rate_same_faith = 0.2
+	}
+}
+
+azot = { # Azot, probable source of the Bogomilist heresy; location of Bogomila and Mount Babuna
+	county = c_skopje
+	
+	character_modifier = {
+		name = holy_site_azot_effect_name
+		defender_advantage = 10
+	}
+}
+
+# Druze
+
+hauran = { # As-Suwaida-Hauran, the Jabal al-Druze ('Mountain of Druze'), supposed origin point of the Druze
+	county = c_hauran
+	
+	character_modifier = {
+		name = holy_site_hauran_effect_name
+		learning = 2
+	}
+}
+
+# Marabouti
+
+gao = { # Gao, capital of the Gao and Songhai empires and seat of the first black African king to convert to Islam
+	county = c_gao
+	
+	character_modifier = {
+		name = holy_site_gao_effect_name
+		county_opinion_add = 10
+	}
+}
+
+kairouan = { # Kairouan, location of the Great Mosque of Kairouan and the main Islamic pilgrimage site in Africa
+	county = c_kairwan
+	
+	character_modifier = {
+		name = holy_site_kairouan_effect_name
+		learning = 1
+		learning_per_piety_level = 1
+	}
+}
+
+# Zunist
+
+zamindawar = { # Zamindawar, location of the Temple of Zun and obviously a prominent holy site
+	county = c_zamindawar
+	
+	character_modifier = {
+		name = holy_site_zamindawar_effect_name
+		levy_size = 0.1
+		defender_advantage = 10
+	}
+}
+
+khojand = { # Khojand, a Sogdian region of spiritual importance to Zurvanites, Khurmazta and Zunists
+	county = c_khojand
+	
+	character_modifier = {
+		name = holy_site_khojand_effect_name
+		prowess_per_piety_level = 1
+		supply_duration = 0.25
+	}
+}
+
+rudbar = { # Rudbar, location of Lake Hamun, Mount Khwaja and the ancient fire temple of Ghagha-Shahr
+	county = c_rudbar
+	
+	character_modifier = {
+		name = holy_site_rudbar_effect_name
+		learning = 1
+		church_holding_build_gold_cost = -0.25
+	}
+}
+
+# Barghawâti
+
+asfi = { # Asfi (Safi), stronghold of the Barghawâti faith and tribal confederation
+	county = c_asfi
+	
+	character_modifier = {
+		name = holy_site_asfi_effect_name
+		levy_reinforcement_rate_same_faith = 0.2
+		retreat_losses = -0.1
+	}
+}
+
+# Nizari
+
+masyaf = { # Masyaf Castle, headquarters of the Syrian branch of the Hashasheen
+	county = c_shayzar
+	barony = b_masyaf
+	
+	character_modifier = {
+		name = holy_site_masyaf_effect_name
+		intrigue = 2
+		monthly_piety_gain_per_dread_add = 0.05
+	}
+}
+
+alamut = { # Alamut Castle, headquarters of the Persian branch of the Hashasheen
+	county = c_qazwin
+	barony = b_alamut
+	
+	character_modifier = {
+		name = holy_site_alamut_effect_name
+		mountains_advantage = 10
+		desert_mountains_advantage = 10
+	}
+}
+
+#Berber
+
+msoura = { # Msoura, important Berber archaeological site and likely of importance before the Islamic invasion
+	county = c_tangiers
+	
+	character_modifier = {
+		name = holy_site_msoura_effect_name
+		same_faith_opinion = 10
+		same_culture_opinion = 10
+	}
+}
+
+cirta = { # Cirta, ancient Numidian capital and stronghold of Berber culture and religion
+	county = c_constantine
+	
+	character_modifier = {
+		name = holy_site_cirta_effect_name
+		levy_size = 0.1
+		raid_speed = 0.1
+	}
+}
+
+dougga = { # Dougga, ancient Berber site with various tombs, megaliths and temples
+	county = c_medjerda
+	
+	character_modifier = {
+		name = holy_site_dougga_effect_name
+		cultural_head_fascination_mult = 0.1
+		cultural_head_acceptance_gain_mult = 0.1
+	}
+}
+
+syrte = {
+	county = c_syrte
+	character_modifier = {
+		monthly_county_control_growth_factor = 0.05 #eradicating local bandits
+	}
+}
+
+meknes = {
+	county = c_meknes
+	character_modifier = {
+		martial = 1
+	}
+}
+
+
+trapani = {
+	county = c_palermo
+	barony = b_trapani
+	character_modifier = {
+		stewardship = 1
+	}
+}
+
+leptis_magna = {
+	county = c_labda
+	character_modifier = {
+		different_faith_opinion = 10
+	}
+}
+
+madghacen = { #Major Royal Tomb for the Numidians
+	county = c_bilizma
+	barony = b_baghaya
+	character_modifier = {
+		build_speed = -0.15
+	}
+}
+
+# Slavic
+
+breslau = { # Mount Ślęża, an ancient Slavic holy mountain after whom the Silesians were named
+	county = c_breslau
+	
+	character_modifier = {
+		name = holy_site_breslau_effect_name
+		prowess = 1
+		heavy_infantry_toughness_mult = 0.1
+	}
+}
+
+# Jewish
+
+kanara = { # Kanara, so both Kanara and Kerala (near Kochin) are in the right places
+	county = c_kanara
+	
+	character_modifier = {
+		name = holy_site_kanara_effect_name
+		diplomacy_per_piety_level = 1
+		cultural_head_acceptance_gain_mult = 0.15
+	}
+}
+
+amarna = { # Amarna, Akhenaten's brief (1346-1332 BC) royal capital and focus of the Cult of Aten
+	county = c_bahnasa
+	
+	character_modifier = {
+		name = holy_site_amarna_effect_name
+		floodplains_development_growth_factor = 0.25
+		monthly_piety_gain_per_dread_add = 0.03
+	}
+}
+
+fife = { # Dunino Den, Cennrígmonaid (later St. Andrew's) and various Pictish pagan sites
+	county = c_fife
+	
+	character_modifier = {
+		name = holy_site_fife_effect_name
+		dread_baseline_add = 5
+		retreat_losses = -0.1
+	}
+}
+
+cumae = {
+	county = c_napoli
+	barony = b_pozzuoli
+
+	character_modifier = {
+		martial = 1
+	}
+}
+
+kish = { 
+	county = c_badaraya
+	barony = b_badaraya
+	character_modifier = {
+		name = holy_site_kish_effect_name
+		martial = 1
+	}
+}
+
+mainz = { # Mogontiacum
+	county = c_mainz
+	barony = b_mainz
+	
+	character_modifier = {
+		name = holy_site_mainz_effect_name
+		same_faith_opinion = 10
+	}
+}
+
+# Marcionist
+
+sinope = { # Sinope, Marcion of Sinope's birthplace
+	county = c_sinope
+	barony = b_sinope
+	
+	character_modifier = {
+		name = holy_site_sinope_effect_name
+		learning = 2
+	}
+}
+
+
+#Hurufi
+
+astarabad = { 
+	county = c_gurgan
+	barony = b_astarabat
+	
+	character_modifier = {
+		name = holy_site_astarabad_effect_name
+		learning = 2
+	}
+}
+
+anjudan = { 
+	county = c_nihawand
+	barony = b_abtaa
+	
+	character_modifier = {
+		name = holy_site_anjudan_effect_name
+		learning = 1
+	}
+}
+
+#Alevi
+
+bektashi = { 
+	county = c_archelais
+	barony = b_garsaura
+	
+	character_modifier = {
+		name = holy_site_bektashi_effect_name
+		prowess = 1
+		heavy_infantry_toughness_mult = 0.1
+	}
+}
+
+#Arnoldist
+
+brescia = { # 
+	county = c_brescia
+	
+	character_modifier = {
+		name = holy_site_brescia_effect_name
+		learning = 1
+		learning_per_piety_level = 1
+	}
+}
+
+#Piagnoni
+
+ferrara = { # 
+	county = c_ferrara
+	
+	character_modifier = {
+		name = holy_site_ferrara_effect_name
+		learning = 1
+		learning_per_piety_level = 1
+	}
+}
+
+vienne = {
+	county = c_viennois
+	barony = b_vienne
+
+	character_modifier = {
+		fertility = 1
+	}
+}
+
+avignon = {
+	county = c_venaissin
+	barony = b_avignon
+
+	character_modifier = {
+		learning_per_piety_level = 2
+	}
+}
+
+reims = {
+	county = c_reims
+	barony = b_chatillon
+
+	character_modifier = {
+		monthly_piety_per_knight = 1
+	}
+}
+
+utrecht = {
+	county = c_nedersticht
+	barony = b_amersfoort
+
+	character_modifier = {
+		different_faith_opinion = 10
+	}
+}
+
+braga = {
+	county = c_porto
+	barony = b_braga
+
+	character_modifier = {
+		piety_per_stress_level = 2
+	}
+}
+
+sanaa = {
+	county = c_sanaa
+	character_modifier = {
+		diplomacy_per_prestige_level = 1 #Purported legendary site of capital of the Queen of Sheba
+	}
+}
+
+lori = {
+	county = c_lori
+	character_modifier = {
+		religious_vassal_opinion = 5
+		monthly_piety_gain_mult = 0.1
+	}
+}
+
+#Basque Pagan
+
+beziers = {
+	county = c_beziers
+	character_modifier = {
+		stewardship = 1
+	}
+}
+asturias_de_santillana = {
+	county = c_asturias_de_santillana
+	character_modifier = {
+		mountains_advantage = 10
+	}
+}
+navarra = {
+	county = c_navarra
+	character_modifier = {
+		defender_advantage = 5
+	}
+}
+
+amida = {
+	county = c_amida
+	flag = amida_resistance_bonus #30% bonus to conversion resistance and return to the old religion
+}
+
+pepuza = {
+	county = c_pacatiana
+	character_modifier = {
+		monthly_piety_gain_mult = 0.1
+	}
+}
+
+mt_tondrak = {
+	county = c_bagrewand
+	barony = b_bagavan
+	flag = mt_tondrak_resistance_bonus #30% bonus to conversion resistance and return to the old religion
+}
+
+mtskheta = {
+	county = c_kakheti
+	barony = b_mtskheta
+	character_modifier = {
+		religious_vassal_opinion = 10 #Religious center of Georgia
+	}
+}
+
+hippo = {
+	county = c_annaba
+	character_modifier = {
+		learning_per_piety_level = 1
+	}
+}
+
+chur = {
+	county = c_grisons
+	barony = b_chur
+	character_modifier = {
+		prowess_per_piety_level = 1 #Let's just admire that Raetians were practically independent from anyone in history for more than 4 centuries after the fall of WRE
+	}
+}
+ 
+genoa = {
+	county = c_genoa
+	character_modifier = { #Trade city, not quite powerful at the time but Aquileianism is gonna appear only in 553 anyway
+		stewardship = 1
+		development_growth_factor = 0.05
+	}
+}
+
+shirvan = {
+	county = c_shirvan
+	character_modifier = {
+		different_faith_opinion = 5
+	}
+}
+
+nisibis = { #Clone of Alexandria; was the major center for the Church of the East
+	county = c_nasibin
+	character_modifier = {
+		name = holy_site_nisibis_effect_name
+		learning_per_piety_level = 2
+	}
+}
+
+samosata = {
+	county = c_samosata
+	character_modifier = {
+		religious_vassal_opinion = 5
+	}
+}
+
+tephrike = {
+	county = c_satala
+	barony = b_tephrice
+	character_modifier = {
+		knight_limit = 1 #it was a heretic stronghold for real
+	}
+}
+
+ukbara = { # 
+	county = c_baghdad
+	barony = b_ukbara
+	character_modifier = {
+		learning = 1
+	}
+}
+
+muzhou = {
+	county = c_muzhou_yue_china
+
+	character_modifier = {
+        	martial = 2
+	}
+}
+
+bandiagara = { # 
+	county = c_bandiagara
+	barony = b_bandiagara
+	
+	character_modifier = {
+		name = holy_site_dogon_effect_name
+		martial = 1
+		levy_size = 0.1
+	}
+}
+
+dyfed = {
+	county = c_pembrokeshire
+	character_modifier = {
+		powerful_vassal_opinion = 5
+	}
+}
+
+legio = { #Clone of Santiago;
+	county = c_leon
+	character_modifier = {
+		supply_duration = 0.2
+		holy_order_hire_cost_mult = -0.1
+	}
+}
+
+etchmiadzin = {
+	county = c_hayk
+	barony = b_yerevan
+	character_modifier = {
+		powerful_vassal_opinion = 5
+	}
+}
+
+kabala = {
+	county = c_shaki
+	barony = b_kabala
+	character_modifier = {
+		defender_advantage = 2
+	}
+}
+
+gondishapur = {
+	county = c_tustar
+	barony = b_gondishapur
+	character_modifier = {
+		learning_per_piety_level = 1
+		life_expectancy = 3
+	}
+}
+
+albret = {
+	county = c_albret
+	character_modifier = {
+		martial = 1
+	}
+}
+
+avila = {
+	county = c_avila
+	character_modifier = {
+		religious_vassal_opinion = 10
+	}
+}
+tib = {
+	county = c_tib
+	character_modifier = {
+		learning_per_piety_level = 1
+	}
+}
+
+nicopolis = { #Site where Ulfilas converted the Goths
+	county = c_nikopolis
+	character_modifier = {
+		religious_vassal_opinion = 5
+	}
+}
+
+mesembria = {
+	county = c_mesembria
+	character_modifier = {
+		diplomacy = 1
+	}
+}
+giurgiu = {
+	county = c_giurgiu
+	character_modifier = {
+		development_growth_factor = 0.05
+	}
+}
+pest = {
+	county = c_visegrad
+	barony = b_pest
+	character_modifier = {
+		same_faith_opinion = 10
+	}
+}
+bereg = {
+	county = c_bereg
+	character_modifier = {
+		defender_advantage = 5
+	}
+}
+chilia = {
+	county = c_chilia
+	character_modifier = {
+		domain_tax_same_faith_mult = 0.1
+	}
+}
+
+epeiros = {
+	county = c_epeiros
+	character_modifier = {
+		learning = 1
+		life_expectancy = 2
+	}
+}
+senj = {
+	county = c_gacka
+	barony = b_senj
+	character_modifier = {
+		attacker_advantage = 2
+	}
+}
+
+apulia = {
+	county = c_apulia
+	character_modifier = {
+		different_faith_opinion = 10
+	}
+}
+
+dihistan = {
+	county = c_dihistan
+	character_modifier = {
+		desert_advantage = 5
+	}
+}
+
+muscat = {
+	county = c_muscat
+	character_modifier = {
+		naval_movement_speed_mult = 0.1
+	}
+}
+
+satif = {
+	county = c_satif
+	character_modifier = {
+		attraction_opinion = 10
+	}
+}
+
+goa_keramat = {
+	county = c_waigama
+
+	character_modifier = {
+		name = holy_site_mount_goa_keramat_effect_name
+		development_growth_factor = 0.05
+		domain_tax_mult = 0.02
+	}
+}
+
+
+mount_nunusaku = {
+	county = c_bula
+
+	character_modifier = {
+		name = holy_site_mount_nunusaku_effect_name
+		martial = 1
+		prowess_per_prestige_level = 1
+	}
+}
+
+mount_ranaka = {
+	county = c_manggarai
+	barony = b_ruteng
+
+	character_modifier = {
+		name = holy_site_ruteng_effect_name
+		martial = 1
+		prowess_per_prestige_level = 1
+	}
+}
+
+lore_lindu = {
+	county = c_palu
+	barony = b_lore
+
+	character_modifier = {
+		name = holy_site_lore_lindu_effect_name
+		fertility = 0.1
+	}
+}
+
+ternate = {
+	county = c_ternate
+
+	character_modifier = {
+		name = holy_site_ternate_effect_name
+		development_growth_factor = 0.1
+		stewardship = 1
+	}
+}
+
+tidore = {
+	county = c_tidore
+
+	character_modifier = {
+		name = holy_site_tidore_effect_name
+		development_growth_factor = 0.1
+		stewardship = 1
+	}
+}
+
+tondano = {
+	county = c_tondano
+
+	character_modifier = {
+		name = holy_site_tondano_effect_name
+		diplomacy_per_piety_level = 1
+		fertility = 0.1
+	}
+}
+
+limboto = {
+	county = c_hulondalo
+
+	character_modifier = {
+		name = holy_site_limboto_effect_name
+		monthly_county_control_growth_factor = 0.1
+	}
+}
+
+buyu_kondorung = {
+	county = c_luwuk
+	barony = b_ampana
+
+	character_modifier = {
+		name = holy_site_buyu_kondorung_effect_name
+		monthly_prestige_gain_mult = 0.1
+	}
+}
+
+latimojong = {
+	county = c_larompong
+
+	character_modifier = {
+		name = holy_site_latimojong_effect_name
+		levy_size = 0.1
+	}
+}
+
+pananaru = {
+	county = c_manado
+	barony = b_karakelong
+
+	character_modifier = {
+		name = holy_site_pananaru_effect_name
+		martial_per_piety_level = 1
+		raid_speed = 0.1
+	}
+}
+
+lake_lanao = {
+	county = c_masiu
+
+	character_modifier = {
+		name = holy_site_lake_lanao_effect_name
+		men_at_arms_maintenance = -0.05
+		fertility = 0.1
+	}
+}
+
+laguna_de_bay = {
+	county = c_pangil
+	barony = b_pila_ph
+
+	character_modifier = {
+		name = holy_site_laguna_de_bay_effect_name
+		knight_effectiveness_mult = 0.1
+		life_expectancy = 1
+	}
+}
+
+taal = {
+	county = c_balayan
+
+	character_modifier = {
+		name = holy_site_taal_effect_name
+		stewardship_per_piety_level = 1
+		fertility = 0.1
+	}
+}
+
+arayat = {
+	county = c_bakulud
+
+	character_modifier = {
+		name = holy_site_arayat_effect_name
+		martial_per_piety_level = 1
+		knight_effectiveness_mult = 0.2
+	}
+}
+
+pinatubo = {
+	county = c_hubek
+
+	character_modifier = {
+		name = holy_site_pinatubo_effect_name
+		martial = 1
+		prowess = 2
+	}
+}
+
+sandawa = { # Mt Apo
+	county = c_ilianen
+
+	character_modifier = {
+		name = holy_site_sandawa_effect_name
+		learning_per_piety_level = 1
+	}
+}
+
+pulag = {
+	county = c_bugyas
+	barony = b_kafagway
+
+	character_modifier = {
+		name = holy_site_pulag_effect_name
+		mountains_development_growth_factor = 0.2
+		mountains_advantage = 5
+	}
+}
+
+iraya = {
+	county = c_amami
+
+	character_modifier = {
+		name = holy_site_iraya_effect_name
+		hills_development_growth_factor = 0.25
+		monthly_piety_gain_per_dread_add = 0.03
+	}
+}
+
+huraw = {
+	county = c_tanghay
+
+	character_modifier = {
+		name = holy_site_huraw_effect_name
+		same_faith_opinion = 5
+		domain_tax_same_faith_mult = 0.1
+	}
+}
+
+mount_mayon = {
+	county = c_albay
+	barony = b_sorsogon
+
+	character_modifier = {
+		name = holy_site_mount_mayon_effect_name
+		martial = 1
+		prowess_per_prestige_level = 1
+	}
+}
+

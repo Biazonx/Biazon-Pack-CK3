@@ -1,0 +1,62 @@
+bzn_establish_ourselves_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_culture.dds"
+    }
+
+    decision_group_type = major
+
+    ai_check_interval = 1
+
+    is_shown = {
+        is_landless_adventurer = no
+		is_independent_ruler = yes
+        has_trait = adventurer
+		NOT = { has_variable = bzn_ourselves }
+    }
+
+    is_valid = {
+        has_trait = adventurer
+		is_independent_ruler = yes
+
+    }
+
+    desc = establish_ourselves_desc
+    cost = { prestige = 100 }
+
+    effect = {
+        # Force-convert all courtiers
+        every_courtier = {
+            set_culture = root.culture
+            set_character_faith = root.faith
+        }
+
+        # Force-convert all vassals
+        every_vassal = {
+            set_culture = root.culture
+            set_character_faith = root.faith
+        }
+
+        # Force-convert all realm counties
+        every_realm_county = {
+            set_county_culture = root.culture
+            set_county_faith = root.faith
+        }
+		set_variable = {
+			name = bzn_ourselves
+			years = 100
+		}
+    }
+
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 100
+    }
+}
+
+
+
+
+

@@ -1,0 +1,280 @@
+﻿thrall_on_accept_effect = {
+	scope:recipient = {
+		trigger_event = marriage_interaction.0040
+		if = {
+			# Victim is angry for being forced into being sold.
+			limit = {
+				is_imprisoned = yes
+			}
+			release_from_prison = yes
+			add_opinion = {
+				target = scope:actor
+				modifier = enslaved_me_opinion
+			}
+
+			# Family members of victim are also angry that you've enslaved them.
+			every_close_family_member = {
+				if = {
+					limit = { 
+						NOT = { this = scope:actor } # Don't hate yourself.
+					}
+					add_opinion = {
+						target = scope:actor
+						modifier = enslaved_family_opinion
+					}
+					hidden_effect = {
+						send_interface_message = {
+							type = event_generic_neutral
+							title = close_family_member_taken_as_thrall_title
+							right_icon = scope:recipient
+							left_icon = scope:secondary_actor
+						}
+					}
+				}
+			}
+
+			# Break any betrothals which may exist (without additional opinion penalties).
+			if = {
+				limit = { exists = betrothed }
+				betrothed = { trigger_event = marriage_interaction.0041 }
+				break_betrothal = betrothed
+			}
+		}
+	}
+
+	# Send us a notification about what we just did.
+	scope:secondary_actor = {
+		hidden_effect = {
+			send_interface_toast = {
+				type = event_generic_neutral
+				title = thrall_taken_title
+				right_icon = scope:recipient
+			}
+		}
+	}
+}
+
+
+#This effect has some small differences to the previous one since this one involves one extra person (the one you give a thrall to)
+thrall_offer_on_accept_effect = {
+	scope:secondary_actor = {
+		trigger_event = marriage_interaction.0040
+		if = {
+			# Victim is angry for being forced into concubinage.
+			limit = {
+				is_imprisoned = yes
+			}
+			add_character_flag = {
+				flag = block_release_from_prison_event
+				days = 3
+			}
+			release_from_prison = yes
+
+			# Family members of victim are also angry that you've forced them into concubinage.
+			every_close_family_member = {
+				if = {
+					limit = { 
+						NOT = { this = scope:actor } # Don't hate yourself.
+					}
+					add_opinion = {
+						target = scope:actor
+						modifier = enslaved_family_opinion
+					}
+					hidden_effect = {
+						send_interface_message = {
+							type = event_generic_neutral
+							title = close_family_member_offered_as_thrall_title
+							right_icon = scope:recipient
+							left_icon = scope:secondary_actor
+						}
+					}
+				}
+			}
+					
+			# Spouses, if any exist, are also furious.
+			if = {
+				limit = {
+					is_married = yes
+					#A check to make sure you haven't somehow married them during the consideration time
+					NOT = { any_spouse = { this = scope:recipient } }
+				}
+				every_spouse = {
+					add_opinion = {
+						target = scope:actor
+						modifier = forced_spouse_thrall_opinion
+					}
+					divorce = scope:secondary_actor # no additional opinion hit, no scripted effect
+					save_scope_value_as = { # For tooltips in the coming event
+						name = was_spouse
+						value = yes
+					}
+					trigger_event = marriage_interaction.0043
+				}
+			}
+					
+
+			# Break any betrothals which may exist (without additional opinion penalties).
+			if = {
+				limit = {
+					exists = betrothed
+					#A check to make sure you haven't somehow gotten betrothed to them during the consideration time
+					NOT = { betrothed = scope:recipient }
+				}
+				betrothed = { trigger_event = marriage_interaction.0043 }
+				break_betrothal = betrothed
+			}
+		}
+
+		remove_character_flag = has_been_offered_as_thrall
+	}
+
+	# Send us a notification about what we just did. If the secondary_actor somehow ended up as a consort (spouse/thrall) or betrothed to recipient during the consideration time of this request we'll send a message about that instead (should only happen to AI tho)
+	if = {
+		limit = { #Invalidation message
+			scope:secondary_actor = {
+				OR = {
+					any_consort = { count >= 1 }
+					exists = betrothed
+				}
+			}
+		}
+		scope:secondary_actor = {
+			# If they've somehow already become entangled with the recipient we tell this
+			if = {
+				limit = {
+					OR = {
+						is_consort_of = scope:recipient
+						AND = {
+							exists = betrothed
+							betrothed = scope:recipient
+						}
+					}
+				}
+				scope:recipient = {
+					save_scope_as = spouse
+				}
+			}
+			# Else, if they've married or gotten betrothed to someone else, we say this
+			else_if = {
+				limit = {
+					exists = betrothed
+				}
+				betrothed = {
+					save_scope_as = spouse
+				}
+			}
+			else = {
+				random_consort = {
+					limit = {
+						this = scope:secondary_actor.primary_spouse
+					}
+					alternative_limit = {
+						always = yes
+					}
+					save_scope_as = spouse
+				}
+			}
+		}
+		scope:actor = {
+			send_interface_toast = {
+				type = event_generic_neutral
+				title = thrall_offered_invalidated_title
+				right_icon = scope:recipient
+				left_icon = scope:secondary_actor
+				if = {
+					limit = {
+						scope:secondary_actor = { is_consort_of = scope:spouse }
+					}
+					custom_tooltip = thrall_offered_invalidated_consort
+				}
+				else = {
+					custom_tooltip = thrall_offered_invalidated_betrothed
+				}
+			}
+		}
+		scope:recipient = {
+			send_interface_toast = {
+				type = event_generic_neutral
+				title = thrall_offered_invalidated_recipient_title
+				right_icon = scope:actor
+				left_icon = scope:secondary_actor
+				if = {
+					limit = {
+						scope:secondary_actor = { is_consort_of = scope:spouse }
+					}
+					custom_tooltip = thrall_offered_invalidated_consort
+				}
+				else = {
+					custom_tooltip = thrall_offered_invalidated_betrothed
+				}
+			}
+		}
+	}
+	else = { #Proper notification
+		scope:actor = {
+			send_interface_toast = {
+				type = event_generic_neutral
+				title = thrall_offered_title
+				right_icon = scope:recipient
+				left_icon = scope:secondary_actor
+				scope:recipient = {
+					if = { #Scale opinion gain a bit depending on how cool the thrall is
+						limit = {
+							scope:secondary_actor = {
+								OR = {
+									has_trait = beauty_good_2
+									has_trait = beauty_good_3
+									num_of_good_genetic_traits > 1
+									has_relation_lover = scope:recipient
+									has_relation_soulmate = scope:recipient
+								}
+								trigger_if = {
+									limit = {
+										is_female = yes
+									}
+									age < define:NChildbirth|MAX_FEMALE_REPRODUCTION_AGE
+								}
+							}
+						}
+						add_opinion = {
+							target = scope:actor
+							modifier = grateful_opinion
+							opinion = 40
+						}
+					}
+					else_if = {
+						limit = {
+							scope:secondary_actor = {
+								OR = {
+									is_lowborn = no
+									has_trait = beauty_good_1
+									num_of_good_genetic_traits > 0
+									has_relation_friend = scope:recipient
+									has_relation_best_friend = scope:recipient
+								}
+								trigger_if = {
+									limit = {
+										is_female = yes
+									}
+									age < define:NChildbirth|MAX_FEMALE_REPRODUCTION_AGE
+								}
+							}
+						}
+						add_opinion = {
+							target = scope:actor
+							modifier = grateful_opinion
+							opinion = 30
+						}
+					}
+					else = {
+						add_opinion = {
+							target = scope:actor
+							modifier = grateful_opinion
+							opinion = 20
+						}
+					}
+				}
+			}
+		}
+	}
+}

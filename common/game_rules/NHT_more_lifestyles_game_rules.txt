@@ -1,0 +1,154 @@
+﻿nht_lifestyle_valid = {
+	categories = { nht_more_lifestyles }
+	
+	default = nht_default_new_lifestyle
+	nht_default_new_lifestyle = { flag = GG_can_change_rule }
+	nht_secondary_lifestyle = { flag = GG_can_change_rule }	
+	nht_new_lifestyle_player = { flag = GG_can_change_rule }	
+	nht_only_prowess_lifestyle = { flag = GG_can_change_rule }
+	nht_only_prowess_lifestyle_player = { flag = GG_can_change_rule }		
+	nht_only_leadership_lifestyle = { flag = GG_can_change_rule }
+	nht_only_leadership_lifestyle_player = { flag = GG_can_change_rule }	
+	nht_no_new_lifestyle = { flag = GG_can_change_rule }	
+}
+
+nht_more_lifestyle_events = {
+	categories = { nht_more_lifestyles }
+	
+	default = nht_default_lifestyle_events
+	nht_default_lifestyle_events = {flag = GG_can_change_rule }
+	nht_disable_lifestyle_events = {flag = GG_can_change_rule }		
+}
+
+nht_lifestyle_xp = {
+	categories = { nht_more_lifestyles }
+	
+	default = nht_lifestyle_low_xp_default
+	
+	nht_lifestyle_vlow_xp = { apply_modifier = all:nht_xp_lifestyle_vlow_modifier }
+	nht_lifestyle_vlow_xp_pl = { apply_modifier = player:nht_xp_lifestyle_vlow_modifier }
+	nht_lifestyle_low_xp = { apply_modifier = all:nht_xp_lifestyle_low_modifier }
+	nht_lifestyle_low_xp_pl = { apply_modifier = player:nht_xp_lifestyle_low_modifier }
+	
+	nht_lifestyle_low_xp_default = { }
+	
+	nht_lifestyle_high_xp = { apply_modifier = all:nht_xp_lifestyle_high_modifier }
+	nht_lifestyle_high_xp_pl = { apply_modifier = player:nht_xp_lifestyle_high_modifier }
+	nht_lifestyle_high_1_xp = { apply_modifier = all:nht_xp_lifestyle_high_1_modifier }	
+	nht_lifestyle_high_1_xp_pl = { apply_modifier = player:nht_xp_lifestyle_high_1_modifier }	
+	nht_lifestyle_high_2_xp = { apply_modifier = all:nht_xp_lifestyle_high_2_modifier }	
+	nht_lifestyle_high_2_xp_pl = { apply_modifier = player:nht_xp_lifestyle_high_2_modifier }
+	nht_lifestyle_high_3_xp = { apply_modifier = all:nht_xp_lifestyle_high_3_modifier }	
+	nht_lifestyle_high_3_xp_pl = { apply_modifier = player:nht_xp_lifestyle_high_3_modifier }
+	nht_lifestyle_high_4_xp = { apply_modifier = all:nht_xp_lifestyle_high_4_modifier }	
+	nht_lifestyle_high_4_xp_pl = { apply_modifier = player:nht_xp_lifestyle_high_4_modifier }
+}
+
+nht_passive_prowess_lifestyle_xp = {
+	categories = { nht_more_lifestyles }
+	
+	default = nht_passive_prowess_lifestyle_xp_default
+	nht_passive_prowess_lifestyle_xp_default = {}	
+	nht_passive_prowess_lifestyle_xp_vlow = {}
+	nht_passive_prowess_lifestyle_xp_low  = {}
+	nht_passive_prowess_lifestyle_xp_medium  = {}
+	nht_passive_prowess_lifestyle_xp_high  = {}
+	nht_passive_prowess_lifestyle_xp_vhigh  = {}
+}
+
+nht_passive_leadership_lifestyle_xp = {
+	categories = { nht_more_lifestyles }
+	
+	default = nht_passive_leadership_lifestyle_xp_default
+	nht_passive_leadership_lifestyle_xp_default = {}		
+	nht_passive_leadership_lifestyle_xp_vlow = {}	
+	nht_passive_leadership_lifestyle_xp_low  = {}
+	nht_passive_leadership_lifestyle_xp_medium  = {}
+	nht_passive_leadership_lifestyle_xp_high  = {}
+	nht_passive_leadership_lifestyle_xp_vhigh  = {}
+}
+
+nht_trade_agreement_interaction = {
+	categories = { nht_more_lifestyles }
+	
+	default = nht_trade_agreement_interaction_enabled
+	nht_trade_agreement_interaction_enabled = { flag = GG_can_change_rule }
+	nht_trade_agreement_interaction_no_requi = { flag = GG_can_change_rule }	
+	nht_trade_agreement_interaction_disabled = { flag = GG_can_change_rule }
+}
+
+nht_send_volunteer_soldier_interaction = {
+	categories = { nht_more_lifestyles }
+	
+	default = nht_send_volunteer_soldier_interaction_enabled
+	nht_send_volunteer_soldier_interaction_enabled = { flag = GG_can_change_rule }
+	nht_send_volunteer_soldier_interaction_no_requi = { flag = GG_can_change_rule }	
+	nht_send_volunteer_soldier_interaction_disabled = { flag = GG_can_change_rule }
+}
+
+nht_swordsmanship_tutelage_interaction = {
+	categories = { nht_more_lifestyles }
+	
+	default = nht_swordsmanship_tutelage_interaction_enabled
+	nht_swordsmanship_tutelage_interaction_enabled = { flag = GG_can_change_rule }
+	nht_swordsmanship_tutelage_interaction_no_requi = { flag = GG_can_change_rule }
+	nht_swordsmanship_tutelage_interaction_disabled = { flag = GG_can_change_rule }
+}
+
+nht_train_with_knight_interaction = {
+	categories = { nht_more_lifestyles }
+	
+	default = nht_train_with_knight_interaction_enabled
+	nht_train_with_knight_interaction_enabled = { flag = GG_can_change_rule }
+	nht_train_with_knight_interaction_no_requi = { flag = GG_can_change_rule }
+	nht_train_with_knight_interaction_disabled = { flag = GG_can_change_rule }
+}
+
+nht_declare_as_heir_interaction = {
+	categories = { nht_more_lifestyles }
+	
+	default = nht_declare_as_heir_interaction_enabled
+	nht_declare_as_heir_interaction_enabled = { flag = GG_can_change_rule }
+	nht_declare_as_heir_interaction_no_requi = { flag = GG_can_change_rule }
+	nht_declare_as_heir_interaction_disabled = { flag = GG_can_change_rule }
+}
+
+nht_sack_holding_event = {
+	categories = { nht_more_lifestyles }
+	
+	default = nht_sack_holding_event_enabled
+	nht_sack_holding_event_enabled = { flag = GG_can_change_rule }
+	nht_sack_holding_event_enabled_dev_twenty = { flag = GG_can_change_rule }
+	nht_sack_holding_event_enabled_dev_thirty = { flag = GG_can_change_rule }
+	nht_sack_holding_event_enabled_dev_thirty_five = { flag = GG_can_change_rule }
+	nht_sack_holding_event_no_requi = { flag = GG_can_change_rule }
+	nht_sack_holding_event_no_requi_no_level = { flag = GG_can_change_rule }	
+	nht_sack_holding_event_disabled = { flag = GG_can_change_rule }
+}
+
+#nht_construct_capital_wall_decision = {
+#	categories = { nht_more_lifestyles }
+#	
+#	default = nht_construct_capital_wall_decision_enabled
+#	nht_construct_capital_wall_decision_enabled = { flag = GG_can_change_rule }
+#	nht_construct_capital_wall_decision_no_requi = { flag = GG_can_change_rule }	
+#	nht_construct_capital_wall_decision_disabled = { flag = GG_can_change_rule }
+#}
+
+nht_fortify_holding_decision = {
+	categories = { nht_more_lifestyles }
+	
+	default = nht_fortify_holding_decision_enabled
+	nht_fortify_holding_decision_enabled = { flag = GG_can_change_rule }
+	nht_fortify_holding_decision_no_requi = { flag = GG_can_change_rule }	
+	nht_fortify_holding_decision_disabled = { flag = GG_can_change_rule }
+}
+
+nht_sack_countryside_provisions_decision = {
+	categories = { nht_more_lifestyles }
+	
+	default = nht_sack_countryside_provisions_decision_enabled
+	nht_sack_countryside_provisions_decision_enabled = { flag = GG_can_change_rule }
+	nht_sack_countryside_provisions_decision_no_requi = { flag = GG_can_change_rule }	
+	nht_sack_countryside_provisions_decision_disabled = { flag = GG_can_change_rule }
+}

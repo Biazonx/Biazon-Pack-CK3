@@ -1,0 +1,209 @@
+﻿on_death = {
+	on_actions = { on_nht_death_trade_agreement }
+}
+
+on_nht_death_trade_agreement = {
+	trigger = {
+		root = {
+			has_variable_list = is_in_trade_agreement_with_actor_list
+			is_adult = yes
+		}
+	}
+	effect = {
+		root = {
+			every_in_list = { 
+				variable = is_in_trade_agreement_with_actor_list
+				send_interface_message = {
+					type = nht_canceled_trade_agreement_on_death
+					title = msg_nht_canceled_trade_agreement_on_death
+					desc = msg_nht_canceled_trade_agreement_on_death_desc
+					left_icon = scope:root
+				}
+				remove_list_variable = { 
+					name = is_in_trade_agreement_with_actor_list 
+					target = root
+				}
+			}			
+			nht_cancel_trade_agreement_death_effect = yes				
+		}
+		every_in_list = {
+			variable = nht_counties_in_trade_agreement_list
+			remove_county_modifier = nht_trading_in_county_modifier
+		}
+	}	
+}
+
+on_war_started = {
+	on_actions = { on_nht_war_started_trade_agreement }
+}
+
+on_nht_war_started_trade_agreement = {
+	trigger = {
+		OR = {
+			scope:attacker = {
+				is_target_in_variable_list = {
+					name = is_in_trade_agreement_with_actor_list
+					target = scope:defender
+				}
+			}
+			scope:defender = {
+				is_target_in_variable_list = {
+					name = is_in_trade_agreement_with_actor_list
+					target = scope:attacker
+				}
+			}
+		}
+	}
+	effect = {
+		scope:attacker = {
+			save_scope_as = first_ruler_in_trade_agreement
+			send_interface_message = {
+				type = nht_canceled_trade_agreement_war_attacker
+				title = msg_nht_canceled_trade_agreement_war
+				desc = msg_nht_canceled_trade_agreement_war_desc
+				right_icon = scope:defender
+			}
+		}
+		scope:defender = {
+			save_scope_as = second_ruler_in_trade_agreement
+			send_interface_message = {
+				type = nht_canceled_trade_agreement_war_defender
+				title = msg_nht_canceled_trade_agreement_war_defender
+				desc = msg_nht_canceled_trade_agreement_war_defender_desc
+				right_icon = scope:attacker
+			}
+		}
+		if = {
+			limit = { 
+				AND = { 
+					exists = scope:first_ruler_in_trade_agreement
+					exists = scope:second_ruler_in_trade_agreement
+				}	
+			}			
+			nht_cancel_trade_agreement_character_modifier_effect = yes			
+		}
+		custom_tooltip = {
+			text = nht_remove_trade_county_modifier_tooltip
+			nht_remove_trade_agreement_county_modifier_effect = yes
+		}		
+	}	
+}
+
+on_siege_completion = {
+	on_actions = { on_siege_sacking_holding_event }
+}
+
+on_siege_sacking_holding_event = {
+	trigger = {
+		NOT = { has_character_flag = nht_choose_no_sacking }
+		scope:county = {	
+			NOT = { has_county_modifier = nht_recently_sacked_modifier }
+		}		
+		OR = {
+			has_perk = nht_spoils_of_war_perk
+			has_game_rule = nht_sack_holding_event_no_requi
+			has_game_rule = nht_sack_holding_event_no_requi_no_level
+		}
+		OR = {
+			scope:county = {
+				holder.top_liege.capital_county = this
+			}
+			scope:county = {
+				development_level >= sacking_holding_developement_level_value
+			}
+		}
+	}
+	events = {
+		nht_ml_sack_holding_event.0001
+	}
+}
+
+# A title is lost by a character
+# root = the old holder
+# scope:title = the title that changes hands
+# scope:new_holder = new holder.
+on_title_lost = {
+	on_actions = { on_nht_title_lost_trade_agreement }
+}	
+
+on_nht_title_lost_trade_agreement = {
+	trigger = {
+		root = { has_variable_list = is_in_trade_agreement_with_actor_list }
+		scope:title = { tier = tier_county }
+	}
+	effect = {
+		root = {
+			every_in_list = {
+				variable = is_in_trade_agreement_with_actor_list
+				limit = {
+					is_target_in_variable_list = {
+						name = nht_counties_in_trade_agreement_list
+						target = scope:title
+					}
+				}
+				scope:title = {
+					remove_county_modifier = nht_trading_in_county_modifier
+				}	
+			}
+			remove_list_variable = { 
+				name = nht_counties_in_trade_agreement_list 
+				target = scope:title
+			}
+		}			
+	}
+    on_actions = {
+        delay = { days = 1 }
+        on_nht_title_lost_trade_agreement_add_to_county
+    }
+}	
+
+on_nht_title_lost_trade_agreement_add_to_county = {
+	effect = {
+		root = {
+			add_to_variable_list = {
+				name = nht_counties_in_trade_agreement_list
+				target = root.capital_county
+			}		
+			every_in_list = {
+				variable = is_in_trade_agreement_with_actor_list
+				limit = {
+					is_target_in_variable_list = {
+						name = nht_counties_in_trade_agreement_list
+						target = scope:title
+					}
+				}
+				remove_list_variable = { 
+					name = nht_counties_in_trade_agreement_list 
+					target = scope:title
+				}
+				root.capital_county = {
+					add_county_modifier = { modifier = nht_trading_in_county_modifier }
+					add_to_variable_list = {
+						name = nht_is_trade_county_actor_var_list
+						target = prev	
+					}
+				}
+				add_to_variable_list = {
+					name = nht_counties_in_trade_agreement_list
+					target = root.capital_county
+				}				
+			}
+		}
+	}
+}
+##############################################
+## This on_action does not work att all.    ##
+##############################################
+
+# Called when realm capital changes. It can be manual move, loss in conquest, move after inheritance,
+# move when granted a better title, becoming landed for the first time
+# root: New realm capital barony
+# scope:old_capital - previous capital barony. Can be empty, can be owned by someone else
+#on_realm_capital_change = {
+#	on_actions = { on_nht_realm_capital_change_trade_agreement }
+#}
+
+#on_nht_realm_capital_change_trade_agreement = {
+#	effect = {
+#	}
+#}

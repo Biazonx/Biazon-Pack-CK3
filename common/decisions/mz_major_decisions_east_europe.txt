@@ -1,0 +1,107 @@
+﻿#########################################
+# Return to Magyar Paganism				#
+# by Flavio Verna & Ewan Cowhig Croft	#
+#########################################
+revive_magyar_paganism_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	}
+	desc = revive_magyar_paganism_decision_desc
+	selection_tooltip = revive_magyar_paganism_decision_tooltip
+	decision_group_type = major
+	ai_check_interval = 0
+
+	is_shown = {
+		is_landed = yes
+		#Must be some flavour of Magyar.
+		culture = { has_cultural_pillar = heritage_magyar }
+		#Should be done early.
+		custom_tooltip = {
+			text = revive_taltoism_decision_before_last_date
+			current_date <= 1100.1.1
+		}
+		NOR = {
+			#Can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_revived_magyar_paganism
+			}
+		}
+		#Must be the ruler of the Carpathian Basin.
+		any_sub_realm_county = {
+			title_province = { geographical_region = custom_hungary }
+		}
+		#Must be feudalised.
+		OR = {
+			government_has_flag = government_is_feudal
+			government_allows = administrative
+		}
+		#Must be something other than pagan.
+		NOT = {
+			faith.religion = { is_in_family = rf_pagan }
+		}
+		#Magyar Paganism must not have been reformed.
+		religion:magyar_religion = {
+			any_faith = {
+				count = all
+				has_doctrine_parameter = unreformed
+			}
+		}
+	}
+	
+	is_valid = {
+		#Must be suitably prestigious.
+		prestige_level >= high_prestige_level
+		#Either you hold k_hungary directly, or your vassal does.
+		OR = {
+			has_title = title:k_hungary
+			AND = {
+				has_title = title:e_carpathia
+				any_vassal = { has_title = title:k_hungary }
+			}
+		}
+		#Must control at least 80% of de jure Hungary (usually we'd use a region, but if Hungary has shrunk/grown for some reason, the people and title are more important than the actual area).
+		any_realm_county = {
+			count >= 30
+			culture = { has_cultural_pillar = heritage_magyar }
+		}
+		#Must be a noted scholar of theology (and thus filled out the entire Theologian tree).
+		OR = {
+			piety_level >= high_piety_level
+			has_trait = theologian
+		}
+		#Should be done early: reiterate this here so the player isn't surprised by losing the decision when shifting up an era.
+		custom_tooltip = {
+			text = revive_taltoism_decision_before_last_date
+			current_date <= 1100.1.1
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_at_war = no
+		is_independent_ruler = yes
+	}
+
+	cost = {
+		piety = 2000
+	}
+
+	effect = {
+		gain_holy_legend_seed_tooltip_effect = yes
+		custom_tooltip = revive_magyar_paganism_decision.adjust_the_faith.tt
+		show_as_tooltip = { revive_magyar_paganism_decision_scripted_effect = yes }
+		trigger_event = { id = mz_east_europe.0032 }
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_revived_magyar_paganism
+			}
+		}
+	}
+	
+	ai_potential = {
+		always = no
+	}
+}

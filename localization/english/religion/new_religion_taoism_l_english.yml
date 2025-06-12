@@ -1,0 +1,61 @@
+﻿l_english:
+
+ fashi:0 "Fashi"
+ fashi_adj:0 "Fashi"
+ fashi_adherent:0 "Fashi"
+ fashi_adherent_plural:0 "Fashis"
+ fashi_desc:0 "Known as Faism, the unorthodox 'redhat' Fashi school lay outside Taoism's traditional institutions. Though the Fashi adhere to Taoist scripture and symbolism, they are not formally ordained by a Celestial Master, and their practices incorporate Wuist rituals such as summoning and exorcising spirits."
+
+ danding:0 "Dan Ding"
+ danding_adj:0 "Dan Ding"
+ danding_adherent:0 "Dan Ding"
+ danding_adherent_plural:0 "Dan Ding's"
+ danding_desc:0 "Known as the Jindan Sect, is the general name for the various sects in Taoism that mainly focus on alchemy. It includes external alchemy, Huangbaizhu and internal alchemy."
+
+ koshinto:0 "Kō-shinto"
+ koshinto_adj:0 "Kō-shinto"
+ koshinto_adherent:0 "Kō-shinto"
+ koshinto_adherent_plural:0 "Kō-shintos"
+ koshinto_desc:0 "Ancient Animistic religion from Jōmon period Japan, which is the alleged basis of modern Shinto."
+
+ koshin:0 "Kōshin"
+ koshin_adj:0 "Kōshin"
+ koshin_adherent:0 "Kōshin"
+ koshin_adherent_plural:0 "Kōshins"
+ koshin_desc:0 "Folk belief in Japan with Taoist origins, influenced by Shinto, Buddhism and other local beliefs."
+
+ onmyodo:0 "Onmyōdō"
+ onmyodo_adj:0 "Onmyōdō"
+ onmyodo_adherent:0 "Onmyōdō"
+ onmyodo_adherent_plural:0 "Onmyōdōs"
+ onmyodo_desc:0 "Philosophy of natural science, astronomy, mantras, almanac, divination and magic that developed independently in Japan based on the Chinese philosophies of yin and yang and wuxing."
+
+ yosida:0 "Yuiitsu"
+ yosida_adj:0 "Yuiitsu"
+ yosida_adherent:0 "Yuiitsu"
+ yosida_adherent_plural:0 "Yuiitsus"
+ yosida_desc:0 "Prominent sect of Shintō that arose during the Sengoku period through the teachings and work of Yoshida Kanetomo."
+
+ haru:0 "Han-Ru"
+ haru_adj:0 "Han-Ru"
+ haru_adherent:0 "Han-Ru"
+ haru_adherent_plural:0 "Han-Rus"
+ haru_desc:0 "Extinctic branch of Confucianism, which once popular in China around 0 AD."
+ 
+ maitreyanism: "Maitreyanism"
+ maitreyanism_adj: "Maitreyanism"
+ maitreyanism_adherent: "Maitreya disciple"
+ maitreyanism_adherent_plural: "Maitreya disciples"
+ maitreyanism_desc: "The future Buddha Maitreya has come to the world, sweeping away all demons, and is willing to follow Maitreya's reincarnation and rebuild the Pure Land Buddha Kingdom."
+
+ mazuism: "Mazuism"
+ mazuism_adj: "Mazuism"
+ mazuism_adherent: "Mazuist"
+ mazuism_adherent_plural: "Mazuists"
+ mazuism_desc: "Mazuism is first attested in Huang Gongdu's poem "On the Shrine of the Smooth Crossing", which considered her a menial and misguided shamaness whose continued influence was inexplicable."
+
+ maitreyanism_high_god_name:0 "Maitreya"
+ maitreyanism_high_god_name_possessive:0 "Maitreya's"
+ mazuism_high_god_name:0 "Mazu"
+ mazuism_high_god_name_2:0 "Ma-tsu"
+ mazuism_high_god_name_possessive:0 "Mazu's"

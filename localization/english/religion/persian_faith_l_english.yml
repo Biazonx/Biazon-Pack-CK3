@@ -1,0 +1,36 @@
+﻿l_english:
+
+ doctrine_major_branch_dorustdin_name: "Dorustdin"
+ doctrine_major_branch_dorustdin_desc: "Dorustdin is a term roughly to orthodox ways of rites. It refers to those branches of Zoroastrianism which considered each other of the same faith as the Persian state religion, in constrast to the relationship between the branches in Iran and Armenia."
+ doctrine_parameter_hostility_override_doctrine_major_branch_dorustdin: "Considers other Dorustdin [faiths|E] to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]."
+ doctrine_parameter_hostility_override_doctrine_heretic_branch_zandik: "Considers other Korrammdin [faiths|E] to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]."
+
+ hepthalitism_good_god_manah: "Manah"
+ hepthalitism_good_god_ohrmazd: "Orhmazd"
+ hepthalitism_good_god_tirkanankaras: "Tirkanankaras"
+ hepthalitism_good_god_rishabh: "Rishabh"
+ hepthalitism_good_god_ajinath: "Ajinath"
+ hepthalitism_good_god_sambavanath: "Sambavanath"
+ hepthalitism_religious_text: "the Gathas"
+ hepthalitism: "Hephthalitism"
+ hepthalitism_adj: "Hephthalite"
+ hepthalitism_adherent: "Hephthalite"
+ hepthalitism_adherent_plural: "Hephthalites"
+ hepthalitism_desc: "Hephthalism is a syncretic religious sect based on a fusion of Zoroastrian and Hindu traditions with native beliefs. Less a true religion than an amalgam of an accepted many, the Hepthalite religion in game represents the unique combination of Zoroastrian, Tabitian, and Hindu practices all under the auspices of the Rajadhiraja himself."
+
+ cult_zurvan: "Zurvanism"
+ cult_zurvan_adj: "Zurvanism"
+ cult_zurvan_adherent: "Zurvanist"
+ cult_zurvan_adherent_plural: "Zurvanists"
+ cult_zurvan_desc: "Zurvanists believe that Ahura Mazda and Angra Mainyu were equal but opposite twins, born from Zurvan, the Creator of everything. Zurvanism heavily emphasizes aiding Ahura Mazda by rooting out of evil and falsehoods."
+ cult_zurvan_high_god_name: "Zurvan"
+ cult_zurvan_high_god_name_2: "$cult_zurvan_high_god_name$" # Optional translation alt
+ cult_zurvan_high_god_name_3: "$cult_zurvan_high_god_name$" # Optional translation alt
+ cult_zurvan_high_god_name_possessive: "Zurvan's"
+ cult_zurvan_high_god_it: "it"
+ cult_zurvan_high_god_itself: "itself"
+ cult_zurvan_high_god_name_alternate: "The One"
+ cult_zurvan_high_god_name_alternate_possessive: "The One's"
+
+ cult_zurvan_creator_god_name: "$cult_zurvan_high_god_name$"
+ cult_zurvan_creator_god_name_possessive: "$cult_zurvan_high_god_name_possessive$"

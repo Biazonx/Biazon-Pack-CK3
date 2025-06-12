@@ -1,0 +1,21 @@
+﻿@nobility_03 = "gfx/interface/icons/culture_innovations/innovation_nobility_03.dds"
+
+# Regional Innovations
+innovation_brus_veche = {
+	group = culture_group_regional
+	culture_era = culture_era_tribal
+	region = custom_brus_kievian_rus
+	icon = @nobility_03
+
+	potential = { has_fp1_dlc_trigger = yes }
+
+	custom = unlocks_authority_cooldown_breaking
+	
+	character_modifier = { 
+		tribal_government_vassal_opinion = 5 
+		republic_government_vassal_opinion = 5
+	}
+
+	flag = global_regional
+	flag = tribal_era_regional
+}

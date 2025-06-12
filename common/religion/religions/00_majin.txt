@@ -1,0 +1,107 @@
+majin_religion = {
+    family = rf_pagan
+
+    doctrine = pagan_hostility_doctrine
+
+    # Main Group
+    doctrine = doctrine_spiritual_head
+    doctrine = doctrine_gender_equal
+    doctrine = doctrine_pluralism_pluralistic
+    doctrine = doctrine_theocracy_temporal
+
+    # Marriage
+    doctrine = doctrine_polygamy
+    doctrine = doctrine_divorce_allowed
+    doctrine = doctrine_bastardry_legitimization
+    doctrine = doctrine_consanguinity_unrestricted
+
+    # Crimes
+    doctrine = doctrine_homosexuality_shunned
+    doctrine = doctrine_adultery_men_accepted
+    doctrine = doctrine_adultery_women_accepted
+    doctrine = doctrine_kinslaying_close_kin_crime
+    doctrine = doctrine_deviancy_accepted
+    doctrine = doctrine_witchcraft_accepted
+
+    # Clerical Functions
+    doctrine = doctrine_clerical_function_taxation
+    doctrine = doctrine_clerical_gender_either
+    doctrine = doctrine_clerical_marriage_disallowed
+    doctrine = doctrine_clerical_succession_temporal_appointment
+
+    # Pilgrimage
+    doctrine = doctrine_pilgrimage_forbidden
+
+    # Funeral Tradition
+    doctrine = doctrine_funeral_cremation
+
+    traits = {
+        virtues = { majin_race sadistic zealous wrathful gluttonous lazy}
+        sins = { patient temperate content }
+    }
+
+    holy_order_names = {
+        { name = "holy_order_majin_enforcers" }
+        { name = "holy_order_babidi_blessed" }
+    }
+
+    custom_faith_icons = {
+        custom_faith_triquetra custom_faith_spiral custom_faith_crescent_star
+    }
+
+    holy_order_maa = { majin_chaos }
+
+    localization = {
+        HighGodName = majin_high_god
+        HighGodName2 = majin_high_god_2
+        HighGodNamePossessive = majin_high_god_possessive
+        HighGodNameSheHe = CHARACTER_HE
+        HighGodHerselfHimself = CHARACTER_HIMSELF
+        HighGodHerHis = CHARACTER_HIS
+        HighGodNameAlternate = majin_dark_force
+        HighGodNameAlternatePossessive = majin_dark_force_possessive
+
+        CreatorName = majin_origin
+        CreatorNamePossessive = majin_origin_possessive
+
+        HealthGodName = majin_body
+        FertilityGodName = majin_pleasure
+        WealthGodName = majin_conquest
+        HouseholdGodName = majin_flame
+        FateGodName = majin_will
+        KnowledgeGodName = majin_magic
+        WarGodName = majin_violence
+
+        DevilName = anti_majin_force
+        EvilGodNames = { sacred_guardians }
+
+        HouseOfWorship = majin_temple
+        HouseOfWorshipPlural = majin_temples
+        ReligiousSymbol = majin_seal
+        ReligiousText = majin_grimoire
+        ReligiousHeadName = majin_overlord
+        DivineRealm = majin_chaos_realm
+        PositiveAfterLife = majin_unity
+        NegativeAfterLife = seal_of_damnation
+
+        PriestMale = majin_blessed
+        PriestFemale = majin_blessed
+    }
+
+    faiths = {
+        majin_faith = {
+            color = { 0.85 0.1 0.85 } # Majin purple
+            icon = "majin_faith.dds"
+
+            holy_site = rome # placeholder — you can assign custom ones later
+            holy_site = constantinople
+            holy_site = baghdad
+            holy_site = jerusalem
+            holy_site = mecca
+
+            doctrine = tenet_human_sacrifice
+            doctrine = tenet_warmonger
+            doctrine = tenet_hedonistic
+        }
+    }
+}

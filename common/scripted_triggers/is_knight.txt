@@ -1,0 +1,6 @@
+is_knight_or_follower = {
+        OR = {
+            #has_trait = adventurer_follower
+            has_character_flag = combat_vet
+        }
+}

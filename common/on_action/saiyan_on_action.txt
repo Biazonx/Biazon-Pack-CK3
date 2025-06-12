@@ -1,0 +1,181 @@
+﻿on_birth_child = {
+    on_actions = {
+        on_saiyan_birth
+		on_namekian_birth
+		on_frieza_birth
+		on_majin_birth
+    }
+}
+
+on_saiyan_birth = {
+    effect = {
+        # Both parents are pure Saiyans
+        if = {
+            limit = {
+                scope:real_father = { has_trait = pure_saiyan }
+                scope:mother = { has_trait = pure_saiyan }
+            }
+
+            # Scarlet Eyes rare chance
+            random_list = {
+                95 = { }
+                5 = { add_trait = scarlet_eyes }
+            }
+
+            # Class assignment
+            random_list = {
+                50 = { add_trait = low_class_warrior }
+                35 = { add_trait = mid_class_warrior }
+                15 = { add_trait = elite_class_warrior }
+            }
+
+            # Saiyan lineage outcome
+            random_list = {
+                95 = {
+                    add_trait = pure_saiyan
+                    add_trait = saiyan_tail
+                }
+                5 = {
+                    add_trait = pure_saiyan
+                    add_trait = legendary_super_saiyan
+                    add_trait = saiyan_tail
+                }
+            }
+        }
+
+        # Father is pure Saiyan, mother is not
+        if = {
+            limit = {
+                scope:real_father = { has_trait = pure_saiyan }
+                scope:mother = { NOT = { has_trait = pure_saiyan } }
+            }
+
+            random_list = {
+                95 = { add_trait = hybrid_saiyan }
+                5 = {
+                    add_trait = hybrid_saiyan
+                    add_trait = legendary_super_saiyan
+                }
+            }
+			random_list = {
+                50 = { add_trait = low_class_warrior }
+                35 = { add_trait = mid_class_warrior }
+                15 = { add_trait = elite_class_warrior }
+            }
+        }
+
+        # Mother is pure Saiyan, father is not
+        if = {
+            limit = {
+                scope:real_father = { NOT = { has_trait = pure_saiyan } }
+                scope:mother = { has_trait = pure_saiyan }
+            }
+
+            random_list = {
+                95 = { add_trait = hybrid_saiyan }
+                5 = {
+                    add_trait = hybrid_saiyan
+                    add_trait = legendary_super_saiyan
+                }
+            }
+			random_list = {
+                50 = { add_trait = low_class_warrior }
+                35 = { add_trait = mid_class_warrior }
+                15 = { add_trait = elite_class_warrior }
+            }
+        }
+    }
+}
+
+on_namekian_birth = {
+    effect = {
+        if = {
+            limit = {
+                OR = {
+                    AND = {
+                        scope:real_father = { has_trait = namekian_race }
+                        scope:mother = { has_trait = namekian_race }
+                    }
+                    AND = {
+                        scope:real_father = { has_trait = namekian_race }
+                        scope:mother = { NOT = { has_trait = namekian_race } }
+                    }
+                    AND = {
+                        scope:real_father = { NOT = { has_trait = namekian_race } }
+                        scope:mother = { has_trait = namekian_race }
+                    }
+                }
+            }
+
+            # Scarlet Eyes rare mutation
+            random_list = {
+                95 = { }
+                5 = { add_trait = scarlet_eyes }
+            }
+
+            # Inherit Namekian race
+            add_trait = namekian_race
+        }
+    }
+}
+
+on_frieza_birth = {
+    effect = {
+        if = {
+            limit = {
+                OR = {
+                    AND = {
+                        scope:real_father = { has_trait = frieza_race }
+                        scope:mother = { has_trait = frieza_race }
+                    }
+                    AND = {
+                        scope:real_father = { has_trait = frieza_race }
+                        scope:mother = { NOT = { has_trait = frieza_race } }
+                    }
+                    AND = {
+                        scope:real_father = { NOT = { has_trait = frieza_race } }
+                        scope:mother = { has_trait = frieza_race }
+                    }
+                }
+            }
+
+            random_list = {
+                95 = { }
+                5 = { add_trait = scarlet_eyes }
+            }
+
+            add_trait = frieza_race
+        }
+    }
+}
+
+on_majin_birth = {
+    effect = {
+        if = {
+            limit = {
+                OR = {
+                    AND = {
+                        scope:real_father = { has_trait = majin_race }
+                        scope:mother = { has_trait = majin_race }
+                    }
+                    AND = {
+                        scope:real_father = { has_trait = majin_race }
+                        scope:mother = { NOT = { has_trait = majin_race } }
+                    }
+                    AND = {
+                        scope:real_father = { NOT = { has_trait = majin_race } }
+                        scope:mother = { has_trait = majin_race }
+                    }
+                }
+            }
+
+            random_list = {
+                95 = { }
+                5 = { add_trait = scarlet_eyes }
+            }
+
+            add_trait = majin_race
+        }
+    }
+}
+

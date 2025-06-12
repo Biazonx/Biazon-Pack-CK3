@@ -1,0 +1,133 @@
+﻿name_list_saiyan = {
+
+	cadet_dynasty_names = {
+		"dynn_Radish"
+		"dynn_Parsnip"
+		"dynn_Leeki"
+		"dynn_Nopal"
+		"dynn_Sago"
+		"dynn_Pea"
+		"dynn_Peanut"
+		"dynn_Okra"
+		"dynn_Courgette"
+		"dynn_Daylily"
+		"dynn_Ticho"
+		"dynn_Jalapeno"
+		"dynn_Marrow"
+		"dynn_Solanum"
+		"dynn_Capsicum"
+		"dynn_Apaya"
+		"dynn_Coccinia"
+		"dynn_Brinjal"
+		"dynn_Durio"
+		"dynn_Calabash"
+		"dynn_Cucurbita"
+		"dynn_Yaochoy"
+		"dynn_Turnip"
+		"dynn_Taro"
+		"dynn_Purslane"
+		"dynn_Amaranth"
+	}
+
+	dynasty_names = {
+		"dynn_Vegeta"
+		"dynn_Paragus"
+		"dynn_Son"
+		"dynn_Pelanta"
+		"dynn_Plantayn"
+		"dynn_Brassica"
+		"dynn_Burdock"
+		"dynn_Black"
+		"dynn_Crusher"
+		"dynn_Yamoshi"
+		"dynn_Sadala"
+		"dynn_Vitis"
+		"dynn_Sprout"
+		"dynn_Rapini"
+		"dynn_Chard"
+		"dynn_Yarrow"
+		"dynn_Sola"
+		"dynn_Gourd"
+		"dynn_Luffa"
+		"dynn_Tomatillo"
+		"dynn_Gherkin"
+		"dynn_Pimento"
+		"dynn_Cynara"
+		"dynn_Colini"
+		"dynn_Bean"
+		"dynn_Garbanzo"
+		"dynn_Lentil"
+		"dynn_Lima"
+		"dynn_Fennel"
+		"dynn_Rabi"
+		"dynn_Calion"
+		"dynn_Root"
+		"dynn_Casava"
+		"dynn_Sunchoke"
+		"dynn_Parsley"
+		"dynn_Jicama"
+		"dynn_Cyperus"
+		"dynn_Ube"
+		"dynn_Wasabi"
+		"dynn_Carola"
+		"dynn_Badderlock"
+		"dynn_Nori"
+		"dynn_Crosne"
+		"dynn_Bamboo"
+	}
+	
+	male_names = {
+		Auber Articho
+		Bardock Beets Beat Borgos Broly Basaku Bega Bokcho Basil Barlot
+		Cumber Cabba Capsi Ceriac Clove Celleri Chive
+		Daikon
+		Escar Erito
+		Giblet Gourd Goku Gohan Goten Gogeta Gotenks Garlik
+		Kakarot Kress Kyuko Kurrot Kassava Karoly Kohl
+		Leek Lottus
+		Moroko
+		Nappa Negi
+		Onio Orko Ocuro
+		Paragus Pinich Panbukin Paprika Parslee Pars
+		Raditz Renso Rhubub Rhuta Ruco
+		Shito Shugesh Shallot Sadala Sage Skwash Scallio Serrano Solani Soga
+		Tarble Turles Tullece Tekka Taro Tora Toteppo Toma Tartus Tato Tabaga Tichoke Trunks Tyber
+		Ube
+		Vegeta Vasabi Vegito Vegerot
+		Yamoshi Yashimo Yamash
+		Zukini Zorn
+	}
+	female_names = {
+		Asparon Ayote Avoca
+		Caulifla Cayenne Carrette Chokly Celara Cauri Cassa
+		Eschalot Endive Elery
+		Fasha Forte
+		Gine Ginge
+		Hyacinth
+		Iceber
+		Jinjer
+		Kale Kefla Kalif Kiclee Kalion Kora Kolra Korn
+		Lisee
+		Mint May
+		Nion Ninion Note Narmis Nazz Nira
+		Okara
+		Pan Pumkin Prika Pepal Pinea Palantay
+		Ruccola Romaine Roccoli Rugu
+		Seripa Sesamy Shalet Stabba Sesatta
+		Viola Vocado
+		Yunaly
+		Zyza
+	}
+	
+	# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+	pat_grf_name_chance = 50
+	mat_grf_name_chance = 0
+	father_name_chance = 0
+	
+	# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+	pat_grm_name_chance = 10
+	mat_grm_name_chance = 50
+	mother_name_chance = 0
+
+	
+}

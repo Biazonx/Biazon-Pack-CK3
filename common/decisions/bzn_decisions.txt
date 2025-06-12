@@ -1,0 +1,1380 @@
+﻿bzn_invite_chinese_traveler_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
+    }
+
+    decision_group_type = courtier
+
+    ai_check_interval = 120
+
+    cooldown = { years = 5 }
+
+    is_shown = {
+        is_landless_adventurer = no
+    }
+
+    desc = bzn_invite_chinese_traveler_desc
+
+    effect = {
+        trigger_event = {
+            id = bzn_decisions.0001
+            days = { 5 10 }
+        }
+        custom_tooltip = bzn_invite_chinese_traveler_effect_tooltip
+    }
+
+    cost = { prestige = minor_prestige_value }
+
+    ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 20
+	}
+}
+
+bzn_invite_japanese_samurai_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_knight_kneeling.dds"
+    }
+
+    decision_group_type = courtier
+
+    ai_check_interval = 120
+
+    cooldown = { years = 5 }
+
+    is_shown = {
+        is_landless_adventurer = no
+    }
+
+    desc = bzn_invite_japanese_samurai_desc
+
+    effect = {
+        trigger_event = {
+            id = bzn_decisions.0002
+            days = { 5 10 }
+        }
+        custom_tooltip = bzn_invite_japanese_samurai_effect_tooltip
+    }
+
+    cost = { prestige = minor_prestige_value }
+
+    ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 20
+	}
+}
+
+bzn_invite_hashishiyah_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
+    }
+
+    decision_group_type = courtier
+
+    ai_check_interval = 0
+
+    cooldown = { years = 1 }
+
+    is_shown = {
+        is_landless_adventurer = no
+    }
+
+    desc = bzn_invite_hashishiyah_desc
+
+    effect = {
+        trigger_event = {
+            id = bzn_decisions.0006
+            days = { 5 10 }
+        }
+        custom_tooltip = bzn_invite_hashishiyah_effect_tooltip
+    }
+
+    cost = { prestige = minor_prestige_value }
+
+    ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+bzn_become_hashishiyah_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_knight_kneeling.dds"
+    }
+
+    decision_group_type = realm
+
+    ai_check_interval = 0
+
+    is_shown = {
+        NOT = { has_trait = hashishiyah }
+    }
+
+    is_valid = {
+        any_courtier = {
+            has_trait = hashishiyah
+            is_imprisoned = no
+        }
+    }
+
+    desc = bzn_become_hashishiyah_desc
+
+    effect = {
+        add_trait = hashishiyah
+    }
+
+    cost = { prestige = 100 }
+
+    ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+bzn_hussite_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+    }
+
+    decision_group_type = major
+
+    ai_check_interval = 120
+
+    cooldown = { years = 1 }
+
+    is_shown = {
+        NOT = { 
+			faith = faith:taborites
+			faith = faith:ultraquist
+			faith = faith:orebites
+		}
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_hussite }
+        }
+		is_landless_adventurer = no
+	}
+	
+	is_valid = {
+		NOT = {
+			has_trait = zealous
+			has_trait = inquisitor
+		}
+	}
+    desc = bzn_hussite_decision_desc
+
+    effect = {
+        trigger_event = {
+            id = bzn_decisions.0011
+            days = { 3 5 }
+        }
+        custom_tooltip = bzn_hussite_decision_effect_tooltip
+    }
+
+    cost = { piety = 200 }
+
+    ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 5
+	}
+}
+
+bzn_create_war_wagon = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_smith.dds"
+    }
+    decision_group_type = major
+    ai_check_interval = 0
+
+    is_shown = {
+        is_landless_adventurer = no
+		NOT = { has_variable = wagon_tradition }
+		OR = {
+			has_faith = faith:taborites
+			has_faith = faith:ultraquist
+			has_faith = faith:orebites
+		}
+	}
+
+    is_valid = {
+	}
+
+    desc = bzn_create_war_wagon_decision_desc
+    cost = { gold = 500 }
+
+    effect = {
+        root.culture = {
+            add_culture_tradition = tradition_hussite_wagon
+        }
+		spawn_army = {
+			men_at_arms = {
+				type = hussite_wagon
+				stacks = 2
+			}
+			inheritable = yes
+			uses_supply = yes
+			location = root.location
+		}
+		set_variable = {
+			name = wagon_tradition
+			years = 100
+		}
+    }
+
+    ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+bzn_become_inquisitor = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+    }
+
+    decision_group_type = realm
+
+    ai_check_interval = 0
+
+    is_shown = {
+        is_landless_adventurer = no
+        NOT = { has_trait = inquisitor }
+    }
+
+    is_valid = {
+        OR = {
+            AND = {
+                piety_level >= 4
+                martial >= 12
+            }
+            AND = {
+                piety_level >= 3
+                has_trait = zealous
+                martial >= 12
+            }
+        }
+    }
+
+    desc = bzn_become_inquisitor_desc
+
+    cost = { piety = 1000 }
+
+    effect = {
+        add_trait = inquisitor
+    }
+
+    ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+bzn_become_artisan = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_smith.dds"
+    }
+    decision_group_type = realm
+    ai_check_interval = 0
+
+    is_shown = {
+        is_landless_adventurer = no
+        NOT = { has_trait = artisan }
+        NOT = { has_trait = merchant }
+    }
+
+    is_valid = {
+        NOT = { has_trait = merchant }
+        OR = {
+            AND = {
+                prestige_level >= 3
+                stewardship >= 12
+                learning >= 10
+                OR = {
+                    has_trait = architect
+                    has_trait = administrator
+                    has_trait = avaricious
+                    has_trait = diligent
+                    has_trait = temperate
+                    has_trait = patient
+                }
+            }
+        }
+    }
+
+    desc = bzn_become_artisan_desc
+    cost = {
+        prestige = 500
+        gold = 150
+    }
+
+    effect = {
+        add_trait = artisan
+    }
+
+    ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+bzn_become_merchant = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_spend_money.dds"
+    }
+    decision_group_type = realm
+    ai_check_interval = 0
+
+    is_shown = {
+        is_landless_adventurer = no
+        NOT = { has_trait = merchant }
+        NOT = { has_trait = artisan }
+    }
+
+    is_valid = {
+        NOT = { has_trait = artisan }
+        OR = {
+            AND = {
+                prestige_level >= 3
+                stewardship >= 15
+                OR = {
+                    has_trait = architect
+                    has_trait = administrator
+                    has_trait = avaricious
+                    has_trait = temperate
+                    has_trait = greedy
+                }
+            }
+        }
+    }
+
+    desc = bzn_become_merchant_desc
+    cost = { gold = 300 }
+
+    effect = {
+        add_trait = merchant
+    }
+
+    ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+bzn_become_warlord = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/fp1_decision_forge_jomsvikings.dds"
+    }
+    decision_group_type = realm
+    ai_check_interval = 0
+
+    is_shown = {
+        is_landless_adventurer = no
+        NOT = { has_trait = bzn_warlord }
+    }
+
+    is_valid = {
+        martial >= 15
+        prestige_level >= 4
+        OR = {
+            has_trait = strategist
+            has_trait = gallant
+            has_trait = overseer
+        }
+        custom_tooltip = {
+            text = become_warlord_decision_war_participation
+            any_memory = {
+                count >= 10
+                OR = {
+                    has_memory_type = offensive_war
+                    has_memory_type = defensive_war
+                    has_memory_type = joined_allys_war
+                }
+            }
+        }
+    }
+
+    desc = bzn_become_warlord_desc
+    cost = { prestige = 1000 }
+
+    effect = {
+        add_trait = bzn_warlord
+    }
+
+    ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+bzn_looting_tradition_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_legitimacy.dds"
+    }
+    sort_order = 62
+    ai_check_interval = 0
+
+    is_shown = {
+        is_landless_adventurer = no
+		NOT = { has_variable = looting_tradition }
+    }
+
+    is_valid = {
+        prestige_level >= 3
+            OR = {
+                has_trait = pirate_captain
+				has_trait = slaver
+        }
+    }
+
+    desc = bzn_looting_tradition_decision_desc
+    cost = { prestige = 2000 }
+
+    effect = {
+        root.culture = {
+            add_culture_tradition = tradition_servile_soldiers
+        }
+		set_variable = {
+			name = looting_tradition
+			years = 100
+		}
+    }
+
+    ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+bzn_battle_thrall_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_knight_kneeling.dds"
+    }
+    decision_group_type = courtier
+    ai_check_interval = 120
+    cooldown = { years = 1 }
+
+    is_shown = {
+        is_landless_adventurer = no
+        is_ai = no
+		
+    }
+
+    is_valid = {
+        any_courtier = {
+            has_trait = thrall
+            is_imprisoned = no
+        }
+    }
+
+    desc = "bzn_battle_thrall_decision_desc"
+    cost = { prestige = 150 }
+
+    effect = {
+        random_courtier = {
+            limit = {
+                has_trait = thrall
+                is_imprisoned = no
+            }
+            remove_trait = thrall
+            add_trait = battle_thrall
+            custom_tooltip = "bzn_battle_thrall_effect_tooltip"
+        }
+    }
+
+    ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 20
+	}
+}
+
+bzn_become_samurai = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_knight_kneeling.dds"
+    }
+    decision_group_type = realm
+    ai_check_interval = 0
+
+    is_shown = {
+        is_landless_adventurer = no
+        NOT = { has_trait = samurai }
+        NOT = { has_trait = ronin }
+    }
+
+    is_valid = {
+        culture = culture:japanese
+        prestige_level >= 3
+		OR = {
+        martial >= 12
+        prowess >= 12
+		}
+        NOT = { has_trait = disloyal }
+    }
+
+    desc = bzn_become_samurai_desc
+    cost = { prestige = 1000 }
+
+    effect = {
+        add_trait = samurai
+    }
+
+    ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+bzn_become_ronin = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_legend.dds"
+    }
+    decision_group_type = realm
+    ai_check_interval = 0
+
+    is_shown = {
+        is_landless_adventurer = no
+        NOT = { has_trait = ronin }
+    }
+
+    is_valid = {
+        has_trait = samurai
+        OR = {
+            has_trait = craven
+            has_trait = greedy
+            has_trait = vengeful
+            has_trait = deceitful
+            has_trait = arrogant
+            has_trait = arbitrary
+            has_trait = paranoid
+            has_trait = callous
+            has_trait = sadistic
+        }
+        NOT = { has_trait = loyal }
+    }
+
+    desc = bzn_become_ronin_desc
+    cost = { prestige = 250 }
+
+    effect = {
+        remove_trait = samurai
+        add_trait = ronin
+    }
+
+    ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+
+bzn_become_mercenary_patron = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/ep3_decision_hold_triumph.dds"
+	}
+
+	decision_group_type = realm
+
+	ai_check_interval = 0
+
+	is_shown = {
+		is_landless_adventurer = no
+		NOT = { has_trait = mercenary_patron }
+	}
+
+	is_valid = {
+		prestige_level >= 3
+		OR = {
+			has_trait = ambitious
+			has_trait = greedy
+			martial >= 12
+		}
+		NOT = { has_trait = generous }
+	}
+
+	desc = bzn_become_mercenary_patron_desc
+	cost = { gold = 500 }
+
+	effect = { 
+		add_trait = mercenary_patron 
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+bzn_embrace_chinese_culture_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_culture.dds"
+	}
+
+	decision_group_type = major
+
+	ai_check_interval = 0
+
+	is_shown = {
+		NOT = { culture = culture:han }
+		NOT = { culture = culture:japanese }
+	}
+
+	is_valid = {
+		knows_language = language_chinese
+	}
+
+	desc = embrace_chinese_culture_decision_desc
+	cost = { prestige = 250 }
+
+	effect = {
+		set_culture = culture:han
+		capital_county = {
+			set_county_culture = culture:han
+		}
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+bzn_embrace_japanese_culture_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_culture.dds"
+	}
+
+	decision_group_type = major
+
+	ai_check_interval = 0
+
+	is_shown = {
+		NOT = { culture = culture:han }
+		NOT = { culture = culture:japanese }
+	}
+
+	is_valid = {
+		knows_language = language_japanese
+	}
+
+	desc = embrace_japanese_culture_decision_desc
+	cost = { prestige = 250 }
+
+	effect = {
+		set_culture = culture:japanese
+		capital_county = {
+			set_county_culture = culture:japanese
+		}
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+
+bzn_adopt_monastic_feudal_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	}
+
+	decision_group_type = realm
+
+	ai_check_interval = 120
+
+	is_shown = {
+		NOT = { has_government = monastic_feudal_government }
+		has_government = feudal_government
+	}
+	
+	is_valid = {
+		piety_level >= 2
+	}
+	desc = bzn_adopt_monastic_feudal_decision_desc
+	cost = { piety = 200 }
+
+	effect = {
+		change_government = monastic_feudal_government
+		every_vassal_or_below = {
+				limit = { government_has_flag = government_is_feudal }
+				change_government = monastic_feudal_government
+			}
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+bzn_adopt_confederate_tribal_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	}
+
+	decision_group_type = realm
+
+	ai_check_interval = 120
+
+	is_shown = {
+		NOT = { has_government = confederate_tribal_government }
+		has_government = tribal_government
+	}
+	
+	is_valid = {
+		prestige_level >= 2
+	}
+	desc = bzn_adopt_confederate_tribal_decision_desc
+	cost = { prestige = 200 }
+
+	effect = {
+		change_government = confederate_tribal_government
+		every_vassal_or_below = {
+				limit = { government_has_flag = government_is_tribal }
+				change_government = confederate_tribal_government
+			}
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+bzn_decentralize_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	}
+
+	decision_group_type = realm
+
+	ai_check_interval = 120
+
+	is_shown = {
+		NOT = { has_variable = decentralized_realm }
+	}
+	
+	is_valid = {
+	}
+	desc = bzn_decentralize_decision_desc
+	cost = { prestige = 200 }
+
+	effect = {
+		save_scope_as = actor
+		every_vassal = {
+			save_scope_as = recipient
+			add_opinion = {
+				target = scope:actor
+				modifier = granted_independence_opinion
+				opinion = 10
+			}
+			create_title_and_vassal_change = {
+				type = independency
+				save_scope_as = change
+				add_claim_on_loss = yes
+			}
+			
+			becomes_independent = {
+				change = scope:change
+			}
+
+			resolve_title_and_vassal_change = scope:change
+			
+			demand_tribute_start_tributary_interaction_effect = {
+				SUZERAIN = scope:actor
+				TRIBUTARY = scope:recipient
+			}
+		}
+		set_variable = {
+			name = decentralized_realm
+			years = 100
+		}
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+bzn_adopt_shinto_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	}
+
+	decision_group_type = major
+
+	ai_check_interval = 120
+
+	is_shown = {
+		NOT = { faith = faith:shin}
+		any_courtier = {
+            faith = faith:shin
+        }
+	}
+
+	is_valid = {
+		knows_language = language_japanese
+		piety_level >= 2
+	}
+
+	desc = bzn_adopt_shinto_decision_desc
+	cost = { piety = 250 }
+
+	effect = {
+		set_character_faith = faith:shin
+		capital_county = {
+			set_county_faith = faith:shin
+		}
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+bzn_celtic_traditions_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_culture.dds"
+	}
+
+	decision_group_type = major
+
+	ai_check_interval = 0
+
+	is_shown = {
+		OR = {
+			culture = culture:irish
+			culture = culture:gaelic
+			culture = culture:pictish
+			culture = culture:scottish
+			culture = culture:cumbrian
+			culture = culture:welsh
+			culture = culture:cornish
+			culture = culture:anglo_saxon
+			culture = culture:english
+			culture = culture:breton
+		}
+		NOT = { culture = culture:celt }
+	}
+
+	is_valid = {
+		OR = {
+			culture = culture:irish
+			culture = culture:gaelic
+			culture = culture:pictish
+			culture = culture:scottish
+			culture = culture:cumbrian
+			culture = culture:welsh
+			culture = culture:cornish
+			culture = culture:anglo_saxon
+			culture = culture:english
+			culture = culture:breton
+		}
+	}
+
+	desc = celtic_traditions_decision_desc
+	cost = { prestige = 500 piety = 500 }
+
+	effect = {
+		ROOT = {
+			set_culture = culture:celt
+			set_character_faith = faith:druidism
+		}
+
+		every_courtier = {
+			limit = { NOT = { faith = faith:druidism } }
+			set_culture = culture:celt
+			set_character_faith = faith:druidism
+		}
+
+		every_vassal = {
+			limit = { NOT = { faith = faith:druidism } }
+			set_culture = culture:celt
+			set_character_faith = faith:druidism
+		}
+
+		every_realm_county = {
+			limit = { NOT = { faith = faith:druidism } }
+			set_county_culture = culture:celt
+			set_county_faith = faith:druidism
+		}
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+
+bzn_impaler = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/ep3_decision_varangian_guard.dds"
+    }
+    decision_group_type = realm
+    ai_check_interval = 0
+    is_shown = {
+        is_landless_adventurer = no
+        NOT = { has_trait = impaler }
+    }
+    is_valid = {
+        prestige_level >= 3
+        prowess >= 12
+        dread >= 50
+        OR = {
+            has_trait = arbitrary
+            has_trait = wrathful
+            has_trait = sadistic
+            has_trait = torturer
+            culture = culture:vlach
+        }
+        NOT = { has_trait = compassionate }
+    }
+    desc = bzn_impaler_desc
+    cost = { prestige = 1000 }
+    effect = {
+        add_trait = impaler
+    }
+    ai_potential = {
+        always = no
+    }
+    ai_will_do = {
+        base = 0
+    }
+}
+
+bzn_pirate_captain = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/fp1_decision_forge_jomsvikings.dds"
+    }
+    decision_group_type = realm
+    ai_check_interval = 0
+    is_shown = {
+        is_landless_adventurer = no
+        NOT = { has_trait = pirate_captain }
+        NOT = { has_trait = slaver }
+    }
+    is_valid = {
+        NOT = { has_trait = slaver }
+        prestige_level >= 3
+        martial >= 10
+        intrigue >= 5
+        OR = {
+            has_trait = greedy
+            has_trait = eccentric
+            has_trait = arrogant
+            has_trait = disloyal
+            has_trait = drunkard
+        }
+        NOT = { has_trait = loyal }
+    }
+    desc = bzn_pirate_captain_desc
+    cost = { prestige = 500 gold = 150 }
+    effect = {
+        add_trait = pirate_captain
+    }
+    ai_potential = {
+        always = no
+    }
+    ai_will_do = {
+        base = 0
+    }
+}
+
+bzn_slaver = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/ep3_decision_varangian_guard.dds"
+    }
+    decision_group_type = realm
+    ai_check_interval = 0
+    is_shown = {
+        is_landless_adventurer = no
+        NOT = { has_trait = slaver }
+        NOT = { has_trait = pirate_captain }
+    }
+    is_valid = {
+        NOT = { has_trait = pirate_captain }
+        prestige_level >= 3
+        martial >= 12
+        stewardship >= 10
+        NOT = { has_trait = content }
+        NOT = { has_trait = humble }
+        NOT = { has_trait = craven }
+        NOT = { has_trait = compassionate }
+    }
+    desc = bzn_slaver_desc
+    cost = { prestige = 500 gold = 150 }
+    effect = {
+        add_trait = slaver
+    }
+    ai_potential = {
+        always = no
+    }
+    ai_will_do = {
+        base = 0
+    }
+}
+
+bzn_headhunter = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_prison.dds"
+    }
+    decision_group_type = realm
+    ai_check_interval = 0
+    is_shown = {
+        is_landless_adventurer = no
+        NOT = { has_trait = headhunter }
+    }
+    is_valid = {
+        prestige_level >= 3
+        prowess >= 12
+        OR = {
+            has_trait = possessed_1
+            has_trait = lunatic_1
+            has_trait = cannibal
+            custom_tooltip = {
+                text = bzn_become_conqueror_decision_enough_battle_kills
+                any_killed_character = {
+                    count >= 6
+                }
+            }
+        }
+    }
+    desc = bzn_headhunter_desc
+    cost = { prestige = 1000 }
+    effect = {
+        add_trait = headhunter
+    }
+    ai_potential = {
+        always = no
+    }
+    ai_will_do = {
+        base = 0
+    }
+}
+
+challenge_statue_to_duel_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/mpo_decision_confederation.dds"
+    }
+	
+	decision_group_type = major
+    ai_check_interval = 120
+    cooldown = { years = 5 }
+
+    is_shown = {
+        has_trait = lunatic_1
+    }
+
+    is_valid = {
+        has_trait = lunatic_1
+    }
+	
+	desc = challenge_statue_to_duel_decision_desc
+
+    effect = {
+        add_stress = -30
+        add_character_modifier = {
+            modifier = challenged_statue_bonus
+            years = 5
+        }
+        random_list = {
+            75 = { }
+            25 = { add_trait = lifestyle_blademaster }
+        }
+    }
+	
+	 cost = { prestige = 100 }
+
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 50
+    }
+}
+
+write_manifesto_to_stars_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_misc.dds"
+    }
+
+    ai_check_interval = 120
+    decision_group_type = major
+    cooldown = { years = 5 }
+
+    is_shown = {
+        has_trait = lunatic_1
+    }
+
+    is_valid = {
+        has_trait = lunatic_1
+    }
+
+    cost = { prestige = 100 }
+
+    effect = {
+        add_character_modifier = {
+            modifier = manifesto_inspired
+            years = 5
+        }
+        random_list = {
+            75 = { }
+            25 = { add_trait = poet }
+        }
+    }
+
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 50
+    }
+}
+
+
+bzn_embrace_madness = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_prison.dds"
+    }
+    decision_group_type = realm
+    ai_check_interval = 120
+	
+    is_shown = {
+        NOT = { has_trait = lunatic_1 has_trait = possessed_1 has_trait = voidborn }
+    }
+    is_valid = {
+        OR = {
+            stress_level >= 1
+            has_trait = lifestyle_mystic
+            has_trait = lifestyle_herbalist
+            has_trait = theologian
+       }
+    }
+    desc = bzn_embrace_madness_desc
+    effect = {
+        add_trait = lunatic_1
+		add_stress = -70
+		give_nickname = nick_the_mad 
+    }
+    ai_potential = {
+        always = no
+    }
+    ai_will_do = {
+        base = 0
+    }
+}
+
+bzn_enter_trance = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+    }
+    decision_group_type = realm
+    ai_check_interval = 120
+	
+    is_shown = {
+        NOT = { has_trait = lunatic_1 has_trait = possessed_1 has_trait = voidborn }
+    }
+    is_valid = {
+        OR = {
+            stress_level >= 1
+            has_trait = lifestyle_mystic
+            has_trait = lifestyle_herbalist
+            has_trait = theologian
+       }
+    }
+    desc = bzn_enter_trance_desc
+    effect = {
+        add_trait = possessed_1
+		add_stress = -70
+		give_nickname = nick_the_possessed
+    }
+    ai_potential = {
+        always = no
+    }
+    ai_will_do = {
+        base = 0
+    }
+}
+
+raise_diquis_spheres_decision = {
+	title = raise_diquis_spheres_decision_name
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/diquis.dds"
+    }
+	desc = raise_diquis_spheres_decision_desc
+	selection_tooltip = raise_diquis_spheres_decision_tooltip
+	decision_group_type = major
+
+	cooldown = { years = 10 }
+	ai_check_interval = 120
+
+	is_shown = {
+		# DLC check.
+		has_fp1_dlc_trigger = yes
+		# Landed characters only: nobody likes a mercenary.
+		is_landed = yes
+		primary_title.tier > tier_barony
+		# Holds a suitable culture at a suitable period.
+		OR = {
+			culture = culture:nahuatl
+			culture = culture:otomitl
+		}
+	}
+
+	is_valid = {
+	}
+
+	is_valid_showing_failures_only = {
+		# Standard checks.
+		is_available_adult = yes
+		# Shouldn't be at war.
+		is_at_war = no
+	}
+
+	cost = { gold = raise_stele_gold_cost }
+
+	effect = {
+		add_piety = 250
+		add_prestige = 350
+		add_legitimacy = 84
+		capital_county = { 
+			add_county_modifier = {
+				modifier = fp1_stele_promotion_weak
+					years = fp1_stele_duration_value
+					desc = fp1_stele_promotion_strong_custom_desc
+			}
+			add_county_modifier = {
+				modifier = fp1_stele_conquest_weak
+				years = fp1_stele_duration_value
+				desc = fp1_stele_promotion_strong_custom_desc
+			}
+			add_county_modifier = {
+				modifier = fp1_stele_ancestors_weak
+				years = fp1_stele_duration_value
+				desc = fp1_stele_ancestors_strong_custom_desc
+			}
+		}
+	}
+
+	ai_check_interval = 36
+	
+	ai_potential = {
+		# Only take it if you can afford it.
+		short_term_gold >= raise_stele_gold_cost
+	}
+
+	ai_will_do = {
+		# We don't want too many runestones all over the place.
+		base = 50
+	}
+}
+	
+bzn_high_druid = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+    }
+    decision_group_type = realm
+    ai_check_interval = 0
+    is_shown = {
+        is_landless_adventurer = no
+        faith = faith:druidism
+        NOT = { has_trait = high_druid }
+    }
+    is_valid = {
+        piety_level >= 3
+        learning >= 12
+        OR = {
+            has_trait = chaste
+            has_trait = content
+            has_trait = humble
+            has_trait = zealous
+            has_trait = patient
+            has_trait = lifestyle_mystic
+        }
+        NOT = { has_trait = cynical }
+    }
+    desc = bzn_high_druid_desc
+    cost = { piety = 1000 }
+    effect = {
+        add_trait = high_druid
+    }
+    ai_potential = {
+        always = no
+    }
+    ai_will_do = {
+        base = 0
+    }
+}
+
+
+

@@ -1,0 +1,57 @@
+﻿l_english:
+
+ ########################
+ ##### Game Concept #####
+ ########################
+ 
+ #Lifestyles Concept
+ game_concept_nht_prowess_lifestyle: "Prowess Lifestyle"
+ game_concept_nht_prowess_lifestyle_desc:4 "The $game_concept_nht_prowess_lifestyle$ is suitable for Characters who want to improve their [armies|E] and [knights|E], lower [travel_danger|E], or increase their chances to win [single_combat_duel|E]."
+
+ game_concept_nht_leadership_lifestyle: "Leadership Lifestyle"
+ game_concept_nht_leadership_lifestyle_desc: "The $game_concept_nht_leadership_lifestyle$ is suitable for Characters who want to improve their [realm|E], appease their [close_family_members|E] and [vassals|E], or strengthen they [dynasty|E]." 
+
+ game_concept_nht_secondary_lifestyle:4 "Secondary Lifestyle"
+ game_concept_nht_secondary_lifestyles:4 "Secondary Lifestyles" 
+ game_concept_nht_secondary_lifestyle_desc: "When the #high Secondary Lifestyles#! game rule is applied, [nht_prowess_lifestyle|E] and [nht_leadership_lifestyle|E] are designated as secondary [lifestyles|El]. This means that their specific [focuses|El] cannot be chosen independently; instead, their [perks|El] can only be accessed by adhering to primary lifestyles.\n\nTo unlock the perks associated with [nht_prowess_lifestyle|E], you must pursue either [martial_lifestyle|E] or [intrigue_lifestyle|E].\n\nTo unlock the perks associated with [nht_leadership_lifestyle|E], you must pursue [diplomacy_lifestyle|E], [stewardship_lifestyle|E], or [learning_lifestyle|E]." 
+
+
+ #Interaction Concept
+ #Send Volunteer Soldiers Interaction
+ game_concept_nht_send_volunteer_soldier_interaction: "$nht_send_volunteer_soldier_interaction$"
+ game_concept_nht_send_volunteer_soldier_interaction_desc:4 "A Diplomatic [interaction|E] that allow to send [levies|E] to aid a foreign [ruler|E]."
+
+ #Negotiate Trade Agreement Interaction
+ game_concept_nht_negotiate_trade_agreement_interaction: "$nht_negotiate_trade_agreement_interaction$"
+ game_concept_nht_trade_agreement: "Trade Agreement"
+ game_concept_nht_negotiate_trade_agreement_interaction_desc: "An [interaction|E] that allows you to enter into a trade agreement with another [ruler|E]. Rulers cannot enter into trade agreements within their own [realm|E] or within the realms of their [liege|E].\n\nDepending on your [title|E] and [traditions|E], you are allowed to hold multiple trade agreements simultaneously:\n\n$BULLET_WITH_TAB$ [count|E] can have up to #V 1#! Trade Agreement.\n$BULLET_WITH_TAB$ [duke|E] can have up to #V 2#! Trade Agreements.\n$BULLET_WITH_TAB$ [king|E] can have up to #V 2#! Trade Agreements.\n$BULLET_WITH_TAB$ [emperor|E] can have up to #V 3#! Trade Agreements. \n\nA Trade Agreement is determined by both [rulers|E] monthly [income|E]. The higher the other [ruler|E]'s monthly income compared to yours, the more advantageous the agreement will be for you." 
+
+ #Negotiate Trade Agreement Interaction
+ game_concept_nht_swordsmanship_tutelage_interaction: "$nht_swordsmanship_tutelage_interaction$"
+ game_concept_nht_swordsmanship_tutelage_interaction_desc:4 "An [interaction|E] allowing you to train your wards and children to combat and improve their [prowess|E]"
+
+ #Negotiate Trade Agreement Interaction
+ game_concept_nht_train_with_knight_interaction: "$nht_train_with_knight_interaction$"
+ game_concept_nht_train_with_knight_interaction_desc: "An [interaction|E] that allows you to train with your [knights|E] to improve your [prowess|E]. Depending on the knight's prowess, you might gain a permanent or temporary [modifier|E]."  
+
+
+ game_concept_nht_fortify_holding_decision: "Fortify Holding Decision"
+ game_concept_nht_fortify_holding: "Fortify Holding"
+ game_concept_nht_fortify_holding_decision_desc: "A [decision|E] allowing for the fortification of one of your [holding|E] for a large amount of [gold|E]"
+
+ #Cut from the latest update
+ #game_concept_nht_construct_capital_wall_decision: "Construct Capital Wall Decision"
+ #game_concept_nht_construct_capital_wall: "Construct Capital Wall"
+ #game_concept_nht_construct_capital_wall_decision_desc: "A [decision|E] allowing for the construction of enourmous walls around the capital of a [ruler|E] for a large amount of [gold|E]"
+ 
+ game_concept_nht_spoils_of_war_perk_event: "Plunder Event"
+ game_concept_nht_spoils_of_war_perk_event_desc: "[rulers|E] who possess the #L Spoils of War#! [perk|E] can unlock a special event when they successfully capture their enemy's capital or a [county|E] with at least #P 25#! developments.\n\nThese rulers can intensify their plundering of a [barony|E], gaining additional [gold|E] and destroying [buildings|E], albeit at the expense of a negative opinion modifier.\n\nAs time progresses the [development|E] requirement will increase by #V 5#! every #V 50 years#!."
+ 
+ 
+ #Declare as Heir Interaction
+ game_concept_nht_declare_as_heir_interaction: "$nht_declare_as_heir_interaction$"
+ game_concept_nht_declare_as_heir_interaction_desc: "A Diplomatic [interaction|E] that allows you to choose the [realm_heir|E] with minimal restrictions, regardless of your realm's [crown_authority|E].\n\nGiving a more or less significant penalty for the future [heir|E], varying in magnitude based the line of [succession|E], [gender_law|E], [dynasty|E] and the attributes of the newly selected heir."
+
+ game_concept_nht_sack_countryside_provisions_decision: "Sack Countryside for Provisions Decision"
+ game_concept_nht_sack_countryside_provisions: "Sack Countryside for Provisions"
+ game_concept_nht_sack_countryside_provisions_decision_desc: "A [decision|E] allowing to search and sack the a [county|E] near you to find [provisions|E]."

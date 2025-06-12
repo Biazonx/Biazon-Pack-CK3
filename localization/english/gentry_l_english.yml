@@ -1,0 +1,10 @@
+﻿l_english:
+ trait_gentry:0 "Landed Gentry"
+ trait_gentry_desc:0 "This character is a veteran who have been granted land. Expect their skill in governance to grow, but so will their ambition."
+ trait_gentry_character_desc:0 "This character is a veteran who have been granted land. Expect their skill in governance to grow, but also their ambition."
+ veteran_modifier:0 "Veteran"
+ veteran_modifier_desc:0 "This character has seen combat while employed in their liege's army, and will be considered gentry should they be granted land."
+
+#  trait_gentry_heir:0 "Landed Gentry Heir"
+#  trait_gentry_heir_desc:0 "This character is an heir of a veteran who have been granted land. Expect their skill in governance to grow, but so will their ambition."
+#  trait_gentry_heir_character_desc:0 "This character is an heir to a veteran who have been granted land. Expect their skill in governance to grow, but also their ambition."

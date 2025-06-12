@@ -1,0 +1,27 @@
+﻿doctrine_nahua_branch = {
+	group = "special"
+	is_available_on_create = {
+		religion_tag = anahuac_religion
+	}
+	
+	nahua_branch_tlaloc = {
+		parameters = {
+			hostility_override_nahua_branch_quetzalcoatl = 1
+			hostility_override_nahua_branch_tezcatlipoca = 1
+		}
+	}
+	
+	nahua_branch_quetzalcoatl = {
+		parameters = {
+			hostility_override_nahua_branch_tlaloc = 1
+			hostility_override_nahua_branch_tezcatlipoca = 2
+		}
+	}
+	
+	nahua_branch_tezcatlipoca = {
+		parameters = {
+			hostility_override_nahua_branch_tlaloc = 1
+			hostility_override_nahua_branch_quetzalcoatl = 2
+		}
+	}
+}
