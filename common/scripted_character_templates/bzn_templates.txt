@@ -185,3 +185,29 @@ bzn_islam_scholar_character = {
 		add_trait = scholar
 		}
 }	
+
+bzn_mamluk_character = {
+	age = { 20 40 }
+	random_traits_list = {
+        count = 1
+        education_martial_1 = {}
+        education_martial_2 = {}
+        education_martial_3 = {}
+        education_martial_4 = {}
+		education_martial_5 = {}
+    }
+	dynasty = generate
+    random_traits = yes
+    faith = root.faith
+    culture = root.culture
+    stewardship = { 3 10 }
+    prowess = { 5 12 }
+    martial = { 5 12 }
+    diplomacy = { 3 10 }
+    learning = { 2 10 }
+	after_creation = {
+		add_trait = mamluk 
+		add_trait = strong
+		add_trait = lifestyle_blademaster
+		}
+}	

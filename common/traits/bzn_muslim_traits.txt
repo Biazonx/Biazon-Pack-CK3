@@ -1,0 +1,30 @@
+concubine = {
+	icon = concubine.dds
+	tier = fame
+	diplomacy = -1
+	fertility = 0.1
+	
+	same_opinion = 10
+	general_opinion = -10
+	close_relative_opinion = 10
+	spouse_opinion = 5
+
+	inheritance_blocker = all
+	
+	shown_in_ruler_designer = no
+	
+	name = game_concept_concubine
+	desc = ""
+}
+
+mamluk = {
+	icon = mamaluk.dds
+	tier = fame
+	desc = mamluk_desc
+	
+	ruler_designer_cost = 50
+	
+	martial = 2
+	prowess = 4
+	flag = join_factions_more
+}

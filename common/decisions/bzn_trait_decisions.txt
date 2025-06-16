@@ -290,7 +290,7 @@ free_yourself_decision = {
 			has_trait = thrall
 			has_trait = battle_thrall
 		}
-		is_independent_ruler = yes
+		is_ruler = yes
 	}
 	desc = free_yourself_decision_desc
 

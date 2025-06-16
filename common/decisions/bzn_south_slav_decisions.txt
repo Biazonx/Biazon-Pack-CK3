@@ -5,7 +5,7 @@ bzn_invite_islam_scholar_decision = {
 
     decision_group_type = major
 
-    ai_check_interval = 110
+    ai_check_interval = 120
 
     cooldown = { years = 5 }
 

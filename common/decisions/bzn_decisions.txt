@@ -728,7 +728,7 @@ bzn_adopt_monastic_feudal_decision = {
 		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
 	}
 
-	decision_group_type = realm
+	sort_order = 4
 
 	ai_check_interval = 120
 
@@ -765,7 +765,7 @@ bzn_adopt_confederate_tribal_decision = {
 		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
 	}
 
-	decision_group_type = realm
+	sort_order = 3
 
 	ai_check_interval = 120
 
@@ -802,12 +802,17 @@ bzn_decentralize_decision = {
 		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
 	}
 
-	decision_group_type = realm
+	sort_order = 5
 
 	ai_check_interval = 120
 
 	is_shown = {
 		NOT = { has_variable = decentralized_realm }
+		is_landless_adventurer = no
+		OR = {
+		has_government = confederate_tribal_government
+		has_government = feudal_government
+		}
 	}
 	
 	is_valid = {
@@ -1266,6 +1271,202 @@ bzn_enter_trance = {
     }
 }
 
+bzn_classics = {
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_legend.dds"
+    }
+    sort_order = 2
+    ai_check_interval = 120
+	
+    is_shown = {
+		NOT = { faith = faith:hellenic_pagan }
+        OR = {
+            culture = { has_cultural_pillar = heritage_latin }
+            culture = { has_cultural_pillar = heritage_byzantine }
+			culture = { has_cultural_pillar = heritage_ancient_greek }
+            culture = { has_cultural_pillar = heritage_byzantine }
+        }
+    }
+    is_valid = {
+		learning >= 8
+        OR = {
+			has_trait = lunatic_1 
+			has_trait = possessed_1 
+            has_trait = lifestyle_mystic
+            has_trait = scholar
+            has_trait = theologian
+       }
+    }
+	
+	cost = { piety = 250 }
+	
+    desc = bzn_classics_desc
+    effect = {
+        set_character_faith = faith:hellenic_pagan
+		capital_county = {
+			set_county_faith = faith:hellenic_pagan
+			}
+    }
+    ai_potential = {
+        always = no
+    }
+    ai_will_do = {
+        base = 0
+    }
+}
+
+bzn_borrow_jews = {
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_spend_money.dds"
+    }
+	
+	desc = bzn_borrow_jews_desc
+    sort_order = 10
+    ai_check_interval = 120
+	
+    is_shown = {
+		is_landless_adventurer = no
+		OR = {
+			has_religion = religion:christianity_religion
+			has_religion = religion:islam_religion
+			has_religion = religion:zoroastrianism_religion
+			has_religion = religion:taoism_religion
+		}
+	}
+    is_valid = {
+		NOT = { 
+		has_character_modifier = indebted
+		has_character_modifier = jews_expelled
+		}
+		
+    }
+	
+	cost = { prestige = 100 }
+	
+    effect = {
+		add_gold = 300 
+		add_character_modifier = {
+            modifier = indebted
+        }
+    }
+    ai_potential = {
+        always = no
+    }
+    ai_will_do = {
+        base = 0
+    }
+}
+
+bzn_repay_jews = {
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_spend_money.dds"
+    }
+	
+	desc = bzn_repay_jews_desc
+    sort_order = 9
+    ai_check_interval = 120
+	
+    is_shown = {
+		is_landless_adventurer = no
+		has_character_modifier = indebted
+    }
+    is_valid = {
+    }
+	
+	cost = { gold = 350 }
+	
+    effect = {
+		remove_character_modifier = indebted
+		add_legitimacy = 100
+		add_prestige = 150
+    }
+    ai_potential = {
+        always = no
+    }
+    ai_will_do = {
+        base = 0
+    }
+}
+
+bzn_expel_jews = {
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/ep3_decision_hold_triumph.dds"
+    }
+	
+	desc = bzn_expel_jews_desc
+    sort_order = 8
+    ai_check_interval = 120
+	
+    is_shown = {
+		is_landless_adventurer = no
+		OR = {
+			has_religion = religion:christianity_religion
+			has_religion = religion:islam_religion
+			has_religion = religion:zoroastrianism_religion
+			has_religion = religion:taoism_religion
+		}
+    }
+    is_valid = {
+		NOT = { 
+			has_character_modifier = jews_expelled
+		}
+    }
+	
+	cost = { prestige = 100 }
+	
+    effect = {
+		save_scope_as = actor
+		add_trait = arbitrary
+		add_gold = 100
+		add_character_modifier = { modifier = jews_expelled years = 20 }
+		remove_character_modifier = indebted
+		every_courtier_or_guest = { 
+			limit = { religion = religion:judaism_religion } 
+				save_scope_as = recipient
+				}
+		scope:actor = {
+			remove_courtier_or_guest = scope:recipient
+			}
+		}
+    ai_potential = {
+        always = no
+    }
+    ai_will_do = {
+        base = 0
+    }
+}
+
+bzn_welcome_jews = {
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/ep3_decision_hold_triumph.dds"
+    }
+	
+	desc = bzn_welcome_jews_desc
+    sort_order = 7
+    ai_check_interval = 120
+	
+    is_shown = {
+		has_character_modifier = jews_expelled
+		is_landless_adventurer = no
+    }
+    is_valid = {
+    }
+	
+	cost = { gold = 400 }
+	
+    effect = {
+		save_scope_as = actor
+		remove_character_modifier = jews_expelled 
+		}
+    ai_potential = {
+        always = no
+    }
+    ai_will_do = {
+        base = 0
+    }
+}
+
+
 raise_diquis_spheres_decision = {
 	title = raise_diquis_spheres_decision_name
 	picture = {
@@ -1343,7 +1544,7 @@ bzn_high_druid = {
     picture = {
         reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
     }
-    decision_group_type = realm
+    decision_group_type = major
     ai_check_interval = 0
     is_shown = {
         is_landless_adventurer = no

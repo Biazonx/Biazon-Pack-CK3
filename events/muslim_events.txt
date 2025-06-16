@@ -1,0 +1,20 @@
+namespace = muslim_event
+
+muslim_event.0002 = {
+	hidden = yes
+	immediate = {
+		create_character = {
+			location = root.capital_province
+			save_scope_as = mamluk
+			template = bzn_mamluk_character
+			dynasty = none
+		}
+		add_courtier = scope:mamluk
+		send_interface_message = {
+			type = event_generic_good_with_text
+			title = muslim_event.0002.t
+			desc = muslim_event.0002.desc
+			left_icon = scope:mamluk
+		}
+	}
+}

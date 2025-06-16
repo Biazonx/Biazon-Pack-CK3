@@ -11,3 +11,15 @@ brotherhood_guidance = {
 	vassal_opinion = 15
 	monthly_piety_gain_mult = 0.1
 }
+
+jews_expelled = {
+	icon = diplomacy_negative
+	diplomacy = -3
+	monthly_income_mult = -0.10
+}
+
+indebted = {
+	icon = economy_negative
+	vassal_opinion = -10
+	stress_gain_mult = 0.15
+}

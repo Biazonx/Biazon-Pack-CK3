@@ -678,17 +678,6 @@ jackal_eyed = {
 	monthly_intrigue_lifestyle_xp_gain_mult = 0.25
 }
 
-bzn_missionary = {
-    icon = bzn_missionary.dds
-    tier = fame
-    desc = bzn_missionary_desc
-
-    ruler_designer_cost = 25
-
-    monthly_learning_lifestyle_xp_gain_mult = 0.1
-    monthly_piety_gain_mult = 0.3
-}
-
 #Vanilla Change
 peasant_leader = {
 	category = fame
