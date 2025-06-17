@@ -1,3 +1,5 @@
+Discord Server: https://discord.gg/ZrC5c9PU
+
 [Hussite Flavor Pack](https://docs.google.com/document/d/16yfwnc1NhQxgCg8iVQZrChc-lW-Vc0UeGWco7UNVjB0/edit?usp=sharing)
 
 ![Captura de tela 2025-05-04 113325](https://github.com/user-attachments/assets/a78be724-62b5-4d9c-9276-fd20fb4eb9a8)
