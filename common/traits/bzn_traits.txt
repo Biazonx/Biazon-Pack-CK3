@@ -252,10 +252,7 @@ thrall = {
 	prowess = 2
 	dread_decay_mult = 0.3
 	dread_baseline_add = -30
-	
-	inheritance_blocker = all
 
-	
 	same_opinion = 10
 	
 	inherit_chance = 0
@@ -287,9 +284,6 @@ battle_thrall = {
 	dread_decay_mult = 0.3
 	dread_baseline_add = 20
 	health = -0.3
-	
-	inheritance_blocker = all
-
 	
 	same_opinion = 10
 	
@@ -678,15 +672,17 @@ jackal_eyed = {
 	monthly_intrigue_lifestyle_xp_gain_mult = 0.25
 }
 
-bzn_missionary = {
-    icon = bzn_missionary.dds
-    tier = fame
-    desc = bzn_missionary_desc
-
-    ruler_designer_cost = 25
-
-    monthly_learning_lifestyle_xp_gain_mult = 0.1
-    monthly_piety_gain_mult = 0.3
+gladiator = {
+	icon = gladiator.dds
+	tier = fame
+	desc = gladiator_desc
+	
+	ruler_designer_cost = 50
+	
+	martial = 2
+	prowess = 4
+	monthly_prestige = 1
+	has_access_to_trials_by_combat = yes
 }
 
 #Vanilla Change

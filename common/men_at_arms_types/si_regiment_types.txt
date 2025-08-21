@@ -10,17 +10,18 @@ jaguar_warrior = {
 		OR = {
 			culture = culture:nahuatl
 			culture = culture:otomitl
+			religion = religion:anahuac_religion 
 		}
 	}
 	damage = 20
-	toughness = 16
+	toughness = 20
 	pursuit = 20
 	screen = 10
 	
 	terrain_bonus = {
-		jungle = { damage = 8 toughness = 4 }
-		forest = { damage = 8 toughness = 4 }
-		hills = { damage = 8 toughness = 4 }
+		jungle = { damage = 10 toughness = 5 }
+		forest = { damage = 10 toughness = 5 }
+		hills = { damage = 10 toughness = 5 }
 	}
 	
 	counters = {

@@ -1,0 +1,18 @@
+﻿l_french:
+ mod_mass_convert_subjects_decision: "$game_concept_demand_conversion$"
+ mod_mass_convert_subjects_decision_desc: "$game_concept_demand_conversion_desc$"
+ mod_mass_convert_subjects_decision_tooltip: "$game_concept_demand_conversion_desc$"
+ 
+ mod_convert_direct_vassals_loc: "$game_concept_direct_vassals$ ([SCOPE.ScriptValue('mod_convert_direct_vassals_number')])"
+ mod_convert_direct_vassals_tooltip: "Exigez la conversion de tous vos $game_concept_direct_vassals$ qui sont infidèles."
+ 
+ mod_convert_indirect_vassals_loc: "$game_concept_vassals$ indirects ([SCOPE.ScriptValue('mod_convert_indirect_vassals_number')])"
+ mod_convert_indirect_vassals_tooltip: "Exigez la conversion de tous vos $game_concept_vassals$ indirects qui sont infidèles."
+ 
+ mod_convert_courtiers_loc: "Courtisans ([SCOPE.ScriptValue('mod_convert_courtiers_number')])"
+ mod_convert_courtiers_tooltip: "Exigez la conversion de tous vos [courtiers|E] qui sont infidèles."
+ 
+ mod_convert_house_loc: "Membres de la Maison ([SCOPE.ScriptValue('mod_convert_house_number')])"
+ mod_convert_house_tooltip: "Exigez la conversion de tous les membres de votre Maison qui sont infidèles."
+ 
+ mod_mass_convert_subjects_decision_confirm: "Envoyer la demande"

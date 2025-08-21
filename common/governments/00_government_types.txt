@@ -516,7 +516,7 @@ monastic_feudal_government = {
 	
 	preferred_religions = { buddhism_religion bon_religion wuism_religion confucianism_religion }
 
-	vassal_contract_group = feudal_vassal
+	vassal_contract_group = monastic_vassal
 	
 	character_modifier = {
 		monthly_piety = 1
@@ -546,7 +546,7 @@ confederate_tribal_government = {
 	
 	fallback = 10
 
-	supply_limit_mult_for_others = -0.5
+	supply_limit_mult_for_others = -0.3
 	primary_holding = tribal_holding
 	required_county_holdings = { tribal_holding }
 
@@ -592,8 +592,8 @@ confederate_tribal_government = {
 	}
 
 	character_modifier = {
-		title_creation_cost_mult = -0.5
-		army_maintenance_mult = -0.5
+		title_creation_cost_mult = -0.3
+		army_maintenance_mult = -0.3
 
 		feudal_government_vassal_opinion = -20
 		clan_government_vassal_opinion = -20

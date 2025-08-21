@@ -1,0 +1,50 @@
+﻿perk_interaction_0122_apply_effects_effect = {
+	# Stakes.
+	## Friendlies bet opinion & stress.
+	if = {
+		limit = { always = scope:chess_friendly }
+		fp2_bg_stake_friendly_effect = {
+			VICTOR = scope:bg_victor
+			LOSER = scope:bg_loser
+		}
+	}
+	## Fame bets prestige.
+	if = {
+		limit = { always = scope:chess_prestige }
+		fp2_bg_stake_fame_effect = {
+			VICTOR = scope:bg_victor
+			LOSER = scope:bg_loser
+		}
+	}
+	## Fortune bets gold.
+	if = {
+		limit = { always = scope:chess_gold }
+		fp2_bg_stake_fortune_effect = {
+			VICTOR = scope:bg_victor
+			LOSER = scope:bg_loser
+		}
+	}
+	## Land bets... land.
+	if = {
+		limit = { always = scope:chess_land }
+		fp2_bg_stake_titles_effect = { VICTOR = scope:bg_victor }
+	}
+	if = {
+		limit = {
+			scope:bg_victor = {
+				NOT = { has_trait = lifestyle_gamemaster } 
+			}
+		}
+		scope:bg_victor = {
+			add_trait = lifestyle_gamemaster
+		}
+	}
+	else = {
+		scope:bg_victor = {
+			add_trait_xp = {
+				trait = lifestyle_gamemaster
+				value = tournament_hastiludes_xp_gain_medium_value
+			}
+		}
+	}
+}

@@ -12,9 +12,6 @@ sunset_invasion_war = {
 			culture = culture:nahuatl
 			culture = culture:otomitl
 		}
-		NOT = {
-			has_character_flag = used_lifetime_invasion
-		}
 	}
 
 	

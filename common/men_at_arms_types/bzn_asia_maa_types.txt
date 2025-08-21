@@ -27,10 +27,6 @@ naginata = {
 		}
 	}
 
-	should_show_when_unavailable = {
-		government_allows = subject_men_at_arms
-	}
-
 	buy_cost = { gold = mountaineer_recruitment_cost }
 	low_maintenance_cost = { gold = mountaineer_low_maint_cost }
 	high_maintenance_cost = { gold = mountaineer_high_maint_cost }
@@ -65,10 +61,6 @@ yumi = {
 			government_has_flag = government_is_herder
 		}
 		valid_for_maa_trigger = { PARAMETER = unlock_maa_yumi }
-	}
-
-	should_show_when_unavailable = {
-		government_allows = subject_men_at_arms
 	}
 
 	buy_cost = { gold = longbowmen_recruitment_cost }
@@ -108,13 +100,9 @@ yari = {
 		valid_for_maa_trigger = { PARAMETER = unlock_maa_yari }
 	}
 
-	should_show_when_unavailable = {
-		government_allows = subject_men_at_arms
-	}
-
-	buy_cost = { gold = luojuzi_recruitment_cost }
-	low_maintenance_cost = { gold = luojuzi_low_maint_cost }
-	high_maintenance_cost = { gold = luojuzi_high_maint_cost }
+	buy_cost = { gold = 75 }
+	low_maintenance_cost = { gold = 0.3 }
+	high_maintenance_cost = { gold = 0.9 }
 	provision_cost = @provisions_cost_infantry_moderate
 
 	stack = 100

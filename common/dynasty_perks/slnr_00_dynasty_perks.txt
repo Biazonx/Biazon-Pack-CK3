@@ -1,0 +1,41 @@
+﻿ce1_heroic_legacy_3 = { # Golden Legend
+	legacy = ce1_heroic_track
+
+	can_be_picked = {
+		has_dlc_feature = legends_of_the_dead
+	}
+
+	character_modifier = {
+		piety_level_impact_mult = 1
+	}
+
+	effect = {
+		# Tell the player about their increased sainthood chance
+		custom_description_no_bullet = { text = ce1_heroic_legacy_3_effect }
+	}
+
+	traits = {
+		saint = 100
+	}
+}
+
+ce1_heroic_legacy_4 = { # Down in History
+	legacy = ce1_heroic_track
+
+	can_be_picked = {
+		has_dlc_feature = legends_of_the_dead
+	}
+	
+	character_modifier = {
+		prestige_level_impact_mult = 1
+	}
+
+	effect = {
+		# Tell the player about their ability to gain the legend trait
+		custom_description_no_bullet = { text = ce1_heroic_legacy_4_effect }
+	}
+
+	traits = {
+		legend = 100
+	}
+}

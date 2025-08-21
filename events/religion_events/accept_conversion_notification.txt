@@ -1,0 +1,33 @@
+﻿# Everything outcommented, bevause overwriting an event only partly is not supported by the game. I would need to replace the whole religious_interaction_events.txt file for it to work properly
+# (currently it works 50% of the times and other modders told me it even might cause crashes and other problems when I do not overwrite it fully)
+# So I outcomment this, because overwriting the whole event is no option, it makes it much too incomptaible to game updates and other mods.
+
+
+# namespace = religious_interaction
+
+#####################
+# Demand Conversion	#
+# 					#
+# 					#
+#####################
+
+# Mod: overwrite this event to only send a notification message, instead of a letter. This reduces spam a bit. 
+
+# religious_interaction.2002 = {
+	# hidden = yes
+	# immediate = {
+		# scope:actor = {
+            # send_interface_message = {	
+                # title = ask_for_conversion_interaction
+                # left_icon = scope:recipient
+                # scope:recipient = {
+                    # show_as_tooltip = { demand_conversion_vassal_ruler_interaction_effect = yes }
+                # }
+            # }
+        # }
+	# }
+# }
+
+
+#Refuses conversion
+# do not overwrite this one, cause there are many possible actions depending on the curcumstances (eg. still using a hook) and applieing modifiers and so on

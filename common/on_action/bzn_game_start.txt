@@ -1,0 +1,14 @@
+on_game_start = {
+	effect = {
+		struggle:britannia_struggle = {
+			if = {
+				limit = { game_start_date = 1066.9.15 } }
+				end_struggle = yes
+			}
+		struggle:britannia_struggle = {
+			if = {
+				limit = { game_start_date = 1178.10.1 } }
+				end_struggle = yes
+		}
+	}
+}

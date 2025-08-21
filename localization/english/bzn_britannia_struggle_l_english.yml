@@ -22,21 +22,28 @@
   # Ending Decisions
   struggle_britannia_ending_hostility_decision_generic:0 "End the Struggle through Hostility"
   struggle_britannia_ending_hostility_decision_generic_desc:0 "Crush your enemies, secure dominance, and bring the Britannia Struggle to a violent conclusion."
+  struggle_britannia_ending_hostility_decision_generic_confirm:0 "End the Struggle through Hostility"
+  struggle_britannia_ending_hostility_decision_generic_tooltip:0 "End the Struggle through Hostility"
   
   struggle_britannia_ending_hostility_decision_germanic:0 "End the Struggle through Germanic Dominance"
   struggle_britannia_ending_hostility_decision_germanic_desc:0 "Establish Anglo-Saxon rule over Britannia, crushing all resistance and forging a new Germanic kingdom."
+  struggle_britannia_ending_hostility_decision_germanic_confirm:0 "End the Struggle through Germanic Dominance"
+  struggle_britannia_ending_hostility_decision_germanic_tooltip:0 "End the Struggle through Germanic Dominance"
   
   struggle_britannia_ending_hostility_decision_celtic:0 "End the Struggle through Celtic Revival"
   struggle_britannia_ending_hostility_decision_celtic_desc:0 "Drive out the invaders and reestablish Celtic rule over the lands of Britannia."
-  
-  struggle_britannia_ending_hostility_decision_roman:0 "End the Struggle through Roman Restoration"
-  struggle_britannia_ending_hostility_decision_roman_desc:0 "Reclaim Britannia for Rome and restore imperial rule over the island."
+  struggle_britannia_ending_hostility_decision_celtic_confirm:0 "End the Struggle through Celtic Revival"
+  struggle_britannia_ending_hostility_decision_celtic_tooltip:0 "End the Struggle through Celtic Revival"
   
   struggle_britannia_ending_compromise_decision:0 "End the Struggle through Compromise"
   struggle_britannia_ending_compromise_decision_desc:0 "Forge alliances and broker truces to end the Struggle with a compromise between warring factions."
+  struggle_britannia_ending_compromise_decision_confirm:0 "End the Struggle through Compromise"
+  struggle_britannia_ending_compromise_decision_tooltip:0 "End the Struggle through Compromise"
   
   struggle_britannia_ending_conciliation_decision:0 "End the Struggle through Conciliation"
   struggle_britannia_ending_conciliation_decision_desc:0 "Work tirelessly for unity and peace, ushering in a new era of stability in Britannia."
+  struggle_britannia_ending_conciliation_decision_confirm:0 "End the Struggle through Conciliation"
+  struggle_britannia_ending_conciliation_decision_tooltip:0 "End the Struggle through Conciliation"
 
   # Decision Tooltips
   struggle_britannia_ending_hostility_decision_tooltip:0 "We must crush all opposition and establish our dominance over Britannia!"

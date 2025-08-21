@@ -1,0 +1,141 @@
+tradition_diwan_intrigue = {
+	category = regional
+
+	layers = {
+		0 = intrigue
+		1 = indian
+		4 = greeting.dds
+	}
+	
+	can_pick = {
+		custom_tooltip = {
+			text = only_one_marriage_tradition_allowed
+			trigger_if = {
+				limit = {
+					OR = {
+						NOT = { exists = scope:replacing }
+						NOR = {
+							scope:replacing = culture_tradition:tradition_monogamous
+							scope:replacing = culture_tradition:tradition_polygamous
+						}
+					}
+				}
+				NOR = {
+					culture_tradition:tradition_monogamous = { is_in_list = traits }
+					culture_tradition:tradition_polygamous = { is_in_list = traits }
+				}
+			}
+		}
+	}
+	can_pick_for_hybridization = {
+		custom_tooltip = {
+			text = only_one_marriage_tradition_allowed
+			NOT = { # Only blocks monogamous to avoid duplicate warnings, but is blocked by polygamous
+				culture_tradition:tradition_monogamous = { is_in_list = traits }
+			}
+		}
+	}
+	
+	parameters = {
+		number_of_spouses = 4
+		number_of_consorts = 4
+		can_castrate_prisoners = yes
+		eunuch_trait_bonuses = yes
+		can_appoint_chief_eunuch = yes
+		family_castration = yes
+	}
+	
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_double_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+			if = {
+				limit = {
+					NOT = {
+						scope:character.faith = {
+							OR = {
+								has_doctrine = doctrine_polygamy
+								has_doctrine = doctrine_concubines
+							}
+						}
+					}
+				}
+				add = {
+					value = tradition_unfulfilled_criteria_penalty
+					desc = cheaper_tradition_from_faith
+				}
+			}
+
+			if = {
+				limit = {
+					culture_tradition_reduction_trigger = { TRADITION = tradition_concubines }
+				}
+				multiply = {
+					value = 0.5
+					desc = inspired_by_culture_desc
+				}
+			}
+			
+			multiply = tradition_replacement_cost_if_relevant
+		}
+	}
+	
+	ai_will_do = { value = 0 }
+}
+
+tradition_mamluk_elite = {
+	category = regional
+
+	layers = {
+		0 = martial
+		1 = mena
+		4 = soldiers2.dds
+	}
+	
+	is_shown = {
+	}
+
+	can_pick = {
+	}
+	
+	parameters = {
+		unlock_maa_mamluk_cavalry = yes
+		unlock_voluntary_laampdom = yes
+		powerful_foreign_knights_find_you_attractive = yes
+		wanderers_gain_extra_combat_skills = yes
+		ambitious_trait_more_common = yes
+	}
+
+	cost = {
+		prestige = {
+			# Base cost.
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+			# Ethos requirement.
+			if = {
+				limit = {
+					NOR = {
+						culture_pillar:ethos_egalitarian = { is_in_list = traits }
+						culture_pillar:ethos_courtly = { is_in_list = traits }
+					}
+				}
+				add = {
+					value = tradition_incompatible_ethos_penalty
+					desc = not_egalitarian_or_courtly_desc
+				}
+			}
+			multiply = tradition_replacement_cost_if_relevant
+		}
+	}
+	
+	ai_will_do = {
+		value = 0
+		# Players might want this, but the AI never does.
+	}
+}

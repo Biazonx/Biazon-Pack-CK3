@@ -1,0 +1,10 @@
+﻿namespace = gbt_error_supression
+
+gbt_error_supression.0001 = {
+	hidden = yes
+	orphan = yes
+	
+	trigger = {
+		exists = global_var:gbt_is_loaded
+	}
+}

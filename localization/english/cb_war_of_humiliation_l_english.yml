@@ -1,0 +1,10 @@
+﻿l_english:
+ WAR_OF_HUMILIATION:0 "War for Humiliation and Control [cb_war_of_humiliation|E] against Ruler of [TITLE.GetBaseName]"
+ WAR_OF_HUMILIATION_NAME:0 "War for Humiliation and Control [cb_war_of_humiliation|E] against the ruler of [TITLE.GetBaseName]"
+ game_concept_cb_war_of_humiliation:0 "Demand Humiliation and Control"
+ game_concept_cb_war_of_humiliation_desc:0 "A $game_concept_cb_war_of_humiliation$ is a special type of [war|E] waged by a [ruler|E] to humiliate a Ruler of a different realm.\n\nThe winner in a $game_concept_cb_war_of_humiliation$ war will not gain any land but will gain prestige and legitimacy, while the loser will suffer a loss of prestige and legitimacy. This war can be declared if the attacker's realm size is smaller or equal to the defender's realm size. Additional costs may be incurred if the defender's realm size is significantly larger.\n\nWars of Humiliation may involve all the allies of both parties without the need for formal alliances."
+ cb_war_of_humiliation_victory_desc:0 "Upon victory, [defender.GetShortUIName|U] will be forced to pay reparations and suffer a loss of prestige and legitimacy, while [attacker.GetShortUIName|U] will gain prestige and legitimacy."
+ cb_war_of_humiliation_white_peace_desc:0 "Upon a white peace, both sides will cease hostilities, with [attacker.GetShortUIName|U] losing prestige and legitimacy, and gaining stress."
+ cb_war_of_humiliation_defeat_desc:0 "Upon defeat, [attacker.GetShortUIName|U] will suffer a loss of prestige and legitimacy, while [defender.GetShortUIName|U] will gain prestige and legitimacy, and [attacker.GetShortUIName|U] will be forced to pay reparations."
+ cb_war_of_humiliation_invalidated_desc:0 "The war for Humiliation and Control has been invalidated."
+ CB_WAR_OF_HUMILIATION_TITLE:0 "Ruler of [THIS.GetLandedTitle.GetBaseName] will be humiliated. No land will be seized."

@@ -1,0 +1,9 @@
+﻿# scope:first = Character in relation
+# scope:second = Other character in relation
+# This is run once, so anything applied on both characters must be done on both root and scope:second here
+
+on_game_start_after_lobby = {
+	events = {
+		historical_artifacts.1231 #Modded Historical Artifacts Generator
+	}
+}

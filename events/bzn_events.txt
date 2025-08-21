@@ -101,16 +101,16 @@ bzn_decisions.0006 = {
 	immediate = {
 		create_character = {
 			location = root.capital_province
-			save_scope_as = hashishiyah
-			template = bzn_hashishiyah_character
+			save_scope_as = jewish_merchant
+			template = bzn_jewish_merchant_character
 			dynasty = none
 		}
-		add_courtier = scope:hashishiyah
+		add_courtier = scope:jewish_merchant
 		send_interface_message = {
 			type = event_generic_good_with_text
 			title = bzn_decisions.0006.t
 			desc = bzn_decisions.0006.desc
-			left_icon = scope:hashishiyah
+			left_icon = scope:jewish_merchant
 		}
 	}
 }
@@ -234,4 +234,240 @@ bzn_decisions.0011 = {
 			}
 		
 	}
+}
+
+bzn_decisions.0012 = {
+	type = character_event
+	title = bzn_decisions.0012.t
+	desc = bzn_decisions.0012.d
+	theme = martial
+	override_background = courtyard
+
+	left_portrait = {
+		character = root
+		animation = zealous
+	}
+
+	option = {
+		name = bzn_decisions.0012.a
+		add_character_modifier = {
+			modifier = conquest_focus
+			years = 15
+		}
+	}
+	option = {
+		name = bzn_decisions.0012.b
+		add_character_modifier = {
+			modifier = diplomacy_focus
+			years = 15
+		}
+	}
+	option = {
+		name = bzn_decisions.0012.c
+		add_character_modifier =  {
+			modifier = development_focus
+			years = 15
+		}
+	}
+}
+
+bzn_decisions.0013 = {
+	type = character_event
+	title = bzn_decisions.0013.t
+	desc = bzn_decisions.0013.desc
+	theme = martial
+	override_background = courtyard
+
+	left_portrait = {
+		character = root
+		animation = zealous
+	}
+
+	option = {
+		name = bzn_decisions.0013.a
+		trigger = {NOT = { has_character_modifier = lodge_initiated} }
+		add_character_modifier =  {
+			modifier = lodge_initiated
+			years = -1
+		}
+	}
+	option = {		
+		name = bzn_decisions.0013.b
+		trigger = { prestige_level >= 3
+		}
+		trigger_event = {
+            id = bzn_decisions.0014
+            days = { 5 10 }
+        }
+        custom_tooltip = bzn_invite_legendary_warrior_effect_tooltip
+		
+	}
+	option = {
+		name = bzn_decisions.0013.c
+		trigger = { prestige_level >= 4
+		}
+		spawn_army = {
+		men_at_arms = {
+			type = handpicked_faithful
+			stacks = 10
+		}
+		inheritable = no
+		uses_supply = yes
+		name = bzn.warriors
+		location = root.location
+		}
+	}
+		option = {
+		name = bzn_decisions.0013.d
+		trigger = { prestige_level >= 5 NOT = { has_variable = overlord_tradition } }
+		    root.culture = {
+            add_culture_tradition = tradition_overlord
+			}
+			set_variable = {
+				name = overlord_tradition
+				years = 500
+			}
+	}
+	
+		option = {
+		name = bzn_decisions.0013.e
+		trigger = {prestige_level >= 2 religion = religion:germanic_religion
+		}
+		spawn_army = {
+		men_at_arms = {
+			type = jomsviking_pirates
+			stacks = 3
+		}
+		inheritable = no
+		uses_supply = yes
+		name = bzn.pirates
+		location = root.location
+		}
+	}
+		option = {
+		name = bzn_decisions.0013.f
+		trigger = {prestige_level >= 2 OR = { religion = religion:celtic_religion religion = religion:amazigh_religion religion = religion:finno_ugric_religion religion = religion:sami_religion religion = religion:mari_religion religion = religion:mordvin_religion religion = religion:permic_religion
+		religion = religion:siberian_religion religion = religion:tani_religion religion = religion:qiangic_religion religion = religion:waaqism_religion religion = religion:mundhum_religion religion = religion:omotic_religion religion = religion:sidamic_religion }  
+		NOT = { has_character_modifier = spirits_of_the_forest}
+		}
+		add_character_modifier = {
+			modifier = spirits_of_the_forest
+			years = 20
+		}
+	}
+	option = {
+		name = bzn_decisions.0013.g
+		trigger = {prestige_level >= 2 religion = religion:slavic_religion NOT = { has_character_modifier = perun_wrath}
+		}
+		add_character_modifier = {
+			modifier = perun_wrath
+			years = 20
+		}
+	}
+	
+	option = {
+		name = bzn_decisions.0013.h
+		trigger = {prestige_level >= 2 OR = { religion = religion:baltic_religion religion = religion:kushitism_religion religion = religion:semitic_religion religion = religion:north_african_religion } NOT = { has_character_modifier = sacred_groves}
+		}
+		add_character_modifier = {
+			modifier = sacred_groves
+			years = 20
+		}
+	}
+	option = {
+		name = bzn_decisions.0013.i
+		trigger = {prestige_level >= 2 OR = { religion = religion:west_african_religion religion = religion:shona_religion religion = religion:malagasy_religion religion = religion:akom_religion religion = religion:west_african_bori_religion religion = religion:west_african_roog_religion religion = religion:west_african_orisha_religion religion = religion:odinala_religion}
+		NOT = {has_variable = spirit_mask_crafted }
+		}
+		create_artifact = {	
+		name = bzn_artifact_mask_1_name
+		description = bzn_artifact_mask_1_description
+		type = miscellaneous
+		visuals = bzn_artifact_mask_1_visual
+		wealth = 100
+		quality = 100
+		template = bzn_artifact_template
+		generate_history = no
+		modifier = spirit_mask
+		}
+		set_variable = {
+		name = spirit_mask_crafted
+		years = 500
+			}
+		}
+		
+		option = {
+		name = bzn_decisions.0013.j
+		trigger = {prestige_level >= 2 religion = religion:zunism_religion NOT = { has_character_modifier = solar_trance} }
+		add_character_modifier = {
+			modifier = solar_trance
+			years = 20
+			}
+		}
+
+		option = {
+		name = bzn_decisions.0013.k
+		trigger = {prestige_level >= 2 OR = { religion = religion:magyar_religion religion = religion:tengrism_religion }}
+		spawn_army = {
+		men_at_arms = {
+			type = horse_archers
+			stacks = 3
+		}
+		inheritable = no
+		uses_supply = yes
+		name = bzn.tengri
+		location = root.location
+			}
+		}
+		
+		option = {
+		name = bzn_decisions.0013.l
+		trigger = {prestige_level >= 2 religion = religion:bon_religion NOT = { has_character_modifier = light_toughness}}
+		remove_trait = wounded_1
+		remove_trait = wounded_2
+		remove_trait = wounded_3
+		remove_trait = ergotism
+		remove_trait = pneumonic
+		remove_trait = dysentery
+		add_stress = -50
+		add_character_modifier = {
+			modifier = light_toughness
+			years = 20
+			}
+		}
+		
+		option = {
+		name = bzn_decisions.0013.n
+		trigger = {prestige_level >= 2 religion = religion:hellenism_religion NOT = { has_trait = gladiator} }
+		add_trait = gladiator
+		}
+		
+		option = {
+		name = bzn_decisions.0013.m
+		trigger = {prestige_level >= 2 religion = religion:anahuac_religion NOT = { has_character_modifier = bloodthirsty }}
+		add_character_modifier = {
+			modifier = bloodthirsty
+			years = 20
+			}
+		}
+		
+}
+
+bzn_decisions.0014 = { # Summon Legendary Warrior to Court
+    hidden = yes
+    immediate = {
+        create_character = {
+            location = root.capital_province
+            save_scope_as = new_warrior
+            template = bzn_new_warrior_character
+            dynasty = generate
+        }
+        add_courtier = scope:new_warrior
+        send_interface_message = {
+            type = event_generic_good_with_text
+            title = bzn_decisions.0014.t
+            desc = bzn_decisions.0014.desc
+            left_icon = scope:new_warrior
+        }
+    }
 }

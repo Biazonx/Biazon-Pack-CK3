@@ -45,10 +45,6 @@ monastic_light_footmen = {
 		}
 	}
 
-	should_show_when_unavailable = {
-		government_allows = subject_men_at_arms
-	}
-
 	buy_cost = { piety = 135 }
 	low_maintenance_cost = { piety = 0.07 }
 	high_maintenance_cost = { piety = 0.2}
@@ -85,10 +81,6 @@ monastic_bowmen = {
 			government_has_flag = government_is_nomadic
 			government_has_flag = government_is_herder
 		}
-	}
-
-	should_show_when_unavailable = {
-		government_allows = subject_men_at_arms
 	}
 
 	buy_cost = { piety = 165 }
@@ -133,11 +125,6 @@ monastic_light_horsemen = {
 			government_has_flag = government_is_nomadic
 			government_has_flag = government_is_herder
 		}
-	}
-
-	should_show_when_unavailable = {
-		government_allows = subject_men_at_arms
-		NOT = { has_access_to_maa = steppe_raiders }
 	}
 
 	access_through_subject = {
@@ -192,10 +179,6 @@ monastic_pikemen_unit = {
 		}
 	}
 
-	should_show_when_unavailable = {
-		government_allows = subject_men_at_arms
-	}
-
 	buy_cost = { piety = 225 }
 	low_maintenance_cost = { piety = 0.15 }
 	high_maintenance_cost = { piety = 0.45 }
@@ -238,10 +221,6 @@ monastic_armored_footmen = {
 			government_has_flag = government_is_nomadic
 			government_has_flag = government_is_herder
 		}
-	}
-	
-	should_show_when_unavailable = {
-		government_allows = subject_men_at_arms
 	}
 
 	buy_cost = { piety = 270 }
@@ -290,12 +269,6 @@ monastic_armored_horsemen = {
 			government_has_flag = government_is_nomadic
 			government_has_flag = government_is_herder
 		}
-	}
-
-	should_show_when_unavailable = {
-		government_allows = subject_men_at_arms
-		culture = { has_cultural_era_or_later = culture_era_early_medieval }
-		NOT = { has_access_to_maa = nomad_lancers }
 	}
 	
 	access_through_subject = {
@@ -351,11 +324,6 @@ monastic_crossbowmen = {
 		}
 	}
 
-	should_show_when_unavailable = {
-		government_allows = subject_men_at_arms
-		culture = { has_cultural_era_or_later = culture_era_high_medieval }
-	}
-
 	buy_cost = { piety = 264 }
 	low_maintenance_cost = { piety = 0.15 }
 	high_maintenance_cost = { piety = 0.45 }
@@ -370,5 +338,51 @@ monastic_crossbowmen = {
 	stack = 100
 }
 
+monastic_war_elephant = {
+	type = elephant_cavalry
+	
+	damage = 250
+	toughness = 50
+	pursuit = 0
+	screen = 0
+	
+	siege_value = 0.1
+	
+	terrain_bonus = {
+		jungle = { damage = 50 }
+		mountains = { damage = -100 }
+		desert_mountains = { damage = -100 }
+		wetlands = { damage = -150 toughness = -20 }
+	}
+	
+	counters = {
+		skirmishers = 2
+		heavy_infantry = 2
+	}
 
+	winter_bonus = {
+		normal_winter = { damage = -30 toughness = -5 }
+		harsh_winter = { damage = -60 toughness = -10 }
+	}
 
+	buy_cost = { piety = 1200 }
+	low_maintenance_cost = { piety = 0.49 }
+	high_maintenance_cost = { piety = 1.47 }
+	provision_cost = @provisions_cost_cavalry_bankrupting
+	
+	can_recruit = {
+		OR = {
+			AND = {
+				government_has_flag = government_is_monastic_feudal
+				culture ?= { has_innovation = innovation_elephantry }
+				NOT = { is_landless_adventurer = yes }
+			}
+			domicile ?= { has_domicile_parameter = camp_reinforce_elephant_regiments_anywhere }
+		}
+	}
+	
+	stack = 25
+	hired_stack_size = 10
+	ai_quality = { value = culture_ai_weight_elephants }
+	icon = war_elephants
+}

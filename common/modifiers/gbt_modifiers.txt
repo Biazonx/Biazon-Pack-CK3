@@ -1,0 +1,9 @@
+﻿gbt_novice_modifier = {
+	icon = prowess_positive
+	prowess = 1
+}
+
+gbt_adept_modifier = {
+	icon = prowess_positive
+	prowess = 2
+}

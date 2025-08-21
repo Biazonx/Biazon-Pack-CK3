@@ -10,8 +10,12 @@ britannia_struggle = {
 		gaelic
 		norse
 		irish
+		scots
+		norwegian
+		danish
+		swedish
+		breton
 		
-
 	}
 	faiths = {
 		
@@ -26,7 +30,7 @@ britannia_struggle = {
 	}
 
 	# 20% required to become involved
-	involvement_prerequisite_percentage = 0.2
+	involvement_prerequisite_percentage = 0.1
 
 	start_phase = struggle_britannia_phase_opportunity
 
@@ -59,36 +63,36 @@ britannia_struggle = {
 				struggle_britannia_phase_hostility = {
 					catalysts = {
 						# catalyst_starting_progress = 250
-						catalyst_passing_of_time = 2
-						catalyst_conducted_border_raid = 5
-						catalyst_win_any_war_within_the_region = 5 # Good
-						catalyst_new_building_in_castle = 5 # How to do AI?
-						catalyst_becomes_rival_with_involved = 15 # Good
+						catalyst_passing_of_time = 3
+						catalyst_conducted_border_raid = 6
+						catalyst_win_any_war_within_the_region = 6 # Good
+						catalyst_new_building_in_castle = 6 # How to do AI?
+						catalyst_becomes_rival_with_involved = 20 # Good
 						catalyst_using_a_hook_on_very_important_character = 10 # good
 						catalyst_unnatural_death_important_character = 10
-						catalyst_vassalize_independent_ruler = 15 # good
+						catalyst_vassalize_independent_ruler = 20 # good
 						catalyst_forced_conversion = 10
-						catalyst_reveal_secret_important = 15
+						catalyst_reveal_secret_important = 20
 						catalyst_broke_truce_against_important_character = 50 # Cannot motivate the AI to do that without code support
 					}
 				}
 				struggle_britannia_phase_conciliation = {
 					catalysts = {
 						# catalyst_starting_progress = 250
-						catalyst_improve_development_vassal_diff_faith_culture = 2 # How to do AI?
-						catalyst_gift_independent_ruler = 5 # AI done
-						catalyst_became_friend_lover_with_character = 5
-						catalyst_learned_new_language_important = 5 # AI done
-						catalyst_new_building_in_city = 5 # How to do AI?
-						catalyst_sign_truce_outside_war = 5 # will need update when addding truce through wards
+						catalyst_improve_development_vassal_diff_faith_culture = 3 # How to do AI?
+						catalyst_gift_independent_ruler = 6 # AI done
+						catalyst_became_friend_lover_with_character = 6
+						catalyst_learned_new_language_important = 6 # AI done
+						catalyst_new_building_in_city = 6 # How to do AI?
+						catalyst_sign_truce_outside_war = 6 # will need update when addding truce through wards
 						catalyst_formed_interreligious_alliance_with_important_character = 5
 						catalyst_ransom_important = 10
 						catalyst_grant_privilege_to_diff_faith_culture_vassal = 10
 						catalyst_invite_diff_faith_culture_to_feast = 10
-						catalyst_independence_from_non_dejure_vassal = 15
-						catalyst_grant_land_local_noble = 15
-						catalyst_became_best_friend_soulmate_with_very_important_character = 15 # AI done
-						catalyst_convert_local_culture_faith = 15
+						catalyst_independence_from_non_dejure_vassal = 20
+						catalyst_grant_land_local_noble = 20
+						catalyst_became_best_friend_soulmate_with_very_important_character = 20 # AI done
+						catalyst_convert_local_culture_faith = 20
 						catalyst_release_important = 50
 					}
 				}
@@ -99,13 +103,15 @@ britannia_struggle = {
 					claims_in_region_cost_prestige_not_gold_for_involved_parties = yes
 					involved_or_interloper_wars_in_struggle_region_cheaper_prestige_costs = yes
 					unlocks_border_raid_casus_belli = yes
+					unlocks_contract_assistance_interaction = yes
+					unlocks_bargain_fealty_interaction = yes
 				}
 				interloper_parameters = {
 					involved_or_interloper_wars_in_struggle_region_cheaper_prestige_costs = yes
 				}
 				involved_character_modifier = {
 					mercenary_hire_cost_mult = -0.3
-					ai_war_chance = 0.25
+					ai_war_chance = 5
 					ai_war_cooldown = -0.25
 				}
 			}
@@ -163,7 +169,7 @@ britannia_struggle = {
 				struggle_britannia_ending_hostility_decision_germanic
 				struggle_britannia_ending_hostility_decision_celtic
 				struggle_britannia_ending_hostility_decision_roman
-				#formalise_the_daneland_decision
+				formalise_the_daneland_decision
 				struggle_britannia_ending_compromise_decision
 				struggle_britannia_ending_conciliation_decision
 			}
@@ -175,22 +181,22 @@ britannia_struggle = {
 			future_phases = {
 				struggle_britannia_phase_compromise = {
 					catalysts = {
-						catalyst_passing_of_time = 1
-						catalyst_improve_development_vassal_diff_faith_culture = 1
-						catalyst_gift_independent_ruler = 3
-						catalyst_became_friend_lover_with_character = 3
-						catalyst_learned_new_language_important = 3
-						catalyst_new_building_in_city = 3
-						catalyst_sign_truce_outside_war = 3
-						catalyst_formed_interreligious_alliance_with_important_character = 3
-						catalyst_ransom_important = 5
-						catalyst_grant_privilege_to_diff_faith_culture_vassal = 5
-						catalyst_invite_diff_faith_culture_to_feast = 5
-						catalyst_independence_from_non_dejure_vassal = 10
-						catalyst_grant_land_local_noble = 10
-						catalyst_became_best_friend_soulmate_with_very_important_character = 10
-						catalyst_convert_local_culture_faith = 10
-						catalyst_release_important = 25
+						catalyst_passing_of_time = 3
+						catalyst_improve_development_vassal_diff_faith_culture = 6
+						catalyst_gift_independent_ruler = 6
+						catalyst_became_friend_lover_with_character = 6
+						catalyst_learned_new_language_important = 6
+						catalyst_new_building_in_city = 6
+						catalyst_sign_truce_outside_war = 6
+						catalyst_formed_interreligious_alliance_with_important_character = 6
+						catalyst_ransom_important = 10
+						catalyst_grant_privilege_to_diff_faith_culture_vassal = 10
+						catalyst_invite_diff_faith_culture_to_feast = 10
+						catalyst_independence_from_non_dejure_vassal = 20
+						catalyst_grant_land_local_noble = 20
+						catalyst_became_best_friend_soulmate_with_very_important_character = 20
+						catalyst_convert_local_culture_faith = 20
+						catalyst_release_important = 50
 					}
 				}
 			}
@@ -212,7 +218,7 @@ britannia_struggle = {
 
 				involved_character_modifier = {
 					same_culture_mercenary_hire_cost_mult = -0.3
-					ai_war_chance = 1
+					ai_war_chance = 10
 					ai_war_cooldown = -0.5
 					army_pursuit_mult = 0.2
 					army_siege_value_mult = 0.2
@@ -241,8 +247,7 @@ britannia_struggle = {
 			faith_effects = {
 				###### Common
 				common_parameters = {
-					county_faith_conversion_in_region_proceeds_slower = yes
-					holy_wars_in_region_cannot_be_declared = yes # not sure if relevant?
+					county_faith_conversion_in_region_proceeds_slower = yes 
 				}
 
 				###### Involved
@@ -353,17 +358,17 @@ britannia_struggle = {
 			future_phases = {
 				struggle_britannia_phase_compromise = {
 					catalysts = {
-						catalyst_passing_of_time = 1
-						catalyst_gain_claim_on_title = 3
-						catalyst_win_any_war_within_the_region = 3 # Good
-						catalyst_new_building_in_castle = 3 # Good
-						catalyst_becomes_rival_with_involved = 10 # Good
-						catalyst_using_a_hook_on_very_important_character = 5 # good
-						catalyst_unnatural_death_important_character = 5
-						catalyst_vassalize_independent_ruler = 10 # good
-						catalyst_forced_conversion = 5
-						catalyst_reveal_secret_important = 10
-						catalyst_broke_truce_against_important_character = 25 # Cannot motivate the AI to do that without code support
+						catalyst_passing_of_time = 3
+						catalyst_gain_claim_on_title = 6
+						catalyst_win_any_war_within_the_region = 6 # Good
+						catalyst_new_building_in_castle = 6 # Good
+						catalyst_becomes_rival_with_involved = 20 # Good
+						catalyst_using_a_hook_on_very_important_character = 10 # good
+						catalyst_unnatural_death_important_character = 10
+						catalyst_vassalize_independent_ruler = 20 # good
+						catalyst_forced_conversion = 10
+						catalyst_reveal_secret_important = 20
+						catalyst_broke_truce_against_important_character = 50 # Cannot motivate the AI to do that without code support
 					}
 				}
 			}
@@ -371,7 +376,6 @@ britannia_struggle = {
 			war_effects = {
 				###### Common
 				common_parameters = {
-					invasion_conquest_war_cannot_be_declared = yes
 					struggle_clash_restricted_to_single_county = yes
 				}
 
@@ -534,19 +538,19 @@ britannia_struggle = {
 			background = "gfx/interface/illustrations/struggle_backgrounds/struggle_opportunity_britannia.dds"
 
 			future_phases = {
-				struggle_britannia_phase_migration = {
+				struggle_britannia_phase_opportunity = {
 					catalysts = {
-						catalyst_passing_of_time = 1
-						catalyst_gain_claim_on_title = 3
-						catalyst_win_any_war_within_the_region = 3 # Good
-						catalyst_new_building_in_castle = 3 # Good
-						catalyst_becomes_rival_with_involved = 10 # Good
-						catalyst_using_a_hook_on_very_important_character = 5 # good
-						catalyst_unnatural_death_important_character = 5
-						catalyst_vassalize_independent_ruler = 10 # good
-						catalyst_forced_conversion = 5
-						catalyst_reveal_secret_important = 10
-						catalyst_broke_truce_against_important_character = 25 # Cannot motivate the AI to do that without code support
+						catalyst_passing_of_time = 3
+						catalyst_gain_claim_on_title = 6
+						catalyst_win_any_war_within_the_region = 6 # Good
+						catalyst_new_building_in_castle = 6 # Good
+						catalyst_becomes_rival_with_involved = 20 # Good
+						catalyst_using_a_hook_on_very_important_character = 10 # good
+						catalyst_unnatural_death_important_character = 10
+						catalyst_vassalize_independent_ruler = 20 # good
+						catalyst_forced_conversion = 10
+						catalyst_reveal_secret_important = 20
+						catalyst_broke_truce_against_important_character = 50 # Cannot motivate the AI to do that without code support
 					}
 				}
 			}
@@ -604,7 +608,6 @@ britannia_struggle = {
 			faith_effects = {
 				###### Common
 				common_parameters = {
-					holy_wars_in_region_cannot_be_declared = yes
 					county_faith_conversion_in_region_proceeds_slower = yes
 				}
 

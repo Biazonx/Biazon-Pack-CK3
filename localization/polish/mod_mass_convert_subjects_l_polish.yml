@@ -1,0 +1,18 @@
+﻿l_polish:
+ mod_mass_convert_subjects_decision: "$game_concept_demand_conversion$"
+ mod_mass_convert_subjects_decision_desc: "$game_concept_demand_conversion_desc$"
+ mod_mass_convert_subjects_decision_tooltip: "$game_concept_demand_conversion_desc$"
+
+ mod_convert_direct_vassals_loc: "$game_concept_direct_vassals$ ([SCOPE.ScriptValue('mod_convert_direct_vassals_number')])"
+ mod_convert_direct_vassals_tooltip: "Żądaj nawrócenia od wszystkich swoich niewiernych wasali bezpośrednich."
+ 
+ mod_convert_indirect_vassals_loc: "Wasale pośredni ([SCOPE.ScriptValue('mod_convert_indirect_vassals_number')])"
+ mod_convert_indirect_vassals_tooltip: "Żądaj nawrócenia od wszystkich swoich niewiernych pośrednich wasali pośrednich."
+ 
+ mod_convert_courtiers_loc: "Dworzanie ([SCOPE.ScriptValue('mod_convert_courtiers_number')])"
+ mod_convert_courtiers_tooltip: "Żądaj nawrócenia od wszystkich swoich niewiernych dworzan."
+ 
+ mod_convert_house_loc: "Członkowie rodu ([SCOPE.ScriptValue('mod_convert_house_number')])"
+ mod_convert_house_tooltip: "Żądaj nawrócenia od wszystkich niewiernych członków swojego rodu."
+ 
+ mod_mass_convert_subjects_decision_confirm: "Wyślij żądania"

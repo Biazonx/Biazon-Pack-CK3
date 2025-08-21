@@ -1135,9 +1135,18 @@ sogdian0024 = { #The Banijurids
 	religion = hepthalitism
 	culture = "sogdian"
 	father = sogdian0023
-	trait = education_intrigue_3
+	trait = education_intrigue_4
+	trait = lustful
+	trait = impatient
+	trait = callous
+	trait = schemer
+	trait = pure_blooded
+	
 	828.11.22 = {
 		birth = yes
+	}
+	866.1.1 = {
+		add_piety = 500
 	}
 	873.2.9 = {
 		death = yes 

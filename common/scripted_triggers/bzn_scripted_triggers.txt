@@ -2,6 +2,7 @@ can_raid_trigger = {
     OR = {
         # 1. All tribal governments can raid (no doctrine check)
         has_government = tribal_government
+		has_government = confederate_tribal_government
         
         # 2. All pirate captains can raid
         has_trait = pirate_captain

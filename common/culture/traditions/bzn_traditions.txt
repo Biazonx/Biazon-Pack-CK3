@@ -198,12 +198,12 @@ tradition_overlord = {
 
 	character_modifier = {
 		monthly_county_control_growth_add = 0.3
-		vassal_levy_contribution_mult = 0.70
-		vassal_tax_contribution_mult = -0.30
+		vassal_levy_contribution_mult = 1
+		vassal_tax_contribution_mult = -0.5
 		liege_opinion = -10
 		vassal_opinion = -10
-		dread_baseline_add = 10
-		levy_size = 0.1
+		dread_baseline_add = 15
+		levy_size = 0.10
 	}
 
 	cost = {

@@ -1,0 +1,7 @@
+﻿l_english:
+ CONVERT_RELIGION_WAR:0 "Holy War [cb_convert_religion|E] for Ruler of [TITLE.GetBaseName]"
+ CONVERT_RELIGION_WAR_NAME:0 "Holy War [cb_convert_religion|E] for the ruler of [TITLE.GetBaseName]"
+ game_concept_cb_convert_religion:0 "Demand Convert to Faith"
+ game_concept_cb_convert_religion_desc:0 "A $game_concept_cb_convert_religion$ is a special type of [war|E] waged by a [ruler|E] of one [faith|E] against a Ruler of a different Faith.\n\nThe winner in a $game_concept_cb_convert_religion$ war will not get any land, instead force the ruler to convert to the attackers Faith. The rulers vassal may or may not convert into the faith. Rulers of the same Faith as the target may choose to join in their defense without the need of an [alliance|E].\n\nHoly Wars may be allowed or restricted between different [religious_families|E]"
+ cb_convert_religion_war_victory_desc:0 "Within the target [title|E], all titles held by [defender.GetFaith.GetAdjective] rulers are converted into [attacker.GetFaith.GetAdjective]."
+ CB_CONVERT_RELIGION_TITLE:0 "Ruler of [THIS.GetLandedTitle.GetBaseName] will convert to [attacker.GetFaith.GetAdjective]. No land will be seized."

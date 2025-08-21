@@ -1,0 +1,7 @@
+﻿l_german:
+ CONVERT_RELIGION_WAR:0 "[cb_convert_religion|E] des Herrschers von [TITLE.GetBaseName]"
+ CONVERT_RELIGION_WAR_NAME:0 "[cb_convert_religion|E] des Herrschers von [TITLE.GetBaseName]"
+ game_concept_cb_convert_religion:0 "Zwangskonversion"
+ game_concept_cb_convert_religion_desc:0 "Ein $game_concept_cb_convert_religion$skrieg ist ein spezieller [war|E], der von einem [ruler|E] eines [faith|E]ns gegen einen Herrscher anderen Glaubens geführt wird.\n\nDer Sieger eines $game_concept_cb_convert_religion$skrieges erhält kein Land, sondern zwingt den Herrscher dazu, zum Glauben des Angreifers zu konvertieren. Die Vasallen des Herrschers können zum Glauben übertreten, müssen es aber nicht. Herrscher, die demselben Glauben angehören wie der Angegriffene, können sich seiner Verteidigung anschließen, ohne dass eine [alliance|E] notwendig ist.\n\nGlaubenskriege können zwischen verschiedenen [religious_families|E] erlaubt oder eingeschränkt sein."
+ cb_convert_religion_war_victory_desc:0 "Innerhalb des Ziel-[title|E]s werden alle Titel, die von [defender.GetFaith.GetAdjective]en Herrschern gehalten werden, zum [attacker.GetFaith.GetAdjective]en Glauben konvertiert."
+ CB_CONVERT_RELIGION_TITLE:0 "Der Herrscher von [THIS.GetLandedTitle.GetBaseName] wird zum [attacker.GetFaith.GetAdjective]en Glauben konvertieren. Es wird kein Land erobert werden."

@@ -1080,7 +1080,7 @@
 
 			#Shia
 			#Witchcraft is a sin
-			doctrine = muhammad_succession_batriya_doctrine
+			doctrine = muhammad_succession_shia_doctrine
 			# Jizya
 			doctrine = special_doctrine_jizya
 				   
@@ -1128,6 +1128,7 @@
 			doctrine = tenet_unreformed_syncretism
 			doctrine = tenet_communal_identity
 			doctrine = tenet_unrelenting_faith
+			doctrine = muhammad_succession_zandaqa_doctrine
 			
 			# Jizya
 			doctrine = special_doctrine_jizya

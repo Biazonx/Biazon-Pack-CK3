@@ -1,0 +1,4 @@
+﻿cb_convert_religion = {
+	#alias = {holy_wars holy_war_holy }
+	texture = "gfx/interface/icons/casus_bellis/religious_war.dds"
+}

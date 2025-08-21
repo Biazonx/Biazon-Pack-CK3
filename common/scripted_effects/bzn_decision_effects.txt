@@ -12,12 +12,12 @@ form_romania_scripted_effect = {
 		}
 	}
 	resolve_title_and_vassal_change = scope:title_change
-
 	title:d_muntenia = { set_de_jure_liege_title = title:k_romania }
 	title:d_transylvanian_alps = { set_de_jure_liege_title = title:k_romania }
 	title:d_oltenia = { set_de_jure_liege_title = title:k_romania }
-	title:d_transylvanian = { set_de_jure_liege_title = title:k_romania }
+	title:d_transylvania = { set_de_jure_liege_title = title:k_romania }
 	title:c_galatia = { set_de_jure_liege_title = title:k_romania }
+	set_primary_title_to = title:k_romania 
 }
 
 form_teutonic_scripted_effect = {
@@ -38,6 +38,7 @@ form_teutonic_scripted_effect = {
 	title:d_prussia = { set_de_jure_liege_title = title:k_teutonic }
 	title:d_masuria = { set_de_jure_liege_title = title:k_teutonic }
 	title:d_pomerelia = { set_de_jure_liege_title = title:k_teutonic }
+	set_primary_title_to = title:k_teutonic 
 }
 
 form_yugoslavia_scripted_effect = {
@@ -65,4 +66,37 @@ form_yugoslavia_scripted_effect = {
 	# Set de jure vassal kingdoms under e_yugoslavia
 	title:k_croatia = { set_de_jure_liege_title = title:e_yugoslavia }
 	title:k_serbia = { set_de_jure_liege_title = title:e_yugoslavia }
+	set_primary_title_to = title:e_yugoslavia 
+	
+}
+
+form_czechslovakia_scripted_effect = {
+	# Save the current scope as the founder
+	save_scope_as = founder
+
+	# Create the empire title and register the change
+	create_title_and_vassal_change = {
+		type = created
+		save_scope_as = title_change
+		add_claim_on_loss = no
+	}
+
+	# Assign the newly created title to the founder
+	title:e_czechslovakia = {
+		change_title_holder = {
+			holder = scope:founder
+			change = scope:title_change
+		}
+	}
+
+	# Apply the title creation and vassal changes
+	resolve_title_and_vassal_change = scope:title_change
+
+	# Set de jure vassal kingdoms under e_yugoslavia
+	title:k_bohemia = { set_de_jure_liege_title = title:e_czechslovakia }
+	title:d_ungvar = { set_de_jure_liege_title = title:k_moravia }
+	title:k_moravia = { set_de_jure_liege_title = title:e_czechslovakia }
+	
+	set_primary_title_to = title:e_czechslovakia
+
 }

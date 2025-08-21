@@ -5463,6 +5463,8 @@ hunas_5 = {
 	name = "Aziz"
 	religion = gayomarthianism
 	culture = persian
+	trait = education_martial_3
+	trait = holy_warrior
 	847.1.2 = {
 		birth = yes
 	}

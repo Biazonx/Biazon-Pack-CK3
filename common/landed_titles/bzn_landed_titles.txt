@@ -131,3 +131,8 @@ e_yugoslavia = {
 	color = { 0 56 168 }
 	capital = c_usora # Belgrade
 }
+
+e_czechslovakia = {
+	color { 3 209 168 }
+	capital = c_praha # Prague
+}

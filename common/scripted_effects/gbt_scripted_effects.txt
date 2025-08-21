@@ -1,0 +1,48 @@
+﻿gbt_duel_victor_effect = {
+	if = {
+		limit = {
+			NOR = {
+				has_character_modifier = gbt_novice_modifier
+				has_character_modifier = gbt_adept_modifier
+				has_trait = lifestyle_blademaster
+			}
+		}
+		add_character_modifier = gbt_novice_modifier
+	}
+	else_if = {
+		limit = {
+			has_character_modifier = gbt_novice_modifier
+		}
+		
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = blademaster_traits_more_common
+				}
+			}
+			remove_character_modifier = gbt_novice_modifier
+			add_trait = lifestyle_blademaster
+		}
+		else = {
+			remove_character_modifier = gbt_novice_modifier
+			add_character_modifier = gbt_adept_modifier
+		}
+	}
+	else_if = {
+		limit = {
+			has_character_modifier = gbt_adept_modifier
+		}
+		remove_character_modifier = gbt_adept_modifier
+		add_trait = lifestyle_blademaster
+	}
+}
+
+gbt_duel_loser_effect = {
+	if = {
+		limit = { has_trait = lifestyle_blademaster }
+		add_trait_xp = {
+			trait = lifestyle_blademaster
+			value = tournament_hastiludes_xp_gain_minor_value
+		}
+	}
+}

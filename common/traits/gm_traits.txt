@@ -1,0 +1,135 @@
+﻿lifestyle_gamemaster = {
+	category = lifestyle
+	icon = gamemaster.dds
+
+	# Modifiers
+	same_opinion = 10
+	
+	flag = can_challenge_to_board_game_interaction
+	
+	#culture_modifier = {
+	#	parameter = trait_county_opinion_modifiers
+	#	county_opinion_add = 2
+	#}
+	#culture_modifier = {
+	#	parameter = blademaster_trait_bonuses
+	#	attraction_opinion = 5
+	#	monthly_prestige = 0.25
+	#}
+	#culture_modifier = {
+	#	parameter = blademaster_traits_give_learning
+	#	learning = 2
+	#}	
+
+	track = {
+		50 = {
+			diplomacy = 1
+			martial = 1
+			advantage = 2
+			movement_speed = 0.05
+			
+			#culture_modifier = {
+			#	parameter = trait_county_opinion_modifiers
+			#	county_opinion_add = 3
+			#}			
+			#culture_modifier = {
+			#	parameter = blademaster_trait_bonuses
+			#	attraction_opinion = 5
+			#	monthly_prestige = 0.25
+			#}
+			#culture_modifier = {
+			#	parameter = blademaster_traits_give_learning
+			#	learning = 2
+			#}
+		}
+		100 = {
+			diplomacy = 2
+			martial = 2
+			advantage = 4
+			movement_speed = 0.1
+
+			#culture_modifier = {
+			#	parameter = trait_county_opinion_modifiers
+			#	county_opinion_add = 5
+			#}
+			#culture_modifier = {
+			#	parameter = blademaster_trait_bonuses
+			#	attraction_opinion = 5
+			#	monthly_prestige = 0.5
+			#}
+			#culture_modifier = {
+			#	parameter = blademaster_traits_give_learning
+			#	learning = 2
+			#}
+		}
+	}
+
+	ruler_designer_cost = 20
+
+	# Loc
+	name = {
+		first_valid = {
+			#Legendary Game Master
+			triggered_desc = {
+				trigger = {
+					exists = this
+					has_trait_xp = {
+						trait = lifestyle_gamemaster
+						value >= 100
+					}
+				}
+				desc = trait_gamemaster_3
+			}
+			#Game Master
+			triggered_desc = {
+				trigger = { 
+					exists = this
+					has_trait_xp = {
+						trait = lifestyle_gamemaster
+						value >= 50
+					}
+				}
+				desc = trait_gamemaster_2
+			}
+			#Aspiring Game Master
+			desc = trait_gamemaster_1
+		}
+	}
+
+	# Loc
+	desc = {
+		first_valid = {
+			#The trait can never go higher than the first level if it's not assigned to a character
+			triggered_desc = {
+				trigger = { 
+					NOT = { exists = this } 
+				}
+				desc = trait_gamemaster_1_desc
+			}
+			triggered_desc = {
+				trigger = { 
+					has_trait_xp = {
+						trait = lifestyle_gamemaster
+						value >= 100
+					}
+				}
+				desc = trait_gamemaster_3_character_desc
+			}
+			triggered_desc = {
+				trigger = { 
+					has_trait_xp = {
+						trait = lifestyle_gamemaster
+						value >= 50
+					}
+				}
+				desc = trait_gamemaster_2_character_desc
+			}
+			desc = trait_gamemaster_1_character_desc
+		}
+	}
+
+	compatibility = {
+		gregarious = @pos_compat_low
+		shy = @pos_compat_low
+	}
+}

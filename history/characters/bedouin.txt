@@ -6323,6 +6323,9 @@
 	religion = yudghanites
 	culture = "bedouin"
 	father = 188697
+	trait = education_stewardship_4
+	trait = lifestyle_mystic
+	
 	815.1.1 = {
 		birth = yes
 	}
@@ -6757,6 +6760,8 @@
 	religion = isfahani
 	culture = "bedouin"
 	father = 163098
+	trait = zealous
+	trait = education_martial_3
 	835.1.1 = {
 		birth = "835.1.1"
 	}
@@ -6785,12 +6790,12 @@
 	religion = isawites
 	culture = "bedouin"
 	trait = sayyid
-	trait = education_martial_2
+	trait = education_martial_3
 	trait = generous
 	trait = zealous
-	trait = fickle
+	trait = temperate
 	trait = poet
-	martial = 4
+	martial = 5
 	father = 163128
 	832.1.1 = {
 		birth = "832.1.1"

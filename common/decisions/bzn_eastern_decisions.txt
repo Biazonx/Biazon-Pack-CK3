@@ -1,0 +1,353 @@
+bzn_contact_eastern_decision = {
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_culture.dds"
+    }
+	
+	desc = bzn_contact_eastern_decision_desc
+    decision_group_type = major
+    ai_check_interval = 120
+	
+	cooldown = { years = 1 }
+	
+    is_shown = {
+		NOT = { has_character_modifier = contacted_eastern }
+		is_landless_adventurer = no
+    }
+    is_valid = {
+    }
+	
+	cost = { gold = 25 prestige = 100 }
+	
+    effect = {
+		add_character_modifier = {
+			modifier = contacted_eastern
+			years = -1
+		}
+    }
+    ai_potential = {
+        always = yes
+    }
+    ai_will_do = {
+        base = 20
+    }
+}
+
+bzn_invite_chinese_traveler_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
+    }
+
+    decision_group_type = courtier
+
+    ai_check_interval = 240
+
+    cooldown = { years = 5 }
+
+    is_shown = {
+        is_landless_adventurer = no
+		has_character_modifier = contacted_eastern
+    }
+
+    desc = bzn_invite_chinese_traveler_desc
+
+    effect = {
+        trigger_event = {
+            id = bzn_decisions.0001
+            days = { 5 10 }
+        }
+        custom_tooltip = bzn_invite_chinese_traveler_effect_tooltip
+    }
+
+    cost = { prestige = minor_prestige_value }
+
+    ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 20
+	}
+}
+
+bzn_invite_japanese_samurai_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_knight_kneeling.dds"
+    }
+
+    decision_group_type = courtier
+
+    ai_check_interval = 240
+
+    cooldown = { years = 5 }
+
+    is_shown = {
+        is_landless_adventurer = no
+		has_character_modifier = contacted_eastern
+    }
+
+    desc = bzn_invite_japanese_samurai_desc
+
+    effect = {
+        trigger_event = {
+            id = bzn_decisions.0002
+            days = { 5 10 }
+        }
+        custom_tooltip = bzn_invite_japanese_samurai_effect_tooltip
+    }
+
+    cost = { prestige = minor_prestige_value }
+
+    ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 20
+	}
+}
+
+bzn_invite_jewish_merchant_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/fp3_decision_tax_collector.dds"
+    }
+
+    decision_group_type = courtier
+
+    ai_check_interval = 240
+
+    cooldown = { years = 5 }
+
+    is_shown = {
+		has_character_modifier = contacted_eastern
+        is_landless_adventurer = no
+    }
+
+    desc = bzn_invite_jewish_merchant_desc
+
+    effect = {
+        trigger_event = {
+            id = bzn_decisions.0006
+            days = { 5 10 }
+        }
+        custom_tooltip = bzn_invite_jewish_merchant_effect_tooltip
+    }
+
+    cost = { prestige = minor_prestige_value }
+
+    ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 20
+	}
+}
+
+bzn_become_samurai = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_knight_kneeling.dds"
+    }
+    decision_group_type = major
+    ai_check_interval = 0
+
+    is_shown = {
+		culture = culture:japanese
+        is_landless_adventurer = no
+        NOT = { has_trait = samurai }
+        NOT = { has_trait = ronin }
+    }
+
+    is_valid = {
+        culture = culture:japanese
+        prestige_level >= 3
+		OR = {
+        martial >= 12
+        prowess >= 12
+		}
+        NOT = { has_trait = disloyal }
+    }
+
+    desc = bzn_become_samurai_desc
+    cost = { prestige = 1000 }
+
+    effect = {
+        add_trait = samurai
+    }
+
+    ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+bzn_become_ronin = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_legend.dds"
+    }
+    decision_group_type = major
+    ai_check_interval = 0
+
+    is_shown = {
+        is_landless_adventurer = no
+        NOT = { has_trait = ronin }
+		culture = culture:japanese
+    }
+
+    is_valid = {
+        has_trait = samurai
+        OR = {
+            has_trait = craven
+            has_trait = greedy
+            has_trait = vengeful
+            has_trait = deceitful
+            has_trait = arrogant
+            has_trait = arbitrary
+            has_trait = paranoid
+            has_trait = callous
+            has_trait = sadistic
+        }
+        NOT = { has_trait = loyal }
+    }
+
+    desc = bzn_become_ronin_desc
+    cost = { prestige = 250 }
+
+    effect = {
+        remove_trait = samurai
+        add_trait = ronin
+    }
+
+    ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+bzn_embrace_chinese_culture_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_culture.dds"
+	}
+
+	decision_group_type = major
+
+	ai_check_interval = 0
+
+	is_shown = {
+		has_character_modifier = contacted_eastern
+		NOT = { culture = culture:han }
+		NOT = { culture = culture:japanese }
+		any_courtier = {
+            culture = culture:han
+        }
+	}
+
+	is_valid = {
+		knows_language = language_chinese
+	}
+
+	desc = embrace_chinese_culture_decision_desc
+	cost = { prestige = 250 }
+
+	effect = {
+		set_culture = culture:han
+		capital_county = {
+			set_county_culture = culture:han
+		}
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+bzn_embrace_japanese_culture_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_culture.dds"
+	}
+
+	decision_group_type = major
+
+	ai_check_interval = 0
+
+	is_shown = {
+		has_character_modifier = contacted_eastern
+		NOT = { culture = culture:han }
+		NOT = { culture = culture:japanese }
+		any_courtier = {
+            culture = culture:japanese
+        }
+	}
+
+	is_valid = {
+		knows_language = language_japanese
+	}
+
+	desc = embrace_japanese_culture_decision_desc
+	cost = { prestige = 250 }
+
+	effect = {
+		set_culture = culture:japanese
+		capital_county = {
+			set_county_culture = culture:japanese
+		}
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+bzn_adopt_shinto_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	}
+
+	decision_group_type = major
+
+	ai_check_interval = 0
+
+	is_shown = {
+		has_character_modifier = contacted_eastern
+		NOT = { faith = faith:shin}
+		any_courtier = {
+            faith = faith:shin
+        }
+	}
+
+	is_valid = {
+		knows_language = language_japanese
+		piety_level >= 2
+	}
+
+	desc = bzn_adopt_shinto_decision_desc
+	cost = { piety = 250 }
+
+	effect = {
+		set_character_faith = faith:shin
+		capital_county = {
+			set_county_faith = faith:shin
+		}
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}

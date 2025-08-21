@@ -7814,6 +7814,17 @@
 	culture = "armenian"
 	father = 159966
 	mother = 159632
+	diplomacy = 8
+	martial = 10
+	stewardship = 7
+	intrigue = 7
+	learning = 7
+	prowess = 7
+	trait = diligent
+	trait = trusting
+	trait = vengeful
+	trait = peasant_leader
+	trait = education_martial_5
 	830.1.1 = {
 		birth = "830.1.1"
 	}

@@ -8,7 +8,7 @@ bzn_artifact_dragon_1_effect = { #Dragon Balls
 		visuals = bzn_artifact_dragon_1_visual
 		wealth = 100
 		quality = 100
-		template = general_unique_template
+		template = bzn_artifact_template
 		generate_history = no
 		modifier = artifact_development_growth_5_modifier
 		modifier = artifact_monthly_piety_mult_1_modifier
@@ -19,4 +19,29 @@ bzn_artifact_dragon_1_effect = { #Dragon Balls
 	scope:newly_created_artifact = {
 		save_scope_as = dragon_balls
 	}
-}	
+}
+
+bzn_artifact_mask_1_effect = { #Spirit Mask
+	$OWNER$ = { save_scope_as = owner }
+	set_artifact_rarity_illustrious = yes
+	create_artifact = {	
+		name = bzn_artifact_mask_1_name
+		description = bzn_artifact_mask_1_description
+		type = miscellaneous
+		visuals = bzn_artifact_mask_1_visual
+		wealth = 100
+		quality = 100
+		template = bzn_artifact_template
+		generate_history = no
+		modifier = artifact_monthly_prestige_gain_per_dread_add_4_modifier
+		modifier = artifact_monthly_piety_5_modifier
+		modifier = artifact_dread_baseline_add_4_modifier
+		modifier = artifact_martial_2_modifier
+		modifier = artifact_prowess_2_modifier
+		modifier = artifact_clergy_opinion_9_modifier
+		save_scope_as = newly_created_artifact
+	}
+	scope:newly_created_artifact = {
+		save_scope_as = spirit_mask
+	}
+}

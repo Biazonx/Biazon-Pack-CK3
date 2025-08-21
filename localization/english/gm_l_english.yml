@@ -1,0 +1,12 @@
+﻿l_english:
+ trait_gamemaster_1:0 "Novice Game Master"
+ trait_gamemaster_1_desc:0 "The Novice Game Master is proficient in board games and keenly aware of their opponents' weaknesses."
+ trait_gamemaster_1_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is proficient in board games and keenly aware of their opponents' weaknesses."
+ trait_gamemaster_2:0 "Game Master"
+ trait_gamemaster_2_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is a formidable and a respected opponent in any board game."
+ trait_gamemaster_3:0 "Legendary Game Master"
+ trait_gamemaster_3_character_desc:0 "The skill of [ROOT.GetCharacter.GetFirstNameNoTooltip] is the stuff of stories."
+ trait_track_lifestyle_gamemaster:0 "Game Master"
+ trait_track_lifestyle_gamemaster_desc:0 "Some say there’s a fine line between board games and strategic tactics. If you practice board games diligently, there will come a day when you can break down that fine line."
+ 
+ TRAIT_FLAG_DESC_can_challenge_to_board_game_interaction:0 "Unlocks the Challenge to [board_game|E] [interaction|E]"

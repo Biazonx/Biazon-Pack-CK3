@@ -1,0 +1,14 @@
+﻿on_game_start = {
+    on_actions = {
+		gbt_setup
+    }
+}
+
+gbt_setup = {
+    effect = {
+		set_global_variable = { 
+			name = gbt_is_loaded 
+			value = yes 
+		}
+    }
+}

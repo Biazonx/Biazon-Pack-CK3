@@ -14187,7 +14187,11 @@
 	dynasty = 9565
 	religion = "matari"
 	culture = "cisalpine"
-	trait = education_stewardship_2
+	trait = education_stewardship_4
+	trait = zealous
+	trait = calm
+	trait = temperate
+	trait = shrewd
 
 	840.1.1 = {
 		birth = yes

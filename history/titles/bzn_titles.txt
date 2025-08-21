@@ -228,3 +228,4 @@ e_yugoslavia = {
 	1066.1.1 = { change_development_level = 10 }
 	1178.1.1 = { change_development_level = 24 }
 }
+

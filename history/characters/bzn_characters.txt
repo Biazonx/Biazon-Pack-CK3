@@ -26,6 +26,10 @@ bzn_tecuetlaza = {
 				type = jaguar_warrior
 				stacks = 10
 				}
+			men_at_arms = {
+				type = onager
+				stacks = 5
+				}
 			levies = 5000
 			location = capital_province
 			inheritable = no
@@ -62,6 +66,7 @@ bzn_yitzhak = {
 		add_gold = 200
 		add_piety = 1500
 		add_prestige = 1000
+	
 		}
 	
 	900.1.1 = {
@@ -95,6 +100,16 @@ bzn_raditz = {
     }
     866.1.1 = {
 		add_gold = 200
+		spawn_army = {
+			men_at_arms = {
+				type = saiyan_warriors
+				stacks = 3
+				}
+			inheritable = yes
+			uses_supply = yes
+			location = capital_province
+			name = "Saiyan Warriors"
+			}
 		}
 	
 	900.1.1 = {
@@ -126,8 +141,17 @@ bzn_piccolo = {
     }
     866.1.1 = {
 		add_gold = 200
+		spawn_army = {
+			men_at_arms = {
+				type = namekian_guardians
+				stacks = 3
+				}
+			inheritable = yes
+			uses_supply = yes
+			location = capital_province
+			name = "Namekian Guardians"
 		}
-	
+	}
 	900.1.1 = {
 		death = "900.1.1"
 	}
@@ -210,17 +234,22 @@ bzn_ahmose = {
 	trait = ambitious
 	trait = paranoid
 	trait = education_martial_4
-	trait = witch
+	trait = pharaoh
 	
     820.1.1 = {
         birth = yes
     }
     866.1.1 = {
 		add_prestige = 4000
+		add_piety = 500
 		spawn_army = {
 			men_at_arms = {
 				type = Maryannu
 				stacks = 5
+				}
+			men_at_arms = {
+				type = onager
+					stacks = 5
 				}
 			levies = 9500
 			location = capital_province
@@ -262,6 +291,10 @@ bzn_balam = {
 				type = jaguar_warrior
 				stacks = 15
 				}
+			men_at_arms = {
+				type = mangonel
+				stacks = 10
+				}
 			levies = 6500
 			location = capital_province
 			inheritable = no
@@ -300,6 +333,10 @@ bzn_itzcoatl = {
 			men_at_arms = {
 				type = jaguar_warrior
 				stacks = 20
+				}
+			men_at_arms = {
+				type = trebuchet
+				stacks = 15
 				}
 			levies = 8000
 			location = capital_province

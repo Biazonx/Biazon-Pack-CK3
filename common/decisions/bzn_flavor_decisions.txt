@@ -1,0 +1,320 @@
+bzn_tribal_army_decision = { 
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/ep3_decision_varangian_guard.dds"
+    }
+	
+	desc = bzn_tribal_army_decision_desc
+    decision_group_type = major
+    ai_check_interval = 240
+	
+	cooldown = { years = 5 }
+	
+    is_shown = {
+		has_government = tribal_government 
+    }
+    is_valid = {
+		has_government = tribal_government 
+    }
+	
+	cost = { prestige = 250 }
+	
+    effect = {
+		add_character_modifier = {
+            modifier = tribal_army
+            years = 5
+        }
+    }
+    ai_potential = {
+        always = yes
+    }
+    ai_will_do = {
+        base = 20
+    }
+}
+
+bzn_patronize_guilds_decision = { 
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_spend_money.dds"
+    }
+	
+	desc = bzn_patronize_guilds_desc
+    decision_group_type = major
+    ai_check_interval = 240
+	
+	cooldown = { years = 10 }
+	
+    is_shown = {
+		has_government = feudal_government 
+    }
+    is_valid = {
+		has_government = feudal_government 
+    }
+	
+	cost = { gold = 75 }
+	
+    effect = {
+		add_character_modifier = {
+            modifier = guild_patron
+            years = 5
+        }
+		add_prestige = 150
+    }
+    ai_potential = {
+        always = yes
+    }
+    ai_will_do = {
+        base = 20
+    }
+}
+
+bzn_confederate_council_decision = { 
+		picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	}
+
+    decision_group_type = major
+
+    ai_check_interval = 240
+
+    cooldown = { years = 15 }
+
+    is_shown = {
+        has_government = confederate_tribal_government
+	}
+	
+	is_valid = {
+		has_government = confederate_tribal_government
+	}
+    desc = bzn_confederate_council_decision_desc
+
+    effect = {
+        trigger_event = {
+            id = bzn_decisions.0012
+            days = { 3 5 }
+        }
+        custom_tooltip = bzn_confederate_council_decision_effect_tooltip
+    }
+
+    cost = { prestige = 250 }
+
+    ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 20
+	}
+}
+
+bzn_reincarnation_decision = { 
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+    }
+	
+	desc = bzn_reincarnation_decision_desc
+    decision_group_type = major
+    ai_check_interval = 120
+	
+	cooldown = { years = -1 }
+	
+    is_shown = {
+		NOT = { has_trait = reincarnation }
+		faith = { has_doctrine = tenet_reincarnation }
+    }
+    is_valid = {
+		has_doctrine = tenet_reincarnation
+    }
+	
+	cost = { piety = 500 }
+	
+    effect = {
+		add_trait = reincarnation 
+    }
+	
+    ai_potential = {
+        always = yes
+    }
+	
+    ai_will_do = {
+        base = 10
+    }
+}
+
+bzn_determine_karma_decision = { 
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+    }
+	
+	desc = bzn_determine_karma_decision_desc
+    decision_group_type = major
+    ai_check_interval = 240
+	
+	cooldown = { years = -1 }
+	
+    is_shown = {
+		has_trait = reincarnation 
+		NOT = { has_character_modifier = divine_favor has_character_modifier = karmic_debt }
+    }
+    is_valid = {
+		has_trait = reincarnation
+    }
+	
+	cost = { piety = 100 }
+	
+    effect = {
+	random_list = {
+            70 = {	add_character_modifier = {
+						modifier = divine_favor
+						years = -1 
+						} }
+            30 = {	add_character_modifier = {
+						modifier = karmic_debt
+						years = -1 
+						} }
+        } 
+	}
+    ai_potential = {
+        always = yes
+    }
+	
+    ai_will_do = {
+        base = 100
+    }
+}
+
+bzn_distribute_alms_decision = {
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+    }
+	
+	desc = bzn_distribute_alms_decision_desc
+    decision_group_type = major
+    ai_check_interval = 240
+	
+	cooldown = { years = 10 }
+	
+    is_shown = {
+		has_government = monastic_feudal_government 
+    }
+    is_valid = {
+		has_government = monastic_feudal_government
+    }
+	
+	cost = { gold = 100 }
+	
+    effect = {
+		add_piety = 500
+		add_character_modifier = {
+			modifier = shared_wealth
+			years = 10 }
+		random_list = {
+            90 = { }
+            10 = { add_trait = generous }
+        } 
+		
+    }
+    ai_potential = {
+        always = yes
+    }
+    ai_will_do = {
+        base = 20
+    }
+}
+
+bzn_commission_manuscripts_decision = {
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+    }
+	
+	desc = bzn_commission_manuscripts_decision_desc
+    decision_group_type = major
+    ai_check_interval = 240
+	
+	cooldown = { years = 10 }
+	
+    is_shown = {
+		has_government = monastic_feudal_government 
+    }
+    is_valid = {
+		has_government = monastic_feudal_government
+    }
+	
+	cost = { gold = 75 }
+	
+    effect = {
+		add_piety = 100
+		add_prestige = 100 
+		add_legitimacy = 50
+		dynasty = { add_dynasty_prestige = 50 }
+    }
+    ai_potential = {
+        always = yes
+    }
+    ai_will_do = {
+        base = 20
+    }
+}
+
+bzn_warrior_lodges_decision = { 
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/mpo_decision_confederation.dds"
+	}
+
+    decision_group_type = major
+
+    ai_check_interval = 840
+
+    cooldown = { years = 5 }
+
+    is_shown = {
+		is_landless_adventurer = no
+		OR = { 
+			has_government = tribal_government 
+			has_government = nomad_government
+			religion = religion:anahuac_religion
+			faith = {has_doctrine = pagan_hostility_doctrine} 
+		}
+	}
+	
+	is_valid = {
+	}
+    desc = bzn_warrior_lodges_decision_desc
+
+    effect = {
+        trigger_event = {
+            id = bzn_decisions.0013
+            days = { 3 5 }
+        }
+		set_variable = {
+			name = warrior_society
+			years = 500
+		}
+        custom_tooltip = bzn_warrior_lodges_decision_effect_tooltip
+    }
+
+    cost = {
+		prestige = {
+		value = 300
+	if = {
+		limit = {highest_held_title_tier = tier_empire} 
+		add = 900
+	}
+	else_if = {
+		limit = {highest_held_title_tier = tier_kingdom} 
+		add = 600
+	}
+	else_if = {
+		limit = {highest_held_title_tier = tier_duchy} 
+		add = 300
+			}
+		}
+	}
+
+    ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 20
+	}
+}

@@ -793,6 +793,8 @@ extra_samanids_27 = {
 	religion = "menahemists"
 	culture = "tajik"
 	father = 163158
+	trait = zealous
+	trait = education_learning_3
 	820.1.1 = {
 		birth = yes
 	}

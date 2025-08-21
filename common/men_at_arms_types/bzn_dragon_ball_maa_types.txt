@@ -28,8 +28,8 @@ saiyan_warriors = {
     }
 
     buy_cost = { gold = @maa_buy_cost }
-    low_maintenance_cost = { gold = 0.08 }
-    high_maintenance_cost = { gold = 0.7 }
+    low_maintenance_cost = { gold = 0.4 }
+    high_maintenance_cost = { gold = 1.2 }
 
     stack = 100
     ai_quality = { value = @cultural_maa_extra_ai_score }
@@ -43,14 +43,14 @@ namekian_guardians = {
         culture = culture:namekian
     }
 
-    damage = 30
+    damage = 32
     toughness = 40
     pursuit = 10
     screen = 20
 
     terrain_bonus = {
-        plains = { damage = 4 toughness = 6 }
-        hills = { damage = 4 toughness = 6 }
+        plains = { damage = 5 toughness = 5 }
+        hills = { damage = 5 toughness = 5 }
     }
 
     counters = {
@@ -59,8 +59,8 @@ namekian_guardians = {
     }
 
     buy_cost = { gold = @maa_buy_cost }
-    low_maintenance_cost = { gold = 0.08 }
-    high_maintenance_cost = { gold = 0.7 }
+    low_maintenance_cost = { gold = 0.4 }
+    high_maintenance_cost = { gold = 1.2 }
 
     stack = 100
     ai_quality = { value = @cultural_maa_extra_ai_score }

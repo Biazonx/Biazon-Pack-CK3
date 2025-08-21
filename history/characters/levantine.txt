@@ -8550,7 +8550,7 @@ levantine000010 = { #fictional ruler of Banu Kilab
 		}
 		
 		effect = {
-			add_gold = 700
+			add_gold = -600
 			spawn_army = {
 				name = event_troop_default_name
 				levies = 200

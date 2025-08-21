@@ -1,0 +1,18 @@
+﻿l_simp_chinese:
+ mod_mass_convert_subjects_decision: "$game_concept_demand_conversion$"
+ mod_mass_convert_subjects_decision_desc: "$game_concept_demand_conversion_desc$"
+ mod_mass_convert_subjects_decision_tooltip: "$game_concept_demand_conversion_desc$"
+ 
+ mod_convert_direct_vassals_loc: "$game_concept_direct_vassals$ ([SCOPE.ScriptValue('mod_convert_direct_vassals_number')])"
+ mod_convert_direct_vassals_tooltip: "要求你所有的异教$game_concept_direct_vassals$改信。"
+ 
+ mod_convert_indirect_vassals_loc: "非直属$game_concept_vassals$ ([SCOPE.ScriptValue('mod_convert_indirect_vassals_number')])"
+ mod_convert_indirect_vassals_tooltip: "要求你所有异教的非直属$game_concept_vassals$改信。"
+ 
+ mod_convert_courtiers_loc: "廷臣([SCOPE.ScriptValue('mod_convert_courtiers_number')])"
+ mod_convert_courtiers_tooltip: "要求你所有异教的[courtiers|E]改信。"
+ 
+ mod_convert_house_loc: "家族成员([SCOPE.ScriptValue('mod_convert_house_number')])"
+ mod_convert_house_tooltip: "要求你所有异教的家族成员改信。"
+ 
+ mod_mass_convert_subjects_decision_confirm: "发送要求"

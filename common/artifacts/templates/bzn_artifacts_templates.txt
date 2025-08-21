@@ -25,3 +25,4 @@ bzn_artifact_template = {
 	}
 
 	unique = yes
+}

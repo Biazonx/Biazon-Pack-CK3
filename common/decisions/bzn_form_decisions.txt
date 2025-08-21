@@ -5,6 +5,7 @@ form_romania_kingdom_decision = {
 	desc = form_romania_kingdom_decision_desc
 	selection_tooltip = form_romania_kingdom_decision_tooltip
 	decision_group_type = major
+	ai_check_interval = 120
 	
 	is_shown = {
 		NOT = { exists = title:k_romania.holder }
@@ -15,7 +16,7 @@ form_romania_kingdom_decision = {
 			}
 		}
 		# No kings or emperors...
-		highest_held_title_tier <= tier_duchy
+		highest_held_title_tier <= tier_kingdom
 		any_held_title = {
 			tier = tier_county
 			title_province = { geographical_region = custom_eastern_balkans }
@@ -31,7 +32,14 @@ form_romania_kingdom_decision = {
 	}
 
 	effect = { 
-	form_romania_scripted_effect = yes
+		form_romania_scripted_effect = yes
+		add_prestige = major_prestige_gain
+		house = {
+			add_house_modifier = {
+			modifier = romania_title_reward_house_modifier 
+				years = 200
+			}
+		}
 	}
 	
 	cost = {
@@ -43,7 +51,7 @@ form_romania_kingdom_decision = {
 	}
 
 	ai_will_do = {
-		base = 0
+		base = 100
 	}
 }
 
@@ -54,6 +62,7 @@ form_yugoslavia_empire_decision = {
 	desc = form_yugoslavia_empire_decision_desc
 	selection_tooltip = form_yugoslavia_empire_decision_tooltip
 	decision_group_type = major
+	ai_check_interval = 120
 	
 	is_shown = {
 		NOT = { exists = title:e_yugoslavia.holder }
@@ -81,6 +90,7 @@ form_yugoslavia_empire_decision = {
 
 	effect = { 
 	form_yugoslavia_scripted_effect = yes
+	add_prestige = 500
 	}
 	
 	cost = {
@@ -92,7 +102,58 @@ form_yugoslavia_empire_decision = {
 	}
 
 	ai_will_do = {
-		base = 0
+		base = 100
+	}
+}
+
+form_czechslovakia_empire_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
+	}
+	desc = form_czechslovakia_empire_decision_desc
+	selection_tooltip = form_czechslovakia_empire_decision_tooltip
+	decision_group_type = major
+	ai_check_interval = 120
+	
+	is_shown = {
+		NOT = { exists = title:e_czechslovakia.holder }
+		NOT = {  # Can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_formed_czechslovakia_empire
+			}
+		}
+		# No kings or emperors...
+		highest_held_title_tier <= tier_kingdom
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_czechslovakia }
+		}
+	}
+
+	is_valid = {
+		is_independent_ruler = yes
+		# Must be suitably prestigious.
+		prestige_level >= 2
+		# Must control core Yugoslavia
+		completely_controls_region = custom_czechslovakia
+	}
+
+	effect = { 
+	form_czechslovakia_scripted_effect = yes
+	add_prestige = 500
+	}
+	
+	cost = {
+		gold = 250
+	}
+	
+	ai_potential = {
+		prestige_level >= 2
+	}
+
+	ai_will_do = {
+		base = 100
 	}
 }
 
@@ -103,7 +164,7 @@ bzn_embrace_german_culture_decision = {
 
 	decision_group_type = major
 
-	ai_check_interval = 0
+	ai_check_interval = 120
 
 	is_shown = {
 		NOT = { exists = title:k_teutonic.holder }
@@ -136,6 +197,7 @@ bzn_embrace_german_culture_decision = {
 
 	effect = {
 		form_teutonic_scripted_effect = yes
+		add_prestige = 300
 		set_culture = culture:german
 		set_character_faith = faith:catholic
 
@@ -160,7 +222,7 @@ bzn_embrace_german_culture_decision = {
 	}
 
 	ai_will_do = {
-		base = 0
+		base = 100
 	}
 }
 
@@ -169,7 +231,7 @@ bzn_adopt_chinese_administration_decision = {
         reference = "gfx/interface/illustrations/decisions/decision_culture.dds"
     }
     decision_group_type = major
-    ai_check_interval = 12
+    ai_check_interval = 120
     is_shown = {
         NOT = { government_has_flag = government_is_administrative }
         NOT = { government_has_flag = government_is_shogunate }
@@ -188,7 +250,7 @@ bzn_adopt_chinese_administration_decision = {
         is_independent_ruler = yes
     }
     desc = adopt_chinese_administration_decision_desc
-    cost = { prestige = 500 }
+    cost = { prestige = 250 }
     effect = {
         every_realm_province = {
             limit = { has_holding_type = tribal_holding }
@@ -225,6 +287,10 @@ bzn_novgorod_republic_decision = {
             culture = { has_cultural_pillar = heritage_north_germanic }
             culture = { has_cultural_pillar = heritage_east_slavic }
         }
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_novgorod }
+		}
         NOT = { government_has_flag = government_is_administrative }
     }
     is_valid = {
@@ -238,8 +304,9 @@ bzn_novgorod_republic_decision = {
         }
     }
     desc = novgorod_republic_decision_desc
-    cost = { prestige = 1000 gold = 500 }
+    cost = { gold = 500 }
     effect = {
+		add_prestige = 500
         every_realm_province = {
             limit = { has_holding_type = tribal_holding }
             set_holding_type = castle_holding
@@ -263,3 +330,186 @@ bzn_novgorod_republic_decision = {
         base = 0
     }
 }
+
+form_the_kingdom_of_aragon_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
+	}
+	decision_group_type = major
+
+	ai_check_interval = 60
+
+	desc = form_the_kingdom_of_aragon_decision_desc
+	selection_tooltip = form_the_kingdom_of_aragon_decision_tooltip
+
+	is_shown = {
+		is_playable_character = yes # Redundancy check
+		# Can't form Aragon if Aragon already formed.
+		game_start_date < 1035.10.18
+		# Not relevant for characters who are already kings.
+		highest_held_title_tier <= tier_duchy
+		# Cast a broad net for folks who might like to try this.
+		capital_province = { geographical_region = dlc_fp2_form_aragon_region }
+		# Aaaaand it can't have happened already.
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_formed_kingdom_of_aragon
+			}
+		}
+	}
+
+	is_valid = {
+		is_independent_ruler = yes
+		completely_controls = title:d_aragon
+		OR = {
+			completely_controls = title:d_barcelona
+			completely_controls = title:d_valencia
+			completely_controls = title:d_navarra
+		}
+	}
+	
+	is_valid_showing_failures_only = {
+		is_landed = yes
+	}
+
+	effect = {
+		gain_heroic_legend_seed_tooltip_effect = yes
+		# Grab scopes for loc.
+		save_scope_as = founder
+		culture = { save_scope_as = founder_culture }
+		culture:aragonese = { save_scope_as = aragonese_culture }
+		title:k_aragon = { save_scope_as = k_aragon }
+		title:d_aragon = { save_scope_as = d_aragon }
+		title:d_valencia = { save_scope_as = d_valencia }
+		title:d_barcelona = { save_scope_as = d_barcelona }
+		title:d_navarra = { save_scope_as = d_navarra }
+		# Create kingdom title.
+		create_title_and_vassal_change = {
+			type = created
+			save_scope_as = change
+		}
+		title:k_aragon = {
+			change_title_holder = {
+				holder = scope:founder
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+		# Gain some prestige.
+		add_prestige = major_prestige_gain
+		# You shift to Aragonese culture, but will have a chance to change it.
+		## We do the actual change inside the event for nicer tooltip grouping.
+		show_as_tooltip = { set_culture = culture:aragonese }
+		custom_tooltip = form_the_kingdom_of_aragon_decision.tt.form_aragonese
+		trigger_event = iberia_north_africa.0131
+		# De jure shifts.
+		## Take care of the preferred empire.
+		if = {
+			limit = { NOT = { title:k_aragon.empire = title:d_aragon.empire } }
+			title:k_aragon = { set_de_jure_liege_title = title:d_aragon.empire }
+		}
+		## The heartlands drift over.
+		title:d_aragon = { set_de_jure_liege_title = title:k_aragon }
+		## Various neighbouring duchies can be preemptively integrated.
+		### From Valencia.
+		if = {
+			limit = { completely_controls = title:d_valencia }
+			title:d_valencia = { set_de_jure_liege_title = title:k_aragon }
+		}
+		else = { custom_tooltip = form_the_kingdom_of_aragon_decision.tt.drift.d_valencia }
+		### From Aquitaine.
+		if = {
+			limit = { completely_controls = title:d_barcelona }
+			title:d_barcelona = { set_de_jure_liege_title = title:k_aragon }
+		}
+		else = { custom_tooltip = form_the_kingdom_of_aragon_decision.tt.drift.d_barcelona }
+		### From Navarre.
+		if = {
+			limit = { completely_controls = title:d_navarra }
+			title:d_navarra = { set_de_jure_liege_title = title:k_aragon }
+		}
+		else = { custom_tooltip = form_the_kingdom_of_aragon_decision.tt.drift.d_navarra }
+		if = {
+			limit = { completely_controls = title:d_mallorca }
+			title:d_mallorca = { set_de_jure_liege_title = title:k_aragon }
+		}
+		if = {
+			limit = { completely_controls = title:d_sardinia }
+			title:d_sardinia = { set_de_jure_liege_title = title:k_aragon }
+		}
+		if = {
+			limit = { completely_controls = title:d_corsica }
+			title:d_corsica = { set_de_jure_liege_title = title:k_aragon }
+		}
+		if = {
+			limit = { completely_controls = title:d_athens }
+			title:d_athens = { set_de_jure_liege_title = title:k_aragon }
+		}
+		if = {
+			limit = { completely_controls = title:d_sicily }
+			title:d_sicily = { set_de_jure_liege_title = title:k_aragon }
+		}
+		if = {
+			limit = { completely_controls = title:d_calabria }
+			title:d_calabria = { set_de_jure_liege_title = title:k_aragon }
+		}
+		if = {
+			limit = { completely_controls = title:d_salerno }
+			title:d_salerno = { set_de_jure_liege_title = title:k_aragon }
+		}
+		if = {
+			limit = { completely_controls = title:d_apulia }
+			title:d_apulia = { set_de_jure_liege_title = title:k_aragon }
+		}
+		if = {
+			limit = { completely_controls = title:d_benevento }
+			title:d_benevento = { set_de_jure_liege_title = title:k_aragon }
+		}
+		if = {
+			limit = { completely_controls = title:d_capua }
+			title:d_capua = { set_de_jure_liege_title = title:k_aragon }
+		}
+		
+		# Plus, call the place Aragon rather than Zaragoza.
+		title:d_aragon = { reset_title_name = yes }
+		# Once per game.
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:flag_formed_kingdom_of_aragon
+		}
+		# Note this for books and such.
+		set_global_variable = {
+			name = flag_formed_kingdom_of_aragon
+			value = scope:founder
+		}
+
+		# Reward suggested by Ewan
+		house = {
+			add_house_modifier = {
+				modifier = fp2_aragon_title_reward_house_modifier # Mountains/hills bonus + hard casualty bonus
+				years = 200
+			}
+		}
+	}
+
+	cost = {
+		gold = {
+			# Since we want this to happen, it free for the AI...
+			value = 0
+			# ... but costs for players.
+			if = {
+				limit = { is_ai = no }
+				add = 200
+			}
+		}
+	}
+
+	ai_potential = {
+		any_held_title = { this = title:d_aragon }
+	}
+
+	ai_will_do = { base = 100 }
+}
+
+	

@@ -1,0 +1,18 @@
+﻿l_korean:
+ mod_mass_convert_subjects_decision: "$game_concept_demand_conversion$"
+ mod_mass_convert_subjects_decision_desc: "$game_concept_demand_conversion_desc$"
+ mod_mass_convert_subjects_decision_tooltip: "$game_concept_demand_conversion_desc$"
+
+ mod_convert_direct_vassals_loc: "$game_concept_direct_vassals$ ([SCOPE.ScriptValue('mod_convert_direct_vassals_number')])"
+ mod_convert_direct_vassals_tooltip: "Demand conversion from all your infidel $game_concept_direct_vassals$."
+ 
+ mod_convert_indirect_vassals_loc: "Indirect $game_concept_vassals$ ([SCOPE.ScriptValue('mod_convert_indirect_vassals_number')])"
+ mod_convert_indirect_vassals_tooltip: "Demand conversion from all your infidel indirect $game_concept_vassals$."
+ 
+ mod_convert_courtiers_loc: "Courtiers ([SCOPE.ScriptValue('mod_convert_courtiers_number')])"
+ mod_convert_courtiers_tooltip: "Demand conversion from all your infidel [courtiers|E]."
+ 
+ mod_convert_house_loc: "Housemembers ([SCOPE.ScriptValue('mod_convert_house_number')])"
+ mod_convert_house_tooltip: "Demand conversion from all your infidel housemembers."
+ 
+ mod_mass_convert_subjects_decision_confirm: "Send requests"

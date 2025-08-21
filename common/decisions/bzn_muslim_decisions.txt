@@ -1,0 +1,154 @@
+bzn_manage_harem_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	}
+
+	decision_group_type = major
+
+	ai_check_interval = 240
+	cooldown = { years = 5 }
+
+	is_shown = {
+		culture = { has_cultural_tradition = tradition_diwan_intrigue }
+		is_landless_adventurer = no
+	}
+	
+	is_valid = {
+		is_married = yes
+	}
+	desc = bzn_manage_harem_decision_desc
+	cost = { prestige = 75 }
+
+	effect = {
+		save_scope_as = actor
+		every_consort = {
+			save_scope_as = recipient
+			add_opinion = {
+			target = scope:actor
+				modifier = managed_harem_opinion
+				opinion = 20
+				years = 5
+			}
+			random_list = {
+			20 = { add_martial_skill = 2 }
+			20 = { add_stewardship_skill = 2 }
+			20 = { add_diplomacy_skill = 2 }
+			20 = { add_intrigue_skill = 2 }
+			20 = { add_learning_skill = 2 }
+			}
+		}
+	}
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 25
+	}
+}
+
+bzn_invite_mamluk_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
+    }
+
+    decision_group_type = major
+
+    ai_check_interval = 240
+
+    cooldown = { years = 5 }
+
+    is_shown = {
+		culture = { has_cultural_tradition = tradition_mamluk_elite }
+		is_landless_adventurer = no
+    }
+
+    desc = bzn_invite_mamluk_decision_desc
+
+    effect = {
+        trigger_event = {
+            id = muslim_event.0002
+            days = { 5 10 }
+        }
+		custom_tooltip = bzn_invite_mamluk_effect_tooltip
+    }
+
+    cost = { prestige = 75 }
+
+    ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 10
+	}
+}
+
+bzn_observe_ramadan_decision = {
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+    }
+	
+	desc = bzn_observe_ramadan_decision_desc
+    decision_group_type = major
+    ai_check_interval = 240
+	
+	cooldown = { years = 5 }
+	
+    is_shown = {
+		religion = religion:islam_religion 
+    }
+    is_valid = {
+    }
+	
+	cost = { gold = 50 }
+	
+    effect = {
+		add_piety = 300
+		random_list = {
+            90 = { }
+            5 = { add_trait = temperate }
+			5 = { add_trait = generous }
+        } 
+		
+    }
+    ai_potential = {
+        always = yes
+    }
+    ai_will_do = {
+        base = 20
+    }
+}
+
+bzn_pay_sadaqah_decision = { 
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+    }
+	
+	desc = bzn_pay_sadaqah_decision_desc
+    decision_group_type = major
+    ai_check_interval = 240
+	
+	cooldown = { years = 5 }
+	
+    is_shown = {
+		religion = religion:islam_religion 
+    }
+    is_valid = {
+    }
+	
+	cost = { gold = 50 }
+	
+    effect = {
+		add_character_modifier = {
+            modifier = sadaqah
+            years = 5
+        }
+    }
+    ai_potential = {
+        always = yes
+    }
+    ai_will_do = {
+        base = 20
+    }
+}
