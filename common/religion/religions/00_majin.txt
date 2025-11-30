@@ -1,10 +1,11 @@
 majin_religion = {
     family = rf_pagan
 
-    doctrine = pagan_hostility_doctrine
+    doctrine = eastern_hostility_doctrine
 
     # Main Group
-    doctrine = doctrine_spiritual_head
+	doctrine = doctrine_polytheist
+    doctrine = doctrine_no_head
     doctrine = doctrine_gender_equal
     doctrine = doctrine_pluralism_pluralistic
     doctrine = doctrine_theocracy_temporal
@@ -34,6 +35,9 @@ majin_religion = {
 
     # Funeral Tradition
     doctrine = doctrine_funeral_cremation
+	
+	#Coronation tradition
+	doctrine = doctrine_no_anointment
 
     traits = {
         virtues = { majin_race sadistic zealous wrathful gluttonous lazy}

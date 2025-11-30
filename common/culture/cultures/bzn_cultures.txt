@@ -5,69 +5,6 @@
 # 
 ##############################################
 
-
-
-japanese = {
-    color = { 225 169 188 }  # Light pink color representing Japan
-	
-	parents = { han }
-    # Core cultural attributes
-    ethos = ethos_communal
-    heritage = heritage_japanese # Changed from Chinese to Japanese
-    language = language_japanese  # Changed from Chinese to Japanese
-    martial_custom = martial_custom_male_only
-
-    # Naming conventions
-    name_list = name_list_japanese # Changed from Han to Japanese
-
-    # Graphical representations
-    coa_gfx = { chinese_group_coa_gfx }  # More appropriate than Chinese
-    building_gfx = { indian_building_gfx  }  # Changed from Indian
-    clothing_gfx = { mongol_clothing_gfx }  # Changed from Mongol
-    unit_gfx = { mongol_unit_gfx }  # Changed from Mongol
-
-    # Cultural traditions
-    traditions = {
-        tradition_bushido  # Way of the warrior - most important
-        tradition_hereditary_hierarchy  # Historical sakoku policy
-        tradition_fp3_enlightened_magnates
-        tradition_mystical_ancestors  # Shinto influence
-        tradition_collective_lands  # Village commune system
-    }
-
-    # Ethnic composition
-    ethnicities = {
-        100 = asian  # Changed from 10 to 100 for primary ethnicity
-    }
-}
-
-han = {
-	color = han
-	
-	ethos = ethos_bureaucratic
-	heritage = heritage_chinese
-	language = language_chinese
-	martial_custom = martial_custom_male_only
-	traditions = {
-		tradition_family_entrepreneurship
-		tradition_mystical_ancestors
-		tradition_court_eunuchs
-		tradition_philosopher_culture
-		tradition_ep3_cultivated_sophistication
-	}
-	
-	name_list = name_list_han
-	
-	coa_gfx = { chinese_group_coa_gfx }
-	building_gfx = { indian_building_gfx }
-	clothing_gfx = { mongol_clothing_gfx }
-	unit_gfx = { mongol_unit_gfx }
-	
-	ethnicities = {
-		10 = asian
-	}
-}
-
 german = {	
 	color = { 0.5 0.5 0.5 }
 	

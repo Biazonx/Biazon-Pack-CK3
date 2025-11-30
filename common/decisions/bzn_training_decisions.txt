@@ -3,7 +3,7 @@
         reference = "gfx/interface/illustrations/decisions/decision_activity.dds"
     }
 
-    sort_order = 62
+    decision_group_type = flavor_medium
 	
     ai_check_interval = 120
 
@@ -11,6 +11,7 @@
 
     is_shown = {
         is_adult = yes
+		has_trait = dragon_ball
     }
 	
 	desc = basic_training_decision_desc
@@ -44,7 +45,7 @@ oozaru_training_decision = {
         reference = "gfx/interface/illustrations/decisions/decision_activity.dds"
     }
 
-    sort_order = 63
+    decision_group_type = flavor_medium
 	
     ai_check_interval = 120
 
@@ -77,14 +78,14 @@ oozaru_training_decision = {
 		}
 	}
 
-    cost = { prestige = 200 }
+    cost = { prestige = 150 }
 
     ai_potential = {
         always = yes
     }
 
     ai_will_do = {
-        base = 20
+        base = 100
     }
 }
 
@@ -92,7 +93,7 @@ namekian_fusion_decision = {
 	picture = {
         reference = "gfx/interface/illustrations/decisions/decision_activity.dds"
     }
-	decision_group_type = major
+	decision_group_type = flavor_medium
 	ai_check_interval = 120
 	desc = namekian_fusion_decision_desc
 	
@@ -121,6 +122,144 @@ namekian_fusion_decision = {
     cost = { prestige = 500 }
 
     ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 100
+    }
+}
+
+
+found_special_force_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/fp1_decision_forge_jomsvikings.dds"
+    }
+
+    decision_group_type = flavor_medium
+    ai_check_interval = 120
+    desc = "found_special_force_decision_desc"
+
+    is_shown = {
+        has_trait = frieza_race
+        NOT = { has_character_modifier = modifier_special_force }
+    }
+
+    is_valid = {
+        has_trait = frieza_race
+        prestige_level >= 2
+    }
+
+    effect = {
+        add_character_modifier = {
+            modifier = modifier_special_force
+            years = -1
+        }
+    }
+
+    cost = {
+        prestige = 1000
+        gold = 250
+    }
+
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 20
+    }
+}
+
+bzn_special_army_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/fp1_decision_forge_jomsvikings.dds"
+    }
+
+    decision_group_type = flavor_medium
+    ai_check_interval = 120
+    desc = bzn_special_army_decision_desc
+
+    cooldown = {
+        years = 5
+    }
+
+    is_shown = {
+        has_character_modifier = modifier_special_force
+		NOT = {
+			has_character_flag = hired_special_force
+		}
+    }
+
+    is_valid = {
+        has_character_modifier = modifier_special_force
+    }
+
+    cost = {
+        prestige = 500
+    }
+
+    effect = {
+		add_character_flag = {
+			flag = hired_special_force
+		}
+        spawn_army = {
+            men_at_arms = {
+                type = house_guard
+                stacks = 10
+            }
+            location = capital_province
+            inheritable = no
+            uses_supply = yes
+            name = bzn.special
+        }
+    }
+
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 20
+    }
+}
+
+establish_trade_organization = {
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/ep3_decision_hold_triumph.dds"
+    }
+
+    decision_group_type = flavor_medium
+    ai_check_interval = 120
+    desc = "establish_trade_organization_decision_desc"
+
+    is_shown = {
+        has_trait = frieza_race
+        is_landless_adventurer = no
+        NOT = { has_character_modifier = galactic_trade_hub }
+    }
+
+    is_valid = {
+		prestige_level >= 3
+        OR = {
+			diplomacy >= 15
+			stewardship >= 15
+			has_trait = architect
+            has_trait = administrator
+            has_trait = avaricious
+        }
+    }
+	
+	cost = { gold = 500 }
+	
+    effect = {
+        add_character_modifier = {
+            modifier = galactic_trade_hub
+            years = -1
+        }
+    }
+	
+	ai_potential = {
         always = yes
     }
 

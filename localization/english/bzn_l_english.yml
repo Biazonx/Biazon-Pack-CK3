@@ -32,6 +32,15 @@ muhammad_sword_description: "Believed to have once belonged to the Prophet Muham
 #My Traits
 trait_zadruga_leader:0 "Zadruga Leader"
 zadruga_leader_desc:0 "The elected head of a traditional Balkan communal family, guiding their people with wisdom and resolve."
+
+trait_raja:0 "Raja of Legends"
+raja_desc:0 "This ruler’s name is spoken with reverence across the land. Their deeds inspire songs, poems, and prayers — a living legend who embodies the glory of kingship."
+
+trait_tiger_slayer:0 "Tiger Commander"
+tiger_slayer_desc:0 "As fierce and unstoppable as a tiger, this ruler leads their armies with unmatched ferocity. Their presence on the battlefield inspires fear in enemies and fire in allies."
+trait_ascetic_king:0 "Ascetic"
+ascetic_king_desc:0 "Rejecting worldly luxuries, this ruler has chosen a life of discipline, simplicity, and spiritual clarity. Their humble path commands reverence from the faithful."
+
 trait_guslar:0 "Guslar"
 guslar_desc:0 "A bard and oral historian, keeper of ancestral tales and heroic epics sung to the sound of the gusle."
 trait_wise_elder:0 "Wise Elder"
@@ -129,6 +138,12 @@ bzn_adopt_confederate_tribal_decision_desc: "The old ways no longer serve the ne
 bzn_adopt_confederate_tribal_decision_confirm: "Adopt Confederate Tribal Government"
 bzn_adopt_confederate_tribal_decision_tooltip: "Adopt Confederate Tribal Government"
 
+bzn_adopt_city_state_decision: "Adopt City State Government"
+bzn_city_state_decision_desc: "Transform your realm into a collection of independent yet cooperative city-states. Each city will govern itself with greater autonomy, while trade and diplomacy flourish under a shared identity."
+bzn_adopt_city_state_decision_confirm: "Adopt City State Government"
+bzn_adopt_city_state_decision_tooltip: "Adopt City State Government"
+
+
  bzn_borrow_jews:0 "Borrow money from the Jews"
  bzn_borrow_jews_desc:0 "In times of need, the Jewish community can be a source of financial aid. By securing a loan, you may bolster your prestige and ensure your realm’s future — though not without raising a few eyebrows."
  bzn_borrow_jews_confirm:0 "Borrow money from the Jews"
@@ -215,6 +230,21 @@ bzn_invite_jewish_merchant_effect_tooltip:0 "A Radhanite merchant with trade exp
  bzn_zadruga_leader_confirm:0 "You will gain the trait Zadruga Leader"
  bzn_zadruga_leader:0 "Become Zadruga Leader"
  bzn_zadruga_leader_tooltip:0 "Become Zadruga Leader"
+ 
+ bzn_legendary_raja_desc:0 "Your reign has risen beyond the realm of mortal kings. Songs echo your deeds, poets praise your glory, and your name carries the weight of legend itself. Few ever reach such a pinnacle of power and reverence."
+ bzn_legendary_raja_confirm:0 "You will gain the trait Raja of Legends"
+ bzn_legendary_raja:0 "Become the Legendary Raja"
+ bzn_legendary_raja_tooltip:0 "Become the Legendary Raja"
+ 
+ bzn_tiger_slayer:0 "Become Tiger Commander"
+ bzn_tiger_slayer_desc:0 "Channel the ferocity of the tiger and claim your place as a commander feared and respected by all. With fire in your heart and steel in your hand, you will lead as the tiger leads — with strength, cunning, and power."
+ bzn_tiger_slayer_confirm:0 "You will gain the trait Tiger Commander"
+ bzn_tiger_slayer_tooltip:0 "Become Tiger Commander"
+ 
+ bzn_ascetic_king:0 "Become Ascetic"
+ bzn_ascetic_king_desc:0 "Renounce worldly pleasures and embrace the quiet strength of the spirit. In simplicity and discipline, you shall find the clarity to rule not as a tyrant, but as a guide and example to your people."
+ bzn_ascetic_king_confirm:0 "You will gain the trait Ascetic"
+ bzn_ascetic_king_tooltip:0 "Become Ascetic"
  
  bzn_become_warlord_desc:0 "You will gain the trait Warlord"
  bzn_become_warlord_confirm:0 "You will gain the trait Warlord"
@@ -610,6 +640,12 @@ bzn_adopt_monastic_feudal_decision_tooltip: "Establish a unique form of feudalis
  confederate_tribal_government_realm: "Confederate Tribal Realm"
  confederate_tribal_government_desc: "\n$game_concept_tribal_desc$\n\n#F A decentralized tribal system where multiple clans or tribes form a loose confederation. Leadership is shared or rotated, and decisions are often made through councils or assemblies. While lacking the centralized power of other governments, this system can be flexible and resilient in the face of external threats.#"
 
+city_state_government_with_icon: "@government_type_city_state! $city_state_government$"
+city_state_government: "City State"
+city_state_government_adjective: "City State"
+city_state_government_realm: "City State Realm"
+city_state_government_desc: "\n#F A decentralized a collection of independent yet cooperative city-states. Each city will govern itself with greater autonomy, while trade and diplomacy flourish under a shared identitys.#"
+
 bzn_decentralize_decision: "Decentralize The Realm"
 bzn_decentralize_decision_desc: "The burdens of centralized rule have grown unsustainable. By releasing our vassals and converting them into permanent tributaries, we trade direct control for long-term stability and steady tribute, while avoiding the chaos of rebellion."
 bzn_decentralize_decision_confirm: "Let them govern themselves — as our tributaries."
@@ -685,6 +721,7 @@ bzn_contact_eastern_decision_tooltip: "You will attempt to establish better rela
  light_toughness: "Toughness"
  solar_trance: "Solar Trance"
  bloodthirsty: "Bloodthirsty"
+ strengthen_nobility: "Strong Nobility"
  
 conquest_focus: "Conquest Focus"
 conquest_focus_desc: "You are focused on expanding your territory through war. Martial prowess and military strength are emphasized."
@@ -704,6 +741,12 @@ bzn_patronize_guilds_decision: "Patronize the Guilds"
 bzn_patronize_guilds_desc: "Support the rising power of the guilds within your realm. Your patronage will grant them influence and resources, benefiting your cities—though it may ruffle some noble feathers."
 bzn_patronize_guilds_decision_tooltip: "Invest in urban guilds to boost development, trade, and infrastructure. May cause discontent among traditional nobles."
 bzn_patronize_guilds_decision_confirm: "Let the cities flourish under my favor!"
+
+bzn_strengthen_nobility_decision: "Strengthen the Nobility"
+bzn_strengthen_nobility_desc: "The nobility are the foundation of my rule. By granting them additional privileges and reaffirming their rights, I can ensure their loyalty... at the cost of some royal authority."
+bzn_strengthen_nobility_decision_tooltip: "Reaffirm noble privileges"
+bzn_strengthen_nobility_decision_confirm: "Reaffirm noble privileges"
+
 
 bzn_tribal_army_decision:0 "Raise Tribal Army"
 bzn_tribal_army_decision_desc:0 "Call upon your tribesmen to take up arms and form a temporary warband. This army is not trained or professional, but it will fight fiercely for your cause."
@@ -775,3 +818,16 @@ bzn.tengri: "Steppe Nomads"
 bzn_artifact_mask_1_name: "Spirit Mask of Terror"
 bzn_artifact_mask_1_description: "An eerie mask said to channel the anguish of restless spirits. Those who gaze into its hollow eyes are struck with dread, their courage unraveling before battle begins."
 
+decision_group_type_government_major: "Government Decisions"
+decision_group_type_become_medium: "Become Decisions"
+decision_group_type_flavor_medium: "Flavor Decisions"
+
+bzn_contact_dragon_ball_decision:0 "Contact People from Another Universe"
+bzn_contact_dragon_ball_decision_desc:0 "Through mysterious means, you will attempt to contact powerful beings from another universe. Perhaps they can share their secrets... or their power."
+bzn_contact_dragon_ball_decision_tooltip:0 "Begin communication with the Dragon Ball universe, unlocking new related decisions."
+bzn_contact_dragon_ball_decision_confirm:0 "Reach out beyond the veil"
+
+bzn_change_asatru: "Break With Old Ways"
+bzn_change_asatru_desc: "You have grown dissatisfied with the traditions of the old gods. It is time to redefine what our faith stands for — to reform Asatru itself."
+bzn_change_asatru_confirm: "Redefine Asatru"
+bzn_change_asatru_tooltip: "Changes Asatru’s tenets to new ones that reflect your vision."

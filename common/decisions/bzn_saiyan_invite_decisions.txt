@@ -4,13 +4,13 @@
     }
     desc = saiyan_invite_decision_desc
     selection_tooltip = saiyan_invite_decision_tooltip
+	decision_group_type = flavor_medium
 
     ai_check_interval = 120
 
     cooldown = { years = 5 }
 
     is_shown = {
-        is_landed_or_landless_administrative = yes
         culture = culture:saiyan
     }
 
@@ -33,13 +33,13 @@
     }
 
     ai_will_do = {
-        base = 20
+        base = 100
     }
 }
 
 forge_dragon_balls_decision = { #Craft Artifacts
 	picture = { reference = "gfx/interface/illustrations/decisions/decision_smith.dds" }
-	decision_group_type = major
+	decision_group_type = flavor_medium
 	desc = forge_dragon_balls_decision_desc
 	
 	ai_check_interval = 120
@@ -85,4 +85,175 @@ forge_dragon_balls_decision = { #Craft Artifacts
 	ai_will_do = {
 		base = 20
 	}
+}
+
+frieza_race_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_culture.dds"
+    }
+    desc = frieza_decision_desc
+    selection_tooltip = frieza_decision_tooltip
+	decision_group_type = major
+
+    ai_check_interval = 120
+
+    is_shown = {
+        culture = culture:frieza
+		NOT = { has_trait = frieza_race }
+    }
+	
+	is_valid = {
+		culture = culture:frieza
+		NOT = { has_trait = frieza_race }
+	}
+
+    effect = {
+		add_trait = frieza_race
+        }
+	
+	cost = { piety = 0 }
+	
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 200
+    }
+}
+
+namekian_race_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_culture.dds"
+    }
+    desc = namekian_decision_desc
+    selection_tooltip = namekian_decision_tooltip
+	decision_group_type = major
+
+    ai_check_interval = 120
+
+    is_shown = {
+        culture = culture:namekian
+		NOT = { has_trait = namekian_race }
+    }
+
+	is_valid = {
+		culture = culture:namekian
+		NOT = { has_trait = namekian_race }
+	}
+
+    effect = {
+		add_trait = namekian_race
+        }
+		
+	cost = { piety = 0 }
+	
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 200
+    }
+}
+
+majin_race_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_culture.dds"
+    }
+    desc = majin_decision_desc
+    selection_tooltip = majin_decision_tooltip
+	decision_group_type = major
+
+    ai_check_interval = 120
+
+    is_shown = {
+        culture = culture:majin
+		NOT = { has_trait = majin_race }
+    }
+
+	is_valid = {
+		culture = culture:majin
+		NOT = { has_trait = majin_race }
+	}
+
+    effect = {
+		add_trait = majin_race
+    }
+	
+	cost = { piety = 0 }
+	
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 200
+    }
+}
+
+pure_saiyan_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_culture.dds"
+    }
+    desc = pure_saiyan_decision_desc
+    selection_tooltip = pure_saiyan_decision_tooltip
+	decision_group_type = major
+
+    ai_check_interval = 120
+
+    is_shown = {
+        culture = culture:saiyan
+		NOT = { has_trait = pure_saiyan }
+    }
+	
+	is_valid = {
+		culture = culture:saiyan
+		NOT = { has_trait = pure_saiyan }
+	}
+
+    effect = {
+		add_trait = pure_saiyan
+    }
+	
+	cost = { piety = 0 }
+	
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 200
+    }
+}
+
+bzn_contact_dragon_ball_decision = {
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_culture.dds"
+    }
+	
+	desc = bzn_contact_dragon_ball_decision_desc
+    decision_group_type = flavor_medium
+    ai_check_interval = 120
+	
+	cooldown = { years = 1 }
+	
+    is_shown = {
+		NOT = { has_trait = dragon_ball }
+    }
+    is_valid = {
+    }
+	
+	cost = { gold = 25 prestige = 50 }
+	
+    effect = {
+		add_trait = dragon_ball
+	}
+ 
+    ai_potential = {
+        always = yes
+    }
+    ai_will_do = {
+        base = 5
+    }
 }

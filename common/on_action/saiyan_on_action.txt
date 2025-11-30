@@ -51,9 +51,9 @@ on_saiyan_birth = {
             }
 
             random_list = {
-                95 = { add_trait = hybrid_saiyan }
+                95 = { add_trait = pure_saiyan add_trait = saiyan_tail }
                 5 = {
-                    add_trait = hybrid_saiyan
+                    add_trait = pure_saiyan
                     add_trait = legendary_super_saiyan
                 }
             }
@@ -72,9 +72,9 @@ on_saiyan_birth = {
             }
 
             random_list = {
-                95 = { add_trait = hybrid_saiyan }
+                95 = { add_trait = pure_saiyan add_trait = saiyan_tail }
                 5 = {
-                    add_trait = hybrid_saiyan
+                    add_trait = pure_saiyan
                     add_trait = legendary_super_saiyan
                 }
             }

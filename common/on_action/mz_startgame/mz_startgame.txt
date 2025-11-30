@@ -1,5 +1,0 @@
-﻿mz_fix_religions = {
-	effect = {
-		mz_fix_religions_effect = yes
-	}
-}

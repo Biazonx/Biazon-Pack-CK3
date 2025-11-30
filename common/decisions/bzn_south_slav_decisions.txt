@@ -3,7 +3,7 @@ bzn_invite_islam_scholar_decision = {
         reference = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
     }
 
-    decision_group_type = major
+    decision_group_type = flavor_medium
 
     ai_check_interval = 120
 
@@ -44,9 +44,9 @@ bzn_adopt_krstjani_decision = {
 		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
 	}
 
-	decision_group_type = major
+	decision_group_type = flavor_medium
 
-	ai_check_interval = 120
+	ai_check_interval = 240
 
 	is_shown = {
 		NOT = { faith = faith:ismaili}
@@ -77,9 +77,9 @@ bzn_adopt_krstjani_decision = {
 	}
 
 	ai_will_do = {
-		base = 20
+		base = 10
 		modifier = {
-			factor = 20
+			factor = 10
 			has_trait = cynical
 		}
 		modifier = { 
@@ -94,7 +94,7 @@ bzn_adopt_islam_decision = {
 		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
 	}
 
-	decision_group_type = major
+	decision_group_type = flavor_medium
 
 	ai_check_interval = 120
 
@@ -141,7 +141,7 @@ bzn_adopt_clan_decision = {
 		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
 	}
 
-	decision_group_type = major
+	decision_group_type = government_major
 
 	ai_check_interval = 120
 
@@ -192,7 +192,7 @@ bzn_convene_brotherhood_decision = {
 		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
 	}
 
-	decision_group_type = major
+	decision_group_type = flavor_medium
 
 	ai_check_interval = 120
 	
@@ -229,7 +229,7 @@ bzn_defenders_of_highgod_decision = {
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
 	}
-	decision_group_type = major
+	decision_group_type = flavor_medium
 	ai_check_interval = 120
 	desc = bzn_defenders_of_highgod_decisionn_desc
 
@@ -364,7 +364,7 @@ bzn_guslar = {
     picture = {
         reference = "gfx/interface/illustrations/decisions/ep3_decision_hold_triumph.dds"
     }
-    decision_group_type = major
+    decision_group_type = become_medium
     ai_check_interval = 0
     is_shown = {
         NOT = { has_trait = guslar }
@@ -406,7 +406,7 @@ bzn_wise_elder = {
     picture = {
         reference = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
     }
-    decision_group_type = major
+    decision_group_type = become_medium
     ai_check_interval = 0
     is_shown = {
         NOT = { has_trait = wise_elder }
@@ -449,7 +449,7 @@ bzn_zadruga_leader = {
     picture = {
         reference = "gfx/interface/illustrations/decisions/decision_legitimacy.dds"
     }
-    decision_group_type = major
+    decision_group_type = become_medium
     ai_check_interval = 0
     is_shown = {
         NOT = { has_trait = zadruga_leader }
@@ -492,7 +492,7 @@ bzn_save_bulgaria = {
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/ep3_decision_hold_triumph.dds"
 	}
-	decision_group_type = major
+	decision_group_type = flavor_medium
     ai_check_interval = 240
     is_shown = {
         is_landless_adventurer = no
@@ -504,7 +504,7 @@ bzn_save_bulgaria = {
 		is_at_war  = no
     }
     desc = bzn_save_bulgaria_desc
-    cost = { gold = 100 }
+    cost = { gold = 0 }
     effect = {
         if = {
 			limit = {

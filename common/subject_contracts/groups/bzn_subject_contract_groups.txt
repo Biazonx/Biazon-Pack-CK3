@@ -1,0 +1,11 @@
+﻿monastic_vassal = {
+	contracts = {
+		monastic_feudal_government_obligations
+	}
+}
+
+city_state_vassal = {
+	contracts = {
+		city_state_government_obligations
+	}
+}

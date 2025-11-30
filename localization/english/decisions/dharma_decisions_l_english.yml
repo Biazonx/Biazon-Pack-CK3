@@ -1,0 +1,349 @@
+﻿l_english:
+#######################################
+# Major General Decisions
+#######################################
+
+#######################################
+# Elephant Decisions
+#######################################
+  pet_elephant_decision: "Pet [ROOT.Char.Custom('ElephantStoryName')]"
+  elephant_pet_decision_desc: "It is time to take a deep breath and find my trusted companion [ROOT.Char.Custom('ElephantStoryName')]. No matter how tough life gets I know [ROOT.Char.Custom('ElephantStorySheHe')] will always be there for me!"
+  pet_elephant_decision_tooltip: "You will lose some [stress|E] as you pet your elephant."
+  pet_elephant_decision_confirm: "Pet your elephant"
+
+#######################################
+# Buddhist Decisions
+#######################################
+  dharma_adopt_mahayana_school: "Follow a Buddhist School"
+  dharma_adopt_mahayana_school_desc: "While you consider yourself a devoted Buddhist, some of the monks have suggested you follow more closely the principal and teachings of a school of Buddhism."
+  dharma_adopt_mahayana_school_tooltip: "You will follow one of the schools of Mahayana Buddhism."
+  dharma_adopt_mahayana_school_confirm: "Om Mani Padme Hum"
+
+  dharma_adopt_tibetan_school: "Follow a Buddhist School"
+  dharma_adopt_tibetan_school_desc: "While you consider yourself a devoted Buddhist, some of the monks have suggested you follow more closely the principal and teachings of a school of Buddhism."
+  dharma_adopt_tibetan_school_tooltip: "You will follow one of the schools of Tibetan Buddhism."
+  dharma_adopt_tibetan_school_confirm: "Om Mani Padme Hum"
+
+#######################################
+# Select Personal Deity Decisions
+#######################################
+  select_personal_deity_tibet_decision: "Select a personal Yidam"
+  select_personal_deity_tibet_decision_desc: "#F A Yidam is a meditational Deity to help one reach spiritual enlightenment. By focusing on a particular Yidam it can help me on my path to become a fully enlightened being. \n\nI should contemplate the various divine beings and decide which one calls to me the most.#!"
+  select_personal_deity_tibet_decision_confirm: "Contemplate a Yidam"
+  select_personal_yidam_decision_tooltip: "Think about who your Yidam should be."
+  select_personal_yidam_decision_tt: "You gain a modifier associated with your selected Yidam"
+
+  select_personal_nat_decision: "Select Personal Nat"
+  select_personal_nat_decision_desc: "#F A Nat is a spirit within Burmese Belief that can help one reach spiritual enlightenment or protect one from harm. By focusing on a particular Nat it can help me on my path to become a fully enlightened being. \n\nI should contemplate the various divine beings and decide which one calls to me the most.#!"
+  select_personal_nat_decision_confirm: "Contemplate a Nat"
+  select_personal_nat_decision_tooltip: "Think about who your Nat should be."
+  select_personal_nat_decision_tt: "You gain a modifier associated with your selected Nat"
+
+  select_personal_deity_buddhist_decision: "Select a boddhisattva"
+  select_personal_deity_buddhist_decision_desc: "#F Many Buddhists devote themselves to a Meditional Deity, Buddha, or Boddhisattva to help one reach enlightenment. By devoting myself to one of them, it can help me on my path to become a fully enlightened being. \n\nI should contemplate the various divine beings and decide which one calls to me the most.#!"
+  select_personal_deity_buddhist_decision_confirm: "Contemplate a boddhisattva"
+  select_personal_deity_buddhist_decision_tooltip: "Think about who your boddhisattva should be."
+  select_personal_meditional_deity_decision_tt: "You gain a modifier associated with your selected boddhisattva"
+
+  dharma_visit_nalanda: "Visit the university of Nalanda"
+  dharma_visit_nalanda_desc: "Nalanda is a famous Buddhist univeristy in Bihar that attracts scholars from around India."
+  dharma_visit_nalanda_tooltip: "You will decide if you wish to visit Nalanda or not."
+  dharma_visit_nalanda_confirm: "Time to visit Nalanda"
+
+#######################################
+# Jain Decisions
+#######################################
+  initiate_consolamentum_decision_sallekhana: "Initiate Sallekhana"
+  initiate_consolamentum_decision_desc_sallekhana: "#F As my life draws near, I should initate the Sallekhana ritual where I shall abdicate and begin a holy fast that will conquer human passions. I will withdraw from all physical and mental activites as I fast myself to death and destroy some of the Karma particles that keep my soul bound to samsara."
+
+  # Abdication
+  dharma_jain_abdication: "Ponder Abdication."
+  dharma_jain_abdication_desc: "It has occured to me that maybe the best way to achieve moksha might be to abdicate and join the sangha as a monk."
+  dharma_jain_abdication_tooltip: "You will decide if you want to abdicate your throne or not."
+  dharma_jain_abdication_confirm: "Time to decide on abdication."
+
+#######################################
+# Hindu Decisions
+#######################################
+  dharma_pick_hindu_philosophy: "Follow One of the Astika"
+  dharma_pick_hindu_philosophy_desc: "As you delve into your religious studies, some of your brahmins and other scholars at court have suggested that you focus on one of the Astikas or Hindu Philosophical schools. Shall you focus on one of the Astikas?"
+  dharma_pick_hindu_philosophy_tooltip: "Look into one of the Astikas."
+  dharma_pick_hindu_philosophy_confirm: "Look into one of the Astikas."
+
+  dharma_build_minor_hindu_holy_building: "Build a Local Hindu Religious Building"
+  dharma_build_minor_hindu_holy_building_tooltip: "Build a [ROOT.Char.GetFaith.GetAdjectiveNoTooltip] religious site in your [capital|E]"
+  dharma_build_minor_hindu_holy_building_desc: "As a [ROOT.Char.GetTitleAsNameNoTooltip] who wishes to show my devotion to [ROOT.Char.GetFaith.HighGodName], I wish to donate funds to construct a new [ROOT.Char.GetFaith.GetAdjective] religious building in my [domain|E]. The local community will spiritually benefit from this new structure, and everyone will know of my piety!" # [ROOT.Char.GetFaith.HighGodNameAlternate]
+  dharma_build_minor_hindu_holy_building_effect_tooltip_1: "You will choose whether to build a Shrine, Temple, or Monastery, which nets different boons of [piety|E], [prestige|E], and [dynasty_prestige|E], and a matching [character_modifier|E] as well as a [county_modifier|E] for your [realm_capital|E]"
+  dharma_build_minor_hindu_holy_building_effect_tooltip_2: "You will not receive these bonuses immediately, as the construction process will take anywhere from a year to two years"
+  dharma_build_minor_hindu_holy_building_confirm: "For the glory of [ROOT.Char.GetFaith.HighGodNameAlternate]!"
+  dharma_build_minor_hindu_holy_building_county_req: "Your [realm_capital|E] does not have a [county_modifier|E] indicating a Hindu religious site was recently built there"
+  dharma_build_minor_hindu_holy_building_current_req: "Is not in the process of building a Hindu religious site"
+
+  dharma_minor_hindu_building_type: "What shall we build?"
+  dharma_minor_hindu_building_type_gui: "Choose what kind of [GetPlayer.GetFaith.GetAdjective] Site to Build"
+  dharma_build_hindu_site_shrine_option: "#Bold Shrine#!"
+  dharma_build_hindu_site_shrine_option_desc: "A small Shrine"
+  dharma_build_hindu_site_shrine_option_tooltip: "Cost: @gold_icon! #V #Bold [GetPlayer.MakeScope.ScriptValue('dharma_build_small_holy_site_cost')|0]#!#!\n\n$EFFECT_LIST_BULLET$You get [prestige_i|E]50 and [piety_i|E]50\n$EFFECT_LIST_BULLET$You receive the [GetModifier('dharma_built_hindu_shrine').GetNameWithTooltip] [character_modifier|E] for #V 10#! years\n$EFFECT_LIST_BULLET$Your [capital|E] receives the [GetModifier('dharma_built_hindu_shrine_county').GetNameWithTooltip] [county_modifier|E] for #V 10#! years"
+  dharma_build_hindu_site_small_temple_option: "#Bold Small Temple#!"
+  dharma_build_hindu_site_small_temple_option_desc: "A modest temple"
+  dharma_build_hindu_site_small_temple_option_tooltip: "Cost: @gold_icon! #V #Bold [GetPlayer.MakeScope.ScriptValue('dharma_build_medium_holy_site_cost')|0]#!#!\n\n$EFFECT_LIST_BULLET$You get [prestige_i|E]150 and [piety_i|E]50\n$EFFECT_LIST_BULLET$You receive the [GetModifier('dharma_built_hindu_small_temple').GetNameWithTooltip] [character_modifier|E] for #V 10#! years\n$EFFECT_LIST_BULLET$Your [capital|E] receives the [GetModifier('dharma_built_hindu_small_temple_county').GetNameWithTooltip] [county_modifier|E] for #V 10#! years"
+  dharma_build_hindu_site_small_monastery_option: "#Bold Small Monastery#!"
+  dharma_build_hindu_site_small_monastery_option_desc: "A modest Monastery"
+  dharma_build_hindu_site_small_monastery_option_tooltip: "Cost: @gold_icon! #V #Bold [GetPlayer.MakeScope.ScriptValue('dharma_build_medium_holy_site_cost')|0]#!#!\n\n$EFFECT_LIST_BULLET$You get [prestige_i|E]50 and [piety_i|E]150\n$EFFECT_LIST_BULLET$You receive the [GetModifier('dharma_built_hindu_small_monastery').GetNameWithTooltip] [character_modifier|E] for #V 10#! years\n$EFFECT_LIST_BULLET$Your [capital|E] receives the [GetModifier('dharma_built_hindu_small_monastery_county').GetNameWithTooltip] [county_modifier|E] for #V 10#! years"
+  dharma_build_hindu_site_large_temple_option: "#Bold Large Temple#!"
+  dharma_build_hindu_site_large_temple_option_desc: "A sizeable Temple"
+  dharma_build_hindu_site_large_temple_option_tooltip: "Cost: @gold_icon! #V #Bold [GetPlayer.MakeScope.ScriptValue('dharma_build_large_holy_site_cost')|0]#!#!\n\n$EFFECT_LIST_BULLET$You get [prestige_i|E]200 and [piety_i|E]100\n$EFFECT_LIST_BULLET$Your [dynasty|E] gets [dynasty_prestige_i]25 for each [piety_level|E] you have\n$EFFECT_LIST_BULLET$You receive the [GetModifier('dharma_built_hindu_large_temple').GetNameWithTooltip] [character_modifier|E] for #V 10#! years\n$EFFECT_LIST_BULLET$Your [capital|E] receives the [GetModifier('dharma_built_hindu_large_temple_county').GetNameWithTooltip] [county_modifier|E] for #V 10#! years"
+  dharma_build_hindu_site_large_monastery_option: "#Bold Large Monastery#!"
+  dharma_build_hindu_site_large_monastery_option_desc: "A sizeable Monastery"
+  dharma_build_hindu_site_large_monastery_option_tooltip: "Cost: @gold_icon! #V #Bold [GetPlayer.MakeScope.ScriptValue('dharma_build_large_holy_site_cost')|0]#!#!\n\n$EFFECT_LIST_BULLET$You get [prestige_i|E]100 and [piety_i|E]200\n$EFFECT_LIST_BULLET$Your [dynasty|E] gets [dynasty_prestige_i]25 for each [piety_level|E] you have\n$EFFECT_LIST_BULLET$You receive the [GetModifier('dharma_built_hindu_large_monastery').GetNameWithTooltip] [character_modifier|E] for #V 10#! years\n$EFFECT_LIST_BULLET$Your [capital|E] receives the [GetModifier('dharma_built_hindu_large_monastery_county').GetNameWithTooltip] [county_modifier|E] for #V 10#! years"
+
+
+#######################################
+# Dravidian Decisions
+#######################################
+  dharma_raise_hero_stone_decision_name: "Raise Hero Stone"
+  raise_hero_stone_decision_desc: "The Death of an ancestor might be cause to celebrate their life and important events, particularly military ones. Perhaps I could benefit from erecting a Hero Stone..."
+  dharma_hero_stone_decision_tt.effects_list: "One of your [counties|E] will receive one of the following [modifiers|E]:\n#indent_newline: $EFFECT_LIST_BULLET$ [GetModifier('fp1_stele_ancestors_strong').GetNameWithTooltip]"
+  raise_hero_stone_decision_tooltip: "Pay for the carving of a runestone in one of your counties"
+  dharma_raise_hero_stone_decision_confirm: "But what to carve?"
+  dharma_raised_hero_stone_vassals: "$EFFECT_LIST_BULLET$All [direct_vassals|E] that also use Hero Stone"
+
+  dharma_hero_stone_decision_ancestor: "You have a recently deceased ancestor"
+
+#######################################
+# Sacred Groves
+#######################################
+  dharma_consecrate_sacred_grove: "Consecrate a Sacred Grove"
+  dharma_consecrate_sacred_grove_tooltip: "The lands are full of forests and groves that can be consecrated"
+  dharma_consecrate_sacred_grove_desc: "Sacred Groves play an important role in [ROOT.Char.GetFaith.GetAdjective] worship and belief, and though there are many such sites scattered about my lands, I wish to consecrate one near my [capital|E] and elevate its importance in the eyes of faithful [ROOT.Char.GetFaith.GetAdherentNamePlural] everywhere."
+  dharma_consecrate_sacred_grove_effect_tooltip_1: "This [decision|E] can only be taken #V ONCE#! in a lifetime"
+  dharma_consecrate_sacred_grove_effect_tooltip_2: "Your [capital|E] will receive a [county_modifier|E] for #V 20#! years that increases [county_opinion|E] and [control|E]; though the strength of this modifier is random, it is influenced by your [piety_level|E]"
+  dharma_consecrate_sacred_grove_effect_tooltip_3: "For as long as this [county_modifier|E] is active, [rulers|E] of the [county|E] it is in can take the [decision|E] to $vist_sacred_grove$"
+  dharma_consecrate_sacred_grove_confirm: "Locate a suitable sacred grove!"
+
+  no_sacred_grove_county: "You do not own a [county|E] with a Sacred Grove [county_modifier|E]"
+  yes_sacred_grove_county: "You own a [county|E] with a Sacred Grove [county_modifier|E]"
+
+#######################################
+# Stepwells
+#######################################
+  dharma_india_irrigation_tank_decision: "Construct Irrigation Tanks"
+  dharma_india_irrigation_tank_decision_tooltip: "Sponsor the building of irrigation tanks."
+  RICE_india_irrigation_tank_decision_desc: "Centuries ago, the people of [GetGeographicalRegion('world_india').GetName] mastered the art of building reservoirs and other connected water systems to harvest and preserve rainwater. Such irrigation tanks are often associated with local religious institutions, and sponsoring the construction of some would reflect well on me."
+  dharma_india_irrigation_tank_decision_confirm: "Prepare for some construction!"
+  RICE_india_irrigation_tank_decision_effect_tooltip_1: "Your [county_capital|E] will receive a [county_modifier|E] lasting 10 years and you will receive a corresponding [character_modifier|E] and some [prestige_i|E] [prestige|E] and [piety_i|E] [piety|E]"
+  RICE_india_irrigation_tank_decision_effect_tooltip_2: "The strength of these bonuses depends on how much funding is provided"
+  RICE_india_irrigation_tank_decision_effect_tooltip_3: "Your [culture|E] has a [tradition|E] that reduces the costs of constructing irrigation tanks"
+  RICE_india_irrigation_tank_decision_effect_tooltip_4: "Your [culture|E] has a [tradition|E] that increases the [prestige|E] and [piety|E] gained from constructing irrigation tanks"
+
+#######################################
+# Zoroastrian Decisions
+#######################################
+  dharma_zoro_keshmar_cypruss: "Replant the Sacred Cypress of Kashmar"
+  dharma_zoro_keshmar_cypruss_name: "Replant the sacred Cypress of Kashmar"
+  dharma_zoro_keshmar_cypruss_desc: "In 861, the caliph Al-Mutawakkil destroyed the sacred cypress of Kashmar. A tree that was planted by the prophet Zoroaster himself, sprung from a branch that came from paradise. Despite the people pleading with the Caliph he still destroyed the sacred tree. Yet another sacred tree still lives, the Sarve-e Abarkuh. With a seed from this sacred tree, a new sacred tree can grow in Kashmar and restore the area to some of the sacredness that Zoroaster gave it."
+  dharma_zoro_keshmar_cypruss_tooltip: "You will decide on how to restore the area to sacredness"
+  dharma_zoro_keshmar_cypruss_confirm: "Plant the tree"
+
+  dharma_zoro_tarikhaneh_conversion: "Convert the Tarikhaneh Mosque"
+  dharma_zoro_tarikhaneh_conversion_name: "Convert the Tarikhaneh Mosque"
+  dharma_zoro_tarikhaneh_conversion_desc: "When Islam came to the land, not all fire temples were destroyed or left for time to wear them down. Some were converted to mosques like the Tarikhaneh mosque was. Making it one of the oldest mosques in the region. However it still was built on the bones of the Fire Temple and as such could become one again. "
+  dharma_zoro_tarikhaneh_conversion_tooltip: "How expensive it will be to convert will depend on built up the Tarikhaneh mosque is."
+  dharma_zoro_tarikhaneh_conversion_confirm: "Rekindle the flames!"
+
+  # Destroy Cult Centers
+  dharma_zoro_destroy_cult_center: "Suppress a Heretical Zoroastrian Cult Center"
+  dharma_zoro_destroy_cult_center_tooltip: "[zoroastrian_cult_centers|E] in our [realm|E] are an insult to our [faith|E]!"
+  dharma_zoro_destroy_cult_center_desc: "There are several [zoroastrian_cult_centers|E] dedicated to false gods in my [domain|E]. We must discourage people from engaging in these heathen practices, even if it means destroying their temples!"
+  dharma_zoro_destroy_cult_center_effect_tooltip_1: "All [counties|E] in your [domain|E] with a [zoroastrian_cult_center|E] will lose their relevant [county_modifier|E]"
+  dharma_zoro_destroy_cult_center_effect_tooltip_2: "All [counties|E] in your [domain|E] with a [zoroastrian_cult_center|E] that does not follow your [yazata|E] [doctrine|E] will lose their relevant [county_modifier|E]"
+  dharma_zoro_destroy_cult_center_effect_tooltip_3: "You will gain #V [gold_i|E] [GetPlayer.MakeScope.ScriptValue('dharma_zoro_destroy_cult_center_value')|0]#! and #V [piety_i|E] [GetPlayer.MakeScope.ScriptValue('dharma_zoro_destroy_cult_center_value')|0]#! from doing this."
+
+
+  dharma_zoro_destroy_cult_center_confirm: "Tear down the false idols!"
+  dharma_zoro_destroy_cult_center_context_tooltip: "$dharma_zoro_establish_cult_center_context_tooltip$"
+  RICE_destroy_yazata_cult_center_req: "At least one [county|E] in your [realm|E] has a [zoroastrian_cult_centers|E] that you can destroy"
+  RICE_establish_yazata_no_other_cult_centers_req: "There are no [zoroastrian_cult_centers|E] in any of the [counties|E] of the [duchy|E] that your [capital|E] is in"
+  dharma_zoro_destroy_cult_center_first_person_sassanian_tooltip: "Every [county|E] you own with a [zoroastrian_cult_centers|E] that does not adhere to your [yazata|E] [doctrine|E] will have its corresponding [county_modifier|E] removed"
+  dharma_zoro_destroy_cult_center_third_person_sassanian_tooltip: "Every [county|E] owned by [RICE_yazata_cult_destroyer.GetTitledFirstNameNoTooltip] with a [zoroastrian_cult_centers|E] that does not adhere to your [yazata|E] [doctrine|E] will have its corresponding [county_modifier|E] removed"
+  dharma_zoro_destroy_cult_center_first_person_normal_tooltip: "Every [county|E] you own with a [zoroastrian_cult_centers|E] will have its corresponding [county_modifier|E] removed"
+  dharma_zoro_destroy_cult_center_third_person_normal_tooltip: "Every [county|E] owned by [RICE_yazata_cult_destroyer.GetTitledFirstNameNoTooltip] with a [zoroastrian_cult_centers|E] will have its corresponding [county_modifier|E] removed"
+
+  # Establish a cult center
+  dharma_zoro_establish_cult_center: "Establish a Local Zoroastrian Cult Center"
+  dharma_zoro_establish_cult_center_tooltip: "Our [capital|E] could be home to a [zoroastrian_cult_centers|E]"
+  dharma_zoro_establish_cult_center_desc: "There are many [yazatas|E] worthy of worship, but there is one I believe should be worshipped more fervently in [ROOT.Char.GetCapitalLocation.GetTitle.GetNameNoTier]. I thus wish to transform this region into a [zoroastrian_cult_center_short|E] for a particular [yazata|E]."
+  dharma_zoro_establish_cult_center_effect_tooltip_1: "You will select one [yazata|E] to serve as the focus of this new [zoroastrian_cult_center_short|E]"
+  dharma_zoro_establish_cult_center_effect_tooltip_2: "A corresponding #P beneficial#! [county_modifier|E] will be placed in [THIS.Char.GetCapitalLocation.GetTitle.GetNameNoTier]"
+  dharma_zoro_establish_cult_center_effect_tooltip_3: "[THIS.Char.GetFaith.GetReligion.GetAdjective] [rulers|E] of this [zoroastrian_cult_center_short|E] will gain extra boons when taking the [decision|E] to Worship the [yazatas|E] if they select the [yazata|E] of this [zoroastrian_cult_center_short|E] and if they have the right [yazata|E] [doctrine|E]"
+  dharma_zoro_establish_cult_center_confirm: "Establish the Cult Center"
+  dharma_zoro_establish_cult_center_context_tooltip: "#emphasis Historical Context:#! The varieties of Zoroastrianism practiced on the periphery of the Iranian world, like in Sogdia and Khwarezm, was much more decentralized than in the Sassanid heartlands, revolving around specific city-states and petty kingdoms in a manner reminiscent of the polytheistic cults of the ancient Greek city-states. For example, Nana was the patron goddess of the major Sogdian city of Panjikent, and in some ways even more prominent than Ahura Mazda there. These cultic practices were unable to survive the massive political and cultural upheaval that came with the Arab Conquests, in contrast to the more centralized, organized Sassanian orthodoxy."
+  dharma_zoro_establish_cult_center_type: "Select a Yazata to establish a cult center for"
+  dharma_zoro_establish_cult_center_type_gui: "Select a [yazata|E] to establish a [zoroastrian_cult_center_short|E] for"
+  RICE_yazata_anahita_cult_center_option: "#Bold #V Anahita#!#!\n$RICE_yazata_anahita_cult_center_option_desc$"
+  RICE_yazata_anahita_cult_center_option_desc: "The [yazata|E] of the Waters and Fertility"
+  RICE_yazata_anahita_cult_center_option_tooltip: "Your [capital|E] permanently gains the [GetModifier('RICE_khwarezm_yazata_cult_center_anahita').GetNameWithTooltip] [county_modifier|E]"
+  RICE_yazata_bahram_cult_center_option: "#Bold #V Bahram#!#!\n$RICE_yazata_bahram_cult_center_option_desc$"
+  RICE_yazata_bahram_cult_center_option_desc: "The [yazata|E] who gives Victory"
+  RICE_yazata_bahram_cult_center_option_tooltip: "Your [capital|E] permanently gains the [GetModifier('RICE_khwarezm_yazata_cult_center_bahram').GetNameWithTooltip] [county_modifier|E]"
+  RICE_yazata_mah_cult_center_option: "#Bold #V Mah#!#!\n$RICE_yazata_mah_cult_center_option_desc$"
+  RICE_yazata_mah_cult_center_option_desc: "The [yazata|E] of the Moon"
+  RICE_yazata_mah_cult_center_option_tooltip: "Your [capital|E] permanently gains the [GetModifier('RICE_khwarezm_yazata_cult_center_mah').GetNameWithTooltip] [county_modifier|E]"
+  RICE_yazata_mithra_cult_center_option: "#Bold #V Mithra#!#!\n$RICE_yazata_mithra_cult_center_option_desc$"
+  RICE_yazata_mithra_cult_center_option_desc: "The [yazata|E] of the Sun, Light, and Justice"
+  RICE_yazata_mithra_cult_center_option_tooltip: "Your [capital|E] permanently gains the [GetModifier('RICE_khwarezm_yazata_cult_center_mithra').GetNameWithTooltip] [county_modifier|E]"
+  RICE_yazata_nana_cult_center_option: "#Bold #V Nana#!#!\n$RICE_yazata_nana_cult_center_option_desc$"
+  RICE_yazata_nana_cult_center_option_desc: "The [yazata|E] of War and Royal Power"
+  RICE_yazata_nana_cult_center_option_tooltip: "Your [capital|E] permanently gains the [GetModifier('RICE_khwarezm_yazata_cult_center_nana').GetNameWithTooltip] [county_modifier|E]"
+  RICE_yazata_rashnu_cult_center_option: "#Bold #V Rashnu#!#!\n$RICE_yazata_rashnu_cult_center_option_desc$"
+  RICE_yazata_rashnu_cult_center_option_desc: "The [yazata|E] of Judgment"
+  RICE_yazata_rashnu_cult_center_option_tooltip: "Your [capital|E] permanently gains the [GetModifier('RICE_khwarezm_yazata_cult_center_rashnu').GetNameWithTooltip] [county_modifier|E]"
+  RICE_yazata_sraosha_cult_center_option: "#Bold #V Sraosha#!#!\n$RICE_yazata_sraosha_cult_center_option_desc$"
+  RICE_yazata_sraosha_cult_center_option_desc: "The [yazata|E] of Obedience"
+  RICE_yazata_sraosha_cult_center_option_tooltip: "Your [capital|E] permanently gains the [GetModifier('RICE_khwarezm_yazata_cult_center_sraosha').GetNameWithTooltip] [county_modifier|E]"
+  RICE_yazata_tir_cult_center_option: "#Bold #V Tir#!#!\n$RICE_yazata_tir_cult_center_option_desc$"
+  RICE_yazata_tir_cult_center_option_desc: "The [yazata|E] of the Rain and the Celestial Archer"
+  RICE_yazata_tir_cult_center_option_tooltip: "Your [capital|E] permanently gains the [GetModifier('RICE_khwarezm_yazata_cult_center_tir').GetNameWithTooltip] [county_modifier|E]"
+  RICE_yazata_siyavash_cult_center_option: "#Bold #V Siyavash#!#!\n$RICE_yazata_siyavash_cult_center_option_desc$"
+  RICE_yazata_siyavash_cult_center_option_desc: "The [yazata|E] of Death and Rebirth"
+  RICE_yazata_siyavash_cult_center_option_tooltip: "Your [capital|E] permanently gains the [GetModifier('RICE_khwarezm_yazata_cult_center_siyavash').GetNameWithTooltip] [county_modifier|E]"
+  RICE_yazata_wakhsh_cult_center_option: "#Bold #V Wakhsh#!#!\n$RICE_yazata_wakhsh_cult_center_option_desc$"
+  RICE_yazata_wakhsh_cult_center_option_desc: "The [yazata|E] of the Oxus River"
+  RICE_yazata_wakhsh_cult_center_option_tooltip: "Your [capital|E] permanently gains the [GetModifier('RICE_khwarezm_yazata_cult_center_wakhsh').GetNameWithTooltip] [county_modifier|E]"
+  RICE_yazata_weshparkar_cult_center_option: "#Bold #V Weshparkar#!#!\n$RICE_yazata_weshparkar_cult_center_option_desc$"
+  RICE_yazata_weshparkar_cult_center_option_desc: "The [yazata|E] of the Wind"
+  RICE_yazata_weshparkar_cult_center_option_tooltip: "Your [capital|E] permanently gains the [GetModifier('RICE_khwarezm_yazata_cult_center_weshparkar').GetNameWithTooltip] [county_modifier|E]"
+  RICE_yazata_astghik_cult_center_option: "#Bold #V Astghik#!#!\n$RICE_yazata_astghik_cult_center_option_desc$"
+  RICE_yazata_astghik_cult_center_option_desc: "The [yazata|E] of Beauty and Love"
+  RICE_yazata_astghik_cult_center_option_tooltip: "Your [capital|E] permanently gains the [GetModifier('RICE_khwarezm_yazata_cult_center_astghik').GetNameWithTooltip] [county_modifier|E]"
+  RICE_yazata_barshamin_cult_center_option: "#Bold #V Barshamin#!#!\n$RICE_yazata_barshamin_cult_center_option_desc$"
+  RICE_yazata_barshamin_cult_center_option_desc: "The [yazata|E] of the Sky"
+  RICE_yazata_barshamin_cult_center_option_tooltip: "Your [capital|E] permanently gains the [GetModifier('RICE_khwarezm_yazata_cult_center_barshamin').GetNameWithTooltip] [county_modifier|E]"
+  RICE_yazata_tork_cult_center_option: "#Bold #V Tork#!#!\n$RICE_yazata_tork_cult_center_option_desc$"
+  RICE_yazata_tork_cult_center_option_desc: "The [yazata|E] of Strength and Courage"
+  RICE_yazata_tork_cult_center_option_tooltip: "Your [capital|E] permanently gains the [GetModifier('RICE_khwarezm_yazata_cult_center_tork').GetNameWithTooltip] [county_modifier|E]"
+  RICE_yazata_vahagn_cult_center_option: "#Bold #V Vahagn#!#!\n$RICE_yazata_vahagn_cult_center_option_desc$"
+  RICE_yazata_vahagn_cult_center_option_desc: "The [yazata|E] of the Waters and Fertility"
+  RICE_yazata_vahagn_cult_center_option_tooltip: "Your [capital|E] permanently gains the [GetModifier('RICE_khwarezm_yazata_cult_center_vahagn').GetNameWithTooltip] [county_modifier|E]"
+  RICE_yazata_dali_cult_center_option: "#Bold #V Dali#!#!\n$RICE_yazata_dali_cult_center_option_desc$"
+  RICE_yazata_dali_cult_center_option_desc: "The [yazata|E] of Hunting and the Dawn"
+  RICE_yazata_dali_cult_center_option_tooltip: "Your [capital|E] permanently gains the [GetModifier('RICE_khwarezm_yazata_cult_center_dali').GetNameWithTooltip] [county_modifier|E]"
+  RICE_yazata_gaim_cult_center_option: "#Bold #V Gaim#!#!\n$RICE_yazata_gaim_cult_center_option_desc$"
+  RICE_yazata_gaim_cult_center_option_desc: "The silver [yazata|E] and Mithra's Attendant"
+  RICE_yazata_gaim_cult_center_option_tooltip: "Your [capital|E] permanently gains the [GetModifier('RICE_khwarezm_yazata_cult_center_gaim').GetNameWithTooltip] [county_modifier|E]"
+  RICE_yazata_gatsi_cult_center_option: "#Bold #V Gatsi#!#!\n$RICE_yazata_gatsi_cult_center_option_desc$"
+  RICE_yazata_gatsi_cult_center_option_desc: "The golden [yazata|E] and Mithra's Attendant"
+  RICE_yazata_gatsi_cult_center_option_tooltip: "Your [capital|E] permanently gains the [GetModifier('RICE_khwarezm_yazata_cult_center_gatsi').GetNameWithTooltip] [county_modifier|E]"
+  RICE_yazata_kopala_cult_center_option: "#Bold #V Kopala#!#!\n$RICE_yazata_kopala_cult_center_option_desc$"
+  RICE_yazata_kopala_cult_center_option_desc: "The [yazata|E] of Lightning and the Demon-Killer"
+  RICE_yazata_kopala_cult_center_option_tooltip: "Your [capital|E] permanently gains the [GetModifier('RICE_khwarezm_yazata_cult_center_kopala').GetNameWithTooltip] [county_modifier|E]"
+  RICE_yazata_zaden_cult_center_option: "#Bold #V Zaden#!#!\n$RICE_yazata_zaden_cult_center_option_desc$"
+  RICE_yazata_zaden_cult_center_option_desc: "The [yazata|E] of Fruitfulness"
+  RICE_yazata_zaden_cult_center_option_tooltip: "Your [capital|E] permanently gains the [GetModifier('RICE_khwarezm_yazata_cult_center_zaden').GetNameWithTooltip] [county_modifier|E]"
+
+  # Worship Yazatas
+  dharma_zoro_worship_yazata: "Worship a Yazata"
+  dharma_zoro_worship_yazata_tooltip: "Venerate the [yazatas|E] and gain a useful [character_modifier|E]"
+  dharma_zoro_worship_yazata_desc: "Though we consider [ROOT.Char.GetFaith.HighGodName] the supreme deity, it is also important for pious [ROOT.Char.GetFaith.GetAdherentNamePlural] to venerate the [yazatas|E] in religious rituals as well. Indeed, the word [yazata|E] itself means "worthy of worship.""
+  dharma_zoro_worship_yazata_effect_tooltip_1: "You will select from several [yazata|E] to worship, depending on your [faithpossessive|E] [yazata|E] [doctrine|E]."
+  dharma_zoro_worship_yazata_effect_tooltip_2: "Besides a [piety|E] bonus, you will gain a #P beneficial#! [character_modifier|E] for #V 10#! years depending on which [yazata|E] you worship"
+  dharma_zoro_worship_yazata_effect_tooltip_3: "As your [faith|E] has the $rice_zoroastrian_sassanian_doctrine_name$ [doctrine|E], you will also gain some [prestige|E], and can pay #V @gold_icon! [GetPlayer.MakeScope.ScriptValue('RICE_yazata_pay_bonus_value')|0]#! to gain a better version of the [modifier|E]"
+  dharma_zoro_worship_yazata_effect_tooltip_4: "As your [faith|E] has the $rice_zoroastrian_armenian_doctrine_name$ [doctrine|E], you can get extra [prestige|E] and a better version of the [modifier|E] #bold if#! you have the right [zoroastrian_cult_centers|E] in your [domain|E]"
+  dharma_zoro_worship_yazata_effect_tooltip_5: "As your [faith|E] has the $rice_zoroastrian_eastern_doctrine_name$ [doctrine|E], you can get extra [prestige|E] and a better version of the [modifier|E] #bold if#! you have the right [zoroastrian_cult_centers|E] in your [domain|E]"
+  dharma_zoro_worship_yazata_confirm: "Prepare for the rituals!"
+  dharma_zoro_worship_yazata_context_tooltip: "#emphasis Historical Context:#! In Zoroastrianism, "Yazatas" refer to those who are considered "worthy of worship." They are gods in a polytheistic context, and angels or emanations of the supreme god in a monotheistic context. Historically, worship of these beings was important not only for religious reasons, but politically as well."
+  dharma_zoro_worship_yazata_type: "Select a Yazata to worship"
+  dharma_zoro_worship_yazata_type_gui: "Select a [yazata|E] to worship"
+  RICE_yazata_anahita_option: "#Bold #V Anahita#!#!\n$RICE_yazata_anahita_option_desc$"
+  RICE_yazata_anahita_option_desc: "The [yazata|E] of the Waters and Fertility"
+  RICE_yazata_anahita_option_tooltip: "Basic [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_anahita').GetNameWithTooltip]\nUpgraded [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_anahita_major').GetNameWithTooltip]"
+  RICE_yazata_bahram_option: "#Bold #V Bahram#!#!\n$RICE_yazata_bahram_option_desc$"
+  RICE_yazata_bahram_option_desc: "The [yazata|E] of Victory"
+  RICE_yazata_bahram_option_tooltip: "Basic [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_bahram').GetNameWithTooltip]\nUpgraded [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_bahram_major').GetNameWithTooltip]"
+  RICE_yazata_mah_option: "#Bold #V Mah#!#!\n$RICE_yazata_mah_option_desc$"
+  RICE_yazata_mah_option_desc: "The [yazata|E] of the Moon"
+  RICE_yazata_mah_option_tooltip: "Basic [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_mah').GetNameWithTooltip]\nUpgraded [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_mah_major').GetNameWithTooltip]"
+  RICE_yazata_mithra_option: "#Bold #V Mithra#!#!\n$RICE_yazata_mithra_option_desc$"
+  RICE_yazata_mithra_option_desc: "The [yazata|E] of the Sun, Light, and Justice"
+  RICE_yazata_mithra_option_tooltip: "Basic [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_mithra').GetNameWithTooltip]\nUpgraded [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_mithra_major').GetNameWithTooltip]"
+  RICE_yazata_nana_option: "#Bold #V Nana#!#!\n$RICE_yazata_nana_option_desc$"
+  RICE_yazata_nana_option_desc: "The [yazata|E] of War and Royal Power"
+  RICE_yazata_nana_option_tooltip: "Basic [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_nana').GetNameWithTooltip]\nUpgraded [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_nana_major').GetNameWithTooltip]"
+  RICE_yazata_rashnu_option: "#Bold #V Rashnu#!#!\n$RICE_yazata_rashnu_option_desc$"
+  RICE_yazata_rashnu_option_desc: "The [yazata|E] of Judgment"
+  RICE_yazata_rashnu_option_tooltip: "Basic [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_rashnu').GetNameWithTooltip]\nUpgraded [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_rashnu_major').GetNameWithTooltip]"
+  RICE_yazata_sraosha_option: "#Bold #V Sraosha#!#!\n$RICE_yazata_sraosha_option_desc$"
+  RICE_yazata_sraosha_option_desc: "The [yazata|E] of Obedience"
+  RICE_yazata_sraosha_option_tooltip: "Basic [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_sraosha').GetNameWithTooltip]\nUpgraded [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_sraosha_major').GetNameWithTooltip]"
+  RICE_yazata_tir_option: "#Bold #V Tir#!#!\n$RICE_yazata_tir_option_desc$"
+  RICE_yazata_tir_option_desc: "The [yazata|E] of the Rain and the Celestial Archer"
+  RICE_yazata_tir_option_tooltip: "Basic [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_tir').GetNameWithTooltip]\nUpgraded [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_tir_major').GetNameWithTooltip]"
+  RICE_yazata_siyavash_option: "#Bold #V Siyavash#!#!\n$RICE_yazata_siyavash_option_desc$"
+  RICE_yazata_siyavash_option_desc: "The [yazata|E] of Death and Rebirth"
+  RICE_yazata_siyavash_option_tooltip: "Basic [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_siyavash').GetNameWithTooltip]\nUpgraded [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_siyavash_major').GetNameWithTooltip]"
+  RICE_yazata_wakhsh_option: "#Bold #V Wakhsh#!#!\n$RICE_yazata_wakhsh_option_desc$"
+  RICE_yazata_wakhsh_option_desc: "The [yazata|E] of the Oxus River"
+  RICE_yazata_wakhsh_option_tooltip: "Basic [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_wakhsh').GetNameWithTooltip]\nUpgraded [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_wakhsh_major').GetNameWithTooltip]"
+  RICE_yazata_weshparkar_option: "#Bold #V Weshparkar#!#!\n$RICE_yazata_weshparkar_option_desc$"
+  RICE_yazata_weshparkar_option_desc: "The [yazata|E] of the Wind"
+  RICE_yazata_weshparkar_option_tooltip: "Basic [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_weshparkar').GetNameWithTooltip]\nUpgraded [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_weshparkar_major').GetNameWithTooltip]"
+  RICE_yazata_astghik_option: "#Bold #V Astghik#!#!\n$RICE_yazata_astghik_option_desc$"
+  RICE_yazata_astghik_option_desc: "The [yazata|E] of Beauty and Love"
+  RICE_yazata_astghik_option_tooltip: "Basic [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_astghik').GetNameWithTooltip]\nUpgraded [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_astghik_major').GetNameWithTooltip]"
+  RICE_yazata_barshamin_option: "#Bold #V Barshamin#!#!\n$RICE_yazata_barshamin_option_desc$"
+  RICE_yazata_barshamin_option_desc: "The [yazata|E] of the Sky"
+  RICE_yazata_barshamin_option_tooltip: "Basic [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_barshamin').GetNameWithTooltip]\nUpgraded [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_barshamin_major').GetNameWithTooltip]"
+  RICE_yazata_tork_option: "#Bold #V Tork#!#!\n$RICE_yazata_tork_option_desc$"
+  RICE_yazata_tork_option_desc: "The [yazata|E] of Strength and Courage"
+  RICE_yazata_tork_option_tooltip: "Basic [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_tork').GetNameWithTooltip]\nUpgraded [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_tork_major').GetNameWithTooltip]"
+  RICE_yazata_vahagn_option: "#Bold #V Vahagn#!#!\n$RICE_yazata_vahagn_option_desc$"
+  RICE_yazata_vahagn_option_desc: "The [yazata|E] of the Waters and Fertility"
+  RICE_yazata_vahagn_option_tooltip: "Basic [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_vahagn').GetNameWithTooltip]\nUpgraded [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_vahagn_major').GetNameWithTooltip]"
+  RICE_yazata_dali_option: "#Bold #V Dali#!#!\n$RICE_yazata_dali_option_desc$"
+  RICE_yazata_dali_option_desc: "The [yazata|E] of Hunting and the Dawn"
+  RICE_yazata_dali_option_tooltip: "Basic [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_dali').GetNameWithTooltip]\nUpgraded [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_dali_major').GetNameWithTooltip]"
+  RICE_yazata_gaim_option: "#Bold #V Gaim#!#!\n$RICE_yazata_gaim_option_desc$"
+  RICE_yazata_gaim_option_desc: "The silver [yazata|E] and Mithra's Attendant"
+  RICE_yazata_gaim_option_tooltip: "Basic [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_gaim').GetNameWithTooltip]\nUpgraded [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_gaim_major').GetNameWithTooltip]"
+  RICE_yazata_gatsi_option: "#Bold #V Gatsi#!#!\n$RICE_yazata_gatsi_option_desc$"
+  RICE_yazata_gatsi_option_desc: "The golden [yazata|E] and Mithra's Attendant"
+  RICE_yazata_gatsi_option_tooltip: "Basic [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_gatsi').GetNameWithTooltip]\nUpgraded [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_gatsi_major').GetNameWithTooltip]"
+  RICE_yazata_kopala_option: "#Bold #V Kopala#!#!\n$RICE_yazata_kopala_option_desc$"
+  RICE_yazata_kopala_option_desc: "The [yazata|E] of Lightning and the Demon-Killer"
+  RICE_yazata_kopala_option_tooltip: "Basic [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_kopala').GetNameWithTooltip]\nUpgraded [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_kopala_major').GetNameWithTooltip]"
+  RICE_yazata_zaden_option: "#Bold #V Zaden#!#!\n$RICE_yazata_zaden_option_desc$"
+  RICE_yazata_zaden_option_desc: "The [yazata|E] of Fruitfulness"
+  RICE_yazata_zaden_option_tooltip: "Basic [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_zaden').GetNameWithTooltip]\nUpgraded [modifier|E]: [GetModifier('RICE_khwarezm_yazata_worshipped_zaden_major').GetNameWithTooltip]"
+
+  dharma_zoro_change_xwedodah: "Resolve the Issue of Xwedodah"
+  dharma_zoro_change_xwedodah_zurvanite: "$dharma_zoro_change_xwedodah$"
+  dharma_zoro_change_xwedodah_tooltip: "Convene with others to resolve the debates around this practice for the [ROOT.Char.GetFaith.GetName] [faith|E]"
+  dharma_zoro_change_xwedodah_zurvanite_tooltip: "$dharma_zoro_change_xwedodah_tooltip$"
+  dharma_zoro_change_xwedodah_desc: "#V Xwedodah#! is one of the greatest deeds any [ROOT.Char.GetFaith.GetAdherentName] can do. While this has been our indisputable belief for centuries, there have been debates as to what it means. Does it truly refer to close-kin marriage? Some claim that it should be defined as cousin marriage instead. To resolve these debates once and for all, I wish to convene some scholars and [ROOT.Char.Custom('DefaultPriestTitlePlural')]."
+  dharma_zoro_change_xwedodah_effect_tooltip_1: "#V Reinterpret#! the [xwedodah_resolver.GetFaith.ReligiousText] to change the $doctrine_consanguinity_name$ [doctrine|E] of [xwedodah_resolver.GetFaith.GetName] to allow only cousin marriage, or #V reinforce#! the traditional views that it refers to close-kin marriage - either choice will be #V permanent!#!"
+  dharma_zoro_change_xwedodah_effect_tooltip_2: "If this [decision|E] is not taken by any sufficiently powerful [xwedodah_resolver.GetFaith.GetAdjective] ruler by the 14th or 15th century, then a change #italic may#! be triggered randomly via event at that time"
+  dharma_zoro_change_xwedodah_effect_tooltip_3: "The [GetFaithDoctrine('tenet_divine_marriage').GetBaseName] [core_tenet|E] of [xwedodah_resolver.GetFaith.GetName] is changed to [GetFaithDoctrine('tenet_communal_identity').GetBaseName]"
+  dharma_zoro_change_xwedodah_confirm: "For the glory of [ROOT.Char.GetFaith.HighGodName]!"
+
+
+#######################################
+# Character decisions
+#######################################
+  dharma_tibet_yumten_legitimacy: "Prove your legitimacy"
+  dharma_tibet_yumten_legitimacy_tooltip: "You shall lose the [GetTrait(disputed_heritage).GetName( GetPlayer )] trait."
+  dharma_tibet_yumten_legitimacy_desc: "For as long as you know, your half-brother has spread a vile rumor that you are a beggar that was propped up by your mother. You have always known the truth that you are your father's son while it is your half-brother who allies himself with his father's killers. You shall prove to everyone that these rumors are lies and that you are your father's son."
+  dharma_tibet_yumten_legitimacy_confirm: "put an end to the lie!"
+
+#######################################
+# City founding decisions
+#######################################
+  dharma_found_delhi_city: "Found the City of Delhi"
+  dharma_found_delhi_city_tooltip: "You will found the city of Delhi."
+  dharma_found_delhi_city_desc: "The area around Indraprastha and Srinivaspuri have seen plenty of raids, and more than a few ruined settlements here. This area would be a perfect spot to found a new and grander city."
+  dharma_found_delhi_city_confirm: "Let us build a new city"
+
+
+
+
+
+

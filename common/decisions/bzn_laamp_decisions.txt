@@ -3,7 +3,7 @@ bzn_establish_ourselves_decision = {
         reference = "gfx/interface/illustrations/decisions/decision_culture.dds"
     }
 
-    decision_group_type = major
+    decision_group_type = flavor_medium
 
     ai_check_interval = 1
 

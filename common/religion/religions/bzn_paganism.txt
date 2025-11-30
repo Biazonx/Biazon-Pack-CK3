@@ -6,6 +6,7 @@ celtic_religion = {
 	pagan_roots = yes
 
 	#Main Group
+	doctrine = doctrine_polytheist
 	doctrine = doctrine_spiritual_head
 	doctrine = doctrine_gender_equal
 	doctrine = doctrine_pluralism_righteous
@@ -36,6 +37,9 @@ celtic_religion = {
 
 	#Funeral tradition
 	doctrine = doctrine_funeral_cremation
+	
+	#Coronation tradition
+	doctrine = doctrine_no_anointment
 
 	traits = {
 		virtues = { brave just honest poet }

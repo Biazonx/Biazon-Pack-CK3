@@ -1,4 +1,0 @@
-﻿
-ring_decoration = {}
-ring_centerpiece = {}
-ring_adornment = {}

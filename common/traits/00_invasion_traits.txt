@@ -1,11 +1,8 @@
 ﻿frieza_race = {
 	icon = "frieza_race.dds"
 	category = fame
-	genetic = yes
-	good = yes
 	opposites = {
 		pure_saiyan
-		hybrid_saiyan
 		saiyan_tail
 		legendary_super_saiyan
 		super_saiyan
@@ -48,11 +45,8 @@
 majin_race = {
 	icon = "majin_race.dds"
 	category = fame
-	genetic = yes
-	good = yes
 	opposites = {
 		pure_saiyan
-		hybrid_saiyan
 		saiyan_tail
 		legendary_super_saiyan
 		super_saiyan
@@ -65,6 +59,7 @@ majin_race = {
 	}
 	diplomacy = -4
 	intrigue = 4
+	martial = 4
 	prowess = 8
 	no_prowess_loss_from_age = yes
 	same_opinion = -10
@@ -97,11 +92,8 @@ majin_race = {
 namekian_race = {
 	icon = "namekian_race.dds"
 	category = fame
-	genetic = yes
-	good = yes
 	opposites = {
 		pure_saiyan
-		hybrid_saiyan
 		saiyan_tail
 		legendary_super_saiyan
 		super_saiyan
@@ -115,6 +107,7 @@ namekian_race = {
 	}
 	learning = 2
 	prowess = 1
+	martial = 1
 	no_prowess_loss_from_age = yes
 	same_opinion = 15
 	health = 0.25
@@ -141,10 +134,7 @@ namekian_race = {
 pure_saiyan = {
 	icon = "pure_saiyan.dds"
 	category = fame
-	genetic = yes
-	good = yes
 	opposites = {
-		hybrid_saiyan
 		namekian_race
 		majin_race
 		frieza_race
@@ -153,10 +143,10 @@ pure_saiyan = {
 	martial = 2
 	prowess = 2
 	no_prowess_loss_from_age = yes
-	general_opinion = -10
+	general_opinion = -5
 	same_opinion = 15
 	
-	inherit_chance = 25
+	inherit_chance = 100
 	both_parent_has_trait_inherit_chance = 100
 	
 	shown_in_ruler_designer = yes
@@ -173,51 +163,17 @@ pure_saiyan = {
 		}
 	}
 }
-hybrid_saiyan = {
-	icon = "hybrid_saiyan.dds"
-	category = fame
-	genetic = yes
-	good = yes
-	opposites = {
-		pure_saiyan
-		namekian_race
-		majin_race
-		frieza_race
-	}
-	martial = 1
-	prowess = 2
-	no_prowess_loss_from_age = yes
-	same_opinion = 15
-	
-	inherit_chance = 100
-	shown_in_ruler_designer = yes
-	ruler_designer_cost = 25
-	
-	desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					NOT = { exists = this }
-				}
-				desc = trait_hybrid_saiyan_desc
-			}
-			desc = trait_hybrid_saiyan_character_desc
-		}
-	}
-}
+
 saiyan_tail = {
 	icon = "saiyan_tail.dds"
 	category = fame
-	genetic = yes
-	good = yes
 	physical = yes
 	opposites = {
 		namekian_race
 	}
 	
     monthly_prestige = 0.25
-	general_opinion = -10
-	same_opinion = 15
+	same_opinion = 10
 	
 	inherit_chance = 100
 	
@@ -303,7 +259,6 @@ super_saiyan = {
 	icon = "super_saiyan.dds"
 	category = fame
 	genetic = no
-	good = yes
 	physical = yes
 	
 	opposites = {
@@ -337,7 +292,6 @@ super_saiyan_2 = {
 	icon = "super_saiyan_2.dds"
 	category = fame
 	genetic = no
-	good = yes
 	physical = yes
 	minimum_age = 9
 
@@ -362,7 +316,6 @@ super_saiyan_3 = {
 	icon = "super_saiyan_3.dds"
 	category = fame
 	genetic = no
-	good = yes
 	physical = yes
 	minimum_age = 16
 	
@@ -514,7 +467,6 @@ super_saiyan_4 = {
 	category = fame
 	genetic = no
 	physical = yes
-	good = yes
 	
 	opposites = {
 		super_saiyan_god
@@ -543,12 +495,10 @@ super_saiyan_4 = {
 scarlet_eyes = {
 	icon = "easteregg_scarlet_eyes.dds"
 	category = fame
-	genetic = yes
 	physical = yes
-	good = yes
 	
 	monthly_prestige = 0.5
-	general_opinion = -10
+	general_opinion = -5
 	same_opinion = 20
 	
 	shown_in_ruler_designer = yes
@@ -574,7 +524,6 @@ golden_form = {
 	category = fame
 	genetic = no
 	physical = yes
-	good = yes
 	
 	martial = 4
 	prowess = 10
@@ -601,7 +550,6 @@ frieza_full = {
 	icon = "frieza_full.dds"
 	category = fame
 	genetic = no
-	good = yes
 	physical = yes
 	
 	martial = 1
@@ -623,4 +571,13 @@ frieza_full = {
 			desc = trait_frieza_full_character_desc
 		}
 	}
+}
+
+dragon_ball = { 
+	icon = "dragon_ball.dds"
+	category = fame
+	
+	shown_in_ruler_designer = no
+	ruler_designer_cost = 50
+	
 }

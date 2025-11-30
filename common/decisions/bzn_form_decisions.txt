@@ -256,7 +256,7 @@ bzn_adopt_chinese_administration_decision = {
             limit = { has_holding_type = tribal_holding }
             set_holding_type = castle_holding
         }
-        change_to_administrative_effect = yes
+        change_to_celestial_effect = yes
         every_vassal_or_below = {
             limit = {
                 OR = {
@@ -265,7 +265,7 @@ bzn_adopt_chinese_administration_decision = {
                     has_government = clan_government
                 }
             }
-            change_to_administrative_effect = yes
+            change_to_celestial_effect = yes
         }
     }
     ai_potential = {

@@ -1,0 +1,17 @@
+dharma_legacy_track = {
+	is_shown = {
+		dynasty = {
+			OR = {
+				dynast = {
+				OR = {
+					religion = religion:hinduism_religion
+					religion = religion:jainism_religion
+					religion = religion:buddhism_religion 
+					religion = religion:bon_religion 
+				}
+				has_dynasty_perk = dharma_legacy_1
+			}
+		}
+	}
+}
+}

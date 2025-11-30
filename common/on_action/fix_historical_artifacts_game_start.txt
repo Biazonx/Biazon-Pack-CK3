@@ -1,5 +1,0 @@
-on_game_start = {
-	events = {
-		fix_historical_artifacts.0001
-	}
-}

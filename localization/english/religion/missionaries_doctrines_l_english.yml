@@ -1,0 +1,11 @@
+﻿l_english:
+ doctrine_parameter_allowed_to_hire_missionaries:0 "Allowed to assign missionary and head missionary [court_positions|E]"
+ doctrine_parameter_missionary_bonus_aptitude:0 "Missionaries get bonuses to their skill and chances of converting others"
+ doctrine_missionary_encouraged_bonus:0 "Faith encourages missionaries"
+ doctrine_missionary_name:0 "Missionary Acceptance"
+ doctrine_missionary_encouraged_name:0 "Missionaries Encouraged"
+ doctrine_missionary_encouraged_desc:0 "Missionaries are not only useful but essential when spreading our [faith|E], and the more adventurous among the faithful  should be encouraged to not only uphold our faith's roots, but to spread it elsewhere."
+ doctrine_missionary_allowed_name:0 "Missionaries Allowed"
+ doctrine_missionary_allowed_desc:0 "Missionaries are useful for spreading our [faith|E], but our religious leadership does not see missionary work as a priority - after all, the truth will prevail eventually."
+ doctrine_missionary_not_allowed_name:0 "Missionaries Not Allowed"
+ doctrine_missionary_not_allowed_desc:0 "Missionaries are viewed as unnecessary in our [faith|E]. Recklessly spreading our ideas to outsiders will only lead to heresies and a fracturing of the community."

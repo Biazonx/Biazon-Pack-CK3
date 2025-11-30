@@ -9,6 +9,59 @@
 		mountains_attrition_mult = -0.1
 	}
 }
+kumukh = { 
+	county = c_philan
+	barony = b_kumukh
+
+	character_modifier = {
+		name = holy_site_kumukh_effect_name
+		monthly_piety_gain_mult = 0.1
+	}
+}
+
+balanjar = {
+	county = c_samander
+	barony = b_balanjar
+
+	character_modifier = {
+		name = holy_site_balanjar_effect_name
+		diplomacy = 1
+		martial = 1
+	}
+}
+
+zurzuq = {
+	county = c_philan
+	barony = b_durdzukia
+
+	character_modifier = {
+		name = holy_site_zurzuq_effect_name
+		same_culture_opinion = 5
+		prowess = 1
+	}
+}
+
+ghisi = {
+	county = c_hereti
+	barony = b_ghisi
+
+	character_modifier = {
+		name = holy_site_ghisi_effect_name
+		clergy_opinion = 5
+		#popular_opinion = 5
+	}
+}
+
+cheleken = {
+	county = c_uzboy
+	barony = b_nebit_dag
+
+	character_modifier = {
+		name = holy_site_cheleken_effect_name
+		clergy_opinion = 5
+		coastal_advantage = 5
+	}
+}
 
 mizoram = {
 	county = c_thabeik_taung
@@ -1453,9 +1506,19 @@ manyakheta = { # Manyakheta, location of Aihole, an important Buddhist temple co
 	}
 }
 
+babylon = { # Babylon was very important in early Judaism, where the Babylonian Talmud was written
+	county = c_iskaf
+	
+	character_modifier = {
+		name = holy_site_babylon_effect_name
+		development_growth_factor = 0.1
+		cultural_head_fascination_mult = 0.1
+	}
+}
+
 hebron = {
-	county = c_hebron
-	barony = b_hebron
+	county = c_negev
+	barony = b_zughar
 	
 	character_modifier = {
 		name = holy_site_hebron_effect_name
@@ -3051,7 +3114,7 @@ etchmiadzin = {
 }
 
 kabala = {
-	county = c_shaki
+	county = c_albania
 	barony = b_kabala
 	character_modifier = {
 		defender_advantage = 2

@@ -1,0 +1,11 @@
+become_medium = {
+	sort_order = 150
+}
+
+government_major = {
+	sort_order = 201
+}
+
+flavor_medium = {
+	sort_order = 149
+}

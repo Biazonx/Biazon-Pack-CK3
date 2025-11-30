@@ -7,6 +7,7 @@
 	doctrine_background_icon = core_tenet_banner_islam.dds
 	#STANDARD DOCTRINES:
 
+	doctrine = doctrine_monotheist
 	#Abrahamic hostiliy group
 	doctrine = abrahamic_hostility_doctrine
 	#Polygamous marriages
@@ -52,6 +53,8 @@
 
 	#Funeral tradition
 	doctrine = doctrine_funeral_stoic
+	#Coronation tradition
+	doctrine = doctrine_no_anointment
 
 	traits = {
 		virtues = { temperate generous just }
@@ -450,32 +453,53 @@
 			}
 		}
 
-		qarmatian = { #A branch of the Isma'ili with syncretic Zoroastrian elements
+qarmatian = { #A branch of the Isma'ili with syncretic Zoroastrian elements, updated by Dvariak
 			#Founded a utopian republic in al-Hasa
-			color = { 0.1 0.8 0.1 }
+			color = { 0.09 0.39 0.09 }
 			icon = qarmatian
-
-			holy_site = mecca
-			holy_site = medina
-			holy_site = jerusalem
+			religious_head = d_seveners
+			
+			holy_site = bahrein
+			holy_site = arrajan
+			holy_site = basra
 			holy_site = nadjaf
-			holy_site = damascus
+			holy_site = isfahan
 
-			doctrine = tenet_unrelenting_faith
-			doctrine = tenet_aniconism
-			doctrine = tenet_gnosticism
+			doctrine = tenet_vows_of_poverty
+			doctrine = tenet_inner_journey
+			doctrine = tenet_warmonger
+			doctrine = tenet_eastern_syncretism
+
+			doctrine = doctrine_ditheistic
+			doctrine = doctrine_immortal
+			doctrine = doctrine_aspects
+
+			# Ubaydi trait acceptance doctrine
+			doctrine = special_doctrine_ubaydi_trait_acceptance	
 
 			#Shia
 			#Homosexuality is a sin, but a much more tolerated one.
 			#Witchcraft is frowned upon
+			doctrine = doctrine_temporal_head
 			doctrine = muhammad_succession_zandaqa_doctrine	#Technically Shia
-			doctrine = doctrine_no_head # Believes in the Imams, but disagree with mainline Shias as to who they are. Does not believe the true Imam has been reincarnated yet.
-			doctrine = doctrine_pluralism_fundamentalist
 			doctrine = doctrine_homosexuality_accepted
 			doctrine = doctrine_witchcraft_shunned
 			doctrine = doctrine_monogamy
 			doctrine = doctrine_gender_equal # While the differences between men and women were a bit more complex, Equal is a suitable abstraction for lack of male-pref
+			doctrine = doctrine_divorce_allowed
 			doctrine = doctrine_pilgrimage_forbidden
+
+			#Generic Shi'ite Names - Includes the names of several Shi'ite figures
+			reserved_male_names = {
+				Abbas Ali Baqir Bilal Bishr Hafiz Hamza Hassan Haydar Husayn Jafar Mahdi Malik Miqdad Muhsin Murtadha Murtaza Sadiq Suhayl Zain Zain-ul-abideen Zulfiqar 
+				Abd_al-Karim Abdul-Razzaq Abdul-Qadir Abdul-Rahman Abdullah Abdurashid Adam Ahmad al-YasA_ Amin Ayyub Dawud Hamid Haroun Hud Ibrahim Idris Illyas Imran Isa Ishaq Ismail
+				Jamil Mahmud Muhammad Mukhtar Musa Nuh Qasim Sajid Salih Salman Shuayb Sulayman Taha Tahir Tariq Ubaydallah Yahya Yaqub Yunus Yusuf Zakariyah Zayd
+			}
+
+			reserved_female_names = {
+				Aliyah Asma Hafsa Khawlah Layla
+				Fatima Jamila Khadija Mariya Maryam Maymuna Ruqayya Safiya Umm_Kulthum Zainab
+			}
 
 			localization = {		
 				PriestMale = islam_shia_priest
@@ -484,8 +508,8 @@
 				PriestFemalePlural = islam_shia_priest_plural
 				PriestNeuter = islam_shia_priest
 				PriestNeuterPlural = islam_shia_priest_plural
-				ReligiousHeadName = islam_shia_religious_head_title
-				ReligiousHeadTitleName = islam_shia_religious_head_title_name
+				ReligiousHeadName = qarmatian_religious_head_title
+				ReligiousHeadTitleName = qarmatian_religious_head_title_name
 			}
 		}
 
@@ -737,32 +761,59 @@
 		}
 
 		druze = {
-			color = { 0.3 0.7 0.1 }
+			color = { 0.14 0.44 0.14 }
 			icon = islam_druze
 
-			holy_site = mecca
-			holy_site = medina
+			holy_site = hauran
 			holy_site = jerusalem
 			holy_site = beirut
 			holy_site = zozan
+			holy_site = tiberias
 
 			doctrine = tenet_gnosticism
 			doctrine = tenet_reincarnation
 			doctrine = tenet_false_conversion_sanction
 
+			doctrine = doctrine_gender_equal
+			doctrine = doctrine_me_ablution_none
+			doctrine = doctrine_autonomous
+			doctrine = doctrine_reincarnation
+			doctrine = doctrine_syncretic_mythology
+
 			#Shia
+			#No religious head
+			#Monogamy
 			#Divorce forbidden
 			#Homosexuality is a sin
+			#Adultery is a crime
 			#Witchcraft is a sin
-
+			#Clerical gender - Either
 			doctrine = doctrine_monogamy
 			doctrine = muhammad_succession_zandaqa_doctrine	#Technically Shia
+			doctrine = doctrine_no_head
 			doctrine = doctrine_divorce_allowed
 			doctrine = doctrine_adultery_women_crime
 			doctrine = doctrine_adultery_men_crime
 			doctrine = doctrine_witchcraft_shunned
 			doctrine = doctrine_clerical_gender_either
 			doctrine = doctrine_pilgrimage_forbidden
+			doctrine = special_doctrine_jizya
+			# Ubaydi trait acceptance doctrine
+			doctrine = special_doctrine_ubaydi_trait_acceptance
+
+			#Druze Names - Includes the list of Generic Shi'ite names with a few addition
+			reserved_male_names = {
+				Hakim
+				Abbas Ali Baqir Bilal Bishr Hafiz Hamza Hassan Haydar Husayn Jafar Mahdi Malik Miqdad Muhsin Murtadha Murtaza Sadiq Suhayl Zain Zain-ul-abideen Zulfiqar 
+				Abd_al-Karim Abdul-Razzaq Abdul-Qadir Abdul-Rahman Abdullah Abdurashid Adam Ahmad al-YasA_ Amin Ayyub Dawud Hamid Haroun Hud Ibrahim Idris Illyas Imran Isa Ishaq Ismail
+				Jamil Mahmud Muhammad Mukhtar Musa Nuh Qasim Sajid Salih Salman Shuayb Sulayman Taha Tahir Tariq Ubaydallah Yahya Yaqub Yunus Yusuf Zakariyah Zayd
+			}
+
+			reserved_female_names = {
+				Aziza
+				Aliyah Asma Hafsa Khawlah Layla
+				Fatima Jamila Khadija Mariya Maryam Maymuna Ruqayya Safiya Umm_Kulthum Zainab
+			}
 
 			localization = {		
 				PriestMale = islam_shia_priest
@@ -862,14 +913,18 @@
 		}
 
 		najdat = {
-			color = { 0.6 0.7 0.7 }
+			color = { 0.15 0.55 0.5 }
 			icon = nadjat
-
+			religious_head = d_kharijite
+	
 			holy_site = mecca
 			holy_site = medina
-			holy_site = jerusalem
 			holy_site = bahrein
-			holy_site = yamama			
+			holy_site = yamama
+			holy_site = basra
+
+			#DOCTRINES
+			#Muhakkima	
 
 			#Tenet
 			doctrine = tenet_struggle_submission
@@ -878,9 +933,9 @@
 
 			#Doctrines
 			doctrine = muhammad_succession_muhakkima_doctrine
+			doctrine = doctrine_spiritual_head
 			# Jizya
 			doctrine = special_doctrine_jizya
-			doctrine = doctrine_temporal_head
 			doctrine = doctrine_witchcraft_shunned
 
 			localization = {		
@@ -896,15 +951,15 @@
 		}
 
 		sufri = {
-			color = { 0.3 0.5 0.5 }
+			color = { 0.08 0.48 0.42 }
 			icon = muhakkima_3
-
+			religious_head = d_kharijite
 
 			holy_site = mecca
 			holy_site = medina
-			holy_site = jerusalem
 			holy_site = sijilmasa	
 			holy_site = siffa
+			holy_site = kufa	
 
 			#Tenet
 			doctrine = tenet_struggle_submission
@@ -913,9 +968,9 @@
 
 			#Doctrines
 			doctrine = muhammad_succession_muhakkima_doctrine
+			doctrine = doctrine_spiritual_head
 			# Jizya
 			doctrine = special_doctrine_jizya
-			doctrine = doctrine_no_head
 			doctrine = doctrine_divorce_allowed
 			doctrine = doctrine_witchcraft_shunned
 			doctrine = doctrine_gender_equal
@@ -934,15 +989,15 @@
 		}
 
 		hafizi = { #Sub-set of Ismaili Shiites that fervently supported the primacy of their caliph.
-			color = { 0.5 0.8 0.4 }
+			color = { 0.22 0.81 0.12 }
 			icon = ibadi_custom
-			religious_head = d_shiite
+			religious_head = d_hafizi
 
 			holy_site = mecca
 			holy_site = medina
-			holy_site = jerusalem
 			holy_site = nadjaf
-			holy_site = damascus
+			holy_site = karbala
+			holy_site = qom
 
 			doctrine = tenet_struggle_submission
 			doctrine = tenet_unrelenting_faith
@@ -953,12 +1008,26 @@
 
 			# Shia
 			doctrine = muhammad_succession_shia_doctrine
+			# Ubaydi trait acceptance doctrine
+			doctrine = special_doctrine_ubaydi_trait_acceptance
 			# Main Doctrines
 			doctrine = doctrine_pluralism_fundamentalist
 			# Criminal Doctrines
 			doctrine = doctrine_witchcraft_shunned
 			# Clergy Doctrines
 			doctrine = doctrine_clerical_function_recruitment
+
+			#Generic Shi'ite Names - Includes the names of several Shi'ite figures
+			reserved_male_names = {
+				Abbas Ali Baqir Bilal Bishr Hafiz Hamza Hassan Haydar Husayn Jafar Mahdi Malik Miqdad Muhsin Murtadha Murtaza Sadiq Suhayl Zain Zain-ul-abideen Zulfiqar 
+				Abd_al-Karim Abdul-Razzaq Abdul-Qadir Abdul-Rahman Abdullah Abdurashid Adam Ahmad al-YasA_ Amin Ayyub Dawud Hamid Haroun Hud Ibrahim Idris Illyas Imran Isa Ishaq Ismail
+				Jamil Mahmud Muhammad Mukhtar Musa Nuh Qasim Sajid Salih Salman Shuayb Sulayman Taha Tahir Tariq Ubaydallah Yahya Yaqub Yunus Yusuf Zakariyah Zayd
+			}
+
+			reserved_female_names = {
+				Aliyah Asma Hafsa Khawlah Layla
+				Fatima Jamila Khadija Mariya Maryam Maymuna Ruqayya Safiya Umm_Kulthum Zainab
+			}
 
 			localization = {		
 				PriestMale = islam_shia_priest
@@ -1207,6 +1276,200 @@
 				{ name = "holy_order_servants_of_yakush" }
 				{ name = "holy_order_champions_of_barghawata" }
 			}		   
+		}
+		
+		maulvi = { # new
+			color = { 0 0.53 0.12 }
+			icon = maulvi
+
+			holy_site = mecca
+			holy_site = medina
+			holy_site = jerusalem
+			holy_site = aror
+			holy_site = kerala
+
+			#Tenets
+			doctrine = tenet_inner_journey
+			doctrine = tenet_struggle_submission
+			doctrine = tenet_esotericism
+			doctrine = tenet_eastern_syncretism
+
+			# Jizya
+			doctrine = special_doctrine_jizya
+
+			#Doctrines
+			doctrine = doctrine_no_head
+			doctrine = doctrine_consanguinity_restricted
+			doctrine = doctrine_homosexuality_accepted
+			doctrine = doctrine_kinslaying_shunned
+			doctrine = doctrine_witchcraft_shunned
+			doctrine = doctrine_pluralism_pluralistic
+
+			doctrine = muhammad_succession_sunni_doctrine
+			doctrine = doctrine_oral_tradition
+			doctrine = doctrine_spiritual
+
+			localization = {
+				BishopMale = islam_maulvi
+				BishopMalePlural = islam_maulvi_plural
+				BishopFemale = islam_maulvi
+				BishopFemalePlural = islam_maulvi_plural
+				BishopNeuter = islam_maulvi
+				BishopNeuterPlural = islam_maulvi_plural
+			}
+		}
+		mutrafiya = {
+			color = { 0.24 0.81 0.13 }
+			icon = batriya_custom_1
+
+			holy_site = mecca
+			holy_site = medina
+			holy_site = qom
+			holy_site = nadjaf
+			holy_site = karbala
+
+			doctrine = tenet_struggle_submission
+			doctrine = tenet_unrelenting_faith
+			doctrine = tenet_pursuit_of_power
+
+			#Shia
+			#Witchcraft is a sin
+			doctrine = muhammad_succession_shia_doctrine
+			# Jizya
+			doctrine = special_doctrine_jizya
+			doctrine = doctrine_spiritual_head
+
+			doctrine = doctrine_witchcraft_shunned
+			doctrine = doctrine_pluralism_pluralistic	
+
+			#Generic Shi'ite Names - Includes the names of several Shi'ite figures
+			reserved_male_names = {
+				Abbas Ali Baqir Bilal Bishr Hafiz Hamza Hassan Haydar Husayn Jafar Mahdi Malik Miqdad Muhsin Murtadha Murtaza Sadiq Suhayl Zain Zain-ul-abideen Zulfiqar 
+				Abd_al-Karim Abdul-Razzaq Abdul-Qadir Abdul-Rahman Abdullah Abdurashid Adam Ahmad al-YasA_ Amin Ayyub Dawud Hamid Haroun Hud Ibrahim Idris Illyas Imran Isa Ishaq Ismail
+				Jamil Mahmud Muhammad Mukhtar Musa Nuh Qasim Sajid Salih Salman Shuayb Sulayman Taha Tahir Tariq Ubaydallah Yahya Yaqub Yunus Yusuf Zakariyah Zayd
+			}
+
+			reserved_female_names = {
+				Aliyah Asma Hafsa Khawlah Layla
+				Fatima Jamila Khadija Mariya Maryam Maymuna Ruqayya Safiya Umm_Kulthum Zainab
+			} 						 
+
+			localization = {		
+				PriestMale = islam_shia_priest
+				PriestMalePlural = islam_shia_priest_plural
+				PriestFemale = islam_shia_priest
+				PriestFemalePlural = islam_shia_priest_plural
+				PriestNeuter = islam_shia_priest
+				PriestNeuterPlural = islam_shia_priest_plural
+				ReligiousHeadName = zayidi_religious_head_title
+				ReligiousHeadTitleName = zayidi_religious_head_title_name
+			}
+		}
+		
+		sabaiya = {
+			color = { 178 76 76 }
+			icon = sabaiya
+
+			holy_site = mecca
+			holy_site = medina
+			holy_site = jerusalem
+			holy_site = hebron
+			holy_site = sinai
+
+			doctrine = tenet_reincarnation
+			doctrine = tenet_warmonger
+			doctrine = tenet_esotericism
+			doctrine = tenet_jewish_syncretism
+
+			#Shia
+			#No religious head
+			#Witchcraft is a sin
+			doctrine = muhammad_succession_zandaqa_doctrine	#Technically Shia
+			# Jizya
+			doctrine = special_doctrine_jizya
+			doctrine = doctrine_reincarnation
+			doctrine = doctrine_immortal
+			doctrine = doctrine_anointed_deliverer
+			doctrine = doctrine_promised_deliverer
+
+			doctrine = doctrine_no_head
+			doctrine = doctrine_witchcraft_shunned
+
+			#Generic Shi'ite Names - Includes the names of several Shi'ite figures
+			reserved_male_names = {
+				Abbas Ali Baqir Bilal Bishr Hafiz Hamza Hassan Haydar Husayn Jafar Mahdi Malik Miqdad Muhsin Murtadha Murtaza Sadiq Suhayl Zain Zain-ul-abideen Zulfiqar 
+				Abd_al-Karim Abdul-Razzaq Abdul-Qadir Abdul-Rahman Abdullah Abdurashid Adam Ahmad al-YasA_ Amin Ayyub Dawud Hamid Haroun Hud Ibrahim Idris Illyas Imran Isa Ishaq Ismail
+				Jamil Mahmud Muhammad Mukhtar Musa Nuh Qasim Sajid Salih Salman Shuayb Sulayman Taha Tahir Tariq Ubaydallah Yahya Yaqub Yunus Yusuf Zakariyah Zayd
+			}
+
+			reserved_female_names = {
+				Aliyah Asma Hafsa Khawlah Layla
+				Fatima Jamila Khadija Mariya Maryam Maymuna Ruqayya Safiya Umm_Kulthum Zainab
+			}
+
+			localization = {		
+				PriestMale = islam_shia_priest
+				PriestMalePlural = islam_shia_priest_plural
+				PriestFemale = islam_shia_priest
+				PriestFemalePlural = islam_shia_priest_plural
+				PriestNeuter = islam_shia_priest
+				PriestNeuterPlural = islam_shia_priest_plural
+				ReligiousHeadName = islam_shia_religious_head_title
+				ReligiousHeadTitleName = islam_shia_religious_head_title_name
+			}
+		}
+				salmani = {
+			color = { 195 155 211 }
+			icon = salmani
+
+			holy_site = mecca
+			holy_site = medina
+			holy_site = takht-i-sangin
+			holy_site = takht-e_soleyman
+			holy_site = yazd
+
+			doctrine = tenet_reincarnation
+			doctrine = tenet_divine_marriage
+			doctrine = tenet_ritual_celebrations
+			doctrine = tenet_esotericism
+			doctrine = tenet_eastern_syncretism
+
+			#Shia
+			#No religious head
+			#Doctrines
+			doctrine = muhammad_succession_zandaqa_real_doctrine
+			# Jizya
+			doctrine = special_doctrine_jizya
+
+			doctrine = doctrine_no_head
+			doctrine = doctrine_witchcraft_accepted
+			doctrine = doctrine_reincarnation
+			doctrine = doctrine_ditheistic
+			doctrine = doctrine_immortal
+			doctrine = doctrine_aspects
+
+			#Generic Shi'ite Names - Includes the names of several Shi'ite figures
+			reserved_male_names = {
+				Abbas Ali Baqir Bilal Bishr Hafiz Hamza Hassan Haydar Husayn Jafar Mahdi Malik Miqdad Muhsin Murtadha Murtaza Sadiq Suhayl Zain Zain-ul-abideen Zulfiqar 
+				Abd_al-Karim Abdul-Razzaq Abdul-Qadir Abdul-Rahman Abdullah Abdurashid Adam Ahmad al-YasA_ Amin Ayyub Dawud Hamid Haroun Hud Ibrahim Idris Illyas Imran Isa Ishaq Ismail
+				Jamil Mahmud Muhammad Mukhtar Musa Nuh Qasim Sajid Salih Salman Shuayb Sulayman Taha Tahir Tariq Ubaydallah Yahya Yaqub Yunus Yusuf Zakariyah Zayd
+			}
+
+			reserved_female_names = {
+				Aliyah Asma Hafsa Khawlah Layla
+				Fatima Jamila Khadija Mariya Maryam Maymuna Ruqayya Safiya Umm_Kulthum Zainab
+			}
+
+			localization = {		
+				PriestMale = islam_shia_priest
+				PriestMalePlural = islam_shia_priest_plural
+				PriestFemale = islam_shia_priest
+				PriestFemalePlural = islam_shia_priest_plural
+				PriestNeuter = islam_shia_priest
+				PriestNeuterPlural = islam_shia_priest_plural
+				ReligiousHeadName = islam_shia_religious_head_title
+				ReligiousHeadTitleName = islam_shia_religious_head_title_name
+			}
 		}
 	}
 }

@@ -11,6 +11,7 @@ eastern_county_conquest_cb = {
 		NOT = {
 			government_has_flag = government_is_landless_adventurer
 		}
+		NOT = { religion = religion:jainism_religion }
 	}
 
 	allowed_against_character = {
@@ -334,9 +335,9 @@ eastern_county_conquest_cb = {
 	attacker_allies_inherit = yes
 	defender_allies_inherit = yes
 
-	war_name = "Conquer County (Eastern)"
-	war_name_base = "Conquer County (Eastern)"
-	cb_name = "Conquer County (Eastern)"
+	war_name = "Eastern County Conquest"
+	war_name_base = "Eastern County Conquest"
+	cb_name = "Eastern County Conquest"
 
 	interface_priority = 79
 
@@ -365,6 +366,7 @@ eastern_duchy_conquest_cb = {
 		NOT = {
 			government_has_flag = government_is_landless_adventurer
 		}
+		NOT = { religion = religion:jainism_religion }
 	}
 
 	allowed_for_character_display_regardless = {
@@ -852,9 +854,9 @@ eastern_duchy_conquest_cb = {
 	attacker_allies_inherit = yes
 	defender_allies_inherit = yes
 
-	war_name = "Conquer Duchy (Eastern)"
-	war_name_base = "Conquer Duchy (Eastern)"
-	cb_name = "Conquer Duchy (Eastern)"
+	war_name = "Eastern Ducal Conquest"
+	war_name_base = "Eastern Ducal Conquest"
+	cb_name = "Eastern Ducal Conquest"
 
 	interface_priority = 79
 

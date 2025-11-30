@@ -1,0 +1,96 @@
+﻿### Brief: Raid Intent
+#
+# on_return_raid_loot triggers when returning raid loot
+# scope:raid_loot is the loot that you gained from the raid
+# scope:raider is the character owning the raiding army
+#
+# The following modifiers are available for raid intents:
+# raid_speed
+# movement_speed_land_raiding
+# hostile_county_attrition_raiding
+# max_loot_mult
+#
+# The default intent will be the first available intent for characters
+# Changed to be for all tribals, but name is kept due to loc reasons
+
+cannibal_intent = {
+    on_return_raid_loot = {
+        scope:raider = {
+            send_interface_message = {
+                type = event_raid_good
+                title = raiding.0011.t
+                right_icon = root.army_commander
+                add_piety = {
+                    value = scope:raid_loot
+                    multiply = 3.0
+                }
+				add_gold = {
+                    value = scope:raid_loot
+                    multiply = 0.25
+                }
+            }
+        }
+    }
+
+    modifier = {
+        raid_speed = -0.5
+        movement_speed_land_raiding = -0.4
+        capture_chance_mult = 0.5
+    }
+
+    ai_will_do = {
+        value = 5
+    }
+
+    is_shown = {
+    OR = {
+        faith = { has_doctrine = tenet_ritual_cannibalism }
+        faith = { has_doctrine = tenet_human_sacrifice }
+    }
+}
+
+
+    is_valid = {
+        always = yes
+    }
+}
+
+monastic_armed_pilgrimages_intent = {
+    on_return_raid_loot = {
+        scope:raider = {
+            send_interface_message = {
+                type = event_raid_good
+                title = raiding.0011.t
+                right_icon = root.army_commander
+                add_gold = {
+                    value = scope:raid_loot
+                    multiply = 1.0
+                }
+                add_piety = {
+                    value = scope:raid_loot
+                    multiply = 1.0
+                }
+            }
+        }
+    }
+
+    modifier = {
+        hostile_attrition_mult = 0.75
+        raid_speed = -0.3
+    }
+
+    ai_will_do = {
+        value = 5
+    }
+
+    is_shown = {
+		government_has_flag = government_is_monastic_feudal
+        }
+
+    is_valid = {
+        always = yes
+    }
+}
+
+
+

@@ -3,11 +3,11 @@
         reference = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
     }
 
-    decision_group_type = major
+    decision_group_type = flavor_medium
 	selection_tooltip = regenerative_slumber_tooltip
 	desc = regenerative_slumber_decision_desc
 	
-    ai_check_interval = 240
+    ai_check_interval = 120
 
     cooldown = { years = 5 }
 
@@ -26,6 +26,10 @@
 		remove_trait = ergotism
 		remove_trait = pneumonic
 		remove_trait = dysentery
+		remove_trait = maimed
+		remove_trait = one_eyed
+		remove_trait = one_legged
+		remove_trait = disfigured
 		add_stress = -70
 		add_character_modifier = {
             modifier = modifier_sleeping
@@ -49,7 +53,7 @@ create_majin_minion_decision = {
         reference = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
     }
 
-    decision_group_type = major
+    decision_group_type = flavor_medium
 	selection_tooltip = create_majin_minion_tooltip
 	desc = create_majin_minion_desc
 	
@@ -87,7 +91,7 @@ create_majin_minion_decision = {
     }
 
     ai_will_do = {
-        base = 20
+        base = 50
     }
 }
 
@@ -97,15 +101,12 @@ god_ritual_decision = {
     }
     desc = god_ritual_decision_desc
     selection_tooltip = god_ritual_decision_tooltip
-    decision_group_type = major
+    decision_group_type = flavor_medium
 
     ai_check_interval = 120
 
     is_shown = {
-		OR = {
 		has_trait = pure_saiyan
-		has_trait = hybrid_saiyan
-		}
         NOT = {
 			has_trait = super_saiyan
             has_trait = super_saiyan_2
@@ -141,15 +142,12 @@ super_saiyan_decision = {
     }
     desc = super_saiyan_decision_desc
     selection_tooltip = super_saiyan_decision_tooltip
-    decision_group_type = major
+    decision_group_type = flavor_medium
 
     ai_check_interval = 120
 
     is_shown = {
-        OR = {
-            has_trait = pure_saiyan
-            has_trait = hybrid_saiyan
-        }
+        has_trait = pure_saiyan
         NOT = {
             has_trait = super_saiyan
             has_trait = super_saiyan_2
@@ -160,10 +158,7 @@ super_saiyan_decision = {
     }
 
     is_valid = {
-        OR = {
-            has_trait = pure_saiyan
-            has_trait = hybrid_saiyan
-        }
+        has_trait = pure_saiyan
         prestige_level >= 2
     }
 
@@ -182,7 +177,7 @@ super_saiyan_decision = {
     }
 
     ai_will_do = {
-        base = 20
+        base = 100
     }
 }
 
@@ -193,15 +188,12 @@ super_saiyan_2_decision = {
     }
     desc = super_saiyan_2_decision_desc
     selection_tooltip = super_saiyan_decision_tooltip
-    decision_group_type = major
+    decision_group_type = flavor_medium
 
     ai_check_interval = 120
 
     is_shown = {
-		OR = {
 		has_trait = pure_saiyan
-		has_trait = hybrid_saiyan
-		}
         NOT = {
             has_trait = super_saiyan_2
             has_trait = super_saiyan_3
@@ -211,10 +203,7 @@ super_saiyan_2_decision = {
     }
 
     is_valid = {
-		OR = {
 		has_trait = pure_saiyan
-		has_trait = hybrid_saiyan
-		}
         prestige_level >= 2
 		has_trait = super_saiyan
     }
@@ -238,15 +227,12 @@ super_saiyan_3_decision = {
     }
     desc = super_saiyan_3_decision_desc
     selection_tooltip = super_saiyan_decision_tooltip
-    decision_group_type = major
+    decision_group_type = flavor_medium
 
     ai_check_interval = 120
 
     is_shown = {
-		OR = {
 		has_trait = pure_saiyan
-		has_trait = hybrid_saiyan
-		}
         NOT = {
 			has_trait = super_saiyan
             has_trait = super_saiyan_3
@@ -256,10 +242,7 @@ super_saiyan_3_decision = {
     }
 
     is_valid = {
-		OR = {
 		has_trait = pure_saiyan
-		has_trait = hybrid_saiyan
-		}
         prestige_level >= 3
 		has_trait = super_saiyan_2
     }
@@ -284,7 +267,7 @@ full_power_decision = {
     }
     desc = full_power_decision_desc
     selection_tooltip = full_power_decision_tooltip
-    decision_group_type = major
+    decision_group_type = flavor_medium
 
     ai_check_interval = 120
 
@@ -323,7 +306,7 @@ golden_form_decision = {
     }
     desc = golden_form_decision_desc
     selection_tooltip = golden_form_decision_tooltip
-    decision_group_type = major
+    decision_group_type = flavor_medium
 
     ai_check_interval = 120
 
@@ -362,7 +345,7 @@ absorption_decision = {
         reference = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
     }
 
-    decision_group_type = major
+    decision_group_type = flavor_medium
 	selection_tooltip = absorption_decision_tooltip
 	desc = absorption_decision_desc
 	

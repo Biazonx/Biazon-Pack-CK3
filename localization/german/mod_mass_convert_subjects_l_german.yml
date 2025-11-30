@@ -5,14 +5,17 @@
 
  mod_convert_direct_vassals_loc: "$game_concept_direct_vassals$ ([SCOPE.ScriptValue('mod_convert_direct_vassals_number')])"
  mod_convert_direct_vassals_tooltip: "Schickt all Euren ungläubigen $game_concept_direct_vassals$ die Aufforderung Euren Glauben anzunehmen."
- 
+
  mod_convert_indirect_vassals_loc: "Indirekte $game_concept_vassals$ ([SCOPE.ScriptValue('mod_convert_indirect_vassals_number')])"
  mod_convert_indirect_vassals_tooltip: "Schickt all Euren ungläubigen indirekten $game_concept_vassals$ die Aufforderung Euren Glauben anzunehmen."
- 
+
+ mod_convert_tributaries_loc: "Tributpflichtige ([SCOPE.ScriptValue('mod_convert_tributaries_number')])"
+ mod_convert_tributaries_tooltip: "Schickt all Euren ungläubigen Tributpflichtigen die Aufforderung Euren Glauben anzunehmen.."
+
  mod_convert_courtiers_loc: "Höflinge ([SCOPE.ScriptValue('mod_convert_courtiers_number')])"
  mod_convert_courtiers_tooltip: "Schickt all Euren ungläubigen [courtiers|E] die Aufforderung Euren Glauben anzunehmen."
- 
+
  mod_convert_house_loc: "Hausmitglieder ([SCOPE.ScriptValue('mod_convert_house_number')])"
  mod_convert_house_tooltip: "Schickt all Euren ungläubigen Hausmitgliedern die Aufforderung Euren Glauben anzunehmen."
- 
+
  mod_mass_convert_subjects_decision_confirm: "Aufforderungen abschicken"

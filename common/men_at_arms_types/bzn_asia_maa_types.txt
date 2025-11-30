@@ -1,111 +1,77 @@
-naginata = {
-	type = heavy_infantry
+kaikola = {# the Weaver-soldiers of the Chola Empire
+	type = skirmishers
 
-	damage = 33
-	toughness = 20
-	pursuit = 15
-	screen = 17
+	damage = 10
+	toughness = 14
+	pursuit = 12
+	screen = 18
 
 	terrain_bonus = {
-		forest = { damage = 4 toughness = 6 }
-		hills = { damage = 3 toughness = 8 }
-		mountains = { damage = 5 toughness = 12 }
+		mountains = { damage = 10 toughness = 10 }
+		desert_mountains = { damage = 6 toughness = 6 }
+		hills = { damage = 6 toughness = 6 }
+		forest = { toughness = 4 }
+		jungle = { toughness = 4 }
 	}
 
 	counters = {
-		pikemen = 1
+		heavy_infantry = 1
 	}
 
 	can_recruit = {
-		NOR = {
-			government_has_flag = government_is_nomadic
-			government_has_flag = government_is_herder
-		}
-		valid_for_maa_trigger = { PARAMETER = unlock_maa_naginata }
-		NOT = {
-			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
-		}
+		culture = culture:tamil
 	}
 
-	buy_cost = { gold = mountaineer_recruitment_cost }
-	low_maintenance_cost = { gold = mountaineer_low_maint_cost }
-	high_maintenance_cost = { gold = mountaineer_high_maint_cost }
-	provision_cost = @provisions_cost_infantry_moderate
+	buy_cost = { gold = 40 }
+	low_maintenance_cost = { gold = 0.1 }
+	high_maintenance_cost = { gold = 0.40 }
+	provision_cost = @provisions_cost_infantry_cheap
 
 	stack = 100
-	ai_quality = { value = @cultural_maa_extra_ai_score }
-	icon = naginata
+	ai_quality = { value = @[cultural_maa_extra_ai_score - 90] }
+	icon = skirmishers
 }
 
-yumi = {
-	type = archers
+shrivamsha = {# Shrivamsha - horse breed that could easily accross seas of sand. 
+	type = light_cavalry
 	
-	damage = 20
-	toughness = 10
-	pursuit = 0
-	screen = 0
+	damage = 25
+	toughness = 15
+	pursuit = 30
+	screen = 30
 	
 	terrain_bonus = {
-		hills = { damage = 12 toughness = 4 }
-		forest = { damage = 4 toughness = 6 }
+		drylands = { damage = 10 pursuit = 10 }
+		desert = { damage = 10 pursuit = 10 }
+		oasis = { damage = 10 pursuit = 10 }
+		desert_mountains = { damage = 10 pursuit = 10 }
+		plains = { damage = 10 }
+		wetlands = { damage = -15 toughness = -10 pursuit = -30 screen = -30 }
+		jungle = { damage = -15 toughness = -10 pursuit = -30 screen = -30 }
 	}
 
 	counters = {
-		skirmishers = 1
-		heavy_cavalry = 1
-	}
-
-	can_recruit = {
-		NOR = {
-			government_has_flag = government_is_nomadic
-			government_has_flag = government_is_herder
-		}
-		valid_for_maa_trigger = { PARAMETER = unlock_maa_yumi }
-	}
-
-	buy_cost = { gold = longbowmen_recruitment_cost }
-	low_maintenance_cost = { gold = longbowmen_low_maint_cost }
-	high_maintenance_cost = { gold = longbowmen_high_maint_cost }
-	provision_cost = @provisions_cost_infantry_moderate
-
-	stack = 100
-	ai_quality = { value = @cultural_maa_extra_ai_score }
-	icon = yumi
-}
-
-yari = {
-	type = pikemen
-
-	damage = 22
-	toughness = 25
-	pursuit = 0
-	screen = 10
-
-	terrain_bonus = {
-		hills = { damage = 3 toughness = 8 }
-		mountains = { damage = 5 toughness = 12 }
-		desert_mountains = { damage = 5 toughness = 12 }
-	}
-
-	counters = {
-		light_cavalry = 1
 		archers = 1
+		heavy_infantry = 1
 	}
 
 	can_recruit = {
-		NOR = {
-			government_has_flag = government_is_nomadic
-			government_has_flag = government_is_herder
+			OR = {
+				culture = culture:rajput
+				culture = culture:gujarati
+				culture = culture:sindhi
 		}
-		valid_for_maa_trigger = { PARAMETER = unlock_maa_yari }
+	}
+	winter_bonus = {
+		harsh_winter = { damage = -5 toughness = -3 }
 	}
 
-	buy_cost = { gold = 75 }
-	low_maintenance_cost = { gold = 0.3 }
-	high_maintenance_cost = { gold = 0.9 }
-	provision_cost = @provisions_cost_infantry_moderate
+	buy_cost = { gold = 94 }
+	low_maintenance_cost = { gold = 0.385 }
+	high_maintenance_cost = { gold = 1.155 }
+	provision_cost = @provisions_cost_cavalry_moderate
 
 	stack = 100
-	ai_quality = { value = @cultural_maa_extra_ai_score }
-	icon = yari
+	ai_quality = { value = @[cultural_maa_extra_ai_score + 40] }
+	icon = light_cavalry
 }

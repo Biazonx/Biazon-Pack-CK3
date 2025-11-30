@@ -1,0 +1,100 @@
+dharma_legacy_1 = {
+	legacy = dharma_legacy_track
+	character_modifier = {
+		faith_conversion_piety_cost_mult = -0.15
+		learning = 2
+		monthly_piety_gain_mult = 0.1
+	}
+	can_be_picked = {
+		is_landed = yes
+		OR = {
+			religion = religion:hinduism_religion
+			religion = religion:jainism_religion
+			religion = religion:buddhism_religion 
+			religion = religion:bon_religion 
+		}
+	}
+	ai_chance = {
+		value = 11
+		if = {
+			limit = {
+				can_start_new_legacy_track_trigger = no
+			}
+			multiply = 0
+		}
+	}
+}
+
+dharma_legacy_2 = {
+	legacy = dharma_legacy_track
+	character_modifier = {
+		same_faith_opinion = 10
+		monthly_county_control_growth_add = 0.15
+	}
+	can_be_picked = {
+		is_landed = yes
+		OR = {
+			religion = religion:hinduism_religion
+			religion = religion:jainism_religion
+			religion = religion:buddhism_religion 
+			religion = religion:bon_religion 
+		}
+}
+}
+
+dharma_legacy_3 = {
+	legacy = dharma_legacy_track
+	character_modifier = {
+		cultural_head_acceptance_gain_mult = 0.25
+		character_capital_county_monthly_development_growth_add = 0.30
+	}
+	can_be_picked = {
+		is_landed = yes
+		OR = {
+			religion = religion:hinduism_religion
+			religion = religion:jainism_religion
+			religion = religion:buddhism_religion 
+			religion = religion:bon_religion 
+		}
+}
+}
+
+dharma_legacy_4 = {
+	legacy = dharma_legacy_track
+	character_modifier = {
+		monthly_lifestyle_xp_gain_mult = 0.25
+		stress_gain_mult = -0.15
+		monthly_dynasty_prestige_mult = 0.25 
+	}
+	can_be_picked = { 
+		is_landed = yes
+		OR = {
+			religion = religion:hinduism_religion
+			religion = religion:jainism_religion
+			religion = religion:buddhism_religion 
+			religion = religion:bon_religion 
+		}
+}
+}
+
+dharma_legacy_5 = {
+	legacy = dharma_legacy_track
+	character_modifier = {
+		learning_per_piety_level = 2
+		vassal_opinion = 10
+		opinion_of_different_culture = 10
+		different_culture_opinion = 10
+	}
+	effect = {
+	add_trait = chakravarti
+	}
+	can_be_picked = {
+		is_landed = yes
+		OR = {
+			religion = religion:hinduism_religion
+			religion = religion:jainism_religion
+			religion = religion:buddhism_religion 
+			religion = religion:bon_religion 
+		}
+}
+}

@@ -8,6 +8,7 @@
 	pagan_roots = yes
 	
 	#Main Group
+	doctrine = doctrine_polytheist
 	doctrine = doctrine_no_head
 	doctrine = doctrine_gender_male_dominated
 	doctrine = doctrine_pluralism_pluralistic
@@ -37,6 +38,9 @@
 	doctrine = doctrine_pilgrimage_encouraged
 	doctrine = doctrine_funeral_cremation
 	doctrine = cemanahuac_hostility_doctrine
+	
+	#Coronation tradition
+	doctrine = doctrine_imperial_anointment
 	
 	traits = {
 		virtues = { just temperate callous }

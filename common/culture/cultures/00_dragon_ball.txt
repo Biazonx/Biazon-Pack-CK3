@@ -6,7 +6,7 @@
  language = language_saiyan
  martial_custom = martial_custom_equal
  traditions = {
-  tradition_martial_admiration
+  tradition_only_the_strong
   tradition_ruling_caste
   tradition_eye_for_an_eye
   tradition_swords_for_hire
@@ -33,11 +33,11 @@ namekian = {
  language = language_namekian
  martial_custom = martial_custom_equal
  traditions = {
-  tradition_philosopher_culture
-  tradition_agrarian
-  tradition_highland_warriors
-  tradition_storytellers
-  tradition_mendicant_mystics
+	tradition_legalistic
+	tradition_fervent_temple_builders
+	tradition_sacred_groves
+	tradition_mendicant_mystics
+	tradition_agrarian
  }
 
  name_list = name_list_namekian  
@@ -90,10 +90,10 @@ majin = {
  martial_custom = martial_custom_equal
  traditions = {
   tradition_eye_for_an_eye
-  tradition_storytellers
+  tradition_life_is_just_a_joke
   tradition_festivities
   tradition_equal_inheritance
-  tradition_mendicant_mystics
+  tradition_malleable_invaders
  }
 
  name_list = name_list_majin  

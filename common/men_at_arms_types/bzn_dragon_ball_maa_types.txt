@@ -33,7 +33,7 @@ saiyan_warriors = {
 
     stack = 100
     ai_quality = { value = @cultural_maa_extra_ai_score }
-    icon = heavy_infantry
+    icon = saiyan_soldiers 
 }
 
 namekian_guardians = {
@@ -64,5 +64,5 @@ namekian_guardians = {
 
     stack = 100
     ai_quality = { value = @cultural_maa_extra_ai_score }
-    icon = heavy_infantry
+    icon = piccolo_demon_soldier
 }

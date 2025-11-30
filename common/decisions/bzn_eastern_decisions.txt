@@ -4,7 +4,7 @@ bzn_contact_eastern_decision = {
     }
 	
 	desc = bzn_contact_eastern_decision_desc
-    decision_group_type = major
+    decision_group_type = flavor_medium
     ai_check_interval = 120
 	
 	cooldown = { years = 1 }
@@ -16,7 +16,7 @@ bzn_contact_eastern_decision = {
     is_valid = {
     }
 	
-	cost = { gold = 25 prestige = 100 }
+	cost = { gold = 25 prestige = 50 }
 	
     effect = {
 		add_character_modifier = {
@@ -37,7 +37,7 @@ bzn_invite_chinese_traveler_decision = {
         reference = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
     }
 
-    decision_group_type = courtier
+    decision_group_type = flavor_medium
 
     ai_check_interval = 240
 
@@ -74,7 +74,7 @@ bzn_invite_japanese_samurai_decision = {
         reference = "gfx/interface/illustrations/decisions/decision_knight_kneeling.dds"
     }
 
-    decision_group_type = courtier
+    decision_group_type = flavor_medium
 
     ai_check_interval = 240
 
@@ -111,7 +111,7 @@ bzn_invite_jewish_merchant_decision = {
         reference = "gfx/interface/illustrations/decisions/fp3_decision_tax_collector.dds"
     }
 
-    decision_group_type = courtier
+    decision_group_type = flavor_medium
 
     ai_check_interval = 240
 
@@ -147,7 +147,7 @@ bzn_become_samurai = {
     picture = {
         reference = "gfx/interface/illustrations/decisions/decision_knight_kneeling.dds"
     }
-    decision_group_type = major
+    decision_group_type = become_medium
     ai_check_interval = 0
 
     is_shown = {
@@ -187,7 +187,7 @@ bzn_become_ronin = {
     picture = {
         reference = "gfx/interface/illustrations/decisions/decision_legend.dds"
     }
-    decision_group_type = major
+    decision_group_type = become_medium
     ai_check_interval = 0
 
     is_shown = {
@@ -234,7 +234,7 @@ bzn_embrace_chinese_culture_decision = {
 		reference = "gfx/interface/illustrations/decisions/decision_culture.dds"
 	}
 
-	decision_group_type = major
+	decision_group_type = flavor_medium
 
 	ai_check_interval = 0
 
@@ -275,7 +275,7 @@ bzn_embrace_japanese_culture_decision = {
 		reference = "gfx/interface/illustrations/decisions/decision_culture.dds"
 	}
 
-	decision_group_type = major
+	decision_group_type = flavor_medium
 
 	ai_check_interval = 0
 
@@ -316,15 +316,15 @@ bzn_adopt_shinto_decision = {
 		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
 	}
 
-	decision_group_type = major
+	decision_group_type = flavor_medium
 
 	ai_check_interval = 0
 
 	is_shown = {
 		has_character_modifier = contacted_eastern
-		NOT = { faith = faith:shin}
+		NOT = { faith = faith:shinto}
 		any_courtier = {
-            faith = faith:shin
+            faith = faith:shinto
         }
 	}
 
@@ -337,9 +337,9 @@ bzn_adopt_shinto_decision = {
 	cost = { piety = 250 }
 
 	effect = {
-		set_character_faith = faith:shin
+		set_character_faith = faith:shinto
 		capital_county = {
-			set_county_faith = faith:shin
+			set_county_faith = faith:shinto
 		}
 	}
 

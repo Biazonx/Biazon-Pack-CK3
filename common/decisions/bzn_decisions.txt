@@ -1,9 +1,68 @@
-﻿bzn_adopt_behafaridism = {
+﻿bzn_change_asatru = {
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
 	}
 
-	decision_group_type = major
+	decision_group_type = flavor_medium
+
+	ai_check_interval = 120
+
+	is_shown = {
+		faith = faith:norse_pagan
+		is_landless_adventurer = no
+	}
+	
+	is_valid = {
+		faith = faith:norse_pagan
+		OR = {
+			AND = {
+				learning >= 12
+				OR = {
+					has_trait = poet
+					has_trait = scholar
+					has_trait = theologian
+					has_trait = lifestyle_mystic
+				}
+			}
+			custom_description = {
+				text = appoint_a_righteous_caliph_decision.control_two_holy_sites
+			faith = {
+				any_holy_site = {
+					count >= 2
+					holder.top_liege = root
+					}
+				}
+			}
+			
+		}
+		
+	}
+	
+	desc = bzn_change_asatru_desc
+	cost = { piety = 1000 }
+
+	effect = {
+		root.faith = { remove_doctrine = tenet_warmonger } 
+		root.faith = { remove_doctrine = doctrine_consanguinity_cousins }
+		root.faith = { add_doctrine = tenet_reincarnation } 
+		root.faith = { add_doctrine = tenet_divine_marriage } 
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+bzn_adopt_behafaridism = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	}
+
+	decision_group_type = flavor_medium
 
 	ai_check_interval = 240
 
@@ -147,7 +206,7 @@ bzn_become_inquisitor = {
         reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
     }
 
-    decision_group_type = realm
+    decision_group_type = become_medium
 
     ai_check_interval = 0
 
@@ -191,7 +250,7 @@ bzn_become_artisan = {
     picture = {
         reference = "gfx/interface/illustrations/decisions/decision_smith.dds"
     }
-    decision_group_type = realm
+    decision_group_type = become_medium
     ai_check_interval = 0
 
     is_shown = {
@@ -242,7 +301,7 @@ bzn_become_merchant = {
     picture = {
         reference = "gfx/interface/illustrations/decisions/decision_spend_money.dds"
     }
-    decision_group_type = realm
+    decision_group_type = become_medium
     ai_check_interval = 0
 
     is_shown = {
@@ -288,7 +347,7 @@ bzn_become_warlord = {
     picture = {
         reference = "gfx/interface/illustrations/decisions/fp1_decision_forge_jomsvikings.dds"
     }
-    decision_group_type = realm
+    decision_group_type = become_medium
     ai_check_interval = 0
 
     is_shown = {
@@ -337,7 +396,7 @@ bzn_looting_tradition_decision = {
     picture = {
         reference = "gfx/interface/illustrations/decisions/decision_legitimacy.dds"
     }
-    sort_order = 62
+    decision_group_type = flavor_medium
     ai_check_interval = 0
 
     is_shown = {
@@ -379,7 +438,7 @@ bzn_battle_thrall_decision = {
     picture = {
         reference = "gfx/interface/illustrations/decisions/decision_knight_kneeling.dds"
     }
-    decision_group_type = courtier
+    decision_group_type = flavor_medium
     ai_check_interval = 120
     cooldown = { years = 1 }
 
@@ -429,7 +488,7 @@ bzn_become_mercenary_patron = {
 		reference = "gfx/interface/illustrations/decisions/ep3_decision_hold_triumph.dds"
 	}
 
-	decision_group_type = realm
+	decision_group_type = become_medium
 
 	ai_check_interval = 0
 
@@ -453,154 +512,6 @@ bzn_become_mercenary_patron = {
 
 	effect = { 
 		add_trait = mercenary_patron 
-	}
-
-	ai_potential = {
-		always = no
-	}
-
-	ai_will_do = {
-		base = 0
-	}
-}
-
-bzn_adopt_monastic_feudal_decision = {
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
-	}
-
-	sort_order = 4
-
-	ai_check_interval = 120
-
-	is_shown = {
-		NOT = { has_government = monastic_feudal_government }
-		has_government = feudal_government
-	}
-	
-	is_valid = {
-		NOT = { has_character_modifier = guild_patron }
-	}
-	desc = bzn_adopt_monastic_feudal_decision_desc
-	cost = { piety = 150 }
-
-	effect = {
-		change_government = monastic_feudal_government
-		every_vassal_or_below = {
-				limit = { government_has_flag = government_is_feudal }
-				change_government = monastic_feudal_government
-			}
-	}
-
-	ai_potential = {
-		always = no
-	}
-
-	ai_will_do = {
-		base = 0
-	}
-}
-
-bzn_adopt_confederate_tribal_decision = {
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
-	}
-
-	sort_order = 3
-
-	ai_check_interval = 120
-
-	is_shown = {
-		NOT = { has_government = confederate_tribal_government }
-		has_government = tribal_government
-	}
-	
-	is_valid = {
-		NOT = { has_character_modifier = tribal_army }
-		custom_tooltip = {
-                text = bzn_warrior_society
-				NOT = { has_variable = warrior_society }
-		}
-	}
-	desc = bzn_adopt_confederate_tribal_decision_desc
-	cost = { prestige = 150 }
-
-	effect = {
-		change_government = confederate_tribal_government
-		every_vassal_or_below = {
-				limit = { government_has_flag = government_is_tribal }
-				change_government = confederate_tribal_government
-			}
-	}
-
-	ai_potential = {
-		always = yes
-	}
-
-	ai_will_do = {
-		base = 1
-		modifier = {
-			factor = 100
-			any_held_title = {
-			tier = tier_county
-			title_province = { geographical_region = custom_ireland }
-			}
-		}
-	}
-}
-
-bzn_decentralize_decision = {
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
-	}
-
-	sort_order = 5
-
-	ai_check_interval = 0
-
-	is_shown = {
-		is_landless_adventurer = no
-		OR = {
-		has_government = confederate_tribal_government
-		has_government = feudal_government
-		}
-	}
-	
-	is_valid = {
-	}
-	desc = bzn_decentralize_decision_desc
-	cost = { prestige = 200 }
-
-	effect = {
-		save_scope_as = actor
-		every_vassal = {
-			save_scope_as = recipient
-			add_opinion = {
-				target = scope:actor
-				modifier = granted_independence_opinion
-				opinion = 10
-			}
-			create_title_and_vassal_change = {
-				type = independency
-				save_scope_as = change
-				add_claim_on_loss = yes
-			}
-			
-			becomes_independent = {
-				change = scope:change
-			}
-
-			resolve_title_and_vassal_change = scope:change
-			
-			demand_tribute_start_tributary_interaction_effect = {
-				SUZERAIN = scope:actor
-				TRIBUTARY = scope:recipient
-			}
-		}
-		set_variable = {
-			name = decentralized_realm
-			years = 100
-		}
 	}
 
 	ai_potential = {
@@ -694,7 +605,7 @@ bzn_impaler = {
     picture = {
         reference = "gfx/interface/illustrations/decisions/ep3_decision_varangian_guard.dds"
     }
-    decision_group_type = realm
+    decision_group_type = become_medium
     ai_check_interval = 0
     is_shown = {
         is_landless_adventurer = no
@@ -730,7 +641,7 @@ bzn_pirate_captain = {
     picture = {
         reference = "gfx/interface/illustrations/decisions/fp1_decision_forge_jomsvikings.dds"
     }
-    decision_group_type = realm
+    decision_group_type = become_medium
     ai_check_interval = 0
     is_shown = {
         is_landless_adventurer = no
@@ -768,7 +679,7 @@ bzn_slaver = {
     picture = {
         reference = "gfx/interface/illustrations/decisions/ep3_decision_varangian_guard.dds"
     }
-    decision_group_type = realm
+    decision_group_type = become_medium
     ai_check_interval = 0
     is_shown = {
         is_landless_adventurer = no
@@ -802,7 +713,7 @@ bzn_headhunter = {
     picture = {
         reference = "gfx/interface/illustrations/decisions/decision_prison.dds"
     }
-    decision_group_type = realm
+    decision_group_type = become_medium
     ai_check_interval = 0
     is_shown = {
         is_landless_adventurer = no
@@ -841,7 +752,7 @@ challenge_statue_to_duel_decision = {
         reference = "gfx/interface/illustrations/decisions/mpo_decision_confederation.dds"
     }
 	
-	decision_group_type = major
+	decision_group_type = flavor_medium
     ai_check_interval = 120
     cooldown = { years = 5 }
 
@@ -884,7 +795,7 @@ write_manifesto_to_stars_decision = {
     }
 
     ai_check_interval = 120
-    decision_group_type = major
+    decision_group_type = flavor_medium
     cooldown = { years = 5 }
 
     is_shown = {
@@ -922,7 +833,7 @@ bzn_embrace_madness = {
     picture = {
         reference = "gfx/interface/illustrations/decisions/decision_prison.dds"
     }
-    decision_group_type = realm
+    decision_group_type = flavor_medium
     ai_check_interval = 120
 	
     is_shown = {
@@ -954,7 +865,7 @@ bzn_enter_trance = {
     picture = {
         reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
     }
-    decision_group_type = realm
+    decision_group_type = flavor_medium
     ai_check_interval = 120
 	
     is_shown = {
@@ -986,7 +897,7 @@ bzn_classics = {
 	picture = {
         reference = "gfx/interface/illustrations/decisions/decision_legend.dds"
     }
-    sort_order = 2
+    decision_group_type = flavor_medium
     ai_check_interval = 120
 	
     is_shown = {
@@ -1032,7 +943,7 @@ bzn_borrow_jews = {
     }
 	
 	desc = bzn_borrow_jews_desc
-    sort_order = 10
+    decision_group_type = flavor_medium
     ai_check_interval = 120
 	
     is_shown = {
@@ -1074,7 +985,7 @@ bzn_repay_jews = {
     }
 	
 	desc = bzn_repay_jews_desc
-    sort_order = 9
+    decision_group_type = flavor_medium
     ai_check_interval = 120
 	
     is_shown = {
@@ -1103,7 +1014,7 @@ bzn_expel_jews = {
     }
 	
 	desc = bzn_expel_jews_desc
-    sort_order = 8
+    decision_group_type = flavor_medium
     ai_check_interval = 120
 	
     is_shown = {
@@ -1151,7 +1062,7 @@ bzn_welcome_jews = {
     }
 	
 	desc = bzn_welcome_jews_desc
-    sort_order = 7
+    decision_group_type = flavor_medium
     ai_check_interval = 120
 	
     is_shown = {
@@ -1641,7 +1552,7 @@ bzn_high_druid = {
     picture = {
         reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
     }
-    decision_group_type = major
+    decision_group_type = become_medium
     ai_check_interval = 0
     is_shown = {
         is_landless_adventurer = no
@@ -1679,7 +1590,7 @@ bzn_influence_courtier_decision = {
         reference = "gfx/interface/illustrations/decisions/fp3_decision_tax_collector.dds"
     }
 
-    decision_group_type = courtier
+    decision_group_type = flavor_medium
 
     ai_check_interval = 0
 
@@ -1718,7 +1629,7 @@ bzn_become_hashishiyah_decision = {
         reference = "gfx/interface/illustrations/decisions/decision_knight_kneeling.dds"
     }
 
-    decision_group_type = realm
+    decision_group_type = flavor_medium
 
     ai_check_interval = 0
 

@@ -6,6 +6,7 @@
 	pagan_roots = yes
 
 	#Main Group
+	doctrine = doctrine_polytheist
 	doctrine = doctrine_no_head
 	doctrine = doctrine_gender_equal #Women could hold jobs and buisnesses and where treated with respect although men had more rights, so it's a bit up to debate. 
 	doctrine = doctrine_pluralism_pluralistic
@@ -54,6 +55,9 @@
 
 	#Funeral tradition
 	doctrine = doctrine_funeral_stoic
+	
+	#Coronation tradition
+	doctrine = doctrine_no_anointment
 
 	traits = {
 		virtues = { content patient diligent }

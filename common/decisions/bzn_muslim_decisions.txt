@@ -3,7 +3,7 @@ bzn_manage_harem_decision = {
 		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
 	}
 
-	decision_group_type = major
+	decision_group_type = flavor_medium
 
 	ai_check_interval = 240
 	cooldown = { years = 5 }
@@ -17,7 +17,7 @@ bzn_manage_harem_decision = {
 		is_married = yes
 	}
 	desc = bzn_manage_harem_decision_desc
-	cost = { prestige = 75 }
+	cost = { piety = 75 }
 
 	effect = {
 		save_scope_as = actor
@@ -52,7 +52,7 @@ bzn_invite_mamluk_decision = {
         reference = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
     }
 
-    decision_group_type = major
+    decision_group_type = flavor_medium
 
     ai_check_interval = 240
 
@@ -90,7 +90,7 @@ bzn_observe_ramadan_decision = {
     }
 	
 	desc = bzn_observe_ramadan_decision_desc
-    decision_group_type = major
+    decision_group_type = flavor_medium
     ai_check_interval = 240
 	
 	cooldown = { years = 5 }
@@ -126,7 +126,7 @@ bzn_pay_sadaqah_decision = {
     }
 	
 	desc = bzn_pay_sadaqah_decision_desc
-    decision_group_type = major
+    decision_group_type = flavor_medium
     ai_check_interval = 240
 	
 	cooldown = { years = 5 }
@@ -137,7 +137,7 @@ bzn_pay_sadaqah_decision = {
     is_valid = {
     }
 	
-	cost = { gold = 50 }
+	cost = { gold = 0 }
 	
     effect = {
 		add_character_modifier = {

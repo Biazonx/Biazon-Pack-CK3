@@ -30,14 +30,14 @@
 			20 = { add_trait = confucious }
 			}
 		random_list = {
-			12.5 = { set_character_faith = faith:pudgalavada }
-			12.5 = { set_character_faith = faith:azhaliism }
-			12.5 = { set_character_faith = faith:zenzong }
-			12.5 = { set_character_faith = faith:kegon }
-			12.5 = { set_character_faith = faith:tiantai }
-			12.5 = { set_character_faith = faith:jingtu }
-			12.5 = { set_character_faith = faith:vijna }
-			12.5 = { set_character_faith = faith:ari }
+			12.5 = { set_character_faith = faith:pundarika }
+			12.5 = { set_character_faith = faith:mantrayana }
+			12.5 = { set_character_faith = faith:sukhavati }
+			12.5 = { set_character_faith = faith:avatamsaka }
+			12.5 = { set_character_faith = faith:dhyana }
+			12.5 = { set_character_faith = faith:maitreya }
+			12.5 = { set_character_faith = faith:jingxue }
+			12.5 = { set_character_faith = faith:yogacara }
 		}
 	}	
 }
@@ -53,7 +53,7 @@ bzn_new_samurai_character = {
     }
     dynasty = none
     random_traits = yes
-    faith = faith:shin
+    faith = faith:shinto
     culture = culture:japanese
     stewardship = { 2 10 }
     prowess = { 8 16 }

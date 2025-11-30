@@ -3,7 +3,7 @@ bzn_raise_zealots = {
         reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
     }
 
-    decision_group_type = major
+    decision_group_type = flavor_medium
 	ai_check_interval = 0
     desc = bzn_raise_zealots_desc
 
@@ -40,147 +40,12 @@ bzn_raise_zealots = {
     }
 }
 
-found_special_force_decision = {
-    picture = {
-        reference = "gfx/interface/illustrations/decisions/fp1_decision_forge_jomsvikings.dds"
-    }
-
-    decision_group_type = major
-    ai_check_interval = 120
-    desc = "found_special_force_decision_desc"
-
-    is_shown = {
-        has_trait = frieza_race
-        NOT = { has_character_modifier = modifier_special_force }
-        is_landless_adventurer = no
-    }
-
-    is_valid = {
-        has_trait = frieza_race
-        prestige_level >= 2
-    }
-
-    effect = {
-        add_character_modifier = {
-            modifier = modifier_special_force
-            years = -1
-        }
-    }
-
-    cost = {
-        prestige = 1000
-        gold = 250
-    }
-
-    ai_potential = {
-        always = yes
-    }
-
-    ai_will_do = {
-        base = 20
-    }
-}
-
-bzn_special_army_decision = {
-    picture = {
-        reference = "gfx/interface/illustrations/decisions/fp1_decision_forge_jomsvikings.dds"
-    }
-
-    decision_group_type = major
-    ai_check_interval = 120
-    desc = bzn_special_army_decision_desc
-
-    cooldown = {
-        years = 5
-    }
-
-    is_shown = {
-        is_landless_adventurer = no
-        has_character_modifier = modifier_special_force
-    }
-
-    is_valid = {
-        is_landless_adventurer = no
-        has_character_modifier = modifier_special_force
-    }
-
-    cost = {
-        prestige = 500
-    }
-
-    effect = {
-        spawn_army = {
-            men_at_arms = {
-                type = house_guard
-                stacks = 10
-            }
-            location = capital_province
-            inheritable = no
-            uses_supply = yes
-            name = bzn.special
-        }
-    }
-
-    ai_potential = {
-        always = yes
-    }
-
-    ai_will_do = {
-        base = 20
-    }
-}
-
-establish_trade_organization = {
-	picture = {
-        reference = "gfx/interface/illustrations/decisions/ep3_decision_hold_triumph.dds"
-    }
-
-    decision_group_type = major
-    ai_check_interval = 120
-    desc = "establish_trade_organization_decision_desc"
-
-    is_shown = {
-        has_trait = frieza_race
-        is_landless_adventurer = no
-        NOT = { has_character_modifier = galactic_trade_hub }
-    }
-
-    is_valid = {
-		prestige_level >= 3
-        OR = {
-			diplomacy >= 15
-			stewardship >= 15
-			has_trait = architect
-            has_trait = administrator
-            has_trait = avaricious
-        }
-    }
-	
-	cost = { gold = 500 }
-	
-    effect = {
-        add_character_modifier = {
-            modifier = galactic_trade_hub
-            years = -1
-        }
-    }
-	
-	ai_potential = {
-        always = yes
-    }
-
-    ai_will_do = {
-        base = 20
-    }
-}
-
-
 found_hashishiyah_society_decision = {
     picture = {
         reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
     }
 
-    decision_group_type = major
+    decision_group_type = flavor_medium
     ai_check_interval = 0
     desc = "found_hashishiyah_society_decision_desc"
 
@@ -233,7 +98,7 @@ bzn_capture_slaves_decision = {
     }
 
     ai_check_interval = 0
-	decision_group_type = realm
+	decision_group_type = flavor_medium
     cooldown = { years = 2 }
 
     is_shown = {
@@ -319,7 +184,7 @@ challenge_statue_to_duel_decision = {
         reference = "gfx/interface/illustrations/decisions/mpo_decision_confederation.dds"
     }
 	
-	decision_group_type = major
+	decision_group_type = flavor_medium
     ai_check_interval = 120
     cooldown = { years = 5 }
 
@@ -362,7 +227,7 @@ write_manifesto_to_stars_decision = {
     }
 
     ai_check_interval = 120
-    decision_group_type = major
+    decision_group_type = flavor_medium
     cooldown = { years = 5 }
 
     is_shown = {
@@ -401,7 +266,7 @@ convene_spirit_circle_decision = {
     }
 
     ai_check_interval = 120
-    decision_group_type = major
+    decision_group_type = flavor_medium
     cooldown = { years = 5 }
 
     is_shown = {
@@ -435,7 +300,7 @@ bzn_whisper_to_void = {
         reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
     }
     desc = bzn_whisper_to_void_desc
-    decision_group_type = major
+    decision_group_type = flavor_medium
     ai_check_interval = 120
 
     is_shown = {
@@ -475,7 +340,7 @@ bzn_void_sacrifice = {
         reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
     }
     desc = bzn_whisper_to_void_desc
-    decision_group_type = major
+    decision_group_type = flavor_medium
     ai_check_interval = 120
 	cooldown = { years = 5 }
 
@@ -508,7 +373,7 @@ druidic_omen_decision = {
         reference = "gfx/interface/illustrations/decisions/decision_misc.dds"
     }
 	
-	decision_group_type = major
+	decision_group_type = flavor_medium
 	ai_check_interval = 120
     desc = druidic_omen_decision_desc
     cooldown = { years = 5 }

@@ -1,0 +1,12 @@
+﻿l_english:
+ send_missionaries:0 "Send Missionaries"
+ send_missionaries_desc:0 "There are many out there who do not believe in our [ROOT.Char.GetFaith.GetAdjective] [faith|E]. I should send missionaries to find any unbelievers in foreign lands, be they nobles or common people, and convert them to the one true [faith|E]."
+ send_missionaries_tooltip:0 "Send missonaries to persuade nobles and common people to adopt your [faith|E]"
+ send_missionaries_effect_tooltip_1:0 "Your missonaries will travel to a foreign land and attempt to convert its [ruler|E] or people to convert to the [THIS.Char.GetFaith.GetAdjective] [faith|E]"
+ send_missionaries_effect_tooltip_2:0 "Missionary work requires an investment of [gold|E] - the more funds you provide your missionaries, the better their chances are at succeeding! #weak (Minimum cost: @gold_icon! 100)#!"
+ send_missionaries_confirm:0 "May [ROOT.Char.GetFaith.HighGodName] guide us!"
+
+ christianization_of_scandinavia:0 "Commence The Christianization of Scandinavia"
+ christianization_of_scandinavia_desc:0 "Pagans and Heretics are rampant in our precious land, to ensure our faith and realm continues and prospers we have to request from the clergy and christian rulers to help us in our war against these heretics."
+ christianization_of_scandinavia_tooltip:0 "Request help from the clergy in fighting the heretics in Scandinavia"
+ christianization_of_scandinavia_confirm:0 "For The Faith"

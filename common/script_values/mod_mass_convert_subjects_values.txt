@@ -42,6 +42,23 @@ mod_convert_indirect_vassals_number = {
     }
 }
 
+mod_convert_tributaries_number = {
+    value = 0
+    every_tributary = {
+        if = {
+            limit = {
+                root = {
+                    is_character_interaction_potentially_accepted = {
+                        recipient = prev
+                        interaction = demand_conversion_vassal_ruler_interaction
+                    }
+                }
+            }
+            add = 1
+        }
+    }
+}
+
 mod_convert_courtiers_number = {
 	value = 0
     every_courtier = {

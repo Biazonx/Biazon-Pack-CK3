@@ -1,0 +1,13 @@
+﻿city_state_government_obligations = {
+	obligation_levels = {
+		default = {
+			levies = {
+				value = 0.1
+			}
+
+			tax = {
+				value = 0.8
+			}
+		}
+	}
+}

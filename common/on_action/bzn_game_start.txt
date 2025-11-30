@@ -1,14 +1,8 @@
 on_game_start = {
 	effect = {
-		struggle:britannia_struggle = {
-			if = {
-				limit = { game_start_date = 1066.9.15 } }
-				end_struggle = yes
-			}
-		struggle:britannia_struggle = {
-			if = {
-				limit = { game_start_date = 1178.10.1 } }
-				end_struggle = yes
-		}
+		every_living_character = { limit = { culture = culture:frieza } add_trait = frieza_race}
+		every_living_character = { limit = { culture = culture:majin } add_trait = majin_race}
+		every_living_character = { limit = { culture = culture:saiyan } add_trait = pure_saiyan}
+		every_living_character = { limit = { culture = culture:namekian } add_trait = namekian_race}
 	}
 }

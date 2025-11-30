@@ -2,24 +2,9 @@
 	family = rf_eastern
 	graphical_faith = "zoroastrian_gfx"
 
-	doctrine = special_doctrine_not_allowed_to_hof										   
+	doctrine = special_doctrine_not_allowed_to_hof
+	doctrine = doctrine_monotheist
 	doctrine = heresy_hostility_doctrine # Needs to be before eastern_hostility_doctrine in order to override the same religion hostility
-	doctrine = doctrine_religious_text
-	doctrine = doctrine_concubines
-	doctrine = doctrine_sacred_marriage
-	doctrine = doctrine_henotheistic
-	doctrine = doctrine_immortal
-	doctrine = doctrine_theistic_creation
-	doctrine = doctrine_aspects
-	doctrine = doctrine_prophets
-	doctrine = doctrine_judgement_day
-	doctrine = doctrine_paradise_and_underworld
-	doctrine = doctrine_saints
-	doctrine = doctrine_obligatory
-	doctrine = doctrine_no_restrictions
-	doctrine = doctrine_monk_not_clergy_enforced
-	doctrine = doctrine_encouraged_atone
-	doctrine = doctrine_encouraged_alms
 	doctrine = eastern_hostility_doctrine
 	doctrine = doctrine_gender_male_dominated
 	doctrine = doctrine_no_head
@@ -36,7 +21,7 @@
 	doctrine = doctrine_pluralism_righteous
 	doctrine = doctrine_theocracy_temporal
 	doctrine = doctrine_clerical_function_taxation
-	doctrine = doctrine_clerical_gender_male_only
+	doctrine = doctrine_clerical_gender_male_only 
 	doctrine = doctrine_clerical_marriage_allowed
 	doctrine = doctrine_clerical_succession_temporal_fixed_appointment
 	piety_icon_group = "zoroastrian"
@@ -44,13 +29,11 @@
 	#Allow pilgrimages
 	doctrine = doctrine_pilgrimage_encouraged
 
-	doctrine = doctrine_is_iranian_faith
-
-	#Ablution
-	doctrine = doctrine_me_ablution_handwashing
-
 	#Funeral tradition
 	doctrine = doctrine_funeral_sky_burial
+
+	#Coronation tradition
+	doctrine = doctrine_no_anointment
 	
 	traits = {
 		virtues = { honest just diligent }

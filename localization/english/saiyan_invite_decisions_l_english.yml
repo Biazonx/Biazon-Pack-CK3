@@ -11,3 +11,23 @@
  forge_dragon_balls_decision_desc:0 "The Dragon Balls are sacred relics of the Namekian people. With enough wisdom, piety, and strength of will, you may recreate them — bringing their divine power back into the world."
  bzn_artifact_dragon_1_name:0 "The Dragon Balls"
  bzn_artifact_dragon_1_description:0 "Seven glowing orbs, each etched with a star, forged in the sacred traditions of the Namekians. Said to hum with the energy of the Great Dragon, these artifacts radiate wisdom, spiritual power, and divine presence."
+
+frieza_race_decision: "Frieza Race"
+frieza_decision_desc: "Frieza Race"
+frieza_race_decision_confirm: "Frieza Race"
+frieza_race_decision_tooltip: "Frieza Race"
+
+namekian_race_decision: "Namekian"
+namekian_decision_desc: "Namekian"
+namekian_race_decision_confirm: "Namekian"
+namekian_race_decision_tooltip: "Namekian"
+
+majin_race_decision: "Majin"
+majin_decision_desc: "Majin"
+majin_race_decision_confirm: "Majin"
+majin_race_decision_tooltip: "Majin"
+
+pure_saiyan_decision: "Saiyan"
+pure_saiyan_decision_desc: "Saiyan"
+pure_saiyan_decision_confirm: "Saiyan"
+pure_saiyan_decision_tooltip: "Saiyan"

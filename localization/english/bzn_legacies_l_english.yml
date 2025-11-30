@@ -1,0 +1,19 @@
+﻿l_english:
+
+ #Dharma Legacy
+ dharma_legacy_track_name:0 "Dharma Legacy"
+ dharma_legacy_track_desc:0 "A house that walks the Eightfold Path rules with both wisdom and compassion"
+ dharma_legacy_1_name:0 "Path of Virtue"
+ dharma_legacy_2_name:0 "Benevolent Rule"
+ dharma_legacy_3_name:0 "Cycle of Balance"
+ dharma_legacy_4_name:0 "Enlightened Lineage"
+ dharma_legacy_5_name:0 "Chakravarti"
+
+ ##Template
+ _legacy_track_name:1 ""
+ _legacy_track_desc:0 ""
+ _legacy_1_name:0 ""
+ _legacy_2_name:1 ""
+ _legacy_3_name:0 ""
+ _legacy_4_name:0 ""
+ _legacy_5_name:1 ""

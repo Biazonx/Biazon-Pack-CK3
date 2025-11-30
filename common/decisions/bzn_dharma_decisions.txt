@@ -1,0 +1,869 @@
+﻿#######################################
+# General Decisions
+#######################################
+
+bzn_legendary_raja = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/dharma_decision_chakravatin.dds"
+    }
+    decision_group_type = become_medium
+	sort_order = 1
+    ai_check_interval = 0
+    is_shown = {
+        NOT = { has_trait = raja }
+		OR = {
+			religion = religion:hinduism_religion
+			religion = religion:jainism_religion
+			faith = faith:theravada
+			faith = faith:mahayana
+			faith = faith:vajrayana
+			faith = faith:ari
+		}
+    }
+    is_valid = {
+        prestige_level >= 4
+		piety_level >= 5
+		OR = {
+			religion = religion:hinduism_religion
+			religion = religion:jainism_religion
+			faith = faith:theravada
+			faith = faith:mahayana
+			faith = faith:vajrayana
+			faith = faith:ari
+		}
+	}
+    desc = bzn_legendary_raja_desc
+    cost = { piety = 1000 prestige = 500 }
+    effect = {
+        add_trait = raja
+		dynasty = { add_dynasty_prestige = 500 }
+    }
+    ai_potential = {
+        always = no
+    }
+    ai_will_do = {
+        base = 0
+    }
+}
+
+bzn_tiger_slayer = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_kumari.dds"
+    }
+    decision_group_type = become_medium
+	sort_order = 2
+    ai_check_interval = 0
+    is_shown = {
+        NOT = { has_trait = tiger_slayer }
+		OR = {
+			religion = religion:hinduism_religion
+			religion = religion:jainism_religion
+			religion = religion:buddhism_religion 
+			religion = religion:bon_religion 
+			religion = religion:confucianism_religion
+		}
+    }
+    is_valid = {
+        martial >= 15
+		prowess >= 12
+		prestige_level >= 4
+		
+		OR = {
+			religion = religion:hinduism_religion
+			religion = religion:jainism_religion
+			religion = religion:buddhism_religion 
+			religion = religion:bon_religion 
+			religion = religion:confucianism_religion
+		}
+	}
+    desc = bzn_tiger_slayer_desc
+    cost = { prestige = 1000 }
+    effect = {
+        add_trait = tiger_slayer
+    }
+    ai_potential = {
+        always = no
+    }
+    ai_will_do = {
+        base = 0
+    }
+}
+
+bzn_ascetic_king = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_buddhist_retreat.dds"
+    }
+    decision_group_type = become_medium
+	sort_order = 3
+    ai_check_interval = 0
+    is_shown = {
+        NOT = { has_trait = ascetic_king }
+		OR = {
+			religion = religion:hinduism_religion
+			religion = religion:jainism_religion
+			religion = religion:buddhism_religion
+			religion = religion:taoism_religion
+		}
+    }
+    is_valid = {
+		piety_level >= 4
+		NOT = { has_trait = gluttonous }
+		NOT = { has_trait = greedy }
+		OR = {
+			religion = religion:hinduism_religion
+			religion = religion:jainism_religion
+			religion = religion:buddhism_religion
+			religion = religion:taoism_religion
+		}
+	}
+	
+    desc = bzn_ascetic_king_desc
+    cost = { piety = 1000 }
+    effect = {
+        add_trait = ascetic_king
+    }
+    ai_potential = {
+        always = no
+    }
+    ai_will_do = {
+        base = 0
+    }
+}
+
+
+dharma_raise_hero_stone_decision = {# Raise a Hero Stone
+	title = dharma_raise_hero_stone_decision_name
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp1_decision_raise_runestone.dds"
+	}
+	decision_group_type = dravidian_medium
+
+	desc = raise_hero_stone_decision_desc
+	selection_tooltip = raise_hero_stone_decision_tooltip
+
+	cooldown = { years = 10 }
+	
+	sort_order = 80
+
+	is_shown = {
+		# Landed characters only: nobody likes a mercenary.
+		is_landed = yes
+		primary_title.tier > tier_barony
+		# Holds a suitable culture 
+		culture = { has_cultural_pillar = heritage_dravidian }
+	}
+
+	is_valid = {
+		custom_description = {# Got to have a suitable Ancestor worthy of a Hero Stone
+			text = dharma_hero_stone_decision_ancestor
+			has_variable = ancestor_to_bury
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		# Standard checks.
+		is_available_adult = yes
+		# Shouldn't be at war.
+		is_at_war = no
+	}
+
+	cost = { gold = raise_stele_gold_cost }
+
+	effect = {
+		# Save the gold value for refund purposes.
+		set_variable = {
+			name = raise_stele_refund
+			value = raise_stele_gold_cost
+		}
+		# Generic effects.
+		show_as_tooltip = { 
+			dharma_hero_stone_bonuses_effect = yes 
+		}
+		# Show type effects.
+		custom_tooltip = dharma_hero_stone_decision_tt.effects_list
+		# Moved ahead to selection.
+		trigger_event = dharma_dravidian.001
+	}
+
+	ai_check_interval = 36
+	
+	ai_potential = {
+		# Only take it if you can afford it.
+		short_term_gold >= raise_stele_gold_cost
+	}
+
+	ai_will_do = {
+		# We don't want too many Hero Stones all over the place.
+		base = 50
+	}
+}
+
+dharma_found_delhi_city = {# found the city of Delhi
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_moorish_decor.dds" }
+	decision_group_type = major
+	desc = dharma_found_delhi_city_desc
+
+	ai_check_interval = 120
+
+	is_shown = {
+		is_landed = yes
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:dharma_found_delhi_city_flag
+			}
+		}
+		has_title = title:c_delhi
+	}
+	is_valid = {
+		has_title = title:c_delhi
+		highest_held_title_tier >= tier_duchy
+		prestige_level >= 3
+
+	}
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	cost = { 
+		gold = { value = major_gold_value }
+		piety = { value = major_piety_value }
+	}	
+
+	ai_potential = {
+		short_term_gold > major_gold_value
+		prestige >= major_prestige_value
+	}
+
+	effect = {
+		save_scope_as = delhi_city_founder
+		#Can only happen once
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:dharma_found_delhi_city_flag
+		}
+		show_as_tooltip = {	dharma_found_delhi_city_effect = yes }
+		trigger_event = dharma_gujar.002
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+#######################################
+# Select Personal diety
+#######################################
+select_personal_deity_tibet_decision = {# Tibetan Gods and Goddesses	
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/tibetan_deities.dds"
+	}
+	decision_group_type = tibetan_medium
+
+	desc = select_personal_deity_tibet_decision_desc
+	selection_tooltip = select_personal_yidam_decision_tooltip
+
+	is_shown = {
+		OR = {
+			religion = religion:bon_religion
+			faith = faith:lamaism
+		}
+	}
+
+	is_valid = {
+
+	}
+
+	is_valid_showing_failures_only = {
+	}
+
+	effect = {
+		custom_tooltip = select_personal_yidam_decision_tt
+		trigger_event = dharma_buddhism.200
+	}
+
+	ai_check_interval = 96
+	cooldown = { months = 36 }	
+
+	ai_potential = {
+		piety >= minor_piety_value
+		NOR = {
+			# Bon Tibetan Deities
+			has_character_modifier = buddhist_deity_sipe_gyalmo # Sipe Gyalmo
+			has_character_modifier = buddhist_deity_shenlha_okar # Shenlha Okar
+			has_character_modifier = buddhist_deity_tonpa_shenrab # Tonpa Shenrab
+			has_character_modifier = buddhist_deity_yeshe_walmo # Yeshe Walmo
+			has_character_modifier = buddhist_deity_takla_mebar # Takla Mebar
+			has_character_modifier = buddhist_deity_Zhambala # Zhambala
+			has_character_modifier = buddhist_deity_sherab_chamma # Sherab Chamma
+			# Buddhist Tibetan Deities
+			has_character_modifier = buddhist_deity_palden_lhamo # Palden_Lhamo
+			has_character_modifier = buddhist_deity_tara # Tara
+			has_character_modifier = buddhist_deity_avalokitesvara  # Avalokiteśvara 
+			has_character_modifier = buddhist_deity_yamantaka # Yamantaka
+			has_character_modifier = buddhist_deity_hevajra # Hevajra
+			has_character_modifier = buddhist_deity_vajrayogini # Vajrayogini
+		}
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+select_personal_nat_decision = {# Burmese Gods and Goddesses
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	}
+	decision_group_type = burmese_medium
+
+	desc = select_personal_nat_decision_desc
+	selection_tooltip = select_personal_nat_decision_tooltip
+
+	is_shown = {
+		OR = {
+			faith = faith:ari
+			AND = {
+				faith = faith:theravada
+				culture = { has_cultural_pillar = heritage_burman }
+			}
+		}
+	}
+
+	is_valid = {
+
+	}
+
+	is_valid_showing_failures_only = {
+	}
+
+	effect = {
+		custom_tooltip = select_personal_nat_decision_tt
+		trigger_event = dharma_buddhism.201
+	}
+
+	ai_check_interval = 96
+	cooldown = { months = 36 }	
+
+	ai_potential = {
+		piety >= minor_piety_value
+		NOR = {
+			# Ari Buddhist Nats
+			has_character_modifier = nat_ari_thagyamin # Thagyamin
+			has_character_modifier = nat_ari_mahagiri # Mahagiri
+			has_character_modifier = nat_ari_hnamadawgyi # Hnamadawgyi
+			has_character_modifier = nat_ari_ponmagyi # Ponmagyi
+			has_character_modifier = nat_ari_sivali # Sīvali
+			has_character_modifier = nat_ari_shwe_nabay # Shwe Nabay
+			# Therevada Buddhist Nats
+			has_character_modifier = nat_therevada_thurathadi # Thurathadi
+			has_character_modifier = nat_therevada_lokanat  # Lokanat 
+			has_character_modifier = nat_therevada_panhtwar # Panhtwar
+			has_character_modifier = nat_therevada_shin_upagutta # Shin Upagutta
+			has_character_modifier = nat_therevada_manimekhala # Manimekhala
+		}
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+select_personal_deity_buddhist_decision = {# Buddhist Gods and Goddesses
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_buddhist_meditation.dds"
+	}
+	decision_group_type = buddhist_medium
+
+	desc = select_personal_deity_buddhist_decision_desc
+	selection_tooltip = select_personal_deity_buddhist_decision_tooltip
+
+	is_shown = {
+		OR = {
+			faith = faith:theravada
+			faith = faith:mahayana
+			faith = faith:vajrayana
+		}
+	}
+
+	is_valid = {
+
+	}
+
+	is_valid_showing_failures_only = {
+	}
+
+	effect = {
+		custom_tooltip = select_personal_meditional_deity_decision_tt
+		trigger_event = dharma_buddhism.202
+	}
+
+	ai_check_interval = 96
+	cooldown = { months = 36 }	
+
+	ai_potential = {
+		piety >= minor_piety_value
+		NOR = {
+			# Bon Tibetan Deities
+			has_character_modifier = buddhist_deity_sipe_gyalmo # Sipe Gyalmo
+			has_character_modifier = buddhist_deity_shenlha_okar # Shenlha Okar
+			has_character_modifier = buddhist_deity_tonpa_shenrab # Tonpa Shenrab
+			has_character_modifier = buddhist_deity_yeshe_walmo # Yeshe Walmo
+			has_character_modifier = buddhist_deity_takla_mebar # Takla Mebar
+			has_character_modifier = buddhist_deity_Zhambala # Zhambala
+			has_character_modifier = buddhist_deity_sherab_chamma # Sherab Chamma
+			# Buddhist Tibetan Deities
+			has_character_modifier = buddhist_deity_palden_lhamo # Palden_Lhamo
+			has_character_modifier = buddhist_deity_tara # Tara
+			has_character_modifier = buddhist_deity_avalokitesvara  # Avalokiteśvara 
+			has_character_modifier = buddhist_deity_yamantaka # Yamantaka
+			has_character_modifier = buddhist_deity_hevajra # Hevajra
+			has_character_modifier = buddhist_deity_vajrayogini # Vajrayogini
+		}
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+#######################################
+# Hindu Decisions
+#######################################
+dharma_pick_hindu_philosophy = {# Follow a Mahayana Buddhist School
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_buddhist_meditation.dds"
+	}
+	decision_group_type = hindu_minor
+
+	ai_check_interval = 96
+	cooldown = { months = 36 }
+	desc = dharma_pick_hindu_philosophy_desc
+	
+	is_shown = {
+		religion = religion:hinduism_religion
+		is_ruler = yes
+		is_landed = yes
+	}
+	
+	is_valid = {
+		learning >= 12
+		religion = religion:hinduism_religion
+	}
+	
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		custom_tooltip = dharma_pick_hindu_philosophy_tooltip
+		trigger_event = dharma_hinduism.050
+	}
+
+	ai_potential = {
+		piety >= minor_piety_value
+		NOR = {
+			has_trait = hindu_philoosphy_yoga
+			has_trait = hindu_philoosphy_samkhya
+			has_trait = hindu_philoosphy_vaisheshika
+			has_trait = hindu_philoosphy_mimamsa
+			has_trait = hindu_philoosphy_nyaya
+			has_trait = hindu_philoosphy_vishishtadvaita
+			has_trait = hindu_philoosphy_advaita_vedanta
+			has_trait = hindu_philoosphy_bhedabheda
+			has_trait = hindu_philoosphy_dvaita_vedanta
+		}
+	}
+
+	ai_will_do = {
+		base = 40
+		modifier = {
+			add = 40
+			has_trait = theologian
+		}
+		modifier = {
+			add = 10
+			has_trait = scholar
+		}
+		modifier = {
+			add = 10
+			has_trait = zealous
+		}
+		modifier = {
+			add = -10
+			has_trait = cynical
+		}
+		modifier = {
+			add = -10
+			has_trait = lazy
+		}
+	}
+}
+dharma_build_minor_hindu_holy_building = {# Build a minor Hindu building
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_dharma_hindu_temple.dds" }
+	ai_check_interval = 40
+	decision_group_type = hindu_minor
+	cooldown = { days = 3650 }
+
+	desc = dharma_build_minor_hindu_holy_building_desc
+	selection_tooltip = dharma_build_minor_hindu_holy_building_tooltip
+
+	is_shown = {
+		highest_held_title_tier > tier_barony
+		is_landed = yes
+		religion = religion:hinduism_religion
+	}
+	
+	is_valid = {
+		religion = religion:hinduism_religion
+		custom_description = {
+			text = dharma_build_minor_hindu_holy_building_county_req
+			dharma_donate_holy_site_req_trigger = yes # CHANGE
+		}
+		custom_description = {
+			text = dharma_build_minor_hindu_holy_building_current_req
+			NOT = { has_character_flag = dharma_hindu_currently_building_religious_site }
+		}
+	}
+	
+		
+    widget = {
+    	gui = "decision_view_widget_dharma_build_minor_hindu_holy_building"
+		controller = decision_option_list_controller	
+		
+		#decision_has_second_step = yes
+		#decision_custom_widget_container = "custom_widgets_container_step_two"
+		decision_to_second_step_button = "dharma_minor_hindu_building_type" 
+
+		item = {# Shrine
+			value = dharma_build_hindu_site_shrine_option
+			current_description = dharma_build_hindu_site_shrine_option_desc
+			localization = dharma_build_hindu_site_shrine_option
+			icon = "gfx/interface/icons/building_types/icon_building_hill_farms.dds"
+
+			ai_chance = {
+				value = 10
+			}
+		}
+		item = {# Temple
+			value = dharma_build_hindu_site_small_temple_option
+			current_description = dharma_build_hindu_site_small_temple_option_desc
+			localization = dharma_build_hindu_site_small_temple_option
+			icon = "gfx/interface/icons/building_types/icon_building_generic_house.dds"
+
+			ai_chance = {
+				value = 10
+			}
+		}
+		item = {# Small Monastery
+			value = dharma_build_hindu_site_small_monastery_option
+			current_description = dharma_build_hindu_site_small_monastery_option_desc
+			localization = dharma_build_hindu_site_small_monastery_option
+			icon = "gfx/interface/icons/building_types/icon_building_monastic_schools.dds"
+
+			ai_chance = {
+				value = 10
+			}
+		}
+		item = {# Large Temple
+			value = dharma_build_hindu_site_large_temple_option
+			current_description = dharma_build_hindu_site_large_temple_option_desc
+			localization = dharma_build_hindu_site_large_temple_option
+			icon = "gfx/interface/icons/building_types/icon_structure_brihadeeswarar_temple.dds"
+
+			ai_chance = {
+				value = 10
+			}
+		}
+		item = {# Large Monastary
+			value = dharma_build_hindu_site_large_monastery_option
+			current_description = dharma_build_hindu_site_large_monastery_option_desc
+			localization = dharma_build_hindu_site_large_monastery_option
+			icon = "gfx/interface/icons/building_types/icon_structure_nalanda.dds"
+
+			ai_chance = {
+				value = 10
+			}
+		}
+	}
+
+	effect = {
+
+		custom_tooltip = dharma_build_minor_hindu_holy_building_effect_tooltip_1
+		custom_tooltip = dharma_build_minor_hindu_holy_building_effect_tooltip_2
+		# Not sure why AI can't pick one option or another
+		if = {
+			limit = { is_ai = yes }
+			random_list = {
+				10 = {
+					set_variable = {
+						name = dharma_hindu_building_type
+						value = flag:shrine
+					}
+				}
+				10 = {
+					set_variable = {
+						name = dharma_hindu_building_type
+						value = flag:small_temple
+					}
+				}
+				10 = {
+					set_variable = {
+						name = dharma_hindu_building_type
+						value = flag:small_monastery
+					}
+				}
+				10 = {
+					set_variable = {
+						name = dharma_hindu_building_type
+						value = flag:large_temple
+					}
+				}
+				10 = {
+					set_variable = {
+						name = dharma_hindu_building_type
+						value = flag:large_monastery
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:dharma_build_hindu_site_shrine_option = yes
+			}
+			set_variable = {
+				name = dharma_hindu_building_type
+				value = flag:shrine
+			}
+		}
+		else_if = {
+			limit = {
+				scope:dharma_build_hindu_site_small_temple_option = yes
+			}
+			set_variable = {
+				name = dharma_hindu_building_type
+				value = flag:small_temple
+			}
+		}
+		else_if = {
+			limit = {
+				scope:dharma_build_hindu_site_small_monastery_option = yes
+			}
+			set_variable = {
+				name = dharma_hindu_building_type
+				value = flag:small_monastery
+			}
+		}
+		else_if = {
+			limit = {
+				scope:dharma_build_hindu_site_large_temple_option = yes
+			}
+			set_variable = {
+				name = dharma_hindu_building_type
+				value = flag:large_temple
+			}
+		}
+		else_if = {
+			limit = {
+				scope:dharma_build_hindu_site_large_monastery_option = yes
+			}
+			set_variable = {
+				name = dharma_hindu_building_type
+				value = flag:large_monastery
+			}
+		}		
+		
+		trigger_event = dharma_hinduism.011
+	}
+
+	minimum_cost = { 
+		gold = { value = dharma_build_small_holy_site_cost } # Will depend
+	}	
+
+	ai_potential = {
+		short_term_gold > dharma_build_medium_holy_site_cost
+	}
+
+	ai_will_do = {
+		base = 30
+		modifier = {
+			add = 5
+			has_trait = zealous
+		}
+		modifier = {
+			add = -15
+			has_trait = cynical
+		}
+	}
+}
+#######################################
+# Buddhist Decisions
+#######################################
+dharma_adopt_mahayana_school = {# Follow a Mahayana Buddhist School
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_buddhist_meditation.dds"
+	}
+	decision_group_type = buddhist_minor
+
+	ai_check_interval = 96
+	cooldown = { months = 36 }
+	desc = dharma_adopt_mahayana_school_desc
+	
+	is_shown = {
+		faith = faith:mahayana
+		is_ruler = yes
+		is_landed = yes
+	}
+	
+	is_valid = {
+		faith = faith:mahayana
+	}
+	
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		custom_tooltip = dharma_adopt_mahayana_school_tooltip
+		trigger_event = dharma_buddhism.050
+	}
+
+	ai_potential = {
+		piety >= minor_piety_value
+		NOR = {
+			has_trait = buddhist_school_pure_land
+			has_trait = buddhist_school_yogachara
+			has_trait = buddhist_school_madhyamaka
+			has_trait = buddhist_school_chan
+		}
+	}
+
+	ai_will_do = {
+		base = 40
+		modifier = {
+			add = 40
+			has_trait = theologian
+		}
+		modifier = {
+			add = 10
+			has_trait = scholar
+		}
+		modifier = {
+			add = 10
+			has_trait = zealous
+		}
+		modifier = {
+			add = -10
+			has_trait = cynical
+		}
+		modifier = {
+			add = -10
+			has_trait = lazy
+		}
+	}
+}
+dharma_adopt_tibetan_school = {# Follow a Tibetan Buddhist School
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_buddhist_meditation.dds"
+	}
+	decision_group_type = buddhist_minor
+
+	ai_check_interval = 96
+	cooldown = { months = 36 }
+	desc = dharma_adopt_tibetan_school_desc
+	
+	is_shown = {
+		faith = faith:lamaism
+		is_ruler = yes
+		is_landed = yes
+	}
+	
+	is_valid = {
+		faith = faith:lamaism
+	}
+	
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		custom_tooltip = dharma_adopt_tibetan_school_tooltip
+		trigger_event = dharma_buddhism.051
+	}
+
+	ai_potential = {
+		piety >= minor_piety_value
+		NOR = {
+			has_trait = buddhist_school_nyingma
+			has_trait = buddhist_school_kadam
+			has_trait = buddhist_school_sakya
+			has_trait = buddhist_school_kagyu
+		}
+	}
+
+	ai_will_do = {
+		base = 40
+		modifier = {
+			add = 40
+			has_trait = theologian
+		}
+		modifier = {
+			add = 10
+			has_trait = scholar
+		}
+		modifier = {
+			add = 10
+			has_trait = zealous
+		}
+		modifier = {
+			add = -10
+			has_trait = cynical
+		}
+		modifier = {
+			add = -10
+			has_trait = lazy
+		}
+	}
+}
+#######################################
+# Jain Decisions
+#######################################
+dharma_jain_abdication = {# Abdicate and become a monk
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/dharma_decision_jain_holy_day.dds"
+	}
+	decision_group_type = jain_major	
+	
+	desc = dharma_jain_abdication_desc
+	selection_tooltip = dharma_jain_abdication_tooltip
+
+	is_shown = {
+		religion = religion:jainism_religion
+		holds_landed_title = yes
+		is_at_war = no
+	}
+
+	is_valid = {
+		religion = religion:jainism_religion
+		holds_landed_title = yes
+		is_at_war = no
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		trigger_event = dharma_jainism.010
+	}
+
+	ai_check_interval = 240
+
+	ai_potential = {
+		piety >= major_piety_value
+	}
+
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = 10
+			age >= 60
+		}
+	}
+}

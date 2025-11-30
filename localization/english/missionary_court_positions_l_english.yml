@@ -1,0 +1,9 @@
+﻿l_english:
+ COURT_POSITION_CATEGORY_MISSIONARY:0 "Missionaries"
+
+ head_missionary:0 "Head Missionary"
+ head_missionary_employer_custom_effect_description:0 "Goes on missions to convert other peoples and [rulers|E] to your [faith|E]; head missionaries also have a higher chance of successfully converting targets"
+ head_missionary_desc:0 "Goes on missions to convert other peoples and [rulers|E] to your [faith|E]; head missionaries also have a higher chance of successfully converting targets"
+ missionary:0 "Missionary"
+ missionary_employer_custom_effect_description:0 "Goes on missions to convert peoples and [rulers|E] to your [faith|E]"
+ missionary_desc:0 "Goes on missions to convert other peoples and [rulers|E] to your [faith|E]."

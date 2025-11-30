@@ -1,7 +1,7 @@
 gentry = {
 	icon = gentry.dds
 	category = fame
-	ruler_designer_cost = 150
+	ruler_designer_cost = 20
 	
 	stewardship = 3
 	martial = 1

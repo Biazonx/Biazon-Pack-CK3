@@ -1,9 +1,10 @@
 frieza_religion = {
     family = rf_pagan
 
-    doctrine = pagan_hostility_doctrine
+    doctrine = abrahamic_hostility_doctrine
 
     # Main Group
+	doctrine = doctrine_monotheist
     doctrine = doctrine_temporal_head
     doctrine = doctrine_gender_male_dominated
     doctrine = doctrine_pluralism_fundamentalist
@@ -34,6 +35,9 @@ frieza_religion = {
 
     # Funeral Tradition
     doctrine = doctrine_funeral_stoic
+
+	#Coronation tradition
+	doctrine = doctrine_imperial_anointment
 
     traits = {
         virtues = { frieza_race ambitious callous arrogant }

@@ -685,39 +685,48 @@ gladiator = {
 	has_access_to_trials_by_combat = yes
 }
 
-#Vanilla Change
-peasant_leader = {
-	category = fame
+raja = {
+	icon = raja.dds
+	tier = fame
+	desc = raja_desc
+	
+	ruler_designer_cost = 150
+	
+	martial = 3
+	diplomacy = 3
+	stewardship = 3
+	learning = 3
+	intrigue = 3
+	legitimacy_gain_mult = 0.25
+	
+}
 
-	same_opinion = 15
-	general_opinion = -30
-	county_opinion_add = 10
-	army_maintenance_mult = -0.5
-	levy_siege = 0.05
-	flag = initial_legitimacy_nerf
+tiger_slayer = {
+	icon = tiger_slayer.dds
+	tier = fame
+	desc = tiger_slayer_desc
 	
 	ruler_designer_cost = 100
+	
+	enemy_hard_casualty_modifier = 0.25
+	attacker_advantage = 5
+	martial = 3
+	prowess = 3
+}
 
-	culture_modifier = {
-		parameter = grants_to_lowborns_bonuses
-		monthly prestige = -0.5
-		legitimacy_gain_mult = -0.25
-	    legitimacy_loss_mult = 0.25
-		development_growth_factor = 0.1
-		same_culture_opinion = 30
-	}
-
-	desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					NOT = { exists = this }
-				}
-				desc = trait_peasant_leader_desc
-			}
-			desc = trait_peasant_leader_character_desc
-		}
-	}
+ascetic_king = {
+	icon = lotus.dds
+	tier = fame
+	desc = ascetic_king_desc
+	
+	ruler_designer_cost = 100
+	
+	monthly_piety = 5
+	monthly_income_mult = -0.25
+	learning = 3
+	diplomacy = 3
+	clergy_opinion = 10
+    county_opinion_add = 5
 }
 
 # Muslim version of the Blood of the Prophet-trait. Muslim agnatically descended from Muhammad. Female version is localized 'Sayyida'

@@ -1,0 +1,21 @@
+﻿
+#######################################
+# Found Delhi Effect
+#######################################
+dharma_found_delhi_city_effect = {
+	add_prestige = 500
+	dynasty = { add_dynasty_prestige = 250 }
+	title:c_delhi = {
+		change_development_level = 5
+		add_county_modifier = {
+			modifier = dharma_founded_delhi
+			years = 30
+		}
+	}
+}
+
+
+
+
+
+

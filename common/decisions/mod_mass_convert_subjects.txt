@@ -35,6 +35,14 @@ mod_mass_convert_subjects_decision = {
                     }
                 }
             }
+            any_tributary = {
+                root = {
+                    is_character_interaction_potentially_accepted = {
+                        recipient = prev
+                        interaction = demand_conversion_vassal_ruler_interaction
+                    }
+                }
+            }
             any_courtier = {
                 root = {
                     is_character_interaction_potentially_accepted = {
@@ -73,6 +81,11 @@ mod_mass_convert_subjects_decision = {
 			localization = mod_convert_indirect_vassals_loc
 			ai_chance = { value = 0 } # unused
 		}
+        item = {
+            value = mod_convert_tributaries
+            localization = mod_convert_tributaries_loc
+            ai_chance = { value = 0 } # unused
+        }
 		item = {
 			value = mod_convert_courtiers
 			localization = mod_convert_courtiers_loc
@@ -138,6 +151,27 @@ mod_mass_convert_subjects_decision = {
                 }
             }
 		}
+        else_if = {
+            limit = { scope:mod_convert_tributaries = yes }
+            every_tributary = {
+                if = {
+                    limit = {
+                        root = {
+                            is_character_interaction_potentially_accepted = {
+                                recipient = prev
+                                interaction = demand_conversion_vassal_ruler_interaction
+                            }
+                        }
+                    }
+                    run_interaction = {
+                        interaction = demand_conversion_vassal_ruler_interaction
+                        actor = root
+                        recipient = this
+                        send_threshold = decline # send the request and then AI will decide like normal 
+                    }
+                }
+            }
+        }
 		else_if = {
 			limit = { scope:mod_convert_courtiers = yes }
 			every_courtier = {

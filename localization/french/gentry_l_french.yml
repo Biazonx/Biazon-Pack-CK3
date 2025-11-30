@@ -1,0 +1,9 @@
+﻿l_french:
+ trait_gentry: "Noblesse terrienne"
+ trait_gentry_desc: "Ce personnage est un vétéran qui a obtenu des terres. Attendez-vous à ce que ses compétences de gouvernance augmente, mais ses ambition aussi."
+ trait_gentry_character_desc: "Ce personnage est un vétéran qui a obtenu des terres. Attendez-vous à ce que ses compétences de gouvernance augmente, mais ses ambition aussi."
+ veteran_modifier: "Vétéran"
+ veteran_modifier_desc: "Ce personnage a combattu pour son seigneur lige, et sera considéré comme appartenant à la noblesse terrienne s'il bénéficie de terres."
+  
+ #  trait_gentry_heir: "Héritier de la noblesse terrienne"
+ #  trait_gentry_heir_desc: "Ce personnage est l'héritier d'un vétéran qui a obtenu des terres. Attendez-vous à ce que ses compétences de gouvernance augmente, mais ses ambition aussi."

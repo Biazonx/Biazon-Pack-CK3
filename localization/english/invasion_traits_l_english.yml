@@ -8,9 +8,8 @@ trait_namekian_race: "Namekian"
 trait_namekian_race_desc: "This character is part of a race of beings from another world, the mystical Namekians, known for their regenerative powers and wisdom."
 trait_namekian_race_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] is part of a race of beings from another world, the mystical Namekians, known for their regenerative powers and wisdom."
 
- trait_hybrid_saiyan: "Hybrid Saiyan"
- trait_hybrid_saiyan_desc: "This character is the result of a Saiyan settling down with a Human. A harmonious mixture of Saiyan & Human blood flows within the character."
- trait_hybrid_saiyan_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] is the result of a Saiyan settling down with a Human. A harmonious mixture of Saiyan & Human blood flows within [ROOT.GetCharacter.GetHerHim]."
+ trait_dragon_ball: "Dragon Ball"
+ trait_dragon_ball_desc: "This character has contacted Dragon Ball Universe."
  
  trait_saiyan_tail: "Saiyan Tail"
  trait_saiyan_tail_desc: "This character possesses a tail, a mark of their Saiyan lineage."
