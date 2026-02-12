@@ -1,0 +1,5 @@
+﻿valdes = {
+	name = "dynn_Valdes"
+	culture = french
+}
+

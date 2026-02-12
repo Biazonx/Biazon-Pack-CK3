@@ -419,17 +419,6 @@ dharma_divination_life_modifier = {
 	health = 0.3
 }
 ##########################################
-# Hero Stone Modifiers 
-##########################################
-dharma_hero_stone_ancestors_strong = {
-	icon = rock_positive
-	county_opinion_add = 20
-}
-dharma_hero_stone_ancestors_weak = {
-	icon = rock_positive
-	county_opinion_add = 10
-}
-##########################################
 # Irrigation modifiers
 ##########################################
 dharma_funded_irrigation_tank_small = {

@@ -1,0 +1,4 @@
+﻿l_english:
+ celestial_mass_military_aid_interaction: "Have All Military Governors Join War"
+ celestial_mass_military_aid_interaction_desc: "Order all Military [governors|E] to join [recipient.GetShortUINamePossessive] [wars|E]"
+ celestial_mass_military_aid_confirmation: "Military Governors Mobilized"

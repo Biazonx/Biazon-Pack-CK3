@@ -87,12 +87,6 @@ trait_high_druid:0 "High Druid"
 trait_high_druid_desc:0 "The High Druid is a spiritual leader, connected deeply to nature and ancient traditions."
 trait_high_druid_character_desc:0 "A respected figure who channels the power of nature, revered for wisdom and might."
 
-bzn_battle_thrall_decision:0 "Forge a Battle Thrall"
-bzn_battle_thrall_decision_desc:0 "Transform a meek thrall into a hardened warrior, bound to serve you in battle."
-bzn_battle_thrall_decision_tooltip:0 "Forge a Battle Thrall"
-bzn_battle_thrall_decision_confirm:0 "Forge a Battle Thrall"
-bzn_battle_thrall_effect_tooltip:0 "A thrall has been reforged into a Battle Thrall!"
-
 trait_slaver:0 "Slaver"
 trait_slaver_desc:0 "This character is a Slaver."
 sungodblood:0 "Sun God Blood"
@@ -312,8 +306,8 @@ spirit_guided_desc:0 "The spirits whisper in your ears, shielding you from threa
 
 nick_the_mad:0 "the Mad"
 nick_the_possessed:0 "the Possessed"
+nick_the_poor_of_lyon:0 "the Poor of Lyon"
 
- 
  bzn_slaver_desc:0 "You will gain the trait Slaver"
  bzn_slaver_confirm:0 "You will gain the trait Slaver"
  bzn_slaver:0 "Become Slaver"
@@ -676,7 +670,7 @@ monastic_war_elephant: "Monastic War Elephant"
 monastic_war_elephant_flavor: "A mighty war elephant raised and trained in the quiet seclusion of a monastery. Its serene demeanor belies its terrifying might on the battlefield, a living symbol of spiritual discipline and martial power combined."
 
 english_billmen: "English Billmen"
-english_billmen_flavor: ""english_billmen_flavor: "Armed with long bills and fierce resolve, English Billmen formed the backbone of many medieval armies, cutting down foes with brutal efficiency."
+english_billmen_flavor: "Armed with long bills and fierce resolve, English Billmen formed the backbone of many medieval armies, cutting down foes with brutal efficiency."
 
 protector_of_behafaridism: "Protector of Behafaridism"
 modifier_protector_of_behafaridism: "Protector of Behafaridism"
@@ -831,3 +825,227 @@ bzn_change_asatru: "Break With Old Ways"
 bzn_change_asatru_desc: "You have grown dissatisfied with the traditions of the old gods. It is time to redefine what our faith stands for — to reform Asatru itself."
 bzn_change_asatru_confirm: "Redefine Asatru"
 bzn_change_asatru_tooltip: "Changes Asatru’s tenets to new ones that reflect your vision."
+
+bzn_rashidun_reawakening_decision: "Reawaken the Rashidun Caliphate"
+bzn_rashidun_reawakening_desc: "The legacy of the Rashidun has long faded into history, but the strength of faith and the unity of the Ummah can bring it forth once more. If I prove my legitimacy and rally the faithful, the Caliphate of old may rise again under my rule."
+bzn_rashidun_reawakening_decision_tooltip: "Declare the restoration of the Rashidun Caliphate and claim the mantle of Caliph."
+bzn_rashidun_reawakening_decision_confirm: "Reawaken the Caliphate"
+
+bzn_rashidun_descendant_decision: "Claim Rashidun Descent"
+bzn_rashidun_descendant_desc: "With careful investigation—or convenient interpretation—it may be possible to assert a link to the noble Rashidun line. Scholars, genealogists, and courtiers will debate the claim, but if accepted, my legitimacy will soar."
+bzn_rashidun_descendant_decision_tooltip: "Seek legitimacy by claiming descent from the Rashidun Caliphs."
+bzn_rashidun_descendant_decision_confirm: "Proclaim my Ancestry"
+
+rashidun_descendant: "Rashidun Claimant"
+rashidun_descendant_desc: "This character claims to be descended from the Rashidun Caliphs. Whether this is truth or clever manipulation is a matter of debate, but many are willing to believe."
+
+rashidun_awakening_house_modifier: "House of the Reawakened Caliphate"
+rashidun_awakening_house_modifier_desc: "This house has revived the Rashidun legacy, inspiring the faithful and asserting its right to guide the Ummah toward unity and strength."
+
+world_siberia_2: "Siberia"
+
+russian_settlers: "Russian Settlers"
+russian_settlers_desc: "This character has enacted policies to encourage Russian immigration to these lands, hoping their knowledge and traditions will strengthen the realm."
+russian_traders: "Russian Traders"
+russian_traders_desc: "Russian merchants and caravans operate in this region, expanding local trade networks and bringing new goods, contacts, and commercial practices."
+northern_capital_opinion_modifier: "A Growing Capital"
+northern_capital_misc_benefits_modifier: "Northern Capital"
+
+bzn_found_northern_capital_decision: "Found the Northern Capital"
+bzn_found_northern_capital_decision_desc: "At the edge of the known world, where rivers cut through forest and frost rules the land, a new center of power may rise. By founding a Northern Capital, we bind trade, faith, and authority into a single seat of rule, shaping the future of the northern frontier for generations to come."
+bzn_found_northern_capital_decision_confirm: "Proclaim the Northern Capital"
+bzn_found_northern_capital_decision_tooltip: "Establish a new capital in the northern lands, creating a lasting center of administration and influence."
+
+bzn_decisions.0018.t: "The Northern Capital Is Founded"
+bzn_decisions.0018.desc: "From scattered settlements and frontier outposts, a new city now rises as the heart of northern rule. Walls are raised, markets laid out, and banners unfurled as settlers, traders, and warriors gather beneath your authority. This capital shall stand as a symbol of order, ambition, and dominion in the far North."
+bzn_decisions.0018.a: "Let it stand as a monument to our rule"
+
+bzn_invite_russian_settlers_decision: "Invite Russian Settlers"
+bzn_invite_russian_settlers_decision_desc: "These lands remain sparsely settled and underdeveloped. By inviting Russian settlers to migrate here, we may strengthen the region with their labor, knowledge, and traditions."
+bzn_invite_russian_settlers_decision_confirm: "Open the Lands to Settlers"
+bzn_invite_russian_settlers_decision_tooltip: "Encourage Russian settlers to migrate to your realm"
+
+bzn_russian_traders_decision: "Invite Russian Traders"
+bzn_russian_traders_decision_desc: "The vast lands of Siberia remain distant from major trade routes. By inviting Russian traders and merchants to operate here, we can stimulate commerce, attract caravans, and integrate the region into wider economic networks."
+bzn_russian_traders_decision_confirm: "Open the Markets"
+bzn_russian_traders_decision_tooltip: "Spend gold to invite Russian traders, increasing commercial activity in your Siberian lands."
+
+bzn_blend_russian_traditions_decision: "Blend Russian Traditions"
+bzn_blend_russian_traditions_decision_desc: "Years of settlement and trade have woven Russian customs into the fabric of our lands. Rather than resisting this influence, we may embrace it — forging a new culture that blends our traditions with those of the Russian settlers, uniting ruler and realm under a shared identity."
+bzn_blend_russian_traditions_decision_confirm: "Forge a New Culture"
+bzn_blend_russian_traditions_decision_tooltip: "Create a hybrid culture by blending Russian traditions with your own, uniting your Siberian lands under a shared cultural identity."
+decision_group_type_regional_major: "Major Regional Decisions"
+
+tradition_siberian_isolationism_name: "Siberian Isolationism"
+tradition_siberian_isolationism_desc: "Vast distances, harsh winters, and dense forests have shaped a way of life that favors self-reliance and caution toward outsiders. Communities endure by limiting foreign influence, preserving local customs, and relying on their own strength to survive the unforgiving northern frontier."
+
+bzn_siberian_isolationism_tradition_decision: "Embrace Siberian Isolationism"
+bzn_siberian_isolationism_tradition_decision_desc: "The northern frontier has taught us that survival depends not on distant allies, but on resilience and unity. By embracing isolationist traditions, we formalize a way of life shaped by distance, climate, and self-sufficiency — strengthening our people, even as we turn inward."
+bzn_siberian_isolationism_tradition_decision_confirm: "Turn Inward"
+bzn_siberian_isolationism_tradition_decision_tooltip: "Adopt the Siberian Isolationism tradition, favoring self-reliance and frontier stability at the cost of outside influence."
+
+bzn_decisions.0015.t: "Settler Has Arrived"
+bzn_decisions.0015.desc: "Russian settlers arrive to work the land and establish new farms."
+bzn_decisions.0016.t: "Settler Has Arrived"
+bzn_decisions.0016.desc: "Russian settlers arrive, bringing trade and craftsmanship."
+bzn_decisions.0017.t: "Settler Has Arrived"
+bzn_decisions.0017.desc: "Russian settlers arrive, bolstering the region’s defenses."
+
+bzn_siberia_convertion: "Embrace a New Faith in Siberia"
+bzn_siberia_convertion_desc: "The arrival of Russian settlers has brought not only new customs and trade, but also new faiths. As the old ways struggle to unite this vast frontier, we may choose to abandon our unreformed beliefs and embrace a structured faith brought from the west, reshaping both our rule and the spiritual future of Siberia."
+bzn_siberia_convertion_tooltip: "Convert to a new organized faith."
+bzn_siberia_convertion_confirm: "Embrace the New Faith"
+CHOOSE_SIBERIA_FAITH_TO_CONVERT_TO: "Adopt a New Faith"
+convert_to_catholic: "Adopt Catholicism"
+convert_to_catholic_via_decision_desc: "Accept the authority of Rome and adopt the Catholic faith, aligning Siberia with the western Christian world."
+
+convert_to_orthodox: "Adopt Orthodoxy"
+convert_to_orthodox_via_decision_desc: "Embrace Orthodox Christianity, following the rites and traditions spread eastward by the Rus."
+
+convert_to_rabbinism: "Adopt Rabbinism"
+convert_to_rabbinism_via_decision_desc: "Adopt the Rabbinic faith, guided by law, scholarship, and ancient tradition."
+
+bzn_consult_forest_seers_decision: "Consult the Forest Seers"
+bzn_consult_forest_seers_decision_desc: "Long before priests and scribes arrived in these lands, the spirits of forest and river were consulted through seers and shamans. Though their ways stand apart from organized faith, many still believe the forest whispers truths unseen by crown or scripture."
+bzn_consult_forest_seers_decision_confirm: "Seek Their Wisdom"
+bzn_consult_forest_seers_decision_tooltip: "Consult the forest seers, risking religious tension in exchange for insight, calm, or revelation."
+
+bzn_river_expedition_decision:0 "Sponsor a River Expedition"
+bzn_river_expedition_decision_desc:0 "The great rivers of the North serve as roads through forest and wilderness. By sponsoring an expedition along these waterways, we may discover new trade opportunities, fertile lands, or valuable resources — though the dangers of the frontier are many."
+bzn_river_expedition_decision_tooltip:0 "Sponsor a river expedition into the northern frontier."
+bzn_river_expedition_decision_confirm:0 "Fund the Expedition"
+bzn_river_expedition_effect_tooltip_1:0 "If successful, you will gain [prestige|E] and a random amount of [gold|E]."
+bzn_decisions.0019.t:0 "The Expedition Returns"
+bzn_decisions.0019.desc:0 "The expedition has finally returned to the docks. The ships are worn, the crews exhausted, and the outcome of their venture is not immediately clear. Some journeys bring glory and wealth, others only experience and hard lessons. What matters is that they have come back, and their fate is now known."
+bzn_decisions.0019.a:0 "Hear the final report"
+
+bzn_frontier_warriors_decision: "Recruit Frontier Warriors"
+bzn_frontier_warriors_decision_desc: "Life on the northern frontier breeds hardy fighters accustomed to cold, forest, and ambush. Hunters, river raiders, and seasoned settlers are willing to take up arms in exchange for land, loot, or protection. By organizing these frontier warriors, we strengthen our hold on the wilderness — though such men are loyal more to opportunity than to banners."
+bzn_frontier_warriors_decision_confirm: "Raise the Frontier Warriors"
+bzn_frontier_warriors_decision_tooltip: "Recruit seasoned frontier fighters, improving military strength and control in the northern lands at the cost of discipline and upkeep."
+frontier_warriors: "Frontier Warriors"
+
+mamaluk_court_position: "Mamluk Commander"
+mamaluk_court_position_desc: "A Mamluk Commander is a highly trained slave-soldier entrusted with leading elite troops and safeguarding the ruler’s authority through military discipline and loyalty."
+
+frontier_governor_court_position: "Frontier Governor"
+frontier_governor_court_position_desc: "The Frontier Governor is entrusted with administering the realm’s outermost lands, where distance, harsh climate, and hostile neighbors demand autonomy and decisiveness. Tasked with organizing defense, overseeing settlers, and enforcing authority in the wilderness, this official rules where the law grows thin and survival depends on strength."
+
+frontier_governor_appease_populace: "Appease the Frontier Populace"
+frontier_governor_appease_populace_desc: "The peoples of the frontier live far from the centers of power and often follow their own customs. By negotiating with local elders, easing burdens, and respecting traditions, the governor can reduce unrest and foster reluctant loyalty."
+
+frontier_governor_support_troops: "Support Frontier Garrisons"
+frontier_governor_support_troops_desc: "Supplying and organizing troops in the frontier is no small task. Through careful logistics and discipline, the governor ensures that border garrisons remain effective against raiders, rebels, and foreign incursions."
+
+frontier_governor_enforce_public_order: "Enforce Public Order"
+frontier_governor_enforce_public_order_desc: "Law is fragile in the wilderness. By asserting authority through patrols, punishments, and displays of force, the governor deters banditry and rebellion—though heavy-handed methods may breed resentment."
+
+frontier_governor_development: "Encourage Frontier Development"
+frontier_governor_development_desc: "With incentives for settlers, support for trade routes, and the establishment of fortifications and markets, the governor can slowly transform untamed lands into productive and loyal provinces."
+
+culture_parameter_unlock_maa_frontier_enforcer: "Can recruit [GetMaA('frontier_enforcer').GetName] as [men_at_arms|E]"
+frontier_enforcer: "Frontier Enforcers"
+frontier_enforcer_flavor: "Hardened frontier warriors tasked with enforcing order in remote and lawless lands."
+
+ battle_thrall_interaction: "Make Battle Thrall"
+ battle_thrall_interaction_desc: "Strip this thrall of menial duties and bind them to the path of war. No longer a servant of fields or halls, they will now serve as a Battle Thrall, trained to fight and die for their master."
+ battle_thrall_interaction_tooltip: "Turn this Thrall into a Battle Thrall, removing their previous labor assignment."
+ battle_thrall_interaction_confirm: "Assign as Battle Thrall"
+
+bzn_become_vegetarian: "Adopt a Vegetarian Lifestyle"
+bzn_become_vegetarian_desc: "Through reflection and discipline, I have come to believe that abstaining from meat will bring harmony to my body and spirit. By embracing a vegetarian lifestyle, I seek greater balance, self-control, and compassion."
+bzn_become_vegetarian_confirm: "I shall renounce meat."
+bzn_become_vegetarian_tooltip: "You will adopt a vegetarian lifestyle, changing your dietary habits and personal discipline."
+
+bzn_renounce_vegetarian: "Renounce Vegetarianism"
+bzn_renounce_vegetarian_desc: "The path of restraint no longer suits my needs. I will return to a broader diet and abandon the limitations of vegetarian living."
+bzn_renounce_vegetarian_confirm: "I will eat meat once more."
+bzn_renounce_vegetarian_tooltip: "You will abandon your vegetarian lifestyle."
+
+vegetarian: "Vegetarian"
+vegetarian_desc: "This character follows a vegetarian diet, abstaining from the consumption of meat for reasons of discipline, belief, or personal philosophy."
+
+ dharma_sponsor_jain_sangha_decision: "Sponsor the Jain Sangha"
+ dharma_sponsor_jain_sangha_decision_desc: "By offering patronage to the Jain Sangha, I support monks devoted to learning, discipline, and the principle of Ahimsa. Through scholarship and example, they will strengthen the moral fabric of my realm without the shedding of blood."
+ dharma_sponsor_jain_sangha_decision_confirm: "Endow the Sangha"
+ dharma_sponsor_jain_sangha_decision_tooltip: "Fund the Jain Sangha, gaining Piety and Learning benefits while encouraging peaceful development."
+
+adopt_a_new_faith_for_india_decision: "Find a New Faith for India"
+adopt_a_new_faith_for_india_decision_tooltip: "The subcontinent has long been a crossroads of belief, philosophy, and devotion. Perhaps it is time to embrace a faith that best reflects the spiritual destiny of India."
+adopt_a_new_faith_for_india_decision_desc: "India is a land of countless paths to enlightenment, from ancient ascetic traditions to devotional movements and foreign creeds that have taken root in its soil. By choosing a new faith, I may shape the spiritual future of the subcontinent itself."
+adopt_a_new_faith_for_india_decision_confirm: "Let the people follow a new path."
+choose_ismaili_name: "[GetFaithByKey('ismaili').GetNameNoTooltip]"
+choose_ismaili_desc: "[GetFaithByKey('ismaili').GetName]"
+choose_ismaili_tooltip: "The [GetFaithByKey('ismaili').GetAdjective] [faith|E] offers structure, scholarship, and a disciplined interpretation of divine law. Through learned jurists and faithful observance, order and piety may flourish across India."
+choose_maulvi_name: "[GetFaithByKey('maulvi').GetNameNoTooltip]"
+choose_maulvi_desc: "[GetFaithByKey('maulvi').GetName]"
+choose_maulvi_tooltip: "The [GetFaithByKey('maulvi').GetAdjective] [faith|E] offers structure, scholarship, and a disciplined interpretation of divine law. Through learned jurists and faithful observance, order and piety may flourish across India."
+choose_malabarism_name: "[GetFaithByKey('malabarism').GetNameNoTooltip]"
+choose_malabarism_desc: "[GetFaithByKey('malabarism').GetName]"
+choose_malabarism_tooltip: "The [GetFaithByKey('malabarism').GetAdjective] [faith|E] preserves ancient traditions of law, ritual, and communal identity. Though foreign in origin, its endurance and cohesion may find fertile ground among India’s diverse peoples."
+choose_nestorian_name: "[GetFaithByKey('nestorian').GetNameNoTooltip]"
+choose_nestorian_desc: "[GetFaithByKey('nestorian').GetName]"
+choose_nestorian_tooltip: "The [GetFaithByKey('nestorian').GetAdjective] [faith|E] has traveled far along trade routes and merchant roads. Its emphasis on scholarship and missionary zeal could bind India more closely to the wider world."
+choose_shaivism_name: "[GetFaithByKey('shaivism').GetNameNoTooltip]"
+choose_shaivism_desc: "[GetFaithByKey('shaivism').GetName]"
+choose_shaivism_tooltip: "The [GetFaithByKey('shaivism').GetAdjective] [faith|E] venerates Shiva as the supreme force of creation and destruction. Through asceticism, devotion, and ritual, it offers a powerful spiritual identity deeply rooted in India’s past."
+choose_vaishnavism_name: "[GetFaithByKey('vaishnavism').GetNameNoTooltip]"
+choose_vaishnavism_desc: "[GetFaithByKey('vaishnavism').GetName]"
+choose_vaishnavism_tooltip: "The [GetFaithByKey('vaishnavism').GetAdjective] [faith|E] emphasizes devotion, compassion, and righteous rule under Vishnu and his avatars. Its popular appeal could unite ruler and subject alike through shared reverence."
+choose_svetambara_name: "[GetFaithByKey('svetambara').GetNameNoTooltip]"
+choose_svetambara_desc: "[GetFaithByKey('svetambara').GetName]"
+choose_svetambara_tooltip: "The [GetFaithByKey('svetambara').GetAdjective] [faith|E] preaches non-violence, discipline, and spiritual purity. Though demanding, its ethical rigor could usher in an era of prosperity and moral authority."
+choose_vajrayana_name: "[GetFaithByKey('vajrayana').GetNameNoTooltip]"
+choose_vajrayana_desc: "[GetFaithByKey('vajrayana').GetName]"
+choose_vajrayana_tooltip: "The [GetFaithByKey('vajrayana').GetAdjective] [faith|E] blends mysticism, ritual, and enlightenment through esoteric practices. Its tantric traditions promise both spiritual power and divine insight."
+choose_mahayana_name: "[GetFaithByKey('mahayana').GetNameNoTooltip]"
+choose_mahayana_desc: "[GetFaithByKey('mahayana').GetName]"
+choose_mahayana_tooltip: "The [GetFaithByKey('mahayana').GetAdjective] [faith|E] emphasizes compassion and universal salvation. By following the Bodhisattva ideal, India may become a beacon of wisdom and mercy."
+choose_theravada_name: "[GetFaithByKey('theravada').GetNameNoTooltip]"
+choose_theravada_desc: "[GetFaithByKey('theravada').GetName]"
+choose_theravada_tooltip: "The [GetFaithByKey('theravada').GetAdjective] [faith|E] follows the oldest surviving teachings of the Buddha. Its monastic discipline and clarity of doctrine may restore spiritual focus and inner peace."
+CHOOSE_INDIAN_FAITH: "So be it."
+
+bzn_ghulat_convertion: "Embrace a Ghulat Faith"
+bzn_ghulat_convertion_desc: "Across Mesopotamia, alternative interpretations of Islam persist beyond the reach of orthodox authority. These Ghulat traditions offer spiritual meaning through esoteric teachings, devotion to sacred figures, and revelations that challenge established doctrine. By adopting one of these faiths, I would redefine both my personal belief and the religious character of my realm."
+bzn_ghulat_convertion_tooltip: "Convert to a heterodox Muslim faith rooted in the Ghulat traditions."
+bzn_ghulat_convertion_confirm: "Embrace the New Faith"
+CHOOSE_GHULAT_FAITH_TO_CONVERT_TO: "Adopt a New Faith"
+
+convert_to_ghulat: "Ikhtilafism"
+convert_to_ghulat_via_decision_desc: "The Ghulāt view divine truth as manifest through chosen individuals, rejecting rigid orthodoxy in favor of esoteric revelation. This path places spiritual insight above established religious authority."
+
+convert_to_sabaiya: "Sabaiya"
+convert_to_sabaiya_via_decision_desc: "The Sabaiya preserve ancient cosmological beliefs and secret rites, blending Islamic devotion with older spiritual traditions. Their faith emphasizes hidden knowledge and sacred intermediaries."
+
+convert_to_quranist: "Quranist"
+convert_to_quranist_via_decision_desc: "Quranists hold that the Qurʾan alone is the ultimate source of divine guidance, rejecting later traditions and interpretations as human innovation. By adopting this faith, I would place revelation above juristic authority and return to what is believed to be the pure word of God."
+
+convert_to_ishaqiya: "Ishaqiya"
+convert_to_ishaqiya_via_decision_desc: "The Ishaqiya place Ishaq ibn Muhammad at the center of divine revelation, seeing him as more than a mere mortal. To follow this path is to accept a faith defined by devotion to a living vessel of sacred truth."
+
+convert_to_alevi: "Alevi"
+convert_to_alevi_via_decision_desc: "Alevi belief emphasizes inner spirituality, reverence for Ali, and communal rites over rigid law. By embracing this faith, I align myself with a tradition that values unity, mysticism, and shared devotion."
+
+convert_to_alawite: "Alawite"
+convert_to_alawite_via_decision_desc: "The Alawite faith teaches that divine essence is revealed through sacred figures and cosmic cycles. Its doctrines are guarded closely, shared only among the initiated, and profoundly misunderstood by outsiders."
+
+custom_qarmatians: "Qarmatians"
+custom_yemen: "Yemen"
+custom_salihi: "Salihiyya"
+custom_mutazila: "Mu'tazilism"
+custom_krete: "Crete"
+custom_zoroastrian_china: "Zoroastrian China"
+
+holy_site_shengle_name: "Zhenwu"
+holy_site_degere_name: "Linhuang"
+
+qarmatian_religious_head_title: "Imam"
+qarmatian_religious_head_title_name: "Qarmatian Imamate"
+
+ mali_sofa_infantry_historic: "Sofa Warriors"
+ mali_sofa_infantry_historic_flavor: "Elite warrior-slaves, pillars of the military power of the gold emperors."
+ lifidi_cavalry: "Lifidi Cavalry"
+ lifidi_cavalry_flavor: ""
+ 
+ e_lower_niger: "Lower Niger"

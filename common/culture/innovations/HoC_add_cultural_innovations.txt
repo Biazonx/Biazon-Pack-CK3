@@ -1,0 +1,24 @@
+﻿@innovation_slavic_boyar = "gfx/interface/icons/culture_innovations/innovation_slavic_boyar.dds"
+
+innovation_slavic_boyar = {
+	icon = @innovation_slavic_boyar
+	group = culture_group_military
+	culture_era = culture_era_early_medieval
+	
+	potential = {	
+		OR = {	
+		has_cultural_parameter = unlock_maa_slavic_boyar			
+		this = culture:russian		
+		}
+	}		
+	
+	character_modifier = {
+		development_growth_factor = 0.05
+		domain_tax_mult = 0.05
+	}	
+			
+	unlock_maa = slavic_boyar
+
+	flag = global_regional
+	flag = early_medieval_era_regional
+}

@@ -1,0 +1,7 @@
+﻿l_english:
+ 
+ wap_rival_slave_scapegoat:0 "[CHARACTER.GetShortUIName|U] scapegoated [TARGET_CHARACTER.GetShortUIName] for the loss of a slave."
+ wap_rival_slave_scapegoat_corresponding:0 "[TARGET_CHARACTER.GetShortUIName|U] scapegoated [CHARACTER.GetShortUIName] for the loss of a slave."
+ lover_funeral_lust:0 "[CHARACTER.GetShortUIName|U] tumbled with their mother [TARGET_CHARACTER.GetShortUIName] at the end of the royal funeral."
+ lover_funeral_lust_corresponding:0 "[TARGET_CHARACTER.GetShortUIName|U] tumbled with their mother [CHARACTER.GetShortUIName] at the end of the royal funeral."
+ 

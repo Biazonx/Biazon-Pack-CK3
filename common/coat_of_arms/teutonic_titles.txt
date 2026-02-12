@@ -1,0 +1,41 @@
+k_teutonic = {
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	
+	colored_emblem = {
+		texture = "ce_ordinary_cross_thin.dds"
+		color1 = "black"
+		color2 = "black"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 }  }
+	}
+	colored_emblem = {
+		texture = "ce_ordinary_pale_5.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		instance = { position = { 0.5 0.5 } scale = { .5 1. }  }
+	}
+	colored_emblem = {
+		texture = "ce_ordinary_fess_5.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		instance = { position = { 0.5 0.5 } scale = { 1. .5 }  }
+	}
+	colored_emblem = {
+		texture = "ce_shield_01.dds"
+		color1 = "black"
+		color2 = "black"
+		instance = { position = { 0.5 0.5 } scale = { 0.7 0.7 }  }
+	}	
+	colored_emblem = {
+		texture = "ce_shield_01.dds"
+		color1 = "yellow"
+		instance = { position = { 0.5 0.5 } scale = { 0.639 0.639 }  }
+	}
+	colored_emblem = {
+		texture = "ce_eagle_crown_boned.dds"
+		color1 = "black"
+		color2 = "red"
+		color3 = "white"
+		instance = { position = { 0.5 0.51 } scale = { 0.725 0.725 }  }
+	}
+}

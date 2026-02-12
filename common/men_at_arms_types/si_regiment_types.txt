@@ -1,7 +1,7 @@
 ﻿# standard costs
 @maa_buy_cost = 60
-@maa_low_maintenance_cost = 0.15
-@maa_high_maintenance_cost = 0.45
+@maa_low_maintenance_cost = 0.27
+@maa_high_maintenance_cost = 0.81
 @cultural_maa_extra_ai_score = 60 # Equivalent to having 6 extra regiments beyond what the code scoring would indicate (see NEGATIVE_SCORE_PER_EXISTING_REGIMENT)
 
 jaguar_warrior = {
@@ -22,12 +22,14 @@ jaguar_warrior = {
 		jungle = { damage = 10 toughness = 5 }
 		forest = { damage = 10 toughness = 5 }
 		hills = { damage = 10 toughness = 5 }
+		wetlands = { damage = 10 toughness = 5 }
+		floodplains = { damage = 10 toughness = 5 }
 	}
 	
 	counters = {
 		pikemen = 1
-		heavy_infantry = 2
-		skirmishers = 2
+		heavy_infantry = 1
+		skirmishers = 1
 	}
 	
 	buy_cost = { gold = @maa_buy_cost }
@@ -37,5 +39,4 @@ jaguar_warrior = {
 	stack = 100
 	ai_quality = { value = @cultural_maa_extra_ai_score }
 	icon = skirmishers
-	
 }

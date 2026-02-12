@@ -1,0 +1,452 @@
+﻿regional_destiny_situation = {
+	illustration = "gfx/interface/illustrations/event_story/siberia_region.dds"
+	
+	is_unique = yes # It can only exist once in the world
+	
+	window = situation
+	gui_tooltip_group_focused = yes
+	gui_window_name = "window_situation_regional_destiny_situation"
+	#gui_participation_window_name = "window_situation_participation"
+	map_mode = sub_regions
+
+	##################################################
+	# Regions
+	##################################################
+	sub_regions = {
+		world_siberia_2 = {
+			map_color = { 188 0 45 }
+			icon = "gfx/interface/icons/situations/regional_destiny_situation/regional_destiny.dds"
+			geographical_regions = { 
+				world_siberia_2
+			}
+		}
+	}
+
+	##################################################
+	# On Actions
+	##################################################
+	on_start = {
+		trigger_event = {
+			on_action = regional_destiny_situation_pulse
+		}
+	}
+
+	##################################################
+	# Groups
+	##################################################
+	participant_groups = {
+	
+		regional_destiny_conqueror = {
+			icon = "gfx/interface/icons/situations/group_regional_destiny_conqueror.dds"
+			
+			require_capital_in_sub_region = yes
+			is_character_valid = {
+			 	highest_held_title_tier >= 2
+				is_landless_adventurer = no
+				has_trait = bzn_warlord
+				NOT = { has_character_flag = rd_downfall_flag }
+				NOT = { government_has_flag = government_is_herder }
+			}
+			
+			on_join = {
+				save_scope_as = conqueror
+				scope:situation_sub_region = {
+					every_situation_sub_region_participant = {
+						limit = {
+							is_ai = no
+						}
+						trigger_event = regional_destiny_situation.0005
+					}
+				}
+			}
+
+			on_leave = {
+				save_scope_as = conqueror
+				scope:situation_sub_region = {
+					every_situation_sub_region_participant = {
+						limit = {
+							is_ai = no
+						}
+						trigger_event = regional_destiny_situation.0006
+					}
+
+					trigger_event = {
+						on_action = regional_destiny_situation_sub_region_pulse
+						years = RD_CONQUEROR_CHOSEN_SPAN
+					}
+				}
+			}
+			map_color = hsv{ 0.59 1 1 }
+		}
+
+		regional_destiny_involved = {
+			icon = "gfx/interface/icons/situations/group_regional_destiny_involved.dds"
+			
+			require_capital_in_sub_region = yes
+			is_character_valid = {
+			 	highest_held_title_tier >= 2
+				NOT = { government_has_flag = government_is_herder }
+			}
+	
+			map_color = hsv{ 0.59 0.75 0.83 }
+		}
+	}
+	
+	##################################################
+	# Phases
+	##################################################
+	start_phase = starting_era
+
+	phases = {
+		starting_era = {
+			icon = "gfx/interface/icons/situations/regional_destiny_situation/starting_era.dds"
+
+			on_start = {
+				scope:situation_sub_region = {
+					every_situation_sub_region_participant = {
+						limit = {
+							is_ai = no
+						}
+						trigger_event = regional_destiny_situation.0001
+					}
+				}
+			}
+			on_end = {
+			}
+
+			#max_duration = { days = 730 }
+			#max_duration_next_phase = weighted_non_takover
+
+			future_phases = {
+				unification_ordered = {
+					takeover_type = points
+					takeover_points = 500
+
+					catalysts = {
+					}
+				}
+				unification_chaotic = {
+					takeover_type = points
+					takeover_points = 500
+
+					catalysts = {
+					}
+				}
+			}
+		}
+		
+		unification_chaotic = {
+			icon = "gfx/interface/icons/situations/regional_destiny_situation/unification_chaotic.dds"
+
+			parameters = {
+				unlock_rd_county_conquest_cb = yes
+				rd_gpt_add_conquest_trait = yes
+			}
+
+			on_start = {
+				scope:situation_sub_region = {
+					every_situation_sub_region_participant = {
+						limit = {
+							is_ai = no
+						}
+						trigger_event = regional_destiny_situation.0002
+					}
+				}
+			}
+			on_end = {
+			}
+
+			max_duration = { days = 7300 }
+			#max_duration_next_phase = weighted_random_points
+
+			future_phases = {
+				unification_ordered = {
+					takeover_type = points
+					takeover_points = 3000
+
+					catalysts = {
+					}
+				}
+			}
+
+			modifier_sets = {
+				regional_destiny_situation_war_effects = {
+					icon = "gfx/interface/icons/struggle_effects/war.dds"
+					
+					regional_destiny_conqueror = {
+					parameters = {
+							unlocks_border_clash_casus_belli = yes
+						}
+						character_modifier = {
+							ai_war_chance = 0.25
+							ai_war_cooldown = -0.25
+							levy_attack = 2
+							levy_toughness = 2
+							led_by_owner_extra_advantage_add = 4
+							raid_speed = 0.25
+						}
+						county_modifier = {
+							supply_limit_mult = 1
+							levy_size = 1
+							garrison_size = -0.5
+						}
+					}
+					
+					regional_destiny_involved = {
+						parameters = {
+							unlocks_border_clash_casus_belli = yes
+						}
+						character_modifier = {
+							ai_war_chance = 0.25
+							ai_war_cooldown = -0.25
+							levy_attack = 2
+							levy_toughness = 2
+							led_by_owner_extra_advantage_add = 4
+							raid_speed = 0.25
+						}
+						county_modifier = {
+							supply_limit_mult = 1
+							levy_size = 1
+							garrison_size = -0.5
+						}
+					}
+				}
+				regional_destiny_situation_faith_effects = {
+					icon = "gfx/interface/icons/struggle_effects/faith.dds"
+					regional_destiny_conqueror = {
+						character_modifier = {
+							levy_reinforcement_rate_same_faith = 0.2
+							domain_tax_different_faith_mult = 0.1
+							different_faith_opinion = -10
+							clergy_opinion = -10
+							zealot_opinion = 20
+							zealot_ai_vengefulness = very_high_positive_ai_value
+							zealot_ai_zeal = very_high_positive_ai_value
+							zealot_ai_boldness = high_positive_ai_value
+							church_holding_build_gold_cost = -0.3
+						}
+					}
+					regional_destiny_involved = {
+						character_modifier = {
+							levy_reinforcement_rate_same_faith = 0.2
+							domain_tax_different_faith_mult = 0.1
+							different_faith_opinion = -10
+							clergy_opinion = -10
+							zealot_opinion = 20
+							zealot_ai_vengefulness = very_high_positive_ai_value
+							zealot_ai_zeal = very_high_positive_ai_value
+							zealot_ai_boldness = high_positive_ai_value
+							church_holding_build_gold_cost = -0.3
+						}
+					}
+				}
+				regional_destiny_situation_culture_effects = {
+					icon = "gfx/interface/icons/struggle_effects/culture.dds"
+					regional_destiny_conqueror = {
+						character_modifier = {
+							minority_opinion = -10
+							minority_ai_energy = high_positive_ai_value
+							minority_different_faith_opinion = -10
+						}
+						county_modifier = {
+							county_fertility_growth_add = -0.2
+							monthly_county_control_growth_add = -0.2
+						}
+					}
+					regional_destiny_involved = {
+						character_modifier = {
+							minority_opinion = -10
+							minority_ai_energy = high_positive_ai_value
+							minority_different_faith_opinion = -10
+						}
+						county_modifier = {
+							county_fertility_growth_add = -0.2
+							monthly_county_control_growth_add = -0.2
+						}
+					}
+				}
+				regional_destiny_situation_other_effects = {
+					icon = "gfx/interface/icons/struggle_effects/other.dds"
+					regional_destiny_conqueror = {
+						parameters = {
+							rd_gpt_add_conquest_trait = yes
+						}
+						character_modifier = {
+							build_speed = -0.5
+							monthly_prestige_gain_mult = 0.1
+							owned_hostile_scheme_success_chance_add = 20
+						}
+						county_modifier = { 
+							travel_danger = 25
+						}
+					}
+					regional_destiny_involved = {
+						parameters = {
+							rd_gpt_add_conquest_trait = yes
+						}
+						character_modifier = {
+							build_speed = -0.5
+							monthly_prestige_gain_mult = 0.1
+							owned_hostile_scheme_success_chance_add = 20
+						}
+						county_modifier = { 
+							travel_danger = 25
+						}
+					}
+				}
+			}
+		}
+		unification_ordered = {
+			icon = "gfx/interface/icons/situations/regional_destiny_situation/unification_ordered.dds"
+
+			parameters = {
+				rd_gpt_add_prosperity_trait = yes
+			}
+
+			on_start = {
+				scope:situation_sub_region = {
+					every_situation_sub_region_participant = {
+						limit = {
+							is_ai = no
+						}
+						trigger_event = regional_destiny_situation.0004
+					}
+				}
+			}
+			on_end = {
+			}
+
+			max_duration = { days = 7300 }
+			#max_duration_next_phase = weighted_random_points
+
+			future_phases = {
+				unification_chaotic = {
+					takeover_type = points
+					takeover_points = 3000
+
+					catalysts = {
+					}
+				}
+			}
+
+			modifier_sets = {
+				regional_destiny_situation_war_effects = {
+					icon = "gfx/interface/icons/struggle_effects/war.dds"
+					regional_destiny_conqueror = {
+						character_modifier = {
+							ai_war_chance = -0.25
+							knight_effectiveness_mult = -0.15
+							army_damage_mult = -0.1
+							army_toughness_mult = -0.1
+							men_at_arms_recruitment_cost = -0.5
+							men_at_arms_maintenance = -0.25
+						}
+						county_modifier = {
+							garrison_size = -0.1
+						}
+					}
+					regional_destiny_involved = {
+						character_modifier = {
+							ai_war_chance = -0.25
+							knight_effectiveness_mult = -0.15
+							army_damage_mult = -0.1
+							army_toughness_mult = -0.1
+							men_at_arms_recruitment_cost = -0.5
+							men_at_arms_maintenance = -0.25
+						}
+						county_modifier = {
+							garrison_size = -0.1
+						}
+					}
+				}
+				regional_destiny_situation_faith_effects = {
+					icon = "gfx/interface/icons/struggle_effects/faith.dds"
+					regional_destiny_conqueror = {
+						county_modifier = {
+						}
+						
+						character_modifier = {
+							same_faith_opinion = 20
+							faith_conversion_piety_cost_mult = -0.2
+							faith_creation_piety_cost_mult = -0.2
+							clergy_opinion = 10
+							religious_head_opinion = 10
+						}
+					}
+					regional_destiny_involved = {
+						county_modifier = {
+						}
+						
+						character_modifier = {
+							same_faith_opinion = 20
+							faith_conversion_piety_cost_mult = -0.2
+							faith_creation_piety_cost_mult = -0.2
+							clergy_opinion = 10
+							religious_head_opinion = 10
+						}
+					}
+				}
+				regional_destiny_situation_culture_effects = {
+					icon = "gfx/interface/icons/struggle_effects/culture.dds"
+					regional_destiny_conqueror = {
+						character_modifier = {
+							same_culture_opinion = 10
+							opinion_of_same_culture = 10
+							cultural_head_acceptance_gain_mult = 0.5
+							character_capital_county_monthly_development_growth_add = 0.1
+							cultural_head_fascination_mult = 0.1
+						}
+						county_modifier = {
+							travel_danger = -5
+							county_fertility_growth_add = 0.2
+						}
+					}
+					regional_destiny_involved = {
+						character_modifier = {
+							same_culture_opinion = 10
+							opinion_of_same_culture = 10
+							cultural_head_acceptance_gain_mult = 0.5
+							character_capital_county_monthly_development_growth_add = 0.1
+							cultural_head_fascination_mult = 0.1
+						}
+						county_modifier = {
+							travel_danger = -5
+							county_fertility_growth_add = 0.2
+						}
+					}
+				}
+				regional_destiny_situation_other_effects = {
+					icon = "gfx/interface/icons/struggle_effects/other.dds"
+					regional_destiny_conqueror = {
+						parameters = {
+							rd_gpt_add_prosperity_trait = yes
+						}
+						character_modifier = {
+							stress_gain_mult = 0.15
+							stress_loss_mult = 0.15
+							court_grandeur_baseline_add = 4
+							fertility = 0.1
+							monthly_income = 1
+						}
+						county_modifier = {
+						}
+					}
+					regional_destiny_involved = {
+						parameters = {
+							rd_gpt_add_prosperity_trait = yes
+						}
+						character_modifier = {
+							stress_gain_mult = 0.15
+							stress_loss_mult = 0.15
+							court_grandeur_baseline_add = 4
+							fertility = 0.1
+							monthly_income = 1
+						}
+						county_modifier = {
+						}
+					}
+				}
+			}
+		}
+	}
+}

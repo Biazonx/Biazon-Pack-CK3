@@ -1,0 +1,15 @@
+﻿l_english:
+ ##################################################
+ # #General Character Modifiers
+
+ ##################################################
+ # #County Modifiers
+ eec_crete_pirate_capital_modifier:0 "The Stolen City"
+ eec_crete_pirate_capital_modifier_desc:0 "The local capital earned its moniker through blood, fear, and toil. The toil is home-grown, but the blood and fear are brought in from abroad. Regularly."
+
+
+ ##################################################
+ # #Dynasty Modifiers
+ eec_legacy_of_piracy_modifier:0 "Legacy of Piracy"
+ eec_legacy_of_piracy_modifier_desc:0 "This dynasty traces recent descent from the greatest pirate and raider of the age; sea, salt, and smoke are ever in their blood and on their lips.\n\nCan [raid|E], regardless of [government|E] type\nCan $game_concept_raid$ overseas & sail in Major Rivers"
+

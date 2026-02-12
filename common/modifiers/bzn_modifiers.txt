@@ -194,3 +194,53 @@ contacted_eastern = {
 	icon = diplomacy_positive
 	diplomacy = 1
 }
+
+rashidun_descendant = {
+	icon = flame_positive
+	monthly_piety = 1
+	legitimacy_gain_mult = 0.15
+}
+
+rashidun_awakening_house_modifier = {
+	icon = learning_positive
+	learning = 3
+	stewardship = 3
+	martial = 3
+	clergy_opinion = 10
+	monthly_piety_gain_mult = 0.25
+	legitimacy_gain_mult = 0.25
+}
+
+russian_settlers = {
+	icon = outdoors_positive
+	development_growth = 0.1
+	monthly_county_control_growth_add = 0.2
+}
+
+russian_traders = {
+	icon = economy_positive
+	diplomacy = 1
+	stewardship = 1
+	monthly_income_mult = 0.1
+}
+
+northern_capital_opinion_modifier = {
+	icon = county_modifier_opinion_positive
+	county_opinion_add = 50
+}
+
+northern_capital_misc_benefits_modifier = {
+	icon = asatru_raven_positive
+	tax_mult = 0.5
+	levy_size = 0.5
+	development_growth = 1
+}
+
+vegetarian = {
+	icon = food_positive
+	prowess = -2
+	health = 0.1
+	monthly_piety = 1
+	clergy_opinion = 5
+}
+	

@@ -31,7 +31,10 @@
 		can_travel_along_rivers = yes
 	}
 	character_modifier = {
-		embarkation_cost_mult = -0.75
+		embarkation_cost_mult = -0.85
+		sea_travel_danger = medium_sea_danger_reduction
+		coastal_sea_travel_danger = medium_sea_danger_reduction
+		naval_movement_speed_mult = 0.25
 	}
 	
 	cost = {
@@ -88,7 +91,7 @@ si_tradition_dense_bureaucracy = {
 	category = realm
 
 	layers = {
-		0 = learning
+		0 = stewardship
 		1 = indian
 		4 = quill.dds
 	}
@@ -110,9 +113,17 @@ si_tradition_dense_bureaucracy = {
 		can_make_republican_vassals = yes
 		poorly_educated_leaders_distrusted = yes
 		peasant_and_populist_factions_less_common = yes
+		expensive_convert_to_local_culture = yes
+		less_likely_to_promote_culture = yes
+		loyal_trait_more_valued = yes
 	}
 
 	character_modifier = {
+		dread_per_tyranny_add = 0.3
+		dread_decay_mult = -0.3
+		revolting_siege_morale_loss_mult = 0.25
+		long_reign_bonus_mult = 0.25
+		tyranny_loss_mult = -0.5
 		vassal_limit = 30
 	}
 	
@@ -187,7 +198,7 @@ si_tradition_headhunting = {
 	character_modifier = {
 		knight_limit = 2
 		martial_per_piety_level = 2
-		monthly_piety_gain_per_knight_add = 0.05
+		monthly_piety_gain_per_knight_add = 0.1
 		ai_war_chance = 1
 		ai_war_cooldown = -0.5
 	}

@@ -1,0 +1,45 @@
+﻿l_english:
+
+ Pierre: "Pierre"
+ historical_character.pierre_valdes: "#EMP Pierre Valdès#! was a wealthy merchant of Lyon who, struck by a profound religious awakening, renounced his possessions and devoted his life to the preaching of apostolic poverty. Inspired by the teachings of Christ and the early Church, he translated scripture into the vernacular so that all might hear the Word of God. His followers, later known as the Waldensians, challenged ecclesiastical authority by preaching without clerical sanction, drawing condemnation from the Catholic hierarchy. Declared heretical, Pierre’s movement endured persecution yet survived in the valleys and towns of Europe, becoming one of the earliest expressions of lay reform that would echo centuries later in the Reformation. \n @profession_theology! \n"
+bzn_adopt_waldensianism:0 "Embrace the Waldensian Path"
+bzn_adopt_waldensianism_desc:0 "The authority of distant hierarchs and opulent temples rings hollow in these harsh lands. A simpler, humbler faith—rooted in personal devotion and communal purity—offers a new spiritual direction for my realm."
+bzn_adopt_waldensianism_tooltip:0 "You will abandon your current faith and adopt Waldensianism."
+bzn_adopt_waldensianism_confirm:0 "Let simplicity guide us."
+
+Karp: "Karp"
+historical_character.karp: "#EMP Deacon Karp#! founder of a lay reform movement that rejected the established church hierarchy and claimed the right of ordinary believers to preach and interpret scripture. His followers criticized clerical corruption and opposed ordained clergy, forming a sect that spread through cities like Pskov and Novgorod in the 14th century. They were persecuted by church authorities but left a long-lasting legacy of dissent. \n @profession_theology! \n"
+bzn_adopt_strigolniki:0 "Embrace the Strigolniki"
+bzn_adopt_strigolniki_decision_desc:0 "The authority of bishops and priests has grown distant from the lives of ordinary believers. Among my people, voices now rise in defiance of corruption and clerical privilege, calling for a faith led by conscience rather than hierarchy. By embracing the Strigolniki, I reject the ordained clergy and affirm the right of lay believers to preach and judge matters of faith."
+bzn_adopt_strigolniki_tooltip:0 "You will abandon your current faith and adopt Strigolnichestvo."
+bzn_adopt_strigolniki_confirm:0 "Let the faithful speak for themselves."
+
+bzn_adopt_hafizi: "Embrace the Hafizi Doctrine"
+bzn_adopt_hafizi_decision_desc: "The religious establishment has grown distant from the people, tangled in politics and rigid interpretations. Scholars and administrators alike whisper of a purer path — one rooted in discipline, legal clarity, and loyalty to rightful authority. By embracing the Hafizi doctrine, I can reshape the faith to better serve both state and soul."
+bzn_adopt_hafizi_confirm: "The doctrine shall be proclaimed."
+bzn_adopt_hafizi_tooltip: "You will abandon your current faith and adopt the Hafizi doctrine, redefining religious authority and doctrine within your realm."
+
+bzn_adopt_mutrafiya: "Adopt the Mutrafiya Teachings"
+bzn_adopt_mutrafiya_decision_desc: "The Mutrafiya denounce luxury, wealth, and worldly excess as signs of moral decay. They teach that prosperity breeds corruption, and that true faith lies in humility, restraint, and the rejection of elite privilege. To follow their path would be to turn against comfort and embrace a life of austere devotion."
+bzn_adopt_mutrafiya_confirm: "Embrace Ascetic Devotion"
+bzn_adopt_mutrafiya_tooltip: "Convert to the Mutrafiya faith, rejecting luxury and condemning material excess as a threat to spiritual purity."
+
+bzn_adopt_salihi: "Embrace the Salihiyya Path"
+bzn_adopt_salihi_decision_desc: "The Salihiyya call for a return to the ways of the righteous forebears, condemning later innovations and moral laxity. They demand strict adherence to scripture, discipline in conduct, and obedience to religious authority. To adopt this path is to impose order upon belief and restore what is seen as true and uncorrupted faith."
+bzn_adopt_salihi_confirm: "Adopt the Salihiyya Path"
+bzn_adopt_salihi_tooltip: "Convert to the Salihiyya faith, enforcing strict religious discipline and rejecting later innovations."
+
+bzn_adopt_qarmatian: "Embrace Qarmatian Doctrine"
+bzn_adopt_qarmatian_decision_desc: "The Qarmatians reject the authority of caliphs, jurists, and worldly elites, preaching a vision of faith rooted in equality, communal ownership, and direct spiritual truth. To embrace their doctrine would place me at odds with the established order, but it may also inspire fierce loyalty among those who yearn for a more just and purified society."
+bzn_adopt_qarmatian_confirm: "Adopt the Qarmatian Doctrine"
+bzn_adopt_qarmatian_tooltip: "Convert to the Qarmatian faith, rejecting orthodox authority and embracing a radical interpretation of Islam."
+
+bzn_adopt_mutazila: "Embrace Mu'tazilism"
+bzn_adopt_mutazila_decision_desc: "For generations, scholars have argued that reason is a divine gift, meant to be used in understanding the will of God. The Muʿtazilites teach that justice and truth can be grasped through rational inquiry, even when tradition resists. By embracing their teachings, I would place intellect above unquestioned authority — a path admired by philosophers and feared by the orthodox."
+bzn_adopt_mutazila_confirm: "Reason is the path to divine justice."
+bzn_adopt_mutazila_tooltip: "You adopt Muʿtazilite theology, emphasizing reason, moral responsibility, and divine justice. This may anger traditional scholars and clergy, but will attract learned minds and reformist thinkers."
+
+bzn_adopt_zoroastrism_china: "Embrace the Fire of Heaven"
+bzn_adopt_zoroastrism_china_decision_desc: "Across the western quarters of the great cities, the Sogdian merchants keep the sacred fires burning. They do not seek converts, nor do they challenge the Son of Heaven, yet their devotion to Truth and Order is unwavering. By adopting the rites of Mazdayasna, I would bind myself to the ancient faith of the Iranian traders, honoring Ahura Mazda while blending their customs with the traditions of the Middle Kingdom."
+bzn_adopt_zoroastrism_china_confirm: "Let the sacred fire be tended."
+bzn_adopt_zoroastrism_china_tooltip: "You adopt Mazdayasna as practiced by the Sogdian communities of China, converting your capital and blending local customs with Iranian tradition. This faith is tolerated as a foreign religion, strengthening mercantile and cultural ties, but it does not seek widespread conversion."

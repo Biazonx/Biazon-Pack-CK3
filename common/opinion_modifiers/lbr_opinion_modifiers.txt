@@ -1,0 +1,8 @@
+﻿# Lowborn Rise Opinion Modifiers
+# Updated for CK3 1.18+
+
+ennobled_opinion = {
+	opinion = 50
+	monthly_change = 0.1
+	decaying = yes
+}

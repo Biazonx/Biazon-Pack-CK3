@@ -1,82 +1,77 @@
-﻿@cultural_maa_extra_ai_score = 80
-
-kirwinikos = {#Kirwīnīkōs
+﻿@cultural_maa_extra_ai_score = 60
+kirwinikos = {
 	type = skirmishers
 
-	damage = 25
-	toughness = 21
-	pursuit = 5
-	screen = 20
+	damage = 24
+	toughness = 10
+	pursuit = 12
+	screen = 5
 	
 	can_recruit = {
 		culture = { has_cultural_parameter = unlock_maa_kirwinikos }
 	}
 
 	terrain_bonus = {
-		forest = { damage = 6 toughness = 6 }
-		taiga = { damage = 5 toughness = 5 }
+		forest = { toughness = 6 screen = 6 }
+		taiga = { toughness = 6 screen = 6 }
 	}
 	
 	counters = {
 		heavy_infantry = 1
 	}
-
-	winter_bonus = {
-		normal_winter = { toughness = 6 screen = 6 }
-		harsh_winter = { toughness = 5 screen = 5 }
-	}
 	
-	buy_cost = { gold = 80 }
-	low_maintenance_cost = { gold = 0.33 }
-	high_maintenance_cost = { gold = 1 }
+	buy_cost = { gold = pesilat_warriors_recruitment_cost }
+	low_maintenance_cost = { gold = pesilat_warriors_low_maint_cost }
+	high_maintenance_cost = { gold = pesilat_warriors_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_cheap
 	
 	stack = 100
-	ai_quality = { value = 45 }
-	icon = skirmishers
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = rebel_skirmishers
+	illustration = "baltic_skirmishers"
 }
 
 lonkinikos = {
 	type = archers
 	
-	damage = 28
-	toughness = 12
-	pursuit = 5
-	screen = 5
+	damage = 25
+	toughness = 8
+	pursuit = 0
+	screen = 0
 	
 	terrain_bonus = {
-		hills = { damage = 5 toughness = 2 screen = 2 }
-		forest = { damage = 5 toughness = 2 screen = 2 }
-		taiga = { damage = 5 toughness = 2 screen = 2 }
+		hills = { damage = 4 toughness = 4 }
+		forest = { toughness = 4 screen = 4 }
+		taiga = { damage = 4 toughness = 4 }
 	}
 
 	counters = {
 		skirmishers = 1
+		heavy_cavalry = 1
 	}
 	
-	winter_bonus = {
-		normal_winter = { toughness = 3 screen = 6 }
-		harsh_winter = { toughness = 2 screen = 4 }
-	}
 
 	can_recruit = {
 		culture = { has_cultural_parameter = unlock_maa_lonkinikos }
 	}
 
-	buy_cost = { gold = 58 }
-	low_maintenance_cost = { gold = 0.21 }
-	high_maintenance_cost = { gold = 0.63 }
+	buy_cost = { gold = gakgung_archers_recruitment_cost }
+	low_maintenance_cost = { gold = gakgung_archers_low_maint_cost }
+	high_maintenance_cost = { gold = gakgung_archers_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_moderate
 	
 	stack = 100
-	ai_quality = { value = 40 }
+	ai_quality = { value = @cultural_maa_extra_ai_score }
 	icon = bowmen
+	illustration = "baltic_bowmen"
 }
 
 zemjones = {
 	type = pikemen
 	
-	damage = 18
-	toughness = 21
-	pursuit = 6
+	damage = 14
+	toughness = 18
+	pursuit = 12
 	screen = 0
 	
 	can_recruit = {
@@ -84,9 +79,9 @@ zemjones = {
 	}
 	
 	terrain_bonus = {
-		hills = { damage = 7 toughness = 4 pursuit = 7 }
-		forest = { damage = 5 toughness = 3 pursuit = 5 }
-		taiga = { damage = 3 toughness = 2 pursuit = 3 }
+		hills = { damage = 4 toughness = 4 pursuit = 4 }
+		forest = { damage = 4 toughness = 4 pursuit = 4 }
+		taiga = { damage = 4 toughness = 4 pursuit = 4 }
 	}
 
 	counters = {
@@ -95,26 +90,28 @@ zemjones = {
 	}
 
 	winter_bonus = {
-		normal_winter = { damage = 3 pursuit = 4 }
-		harsh_winter = { damage = 2 pursuit = 3 }
+		normal_winter = { damage = 4 pursuit = 5 }
+		harsh_winter = { damage = 4 pursuit = 5 }
 	}
 
-	buy_cost = { gold = 60 }
-	low_maintenance_cost = { gold = 0.24 }
-	high_maintenance_cost = { gold = 0.72 }
+	buy_cost = { gold = bondi_recruitment_cost }
+	low_maintenance_cost = { gold = bondi_low_maint_cost }
+	high_maintenance_cost = { gold = bondi_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_cheap
 	
 	stack = 100
-	ai_quality = { value = 40 }
+	ai_quality = { value = @cultural_maa_extra_ai_score }
 	icon = bondi
+	illustration = "baltic_pikemen"
 }
 
 kavelerija = {
 	type = light_cavalry
 	
 	damage = 22
-	toughness = 15
-	pursuit = 40
-	screen = 30
+	toughness = 16
+	pursuit = 30
+	screen = 50
 
 	can_recruit = {
 		culture = { has_cultural_parameter = unlock_maa_kavelerija }
@@ -126,11 +123,12 @@ kavelerija = {
 	}
 	
 	terrain_bonus = {
-		plains = { damage = 5 }
+		taiga = { damage = 10 }
+		plains = { damage = 10 }
 		forest = { damage = 10 }
-		mountains = { damage = -10 pursuit = -25 }
-		desert_mountains = { damage = -15 pursuit = -25 }
-		wetlands = { damage = -10 toughness = -5 pursuit = -25 screen = -20 }
+		mountains = { damage = -8 pursuit = -10 }
+		desert_mountains = { damage = -12 pursuit = -20 }
+		wetlands = { damage = -15 toughness = -10 pursuit = -20 screen = -20 }
 	}
 
 	counters = {
@@ -141,11 +139,13 @@ kavelerija = {
 		harsh_winter = { damage = -5 }
 	}
 
-	buy_cost = { gold = 90 }
-	low_maintenance_cost = { gold = 0.37 }
-	high_maintenance_cost = { gold = 1.11 }
+	buy_cost = { gold = caballero_recruitment_cost }
+	low_maintenance_cost = { gold = caballero_low_maint_cost }
+	high_maintenance_cost = { gold = caballero_high_maint_cost }
+	provision_cost = @provisions_cost_cavalry_cheap
 	
 	stack = 100
 	ai_quality = { value = @cultural_maa_extra_ai_score }
-	icon = light_cavalry
+	icon = baltic_light_cavalry
+	illustration = "baltic_light_cavalry"
 }

@@ -1,0 +1,16 @@
+﻿regional_destiny = {
+	alias = { destiny }
+	parent = situation
+	texture = "gfx/interface/icons/character_interactions/icon_scheme_foster_legitimacy.dds"
+}
+
+rd_contend_period = {
+	alias = { rd_contend }
+	parent = regional_destiny
+	texture = "gfx/interface/icons/character_interactions/icon_scheme_foster_legitimacy.dds"
+}
+
+rd_downfall = {
+	parent = regional_destiny
+	texture = "gfx/interface/icons/character_interactions/icon_scheme_foster_legitimacy.dds"
+}

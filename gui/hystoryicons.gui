@@ -1,0 +1,373 @@
+﻿### DEFALT ONES
+
+texticon = {	icon = default_arabic
+	iconsize = {	texture = "gfx/interface/illustrations/default_arabic.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = default_berber
+	iconsize = {	texture = "gfx/interface/illustrations/default_berber.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = default_caucasian
+	iconsize = {	texture = "gfx/interface/illustrations/default_caucasian.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = default_central_german
+	iconsize = {	texture = "gfx/interface/illustrations/default_central_german.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = default_chinese
+	iconsize = {	texture = "gfx/interface/illustrations/default_chinese.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = default_dravidian
+	iconsize = {	texture = "gfx/interface/illustrations/default_dravidian.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = default_brythonic
+	iconsize = {	texture = "gfx/interface/illustrations/default_brythonic.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = default_east_afrika
+	iconsize = {	texture = "gfx/interface/illustrations/default_east_afrika.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = default_east_slavic
+	iconsize = {	texture = "gfx/interface/illustrations/default_east_slavic.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = default_east_roman
+	iconsize = {	texture = "gfx/interface/illustrations/default_east_roman.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = default_frankish
+	iconsize = {	texture = "gfx/interface/illustrations/default_frankish.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = default_goidelic
+	iconsize = {	texture = "gfx/interface/illustrations/default_goidelic.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = default_gaelic
+	iconsize = {	texture = "gfx/interface/illustrations/default_gaelic.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = default_sephardi
+	iconsize = {	texture = "gfx/interface/illustrations/default_sephardi.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = default_mashriqi
+	iconsize = {	texture = "gfx/interface/illustrations/default_mashriqi.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = default_visigothic
+	iconsize = {	texture = "gfx/interface/illustrations/default_visigothic.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = default_saxon
+	iconsize = {	texture = "gfx/interface/illustrations/default_saxon.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = default_andalsian
+	iconsize = {	texture = "gfx/interface/illustrations/default_andalsian.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = default_maghrebi
+	iconsize = {	texture = "gfx/interface/illustrations/default_maghrebi.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = default_bengali
+	iconsize = {	texture = "gfx/interface/illustrations/default_bengali.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = default_kashmiri
+	iconsize = {	texture = "gfx/interface/illustrations/default_kashmiri.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = default_kannada
+	iconsize = {	texture = "gfx/interface/illustrations/default_kannada.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = default_persian
+	iconsize = {	texture = "gfx/interface/illustrations/default_persian.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = default_hindi
+	iconsize = {	texture = "gfx/interface/illustrations/default_hindi.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = default_israelite
+	iconsize = {	texture = "gfx/interface/illustrations/default_israelite.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = default_levantine
+	iconsize = {	texture = "gfx/interface/illustrations/default_levantine.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = default_rabbinical
+	iconsize = {	texture = "gfx/interface/illustrations/default_rabbinical.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = default_franconian
+	iconsize = {	texture = "gfx/interface/illustrations/default_franconian.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+
+
+### PROFESSIONS
+texticon = {	icon = profession_astrology
+	iconsize = {	texture = "gfx/interface/illustrations/profession_astrology.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = profession_astronomy
+	iconsize = {	texture = "gfx/interface/illustrations/profession_astronomy.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = profession_mathematics
+	iconsize = {	texture = "gfx/interface/illustrations/profession_mathematics.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = profession_physician
+	iconsize = {	texture = "gfx/interface/illustrations/profession_physician.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = profession_cartographer
+	iconsize = {	texture = "gfx/interface/illustrations/profession_cartographer.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = profession_botanic
+	iconsize = {	texture = "gfx/interface/illustrations/profession_botanic.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+
+texticon = {	icon = profession_authors
+	iconsize = {	texture = "gfx/interface/illustrations/profession_author.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+
+texticon = {	icon = profession_strategist
+	iconsize = {	texture = "gfx/interface/illustrations/profession_strategist.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+
+texticon = {	icon = profession_painter
+	iconsize = {	texture = "gfx/interface/illustrations/profession_painter.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+
+texticon = {	icon = profession_knight
+	iconsize = {	texture = "gfx/interface/illustrations/profession_knight.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+
+texticon = {	icon = profession_musician
+	iconsize = {	texture = "gfx/interface/illustrations/profession_musician.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+
+texticon = {	icon = profession_merchant
+	iconsize = {	texture = "gfx/interface/illustrations/profession_merchant.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+
+texticon = {	icon = profession_banker
+	iconsize = {	texture = "gfx/interface/illustrations/profession_banker.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+
+texticon = {	icon = profession_explorer
+	iconsize = {	texture = "gfx/interface/illustrations/profession_explorer.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+
+texticon = {	icon = profession_soothsayer
+	iconsize = {	texture = "gfx/interface/illustrations/profession_soothsayer.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+
+texticon = {	icon = profession_warrior
+	iconsize = {	texture = "gfx/interface/illustrations/profession_warrior.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+
+texticon = {	icon = profession_scholar
+	iconsize = {	texture = "gfx/interface/illustrations/profession_scholar.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+
+texticon = {	icon = profession_theology
+	iconsize = {	texture = "gfx/interface/illustrations/profession_theology.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+					
+texticon = {	icon = profession_mystic
+	iconsize = {	texture = "gfx/interface/illustrations/profession_mystic.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+					
+texticon = {	icon = profession_diplomat
+	iconsize = {	texture = "gfx/interface/illustrations/profession_diplomat.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+
+texticon = {	icon = profession_poet
+	iconsize = {	texture = "gfx/interface/illustrations/profession_poet.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = profession_politician
+	iconsize = {	texture = "gfx/interface/illustrations/profession_politician.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = profession_architect
+	iconsize = {	texture = "gfx/interface/illustrations/profession_architect.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = profession_adventurer
+	iconsize = {	texture = "gfx/interface/illustrations/profession_adventurer.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = profession_administrator
+	iconsize = {	texture = "gfx/interface/illustrations/profession_administrator.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = profession_craftsman
+	iconsize = {	texture = "gfx/interface/illustrations/profession_craftsman.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = profession_craftsmens
+	iconsize = {	texture = "gfx/interface/illustrations/profession_craftsman.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = profession_commander
+	iconsize = {	texture = "gfx/interface/illustrations/profession_commander.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = profession_commander
+	iconsize = {	texture = "gfx/interface/illustrations/profession_warrior.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = profession_monastic
+	iconsize = {	texture = "gfx/interface/illustrations/profession_monastic.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = profession_court
+	iconsize = {	texture = "gfx/interface/illustrations/profession_justice.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+
+### SPECIFIC CHARACTERS
+
+texticon = {	icon = wang_tao_illustration
+	iconsize = {	texture = "gfx/interface/illustrations/wang_tao.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = pundarika_illustration
+	iconsize = {	texture = "gfx/interface/illustrations/pundarika.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = flann_mac_lonain
+	iconsize = {	texture = "gfx/interface/illustrations/flann_mac_lonain.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = bhaskara
+	iconsize = {	texture = "gfx/interface/illustrations/bhaskara.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = al_kindi
+	iconsize = {	texture = "gfx/interface/illustrations/al_kindi.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}					
+texticon = {	icon = Ibn_Qutaybah
+	iconsize = {	texture = "gfx/interface/illustrations/Ibn_Qutaybah.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = al_baladhuri
+	iconsize = {	texture = "gfx/interface/illustrations/al_baladhuri.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = ibn_al_rumi
+	iconsize = {	texture = "gfx/interface/illustrations/ibn_al_rumi.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = al_sarakhsi
+	iconsize = {	texture = "gfx/interface/illustrations/al_sarakhsi.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = al_fadl_naubakht
+	iconsize = {	texture = "gfx/interface/illustrations/al_fadl_naubakht.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}
+texticon = {	icon = faravid
+	iconsize = {	texture = "gfx/interface/illustrations/faravid.dds"
+					size = { 500 190 }
+					offset = { 0 155 }
+					fontsize = 18	}	}

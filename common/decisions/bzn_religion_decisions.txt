@@ -1,0 +1,908 @@
+bzn_classics = {
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_legend.dds"
+    }
+    decision_group_type = flavor_medium
+    ai_check_interval = 120
+	
+    is_shown = {
+		NOT = { faith = faith:hellenic_pagan }
+        OR = {
+            culture = { has_cultural_pillar = heritage_latin }
+            culture = { has_cultural_pillar = heritage_byzantine }
+			culture = { has_cultural_pillar = heritage_ancient_greek }
+            culture = { has_cultural_pillar = heritage_byzantine }
+        }
+    }
+    is_valid = {
+		learning >= 8
+        OR = {
+			has_trait = lunatic_1 
+			has_trait = possessed_1 
+            has_trait = lifestyle_mystic
+            has_trait = scholar
+            has_trait = theologian
+       }
+    }
+	
+	cost = { piety = 50 }
+	
+    desc = bzn_classics_desc
+    effect = {
+        set_character_faith = faith:hellenic_pagan
+		capital_county = {
+			set_county_faith = faith:hellenic_pagan
+			}
+    }
+    ai_potential = {
+        always = no
+    }
+    ai_will_do = {
+        base = 0
+    }
+}
+
+bzn_change_asatru = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	}
+
+	decision_group_type = regional_major
+
+	ai_check_interval = 120
+
+	is_shown = {
+		faith = faith:norse_pagan
+		is_landless_adventurer = no
+	}
+	
+	is_valid = {
+		faith = faith:norse_pagan
+		OR = {
+			AND = {
+				learning >= 12
+				OR = {
+					has_trait = poet
+					has_trait = scholar
+					has_trait = theologian
+					has_trait = lifestyle_mystic
+				}
+			}
+			custom_description = {
+				text = appoint_a_righteous_caliph_decision.control_two_holy_sites
+			faith = {
+				any_holy_site = {
+					count >= 2
+					holder.top_liege = root
+					}
+				}
+			}
+			
+		}
+		
+	}
+	
+	desc = bzn_change_asatru_desc
+	cost = { piety = 1000 }
+
+	effect = {
+		root.faith = { remove_doctrine = tenet_warmonger } 
+		root.faith = { remove_doctrine = doctrine_consanguinity_cousins }
+		root.faith = { add_doctrine = tenet_reincarnation } 
+		root.faith = { add_doctrine = tenet_divine_marriage } 
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+bzn_adopt_behafaridism = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	}
+
+	decision_group_type = regional_major
+
+	ai_check_interval = 120
+
+	is_shown = {
+		NOT = { faith = faith:zurvanism}
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_behafaridism }
+        }
+		NOT = {  # Can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:protector_behafaridism
+			}
+		}
+		is_landed = yes
+	}
+	
+	is_valid = {
+		NOT = { faith = faith:zurvanism}
+	}
+	
+	desc = bzn_adopt_behafaridism_decision_desc
+	cost = { piety = 50 }
+
+	effect = {
+		set_character_faith_with_conversion = faith:zurvanism
+		capital_county = {
+			set_county_faith = faith:zurvanism
+		}
+		add_character_modifier = protector_of_behafaridism
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:protector_behafaridism
+			}
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 15
+	}
+}
+
+bzn_hussite_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+    }
+
+    decision_group_type = regional_major
+
+    ai_check_interval = 120
+
+    cooldown = { years = 15 }
+
+    is_shown = {
+        NOT = { 
+			faith = faith:taborites
+			faith = faith:ultraquist
+			faith = faith:orebites
+		}
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_hussite }
+        }
+		is_landless_adventurer = no
+	}
+	
+	is_valid = {
+		NOT = {
+			has_trait = zealous
+			has_trait = inquisitor
+		}
+	}
+    desc = bzn_hussite_decision_desc
+
+    effect = {
+        trigger_event = {
+            id = bzn_decisions.0011
+            days = { 3 5 }
+        }
+        custom_tooltip = bzn_hussite_decision_effect_tooltip
+    }
+
+    cost = { piety = 50 }
+
+    ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 10
+	}
+}
+
+bzn_create_war_wagon = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_smith.dds"
+    }
+    decision_group_type = regional_major
+    ai_check_interval = 240
+
+    is_shown = {
+        is_landless_adventurer = no
+		NOT = {  # Can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:wagon_tradition
+			}
+		}
+		OR = {
+			has_faith = faith:taborites
+			has_faith = faith:ultraquist
+			has_faith = faith:orebites
+		}
+	}
+
+    is_valid = {
+	}
+
+    desc = bzn_create_war_wagon_decision_desc
+    cost = { gold = 500 }
+
+    effect = {
+        root.culture = {
+            add_culture_tradition = tradition_hussite_wagon
+        }
+		spawn_army = {
+			men_at_arms = {
+				type = hussite_wagon
+				stacks = 2
+			}
+			inheritable = yes
+			uses_supply = yes
+			location = root.location
+		}
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:wagon_tradition
+			}
+		}
+    }
+
+    ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+bzn_adopt_waldensianism = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	}
+
+	decision_group_type = regional_major
+
+	ai_check_interval = 120
+
+	is_shown = {
+		NOT = { faith = faith:waldensian }
+		any_courtier = {
+            has_faith = faith:waldensian
+            is_imprisoned = no
+        }
+		is_landed = yes
+	}
+	
+	is_valid = {
+		NOT = { faith = faith:waldensian }
+		any_courtier = {
+            has_faith = faith:waldensian
+            is_imprisoned = no
+        }
+	}
+	
+	desc = bzn_adopt_waldensianism_desc
+	cost = { piety = 50 }
+
+	effect = {
+		add_trait = heresiarch
+		set_character_faith_with_conversion = faith:waldensian
+		capital_county = {
+			set_county_faith = faith:waldensian
+		}
+		hidden_effect = { every_courtier = { set_character_faith = faith:waldensian } }
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 10
+		modifier = {
+			any_courtier = {
+				has_trait = historical_character
+			}
+			add = 100
+		}
+	}
+}
+
+bzn_adopt_strigolniki = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	}
+
+	decision_group_type = regional_major
+
+	ai_check_interval = 120
+
+	is_shown = {
+		NOT = { faith = faith:strigolniki }
+        any_courtier = {
+            has_faith = faith:strigolniki
+			is_imprisoned = no
+		}
+		is_landed = yes
+	}
+	
+	is_valid = {
+		NOT = { faith = faith:strigolniki }
+		 any_courtier = {
+            has_faith = faith:strigolniki
+			is_imprisoned = no
+		}
+	}
+	
+	desc = bzn_adopt_strigolniki_decision_desc
+	cost = { piety = 50 }
+
+	effect = {
+		add_trait = heresiarch
+		set_character_faith_with_conversion = faith:strigolniki
+		capital_county = {
+			set_county_faith = faith:strigolniki
+		}
+		hidden_effect = { every_courtier = { set_character_faith = faith:strigolniki } }
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 10
+		modifier = {
+			any_courtier = {
+				has_trait = historical_character
+			}
+			add = 100
+		}
+	}
+}
+
+bzn_adopt_hafizi = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds"
+	}
+
+	decision_group_type = regional_major
+
+	ai_check_interval = 120
+
+	is_shown = {
+		NOT = { faith = faith:hafizi }
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_yemen }
+        }
+		current_year >= 1066
+	}
+	
+	is_valid = {
+		NOT = { faith = faith:hafizi }
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_yemen }
+        }
+	}
+	
+	desc = bzn_adopt_hafizi_decision_desc
+	cost = { piety = 50 }
+
+	effect = {
+		set_character_faith_with_conversion = faith:hafizi
+		capital_county = {
+			set_county_faith = faith:hafizi
+		}
+		hidden_effect = { every_courtier = { set_character_faith = faith:hafizi } }
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+		modifier = {
+			current_year >= 1178
+			add = -100
+		}
+	}
+}
+
+bzn_adopt_mutrafiya = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds"
+	}
+
+	decision_group_type = regional_major
+
+	ai_check_interval = 120
+
+	is_shown = {
+		NOT = { faith = faith:mutrafiya }
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_yemen }
+        }
+		current_year >= 1178
+	}
+	
+	is_valid = {
+		NOT = { faith = faith:mutrafiya }
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_yemen }
+        }
+	}
+	
+	desc = bzn_adopt_mutrafiya_decision_desc
+	cost = { piety = 50 }
+
+	effect = {
+		set_character_faith_with_conversion = faith:mutrafiya
+		capital_county = {
+			set_county_faith = faith:mutrafiya
+		}
+		hidden_effect = { every_courtier = { set_character_faith = faith:mutrafiya } }
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+bzn_adopt_salihi = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds"
+	}
+
+	decision_group_type = regional_major
+
+	ai_check_interval = 120
+
+	is_shown = {
+		NOT = { faith = faith:salihi }
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_salihi }
+        }
+	}
+	
+	is_valid = {
+		NOT = { faith = faith:salihi }
+		religion = religion:islam_religion
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_salihi }
+        }
+	}
+	
+	desc = bzn_adopt_salihi_decision_desc
+	cost = { piety = 50 }
+
+	effect = {
+		set_character_faith_with_conversion = faith:salihi
+		capital_county = {
+			set_county_faith = faith:salihi
+		}
+		hidden_effect = { every_courtier = { set_character_faith = faith:salihi } }
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+bzn_adopt_qarmatian = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds"
+	}
+
+	decision_group_type = regional_major
+
+	ai_check_interval = 120
+
+	is_shown = {
+		NOT = { faith = faith:qarmatian }
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_qarmatians }
+        }
+		current_year <= 1077
+	}
+	
+	is_valid = {
+		NOT = { faith = faith:qarmatian }
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_qarmatians }
+        }
+	}
+	
+	desc = bzn_adopt_qarmatian_decision_desc
+	cost = { piety = 50 }
+
+	effect = {
+		set_character_faith_with_conversion = faith:qarmatian
+		capital_county = {
+			set_county_faith = faith:qarmatian
+		}
+		hidden_effect = { every_courtier = { set_character_faith = faith:qarmatian } }
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+		modifier = {
+			current_year >= 1066
+			add = -90
+		}
+	}
+}
+
+bzn_adopt_mutazila = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds"
+	}
+
+	decision_group_type = regional_major
+
+	ai_check_interval = 120
+
+	is_shown = {
+		NOT = { faith = faith:mutazila }
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_mutazila }
+        }
+		current_year < 1066
+	}
+	
+	is_valid = {
+		NOT = { faith = faith:mutazila }
+		faith = { has_doctrine = muhammad_succession_sunni_doctrine }
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_mutazila }
+        }
+	}
+	
+	desc = bzn_adopt_mutazila_decision_desc
+	cost = { piety = 50 }
+
+	effect = {
+		set_character_faith_with_conversion = faith:mutazila
+		capital_county = {
+			set_county_faith = faith:mutazila
+		}
+		hidden_effect = { every_courtier = { set_character_faith = faith:mutazila } }
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+bzn_adopt_zoroastrism_china = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds"
+	}
+
+	decision_group_type = regional_major
+
+	ai_check_interval = 120
+
+	is_shown = {
+		NOT = { faith = faith:mazdayasna }
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_zoroastrian_china }
+        }
+		NOT = {  # Can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:blend_sogdian_traditions
+			}
+		}
+	}
+	
+	is_valid = {
+		NOT = { faith = faith:mazdayasna }
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_zoroastrian_china }
+        }
+	}
+	
+	desc = bzn_adopt_zoroastrism_china_decision_desc
+	cost = { piety = 50 }
+
+	effect = {
+		set_character_faith_with_conversion = faith:mazdayasna
+
+		capital_county = {
+			set_county_faith = faith:mazdayasna
+		}
+		culture:sogdian = { save_scope_as = original_sogdian_culture }
+		culture = { save_scope_as = original_character_culture }
+		create_hybrid_culture = culture:sogdian
+		custom_tooltip = random_traditions_tt
+		hidden_effect = {		
+			every_courtier = {
+				set_character_faith = faith:mazdayasna
+			}
+			if = {
+				limit = {
+					root.culture = {
+						NOT = {
+							has_same_culture_heritage = scope:original_sogdian_culture
+						}
+					}
+				}
+				root.culture = {
+					set_heritage_from = root.domicile.domicile_culture
+				}
+			}
+			every_held_title = {
+				limit = {
+					tier = tier_county
+					is_landless_type_title = no
+				}
+				set_county_culture = root.culture
+			}
+			# Spouses convert
+			every_spouse = {
+				limit = {
+					is_courtier_of = root
+					OR = {
+						culture = scope:original_character_culture
+						culture = scope:original_sogdian_culture
+					}
+					NOT = { culture = root.culture }
+				}
+				add_to_list = spouses_and_family_to_convert
+			}
+			# Family at court also convert
+			every_close_or_extended_family_member = {
+				limit = {
+					is_courtier_of = root
+					OR = {
+						culture = scope:original_character_culture
+						culture = scope:original_sogdian_culture
+					}
+					NOT = { culture = root.culture }
+				}
+				add_to_list = spouses_and_family_to_convert
+			}
+			every_in_list = {
+				list = spouses_and_family_to_convert
+				set_culture = root.culture
+			}
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:blend_sogdian_traditions
+			}	
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 15
+	}
+}
+
+bzn_ghulat_convertion = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds"
+	}
+	decision_group_type = regional_major
+	
+	cooldown = { years = 15 } #No cooldown needed as its not available if you take it
+
+	is_shown = {
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = world_mesopotamia }
+        }
+	}
+
+	is_valid = {
+		 any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = world_mesopotamia }
+        }
+	}
+
+	is_valid_showing_failures_only = {
+		
+	}
+
+	desc = bzn_ghulat_convertion_desc
+
+	widget = {
+		gui = "decision_view_widget_option_list_generic"
+		controller = decision_option_list_controller
+		decision_to_second_step_button = "CHOOSE_GHULAT_FAITH_TO_CONVERT_TO"
+		show_from_start = yes
+
+		item = {
+			value = ghulat
+			current_description = convert_to_ghulat_via_decision_desc
+			localization = convert_to_ghulat
+			icon = "gfx/interface/icons/faith/ghulat.dds"
+			is_valid = {
+			}
+			ai_chance = {
+				value = {
+					add = 16
+				}
+			}
+		}
+		item = {
+			value = sabaiya
+			current_description = convert_to_sabaiya_via_decision_desc
+			localization = convert_to_sabaiya
+			icon = "gfx/interface/icons/faith/sabaiya.dds"
+			is_valid = {
+			}
+			ai_chance = {
+				value = {
+					add = 16
+				}
+			}
+		}
+
+		item = {
+			value = quranist
+			current_description = convert_to_quranist_via_decision_desc
+			localization = convert_to_quranist
+			icon = "gfx/interface/icons/faith/quranist.dds"
+			is_valid = {
+			}
+			ai_chance = {
+				value = {
+					add = 16
+				}
+			}
+		}
+		item = {
+			value = ishaqiya
+			current_description = convert_to_ishaqiya_via_decision_desc
+			localization = convert_to_ishaqiya
+			icon = "gfx/interface/icons/faith/ishaqiya.dds"
+			is_valid = {
+			}
+			ai_chance = {
+				value = {
+					add = 16
+				}
+			}
+		}
+		item = {
+			value = alevi
+			current_description = convert_to_alevi_via_decision_desc
+			localization = convert_to_alevi
+			icon = "gfx/interface/icons/faith/alevi.dds"
+			is_valid = {
+			}
+			ai_chance = {
+				value = {
+					add = 16
+				}
+			}
+		}
+		item = {
+			value = alawite
+			current_description = convert_to_alawite_via_decision_desc
+			localization = convert_to_alawite
+			icon = "gfx/interface/icons/faith/alawite.dds"
+			is_valid = {
+			}
+			ai_chance = {
+				value = {
+					add = 16
+				}
+			}
+		}
+	}
+
+	cost = {
+		piety = {
+			value = 50
+		}
+	}
+		effect = {
+
+		save_scope_as = root_scope
+
+		if = {
+			limit = {
+				scope:ghulat = yes
+			}
+
+			set_character_faith = faith:ghulat
+			capital_county = { set_county_faith = faith:ghulat }
+
+		}
+		else_if = {
+			limit = {
+				scope:sabaiya = yes
+			}
+			set_character_faith = faith:sabaiya
+			capital_county = { set_county_faith = faith:sabaiya }
+		}
+		
+		else_if = {
+			limit = {
+				scope:quranist = yes
+			}
+			set_character_faith = faith:quranist
+			capital_county = { set_county_faith = faith:quranist }
+		}
+		
+		else_if = {
+			limit = {
+				scope:ishaqiya = yes
+			}
+			set_character_faith = faith:ishaqiya
+			capital_county = { set_county_faith = faith:ishaqiya }
+		}
+		
+		else_if = {
+			limit = {
+				scope:alevi = yes
+			}
+			set_character_faith = faith:alevi
+			capital_county = { set_county_faith = faith:alevi }
+		}
+		
+		else = {
+			set_character_faith = faith:alawite
+			capital_county = { set_county_faith = faith:alawite }
+
+		}
+		trigger_event = faith_conversion.1001
+	}
+	
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 120
+		duchy = 120
+		kingdom = 120
+		empire = 120
+		hegemony = 0
+	}
+
+	ai_will_do = {
+		base = 15
+	}
+}

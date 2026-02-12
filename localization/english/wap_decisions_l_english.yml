@@ -1,0 +1,366 @@
+﻿l_english:
+
+ h_africa: "Africa"
+ h_africa_adj: "African"
+
+ wap_worship_ancestors_decision:0 "Sacrifice to the Ancestors"
+ wap_worship_ancestors_decision_title:0 "Sacrifice to the Ancestors"
+ wap_worship_ancestors_decision_tooltip:0 "Make a sacrifice to honor your revered Ancestors"
+ wap_worship_ancestors_decision_desc:0 "#F Make a sacrifice to your Ancestors and ask for their aid regarding an important matter, such as relationships or prosperity. This can only be done every tenth year#!"
+ wap_worship_ancestors_decision_effect:0 "You begin preparations for the sacrifice."
+ wap_worship_ancestors_decision_confirm:0 "You begin preparations for the sacrifice."
+ 
+ wap_worship_ancestors_decision.0001.t:0 "Venerating the Ancestors"
+ wap_worship_ancestors_decision.0001.desc:0 "You have decided to visit the shrine in the holy grove and make a sacrifice in the honor of your Ancestors, hoping for their aid in return. What will you ask of your fore[ROOT.Char.GetMotherFather]s?"
+ wap_worship_ancestors_decision.0001.a:0 "A long and healthy life."
+ wap_worship_ancestors_decision.0001.b:0 "I wish for affection and companionship."
+ wap_worship_ancestors_decision.0001.c:0 "Guide my sword in battle and let me conquer my enemies!"
+ wap_worship_ancestors_decision.0001.d:0 "Prosperity and growth for my realm."
+ wap_worship_ancestors_decision.0001.e:0 "Ancestors, share your wisdom with me!"
+ 
+ wap_worship_ancestors_decision.0002.t:0 "Offering for the Ancestors"
+ wap_worship_ancestors_decision.0002.desc.health:0 "You asked your Ancestors for health and longevity. Now it is time to present your offering - what will you give them in return?"
+ wap_worship_ancestors_decision.0002.desc.relationships:0 "You asked your Ancestors for aid with your relationships. Now it is time to present your offering - what will you give them in return?"
+ wap_worship_ancestors_decision.0002.desc.war:0 "You asked your Ancestors for military power and prowess in battle. Now it is time to present your offering - what will you give them in return?"
+ wap_worship_ancestors_decision.0002.desc.prosperity:0 "You asked your Ancestors for prosperity and wealth for your realm. Now it is time to present your offering - what will you give them in return?"
+ wap_worship_ancestors_decision.0002.desc.wisdom:0 "You asked your Ancestors for guidance and knowledge. Now it is time to present your offering - what will you give them in return?"
+ wap_worship_ancestors_decision.0002.a:0 "Oh, great fore [ROOT.Char.GetMotherFather]s, I willingly offer you my flesh and blood!"
+ wap_worship_ancestors_decision.0002.a.tt:0 "You offer the Ancestors one of your body parts."
+ wap_worship_ancestors_decision.0002.b:0 "May this soul serve you well in the afterlife!"
+ wap_worship_ancestors_decision.0002.b.tt:0 "You offer the Ancestors the life of one of your prisoners."
+ wap_worship_ancestors_decision.0002.c:0 "May this soul serve you well in the afterlife!"
+ wap_worship_ancestors_decision.0002.c.tt:0 "You offer the Ancestors the life of one of your courtiers."
+ wap_worship_ancestors_decision.0002.d:0 "Ancestors, may this feast please you!"
+ wap_worship_ancestors_decision.0002.d.tt:0 "You offer the Ancestors the best food and drink money can buy."
+ wap_worship_ancestors_decision.0002.e:0 "I had this idol carved in your honor. I hope it will please you."
+ wap_worship_ancestors_decision.0002.e.tt:0 "You offer the Ancestors a small carving."
+ 
+ wap_worship_ancestors_decision.0003.t:0 "Offering for the Ancestors"
+ wap_worship_ancestors_decision.0003.desc.ancestors_limb:0 "You lay down on the offering stone, bracing yourself for the ritual. Thankfully the [ROOT.Char.Custom('MyPriestTitle')]'s knife is sharp and soon the stone is dark with your blood. Your agonized screams will surely have pleased your ancestor. Now all you can do is wait, and hope."
+ wap_worship_ancestors_decision.0003.desc.ancestors_human:0 "The offering struggled violently when the [ROOT.Char.Custom('MyPriestTitle')] and their disciples pushed it down on the offering stone. The Ancestors will surely be pleased with such a vigorous servant. Now all you can do is wait, and hope."
+ wap_worship_ancestors_decision.0003.desc.ancestors_feast:0 "Together with the [ROOT.Char.Custom('MyPriestTitle')] and their disciples you placed a great bounty of food and drink on the offering stone. You spent the entire night feasting and singing the great chants in your Ancestors' honor. Now all you can do is wait, and hope."
+ wap_worship_ancestors_decision.0003.desc.ancestors_carving:0 "You placed the delicate little idol on the offering stone and paid your respect to your Ancestors. Now all you can do is wait, and hope."
+ wap_worship_ancestors_decision.0003.a:0 "May the Ancestors bestow their blessing upon me."
+
+ 
+ #Fervor loc for decisions
+ fervor_gain_unite_africa:0 "A united Africa under [ROOT.Char.GetFaith.HighGodName] has been proclaimed"
+ fervor_gain_nubian_church:0 "A new, vibrant, and independant Nubian Church has been declared!"
+ fervor_gain_revive_kushitic:0 "The ways of the Old Gods have finally returned to Nubia!"
+ fervor_gain_al_kahina:0 "The people flock to sword of the al-Kāhina and to the Old Ways"
+ #Decision culture requirements
+ wap_decision_kanuri_culture_requirement:0 "Must be of Kanuri heritage"
+ wap_decision_zaghawa_culture_requirement:0 "Must be of Zaghawa heritage"
+ wap_decision_nubian_culture_requirement:0 "Must be of Nubian heritage"
+ #Berber
+ become_al_kahina_decision:0 "Become Al-Kāhina"
+ become_al_kahina_decision_confirm:0 "I am the one!"
+ become_al_kahina_decision_desc:0 "By driving out the Muslims and restoring the rule of traditional Amaziğ ways to the entirety of the Maghreb and the Great Desert Sea, a pious ruler may be recognized as al-Kāhina — the second coming of Dihyā, the powerful Queen of Imaziğen, and protector of the Old Gods."
+ become_al_kahina_decision_tooltip:0 "Become Al-Kāhina"
+ become_al_kahina_decision_effect_tooltip:0 "Become Al-Kāhina"
+ become_al_kahina_decision_decendant_trait_tooltip:0 "Your descendants will gain the [trait|E] [GetTrait('al_kahina_descendant').GetName( GetNullCharacter )|LV]"
+ 
+ fervor_loss_al_kahina:0 "$fervor_gain_al_kahina$"
+ 
+ # Al-Kahina appears
+ al_kahina_decisions.0011.t:0 "The Chosen of Tanit"
+ al_kahina_decisions.0011.desc:0 "Ever since the kingdoms of the Maghreb have succumbed to the Arab invasions, all Imaziğen have suffered under the yoke of Mohammedan rulers. In the face of this ruthless onslaught the last remnants of the old Amaziğ order retreated south into the mountains of Adrar. But now, at long last, Amaziğ rule over North Africa has been restored.\n\nThis miraculous recovery can only be attributed to my brilliant leadership, and many amongst the priests and mystics have decreed me to be al-Kāhina — the sooth-sayer, and second coming of Dihyā. Like Dihyā, the Warrior Queen who united Imaziğen against the Muslim invaders centuries ago, my name will live on. After embracing this role, I am now revered as a holy icon by followers of traditional Amaziğ religion everywhere."
+ al_kahina_decisions.0011.a:0 "I shall bring benefit to all."
+ #all_held_counties:0 "All Infidel Counties"
+ al_kahina_decisions.0013.desc:0 "Ever since the kingdoms of the Maghreb have succumbed to the Arab invasions, all Imaziğen have suffered under the yoke of Mohammedan rulers. In the face of this ruthless onslaught the last remnants of the old Amaziğ order retreated south into the mountains of Adrar. But now, at long last, Amaziğ rule over North Africa has been restored. \n\nThis miraculous recovery can only be attributed to [scoped_ruler.GetFirstNamePossessive] brilliant leadership, and many amongst the priests and mystics have decreed [scoped_ruler.GetHerHim] to be al-Kāhina — the sooth-sayer, and second coming of Dihyā, the Warrior Queen who bravely united Imaziğen against the Muslim invaders. After embracing this role, [scoped_ruler.GetTitledFirstNameNoTooltip] is now revered as a holy icon by followers of traditional Amaziğ religion everywhere."
+ al_kahina_decisions.0013.desc.muslims:0 "Once reduced to exiled desert-dwellers, the defiled-priests of the accursed Amaziğ blasphemers have risen from their cinders and claimed the throne of all of the Maghreb!\n\nFilled with deranged pride, their [scoped_ruler.GetTitleTierName] has now decided to proclaim [scoped_ruler.GetHerselfHimself] the reincarnation of some dead witch 'queen.'"
+ al_kahina_decisions.0013.desc.others:0 "Ever since the kingdoms of the Maghreb succumbed to the Arab invasions, the followers of Tanit have been on the run. Their exile has come to an end in recent times as the [scoped_ruler.GetFaith.GetAdjective] faithful have managed to restore their rule of traditional Imaziğen lands.\n\nBeing in no small part responsible for this unexpected turn of events, their [scoped_ruler.GetTitleTierName] has decided to proclaim [scoped_ruler.GetHerselfHimself] al-Kāhina, the second-coming of a long dead Queen and warrior of their people, Dihyā."
+ al_kahina_decisions.0013.a:0 "May [scoped_ruler.GetSheHe] bring benefit to us all!"
+ al_kahina_decisions.0013.b:0 "Madness and devilry!"
+ al_kahina_decisions.0013.c:0 "I see..."
+ 
+ #Guanche
+ wap_mummify_relative_decision:0 "Mummify [ROOT.Var('ancestor_to_bury').Char.GetFirstName]"
+ wap_mummify_relative_decision_tooltip:0 "Mummify your ancestor and gain [piety|E] and [vassal|E] [opinion|E]"
+ wap_mummify_relative_decision_desc:0 "#F [ROOT.Var('ancestor_to_bury').Char.Custom2('MyCharacterIntroduction', ROOT.Char)|U] has passed away. We must preserve their body in order for his body in the afterlife to remain whole."
+ wap_mummify_relative_decision_confirm:0 "Mummify"
+ wap_mummify_relative_vassels:0 "Every Vassal who believes in Mummification"
+ 
+ #Mune decisions
+ wap_swear_on_mune_decision:0 "Demand Vassals Kiss The Mune Idol"
+ wap_swear_on_mune_decision_tooltip:0 "Gain a loyalty hook for 10 years on all loyal, zealous, and intimidated vassals."
+ wap_swear_on_mune_decision_desc:0 "I, [ROOT.Char.GetTitledFirstNameNoTooltip] of House [ROOT.Char.GetDynastyHouseNameNoTooltip], am the rightful ruler of Kanem, and blessed custodian of the sacred Mune. It is time to remind my vassals of their covenant with me by ordering them to kiss the Mune idol; and in so doing affirm my right to rule over them."
+ wap_swear_on_mune_decision_effect_1:0 "Gain a loyalty hook for 10 years on all loyal, zealous, and intimidated vassals."
+ wap_swear_on_mune_decision_effect_2:0 "All other vassals will be deeply insulted."
+ wap_swear_on_mune_decision_effect_3:0 "Can only be done once per lifetime."
+ wap_swear_on_mune_decision_confirm:0 "Demand Vassals Kiss the Mune"
+
+ wap_munean_flavor.0001.t:0 "Kiss the Mune"
+ wap_munean_flavor.0001.desc:0 "I, [ROOT.Char.GetTitledFirstNameNoTooltip] of House [ROOT.Char.GetDynastyHouseNameNoTooltip], am the rightful ruler of Kanem, and custodian of the sacred Mune. The Mune is the most sacred object in our faith. The origins of the idol are lost to time, but it's sacred power remains feared by all. It is my control of the Mune that grants me the authority to unite the squabbling clans; so it is time to remind my vassals of their place and have them show their swear fealty to me by kissing the Mune."
+ wap_munean_flavor.0001.a:0 "All shall kiss the Mune!"
+ wap_munean_flavor.0001.b:0 "It seems not all of my vassals will be loyal."
+ wap_munean_flavor.0001.c:0 "On second thought, this is a bad idea."
+
+ wap_munean_flavor.0002.desc:0 "Not all of my vassals agreed to kiss the Mune. Perhaps they do not yet fully appreciate the consequences, nor fear my wrath."
+ wap_munean_flavor.0002.a:0 "Arrest them!"
+ wap_munean_flavor.0002.b:0 "Leave them be."
+ wap_munean_flavor.0002.fail:0 "The escapee starts or joins a [liberty_faction|E] against you."
+ 
+ #Establish a personal orisha cult
+ wap_select_personal_deity_orisha_decision:0 "Establish a personal Òrìsà cult"
+ wap_select_personal_deity_orisha_decision_desc:0 "#F Òrìṣà are spirits sent by Olódùmarè for the guidance of all creation, they show us how to live and be successful on earth. By devoting myself to one of them I can only hope to gain a share of their great power and blessings. \n\nI should contemplate the various Òrìṣà and decide one to become the patron deity of my house.#!"
+ wap_select_personal_deity_orisha_decision_confirm:0 "Consult with your babaláwo"
+ wap_select_personal_orisha_decision_tooltip:0 "Think about who should be the focus of your cult."
+ wap_select_personal_orisha_decision_tt:0 "You gain a boon associated with your selected Òrìṣà"
+ 
+ #Pet Leopard
+ wap_pet_leopard_decision:0 "Play with [ROOT.Char.Custom('LeopardStoryName')]"
+ wap_pet_leopard_decision_desc:0 "It is time to take a deep breath and find my trusted companion [ROOT.Char.Custom('LeopardStoryName')]. Some people say leopards are just wild creatures, but no matter how tough life gets I know [ROOT.Char.Custom('LeopardStorySheHe')] will always be there for me!"
+ wap_pet_leopard_decision_tooltip:0 "Play with your leopard"
+ wap_pet_leopard_decision_confirm:0 "Play with your leopard"
+ wap_pet_decision_effect_tooltip:0 "You will lose some [stress|E]"
+ 
+ #Invite Griot Decision
+ wap_invite_griot_decision:0 "Invite a Griot"
+ wap_invite_griot_decision_tooltip:0 "Invite a skilled Griot to your court."
+ wap_invite_griot_decision_confirm:0 "Send messengers at once."
+ wap_invite_griot_decision_desc:0 "In our culture the talents of skilled griots as entertainers, praise singers, and loremasters are prized. A sufficiently talented griot can add to the prestige of any ruler. \n\nIndeed, a griot worthy of the title, would do wonders for my image!"
+ wap_invite_griot_decision.tt:0 "A skilled griot will arrive at your court."
+ 
+ wap_invite_griot_decision.0001.t:0 "A Select Few"
+ wap_invite_griot_decision.0001.desc:0 "[ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip] is blessed to be home to many dozens of griots. Some of these men and women specialise in the recitation of epic poems, others in lore, and some in the genealogies of the royal dynasties. Apart from their talent for oratory, many griots are also master musicians, adept players of our regional instruments such as the stringed Kora or Xalam, or the melodious balafon. These multi-talented individuals can even put their skill for oratory to more courtly use as diplomats, ambassadors, or translators.\n\nTwo such eminently qualifed candidates have presented at my request, now after considering their talents it is time for me to render my decision."
+ wap_invite_griot_decision.0001.a:0 "[wap_griot.GetTitledFirstName] shall join my court at once."
+ wap_invite_griot_decision.0001.b:0 "[wap_griot_2.GetTitledFirstName] shall join my court at once."
+ wap_invite_griot_decision.0001.c:0 "These so-called [griot|E] are not to my standard."
+ #Griot's Epic 
+ wap_griot_epic_decision:0 "A Griot's Epic"
+ wap_griot_epic_decision_title:0 "Commission A Griot's Epic"
+ wap_griot_epic_decision_tooltip:0 "Pay Gold for [prestige|E] and possibly [dynasty_prestige|E]"
+ wap_griot_epic_decision_desc:0 "#F My family history contains many tales of great success and honor. If any of those were composed into a single tale, it would certainly reflect very well on myself!#!"
+ wap_griot_epic_decision_confirm:0 "Time to start composing!"
+
+ # Game Concepts
+ game_concept_griot:0 "Griot"
+ game_concept_griots:0 "Griots"
+ game_concept_griot_desc:0 "Griots are known across West Africa under various names, including jeli in northern Mande areas, jali in southern Mande areas, guewel in Wolof, gawlo in Pulaar, arokin in Yoruba, and gesere in Soninke. Usually of lower-caste the griot's place in West African society is that of historian, storyteller, praise singer, poet, or musician."
+ game_concept_gbeto:0 "Gbeto"
+ game_concept_gbetos:0 "Gbetos"
+ game_concept_gbeto_desc:0 "The forerunners of the fearsome Mino of Dahomey or Dahomey Amazons, the [gbeto|E] are a cadre of female hunters who specialise in hunting the most valuable and difficult of animals to kill, the Elephant. Especially fierce, brave, or skilled [gbeto|E] can also serve in the army - as soldiers or even generals."
+ 
+ #Relax at the Springs of Ogbunike
+ wap_relax_at_the_springs_of_ogbunike:0 "Relax at the Ogbunike Cave Springs"
+ wap_relax_at_the_springs_of_ogbunike_tooltip:0 "You will visit one of the healing springs in Ogbunike Caves, near Onitsha."
+ wap_relax_at_the_springs_of_ogbunike_desc:0 "I need to relax, and Ogbunike Caves has many beautiful springs perfect for that, where I can forget my worries and enjoy myself."
+ wap_relax_at_the_springs_of_ogbunike_effect_tooltip:0 "You visit a spring in Ogbunike Caves to destress"
+ wap_relax_at_the_springs_of_ogbunike_confirm:0 "Let's get going!"
+ 
+ wap_relax_at_the_springs_of_ogbunike.0002.t:0 "Healing Springs of Ogbunike"
+ wap_relax_at_the_springs_of_ogbunike.0002.desc:0 "Today I’ve decided to pay a visit to the springs of Ogbunike to relax. The springs are famous in these parts, as they are believed to be to have special healing properties. Either way, it’s a great opportunity to just relax and forget the worries of a [ROOT.Char.GetTitleAsNameNoTooltip|U] for a while."
+ wap_relax_at_the_springs_of_ogbunike.0002.a:0 "Now, let me rest for a bit."
+ activity_ogbunike_springs_visit:0 "Visit to the Springs of Ogbunike Caves"
+ activity_ogbunike_springs_visit_name:0 "[ACTIVITY.GetOwner.GetNamePossessiveOrMy|U] Visit to the Springs of Ogbunike Caves"
+ 
+ #Grand Hajj
+ wap_go_on_grand_pilgrimage:0 "Go on a Grand Pilgrimage to Mecca"
+ wap_go_on_grand_pilgrimage_tooltip:0 "You [go_on_a_grand_pilgrimage_to_mecca|E]."
+ wap_go_on_grand_pilgrimage_effect_tooltip:0 "You will [go_on_a_grand_pilgrimage_to_mecca|E] and have opportunities to display your wealth, piety and generosity."
+ wap_go_on_grand_pilgrimage_desc:0 "I wish to [go_on_a_grand_pilgrimage_to_mecca|E], the birthplace of the Prophet and home to the Ka'bah. This trip will not only show my piety by fulfilling my duties to Allah, but also the great wealth, culture and achievements of [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip]."
+ wap_go_on_grand_pilgrimage_confirm:0 "Let us make preparations for this trip!"
+ 
+ wap_go_on_grand_pilgrimage.0020.t:0 "Preparations"
+ wap_go_on_grand_pilgrimage.0020.desc:0 "The time has come for me to undertake my Grand Pilgrimage to Mecca. It has been commanded of me, as it has for all Muslims, to show my submission to [ROOT.Char.GetFaith.HighGodName]."
+ wap_go_on_grand_pilgrimage.0020.a:0 "I have waited for this my entire life."
+ wap_go_on_grand_pilgrimage.0021.t:0 "To Mecca!"
+ wap_go_on_grand_pilgrimage.0021.desc:0 "The time has come! I have finished with all of my preparations, and will now be starting my holy pilgrimage to Mecca. [ROOT.Char.GetFaith.HighGodName] glory awaits me!"
+ wap_go_on_grand_pilgrimage.0021.a:0 "I wonder what I will see on the way."
+ wap_go_on_grand_pilgrimage.0022.t:0 "$pilgrimage_header$ Mecca"
+ wap_go_on_grand_pilgrimage.0022.desc:1 "After my long journey I arrived at Mecca, ready to complete my Grand Hajj.\n\nI walked seven times around the Kaaba, touching the black stone on each circuit. I prayed at the Place of Abraham, drunk water from the Zamzam well, walked between Safa and Marwah seven times, and sacrificed to [ROOT.Char.GetFaith.HighGodName].\n\nThe next rite I must complete is to cut my hair."
+ wap_go_on_grand_pilgrimage.0022.desc.male_dominated:0 "Traditionally men shave all of it off, but dispensation is occasionally granted to cut off only part, and women are restricted to just a lock."
+ wap_go_on_grand_pilgrimage.0022.desc.female_dominated:0 "Traditionally women shave all of it off, but dispensation is occasionally granted to cut off only part, and men are restricted to just a lock."
+ wap_go_on_grand_pilgrimage.0022.desc.equal:0 "Traditionally it is all shaved off, but dispensation is occasionally granted to cut off only part."
+ wap_go_on_grand_pilgrimage.0022.a:0 "Shave it all off!"
+ wap_go_on_grand_pilgrimage.0022.b:0 "Cut just a lock of hair."
+ 
+ wap_go_on_grand_pilgrimage.0025.t:0 "$pilgrimage_header$ Tawaf al-Wadaa"
+ wap_go_on_grand_pilgrimage.0025.desc:0 "The end of my [grand_pilgrimage_to_mecca|E] draws near. After two days of Ramy al-Jamarat, or 'the stoning of the devil', I am ready to complete the final ritual of Tawaf al-Wadaa and say farewell to Mecca.\n\n"
+ wap_go_on_grand_pilgrimage.0025.a:0 "May I see your walls once again!"
+ wap_go_on_grand_pilgrimage.0025.b:0 "Was that it?"
+ 
+ wap_go_on_grand_pilgrimage.0026.t:0 "Home At Last"
+ wap_go_on_grand_pilgrimage.0026.desc:0 "I have returned home from my pilgrimage to Mecca. I had a wonderful and profound experience, all things said, as I engrossed myself in the grandeur and majesty of Islam's capital, as well as the spiritual inspiration it provided. Surely, this will help me with my devotion to my Muslim beliefs for years to come."
+ wap_go_on_grand_pilgrimage.0026.a:0 "Perhaps I can do it again one day."
+ wap_go_on_grand_pilgrimage.0027.t:0 "xxxxx"
+ wap_go_on_grand_pilgrimage.0027.desc:0 "xxxxx"
+ wap_go_on_grand_pilgrimage.0027.a:0 "xxxxx"
+ activity_grand_pilgrimage:0 "Grand Pilgrimage to Mecca"
+ activity_grand_pilgrimage_name:0 "[ACTIVITY.GetOwner.GetNamePossessiveOrMy|U] Grand Pilgrimage to Mecca"
+ 
+ # Game Concepts
+ game_concept_grand_pilgrimage_to_mecca:0 "Grand Pilgrimage to Mecca"
+ game_concept_go_on_a_grand_pilgrimage_to_mecca:0 "Go On a Grand Pilgrimage to Mecca"
+ game_concept_grand_pilgrimage_to_mecca_desc:0 "Some characters who follow the Maraboutist [faith|E] can [decide|E] to go on a $game_concept_grand_pilgrimage_to_mecca$. This [decision|E] is only available to a [king|E] or [emperor|E] whose [realm_capital|E] is in Africa.\n\nBesides receiving rewards similar to a normal [pilgrimage|E] such as [piety|E], during the journey you can also choose to recruit specialist [courtiers|E], donate [gold|E] to the poor, purchase luxury goods, and build mosques, amongst other experiences."
+ 
+ #Invite Marabouts Decision
+ wap_invite_marabouts_decision:0 "Invite a Marabout"
+ wap_invite_marabouts_decision_tooltip:0 "Invite a skilled Marabout to your court."
+ wap_invite_marabouts_decision_confirm:0 "Send messengers at once."
+ wap_invite_marabouts_decision_desc:0 "Held in high esteem within West Africa for their ability to read and write in Arabic script, and thus also their advanced knowledge of the Qur'an, Court Marabouts are of immense utility to any [ROOT.Char.GetTitleTierName] seeking advantages in the trans-saharan trade, a court priest, judges, or even a healer."
+ wap_invite_marabouts_decision.men.tt:0 "Messengers will be sent out the lengths of the realm to seek suitable Marabouts to serve at your court."
+ wap_invite_marabouts_decision.women.tt:0 "Messengers will be sent out the lengths of the realm to seek suitable female Marabouts to serve at your court."
+ wap_invite_marabouts_decision.equal.tt:0 "Messengers will be sent out the lengths of the realm to seek suitable Marabouts of either gender to serve at your court."
+ 
+ wap_invite_marabouts_decision.0001.t:0 "Godly Counsel"
+ wap_invite_marabouts_decision.0001.desc:0 "[ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip] is blessed to be home to many dozens of Qur'anic schools. Besides serving as centres of religious learning, our Qur'anic schools also serve as the main hubs of learning and scholarship within the kingdom. These centers of learning overflow with some of the lands greatest minds, with multilingual scribes and philosophers amongst them. A pious and wise ruler would do well to be guided by [ROOT.Char.GetFaith.HighGodName] in selection of one amongst them to serve as a most loyal and wise counsellor. \n\nTwo such candidate from a top Qur'anic school have been presented at my request, now after considering their talents it is time for me to render my decision."
+ wap_invite_marabouts_decision.0001.a:0 "[marabout.GetTitledFirstName] shall join my court at once."
+ wap_invite_marabouts_decision.0001.aa:0 "[marabout_2.GetTitledFirstName] shall join my court at once."
+ wap_invite_marabouts_decision.0001.b:0 "Offering my patronage to their Qur'anic school would serve a greater good."
+ wap_invite_marabouts_decision.0001.c:0 "On second thought the counsel of [ROOT.Char.GetFaith.HighGodName] is all I need."
+ wap_invite_marabouts_decision.0001.patronage_minor:0 "Modest progress in scholarship."
+ wap_invite_marabouts_decision.0001.patronage_major:0 "The realms Qur'anic schools flourish."
+ wap_invite_marabouts_decision.0001.patronage_bad:0 "Where has all my money gone?"
+ wap_invite_marabouts_decision.0001.b.tt:0 "If taken this option will be unavailable for 5 years."
+ 
+ #Divination
+ wap_divination_decision:0 "Seek Divine Guidance"
+ wap_divination_decision_title:0 "Seek Divine Guidance"
+ wap_divination_decision_tooltip:0 "Seek guidance from the gods via an adept diviner"
+ wap_divination_decision_desc:0 "#F Spirits inhabit the world all around us, some helpful, some malevolent, and some indifferent to human lives.\n\nI can ask my [ROOT.Char.Custom('MyPriestTitle')] who is an adept diviner to help me access their wisdom, but there is no telling what the outcome will be...#!"
+ wap_divination_effect:0 "You petition the unseen"
+ wap_divination_decision_confirm:0 "The wisdom of the [ROOT.Char.GetFaith.PantheonTerm] shall guide me"
+ #Ikpu Alu
+ wap_purification_decision:0 "Ikpu Alu"
+ wap_purification_decision_title:0 "Peform an Ikpu Alu ritual"
+ wap_purification_decision_effect_tooltip:0 "Performing an Ikpu Alu - or ritual purification - may cleanse you of your taboo - or ńsọ-alà, but it all depends on your Faith."
+ wap_purification_decision_tooltip:0 "Request an Ikpu Alu"
+ wap_purification_decision_desc:0 "You have commited a ńsọ-alà - or taboo. In order to ensure ongoing fertility of the land order can be restored only by observing of proper traditional ritual. For a modest offering of coin you can ask a learned [ROOT.Char.Custom('DefaultPriestTitle')] who specialises in Ikpu Alu - or ritual rites of purification, to remove the stain of taboo upon you, your children, and your house. Only then by the mercy of [ROOT.Char.GetFaith.FertilityGodName] will you be able to be cleansed of the ńsọ-alà, and in so doing restore the purity of Alà's earth and your place within it."
+ wap_purification_decision_confirm:0 "Alà please show mercy!"
+
+ #Create Lower Niger Empire
+ wap_create_lower_niger_empire_decision:0 "Create the Lower Niger Empire"
+ wap_create_lower_niger_empire_decision_desc:0 "#F As the glorious conqueror of the Lower Niger you now have the opportunity to consolidate your vast domain into an empire that will stand the test of time. My ancestors will honour the name [ROOT.Char.GetFirstNameNoTooltip] for generations innumerable, now gather the lords to a great feast, a new day is dawning on the lands fed by the great River Niger and beyond!"
+ wap_create_lower_niger_empire_decision_title:0 "Create The Lower Niger Empire"
+ wap_create_lower_niger_empire_decision_tooltip:0 "Found a new Empire level title in the Lower Niger"
+ wap_create_lower_niger_empire_decision_confirm:0 "All shall tremble before me!"
+ 
+ #Unite Hausaland and Banzaland
+ wap_unite_the_hausa_thrones_decision:0 "Unite the Children of Bàyā̀jiddà"
+ wap_unite_the_hausa_thrones_decision_tooltip:0 "Unite the thrones of the Hausa Bakwai and the Banza Bakwai under one ruler"
+ wap_unite_the_hausa_thrones_decision_desc:0 "Long have the descendants of Bàyā̀jiddà, both Hausa Bakwai and the Banza Bakwai warred amongst ourselves for control of the lucrative trade that flows north up the Niger and across the Sahel. We must put behind us petty claims of illegitimacy and consolidate the lands of greater Hausa Bakwai and Banza Bakwai into a single powerful polity. As children of Bàyā̀jiddà, let us unite in honor of our ancestors and claim the wealth and power we justly deserve!"
+ wap_unite_the_hausa_thrones_decision_titles_tt:0 "Every Hausa or Banza [kingdom|E] [title|E] you own (except for your [primary_title|E]) will be destroyed and their territories will become [de_jure|E] of your Primary Title ([THIS.Char.GetPrimaryTitle.GetNameNoTier])"
+ wap_unite_the_hausa_thrones_decision_titles_empire_tt:0 "Every Hausa or Banza [kingdom|E] [title|E] you own will have their territories become de jure under the one kingdom title currently held (others should not exist) and that one kingdom title will become [de_jure|E] of your [primary_title|E]"
+ wap_unite_the_hausa_thrones_decision_confirm:0 "Unite the thrones of Bàyā̀jiddà's children"
+ 
+ ##EAST AFRICAN
+ 
+ #Create Horn Empire
+ wap_create_horn_empire_decision:0 "Create the Golden Horn Sulṭānate"
+ wap_create_horn_empire_decision_desc:0 "#F As the glorious conqueror of the Horn, you now have the opportunity to consolidate your vast domain into an empire under the banner of Allāh."
+ wap_create_horn_empire_decision_title:0 "Create the Golden Horn Sulṭānate"
+ wap_create_horn_empire_decision_tooltip:0 "Found a new Empire level title in the Horn"
+ wap_create_horn_empire_decision_confirm:0 "Allahu Akbar!"
+ #Negotiate the Baqt
+ wap_negotiate_the_baqt:0 "Negotiate the Baqt"
+ wap_negotiate_the_baqt_tooltip:0 "You will invite an emissary from Egypt to negotiate the renewal of terms of trade with [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip]"
+ wap_negotiate_the_baqt_desc:0 "#emphasis Historical Context:#! The Baqt was a trade and non-aggression pact between Nubia and their northern neighbor. Originally signed in 632 AD between Abdallah ibn Sa'd ibn Abi Sarh, representing the Caliph of Baghdad and Qalidurat, the king of Makuria, the Baqt ensured relative peace on their northern frontier, and the continued flow of precious grain and other goods down the Nile."
+ wap_negotiate_the_baqt_effect_tooltip:0 "You will invite an emissary from Egypt to negotiate the renewal of terms of trade with [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip]"
+ wap_negotiate_the_baqt_confirm:0 "Send an emissary."
+ 
+ #Baqt - Nubian Flavor
+ wap_negotiate_the_baqt.0001.t:0 "The Baqt"
+ wap_negotiate_the_baqt.0001.desc:0 "[baqt_emissary.GetFirstName], an emmissary of Egypt along with his entourage have arrived to my court in [ROOT.Char.GetCapitalLocation.GetTitle.GetNameNoTier]. The time has come again to consider our obligations under the Baqt with our northern neighbor. The agreement has proved profitable for us in the past, but we must always consider the needs of the people of [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip] before concern for any agreements made by our forebears. The emissary comes bearing gifts from his liege, and placing them before me, he bows with a flourish. After a long and spirited debate with my trade officials, [baqt_emissary.GetFirstNameNoTooltip] requests my decision."
+ wap_negotiate_the_baqt.0001.accept:0 "The Baqt shall continue!"
+ wap_negotiate_the_baqt.0001.accept_tt:0 "A [truce|e] and trade deal is renewed for 5 years."
+ wap_negotiate_the_baqt.0001.accept_toast:0 "The Baqt Continues" 
+ wap_negotiate_the_baqt.0001.renegotiate:0 "Negotiation is not yet done."    
+ wap_negotiate_the_baqt.0001.reject:0 "The Baqt has outgrown its usefulness."
+ wap_negotiate_the_baqt.0001.reject.tt:0 "This will end our truce and any bonus to trade but without precipitating immediate war."
+ wap_negotiate_the_baqt.0001.reject.toast:0 "The Baqt Ends"
+ wap_negotiate_the_baqt.0001.provoke:0 "Your head will serve as my answer!"
+ wap_negotiate_the_baqt.0001.provoke.tt:0 "This will make [ruler_egypt.GetFirstName] your [rival|E], and you will be unable to negotiate the baqt again for a long time."
+ wap_negotiate_the_baqt.0001.renegotiate.success:0 "Your silver tongue has won better terms"
+ wap_negotiate_the_baqt.0001.renegotiate.failure:0 "Your tepid oration has weakened the terms"
+ TRUCE_BAQT:0 "Truce signed, the Baqt continues!\n\n"
+ 
+ #Become annointed as the child of Amun
+ wap_become_child_of_amun_decision:0 "Become the annointed Child of Amun"
+ wap_become_child_of_amun_decision_confirm:0 "I have been chosen!"
+ wap_become_child_of_amun_decision_desc:0 "By driving out the Christians and restoring Kushitic rule over the entirety of Nubia, a pious ruler may be recognized to be the founder of a new divine dynasty — the living child of Amun."
+ wap_become_child_of_amun_decision_tooltip:0 "Become the annointed Child of Amun."
+ wap_become_child_of_amun_decision_effect_tooltip:0 "Become the annointed Child of Amun"
+ wap_become_child_of_amun_decision_decendant_trait_tooltip:0 "Your descendants will gain the [trait|E] [GetTrait('child_of_amun_descendant').GetName( GetNullCharacter )|LV]"
+ 
+ #Restore Kushitic Empire
+ wap_restore_kushitic_empire_decision:0 "Reclaim Egypt for the Gods of Kush"
+ wap_restore_kushitic_empire_decision_confirm:0 "Blood for [ROOT.Char.GetFaith.WarGodName]!"
+ wap_restore_kushitic_empire_decision_desc:0 "Retaking Egypt will allow us to restore the borders of ancient Kush to its fullest extent in the name. From the Nile delta to the mountains of the Axumite kingdoms, as far as the sacred river flows the followers of [ROOT.Char.GetFaith.HighGodName] shall rule once again."
+ wap_restore_kushitic_empire_decision_tooltip:0 "A war to retake Egypt for the [ROOT.Char.GetFaith.GetAdjectiveNoTooltip] faith will begin."
+ wap_restore_kushitic_empire_decision_effect_tooltip:0 "A war to retake Egypt for the [ROOT.Char.GetFaith.GetAdjectiveNoTooltip] faith will begin."
+ 
+ #Nubianization
+ wap_promote_old_nubian_decision:0 "Promote Nubianization of the Church and State"
+ wap_promote_old_nubian_decision_desc:0 "A revitalization of indigenous traditions within Nubian art, culture, and writing awaits us. Since the retreat of the Empire of the Greeks from the lands of the Nile their influence has continued to wane. It's time for our holy texts and liturgy, our legal system, our titles, to reflect our own tongue. We must make [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip] a thriving hub for our own Nubian language, culture, and traditions."
+ wap_promote_old_nubian_decision_tooltip:0 "Nubianize the State apparatus"
+ wap_promote_old_nubian_decision_confirm:0 "Glory to Nubia!"
+ wap_establish_nubian_church_scripted_effect.county_conversions.tt:0 "[counties|E] in your [realm|E] that share your [culture_group|E] might convert to $nubian_orthodox$"
+ wap_establish_nubian_church_scripted_effect.vassals_conversions.tt:0 "All Vassals that are not [zealous|E] will convert to $nubian_orthodox$"
+ wap_establish_nubian_church_scripted_effect.courtiers_conversions.tt:0 "All Courtiers that are not [zealous|E] will convert to $nubian_orthodox$"
+ nubian_orthodox_resettlement.every_converted_province:0 "$EFFECT_LIST_BULLET$ All [counties|E] that convert"
+ nubian_church_effect.tt:0 "Nubianization will provide an opportunity to declare a new $nubian_orthodox$"
+ #Choose a patron saint of protection
+ wap_nubian_select_patron_archangel_decision:0 "Pray To The Archangels"
+ wap_nubian_select_patron_archangel_decision_title:0 "Pray To The Archangels"
+ wap_nubian_select_patron_archangel_decision_desc:0 "#F In Nubian Christianity the Archangels are viewed as closer to the people than the more distant being of God. Archangels thus serve as heavenly intermediaries between believers and God, and may be addressed directly to carry a believer's prayers - to in effect stand up for a Nubian Christian to God himself. I should contemplate the support and protection of a specific Archangel or divine figure to act as my intercessor.#!"
+ wap_nubian_select_patron_archangel_decision_confirm:0 "May the Angels protect me."
+ wap_nubian_select_patron_archangel_decision_tooltip:0 "Think about who should be the focus of your veneration."
+ wap_nubian_select_patron_archangel_decision_tt:0 "You gain a modifier associated with your selected Archangel"
+ 
+ #Retire to a monastery
+ wap_retire_to_a_monastery_decision:0 "Retire To A Monastery"
+ wap_retire_to_a_monastery_decision_title:0 "Retire To A Monastery"
+ wap_retire_to_a_monastery_decision_tooltip:0 "This decision will let you abdicate your throne to your heir and retire to a monastery."
+ wap_retire_to_a_monastery_decision_desc:0 "In the tradition of pious rulers before me, and after careful consideration for the fate of my realm, and my own soul - I believe it is now time I retire as ruler. In the ultimate show of humility and sacrifice before Holy God, I wish to renounce my titles and all inheritance!"
+ wap_retire_to_a_monastery_decision_effect_tooltip:0 "This decision will let you abdicate your throne to your heir and retire to a monastery, permanently relinquishing all titles and rights to inheritance."
+ wap_retire_to_a_monastery_decision_confirm:0 "It is time."
+ 
+ #Revive Kushitic paganism
+ wap_revive_kushitic_paganism_decision:0 "Revive $kushitism_pagan$"
+ wap_revive_kushitic_paganism_decision_desc:0 "[ROOT.Char.GetFaith.GetReligion.GetNameNoTooltip] might have its advantages, but it has caused no end of grief and unrest amongst our subjects. Perhaps it is time to rekindle our connection with the ancient rites of our ancestors..."
+ wap_revive_kushitic_paganism_decision_tooltip:0 "Abandon [ROOT.Char.GetFaith.GetNameNoTooltip] and embrace the traditions of our ancestors"
+ wap_revive_kushitic_paganism_decision_confirm:0 "Renounce [ROOT.Char.GetFaith.GetNameNoTooltip]"
+ wap_revive_kushitic_paganism_decision_scripted_effect.county_conversions.tt:0 "[counties|E] in your [realm|E] that share your [culture_group|E] might convert to $kushitism_pagan$"
+ wap_revive_kushitic_paganism_decision.adjust_the_faith.tt:0 "You may swap some of the tenets of $kushitism_pagan$"
+ kushitic_resettlement.every_converted_province:0 "$EFFECT_LIST_BULLET$ All [counties|E] that convert"
+ 
+ #Create Alwan Kingdom
+ #wap_form_alodia_kingdom_decision:0 "Establish the Kingdom of Alwa"
+ #wap_form_alodia_kingdom_decision_confirm:0 "For a strong [ROOT.Char.GetFaith.GetAdjectiveNoTooltip] Alwa!"
+ #wap_form_alodia_kingdom_decision_desc:0 "It is time for Alwa to be recognised as a kingdom independent of our northern Makurian cousins. Under [ROOT.Char.GetFaith.GetAdjective] control, we will #establish a bulwark in Upper Nubia under the guiding light of [ROOT.Char.GetFaith.HighGodName]."
+ #wap_form_alodia_kingdom_decision_tooltip:0 "Establish the independent Kingdom of Alwa."
+ #wap_form_alodia_kingdom_decision_effect_tooltip:0 "Establish the independent Kingdom of Alwa"
+ 
+ #Revive Nobadian Kingdom
+ wap_form_nobadia_kingdom_decision:0 "Re-establish the Kingdom of Nobadia"
+ wap_form_nobadia_kingdom_decision_confirm:0 "A new, [ROOT.Char.GetFaith.GetAdjectiveNoTooltip] Nobadia!"
+ wap_form_nobadia_kingdom_decision_desc:0 "It is time for Nobadia to once again stand alone as an independant kingdom, as it did under the mighty Silko. Under [ROOT.Char.GetFaith.GetAdjective] control, we will create a new, better Nobadia under the guiding light of [ROOT.Char.GetFaith.HighGodName]."
+ wap_form_nobadia_kingdom_decision_tooltip:0 "Re-establish the independent Kingdom of Nobadia."
+ wap_form_nobadia_kingdom_decision_effect_tooltip:0 "Re-establish the independent Kingdom of Nobadia"
+ 
+ #Unite Nubian Kingdoms
+ wap_unite_the_nubian_thrones_decision:0 "Unite the Nubian Thrones"
+ wap_unite_the_nubian_thrones_decision_tooltip:0 "Unite the thrones of Makuria and Alwa under one ruler"
+ wap_unite_the_nubian_thrones_decision_desc:0 "Since the collapse of the Empire of Kush our people have been divided under new rulers, identities, and religions. Yet we still share a common history and have a duty to protect the legacy of our forebears from the increasing hostile forces to our north flowing from ancient Philae, and to the source of the mighty Nile in our south. We Nubians must stand united for the sake of our future and way of life."
+ wap_unite_the_nubian_thrones_decision_titles_tt:0 "Every Nubian [kingdom|E] [title|E] you own (except for your [primary_title|E]) will be destroyed and their territories will become [de_jure|E] of your Primary Title ([THIS.Char.GetPrimaryTitle.GetNameNoTier])"
+ wap_unite_the_nubian_thrones_decision_titles_empire_tt:0 "Every Nubian [kingdom|E] [title|E] you own will have their territories become de jure under the one kingdom title currently held (others should not exist) and that one kingdom title will become [de_jure|E] of your [primary_title|E]"
+ wap_unite_the_nubian_thrones_decision_confirm:0 "Unite the Nubian Thrones"
+ 
+ #Create Nubian Empire
+ #wap_create_nubian_empire_decision:0 "Create the Nubian Empire"
+ #wap_create_nubian_empire_decision_desc:0 "#F I stand as the glorious conqueror of the Nubian Kingdoms of Makuria and Alwa, of the wilds of Kordofan, and Master of the Eastern Desert to where the dunes meet the Red Sea. Perhaps now it is time to consolidate my vast domain into an empire that will stand the test of time."
+ #wap_create_nubian_empire_decision_title:0 "Create The Nubian Empire"
+ #wap_create_nubian_empire_decision_tooltip:0 "Found a new Empire level title in Nubia"
+ #wap_create_nubian_empire_decision_confirm:0 "All shall tremble before me!"
+
+#Invite Monk Decision
+ wap_invite_monks_decision:0 "Invite a Religious Scholar to Court"
+ wap_invite_monks_decision_tooltip:0 "Invite a skilled monk or nun to your court."
+ wap_invite_monks_decision_confirm:0 "Send letters at once."
+ wap_invite_monks_decision_desc:0 "Our [ROOT.Char.GetFaith.GetAdjective] faith prizes the meditative and studious examination of the holy scriptures. Due to the high levels of education and intellect required to rise to highest ranks within our holy orders these holy scholars can also make excellent advisors of great import to the kingdom. \n\nAn astute ruler would be wise to seek their counsel, or indeed draft them into service of the palace."
+ wap_invite_monks_decision.men.tt:0 "A skilled monk will arrive at your court."
+ wap_invite_monks_decision.women.tt:0 "A skilled nun will arrive at your court."
+ wap_invite_monks_decision.equal.tt:0 "A skilled monk or nun will arrive at your court."
+ 

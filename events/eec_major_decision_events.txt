@@ -1,0 +1,50 @@
+﻿namespace = eec_major_decisions
+
+##################################################
+# #Standard Events
+# 0001 - 0010	Secure the High Kingdom of the North Sea - Bind England, Denmark, and Norway into one mighty de jure.
+# 0011 - 0020	Found the Capital of the Rus' - Semi-dynamic founding of Kiev.
+# 0021 - 0030	Elevate the Kingdom of the Isles - Make the Petty Kingdom of Mann & the Isles into the Perfectly Regular Kingdom of Mann & the Isles.
+# 0031 - 0040	Forge the Jomsvikings - Sponsor the creation of a conservative Asatru holy fighting force.
+#
+#
+# #Special Events
+# 1001 - 1010	Canute-'em-Up
+# 1011 - 1020	The True King of Norway - Harald Tanglehair earns his haircut.
+##################################################
+
+##################################################
+# Elevating the Emirate of Crete
+# by Ewan Cowhig Croft
+# 0021 - 0030
+##################################################
+
+#	Founder event
+eec_major_decisions.0001 = {
+	type = character_event
+	title = eec_major_decisions.0001.t
+	desc = eec_major_decisions.0001.desc
+	theme = war
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+	override_background = { event_background = docks }
+
+	immediate = {
+		play_music_cue = "mx_cue_war_declared"
+		# Apply effects
+		elevate_crete_scripted_effect = yes
+	}
+
+	# I rule the sea
+    option = {
+        name = eec_major_decisions.0001.a
+	
+	ai_chance = {
+			#Doesn't especially matter.
+			base = 100
+		}
+    }
+	
+}

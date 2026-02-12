@@ -127,9 +127,6 @@ sunset_invasion_war = {
 	
 	on_declaration = {
 		on_declared_war = yes
-		scope:attacker = {
-			add_character_flag = used_lifetime_invasion
-		}
 	}	
 
 	on_victory_desc = {
@@ -346,7 +343,7 @@ sunset_invasion_war = {
 	war_name_base = "SUNSET_INVASION_WAR_NAME_BASE"
 	cb_name = "SUNSET_INVASION_CB_NAME"
 	
-	interface_priority = 100
+	interface_priority = 1000
 	
 	use_de_jure_wargoal_only = yes
 	

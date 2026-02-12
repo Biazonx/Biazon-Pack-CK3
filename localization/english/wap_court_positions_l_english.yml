@@ -1,0 +1,12 @@
+﻿l_english:
+ #Griot
+ court_position_lisping_trait:0 "[GetTrait('lisping').GetName( ROOT.Char )]"
+ court_position_wheezing_trait:0 "[GetTrait('wheezing').GetName( ROOT.Char )]"
+ court_position_stuttering_trait:0 "[GetTrait('stuttering').GetName( ROOT.Char )]"
+ court_position_griot_trait:0 "[GetTrait('griot').GetName( ROOT.Char )]"
+ court_position_tradition_griot:0 "$tradition_griots_name$ [culture_tradition|E]"
+ court_griot_court_position:0 "Royal Griot"
+ court_griot_court_position_desc:0 "The $court_griot_court_position$ is a living repository of the histories and mysteries of the people, often accompanied by music, royal Storytellers provide their Liege and all at court with entertainment in their recitation of epic tales of rulers past, of the ancestors, of calamities that have befallen the land, and of the triumphs and sometimes failures of its kings, queens, and its people."
+ #Chief Gbeto
+ chief_gbeto_court_position:0 "Chief Gbeto"
+ chief_gbeto_court_position_desc:0 "The $chief_gbeto_court_position$ is assigned the head of the kingdoms Gbeto Warriors, our people's famed all-female Elephant hunters. The title of Chief Gbeto should be an honor awarded to our most ferocious and loyal Gbeto warrior."

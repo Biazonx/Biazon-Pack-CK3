@@ -849,7 +849,7 @@ slave_raid_cb = {
 	war_name = "SLAVE_RAID_CB_NAME"
 	war_name_base = "SLAVE_RAID_WAR_NAME_BASE"
 	cb_name = "SLAVE_RAID_CB_NAME"
-	interface_priority = 80
+	interface_priority = 3
 
 	ticking_war_score_targets_entire_realm = yes
 	attacker_ticking_warscore = 0

@@ -1,0 +1,32 @@
+﻿RD_CONQUEROR_CHOSEN_SPAN = {
+    value = 0
+    if = {
+        limit = {
+            has_game_rule = rd_conqueror_chosen_span_1_year
+        }
+        add = 1
+    }
+    else_if = {
+        limit = {
+            has_game_rule = rd_conqueror_chosen_span_5_year
+        }
+        add = 5
+    }
+    else_if = {
+        limit = {
+            has_game_rule = rd_conqueror_chosen_span_10_year
+        }
+        add = 10
+    }
+    else_if = {
+        limit = {
+            has_game_rule = rd_conqueror_chosen_span_20_year
+        }
+        add = 20
+    }
+}
+
+RD_CONQUEROR_CHOSEN_SPAN_WATCHDOG = {
+    value = RD_CONQUEROR_CHOSEN_SPAN
+    multiply = 2
+}

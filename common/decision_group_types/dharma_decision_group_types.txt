@@ -3,13 +3,13 @@
 # (201-300 )
 
 hindu_major = {
-	sort_order = 201
+	sort_order = 202
 }
 buddhist_major = {
-	sort_order = 201
+	sort_order = 202
 }
 jain_major = {
-	sort_order = 201
+	sort_order = 202
 }
 
 ############################################
@@ -17,23 +17,23 @@ jain_major = {
 # (101-200 )
 
 hindu_medium = {
-	sort_order = 150
+	sort_order = 201
 }
 buddhist_medium = {
-	sort_order = 150
+	sort_order = 201
 }
 jain_medium = {
-	sort_order = 150
+	sort_order = 201
 }
 
 tibetan_medium = {
-	sort_order = 150
+	sort_order = 201
 }
 burmese_medium = {
-	sort_order = 150
+	sort_order = 201
 }
 dravidian_medium = {
-	sort_order = 150
+	sort_order = 201
 }
 
 ############################################
@@ -41,12 +41,12 @@ dravidian_medium = {
 # (001-100 )
 
 hindu_minor = {
-	sort_order = 10
+	sort_order = 201
 }
 buddhist_minor = {
-	sort_order = 10
+	sort_order = 201
 }
 jain_minor = {
-	sort_order = 10
+	sort_order = 201
 }
 

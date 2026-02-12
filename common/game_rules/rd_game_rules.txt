@@ -1,0 +1,71 @@
+﻿rd_world_conqueror = {
+	categories = {
+		ai
+	}
+	default = rd_conqueror_enabled
+
+	rd_conqueror_enabled = {
+		flag = GG_can_change_rule
+	}
+
+	rd_conqueror_disabled = {
+		flag = GG_can_change_rule
+	}
+}
+
+rd_conqueror_chosen_span = {
+	categories = {
+		ai
+	}
+
+	default = rd_conqueror_chosen_span_10_year
+	
+	rd_conqueror_chosen_span_1_year = {
+		flag = GG_can_change_rule
+	}
+
+	rd_conqueror_chosen_span_5_year = {
+		flag = GG_can_change_rule
+	}
+
+	rd_conqueror_chosen_span_10_year = {
+		flag = GG_can_change_rule
+	}
+
+	rd_conqueror_chosen_span_20_year = {
+		flag = GG_can_change_rule
+	}
+}
+
+rd_conqueror_chosen_weight = {
+	categories = {
+		ai
+	}
+
+	default = rd_conqueror_chosen_weight_military_strength
+	
+	rd_conqueror_chosen_weight_military_strength = {
+		flag = GG_can_change_rule
+	}
+
+	rd_conqueror_chosen_weight_random = {
+		flag = GG_can_change_rule
+	}
+}
+
+rd_conqueror_situation_rd_downfall = {
+	categories = {
+		ai
+	}
+
+	default = rd_conqueror_situation_rd_downfall_enabled
+
+	rd_conqueror_situation_rd_downfall_enabled = {
+		flag = GG_can_change_rule
+	}
+
+	rd_conqueror_situation_rd_downfall_disabled = {
+		flag = GG_can_change_rule
+	}
+}
+

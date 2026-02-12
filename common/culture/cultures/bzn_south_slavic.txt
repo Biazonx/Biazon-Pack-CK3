@@ -105,7 +105,6 @@ bulgarian = {
 		tradition_stand_and_fight
 		tradition_hussar
 		tradition_merciful_blindings
-		tradition_bolghar_legacy
 	}
 	
 	name_list = name_list_bulgarian

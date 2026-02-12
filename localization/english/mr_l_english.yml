@@ -1,0 +1,5 @@
+﻿l_enlish:
+ massive_razing_decision: "Massive Razing"
+ massive_razing_decision_desc: "Raze all valid [holdings|E] you held and apply all effect normal razing cause."
+ massive_razing_decision_tooltip: "$massive_razing_decision_desc$"
+ massive_razing_decision_confirm: "$massive_razing_decision$"

@@ -1,0 +1,36 @@
+﻿# Standard Values
+@pos_compat_high = 30
+@pos_compat_medium = 15
+@pos_compat_low = 5
+
+@neg_compat_high = -30
+@neg_compat_medium = -15
+@neg_compat_low = -5
+
+rd_gpt_conquest_era = {
+	category = fame
+	flag = can_foment_revolt_interaction
+	flag = trait_enable_raiding_per_standard_restrictions
+	flag = can_duel_criminals_interaction
+ #	flag = can_duel_anyone_interaction
+ #	flag = higher_chance_of_dying_in_battle
+	flag = initial_legitimacy_nerf
+	flag = join_factions_less
+
+	shown_in_ruler_designer = no
+}
+
+rd_gpt_prosperity_era = {
+	category = fame
+	flag = nomadic_philosophy_introduce_heir
+	flag = initial_legitimacy_boost
+	flag = offer_vassalisation_25
+	flag = better_war_hostages
+ #	flag = can_improve_capital_decision
+ #	flag = lower_chance_of_dying_in_combat
+	flag = can_dismiss_hooks_interaction
+	flag = join_factions_more
+	flag = nomadic_philosophy_easier_to_hybridize
+
+	shown_in_ruler_designer = no
+}

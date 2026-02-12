@@ -2,13 +2,16 @@
 	group = conquest
 	icon = invasion
 	combine_into_one = yes
-	interface_priority = 111
 	should_show_war_goal_subview = yes
 	mutually_exclusive_titles = { always = no }
 
 	allowed_for_character = {
-		OR = {government_has_flag = government_is_feudal
-		government_has_flag = government_is_monastic_feudal }
+		OR = {
+			government_has_flag = government_is_feudal
+			government_has_flag = government_is_monastic_feudal 
+			has_trait = rd_gpt_conquest_era
+		}
+		
 		NOT = {
 			government_has_flag = government_is_landless_adventurer
 		}
@@ -39,7 +42,7 @@
 	ai_only_against_neighbors = yes
 	#ai_can_target_all_titles = { always = yes }
 	ai_score_mult = {
-		value = struggle_conquest_ai_score_value
+		value = 10
 
 		#Declaring war on the frankokratia leader can really ruin the whole thing
 		if = {
@@ -332,7 +335,7 @@
 	war_name_base = "Border Clash"
 	cb_name = "Border Clash"
 
-	interface_priority = 79
+	interface_priority = 4
 
 	use_de_jure_wargoal_only = yes
 

@@ -1,0 +1,32 @@
+﻿cair_requirements = {
+	
+	default = cair_default_option
+
+	cair_default_option = {
+
+	}
+	
+	cair_no_ai_option = {
+		
+	}
+	
+	cair_no_ai_revolt_option = {
+		
+	}
+	
+	cair_no_ai_merc_option = {
+		
+	}
+	
+	
+	
+}
+
+
+
+
+
+
+
+
+

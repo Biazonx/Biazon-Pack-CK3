@@ -1,0 +1,327 @@
+﻿l_english:
+ 
+ #Afariqa
+ afariqa.0013.t:0 "The Afariqan Diplomat"
+ afariqa.0013.desc:0 "For many centuries, the peoples of North Africa have seen the rise and fall of great civilisations. From the ancient Mauri and Numidia to the west, the prosperous empire of Carthage, and later Rome itself. In these processes of history the influences of a multitude of cultures has touched the land - making it's people learned in the ways of many. One such man, a scholar versed in language, experienced as a courtier, and scribe has come before my court today. He says he is a diplomat, though currently unemployed. He seems quick-witted type, and is certainly skilled in oratory.". His business contacts might come in handy."
+ afariqa.0013.a:0 "He and any of his dependents are welcome here."
+ afariqa.0013.b:0 "It is a fair offer, but I'm not interested."
+ 
+ afariqa.0014.t:0 "The Afariqan Merchant"
+ afariqa.0014.desc:0 "For many centuries, the peoples of North Africa have seen the rise and fall of great civilisations. From the ancient Mauri and Numidia to the west, the prosperous empire of Carthage, and later Rome itself. In these processes of history the influences of a multitude of cultures has touched the land - making it's people learned in the ways of many. One such man, a merchant versed in language of trade has come before my court today. He says he is a trader seeking to settle down after many years of toil running ships across the nearby seas. He speaks finely, and carries a heavy purse."
+ afariqa.0014.a:0 "He and his dependents are allowed to stay with us."
+ afariqa.0014.b:0 "I don't want such a lowborn in my court."
+ 
+ afariqa.0015.t:0 "The Afariqan Traveler"
+ afariqa.0015.desc:0 "For many centuries, the peoples of North Africa have seen the rise and fall of great civilisations. From the ancient Mauri and Numidia to the west, the prosperous empire of Carthage, and later Rome itself. In these processes of history the influences of a multitude of cultures has touched the land - making it's people learned in the ways of many. One such man has come before my court today. He says he is an intrepid traveler who has decided to make our beautiful city his home, after a lifetime of adventure."
+ afariqa.0015.a:0 "Let him and any of his dependents stay here."
+ afariqa.0015.b:0 "That sounds nice but I have no need for him."
+ 
+ #Mali Empire
+ mali_empire.0001.t:0 "The Throne of Gold"
+ mali_empire.0001.desc.intro:0 "Let the praise of the griots ring out, there is a new Master of Gold!\n\nAfter years of bloody conflict in the region, a new Empire of Gold has emerged. After subjugating kingdoms from the coasts of the Takrūr, to the edge of the desert sea, I stand now at the head of a new power."
+ mali_empire.0001.desc.malinke:0 "\n\nThe time of a subservient Manden is now a distant memory. For too long we have been oppressed by the Soninke kingdoms, and their once mighty state of Wagadu, but no more. With the birth of this new Malinke empire, control of the gold fields of Bambuk and Bure, and of the great River of Rivers is finally in our hands. But what of the religion of our new empire?"
+ mali_empire.0001.desc.soninke:0 "\n\nNo longer restricted to the borders of the old kingdom of Wagadu, this new Soninke empire represents the expansion of our hegemony to lands not thought possible by Maghan's of the past. I am no mere Master of Gold, no. The griots will speak of me as the master of the grasslands, of the forests, and all that is touched by the waters of the great River of Rivers. But what of the religion of our new empire?"
+ mali_empire.0001.desc.other:0 "\n\nThe time of the once great Soninke and Malinke kingdoms is  now but a fading memory. The griots of the land will henceforth speak of a new people dominating the grasslands, and waters of the Great River. But what of the religion of my new empire?"
+ 
+ mali_empire.0001.a:0 "The faith of the desert traders interests me."
+ mali_empire.0001.b:0 "I should find a middle way."
+ mali_empire.0001.c:0 "The Old Gods have served me well."
+ mali_empire.0001.d:0 "We must have unity."
+ mali_empire.0001.ashari.tt:0 "Every Ashari vassal:"
+ mali_empire.0001.pagan.tt:0 "Every Pagan vassal:"
+ mali_empire.0001.african_folk_islam.tt:0 "Every Maraboutist vassal:"
+ #Guanche
+ wap_guanche_decision.0001.t:0 "Mummify Relative"
+ wap_guanche_decision.0001.desc:0 "To usher [ROOT.Var('ancestor_to_bury').Char GetFirstName] the priests have extracted their organs and smeared their bodies with a mixture of herb, sap, pumice stone, earth, and volanic remains. As is our custom, the body will be left in the sun for fifteen consecutive mornings, with bonfires accompanying the departed for fifteen nights. Finally in several layers of wrapping later we place [ROOT.Var('ancestor_to_bury').Char.GetFirstName] in their cave tomb deep in one of the islands many mountain caverns to join the ancestors for eternity. Alongside them provisions, so that they will not go hungry."
+ wap_guanche_decision.0001.a:0 "May [ROOT.Char.GetFaith.HighGodName] guide their journey."
+
+ guanche_flavor.0001.t:0 "The New [ROOT.Char.GetTitleAsNameNoTooltip|U]"
+ guanche_flavor.0001.desc_murdered:0 "Following the tragic and #EMP unfortunate#! death of [previous_holder.Custom2('MyCharacterIntroduction', ROOT.Char)] the responsibility to lead all the islands of Guañac now falls upon my shoulders."
+ guanche_flavor.0001.desc_dead:0 "With the passing of [previous_holder.Custom2('MyCharacterIntroduction', ROOT.Char)] the responsibility to lead all the islands of Guañac now falls upon my shoulders."
+ guanche_flavor.0001.desc_alive:0 "It is now up to me to lead all the islands of Guañac."
+ guanche_flavor.0001.desc:0 "\n\nI stand in glory before the noblemen of the island's Tagoror council. As is our custom, my [realm_priest.GetCouncilTitle] [realm_priest.GetFirstNameNoTooltip] must now undertake a ritual coronation of me as the new [ROOT.Char.GetTitleAsNameNoTooltip|U] in the presence of [ROOT.Char.GetDynasty.GetName] dynasty's greatest relic, the revered bone of my dynastic ancestor. [realm_priest.GetFirstNameNoTooltip] begins by unwrapping layer upon layer of fine hides from the object, before beginning a ceremonious chant and placing the sacred bone relic in my open hands. The bone is well preserved considering it's age, and without a second thought I raise it above my head before firmly kissing it to show my commitment to our faith, and respect for my forebears."
+ guanche_flavor.0001.a:0 "May [ROOT.Char.GetFaith.WealthGodName] shine brightly on my reign!"
+ 
+ guanche_flavor.0002.desc:0 "As the sacred relic is wrapped up once again, each member of the Tagoror shouts in acceptance of my rule, “Agoñe Yacorán Iñatzahaña Chacoñamet!” (I swear by this bone of He who made you great!). To my Guayre I respond in kind... "In the presence of the sacred relic of dynasty [ROOT.Char.GetDynasty.GetName], I pledge to defend you and our lands!""
+ guanche_flavor.0002.a:0 "Today is truly a great day."
+ #Sacrifical funeral rites
+ wap_funeral_sacrifice.001.t:0 "Sacrificial Burial Rites"
+ wap_funeral_sacrifice.001.desc:0 "Within our [ROOT.Char.GetFaith.GetNameNoTooltip] faith it is tradition that when the [ROOT.Char.GetTitleAsNameNoTooltip] dies great sacrifices are held in their honor at the ancestral altar of departed [ROOT.Char.GetTitleAsNameNoTooltip]s. In addition, the finest horses from the royal stable, house servants, and a selection amongst the former ruler's wives and concubines may also be buried with the deceased. These sacrifices are to satisfy both the [ROOT.Char.GetFaith.PantheonTerm] and the ancestors. The priests of the royal altar press me, who should accompany their departed [ROOT.Char.GetTitleAsNameNoTooltip] on the journey to [ROOT.Char.GetFaith.PositiveAfterLife]?"
+ wap_funeral_sacrifice.001.a:0 "A proper sacrifice should be of royal blood, I choose [royal_spouse.GetTitledFirstName]."
+ wap_funeral_sacrifice.001.aa:0 "The [ROOT.Char.GetFaith.PantheonTerm] be damned, I cannot lose my dear mumma!"
+ wap_funeral_sacrifice.001.b:0 "This is the duty of a royal concubine, [sacrificial_partner_0.GetTitledFirstName] must obey."
+ wap_funeral_sacrifice.001.c:0 "A great [ROOT.Char.GetTitleAsNameNoTooltip] deserves a great sacrifice."
+ wap_funeral_sacrifice.001.d:0 "On second thought, I cannot abide this."
+ 
+ wap_funeral_sacrifice.101.t:0 "My Dear Departed Mother"
+ wap_funeral_sacrifice.101.desc:0 "As I sit alone in the royal gardens I watch the wind carry leaves effortlessly across my path, but inside I feel heavy.\n\nIt has been over a month since I ascended as the new [ROOT.Char.GetTitleAsNameNoTooltip] of [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip]. As a child I was taught that to become [ROOT.Char.GetTitleAsNameNoTooltip] would require sacrifice, and at great personal cost. My reign has just begun, but already I am questioning my decision to offer my mother [ruler_mum.GetTitledFirstName] to the [ROOT.Char.GetFaith.PantheonTerm] at the royal funeral. Ultimately our faith demands it as a matter of honor, but I take no solace in this duty. As I put my head in my hands, I wonder if I made the right decision?"
+ wap_funeral_sacrifice.101.a:0 "It is what it is."
+ wap_funeral_sacrifice.101.b:0 "It was not an easy choice, but I must accept that it was my duty."
+ wap_funeral_sacrifice.101.c:0 "Oh please forgive me mama!"
+ 
+ wap_funeral_sacrifice.201.t:0 "Sharing The Load"
+ wap_funeral_sacrifice.201.desc:0 "I was walking in the gardens when I saw my dear mother [ruler_mum.GetTitledFirstName] sobbing quietly amongst the beautiful flowers.\n\nIt has been over a month since we lost papa, and after the added stress of the funeral sacrifice, I can see events have taken their toll. After all, our faith requires the sacrifice of a royal wife, but how could I let this fate befall my mama? As sit down besides her I place my hand on her shoulder."
+ wap_funeral_sacrifice.201.a:0 ""I'm so sorry mama, remember I am always here for you.""
+ wap_funeral_sacrifice.201.b:0 ""I don't know what I would do without you mama.""
+ wap_funeral_sacrifice.201.c:0 ""Stop crying mother, things could be worse.""
+ wap_funeral_sacrifice.201.d:0 ""Never forget, you have me to thank for you life.""
+ wap_funeral_sacrifice.201.e:0 ""Now papa is gone, we can finally be together."" #sorry not sorry
+ wap_funeral_sacrifice.201.e.tt_success:0 "[ruler_mum.GetShortUINameNoTooltip] is enthralled"
+ wap_funeral_sacrifice.201.e.tt_fail:0 "[ruler_mum.GetShortUINameNoTooltip] is repulsed"
+ 
+ wap_funeral_sacrifice.002.t:0 "Sacrificial Burial Rites"
+ wap_funeral_sacrifice.002.desc:0 "$wap_funeral_sacrifice.001.desc$"
+ wap_funeral_sacrifice.002.a:0 "The sacrifice should be of royal blood, I choose [royal_spouse.GetTitledFirstName]."
+ wap_funeral_sacrifice.002.aa:0 "The [ROOT.Char.GetFaith.PantheonTerm] be damned, I cannot lose my dear mumma!"
+ wap_funeral_sacrifice.002.b:0 "[sacrificial_partner_0.GetTitledFirstName] and [sacrificial_partner_1.GetTitledFirstName] must fulfill their duties."
+ wap_funeral_sacrifice.002.c:0 "A great [ROOT.Char.GetTitleAsNameNoTooltip] deserves a great sacrifice."
+ wap_funeral_sacrifice.002.d:0 "On second thought, I cannot abide this."
+ 
+ wap_funeral_sacrifice.003.t:0 "Sacrificial Burial Rites"
+ wap_funeral_sacrifice.003.desc:0 "$wap_funeral_sacrifice.001.desc$"
+ wap_funeral_sacrifice.003.a:0 "The sacrifice should be of royal blood, I choose [royal_spouse.GetTitledFirstName]."
+ wap_funeral_sacrifice.003.aa:0 "The [ROOT.Char.GetFaith.PantheonTerm] be damned, I cannot lose my dear mumma!"
+ wap_funeral_sacrifice.003.b:0 "The royal concubines shall serve in this world and the next."
+ wap_funeral_sacrifice.003.c:0 "A great [ROOT.Char.GetTitleAsNameNoTooltip] deserves a great sacrifice."
+ wap_funeral_sacrifice.003.d:0 "On second thought, I cannot abide this."
+
+ ##Griot events
+ wap_griot.0001.t:0 "Welcome The New Royal Griot"
+ wap_griot.0001.desc:0 "The position of Royal Griot is one of high esteem within our culture. Whilst the Griot themselves are not usually from a noble family, the role they play in the court is pivotal. As the teller of history and keeper of stories, an exceptional griot brings prestige to any dynasty."
+ wap_griot.0001.a:0 "Welcome wise [new_griot.GetTitledFirstName]"
+ wap_griot.0001.b:0 "Prostrate before your [root.GetTitleTierName]!"
+ wap_griot.0002.t:0 "Royal Griot Fired!"
+ wap_griot.0002.desc:0 "After one too many mistakes, the time has come to fire your woeful Griot [new_griot.GetTitledFirstName]. A Griot's job is to hold the history of our culture, of the kingdom, [new_griot.GetTitledFirstName] struggled to hold my attention. I must now search for a replacement, one better suited to the task."
+ wap_griot.0002.a:0 "Thank you for your service."
+ wap_griot.0002.b:0 "Leave before my $knight_culture_player_plural_no_tooltip_lowercase$ throw you out!"
+ 
+ ##WEST AFRICAN DECISIONS ########
+ #Divination
+ wap_divination_decision.0011.t:0 "Guidance of the [ROOT.Char.GetFaith.PantheonTerm]"
+ wap_divination_decision.0011.desc:0 "Divination is an ancient practice of [ROOT.Char.GetCulture.GetNameNoTooltip] culture, it is how we access the power of the [ROOT.Char.GetFaith.PantheonTerm]. \n\nWe can ask the [ROOT.Char.GetFaith.PantheonTerm] for a blessing, for their guidance, or even to intervene against our enemies. \n\nI have had a lot on my mind lately, at times like this it is wise to consult the [ROOT.Char.GetFaith.PantheonTerm] - the arbiters of [ROOT.Char.GetFaith.HighGodName] on earth."
+ wap_divination_decision.0011.a:0 "The [ROOT.Char.GetFaith.PantheonTerm] shall interrogate my lot."
+ wap_divination_decision.0011.b:0 "On second thought, perhaps another time."
+ wap_divination_decision.0011.c:0 "Divination? What was I thinking? The [ROOT.Char.GetFaith.PantheonTerm] have no power over me."
+ 
+ wap_divination_decision.0001.t:0 "Divination: Offering"
+ wap_divination_decision.0001.desc:0 "I enter the dimly lit quarters of [ROOT.Char.Custom('MyPriestTitle')] [realm_priest.GetFirstName] to seek [realm_priest.GetHerHis] guidance as a diviner. \n\nI am immediately overwhelmed by the multitude of aromas swirling around me. Some of the offerings of previous patrons of the diviner lay at a shrine, there is blood, I don't think human...and there is a haze in the air but of what I am not sure. \n\n[realm_priest.GetFirstName] beckons me to sit with him on a mat on the floor, and as I take my place opposite him I can't help but notice the forest of idols that now surround me, their eyes watching me from every angle. Perhaps the [ROOT.Char.GetFaith.PantheonTerm] are here already?\n\nBefore we can proceed to the ritual the diviner must be paid, naturally. \n\n"Now we must decide on what kind of offering we shall leave for [ROOT.Char.GetFaith.PantheonTerm]?""
+ wap_divination_decision.0001.a:0 "The regular fee for your services seems fair."
+ wap_divination_decision.0001.b:0 "A larger sum, for your assistance [realm_priest.GetFirstName]"
+ wap_divination_decision.0001.c:0 "A lesser sum seems fair, I am your [ROOT.Char.GetTitleAsNameNoTooltip] after all."
+ wap_divination_decision.0001.d:0 "Offering? My presence should be enough for [ROOT.Char.GetFaith.PantheonTerm]."
+ wap_divination_decision.0001.e:0 "On second thought, I will seek guidance elsewhere."
+
+ wap_divination_decision.0002.t:0 "Divination: Storms of Life"
+ wap_divination_decision.0002.desc:0 "Now that the practical matter of payment has been resolved, [realm_priest.GetFirstName] is ready to begin the ritual, \n\n"What has brought you here today my most excellent [ROOT.Char.GetTitleAsNameNoTooltip]?"" 
+ wap_divination_decision.0002.family:0 "I seek guidance in family matters."
+ wap_divination_decision.0002.war:0 "I see guidance from [ROOT.Char.GetFaith.WarGodName] in matters of war."
+ wap_divination_decision.0002.intrigue:0 "Guidance from [ROOT.Char.GetFaith.TricksterGodName] to deal with my enemies."
+ wap_divination_decision.0002.money:0 "Money! Wealth! Fame! I want it all."
+ wap_divination_decision.0002.purpose:0 "I just need to understand my purpose in this life." 
+ wap_divination_decision.0002.oracle_speaks:0 "The spirit of divination has spoken!"
+
+ wap_divination_decision.0003.t:0 "Divination: Guidance"
+ wap_divination_decision.0003.desc:0 ""\n\nIn the name of [ROOT.Char.GetFaith.KnowledgeGodName] I seek wisdom on behalf of your child [ROOT.Char.GetFirstNameNoTooltip]. I call upon the ancestors to protect me as I entreat the powerful, the benevolent [ROOT.Char.GetFaith.PantheonTerm] today..." \n\n[realm_priest.GetFirstNameNoTooltip] begins to recite sacred incantations known only to our most learned diviners.\n\nAs he spreads the sacral elements across the tray [realm_priest.GetSheHe|U] studies, brow furrowed, plunged in thought. \n\nAs [realm_priest.GetSheHe|U] now describe to me what [ROOT.Char.GetFaith.KnowledgeGodName] has revealed to them, I contemplate what I must now do."
+ wap_divination_decision.0003.a:0 "The [ROOT.Char.GetFaith.PantheonTerm] will forever by my guide"
+ wap_divination_decision.0003.b:0 "Thank you wise one."
+ wap_divination_decision.0003.c:0 "I'm not sure what I expected really, what a waste of time."
+ 
+######## Lower Niger decisions ########
+
+ ######## Form Lower Niger Empire ########
+ wap_create_lower_niger_empire.0001.t:0 "Empire of The Sacred River"
+ wap_create_lower_niger_empire.0001.desc:0 "Since time immemorial our people have derived nourishment from the sacred river Niger, a source of not only fertility for the land, but wealth, and power... and now it is all mine. Many kingdoms have risen and fallen along her banks and in the jungles and forests that flank her. Yet no man or woman has ever conceived of an empire that encompasses both east and west, north and south of this fertile land... until now!\n\nWith the blessing of the mighty [ROOT.Char.GetFaith.HighGodName] I have been anointed as the great architect of a new empire...let all griots know my name... here stand I, [ROOT.Char.GetTitledFirstNameNoTooltip], the indomitable author of a new history of this land. \n\nAn Empire of The Sacred River, built upon the blood and broken crowns of lesser men."
+ wap_create_lower_niger_empire.0001.a:0 "May [ROOT.Char.GetFaith.WarGodName] have mercy on them, for I have none."
+ 
+ #Found a personal Orisa cult
+ wap_orisha.200.t:0 "Personal Òrìsà cult"
+ wap_orisha.200.desc:0 "Òrìṣà are spirits sent by Olódùmarè for the guidance of all creation, they show us how to live and be successful on earth. By devoting myself to one of them I can only hope to gain their great power and blessings.\n\n[ROOT.Char.GetFaith.GetNameNoTooltip] focuses on the veneration of..."
+ # òrìṣà
+ wap_orisha.200.obatala:0 "Ọbàtálá, the sky-father and creator of human bodies."
+ wap_orisha.200.yemoja:0 "Yemọja, the òrìṣà of the waters."
+ wap_orisha.200.orunmila:0 "Ọrúnmìlà, the òrìṣà of Ifá, and the source of wisdom."
+ wap_orisha.200.ogun:0 "Ògún, the òrìṣà of war, iron, and patron deity of the royal houses."
+ wap_orisha.200.olookun:0 "Olóòkun, the òrìṣà of the ocean, wealth, and prosperity."
+ wap_orisha.200.next_page:0 "Next page."
+ wap_orisha.300.osun:0 "Ọṣun, the òrìṣà of femininity, fertility, beauty, and love."
+ wap_orisha.300.esu:0 "Èṣù, the òrìṣà of chaos, trickery, and deceit."
+ wap_orisha.300.osoosi:0 "Òsóòsi, the òrìṣà of the hunt, the forest, and of warriors."
+ wap_orisha.300.sango:0 "Ṣàngó, the òrìṣà of judgement, thunder, and lightning."
+ wap_orisha.300.previous_page:0 "Previous page."
+
+ #Empower the Oyo Mesi  
+ wap_empower_the_oyo_mesi.0001.t:0 "A Question of Succession"
+ wap_empower_the_oyo_mesi.0001.desc:0 "The question of who shall succeed me after my death has plagued me ceaselessly of late, the threat of splitting the realm ever on my mind.\n\nOf course, while it is usually difficult to persuade the realm to accept a new order to the succession, though it can be #EMP much#! easier when my vassals are made to think they too can have their say..."
+ wap_empower_the_oyo_mesi.0001.a:0 "I must respect the council of elders, the wise Oloyé and Iyaloyé of my court."
+ wap_empower_the_oyo_mesi.0001.d:0 "Eh, on second thoughts, partition is fairer."
+ wap_empower_the_oyo_mesi.0001.tt_opinion_west_african_council_elective:0 "Yorùbá and Bini vassals"
+ 
+ #Empower the Uzama Nihiron 
+ wap_empower_the_uzama_nihiron.0001.t:0 "A Question of Succession"
+ wap_empower_the_uzama_nihiron.0001.desc:0 "The question of who shall succeed me after my death has plagued me ceaselessly of late, the threat of splitting the realm ever on my mind.\n\nOf course, while it is usually difficult to persuade the realm to accept a new order to the succession, though it can be #EMP much#! easier when my vassals are made to think they too can have their say..."
+ wap_empower_the_uzama_nihiron.0001.a:0 "I must respect the council of elders, the wise Enogie of my court. It is by their will, and the grace of [ROOT.Char.GetFaith.HighGodName] that I am seated as ruler of [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip]."
+ wap_empower_the_uzama_nihiron.0001.d:0 "Eh, on second thoughts, partition is fairer."
+ wap_empower_the_uzama_nihiron.0001.tt_opinion_west_african_council_elective:0 "Yorùbá and Bini vassals"
+ 
+ #Unite thrones of Oduduwa
+ wap_unite_the_thrones_of_oduduwa.0001.t:0 "The Thrones of Odùduwà United"
+ wap_unite_the_thrones_of_oduduwa.0001.desc:0 "The old kingdoms of the Yorùbá and Bini stand united under one crown. I have brought us together once as one great dynasty of Odùduwà. It is the dawn of a new era and I am certain [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip] has a prosperous future ahead. This is just the beginning!"
+ wap_unite_the_thrones_of_oduduwa.0001.a:0 "Glory to [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip]!"
+ wap_unite_the_thrones_of_oduduwa.0002.desc:0 "Dawn of a new era, [oduduwa_uniter.Custom2('MyCharacterIntroduction', ROOT.Char)] has gathered the thrones of Ilẹ̀ Yorùbá and Great Benin under one crown. Will this union stand the test of time, or crumble back into warring states once more? Only [ROOT.Char.GetFaith.FateGodName] knows."
+
+ ######## Igbo decisions ########
+ 
+ #Odianala - ritual purification
+ wap_odinala.0001.t:0 "Ikpu Alu"
+ wap_odinala.0001.t.desc:0 "\n\nI am escorted deep down into the forest, to an íhú Alà or shrine of Alà, the earth goddess. Because I broken the moral code of Omenala given to us by the earth goddess my actions have in turn made the earth impure, so I must purify myself as well as the land. \n\nThe [ROOT.Char.Custom('DefaultPriestTitle')] begins preparing the ritual, and offers me a libation of palm wine... but with a strange after taste. I am tied down to a wooden altar, and suddenly I feel as if I have a made a horrible mistake. Kola nuts are broken in my name, as the [ROOT.Char.Custom('DefaultPriestTitle')] begins their incantations over me, I can't move and closing my eyes becomes the easiest thing to do. In the background I can hear my family members pray to [ROOT.Char.GetFaith.HighGodName], the Ikpu Alu has begun. \n\nWith my eyes closed I begin to pray. In what seems like only a few moments later I hear a strange noise, and suddenly a slimy sensation upon my chest... I close my eyes to see a large python or éké looking back at me. I listen to the dibia and close my eyes, hoping it is just the effects of the palm wine. \n\nThe éké are considered a sacred agent of Alà and a harbinger of good fortune, if it does not kill me I will surely have the blessing of Alà! The dibia continues for quite a while with the purification rites and I... pass out. \n\nI stir later to hear the dibia asks me "[ROOT.Char.GetTitledFirstNameNoTooltip] are you okay?" I think I said something like "Is it finished? Am I cleansed now?" The [ROOT.Char.Custom('DefaultPriestTitle')] nods and helps me from the altar. I am an abomination no longer."
+ wap_odinala.0001.a:0 "I am restored! Alà's mercy is truly great."
+ 
+ ######## Hausa decisions ########
+ 
+ #Unite thrones of Hausa
+ wap_unite_the_hausa_thrones.0001.t:0 "The Thrones of Hausa Bakwai and Banza Bakwai United"
+ wap_unite_the_hausa_thrones.0001.desc:0 "The old kingdoms of Bàyā̀jiddà's children, both Hausa Bakwai and Banza Bakwai alike stand united under one crown. I have brought us together once again under one crown like Anatolia of ancient times. It is the dawn of a new era and I am certain [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip] has a prosperous future ahead. This is just the beginning!"
+ wap_unite_the_hausa_thrones.0001.a:0 "Glory to [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip]!"
+
+ wap_unite_the_hausa_thrones.0002.desc:0 "Dawn of a new era, [hausa_uniter.Custom2('MyCharacterIntroduction', ROOT.Char)] has gathered the Hausa Bakwai and Banza Bakwai thrones under one crown. Will this union stand the test of time, or crumble back into warring states once more? Only [ROOT.Char.GetFaith.FateGodName] knows."
+ 
+ ######## NUBIAN DECISIONS ########
+ 
+ ######## Form Horn Empire ########
+ wap_create_horn_empire.0001.t:0 "The Golden Horn of Allāh"
+ wap_create_horn_empire.0001.desc:0 "The Horn is home to some of the oldest and most beautiful mosques in all of Africa. Whilst the people of the Horn represent some of the first converts to the faith of the Prophet, having encountered Islam from 613 AD, during the Hirja. Whilst al-Habasha may have welcomed the prophets followers then, relations between Christians and Muslims have grown more fractious, due to our dominance of trade and the slow deacy of Aksumite hegemony in the region. Whilst al-Habasha to our west now hide in their highland homes, we the followers of the Prophet have united the Horn under the holy banner of Allāh, and of the Golden Horn Sulṭānate!"
+ wap_create_horn_empire.0001.a:0 "May Allāh have mercy on them, for I will have none."
+ wap_create_horn_empire.0002.desc.liege:0 "After a long and bloody campaign [scoped_ruler.GetTitledFirstName] has decided to crown [scoped_ruler.GetHerselfHimself] Grand Sulṭān of all the Horn! Claiming that [scoped_ruler.GetSheHe] no longer holds any allegiance to me and now stands as my equal!"
+ wap_create_horn_empire.0002.desc.horns:0 "The famed warlord [scoped_ruler.GetTitledFirstName] has carved [scoped_ruler.GetHerHis] path through the Horn from the ports of Xamar to Zeila. In the aftermath of this campaign a new Empire has been born in the region, with [scoped_ruler.GetTitledFirstName] proclaiming [scoped_ruler.GetHerselfHimself] Grand Sulṭān of the Golden Horn Sulṭānate."
+ wap_create_horn_empire.0002.desc.others:0 "The wealthy ports of Xamar and Zeila have now fallen under the rule of [scoped_ruler.GetTitledFirstName], who has formed a new Empire in the Horn."
+ wap_create_horn_empire.0002.a:0 "How dare [scoped_ruler.GetSheHe]!"
+ wap_create_horn_empire.0002.b:0 "I see..."
+ # The Child of Amun
+ wap_become_child_of_amun.0001.t:0 "The Child of Amun"
+ wap_become_child_of_amun.0001.desc:0 "Ever since the fall of the great Empire of Kush, Nubia has suffered under the yoke of Christian rulers. When the Meroitic dynasties succumbed the last remnants of the old Kushitic order retreated south into the dunes of the eastern and west deserts, but now, at long last, Kushitic rule over Nubia has been restored.\n\nThis miraculous recovery can only be attributed to my brilliant leadership, and many amongst the clergy have decreed me to be declared the annointed Child of Amun — the living child of Amun himself. After embracing this role, I am now revered as a divine being by followers of the Kushitic faith everywhere."
+ wap_become_child_of_amun.0001.a:0 "I shall bring benefit to all."
+ wap_become_child_of_amun.0003.desc:0 "Ever since the fall of the great Empire of Kush, Nubia has suffered under the yoke of Christian rulers. The last remnants of the old Kushitic order retreated south into the dunes of eastern and west deserts, but now at long last Kushitic rule over Nubia has been restored!\n\nThis miraculous recovery can only be attributed to [scoped_ruler.GetFirstNamePossessive] brilliant leadership, and many amongst the clergy have decreed [scoped_ruler.GetHerHim] to be the annointed Child of Amun — the living child of Amun himself. After embracing this role, [scoped_ruler.GetTitledFirstNameNoTooltip] is now revered as a divine being by followers of the Kushitic faith everywhere."
+ wap_become_child_of_amun.0003.desc.christians:0 "Once reduced to exiled desert-dwellers, the satanic priests of the accursed Amun have risen from their cinders and claimed the throne of Nubia!\n\nFilled with deranged pride, their [scoped_ruler.GetTitleTierName] has now decided to proclaim [scoped_ruler.GetHerselfHimself] a living god."
+ wap_become_child_of_amun.0003.desc.others:0 "Ever since the fall of the great Empire of Kush, the followers of the Kushitic faith have been on the run. Their exile has come to an end in recent times as the [scoped_ruler.GetFaith.GetAdjective] faithful have managed to restore their ancient Empire.\n\nBeing in no small part responsible for this unexpected turn of events, their [scoped_ruler.GetTitleTierName] has decided to proclaim [scoped_ruler.GetHerselfHimself] annointed Child of Amun, a living god."
+ wap_become_child_of_amun.0003.a:0 "May [scoped_ruler.GetSheHe] bring divine balance back to Nubia!"
+ wap_become_child_of_amun.0003.b:0 "Madness and devilry!"
+ wap_become_child_of_amun.0003.c:0 "I see..."
+
+ # Kushite Empire Reborn
+ wap_kushite_restoration.0001.t:0 "The Old Enemy"
+ wap_kushite_restoration.0001.desc:0 "For too long we have tolerated the barbarous Empire of the Crescent in the North draping themselves with undeserved title and prestige as would-be rulers of all Egypt.\n\nWith Nubia firmly under the control of the faith of our ancestors once again, it is time to teach these imposters a lesson and restore the borders of the ancient Kushitic Empire."
+ wap_kushite_restoration.0001.a:0 "[ROOT.Char.GetFaith.WarGodName] will smite them!"
+ wap_kushite_restoration.0002.t:0 "Kushitic Invasion"
+ wap_kushite_restoration.0002.desc:1 "[nubian_emperor.GetTitledFirstName] has publicly denounced me as a false [egypt_ruler.GetTitleTierName] and stands ready to unleash the terrible might of [nubian_emperor.GetPrimaryTitle.GetName] against my people.\n\nWhat began as persecution of our brothers and sisters of faith within the borders of [nubian_emperor.GetPrimaryTitle.GetName] now threatens to envelop the whole of Egypt! \n\nThese bloodthirsty pagans will not be satisfied until they have driven all true believers from what they claim is the rightful land of their ancient Gods."
+ wap_kushite_restoration.0002.a:0 "There is still fight left in us!"
+ wap_kushite_restoration.0003.t:0 "The Kushitic Empire Restored"
+ wap_kushite_restoration.0003.desc:0 "It is done. [ROOT.Char.GetFaith.HighGodName] and [ROOT.Char.GetFaith.WarGodName] have delivered us victory. Our great campaign has broken the hold of the foreign god and his servants upon the holy lands. [egypt_ruler.GetTitledFirstName] has been utterly humiliated and stripped of the title of ruler of all Egypt. This honor, is rightfully reserved for the Sons and Daughters of Amun alone. \n\nIt is time now to restore the temples and priesthoods of our holy places, and to hold a great festival in celebration of our triumph!"
+ wap_kushite_restoration.0003.a:0 "And good riddance!"
+ wap_kushite_restoration.0004.t:0 "The Kushitic Empire Restored"
+ wap_kushite_restoration.0004.desc:0 "The resurgent Kushitic armies have crippled the [egypt_ruler.GetTitleTierName] beyond recognition. After this devastating defeat, my word holds little sway over my former vassals. This is the end of Muslim Egypt."
+ wap_kushite_restoration.0004.a:0 "How could this happen?"
+ wap_kushite_restoration.0005.t:0 "Egypt Strikes Back"
+ wap_kushite_restoration.0005.desc:0 "Beyond all expectations, [egypt_ruler.GetTitledFirstName] was able to mount an effective defense against my armies! With [egypt_ruler.GetHerHis] victory, [egypt_ruler.GetSheHe] has given new legitimacy to [egypt_ruler.GetHerHis] shambling kingdom, and has tainted my name beyond repair."
+ wap_kushite_restoration.0005.a:0 "We bring shame to our gods!"
+ wap_kushite_restoration.0006.t:0 "Egypt Strikes Back!"
+ wap_kushite_restoration.0006.desc:1 "The Nubians pride was their undoing. Despite all [nubian_emperor.GetHerHis] boasting, [nubian_emperor.GetTitledFirstNamePossessive] famed bowmen proved unable to stand against my faithful $knight_culture_player_plural_no_tooltip_lowercase$. Thanks to my unyielding defense, I have given new dignity to my title."
+ wap_kushite_restoration.0006.a:0 "And don't ever return!"
+ 
+ # Nubianization
+ wap_promote_old_nubian_decisions.0001.t:0 "A Nubian Golden Age"
+ wap_promote_old_nubian_decisions.0001.desc:0 "A new age of prosperity is upon us. [scoped_ruler.GetPrimaryTitle.GetNameNoTierNoTooltip] has emerged from the dark ages as a shining beacon of art and philosophy.\n\nOur cities are growing into teeming centers of commerce, raising wondrous new cathedrals to rival the ancient monuments of the Empire of Kush, drawing painters, bards and philosophers of all sorts. Under the enlightened patronage of my dynasty, the [scoped_ruler.GetCulture.GetName] people will become the envy of all Africa."
+ wap_promote_old_nubian_decisions.0001.a:0 "Let our great work continue!"
+ wap_promote_old_nubian_decisions.0001.b:0 "Now is the time to discuss a new Nubian Orthodox Church!"
+ wap_promote_old_nubian_decisions.0002.t:0 "A Nubian Golden Age"
+ wap_promote_old_nubian_decisions.0002.desc.nubian:0 "[scoped_ruler.GetPrimaryTitle.GetNameNoTierNoTooltip] is experiencing a period of great prosperity and growth, for the benefit of all our people. \n\nOur cities are growing into teeming centers of commerce, raising wondrous new cathedrals to rival the ancient monuments of the Roman Empire, drawing painters, bards, and philosophers of all sorts. Under the enlightened patronage of [scoped_ruler.GetTitledFirstName] and the [scoped_ruler.GetDynasty.GetBaseName] dynasty, we will become the envy of all Africa."
+ wap_promote_old_nubian_decisions.0002.desc.egyptian:0 "It appears that [scoped_ruler.GetPrimaryTitle.GetNameNoTierNoTooltip] is experiencing a period of great prosperity and growth. \n\nPoets, philosophers, architects... Many people of knowledge are gathering at [scoped_ruler.GetTitledFirstNamePossessive] court, yet all they have managed to achieve up to this point is a seemingly endless parade of brutish, barbarous monuments."
+ wap_promote_old_nubian_decisions.0002.desc.fallback:0 "[scoped_ruler.GetPrimaryTitle.GetNameNoTierNoTooltip] is experiencing a period of great prosperity and growth, for the benefit of all [ROOT.Char.GetCulture.GetNameNoTooltip] people. \n\nNew cities are growing into teeming centers of commerce, raising wondrous new cathedrals to rival the ancient monuments of the Empire of Kush, drawing painters, bards and philosophers of all sorts. Under the enlightened patronage of [scoped_ruler.GetTitledFirstName] and the [scoped_ruler.GetDynasty.GetBaseName] dynasty, this land will become the envy of all Africa."
+ wap_promote_old_nubian_decisions.0002.a:0 "What wonderful times we live in!"
+ wap_promote_old_nubian_decisions.0002.b:0 "Bah! This will never last."
+ wap_promote_old_nubian_decisions.0002.c:0 "Good for them, I suppose..."
+ wap_promote_old_nubian_decisions.0003.t:0 "A Nubian Orthodox Church?"
+ wap_promote_old_nubian_decisions.0003.desc:0 "In this time of renewed vigor in indigenous culture and traditions, it seems appropriate to discuss the possibility of establishing a Nubian Orthodox church. Since the conversion our forefathers to Christ in the 6th Century, Nubia has looked to the Coptic Patriarch in Alexandria as our spiritual father, but Muslim occupation of Egypt since the 7th century has greatly diminished the Alexandrian Patriarch's power and influence. \n\nI shall instruct my [realm_priest.GetCouncilTitle] to call a synod of all Ēpiskōpos' in [ROOT.Char.GetCapitalLocation.GetTitle.GetNameNoTier] to debate the matter."
+ wap_promote_old_nubian_decisions.0003.a:0 "Exciting times!"
+ wap_promote_old_nubian_decisions.0003.b:0 "On second thought, this shall not proceed."
+ wap_promote_old_nubian_decisions.0004.t:0 "Synod of [ROOT.Char.GetCapitalLocation.GetTitle.GetNameNoTier]"
+ wap_promote_old_nubian_decisions.0004.desc:0 "All of the realm's Ēpiskōpos have now convened in the capital for a Synod to discuss my desire to establish an independant Nubian church. \n\nAfter a spirited debate lasting into the early hours of the morning a majority consensus was finally reached. A new national church shall be born centred in [ROOT.Char.GetCapitalLocation.GetTitle.GetNameNoTier], all the remains is to elect a new head of the Church from amongst the esteemed Abbas of the realm."
+ wap_promote_old_nubian_decisions.0004.a:0 "God bless the Nubian Orthodox Church!"
+ wap_promote_old_nubian_decisions.0005.t:0 "The Head Of The Nubian Church"
+ wap_promote_old_nubian_decisions.0005.desc:0 "With consent of the Synod of [ROOT.Char.GetCapitalLocation.GetTitle.GetNameNoTier] [new_priest.GetFirstName] is declared the first head of the Nubian Orthodox Church!"
+ wap_promote_old_nubian_decisions.0005.a:0 "God bless and prosper his works!"
+ 
+ # Revive Kingdom of Nobadia
+ wap_form_nobadia_kingdom_decision.0001.t:0 "A Greater Nobadia"
+ wap_form_nobadia_kingdom_decision.0001.desc:0 "With control of the rich lands of Nobadia, I have accumulated enough power to form a new Kingdom, one that is sure to top the greatness of our southern Makurian neighbors.\n\nThere is still work to be done, yet I have no doubt historians will enshrine this moment as one of the great steps in the ascendancy of Nubia, under the protection of [scoped_ruler.GetFaith.HighGodName]."
+ wap_form_nobadia_kingdom_decision.0001.a:0 "Let our enemies quake!"
+ wap_form_nobadia_kingdom_decision.0002.desc.liege:0 "After a series of victories in Lower Nubia, [scoped_ruler.GetTitledFirstName] has decided to crown [scoped_ruler.GetHerselfHimself] [scoped_ruler.GetTitleTierName] of Nobadia, claiming that [scoped_ruler.GetSheHe] no longer holds any allegiance to me and will pursue the fight against Nubia's enemies on [scoped_ruler.GetHerHis] own terms."
+ wap_form_nobadia_kingdom_decision.0002.desc.nubians:0 "The savage warlord [scoped_ruler.GetTitledFirstName] has carved [scoped_ruler.GetHerHis] path through Lower Nubia and established a new Kingdom in the region.\n\nAs if this was not enough of an insult, in a despicable show of hubris, [scoped_ruler.GetSheHe] has decided to claim for [scoped_ruler.GetHerselfHimself] the title of [scoped_ruler.GetTitleTierName] of Nobadia."
+ wap_form_nobadia_kingdom_decision.0002.desc.others:0 "The rich province of Nobadia has now fallen under the rule of [scoped_ruler.GetTitledFirstName], who has formed a new Kingdom in the region."
+ wap_form_nobadia_kingdom_decision.0002.a:0 "How dare [scoped_ruler.GetSheHe]!"
+ wap_form_nobadia_kingdom_decision.0002.b:0 "I see..."
+ 
+ # Create Kingdom of Alodia
+ #wap_form_alodia_kingdom_decision.0001.t:0 "An Independent Alwa"
+ #wap_form_alodia_kingdom_decision.0001.desc:0 "With my control of the rich lands of Alwa I have accumulated enough power to form a new Kingdom, one that is sure to even surpass the greatness of our northern Makurian neighbors.\n\nThere is still work to be done, yet I have no doubt historians will enshrine this moment as one of the great steps in the expansion of Nubia for the followers of [scoped_ruler.GetFaith.HighGodName]."
+ #wap_form_alodia_kingdom_decision.0001.a:0 "Let our enemies quake!"
+ #wap_form_alodia_kingdom_decision.0002.desc.liege:0 "After a series of victories in Lower Nubia and the Kordofan mountains, [scoped_ruler.GetTitledFirstName] has decided to crown [scoped_ruler.GetHerselfHimself] [scoped_ruler.GetTitleTierName] of Alwa, claiming that [scoped_ruler.GetSheHe] no longer holds any allegiance to me and will pursue the fight against Nubia's enemies on [scoped_ruler.GetHerHis] own terms."
+ #wap_form_alodia_kingdom_decision.0002.desc.nubians:0 "The savage warlord [scoped_ruler.GetTitledFirstName] has carved [scoped_ruler.GetHerHis] path through Upper Nubia and established a new Kingdom in the region.\n\nAs if this was not enough of an insult, in a despicable show of hubris, [scoped_ruler.GetSheHe] has decided to claim for [scoped_ruler.GetHerselfHimself] the title of [scoped_ruler.GetTitleTierName] of Alwa."
+ #wap_form_alodia_kingdom_decision.0002.desc.others:0 "The rich province of Alwa has now fallen under the rule of [scoped_ruler.GetTitledFirstName], who has formed a new Kingdom in the region."
+ #wap_form_alodia_kingdom_decision.0002.a:0 "How dare [scoped_ruler.GetSheHe]!"
+ #wap_form_alodia_kingdom_decision.0002.b:0 "I see..."
+ #Choose a patron saint
+ wap_nubian_patron_archangel.0001.t:0 "Patron Archangel of Intercession"
+ wap_nubian_patron_archangel.0001.desc:0 "The archangels are fervently revered by Christians throughout Nubia as noble intercessors on behalf of the faithful. Their divine visages adorn the aspes of our churches and cathedrals, and it is them we entreat for heavenly protection. By devoting my prayers to one of these great ambassadors to God, I can only hope that they will act as my celestial emissary to Him, to assist me in my Christian journey, protect my life, those of family, and to prosper me."
+ # Angel/Divine figures
+ wap_nubian_patron_archangel.0001.michael:0 "Michael, Archistrategos, Supreme Commander of the Heavenly Hosts."
+ wap_nubian_patron_archangel.0001.raphael:0 "Raphael, healer and guardian of the faithful."
+ wap_nubian_patron_archangel.0001.uriel:0 "Uriel, patron of the arts and sciences."
+ wap_nubian_patron_archangel.0001.gabriel:0 "Gabriel, chief intercessor and messenger to God."
+ wap_nubian_patron_archangel.0001.mary:0 "No mere Angel! Mary, the great protector and divine Mother of all."
+ # Opt out
+ wap_nubian_patron_archangel.0001.optout:0 "I am not yet ready to decide."
+ 
+ #Retire to a monastery
+ wap_retire_to_a_monastery_decision.0001.t:0 "A Most Pious Potentate"
+ wap_retire_to_a_monastery_decision.0001.desc:0 "After months of prayer and studious examination of the Word I cannot shake this feeling that [ROOT.Char.GetFaith.HighGodName] has a higher purpose for me than the vein glories of kingship and courtly life.\n\nI am not the first [ROOT.Char.GetTitleAsNameNoTooltip] to consider this, and now after numerous letters with the Archimandrite, the head of the monastery in [ROOT.Char.GetCapitalLocation.GetTitle.GetNameNoTier], it is clear I can better serve the Lord by laying down my crown and scepter and picking up His book.\n\nTo this end I have called a meeting with my Bishop to inform them of my final decision. To my surprise they seem genuinely supportive, if a little confused... \n\n"Great [ROOT.Char.GetTitleAsNameNoTooltip] I have just received word from the Archimandrite in [ROOT.Char.GetCapitalLocation.GetTitle.GetNameNoTier], is it true what they say?""
+ wap_retire_to_a_monastery_decision.0001.a:0 "May Almighty [ROOT.Char.GetFaith.HighGodName] bless [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip] - my time as [ROOT.Char.GetTitleAsNameNoTooltip] is over!"
+ wap_retire_to_a_monastery_decision.0001.b:0 "Upon further reflection this is not [ROOT.Char.GetFaith.HighGodNamePossessive] will, nor mine."
+ #Invite a monk
+ wap_invite_monks_decision.0001.t:0 "A Virtuous Visitor"
+ wap_invite_monks_decision.0001.desc:0 "[ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip] is blessed to be home to many dozens of monasteries. Besides serving as holy places of worship and meditation, our monasteries also serve as the main hubs of learning and scholarship within the kingdom. These centers of learning overflow with some of the lands greatest minds, with multilingual scribes, notaries, and philosophers amongst them. A pious and wise ruler would do well to be guided by [ROOT.Char.GetFaith.HighGodName] in selection of one amongst them to serve as a most loyal and wise counsellor. \n\nTwo such candidates from a prestigious monastery have been presented at my request, now after considering their talents it is time for me to render my decision."
+ wap_invite_monks_decision.0001.a:0 "[wap_monk.GetTitledFirstName] shall join my court at once."
+ wap_invite_monks_decision.0001.aa:0 "[wap_monk_2.GetTitledFirstName] shall join my court at once."
+ wap_invite_monks_decision.0001.b:0 "Offering my patronage to their monastery would serve a greater good."
+ wap_invite_monks_decision.0001.c:0 "On second thought the counsel of the Almighty [ROOT.Char.GetFaith.HighGodName] is all I need."
+ wap_invite_monks_decision.0001.patronage_minor:0 "Modest progress in scholarship."
+ wap_invite_monks_decision.0001.patronage_major:0 "The realms monasteries flourish."
+ wap_invite_monks_decision.0001.patronage_bad:0 "Where has all my money gone?"
+ wap_invite_monks_decision.0001.b.tt:0 "If taken this option will be unavailable for 5 years."
+ 
+ #Unite Nubian thrones
+ wap_unite_the_nubian_thrones.0001.t:0 "The Nubian Thrones United"
+ wap_unite_the_nubian_thrones.0001.desc:0 "The old Nubian kingdoms of Makuria and Arwa stand united under one crown. I have brought us together once again under one ruler like Kush of ancient times. Whence we last joined these two powerful kingdoms under the Qore's and Kandake's of ancient Kush our enemies cowered at our feet. It is the dawn of a new era and I am certain [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip] has a prosperous future ahead. This is just the beginning!"
+ wap_unite_the_nubian_thrones.0001.a:0 "Glory to [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip]!"
+
+ wap_unite_the_nubian_thrones.0002.desc:0 "Dawn of a new era, [nubian_uniter.Custom2('MyCharacterIntroduction', ROOT.Char)] has gathered the thrones of Makuria and Alodia under one crown. Will this union stand the test of time, or crumble back into warring states once more? Only [ROOT.Char.GetFaith.FateGodName] knows."
+ 
+ #Revive Kushitic paganism
+ wap_revive_kushitic_paganism.0001.t:0 "The Old Ways"
+ wap_revive_kushitic_paganism.0001.desc:0 "My predecessors embraced [old_faith.GetNameNoTooltip] in a misguided attempt at dragging [scoped_ruler.GetPrimaryTitle.GetNameNoTierNoTooltip] into the modern era, but it has only brought us rebellion, penury, and strife.\n\nWith the immense temporal and ecclesiastic sway I now hold over my realm, I shall right this wrong and return us to the true faith of $kushitism_pagan$.\n\nYet, this is a watershed moment, and though a return to the Old Ways of our ancestors is sorely needed, perhaps their exact interpretation could be altered a little?"
+ wap_revive_kushitic_paganism.0001.a:0 "We return to the Old Ways, unsullied."
+ wap_revive_kushitic_paganism.0001.b:0 "Perhaps we can keep a few of the new teachings..."
+ wap_revive_kushitic_paganism.0001.c:0 "Skulls for [ROOT.Char.GetFaith.WarGodName]!"
+ wap_revive_kushitic_paganism.0001.d:0 "Our people must now embrace me as the child of a God!"
+ 
+ wap_revive_kushitic_paganism.0002.t:0 "The [scoped_ruler.GetFaith.GetAdherentNameNoTooltip] Revival"
+ wap_revive_kushitic_paganism.0002.desc.vassals:0 "After amassing near limitless strength within the realm,"
+ wap_revive_kushitic_paganism.0002.desc.outsiders:0 "After amassing near limitless strength within [scoped_ruler.GetPrimaryTitle.GetNameNoTierNoTooltip],"
+ wap_revive_kushitic_paganism.0002.desc.intro:0 "[scoped_ruler.GetTitledFirstName] has shown [scoped_ruler.GetHerHim]self to be an apostate!\n\nIn a public act of defiance, [scoped_ruler.GetSheHe] has renounced [old_faith.HighGodName], thrown out high-ranking [old_faith.GetAdherentNameNoTooltip] [old_faith.PriestNeuterPlural], and stripped [old_faith.GetNameNoTooltip] of its position as the state faith. Even now, many rural [scoped_ruler.GetCulture.GetCollectiveNounNoTooltip] flock to join [scoped_ruler.GetHerHim].\n\n"
+ wap_revive_kushitic_paganism.0002.desc.conversion_vanilla:0 "Although politically dormant for some time, $kushitism_pagan$ continued to have many followers in the countryside, and [scoped_ruler.GetTitledFirstNameNoTooltip] has had little trouble reestablishing the Old Ways."
+ wap_revive_kushitic_paganism.0002.desc.conversion_syncretic:0 "In spite of this, the new [scoped_ruler.GetFaith.GetAdherentNameNoTooltip] faith seems to retain many distinct features of [old_faith.GetNameNoTooltip], visibly alloying the Old Ways with the New."
+ wap_revive_kushitic_paganism.0002.desc.conversion_bloodthirsty:0 "Worse still, [scoped_ruler.GetTitledFirstNameNoTooltip] claims that the angry gods will only forgive the [scoped_ruler.GetCulture.GetNameNoTooltip] people's weakness in converting if offered frequent human sacrifice!"
+ wap_revive_kushitic_paganism.0002.desc_conversion_blood_of_amun:0 "Regardless of the changes that [scoped_ruler.GetCulture.GetNameNoTooltip] people and their faith have been through in the last few centuries, this resurgence of the Old Ways means our rulers must once again be considered children of the Gods. As Gods we must honor our dead in the glorious manner of our ancestors!"
+ wap_revive_kushitic_paganism.0002.a:0 "At last! Glory to [ROOT.Char.GetFaith.HighGodName]!"
+ wap_revive_kushitic_paganism.0002.b:0 "Perhaps the wind blows towards [scoped_ruler.GetFaith.HighGodName]..."
+ wap_revive_kushitic_paganism.0002.c:0 "What vile paganism is this!?"
+ wap_revive_kushitic_paganism.0002.d:0 "Neither my business nor my problem."

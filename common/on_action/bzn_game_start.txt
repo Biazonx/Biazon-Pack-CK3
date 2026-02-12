@@ -1,8 +1,408 @@
 on_game_start = {
+	on_actions = {
+		bzn_setup_on_actions
+		on_game_start_BAP
+	}
+}
+
+bzn_setup_on_actions = {
 	effect = {
 		every_living_character = { limit = { culture = culture:frieza } add_trait = frieza_race}
 		every_living_character = { limit = { culture = culture:majin } add_trait = majin_race}
 		every_living_character = { limit = { culture = culture:saiyan } add_trait = pure_saiyan}
 		every_living_character = { limit = { culture = culture:namekian } add_trait = namekian_race}
+	}
+}
+
+on_game_start_after_lobby = {
+	on_actions = {
+		bzn_setup_after_game_start_on_actions_after
+	}
+	events = {
+		EECintro.0001		
+	}
+}
+
+bzn_setup_after_game_start_on_actions_after = {
+	effect = {
+		random_independent_ruler  = { 
+			limit = {
+				has_government = tribal_government
+				is_landed = yes
+				any_held_title = {
+					tier >= tier_duchy
+					title_province = { geographical_region = world_siberia_2 }
+				}
+			}
+		add_trait = bzn_warlord
+		set_variable = conqueror
+		if = { # Starter package!
+			limit = {
+				is_ai = yes
+			}
+				add_treasury_or_gold = 500
+				add_prestige = 800
+			}
+		}		
+	}
+}
+
+on_game_start_BAP = {
+	on_actions = {
+		BAP_history_special_buildings_adding
+		BAP_Var
+	}
+}
+
+BAP_Var = {
+	effect = {
+		set_global_variable = {
+			name = bap_is_loaded
+			value = yes
+		}
+		if = { #Error Destroyer 4000
+			limit = {
+				exists = global_var:bap_is_loaded
+			}
+			# Do nothing
+		}
+	}
+}
+
+BAP_history_special_buildings_adding = {
+	effect = {
+	## k_nubia
+		if = {
+			limit = {
+				title:b_aswan = {
+					title_province = { has_special_building = no }
+				}
+			}
+			title:b_aswan.title_province = {
+				add_special_building = wap_temple_of_philae_01
+			}
+		}
+		if = {
+			limit = {
+				title:b_old_dongola = {
+					title_province = { has_special_building = no }
+				}
+			}
+			title:b_old_dongola.title_province = {
+				add_special_building = wap_fortress_of_dongola_01
+			}
+		}
+		if = {
+			limit = {
+				title:b_abu_hammad = {
+					title_province = { has_special_building = no }
+				}
+			}
+			title:b_abu_hammad.title_province = {
+				add_special_building = wap_gold_mines_01
+			}
+		}
+		if = {
+			limit = {
+				title:b_shunqayr = {
+					title_province = { has_special_building = no }
+				}
+			}
+			title:b_shunqayr.title_province = {
+				add_special_building_slot = wap_gold_mines_01
+			}
+		}
+		if = {
+			limit = {
+				title:b_al-ghazali = {
+					title_province = { has_special_building = no }
+				}
+			}
+			title:b_al-ghazali.title_province = {
+				add_special_building = wap_ghazali_monastery_01
+			}
+		}
+		if = {
+			limit = {
+				title:b_naga = {
+					title_province = { has_special_building = no }
+				}
+			}
+			title:b_naga.title_province = {
+				add_special_building = wap_temple_of_apedemak_01
+			}
+		}
+		if = {
+			limit = {
+				title:b_fazughli = {
+					title_province = { has_special_building = no }
+				}
+			}
+			title:b_fazughli.title_province = {
+				add_special_building = wap_gold_mines_01
+			}
+		}
+		if = {
+			limit = {
+				title:b_faras = {
+					title_province = { has_special_building = no }
+				}
+			}
+			title:b_faras.title_province = {
+				add_special_building = wap_cathedral_of_our_lady_01
+			}
+		}
+		if = {
+			limit = {
+				title:b_qasr_ibrim = {
+					title_province = { has_special_building = no }
+				}
+			}
+			title:b_qasr_ibrim.title_province = {
+				add_special_building = wap_st_marys_cathedral_01
+			}
+		}
+		if = {
+			limit = {
+				title:b_nuri = {
+					title_province = { has_special_building = no }
+				}
+			}
+			title:b_nuri.title_province = {
+				add_special_building = wap_pyramids_at_nuri_01
+			}
+		}
+		if = {
+			limit = {
+				title:b_kareima = {
+					title_province = { has_special_building = no }
+				}
+			}
+			title:b_kareima.title_province = {
+				add_special_building = wap_temple_of_amun_01
+			}
+		}
+		
+		### b_allaqi gold mine - now in vanilla
+		
+		if = {
+			limit = {
+				title:b_khawr_nubt = {
+					title_province = { has_special_building = no }
+				}
+			}
+			title:b_khawr_nubt.title_province = {
+				add_special_building_slot = wap_gold_mines_01
+			}
+		}
+		
+	#Ethiopia and the Horn
+	
+		if = {
+			limit = {
+				title:b_zaila = {
+					title_province = { has_special_building = no }
+				}
+			}
+			title:b_zaila.title_province = {
+				add_special_building_slot = wap_masjid_al_qiblatayn_01
+			}
+		}
+		
+		if = {
+			limit = {
+				title:b_marka = { #Should be in b_mogadishu but CK3 doesn't allow multiple special buildings
+					title_province = { has_special_building_slot = no }
+				}
+			}
+			title:b_marka.title_province = {
+				add_special_building_slot = wap_masjid_fakhr_ad_din_01
+			}
+		}
+		if = {
+			limit = {
+				title:b_aksum = {
+					title_province = { has_special_building = no }
+				}
+			}
+			title:b_aksum.title_province = {
+				add_special_building = wap_church_of_our_lady_mary_of_zion_01
+			}
+		}
+		if = {
+			limit = {
+				title:b_lalibela = {
+					title_province = {
+						has_special_building = no
+						has_special_building_slot = no
+					}
+				}
+			}
+			title:b_lalibela.title_province = {
+				add_special_building_slot = wap_rockhewn_church_01
+			}
+		}
+		title:b_shimazana.title_province = {
+			set_holding_type = church_holding
+		}
+		if = {
+			limit = {
+				title:b_shimazana = {
+					title_province = { has_special_building = no }
+				}
+			}
+			title:b_shimazana.title_province = {
+				add_special_building = wap_dabra_dammo_01
+			}
+		}
+			## k_akan
+		if = {
+			limit = {
+				title:b_aowin = {
+					title_province = { has_special_building = no }
+				}
+			}
+			title:b_aowin.title_province = {
+				add_special_building_slot = wap_gold_mines_01
+			}
+		}
+		if = {
+			limit = {
+				title:b_bonduku = {
+					title_province = { has_special_building = no }
+				}
+			}
+			title:b_bonduku.title_province = {
+				add_special_building_slot = wap_gold_mines_01
+			}
+		}
+		if = {
+			limit = {
+				title:b_tarkwa = {
+					title_province = { has_special_building = no }
+				}
+			}
+			title:b_tarkwa.title_province = {
+				add_special_building_slot = wap_gold_mines_01
+			}
+		}
+		#k_ghana
+		if = {
+			limit = {
+				title:b_al-ghaba = {
+					title_province = { has_special_building = no }
+				}
+			}
+			title:b_al-ghaba.title_province = {
+				add_special_building = wap_palace_of_al_ghaba_01
+			}
+		}
+		title:b_kumbi.title_province = {
+			set_holding_type = church_holding
+		}
+		if = {
+			limit = {
+				title:b_kumbi = {
+					title_province = { has_special_building = no }
+				}
+			}
+			title:b_kumbi.title_province = {
+				add_special_building = wap_cavern_of_bida_01
+			}
+		}
+		if = {
+			limit = {
+				title:b_tichitt = {
+					title_province = { has_special_building = no }
+				}
+			}
+			title:b_tichitt.title_province = {
+				add_special_building_slot = wap_dhar_tichitt_01
+			}
+		}
+	#k_gao
+		title:b_gao = {
+			title_province = {
+				if = {
+					limit = {
+						current_date >= 800.1.1
+						current_date < 1066.1.1
+					}
+					add_special_building_slot = wap_palace_of_gao_01
+				}
+				else_if = {
+					limit = {
+						current_date >= 1066.1.1			
+					}
+					add_special_building = wap_palace_of_gao_01
+				}
+			}
+		}
+		
+	#senegambia
+		title:b_badibu.title_province = { 
+			add_special_building = wap_senegambian_stone_circles_01
+		}
+		
+	#k_hausaland
+		title:b_kano.title_province = { 
+			add_special_building = wap_walls_of_kano_01
+		}
+	#k_nri
+		title:b_igbo-ukwu.title_province = { 
+			add_special_building = wap_bronze_industry_01
+		}
+	#k_benin
+		title:b_edo.title_province = { 
+			add_special_building_slot = wap_bronze_industry_01
+		}
+	#k_sao
+		title:b_banre.title_province = { 
+			add_special_building = wap_bronze_industry_01
+		}
+	#k_hausaland
+		title:b_daura.title_province = { 
+			add_special_building = wap_sarki_well_01
+		}
+	#k_yorubaland
+		title:b_ile-ife.title_province = { 
+			add_special_building = wap_oracle_of_ife_01
+		}
+		title:b_owu.title_province = { 
+			add_special_building_slot = wap_bronze_industry_01
+		}
+		title:b_ijebu.title_province = { 
+			add_special_building_slot = wap_sungbos_eredo_01
+		}
+		
+	#k_kong
+		title:b_loropeni.title_province = { 
+			add_special_building_slot = wap_walls_of_loropeni_01
+		}
+	#k_sahara
+		title:b_tadmekka.title_province = { 
+			add_special_building = wap_salt_mine_01
+		}
+		
+	#k_anyiba
+		title:b_bilma.title_province = { 
+			add_special_building = wap_salt_mine_01
+		}
+		if = {
+			limit = {
+				title:b_ahaggar = {
+					title_province = { has_special_building = no }
+				}
+			}
+			title:b_ahaggar.title_province = {
+				add_special_building = wap_tomb_of_tin_hinan_01
+			}
+		}
+		title:b_bilizma.title_province = { 
+			add_special_building = wap_madghacen_01
+		}
+		title:b_sharshal.title_province = { 
+			add_special_building = wap_mausoleum_of_juba_01
+		}
 	}
 }

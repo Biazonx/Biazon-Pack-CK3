@@ -1,0 +1,26 @@
+﻿l_english:
+ ENNOBLEMENT_PROPOSAL:0 "Ennoblement Proposal"
+ ennoblement_interaction:0 "Ennoble"
+ ennoblement_interaction_desc:0 "Ennoble [recipient.GetShortUINameNoTooltip] from lowborn status, granting them noble standing in your realm. Available for all major government types."
+ ennoblement_tt:0 "Will be ennobled and granted noble status"
+ ennobled_opinion:0 "Ennobled me from lowborn status"
+ ennoblement_title_name:0 "Ennoblement of [recipient.GetShortUINameNoTooltip]"
+ ennobled_memory_desc:0 "I was ennobled from my lowborn status by [grantor.GetShortUINameNoTooltip]"
+ granted_ennoblement_memory_desc:0 "I ennobled [ennobled.GetShortUINameNoTooltip] from lowborn status"
+ newly_ennobled_modifier:0 "Newly Ennobled"
+ newly_ennobled_modifier_desc:0 "This character was recently granted noble status from lowborn origins"
+ enacted_ennoblement_modifier:0 "Enacted Ennoblement"
+ enacted_ennoblement_modifier_desc:0 "This ruler has enacted an ennoblement ceremony, elevating a lowborn to noble status"
+ requires_40_gold:0 "Requires 40 Gold"
+ requires_150_prestige:0 "Requires 150 Prestige"
+ requires_25_renown:0 "Requires 25 Dynasty Renown"
+ ENNOBLEMENT_PROPOSAL:0 "[actor.GetUIName] wishes to ennoble [recipient.GetUIName]"
+ 
+ # AI logging for observer testing
+ ennoblement_ai_toast_title:0 "AI Ennoblement Event"
+ ennoblement_ai_toast_desc:0 "[actor.GetUIName] has ennobled lowborn [recipient.GetUIName]"
+ 
+ # Send option tooltips for manual costs
+ ennoblement_send_option_herd:0 "Costs [EmptyScope.ScriptValue('ennoblement_herd_cost')|0] #weak Herd#!"
+ ennoblement_send_option_influence:0 "Costs [EmptyScope.ScriptValue('ennoblement_influence_cost')|0] Influence"
+

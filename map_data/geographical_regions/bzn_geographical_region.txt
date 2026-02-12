@@ -54,3 +54,58 @@ custom_czechslovakia = {
 custom_novgorod = { 
 	duchies = { d_novgorod d_vepsia d_luki }
 }
+
+world_siberia_2 = {
+	duchies = {
+		#Western Siberia
+		d_ostyaki d_konda d_pelym d_kazym d_sibir d_ishim d_tara d_lanikaz
+		d_salair d_aley d_altaishan d_ala_tau d_vasyugan_mire d_baraba_steppe d_kulyndy_steppe
+		d_perm d_ural d_udmurtia 
+		#Eastern Siberia
+		d_khakass_hollow d_blue_khakassia d_shoria d_kargassia d_eastern_sayan
+		d_bargujin_tukum d_dauria d_baigaluuls d_tsagaanbaigal
+		d_yenisei_kan d_chuna_valley d_lena d_angara
+	}
+}
+
+custom_yemen = {
+	duchies = { d_mahra d_hadramawt d_taizz d_jawf-al-yamani d_sanaa d_socotra }
+}
+
+custom_qarmatians = { 
+	duchies = { d_oman d_al-hasa d_bahrain d_basra }
+}
+
+custom_salihi = {
+	duchies = { d_mogadishu d_west_ajuraan d_hafun d_sanaag d_adal d_zaila d_danakil d_mora d_dawaro } 
+}
+
+custom_mutazila = { 
+	duchies = { d_syrte d_tripolitania d_jerid d_gabes d_kroumerie d_tunis d_kairouan }
+}
+
+custom_krete = {
+	duchies = { d_krete } 
+}
+
+custom_zoroastrian_china = {
+	duchies = { d_qiongnan d_xichuan }
+}
+
+custom_pakistan = {
+	duchies = { d_sauvira d_bhakkar d_multan d_lahore d_gandhara d_kasmira } 
+}
+
+custom_lower_niger = {
+	duchies = {
+		d_ife
+		d_oyo
+		d_ibadan
+		d_benin 
+		d_igboland
+		d_savalu
+		d_borgu
+		d_nupe
+		d_kwararafa
+	}
+}

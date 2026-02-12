@@ -1,0 +1,104 @@
+﻿l_english: 
+
+situation_regional_destiny_situation:0 "Frozen Cycle"
+regional_destiny_situation_sub_region_world_siberia_2:0 "Siberia"
+regional_destiny_situation_sub_region_world_siberia_2_desc:0 ""
+
+rule_rd_world_conqueror:0 "[regional_destiny|E]"
+setting_rd_conqueror_enabled:0 "Warlords Enabled"
+setting_rd_conqueror_enabled_desc:0 "A Warlord will be selected in every region, most likely a [duke|E] or [count|E]."
+setting_rd_conqueror_disabled:0 "#high Warlords Disabled#!"
+setting_rd_conqueror_disabled_desc:0 "No Warlord will be selected."
+
+rule_rd_conqueror_chosen_span:0 "[regional_destiny|E]"
+setting_rd_conqueror_chosen_span_1_year:0 "#high 1 Year#!"
+setting_rd_conqueror_chosen_span_1_year_desc:0 "[rd_contend_period|E]: It takes #V 1#! year for a new Warlord to emerge in the [situation|E] region."
+setting_rd_conqueror_chosen_span_5_year:0 "#high 5 Years#!"
+setting_rd_conqueror_chosen_span_5_year_desc:0 "[rd_contend_period|E]: It takes #V 5#! years for a new Warlord to emerge in the [situation|E] region."
+setting_rd_conqueror_chosen_span_10_year:0 "10 Years"
+setting_rd_conqueror_chosen_span_10_year_desc:0 "[rd_contend_period|E]: It takes #V 10#! years for a new Warlord to emerge in the [situation|E] region."
+setting_rd_conqueror_chosen_span_20_year:0 "#high 20 Years#!"
+setting_rd_conqueror_chosen_span_20_year_desc:0 "[rd_contend_period|E]: It takes #V 20#! years for a new Warlord to emerge in the [situation|E] region."
+
+rule_rd_conqueror_chosen_weight:0 "[regional_destiny|E]"
+setting_rd_conqueror_chosen_weight_military_strength:0 "Martial Skill"
+setting_rd_conqueror_chosen_weight_military_strength_desc:0 "Selection Weight: [rulers|E] with high Martial are more likely to be Warlord."
+setting_rd_conqueror_chosen_weight_random:0 "#high Random Selection#!"
+setting_rd_conqueror_chosen_weight_random_desc:0 "Selection Weight: [rulers|E] will be randomly selected to be Warlord."
+
+rule_rd_conqueror_situation_rd_downfall:0 "[regional_destiny|E]"
+setting_rd_conqueror_situation_rd_downfall_enabled:0 "Downfall Enabled"
+setting_rd_conqueror_situation_rd_downfall_enabled_desc:0 "[rd_downfall|E]: Warlord will lose their [destiny|E] after failing an offensive [war|E]."
+setting_rd_conqueror_situation_rd_downfall_disabled:0 "Downfall Disabled"
+setting_rd_conqueror_situation_rd_downfall_disabled_desc:0 "[rd_downfall|E]: Warlord will not lose their [destiny|E]."
+
+game_concept_regional_destiny:0 "Frozen Cycle"
+game_concept_regional_destiny_desc:0 ""
+game_concept_destiny:0 "Destiny"
+game_concept_rd_contend_period:0 "Contend Period"
+game_concept_rd_contend:0 "Contend"
+game_concept_rd_contend_period_desc:0 "The period of time between the [rd_downfall|E] of a previous Warlord and the emergence of a new Warlord is known as the Contend Period."
+game_concept_rd_downfall:0 "Downfall"
+game_concept_rd_downfall_desc:0 "A Warlord loses their [destiny|E] after failing an offensive [war|E].\n\nWarlords who fall from favor will no longer be chosen by destiny—but with certain [traits|E] and [personalities|E], they may still defy fate and become a Warlord once more."
+
+regional_destiny_situation_participant_group_regional_destiny_conqueror:0 "Warlord"
+regional_destiny_situation_participant_group_regional_destiny_conqueror_desc:0 "A [ruler|E] who has won the favor of destiny.\n\n[rulers|E] whose [realm_capital|E] is located within a [situation|E] sub-region and who possess the Warlord trait are considered Warlord."
+
+regional_destiny_situation_participant_group_regional_destiny_involved:0 "Contender"
+regional_destiny_situation_participant_group_regional_destiny_involved_desc:0 "A [ruler|E] competing for the favor of destiny.\n\nIf the current Warlord loses their [trait|E] or leaves no successor, each Contender has a chance to gain destiny’s favor.\n\n[rulers|E] whose [realm_capital|E] is located within a [situation|E] sub-region are considered Contenders."
+
+regional_destiny_situation_participant_group_regional_destiny_interloper:0 "Interloper"
+regional_destiny_situation_participant_group_regional_destiny_interloper_desc:0 "A non-participant.\n\n[rulers|E] whose [realm|E] includes a [situation|E] sub-region but whose [realm_capital|E] is #N not#! within the sub-region are considered Interlopers."
+
+unification_chaotic:0 "Age of Wolves"
+unification_chaotic_desc:0 "A brief era of conquest and unrest. Armies march ceaselessly, leaving a trail of destruction and despair. The region is defined by small-scale conflicts and raids. Borders are fluid, and loyalties are fleeting. Warlords thrive where diplomats falter.\n\nA region heads toward chaos as rulers go to war and raid each other. Hostile neighbors, tribal governments, unreformed faiths, and warmongering cultures and religions contribute passively. Independent rulers with unbound ambitions contribute far more than tamed vassals to the chaos factor. A poor legitimacy or reputation also adds to the score.\n"
+regional_destiny_situation_unification_chaotic_situation_phase:0 "$unification_chaotic$"
+regional_destiny_situation_unification_chaotic_situation_phase_desc:0 "$unification_chaotic_desc$"
+
+unification_ordered:0 "Frozen Rule"
+unification_ordered_desc:0 "A brief era of revelry and stability brought about by competent rulers. The region flourishes as diplomacy and trade become the primary focus. New roads are built, markets flourish, and cultural shifts are encouraged. Peace, however, is never guaranteed.\n\nA region heads toward order as rulers vassalize and cooperate with each other. Peaceful neighbors, settled governments, reformed faiths, and neutral cultures and religions contribute passively. Vassals whose ambitions are tamed are preferable over independent rulers. A strong legitimacy or reputation also adds to the score.\n"
+regional_destiny_situation_unification_ordered_situation_phase:0 "$unification_ordered$"
+regional_destiny_situation_unification_ordered_situation_phase_desc:0 "$unification_ordered_desc$"
+
+starting_era:0 "Undefined Era"
+starting_era_desc:0 ""
+regional_destiny_situation_starting_era_situation_phase:0 "$starting_era$"
+regional_destiny_situation_starting_era_situation_phase_desc:0 "$starting_era_desc$"
+
+rd_change_situation_phase_tt_undefined_era:0 "Phase changed to $undefined_era$"
+rd_change_situation_phase_tt_unification_chaotic:0 "Phase changed to $unification_chaotic$"
+rd_change_situation_phase_tt_unification_ordered:0 "Phase changed to $unification_ordered$"
+rd_situation_sub_region_conqueror_emerged_tt:0 "[conqueror.GetUIName] Seized the Destiny"
+rd_situation_sub_region_conqueror_left_tt:0 "[conqueror.GetUIName] lost the Destiny"
+
+regional_destiny_situation_all:0 "$situation_regional_destiny_situation$"
+regional_destiny_situation_regional_destiny_involved:0 "$situation_regional_destiny_situation$#weak (Participants within the region)#!"
+
+regional_destiny_situation_war_effects:0 "War Effects"
+regional_destiny_situation_war_effects_concept:0 "[situation|E]"
+regional_destiny_situation_faith_effects:0 "Faith Effects"
+regional_destiny_situation_faith_effects_concept:0 "[situation|E]"
+regional_destiny_situation_culture_effects:0 "Cultural Effects"
+regional_destiny_situation_culture_effects_concept:0 "[situation|E]"
+regional_destiny_situation_other_effects:0 "Other Effects"
+regional_destiny_situation_other_effects_concept:0 "[situation|E]"
+
+catalyst_regional_destiny_situation_passing_of_time_desc:0 "Base Annual progress toward this [situation_phase|E]"
+catalyst_regional_destiny_situation_start_any_war_desc:0 "[independent_ruler|E] starts a [war|E]"
+catalyst_regional_destiny_situation_claim_throne_desc:0 "[vassal|E] successfully completes the [GetScheme('claim_throne').GetTypeName] scheme against their [liege|E]"
+catalyst_regional_destiny_situation_win_any_war_desc:0 "[independent_ruler|E] wins a war against another independent [independent_ruler|E] within the region"
+
+rd_gpt_army:0 "Warlord's Army"
+
+trait_rd_gpt_conqueror:0 "Warlord"
+trait_rd_gpt_conqueror_desc:0 "This is a Regional Warlord chosen by [destiny|E], for the very will of the realm bends to their ambition."
+
+trait_rd_gpt_conquest_era:0 "Age of Wolves"
+trait_rd_gpt_conquest_era_desc:0 "#V Unlocks #E Border Clash#! [casus_belli|E] against neighbors\n[rulers|E] can [raid|E] across land even if [feudal|E]#!\n\nA brief era of conquest and unrest. Armies march ceaselessly, leaving a trail of destruction and despair. The region is defined by small-scale conflicts and raids. Borders are fluid, and loyalties are fleeting. Warlords thrive where diplomats falter."
+
+trait_rd_gpt_prosperity_era:0 "Frozen Rule"
+trait_rd_gpt_prosperity_era_desc:0 "A brief era of revelry and stability brought about by competent rulers. The region flourishes as diplomacy and trade become the primary focus. New roads are built, markets flourish, and cultural shifts are encouraged. Peace, however, is never guaranteed."
+
+situation_parameter_rd_gpt_add_conquest_trait:0 "Add [trait|E]: [GetTrait('rd_gpt_conquest_era').GetName(GetNullCharacter)]"
+situation_parameter_rd_gpt_add_prosperity_trait:0 "Add [trait|E]: [GetTrait('rd_gpt_prosperity_era').GetName(GetNullCharacter)]"
+situation_parameter_unlock_rd_county_conquest_cb:0 "Unlocks the #E Border Clash#! [casus_belli|E] for [duke|E] and lower-rank [rulers|E]"

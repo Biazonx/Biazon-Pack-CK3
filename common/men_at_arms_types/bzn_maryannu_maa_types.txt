@@ -1,16 +1,12 @@
-# standard costs
-@maa_buy_cost = 130
-@maa_low_maintenance_cost = 1.0
-@maa_high_maintenance_cost = 5.0
 @cultural_maa_extra_ai_score = 60 # Equivalent to having 6 extra regiments beyond what the code scoring would indicate (see NEGATIVE_SCORE_PER_EXISTING_REGIMENT)
 
 Maryannu = {
 	type = archer_cavalry
 	
-	damage = 30
-	toughness = 20
-	pursuit = 30
-	screen = 20
+	damage = 28
+	toughness = 12
+	pursuit = 35
+	screen = 30
 	
 	terrain_bonus = {
 		desert = { damage = 20 toughness = 8 }
@@ -24,7 +20,6 @@ Maryannu = {
 	}
 
 	counters = {
-		archers = 1
 		skirmishers = 1
 		heavy_infantry = 1
 	}
@@ -33,9 +28,10 @@ Maryannu = {
 		culture = culture:ancient_egyptian
 	}
 
-	buy_cost = { gold = @maa_buy_cost }
-	low_maintenance_cost = { gold = @maa_low_maintenance_cost }
-	high_maintenance_cost = { gold = @maa_high_maintenance_cost }
+	buy_cost = { gold = light_cavalry_recruitment_cost }
+	low_maintenance_cost = { gold = light_cavalry_low_maint_cost }
+	high_maintenance_cost = { gold = light_cavalry_high_maint_cost }
+	provision_cost = @provisions_cost_cavalry_cheap
 	
 	stack = 100
 	ai_quality = { value = @cultural_maa_extra_ai_score }

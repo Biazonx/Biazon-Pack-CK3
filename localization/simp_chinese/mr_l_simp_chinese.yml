@@ -1,0 +1,5 @@
+﻿l_simp_chinese:
+ massive_razing_decision: "批量夷为平地"
+ massive_razing_decision_desc: "夷平所有由你持有且可以夷平的[holdings|E]，产生正常夷平获得的所有效果。"
+ massive_razing_decision_tooltip: "$massive_razing_decision_desc$"
+ massive_razing_decision_confirm: "$massive_razing_decision$"

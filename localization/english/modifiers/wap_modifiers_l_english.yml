@@ -1,0 +1,224 @@
+﻿l_english:
+ 
+ # RICE
+ RICE_nubia_archbishop_georgios_modifier:0 "The Royal Makurian Archbishop"
+ RICE_nubia_archbishop_georgios_modifier_desc:0 "As Archbishop of Makuria, Prince Georgios has done much to steer Nubia away from centuries of Byzantine influence, and developing an indigenous form of Nubian Christianity. He advocates 'Nubianization' in everything, from attire and inheritance systems to showing greater respect to the dead kings of Nubia."
+ 
+ #Afariqa
+ BAP_afariqa_merchant_modifier:0 "Mediterranean Merchant"
+ BAP_afariqa_merchant_modifier_desc:0 "This character started off as an enterprising trader in the Mediterranean."
+ BAP_afariqa_diplomat_modifier:0 "Fallen Diplomat"
+ BAP_afariqa_diplomat_modifier_desc:0 "This character started off as a silver-tongued diplomat of a foreign court, before falling on hard times."
+ BAP_afariqa_adventurer_modifier:0 "Intrepid Aventurer"
+ BAP_afariqa_adventurer_modifier_desc:0 "This character started off as an intrepid adventurer, traversing the deserts and seas of North Africa."
+ #WEST AFRICAN
+ wap_commission_epic_modifier:0 "Commissioned Family Epic"
+ wap_commission_epic_modifier_desc:0 "This character basks in the glory of history; of tales told of by Griots across the land of the achievements of their ancestors."
+ wap_commission_exceptional_epic_modifier:0 "Commissioned Excellent Family Epic"
+ wap_commission_exceptional_epic_modifier_desc:0 "This character basks in the glory of history; of tales told of by Griots across the land of their ancestors."
+ 
+ pilgrimage_marabout_modifier:0 "Respect of the Marabouts"
+ pilgrimage_marabout_modifier_desc:0 "This character has been on a Pilgrimage while following the [GetFaithDoctrine('wap_tenet_grand_pilgrimages').GetBaseName] [core_tenet|E]."
+ pilgrimage_mz_tenet_ekeraa_modifier:0 "Guided by the Ancestors"
+ pilgrimage_mz_tenet_ekeraa_modifier_desc:0 "This character has been on a Pilgrimage while following the [GetFaithDoctrine('mz_tenet_ekeraa').GetBaseName] [core_tenet|E]."
+ 
+ 
+ ####### Divination effects #######
+ divination_minor_advice_family:0 "Minor Advice from a Diviner about Family and Friends"
+ divination_major_advice_family:0 "Major Advice from a Diviner about Family and Friends"
+ divination_grand_advice_family:0 "Great Advice from a Diviner about Family and Friends"
+ divination_minor_advice_military:0 "Minor Advice from a Diviner about Military Affairs"
+ divination_major_advice_military:0 "Major Advice from a Diviner about Military Affairs"
+ divination_grand_advice_military:0 "Great Advice from a Diviner about Military Affairs"
+ divination_minor_advice_realm:0 "Minor Advice from a Diviner about the Realm"
+ divination_major_advice_realm:0 "Major Advice from a Diviner about the Realm"
+ divination_grand_advice_realm:0 "Great Advice from the Diviner about the Realm"
+ divination_minor_advice_intrigue:0 "Minor Advice from a Diviner about Intrigue at Court"
+ divination_major_advice_intrigue:0 "Major Advice from a Diviner about Intrigue at Court"
+ divination_grand_advice_intrigue:0 "Great Advice from a Diviner about Intrigue at Court"
+ divination_minor_advice_personal:0 "Minor Advice from a Diviner about Personal Issues"
+ divination_major_advice_personal:0 "Major Advice from a Diviner about Personal Issues"
+ divination_grand_advice_personal:0 "Great Advice from a Diviner about Personal Issues"
+ 
+####### Yoruba and Bini Deities #######
+ orisha_deity_obatala:0 "Devoted to Ọbàtálá"
+ orisha_deity_obatala_desc:0 "This character's òrìṣà cult is dedicated to Ọbàtálá, the Sky-father."
+
+ orisha_deity_yemoja:0 "Devoted to Yemọja"
+ orisha_deity_yemoja_desc:0 "This character's òrìṣà cult is dedicated to Yemọja, the Master of the Waters."
+
+ orisha_deity_orunmila:0 "Devoted to Ọrunmìlà"
+ orisha_deity_orunmila_desc:0 "This character's òrìṣà cult is dedicated to Ọrunmìlà, the Master of Wisdom and Ifá."
+
+ orisha_deity_ogun:0 "Devoted to Ògún"
+ orisha_deity_ogun_desc:0 "This character's òrìṣà cult is dedicated to Ògún, the Master of War and Iron."
+
+ orisha_deity_olookun:0 "Devoted to Olóòkun"
+ orisha_deity_olookun_desc:0 "This character's òrìṣà cult is dedicated to Olóòkun, the Master of the Ocean."
+
+ orisha_deity_osun:0 "Devoted to Ọṣun"
+ orisha_deity_osun_desc:0 "This character's òrìṣà cult is dedicated to Ọṣun, Mother of Beauty."
+
+ orisha_deity_esu:0 "Devoted to Èṣu"
+ orisha_deity_esu_desc:0 "This character's òrìṣà cult is dedicated to Èṣu, The Great Messenger and Master of Chaos."
+
+ orisha_deity_osoosi:0 "Devoted to Òsóòsi"
+ orisha_deity_osoosi_desc:0 "This character's òrìṣà cult is dedicated to Òsóòsi, The Master of the Hunt."
+
+ orisha_deity_sango:0 "Devoted to Ṣàngó"
+ orisha_deity_sango_desc:0 "This character's òrìṣà cult is dedicated to Ṣàngó, the Master of Thunderstone."
+
+
+####### Event modifiers ######
+ wap_new_al_kahina:0 "Al-Kāhina Reborn"
+ wap_new_al_kahina_desc:0 "This dynasty raised al-Kāhina, and with it a wrathful return to the Old Ways."
+ blessed_by_ancestors_modifier:0 "Kissed the Ancestor Bone"
+ blessed_by_ancestors_modifier_desc:0 "This character showed honor to their forebears by kissing the bone of the great ancestor."
+ wap_honored_sacrificial_marriage_modifier:0 "Honored Sacrifical Funeral Rites"
+ wap_honored_sacrificial_marriage_modifier_desc:0 "This character has honored our sacrifical funeral rites."
+ wap_disrespected_sacrificial_marriage_modifier:0 "Disrepected Sacrifical Funeral Rites"
+ wap_disrespected_sacrificial_marriage_modifier_desc:0 "This character has disrespected our sacrifical funeral rites."
+ high_king_of_the_niger_modifier:0 "Lord of the Niger"
+ high_king_of_the_niger_modifier_desc:0 "This character is the undisputed ruler of the Niger from the bend to the sea, a conqueror without parallel."
+ high_queen_of_the_niger_modifier:0 "Lady of the Niger"
+ high_queen_of_the_niger_modifier_desc:0 "$high_king_of_the_niger_modifier_desc$"
+ high_king_of_the_nile_modifier:0 "Lord of the Nile"
+ high_king_of_the_nile_modifier_desc:0 "This character is the undisputed ruler of the Nile from the delta to the mountains of Alwa."
+ high_queen_of_the_nile_modifier:0 "Lady of the Nile"
+ high_queen_of_the_nile_modifier_desc:0 "$high_king_of_the_nile_modifier_desc$"
+ osu_modifier:0 "Osu"
+ osu_modifier_desc:0 "This character is considered Osu to $igbo_collective_noun$, a ritually unclean outcast, below even a slave."
+ exotic_foreign_lord_wap_modifier:0 "Exotic Foreign Lord"
+ exotic_foreign_lord_wap_modifier_desc:0 "This character is known within the Islamic world as the liege of a strange and intriguing pagan realm."
+ horrifying_foreign_lord_wap_modifier:0 "Horrifying Foreign Lord"
+ horrifying_foreign_lord_wap_modifier_desc:0 "Stories abound throughout the Islamic world of the horrifying pagan sacrifices that infest this character's realm."
+ county_built_ancestral_altar_modifier:0 "Ancestral altar"
+ osu_exiled_modifier:0 "Exiled Local Osu"
+ osu_exiled_modifier_desc:0 "Local communities rest safe in the knowledge that a scoundrel has been punished justly."
+ osu_harboured_modifier:0 "Harbored Local Osu"
+ osu_harboured_modifier_desc:0 "Local communities detest their liege's support of a known scoundrel."
+ osu_in_limbo_modifier:0 "Class Tensions"
+ osu_in_limbo_modifier_desc:0 "Certain elements of the court clash regularly with local villagers."
+ ogbanje_remedies_succeeded_modifier:0 "Ọgbanje Driven Off"
+ ogbanje_remedies_succeeded_modifier_desc:0 "By hook or by crook, the evil spirit that tormented families in this county has been dealt with."
+ ogbanje_remedies_failed_modifier:0 "Ọgbanje Haunts Locals"
+ ogbanje_remedies_failed_modifier_desc:0 "Despite the best efforts of the living, this county is overrun with plagues, curses, and misfortune."
+ ogbanje_monstrous_wild_dogs_modifier:0 "Howls in the Night"
+ ogbanje_monstrous_wild_dogs_modifier_desc:0 "An abnormally hungry and aggressive pack of wild dogs stalks the wilds of this county, tearing apart livestock and lonely wanderers."
+ ogbanje_monstrous_leopard_modifier:0 "Unsafe Wilds"
+ ogbanje_monstrous_leopard_modifier_desc:0 "A large rabid Leopard strikes at random in this county, sometimes taking only a cow, sometimes slaughtering entire families."
+ ogbanje_osu_modifier:0 "Ghostly Outlaw"
+ ogbanje_osu_modifier_desc:0 "Some call them an abomination, others merely a quiet thief, but all agree that a kleptomaniacal spirit harasses the locals."
+ ogbanje_nothing_found_modifier:0 "Superstitious Villagers"
+ ogbanje_nothing_found_modifier_desc:0 "Despite the best efforts of their liege to prove otherwise, the local villagers insist they are being tormented by an Ọgbanje."
+ ogbanje_healthy_hiking_modifier:0 "Healthy Hiking"
+ ogbanje_healthy_hiking_modifier_desc:0 "This character has spent an immense amount of time fruitlessly hiking the wilds of their realm, hunting for monsters."
+ wap_yearly_0015_bush_spirit_victory_elephant_modifier:0 "Elephant-Slayer"
+ wap_yearly_0015_bush_spirit_victory_elephant_modifier_desc:0 "This character is reputed to have slain either a bush spirit, or a man-killing elephant."
+ wap_yearly_0015_bush_spirit_victory_hyena_modifier:0 "Hyena-Slayer"
+ wap_yearly_0015_bush_spirit_victory_hyena_modifier_desc:0 "This character slew a hyena so swift that the commonfolk believed it a bush spirit."
+ wap_yearly_0015_bush_spirit_victory_jackal_modifier:0 "Jackal-Slayer"
+ wap_yearly_0015_bush_spirit_victory_jackal_modifier_desc:0 "This character slew a jackal so ferocious that the commonfolk believed it a bush spirit, keeping the wilds safe."
+ wap_yearly_0015_bush_spirit_victory_leopard_modifier:0 "Leopard-Slayer"
+ wap_yearly_0015_bush_spirit_victory_leopard_modifier_desc:0 "This character slew a leopard so silent that the commonfolk believed it a bush spirit."
+ wap_yearly_0015_bush_spirit_victory_buffalo_modifier:0 "Buffalo-Slayer"
+ wap_yearly_0015_bush_spirit_victory_buffalo_modifier_desc:0 "This character slew a buffalo so rabid that the commonfolk believed it a bush spirit."
+ wap_yearly_0015_bush_spirit_attacks_modifier:0 "Bush Spirit Attacks"
+ wap_yearly_0015_bush_spirit_attacks_modifier_desc:0 "There is... #EMP something#! in the wilds of this county, terrifying, and even killing, the locals."
+ wap_defiant_high_king_conversion_boost_modifier:0 "Defiant High-King"
+ wap_defiant_high_king_conversion_boost_modifier_desc:1 "This character worships the Gods of the Ancestors, and will go to any lengths to show that others should too.\n\nSignificant boost to [convert_county|E] speed against [organized|E] [faiths|E]"
+ wap_defiant_high_queen_conversion_boost_modifier:0 "Defiant High-Queen"
+ wap_defiant_high_queen_conversion_boost_modifier_desc:0 "$defiant_high_king_conversion_boost_modifier_desc$"
+ 
+ #####Bida sacrifice event incomplete
+ #WAP_respect_gesere:0 "Respect for the Gesere"
+ #WAP_respect_gesere_desc:0 "This character showed themselves a humble before the elders, and respectful of traditional ways."
+ #WAP_patron_of_gesere:0 "Patron of the Gesere"
+ #WAP_patron_of_gesere_desc:0 "The gesere speak highly of this character's generosity as a patron for their guild."
+ #WAP_student_of_gesere:0 "Student of the Gesere"
+ #WAP_student_of_gesere_desc:0 "This character is fascinated with the stories of times past, and of the art of the noble gesere."
+ #sacrifice_harboured_modifier:0 "Spared a Sacrificial Maiden"
+ #sacrifice_married_modifier:0 "Married a Bride of Bida"
+ #sacrifice_harboured_modifier_desc:0 "This character spared the chosen sacrifice to Bida, risking his wrath."
+ #sacrifice_married_modifier_desc:0 "This character risks ruin for the kingdom by stealing a bride of the serpent god Bida."
+ #held_grand_bida_sacrifice_modifier:0 "Went to Grand Sacrifice to Bida"
+ #held_grand_bida_sacrifice_modifier_desc:0 "The peasants of this county rest easy, knowing that Bida smiles on those who pay tribute."
+ #commoners_grand_bida_sacrifice_modifier:0 "Went to Peoples' Grand Sacrifice"
+ #commoners_grand_bida_sacrifice_modifier_desc:0 "The peasants in this county still talk of how they mixed freely with the Maghan at the last mighty feast held in honor of Bida."
+ #held_human_sacrifice_wap_modifier:0 "Horrified by Human Sacrifice"
+ #held_human_sacrifice_wap_modifier_desc:0 "The peasantry are up in arms at being ruled over by a character who practices the ritual murder of other humans."
+ #pleased_bida_modifier:0 "Pleased Bida"
+ #pleased_bida_modifier_desc:0 "The Great Serpent God of the Kumbi Chasm is pleased with our grand sacrifice."
+ #angered_bida_modifier:0 "Angered Bida"
+ #angered_bida_modifier_desc:0 "I have angered Bida, and the prosperity of the land suffers as a result."
+ 
+ ####### NUBIA MODIFIERS ######
+ ####### Archangels #######
+ patron_archangel_michael:0 "Devoted to Archangel Michael"
+ patron_archangel_michael_desc:0 "This character's patron angel is Michael, Archistrategos of the Heavenly Hosts."
+
+ patron_archangel_raphael:0 "Devoted to Archangel Raphael"
+ patron_archangel_raphael_desc:0 "This character's patron angel is Raphael, healer and guardian of the faithful."
+
+ patron_archangel_uriel:0 "Devoted to Archangel Uriel"
+ patron_archangel_uriel_desc:0 "This character's patron angel is Uriel, patron of the arts and sciences."
+
+ patron_archangel_gabriel:0 "Devoted to Archangel Gabriel"
+ patron_archangel_gabriel_desc:0 "This character's patron angel is Gabriel, chief intercessor and messenger to God."
+
+ patron_mother_mary:0 "Devoted to Mother Mary"
+ patron_mother_mary_desc:0 "This character focuses on veneration of Mother Mary, the divine Mother of all and great protector."
+
+#######################################
+# Province Modifiers
+#######################################
+ upset_peasants:0 "Upset Peasant"
+ upset_peasants_desc:0 "The peasants of this county are upset with their ruler"
+
+ happy_monks:0 "Happy Monks"
+ happy_monks_desc:0 "This character's recent actions have pleased the monks at the local monastery."
+
+ upset_monks:0 "Unhappy Monks"
+ upset_monks_desc:0 "This character's recent actions have displeased the monks at the local monastery."
+
+ kushitism_appreciation_modifier:0 "Kushitism appreciation"
+ kushitism_appreciation_modifier_desc:0 "Kushitism appreciation"
+ 
+ nubian_church_modifier:0 "Vibrant New Faith"
+ nubian_church_modifier_desc:0 "A vibrant new indigenous faith has taken hold in this county, energizing the people."
+ 
+ baqt_agreed:0 "Baqt agreed"
+ baqt_agreed_desc:0 "The Baqt between Makuria and Egypt has been renewed."
+ 
+ better_baqt:0 "Favorable Baqt Agreed"
+ better_baqt_desc:0 "The Baqt between Makuria and Egypt has been renewed, and on more favorable terms for the Nubians."
+ 
+ worse_baqt:0 "Unfavorable Baqt Agreed"
+ worse_baqt_desc:0 "The Baqt between Makuria and Egypt has been renewed, but on less favorable terms for the Nubians."
+ 
+ busy_doing_activities:0 "Busy"
+ busy_doing_activities_desc:0 "This character is currently busy with various other actions and activities."
+
+ ghazali_learning_books:0 "Studying Holy Texts"
+ ghazali_learning_books_desc:0 "This character is studying holy texts."
+
+ ghazali_learning_medicine:0 "Studying Medicine"
+ ghazali_learning_medicine_desc:0 "This character is studying medical texts."
+
+ ghazali_learning_logic:0 "Studying Logic"
+ ghazali_learning_logic_desc:0 "This character is studying Logic."
+
+ ghazali_learning_astrology:0 "Studying Astrology"
+ ghazali_learning_astrology_desc:0 "This character is studying astrological texts."
+
+ ghazali_learning_noob:0 "Studying Basic Ascetics"
+ ghazali_learning_noob_desc:0 "This character is studying the basics of ascetic life."
+ 
+ wap_patron_of_learning_minor:0 "Patron of Learning"
+ wap_patron_of_learning_minor_desc:0 "Modest gains in scholarship derive from this character's patronage."
+ wap_patron_of_learning_major:0 "Flourishing Monasteries"
+ wap_patron_of_learning_major_desc:0 "Learning has flourished under this character's patronage."
+ wap_patron_of_learning_major_marabout:0 "Flourishing Qu'ranic Schools"
+ wap_patron_of_learning_major_marabout_desc: "Learning has flourished under this character's patronage."
+ wap_patron_of_learning_bad:0 "Failed Patron of Learning"
+ wap_patron_of_learning_bad_desc:0 "This characters' attempts to stimulate scholarship in their realm failed."

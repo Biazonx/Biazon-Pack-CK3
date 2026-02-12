@@ -1,0 +1,183 @@
+﻿promote_hungarian_settlement_decision_scripted_effect = {
+	if = {
+		limit = {
+			culture = culture:mogyer
+		}
+
+		# Convert my culture to Hungarian Culture
+		set_culture = culture:hungarian
+		culture:hungarian = {
+			reset_culture_creation_date = yes
+			get_all_innovations_from = culture:mogyer
+		}
+
+		# Convert my courtiers to Hungarian 
+		hidden_effect = {
+			every_courtier = {
+				limit = {
+					culture = culture:mogyer
+				}
+				set_culture = culture:hungarian
+			}
+		}
+
+		# Convert my vassals to Hungarian
+		every_vassal_or_below = {
+			limit = {
+				culture = culture:mogyer
+			}
+
+			custom = promote_hungarian_settlement_decision_every_vassal_custom
+			set_culture = culture:hungarian
+
+			# Convert their courtiers as well
+			hidden_effect = {
+				every_courtier = {
+					limit = {
+						culture = culture:mogyer
+					}
+					set_culture = culture:hungarian
+				}
+			}
+		}
+	}
+
+	title:k_hungary = {
+		every_in_de_jure_hierarchy = {
+			custom = promote_hungarian_settlement_decision_every_province_custom
+			limit = {
+				tier = tier_county
+				culture = culture:mogyer
+				title_province = { geographical_region = custom_hungary }
+				holder = {
+					OR = {
+						this = root
+						target_is_liege_or_above = root
+					}
+				}
+			}
+			set_county_culture = culture:hungarian
+			add_county_modifier = {
+				modifier = hungarian_resettlement_modifier
+				years = 100
+			}
+			custom_tooltip = promote_hungarian_settlement_decision_increased_development
+			custom_tooltip = promote_hungarian_settlement_decision_convert_county
+			hidden_effect = {
+				if = {
+					limit = {
+						development_level < 5
+					}
+					change_development_level = 5
+				}
+				random_list = {
+					30 = {
+						# Nothing happens
+					}
+					30 = {
+						trigger = {
+							NOT = {
+								faith = { has_doctrine = special_doctrine_ecumenical_christian }
+							}
+						}
+						set_county_faith = root.faith
+					}
+					30 = {
+						trigger = {
+							NOT = {
+								faith = { has_doctrine = special_doctrine_ecumenical_christian }
+							}
+							any_neighboring_county = {
+								faith = { has_doctrine = special_doctrine_ecumenical_christian }
+							}
+						}
+						random_neighboring_county = {
+							limit = {
+								faith = { has_doctrine = special_doctrine_ecumenical_christian }
+							}
+							save_scope_as = neighboring_county
+						}
+						set_county_faith = scope:neighboring_county.faith
+					}
+				}
+			}
+		}
+	}
+
+	#Innovations
+	culture:hungarian = {
+		add_random_innovation = culture_group_military
+		add_random_innovation = culture_group_civic
+	}
+
+	#Prestige
+	add_prestige = massive_prestige_gain	
+}
+
+revive_magyar_paganism_decision_scripted_effect = {
+	#Change yourself, and any willing vassals/family, over to Magyar Paganism.
+	set_character_faith_with_conversion = faith:magyar_pagan
+	#Gain nickname for your troubles.
+	give_nickname = nick_the_apostate
+	#Magyar_group counties of your old religion may defect back to the old ways.
+	custom_tooltip = revive_magyar_paganism_decision_scripted_effect.county_conversions.tt
+	hidden_effect = {
+		primary_title = {
+			every_in_de_facto_hierarchy = {
+				limit = {
+					tier = tier_county
+					culture = { has_cultural_pillar = heritage_magyar }
+					exists = scope:old_faith
+					religion = scope:old_faith.religion
+				}
+				#Mogyers remember the old ways best, and have a high chance to flip.
+				if = {
+					limit = { culture = culture:mogyer }
+					random = {
+						chance = 70
+						set_county_faith = faith:magyar_pagan
+					}
+				}
+				#Slightly up the chances for the apostate.
+				else_if = {
+					limit = { holder = root }
+					random = {
+						chance = 50
+						set_county_faith = faith:magyar_pagan
+					}
+				}
+				#Other magyar_group cultures still have a moderate chance to flip.
+				else = {
+					random = {
+						chance = 30
+						set_county_faith = faith:magyar_pagan
+					}
+				}
+			}
+		}
+	}
+	#Make flipping counties deliriously happy about the whole affair.
+	primary_title = {
+		every_in_de_facto_hierarchy = {
+			limit = {
+				tier = tier_county
+				faith = faith:magyar_pagan
+			}
+			custom = hungarian_resettlement.every_converted_province
+			add_county_modifier = {
+				modifier = magyar_appreciation_modifier
+				years = 25
+			}
+		}
+	}
+	#Finally, give magyar_pagans a hefty fervour boost, just so that they don't immediately convert back.
+	hidden_effect = {
+		faith:magyar_pagan = {
+			save_temporary_scope_as = magyar_faith
+			change_fervor = {
+				value = 100
+				desc = fervor_gain_magyar_revivalism
+			}
+		}
+	}
+}

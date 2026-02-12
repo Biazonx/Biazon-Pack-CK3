@@ -130,77 +130,9 @@ bzn_ascetic_king = {
     }
 }
 
-
-dharma_raise_hero_stone_decision = {# Raise a Hero Stone
-	title = dharma_raise_hero_stone_decision_name
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/fp1_decision_raise_runestone.dds"
-	}
-	decision_group_type = dravidian_medium
-
-	desc = raise_hero_stone_decision_desc
-	selection_tooltip = raise_hero_stone_decision_tooltip
-
-	cooldown = { years = 10 }
-	
-	sort_order = 80
-
-	is_shown = {
-		# Landed characters only: nobody likes a mercenary.
-		is_landed = yes
-		primary_title.tier > tier_barony
-		# Holds a suitable culture 
-		culture = { has_cultural_pillar = heritage_dravidian }
-	}
-
-	is_valid = {
-		custom_description = {# Got to have a suitable Ancestor worthy of a Hero Stone
-			text = dharma_hero_stone_decision_ancestor
-			has_variable = ancestor_to_bury
-		}
-	}
-
-	is_valid_showing_failures_only = {
-		# Standard checks.
-		is_available_adult = yes
-		# Shouldn't be at war.
-		is_at_war = no
-	}
-
-	cost = { gold = raise_stele_gold_cost }
-
-	effect = {
-		# Save the gold value for refund purposes.
-		set_variable = {
-			name = raise_stele_refund
-			value = raise_stele_gold_cost
-		}
-		# Generic effects.
-		show_as_tooltip = { 
-			dharma_hero_stone_bonuses_effect = yes 
-		}
-		# Show type effects.
-		custom_tooltip = dharma_hero_stone_decision_tt.effects_list
-		# Moved ahead to selection.
-		trigger_event = dharma_dravidian.001
-	}
-
-	ai_check_interval = 36
-	
-	ai_potential = {
-		# Only take it if you can afford it.
-		short_term_gold >= raise_stele_gold_cost
-	}
-
-	ai_will_do = {
-		# We don't want too many Hero Stones all over the place.
-		base = 50
-	}
-}
-
 dharma_found_delhi_city = {# found the city of Delhi
 	picture = { reference = "gfx/interface/illustrations/decisions/decision_moorish_decor.dds" }
-	decision_group_type = major
+	decision_group_type = regional_major
 	desc = dharma_found_delhi_city_desc
 
 	ai_check_interval = 120
@@ -231,8 +163,7 @@ dharma_found_delhi_city = {# found the city of Delhi
 	}	
 
 	ai_potential = {
-		short_term_gold > major_gold_value
-		prestige >= major_prestige_value
+		always = yes
 	}
 
 	effect = {
@@ -438,12 +369,10 @@ dharma_pick_hindu_philosophy = {# Follow a Mahayana Buddhist School
 	
 	is_shown = {
 		religion = religion:hinduism_religion
-		is_ruler = yes
-		is_landed = yes
 	}
 	
 	is_valid = {
-		learning >= 12
+		learning >= 10
 		religion = religion:hinduism_religion
 	}
 	
@@ -472,29 +401,10 @@ dharma_pick_hindu_philosophy = {# Follow a Mahayana Buddhist School
 	}
 
 	ai_will_do = {
-		base = 40
-		modifier = {
-			add = 40
-			has_trait = theologian
-		}
-		modifier = {
-			add = 10
-			has_trait = scholar
-		}
-		modifier = {
-			add = 10
-			has_trait = zealous
-		}
-		modifier = {
-			add = -10
-			has_trait = cynical
-		}
-		modifier = {
-			add = -10
-			has_trait = lazy
-		}
+		base = 100
 	}
 }
+
 dharma_build_minor_hindu_holy_building = {# Build a minor Hindu building
 	picture = { reference = "gfx/interface/illustrations/decisions/decision_dharma_hindu_temple.dds" }
 	ai_check_interval = 40
@@ -681,7 +591,7 @@ dharma_build_minor_hindu_holy_building = {# Build a minor Hindu building
 	}
 
 	ai_will_do = {
-		base = 30
+		base = 35
 		modifier = {
 			add = 5
 			has_trait = zealous
@@ -707,11 +617,10 @@ dharma_adopt_mahayana_school = {# Follow a Mahayana Buddhist School
 	
 	is_shown = {
 		faith = faith:mahayana
-		is_ruler = yes
-		is_landed = yes
 	}
 	
 	is_valid = {
+		learning >= 10
 		faith = faith:mahayana
 	}
 	
@@ -735,29 +644,10 @@ dharma_adopt_mahayana_school = {# Follow a Mahayana Buddhist School
 	}
 
 	ai_will_do = {
-		base = 40
-		modifier = {
-			add = 40
-			has_trait = theologian
-		}
-		modifier = {
-			add = 10
-			has_trait = scholar
-		}
-		modifier = {
-			add = 10
-			has_trait = zealous
-		}
-		modifier = {
-			add = -10
-			has_trait = cynical
-		}
-		modifier = {
-			add = -10
-			has_trait = lazy
-		}
+		base = 80
 	}
 }
+
 dharma_adopt_tibetan_school = {# Follow a Tibetan Buddhist School
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/decision_buddhist_meditation.dds"
@@ -770,11 +660,10 @@ dharma_adopt_tibetan_school = {# Follow a Tibetan Buddhist School
 	
 	is_shown = {
 		faith = faith:lamaism
-		is_ruler = yes
-		is_landed = yes
 	}
 	
 	is_valid = {
+		learning >= 10
 		faith = faith:lamaism
 	}
 	
@@ -798,27 +687,7 @@ dharma_adopt_tibetan_school = {# Follow a Tibetan Buddhist School
 	}
 
 	ai_will_do = {
-		base = 40
-		modifier = {
-			add = 40
-			has_trait = theologian
-		}
-		modifier = {
-			add = 10
-			has_trait = scholar
-		}
-		modifier = {
-			add = 10
-			has_trait = zealous
-		}
-		modifier = {
-			add = -10
-			has_trait = cynical
-		}
-		modifier = {
-			add = -10
-			has_trait = lazy
-		}
+		base = 80
 	}
 }
 #######################################
@@ -835,13 +704,13 @@ dharma_jain_abdication = {# Abdicate and become a monk
 
 	is_shown = {
 		religion = religion:jainism_religion
-		holds_landed_title = yes
+		is_landed = yes
 		is_at_war = no
 	}
 
 	is_valid = {
 		religion = religion:jainism_religion
-		holds_landed_title = yes
+		is_landed = yes
 		is_at_war = no
 	}
 
@@ -850,6 +719,9 @@ dharma_jain_abdication = {# Abdicate and become a monk
 	}
 
 	effect = {
+	custom_tooltip = {
+		text = aimm_abdicate_effect
+	}
 		trigger_event = dharma_jainism.010
 	}
 
@@ -864,6 +736,521 @@ dharma_jain_abdication = {# Abdicate and become a monk
 		modifier = {
 			add = 10
 			age >= 60
+		}
+	}
+}
+
+dharma_sponsor_jain_sangha_decision = { # Fund Jain monks and scholars
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/dharma_decision_jain_festival.dds"
+	}
+	decision_group_type = jain_major
+	
+	cooldown = { years = 5 }
+	
+	desc = dharma_sponsor_jain_sangha_decision_desc
+	
+	is_shown = {
+		religion = religion:jainism_religion
+		is_landed = yes
+		is_at_war = no
+	}
+
+	is_valid = {
+		religion = religion:jainism_religion
+		is_landed = yes
+		is_at_war = no
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		add_piety = 250
+		add_learning_lifestyle_xp = 300
+		capital_county = {
+			set_county_faith = root.faith
+			change_development_level = { value = 1 }
+		}
+	}
+	
+	cost = { gold = 75 }
+
+	ai_check_interval = 240
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 50
+	}
+}
+
+
+### Find a New Faith for India ###
+adopt_a_new_faith_for_india_decision = {
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 36
+		duchy = 12
+		kingdom = 12
+		empire = 12
+		hegemony = 12
+	}
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds"
+	}
+	decision_group_type = regional_major
+	
+	cooldown = { years = 30 }
+
+	is_shown = {
+		is_landed = yes
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = world_india }
+        }
+	}
+	
+	is_valid_showing_failures_only = {
+	}
+
+	is_valid = {
+	}
+	
+	widget = {
+		gui = "decision_view_widget_generic_multichoice_with_effects"
+		controller = decision_option_list_controller
+		decision_to_second_step_button = "CHOOSE_INDIAN_FAITH"
+		show_from_start = yes
+		
+		### ismaili
+		item = {
+			value = choose_ismaili
+			is_valid = {
+				NOT = { faith = faith:ismaili }
+			}
+			current_description = choose_ismaili_desc
+			localization = choose_ismaili_name
+			icon = "gfx/interface/icons/faith/shia.dds"
+			ai_chance = {
+				value = 10
+				if = {
+					limit = {
+						any_sub_realm_county = {
+							faith = faith:ismaili
+						}
+					}
+					add = 10
+				}
+			}
+		}
+		
+		### maulvi
+		item = {
+			value = choose_maulvi
+			is_valid = {
+				NOT = { faith = faith:maulvi }
+			}
+			current_description = choose_maulvi_desc
+			localization = choose_maulvi_name
+			icon = "gfx/interface/icons/faith/maulvi.dds"
+			ai_chance = {
+				value = 10
+				if = {
+					limit = {
+						any_held_title = {
+							tier = tier_county
+							title_province = { geographical_region = world_india_pakistan }
+						}
+					}
+					add = 20
+				}
+				if = {
+					limit = {
+						any_sub_realm_county = {
+							faith = faith:maulvi
+						}
+					}
+					add = 10
+				}
+			}
+		}
+		### malabarism
+		item = {
+			value = choose_malabarism
+			is_valid = {
+				NOT = { faith = faith:malabarism }
+			}
+			current_description = choose_malabarism_desc
+			localization = choose_malabarism_name
+			icon = "gfx/interface/icons/faith/malabarism.dds"
+			ai_chance = {
+				value = 10
+				if = {
+					limit = {
+						any_sub_realm_county = {
+							faith = faith:malabarism
+						}
+					}
+					add = 10
+				}
+				if = {
+					limit = { culture = { has_cultural_pillar = heritage_israelite } }
+					add = 50
+				}
+			}
+		}
+		### nestorian
+		item = {
+			value = choose_nestorian
+			is_valid = {
+				NOT = { faith = faith:nestorian }
+			}
+			current_description = choose_nestorian_desc
+			localization = choose_nestorian_name
+			icon = "gfx/interface/icons/faith/nestorian.dds"
+			ai_chance = {
+				value = 10
+				if = {
+					limit = {
+						any_sub_realm_county = {
+							faith = faith:nestorian
+						}
+					}
+					add = 10
+				}
+			}
+		}
+		### shaivism
+		item = {
+			value = choose_shaivism
+			is_valid = {
+				NOT = { faith = faith:shaivism }
+			}
+			current_description = choose_shaivism_desc
+			localization = choose_shaivism_name
+			icon = "gfx/interface/icons/faith/shaivism.dds"
+			ai_chance = {
+				value = 15
+				if = {
+					limit = {
+						any_sub_realm_county = {
+							faith = faith:shaivism
+						}
+					}
+					add = 10
+				}
+			}
+		}
+
+		### vaishnavism
+		item = {
+			value = choose_vaishnavism
+			is_valid = {
+				NOT = { faith = faith:vaishnavism }
+			}
+			current_description = choose_vaishnavism_desc
+			localization = choose_vaishnavism_name
+			icon = "gfx/interface/icons/faith/hinduism.dds"
+			ai_chance = {
+				value = 15
+				if = {
+					limit = {
+						any_sub_realm_county = {
+							faith = faith:vaishnavism
+						}
+					}
+					add = 10
+				}
+			}
+		}
+		
+		### svetambara
+		item = {
+			value = choose_svetambara
+			is_valid = {
+				NOT = { faith = faith:svetambara }
+			}
+			current_description = choose_svetambara_desc
+			localization = choose_svetambara_name
+			icon = "gfx/interface/icons/faith/svetambara.dds"
+			ai_chance = {
+				value = 10
+				if = {
+					limit = {
+						any_sub_realm_county = {
+							faith = faith:svetambara
+						}
+					}
+					add = 10
+				}
+			}
+		}
+		### vajrayana
+		item = {
+			value = choose_vajrayana
+			is_valid = {
+				NOT = { faith = faith:vajrayana }
+			}
+			current_description = choose_vajrayana_desc
+			localization = choose_vajrayana_name
+			icon = "gfx/interface/icons/faith/vajrayana.dds"
+			ai_chance = {
+				value = 10
+				if = {
+					limit = {
+						any_sub_realm_county = {
+							faith = faith:vajrayana
+						}
+					}
+					add = 10
+				}
+			}
+		}
+		### mahayana 
+		item = {
+			value = choose_mahayana
+			is_valid = {
+				NOT = { faith = faith:mahayana }
+			}
+			current_description = choose_mahayana_desc
+			localization = choose_mahayana_name
+			icon = "gfx/interface/icons/faith/mahayana.dds"
+			ai_chance = {
+				value = 10
+				if = {
+					limit = {
+						any_held_title = {
+							tier = tier_county
+							title_province = { geographical_region = world_india_bengal }
+						}
+					}
+					add = 20
+				}
+				if = {
+					limit = {
+						any_sub_realm_county = {
+							faith = faith:mahayana
+						}
+					}
+					add = 10
+				}
+			}
+		}
+		### theravada 
+		item = {
+			value = choose_theravada
+			is_valid = {
+				NOT = { faith = faith:theravada }
+			}
+			current_description = choose_theravada_desc
+			localization = choose_theravada_name
+			icon = "gfx/interface/icons/faith/buddhism.dds"
+			ai_chance = {
+				value = 10
+				if = {
+					limit = {
+						any_held_title = {
+							tier = tier_county
+							title_province = { geographical_region = custom_lanka }
+						}
+					}
+					add = 20
+				}
+				if = {
+					limit = {
+						any_sub_realm_county = {
+							faith = faith:theravada
+						}
+					}
+					add = 10
+				}
+			}
+		}
+	}
+	
+	effect = {
+		if = {
+			limit = { scope:choose_ismaili = yes }
+			capital_county = { set_county_faith = faith:ismaili }
+			show_as_tooltip = { set_character_faith = faith:ismaili }
+			hidden_effect = {
+				set_character_faith_with_conversion = faith:ismaili
+			}
+			faith:ismaili = {
+				change_fervor = {
+					value = 15
+					desc = fervor_gain_persian_fervor
+				}
+			}
+		}
+		if = {
+			limit = { scope:choose_maulvi = yes }
+			capital_county = { set_county_faith = faith:maulvi }
+			show_as_tooltip = { set_character_faith = faith:maulvi }
+			hidden_effect = {
+				set_character_faith_with_conversion = faith:maulvi
+			}
+			faith:maulvi = {
+				change_fervor = {
+					value = 15
+					desc = fervor_gain_persian_fervor
+				}
+			}
+		}
+		else_if = {
+			limit = { scope:choose_malabarism = yes  }
+			capital_county = { set_county_faith = faith:malabarism }
+			show_as_tooltip = { set_character_faith = faith:malabarism }
+			hidden_effect = {
+				set_character_faith_with_conversion = faith:malabarism
+			}
+			faith:malabarism = {
+				change_fervor = {
+					value = 15
+					desc = fervor_gain_persian_fervor
+				}
+			}
+		}
+		else_if = {
+			limit = { scope:choose_nestorian = yes  }
+			capital_county = { set_county_faith = faith:nestorian }
+			show_as_tooltip = { set_character_faith = faith:nestorian }
+			hidden_effect = {
+				set_character_faith_with_conversion = faith:nestorian
+			}
+			faith:nestorian = {
+				change_fervor = {
+					value = 15
+					desc = fervor_gain_persian_fervor
+				}
+			}
+		}
+		else_if = {
+			limit = { scope:choose_shaivism = yes  }
+			capital_county = { set_county_faith = faith:shaivism }
+			show_as_tooltip = { set_character_faith = faith:shaivism }
+			hidden_effect = {
+				set_character_faith_with_conversion = faith:shaivism
+			}
+			faith:shaivism = {
+				change_fervor = {
+					value = 15
+					desc = fervor_gain_persian_fervor
+				}
+			}
+		}
+		else_if = {
+			limit = { scope:choose_vaishnavism = yes  }
+			capital_county = { set_county_faith = faith:vaishnavism }
+			show_as_tooltip = { set_character_faith = faith:vaishnavism }
+			hidden_effect = {
+				set_character_faith_with_conversion = faith:vaishnavism
+			}
+			faith:vaishnavism = {
+				change_fervor = {
+					value = 15
+					desc = fervor_gain_persian_fervor
+				}
+			}
+		}
+		else_if = {
+			limit = { scope:choose_svetambara = yes  }
+			capital_county = { set_county_faith = faith:svetambara }
+			show_as_tooltip = { set_character_faith = faith:svetambara }
+			hidden_effect = {
+				set_character_faith_with_conversion = faith:svetambara
+			}
+			faith:svetambara = {
+				change_fervor = {
+					value = 15
+					desc = fervor_gain_persian_fervor
+				}
+			}
+		}
+		else_if = {
+			limit = { scope:choose_vajrayana = yes  }
+			capital_county = { set_county_faith = faith:vajrayana }
+			show_as_tooltip = { set_character_faith = faith:vajrayana }
+			hidden_effect = {
+				set_character_faith_with_conversion = faith:vajrayana
+			}
+			faith:vajrayana = {
+				change_fervor = {
+					value = 15
+					desc = fervor_gain_persian_fervor
+				}
+			}
+		}
+		else_if = {
+			limit = { scope:choose_mahayana = yes  }
+			capital_county = { set_county_faith = faith:mahayana }
+			show_as_tooltip = { set_character_faith = faith:mahayana }
+			hidden_effect = {
+				set_character_faith_with_conversion = faith:mahayana
+			}
+			faith:mahayana = {
+				change_fervor = {
+					value = 15
+					desc = fervor_gain_persian_fervor
+				}
+			}
+		}
+		else_if = {
+			limit = { scope:choose_theravada = yes  }
+			capital_county = { set_county_faith = faith:theravada }
+			show_as_tooltip = { set_character_faith = faith:theravada }
+			hidden_effect = {
+				set_character_faith_with_conversion = faith:theravada
+			}
+			faith:theravada = {
+				change_fervor = {
+					value = 15
+					desc = fervor_gain_persian_fervor
+				}
+			}
+		}
+		capital_county = {
+			add_county_modifier = {
+				modifier = religious_settler_influx
+				years = 25
+			}
+		}
+	}
+	
+	cost = {
+		piety = {
+			value = major_piety_value
+		}
+	}
+	
+	ai_potential = {
+		highest_held_title_tier >= tier_county
+		is_landed = yes
+		is_at_war = no
+	}
+
+	ai_will_do = {
+		base = 20
+		
+		modifier = {
+			add = {
+				value = ai_zeal
+				multiply = -0.5
+			}
+		}
+		
+		modifier = {
+			add = -20
+			has_trait = craven
+		}
+		
+		modifier = {
+			add = 20
+			has_trait = ambitious
 		}
 	}
 }

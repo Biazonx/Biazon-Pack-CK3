@@ -14,7 +14,6 @@ concubine = {
 	shown_in_ruler_designer = no
 	
 	name = game_concept_concubine
-	desc = ""
 }
 
 mamluk = {
@@ -25,6 +24,7 @@ mamluk = {
 	ruler_designer_cost = 50
 	
 	martial = 2
-	prowess = 4
+	prowess = 3
+	monthly_prestige = 1
 	flag = join_factions_more
 }

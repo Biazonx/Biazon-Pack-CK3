@@ -1089,8 +1089,8 @@
 			icon = hussite
 			graphical_faith = "catholic_gfx"
 
-			holy_site = prague
-			holy_site = tabor
+			holy_site = praha
+			holy_site = cologne
 			holy_site = jerusalem
 			holy_site = rome
 			holy_site = plock
@@ -1125,11 +1125,11 @@
 			icon = ultraquist
 			graphical_faith = "catholic_gfx"
 
-			holy_site = prague
+			holy_site = praha
+			holy_site = cologne
 			holy_site = jerusalem
 			holy_site = rome
-			holy_site = oxford
-			holy_site = cologne
+			holy_site = plock
 
 			#Tenets
 			doctrine = tenet_communal_identity
@@ -1161,11 +1161,11 @@
 			icon = orebites
 			graphical_faith = "catholic_gfx"
 
-			holy_site = prague
-			holy_site = jerusalem
-			holy_site = rome
 			holy_site = praha
 			holy_site = cologne
+			holy_site = jerusalem
+			holy_site = rome
+			holy_site = plock
 
 			#Tenets
 			doctrine = tenet_armed_pilgrimages
@@ -1206,10 +1206,10 @@
 			graphical_faith = "catholic_gfx"
 
 			holy_site = rome
-			holy_site = milan
-			holy_site = aquileia
+			holy_site = brescia
+			holy_site = genoa
 			holy_site = lyon
-			holy_site = padua
+			holy_site = chur
 
 			#Special Tolerance
 			doctrine = special_doctrine_ecumenical_christian
@@ -1251,7 +1251,7 @@
 			
 			religious_head = k_papal_state
 			
-			holy_site = aquileia
+			holy_site = brescia
 			holy_site = chur
 			holy_site = rome
 			holy_site = jerusalem
@@ -1353,7 +1353,7 @@
 			religious_head = d_maphrianate
 
 			holy_site = jerusalem
-			holy_site = mardin
+			holy_site = nadjaf
 			holy_site = baghdad
 			holy_site = farz
 			holy_site = antioch
@@ -1371,7 +1371,6 @@
 
 			#Tenets
 			doctrine = tenet_islamic_syncretism
-			doctrine = tenet_monasticism
 			doctrine = tenet_mendicant_preachers
 			doctrine = tenet_alexandrian_catechism
 
@@ -1444,10 +1443,10 @@
 			icon = malankaran
 
 			holy_site = kerala
-			holy_site = eastern_india
+			holy_site = jerusalem
 			holy_site = farz
 			holy_site = baghdad
-			holy_site = edessa
+			holy_site = aror
 
 			#Special Tolerance
 			doctrine = special_doctrine_ecumenical_christian
@@ -1459,7 +1458,6 @@
 			#Tenets
 			doctrine = tenet_pastoral_isolation
 			doctrine = tenet_communal_identity
-			doctrine = tenet_ritual_celebrations
 			doctrine = tenet_eastern_syncretism
 
 			#Ablution
@@ -1573,7 +1571,7 @@
 			holy_site = jerusalem
 			holy_site = rome
 			holy_site = carthage_adoptionist
-			holy_site = cyrenaica
+			holy_site = alexandria
 			holy_site = hippo
 
 			religious_head = k_papal_state
@@ -1748,9 +1746,9 @@
 			graphical_faith = "catholic_gfx"
 			religious_head = k_papal_state
 			
-			holy_site = kent	#Though Lindisfarne was certainly more important to them, Armagh & Iona already cover the northern & western British Isles, and Canterbury is symbolic of Rome's control over the Isles as a whole.
+			holy_site = kent	
 			holy_site = jerusalem
-			holy_site = lindisfarne
+			holy_site = rome
 			holy_site = iona
 			holy_site = lunden
 
@@ -1821,9 +1819,9 @@
 
 			holy_site = jerusalem
 			holy_site = rome
-			holy_site = aquileia
-			holy_site = padua
-			holy_site = milan
+			holy_site = pisa
+			holy_site = genoa
+			holy_site = chur
 
 			religious_head = k_papal_state
 
@@ -1861,8 +1859,8 @@
 			holy_site = jerusalem
 			holy_site = rome
 			holy_site = pisa
-			holy_site = aquileia
-			holy_site = padua
+			holy_site = chur
+			holy_site = genoa
 
 			#Special Tolerance
 			doctrine = special_doctrine_ecumenical_christian
@@ -1894,8 +1892,8 @@
 			holy_site = jerusalem
 			holy_site = rome
 			holy_site = pisa
-			holy_site = aquileia
-			holy_site = padua
+			holy_site = genoa
+			holy_site = chur
 
 			#Special Tolerance
 			doctrine = special_doctrine_ecumenical_christian
@@ -1920,15 +1918,15 @@
 			doctrine = special_doctrine_latin_rite
 			doctrine = catholic_autocephaly_heresy
 		}
-				strigolniki = {
+		strigolniki = {
 			color = { 54 117 73 }
 			icon = cad_orthodox_10
 		
-			holy_site = moscow
+			holy_site = romowe
 			holy_site = novgorod
 			holy_site = kiev
-			holy_site = minsk
-			holy_site = riga
+			holy_site = braslau
+			holy_site = jerusalem
 		
 			#Tenets
 			doctrine = tenet_legalism
@@ -2007,8 +2005,8 @@
 
 			holy_site = cologne
 			holy_site = kent
-			holy_site = prague
-			holy_site = luxembourg
+			holy_site = praha
+			holy_site = paris
 			holy_site = paderborn
 
 			#Tenets
@@ -2033,103 +2031,15 @@
 			#Ablution
 			doctrine = doctrine_me_ablution_none
 		}
-		lollard = {
-			color = { 0.5 0.8 0.8 }
-			icon = christianity_lollard
-			graphical_faith = "catholic_gfx"
 
-			#Shared with Catholics
-			holy_site = oxford
-			holy_site = cologne
-			holy_site = glastonbury
-			holy_site = kent
-			holy_site = prague
-
-			#Tenets
-			doctrine = tenet_pacifism
-			doctrine = tenet_aniconism
-			doctrine = tenet_literalism
-
-			#Main Group
-			doctrine = doctrine_theocracy_lay_clergy
-			doctrine = doctrine_apostolic_poverty
-			doctrine = doctrine_clerical_marriage_allowed
-			doctrine = doctrine_pilgrimage_forbidden
-
-			#Crimes
-			doctrine = doctrine_homosexuality_crime
-			doctrine = doctrine_adultery_men_crime
-
-			#Theology
-			doctrine = doctrine_christology_diophysite
-			doctrine = doctrine_circumincession_trinitarian
-
-			#Ecclesiology
-			doctrine = special_doctrine_local_rite
-			doctrine = catholic_autocephaly_heresy
-		}
-				paulician  = {
-			color = { 0.65 0.15 0.45 }
-			icon = christianity_paulicanism
-
-			holy_site = philippopolis
-			holy_site = samosata
-			holy_site = tephrike
-			holy_site = mt_tondrak
-			holy_site = ohrid
-
-			#Main Group
-			doctrine = doctrine_pluralism_fundamentalist
-			doctrine = doctrine_pilgrimage_forbidden
-			doctrine = doctrine_clerical_function_recruitment
-
-			#Crimes
-			doctrine = doctrine_homosexuality_crime
-			doctrine = doctrine_adultery_men_crime
-
-			#Tenets
-			doctrine = tenet_gnosticism
-			doctrine = tenet_fire_baptism
-			doctrine = tenet_unrelenting_faith
-			doctrine = rice_food_purification_doctrine
-
-			#Ablution
-			doctrine = doctrine_me_ablution_none
-
-			#Theology
-			doctrine = doctrine_christology_doctrine_arianism
-			doctrine = doctrine_circumincession_dualism
-			doctrine = doctrine_sacred_scriptures
-			doctrine = doctrine_ditheistic
-			doctrine = doctrine_dualistic
-			doctrine = doctrine_aspects
-			doctrine = doctrine_prophets
-			doctrine = doctrine_judgement_day
-			doctrine = gnostic_school_marcionism
-
-			#Ecclesiology
-			#At least at the time of the earlier start dates
-			doctrine = catholic_autocephaly_heresy
-			doctrine = special_doctrine_armenian_rite
-
-			localization = {
-				ReligiousText = paulician_religious_text
-				ReligiousText2 = paulician_religious_text_2
-				ReligiousText3 = paulician_religious_text_3
-
-				# Patriarchs instead of Popes
-				ReligiousHeadName = orthodox_religious_head_title
-				ReligiousHeadTitleName = orthodox_religious_head_title_name						
-			}
-		}
 	arnoldists = {
 			color = { 124 217 134 }
 			icon = christianity_custom_1
 			graphical_faith = "catholic_gfx"
 
-			holy_site = milan
+			holy_site = pisa
 			holy_site = brescia
-			holy_site = messina
+			holy_site = genoa
 			holy_site = jerusalem
 			holy_site = rome
 
@@ -2170,7 +2080,7 @@
 			holy_site = cologne
 			holy_site = paris
 			holy_site = lyon
-			holy_site = prague
+			holy_site = macon
 			
 			#Tenets
 			doctrine = tenet_esotericism
@@ -2216,11 +2126,11 @@
 			icon = pastoreaux
 			
 			#Shared with Catholics
-			holy_site = oxford
+			holy_site = lunden
 			holy_site = cologne
-			holy_site = glastonbury
+			holy_site = pest
 			holy_site = kent
-			holy_site = prague
+			holy_site = praha
 			
 			#Main Group
 			doctrine = doctrine_temporal_head
@@ -2247,7 +2157,7 @@
 
 			#Shared with Catholics
 			holy_site = cologne
-			holy_site = glastonbury
+			holy_site = albi
 			holy_site = macon
 			holy_site = toulouse
 			holy_site = lyon
@@ -2381,42 +2291,6 @@
 			doctrine = special_doctrine_local_rite
 			doctrine = catholic_autocephaly_heresy
 		}
-		waldensian = {
-			color = { 0.35 0.25 0.6 }
-			icon = christianity_waldensian
-			graphical_faith = "catholic_gfx"
-
-			#Shared with Catholics
-			holy_site = jerusalem
-			holy_site = rome
-			holy_site = lyon
-			holy_site = cologne
-			holy_site = paris
-
-			#Tenets
-			doctrine = tenet_vows_of_poverty
-			doctrine = tenet_mendicant_preachers
-			doctrine = tenet_aniconism
-
-			#Main Group
-			doctrine = doctrine_pluralism_pluralistic
-			doctrine = doctrine_theocracy_lay_clergy
-			doctrine = doctrine_pilgrimage_forbidden
-
-			#Crimes
-			doctrine = doctrine_homosexuality_crime
-			doctrine = doctrine_adultery_men_crime
-
-			#Theology
-			doctrine = doctrine_christology_diophysite
-			doctrine = doctrine_circumincession_trinitarian
-			doctrine = doctrine_personal
-			doctrine = doctrine_apostolic_poverty
-
-			#Ecclesiology
-			doctrine = special_doctrine_gallican_rite
-			doctrine = catholic_autocephaly_heresy
-		}
 		gottesfreunde = { 
 			color = { 201 72 61 }
 			icon = wizrobed_protestant_red
@@ -2426,7 +2300,7 @@
 			holy_site = cologne
 			holy_site = jerusalem
 			holy_site = rome
-			holy_site = oxford
+			holy_site = kent
 
 			#Tenets
 			doctrine = tenet_communal_identity
@@ -2453,15 +2327,15 @@
 			doctrine = special_doctrine_local_rite
 			doctrine = catholic_autocephaly_heresy
 		}
-				aerianism = {
+		aerianism = {
 			icon = wizrobed_protestant_gray
 			color = { 96 122 163}
 
-			holy_site = sebaste
+			holy_site = damascus
 			holy_site = jerusalem
 			holy_site = colonea
 			holy_site = antioch
-			holy_site = kartli
+			holy_site = alexandria
 
 			#Tenets
 			doctrine = tenet_asceticism
@@ -2549,58 +2423,7 @@
 				ReligiousHeadTitleName = orthodox_religious_head_title_name
 			}
 		}
-		adamites = {
-			color = { 0.6 0.8 0.6 }
-			icon = wizrobed_adamites	
-			graphical_faith = "catholic_gfx"
-
-			holy_site = rome
-			holy_site = jerusalem
-			holy_site = fes
-			holy_site = alexandria
-			holy_site = carthage
-
-			#Tenets
-			doctrine = tenet_natural_primitivism
-			doctrine = tenet_sanctity_of_nature
-			doctrine = tenet_communal_identity
-
-			#Main Group
-			doctrine = doctrine_no_head
-			doctrine = doctrine_gender_equal
-			doctrine = doctrine_pluralism_righteous
-			doctrine = doctrine_theocracy_lay_clergy
-
-			#Marriage
-			doctrine = doctrine_concubines
-			doctrine = doctrine_divorce_allowed
-			doctrine = doctrine_bastardry_none
-			doctrine = doctrine_consanguinity_unrestricted
-
-			#Crimes
-			doctrine = doctrine_homosexuality_accepted
-			doctrine = doctrine_adultery_men_accepted
-			doctrine = doctrine_adultery_women_accepted
-			doctrine = doctrine_kinslaying_accepted
-			doctrine = doctrine_deviancy_accepted
-			doctrine = doctrine_witchcraft_accepted
-
-			#Clerical Functions
-			doctrine = doctrine_clerical_function_alms_and_pacification
-			doctrine = doctrine_clerical_gender_either
-			doctrine = doctrine_clerical_marriage_disallowed
-			doctrine = doctrine_clerical_succession_temporal_appointment
-
-			#Theology
-			doctrine = doctrine_christology_doctrine_arianism
-			doctrine = doctrine_circumincession_unitarianism
-
-			#Ecclesiology
-			doctrine = special_doctrine_local_rite
-			doctrine = catholic_autocephaly_heresy
-	}
-
-
+		
 		marcianism = {
 			color = { 242 231 134 }
 			icon = marcianism
@@ -2686,11 +2509,11 @@
 			color = { 0.2 0.9 0.5 }
 			icon = vilgard
 
-			holy_site = brindisi
+			holy_site = pisa
 			holy_site = rome
-	    		holy_site = ravenna
-			holy_site = venosa
-			holy_site = constanta
+	    	holy_site = ravenna
+			holy_site = genoa
+			holy_site = brescia
 
 			doctrine = doctrine_sacred_scriptures
 			doctrine = doctrine_syncretic_mythology
@@ -2700,7 +2523,6 @@
 
 			doctrine = tenet_astrology
 			doctrine = tenet_esotericism
-			doctrine = tenet_literalism
 			doctrine = tenet_unreformed_syncretism
 
 			doctrine = doctrine_no_head
@@ -2838,17 +2660,15 @@
 			color = { 235 24 60 }
 			icon = pelagianism 
 			
-			holy_site = oxford
+			holy_site = lunden
 			holy_site = cologne
-			holy_site = glastonbury
+			holy_site = paris
 			holy_site = kent
-			holy_site = prague
+			holy_site = praha
 		
 			#Tenets
 			doctrine = tenet_communal_identity
-			doctrine = tenet_religious_legal_pronouncements
 			doctrine = tenet_pastoral_isolation
-
 			doctrine = tenet_unreformed_syncretism
 			
 			#Theology

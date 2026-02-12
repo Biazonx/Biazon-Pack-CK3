@@ -1,0 +1,11 @@
+﻿l_french:
+  
+ trait_lifestyle_tournamentchampion: "Champion du tournoi" #NT!
+ trait_lifestyle_tournamentchampion_desc: "Il anticipait les coups de ses adversaires, identifiait leurs points forts et exploitant les ouvertures au bon moment. Il gagnait des batailles avant d'y participer et, sur l'échiquier, il jouait avec la psychologie du combat." #NT!
+ trait_lifestyle_tournamentchampion_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] anticipait les coups de ses adversaires, identifiait leurs points forts et exploitait les ouvertures au bon moment. Il gagnait des batailles avant d'y participer et, sur l'échiquier, il jouait avec la psychologie du combat." #NT!
+  
+ trait_track_lifestyle_tournamentchampion: "Champion du tournoi" #NT!
+ trait_track_lifestyle_tournamentchampion_desc: "None" #NT!
+  
+ tournamentchampion_modifier: "Champion du tournoi" #NT!
+ tournamentchampion_modifier_custom_desc: "Champion du tournoi [SCOPE.sCharacter('tournamentchampionhouse').GetName], ses grandes victoires resteront dans les mémoires comme des histoires qui résonneront à travers les générations." #NT!

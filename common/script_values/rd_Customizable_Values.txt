@@ -1,0 +1,1 @@
+﻿RD_CONQUEROR_CHOSEN_SPAN_BASE = 10 # Default is 10 (years)

@@ -1,0 +1,15 @@
+﻿##################################################
+# #Dynasty Modifiers
+
+eec_legacy_of_piracy_modifier = {
+	icon = horse_dead_positive
+	# This modifier gives access to raiding & overseas raiding.
+	raid_speed = 0.5
+	embarkation_cost_mult = -0.5
+}
+
+eec_crete_pirate_capital_modifier = {
+	icon = horse_dead_positive
+	build_speed = -2
+	build_gold_cost = -0.5
+}

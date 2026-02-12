@@ -1,0 +1,11 @@
+﻿l_russian:
+  
+ trait_lifestyle_tournamentchampion: "Чемпион турнира" #NT!
+ trait_lifestyle_tournamentchampion_desc: "Он предугадывал ходы своих противников, определял их сильные стороны и использовал дебюты в нужный момент. Он выигрывал битвы, прежде чем участвовать в них, и на шахматной доске он играл с психологией боя." #NT!
+ trait_lifestyle_tournamentchampion_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] предугадывал ходы соперников, определял их сильные стороны и использовал дебюты в нужный момент. Он выигрывал битвы, прежде чем участвовать в них, и на шахматной доске он играл с психологией боя." #NT!
+  
+ trait_track_lifestyle_tournamentchampion: "Чемпион турнира" #NT!
+ trait_track_lifestyle_tournamentchampion_desc: "Чемпион турнира — это больше, чем просто воин." #NT!
+  
+ tournamentchampion_modifier: "Чемпион турнира" #NT!
+ tournamentchampion_modifier_custom_desc: "Чемпион турнира [SCOPE.sCharacter('tournamentchampionhouse').GetName], его великие победы запомнятся как истории, которые эхом передадутся через поколения." #NT!

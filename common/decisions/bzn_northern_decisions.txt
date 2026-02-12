@@ -1,0 +1,963 @@
+﻿embrace_bogatyrs_legacy_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_culture.dds"
+	}
+	sort_order = 80
+
+	ai_check_interval = 120
+
+	cooldown = { years = 5 }
+
+	desc = embrace_bogatyrs_legacy_decision_desc
+	decision_group_type = major
+
+	is_shown = {
+		OR = { 
+			culture = { has_cultural_pillar = heritage_west_slavic }
+			culture = { has_cultural_pillar = heritage_east_slavic }
+			culture = { has_cultural_pillar = heritage_south_slavic }
+			
+			AND = {
+			culture = { has_cultural_pillar = heritage_north_germanic }
+			any_held_title = {
+				tier = tier_county
+				title_province = { geographical_region = ghw_region_russia }
+				}
+			}
+		}
+		
+		NOT = { culture = { has_cultural_tradition = tradition_bogatyrs_legacy } }
+	}
+	
+	is_valid = {
+		highest_held_title_tier >= 5 #Only Emperors
+		culture = { 
+		OR = { 
+			has_cultural_pillar = heritage_west_slavic
+			has_cultural_pillar = heritage_east_slavic
+			has_cultural_pillar = heritage_south_slavic
+
+			}
+		}
+	}	
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_independent_ruler = yes
+	}
+
+	effect = {
+		random_culture_global = {
+			limit = {
+				has_same_culture_language = root.culture
+			}
+			save_scope_as = target_other_culture
+		}
+		culture = {
+			remove_culture_tradition = tradition_hussar
+			remove_culture_tradition = tradition_druzhina
+			remove_culture_tradition = tradition_poetry
+			remove_culture_tradition = tradition_fp1_northern_stories
+			remove_culture_tradition = tradition_runestones
+			remove_culture_tradition = tradition_storytellers
+			add_culture_tradition = tradition_bogatyrs_legacy
+			}
+		}
+	
+	cost = {
+		prestige = {
+			value = massive_prestige_value
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+northern_crusade_decision = {
+	sort_order = 100
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/ep3_decision_varangian_guard.dds"
+	}
+	decision_group_type = regional_major
+	desc = northern_crusade_desc
+	selection_tooltip = northern_crusade_tooltip
+
+	ai_check_interval = 120
+
+	is_shown = {
+		AND = {
+		NOT = {
+		is_target_in_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:northern_crusade_completed
+			}
+		}
+		faith = faith:catholic
+		OR = {
+			culture = culture:swedish
+			culture = culture:danish
+			culture = culture:norwegian
+			culture = culture:norse
+			AND = { 
+				highest_held_title_tier >= tier_empire
+				culture = culture:franconian
+				}
+			}
+		}
+	}
+
+	is_valid = {
+		faith = faith:catholic
+		OR = { 
+			culture = culture:swedish
+			culture = culture:danish
+			culture = culture:norwegian
+			culture = culture:norse
+			has_primary_title = title:e_hre
+		}
+		highest_held_title_tier >= tier_kingdom
+		is_independent_ruler = yes
+		faith.religious_head = {	#And they have to actually like you enough to want to invest you.
+			opinion = {
+				target = root
+				value >= high_positive_opinion
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		NOT = {
+			government_has_flag = government_is_landless_adventurer
+		}
+	}
+
+	widget = {
+    	gui = "decision_view_widget_vata"
+		controller = decision_option_list_controller
+		
+		decision_has_second_step = yes
+		decision_custom_widget_container = "custom_widgets_container_step_two"
+		decision_to_second_step_button = "NORTHERN_CRUSADE_NEXT_STEP_BUTTON" 
+
+		# Target Finland
+		item = {
+			value = northern_crusade_finland_target
+			is_shown = {
+				game_start_date < 1178.1.1
+			}
+			is_valid = {
+			}		
+			current_description = {
+				desc = northern_crusade_finland_desc
+			}
+			localization  = {				
+				desc = northern_crusade_finland_target_desc				
+			}
+			icon = "gfx/interface/icons/casus_bellis/directed_great_holy_war.dds"
+
+			ai_chance = {
+				value = 33
+			}
+		}
+
+		# Target Pomerania
+		item = {
+			value = northern_crusade_pomerania_target
+			is_shown = {
+				game_start_date < 1178.1.1
+			}
+			is_valid = {
+			}		
+			current_description = {
+				desc = northern_crusade_pomerania_desc
+			}
+			localization  = {				
+				desc = northern_crusade_pomerania_target_desc				
+			}
+			icon = "gfx/interface/icons/casus_bellis/directed_great_holy_war.dds"
+
+			ai_chance = {
+				value = 33
+			}
+		}	
+
+		# Target Lithuania
+		item = {
+			value = northern_crusade_lithuania_target
+			is_shown = {
+			}
+			is_valid = {
+			}			
+			current_description = {
+				desc = northern_crusade_lithuania_desc
+			}
+			localization  = {
+				desc = northern_crusade_lithuania_target_desc	
+			}
+			icon = "gfx/interface/icons/casus_bellis/directed_great_holy_war.dds"
+
+			ai_chance = {
+				value = 33
+			}
+		}	
+	}
+	
+	cost = { piety = 1000 gold = 250 }
+
+	effect = {
+		
+		# Explanatory Tooltips
+		custom_tooltip = northern_crusade_effect
+		trigger_event = { id = northern_crusade_major_decisions.0001 }
+
+		hidden_effect = {
+			if = {
+				limit = { scope:northern_crusade_finland_target = yes }
+				start_war = {
+					cb = directed_great_holy_war
+					target = title:c_finland.holder
+					claimant = root
+					target_title = title:k_finland
+				}
+				add_to_global_variable_list = {
+					name = unavailable_unique_decisions
+					target = flag:northern_crusade_completed
+				}	
+			}
+			else_if = {
+				limit = { scope:northern_crusade_pomerania_target = yes }
+				start_war = {
+					cb = directed_great_holy_war
+					target = title:c_rugen.holder
+					claimant = root
+					target_title = title:k_pomerania
+				}
+				add_to_global_variable_list = {
+					name = unavailable_unique_decisions
+					target = flag:northern_crusade_completed
+				}	
+			}
+			else_if = {
+				limit = { scope:northern_crusade_lithuania_target = yes }
+				start_war = {
+					cb = directed_great_holy_war
+					target = title:c_konigsberg.holder
+					claimant = root
+					target_title = title:k_lithuania
+				}
+				add_to_global_variable_list = {
+					name = unavailable_unique_decisions
+					target = flag:northern_crusade_completed
+				}	
+			}
+		}
+	}
+	
+	ai_potential = { 
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 20
+	}
+}
+
+bzn_invite_russian_settlers_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/tgp_silk_road.dds"
+    }
+
+    decision_group_type = regional_major
+
+    ai_check_interval = 120
+
+    cooldown = { years = 5 }
+
+    is_shown = {
+		is_landed = yes
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = world_siberia_2 }
+		}
+		NOT = { root.culture = { has_cultural_tradition = tradition_siberian_isolationism }}
+    }
+	
+	is_valid = {
+			any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = world_siberia_2 }
+        }
+	}
+		
+    desc = bzn_invite_russian_settlers_decision_desc
+
+    effect = {
+		every_held_title = {
+			limit = {
+				tier = tier_county
+				is_landless_type_title = no
+				}
+			change_county_control = 15
+			change_development_progress_with_overflow = 50
+		}
+        
+		trigger_event = {
+            id = bzn_decisions.0015
+            days = { 5 10 }
+        }
+		 trigger_event = {
+            id = bzn_decisions.0016
+            days = { 5 10 }
+        }
+		 trigger_event = {
+            id = bzn_decisions.0017
+            days = { 5 10 }
+        }
+		if = {
+			limit = { NOT = { has_character_modifier = world_siberia_2 } }
+			add_character_modifier = russian_settlers
+		}
+
+    }
+
+    cost = { prestige = 100 }
+
+    ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 50
+	}
+}
+
+bzn_russian_traders_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_spend_money.dds"
+    }
+
+    decision_group_type = regional_major
+	
+    ai_check_interval = 120
+
+    cooldown = { years = 5 }
+
+    is_shown = {
+        is_landed = yes
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = world_siberia_2 }
+        }
+		NOT = { has_character_modifier = russian_traders }
+		NOT = { root.culture = { has_cultural_tradition = tradition_siberian_isolationism }}
+       }
+
+	
+	is_valid = {
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = world_siberia_2 }
+        }
+	}
+
+    desc = bzn_russian_traders_decision_desc
+
+    effect = {
+		add_character_modifier = russian_traders
+    }
+
+    cost = { gold = 75 }
+
+    ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 50
+	}
+}
+	
+bzn_blend_russian_traditions_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_culture.dds"
+    }
+
+    decision_group_type = regional_major
+	
+    ai_check_interval = 120
+
+    cooldown = { years = 5 }
+
+    is_shown = {
+		NOT = {  # Can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:blend_russian_traditions
+			}
+		}
+        is_landed = yes
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = world_siberia_2 }
+        }
+		has_character_modifier = russian_settlers
+		has_character_modifier = russian_traders
+    }
+	
+	is_valid = {
+		has_character_modifier = russian_settlers
+		has_character_modifier = russian_traders
+	}
+
+    desc = bzn_blend_russian_traditions_decision_desc
+
+    effect = {
+		culture:russian = { save_scope_as = original_russian_culture }
+		culture = { save_scope_as = original_character_culture }
+		create_hybrid_culture = culture:russian
+		custom_tooltip = random_traditions_tt
+		hidden_effect = {
+			if = {
+				limit = {
+					root.culture = {
+						NOT = {
+							has_same_culture_heritage = scope:original_russian_culture
+						}
+					}
+				}
+				root.culture = {
+					set_heritage_from = root.domicile.domicile_culture
+				}
+			}
+			every_held_title = {
+				limit = {
+					tier = tier_county
+					is_landless_type_title = no
+				}
+				set_county_culture = root.culture
+			}
+			# Spouses convert
+			every_spouse = {
+				limit = {
+					is_courtier_of = root
+					OR = {
+						culture = scope:original_character_culture
+						culture = scope:original_russian_culture
+					}
+					NOT = { culture = root.culture }
+				}
+				add_to_list = spouses_and_family_to_convert
+			}
+			# Family at court also convert
+			every_close_or_extended_family_member = {
+				limit = {
+					is_courtier_of = root
+					OR = {
+						culture = scope:original_character_culture
+						culture = scope:original_russian_culture
+					}
+					NOT = { culture = root.culture }
+				}
+				add_to_list = spouses_and_family_to_convert
+			}
+			every_in_list = {
+				list = spouses_and_family_to_convert
+				set_culture = root.culture
+			}
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:blend_russian_traditions
+			}	
+		}
+	}
+
+    cost = { prestige = 1000 }
+
+    ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+bzn_siberia_convertion = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	}
+	decision_group_type = regional_major
+	
+	cooldown = { years = 15 } #No cooldown needed as its not available if you take it
+
+	is_shown = {
+        is_landed = yes
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = world_siberia_2 }
+        }
+		OR = {
+			has_character_modifier = russian_settlers
+			has_character_modifier = russian_traders
+		}
+			
+		NOR = { faith = faith:catholic faith = faith:orthodox faith = faith:rabbinism }
+	}
+
+	is_valid = {
+		 any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = world_siberia_2 }
+        }
+	}
+
+	is_valid_showing_failures_only = {
+		
+	}
+
+	desc = bzn_siberia_convertion_desc
+
+	cost = { #Uses normal conversion cost (which is discounted by the same tradition)
+	}
+
+	widget = {
+		gui = "decision_view_widget_option_list_generic"
+		controller = decision_option_list_controller
+		decision_to_second_step_button = "CHOOSE_SIBERIA_FAITH_TO_CONVERT_TO"
+		show_from_start = yes
+
+		item = {
+			value = catholic
+			current_description = convert_to_catholic_via_decision_desc
+			localization = convert_to_catholic
+			icon = "gfx/interface/icons/faith/catholic.dds"
+			is_valid = {
+				
+			}
+			ai_chance = {
+				value = {
+					add = 33
+				}
+			}
+		}
+
+		item = {
+			value = orthodox
+			current_description = convert_to_orthodox_via_decision_desc
+			localization = convert_to_orthodox
+			icon = "gfx/interface/icons/faith/orthodox.dds"
+			is_valid = {
+			}
+			ai_chance = {
+				value = {
+					add = 33
+				}
+			}
+		}
+
+		item = {
+			value = rabbinism
+			current_description = convert_to_rabbinism_via_decision_desc
+			localization = convert_to_rabbinism
+			icon = "gfx/interface/icons/faith/rabbinism.dds"
+			is_valid = {
+			}
+			ai_chance = {
+				value = {
+					add = 33
+				}
+			}
+		}
+	}
+
+	cost = {
+		piety = {
+			value = 50
+		}
+	}
+
+
+	effect = {
+
+		save_scope_as = root_scope
+
+		if = {
+			limit = {
+				scope:catholic = yes
+			}
+
+			set_character_faith = faith:catholic
+			capital_county = { set_county_faith = faith:catholic }
+
+		}
+		else_if = {
+			limit = {
+				scope:orthodox = yes
+			}
+			set_character_faith = faith:orthodox
+			capital_county = { set_county_faith = faith:orthodox }
+		}
+		else = {
+			set_character_faith = faith:rabbinism
+			capital_county = { set_county_faith = faith:rabbinism }
+
+		}
+		trigger_event = faith_conversion.1001
+	}
+	
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 120
+		duchy = 120
+		kingdom = 120
+		empire = 120
+		hegemony = 0
+	}
+
+	ai_will_do = {
+		base = 40
+	}
+}
+
+bzn_found_northern_capital_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp1_decision_raise_runestone.dds"
+	}
+	decision_group_type = regional_major
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 120
+		empire = 120
+		hegemony = 120
+	}
+
+	desc = bzn_found_northern_capital_decision_desc
+
+	is_shown = {
+        is_landed = yes
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = world_siberia_2 }
+        }
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_founded_northern_capital
+			}
+		}
+	}
+
+	is_valid = {
+		highest_held_title_tier >= tier_duchy
+		#Must be independent.
+		top_liege = this
+		#Has to be around to organise the construction.
+		is_imprisoned = no
+		#Should have a decent prestige level.
+		prestige_level >= 4
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = world_siberia_2 }
+        }
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_at_peace_adult = yes
+	}
+
+	effect = {
+		save_scope_as = founder
+		scope:founder.capital_county = { save_scope_as = new_northern_capital }
+		show_as_tooltip = { found_northern_capital_scripted_effect = yes }
+		trigger_event = { id = bzn_decisions.0018 }
+		#Notifying other players is done in scope:founder's event, as scope:founder may change the circumstances of the decision with their option choice.
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_founded_northern_capital
+			}
+		}
+	}
+
+	cost = {
+		gold = {
+			value = 0
+			if = {
+				limit = {
+					has_treasury = no
+				}
+				add = 100
+			}
+		}
+		treasury = {
+			value = 0
+			if = {
+				limit = {
+					has_treasury = yes
+				}
+				add = 100
+			}
+		}
+		prestige = 500
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 0
+
+		# Weight up for traits.
+		modifier = {
+			add = 25
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 25
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 25
+			has_trait = architect
+		}
+		modifier = {
+			add = 25
+			has_trait = administrator
+		}
+		modifier = {
+			add = 25
+			has_trait = lifestyle_traveler
+		}
+
+		# Weight up for game year.
+		modifier = {
+			add = 25
+			current_year >= 920
+		}
+		modifier = {
+			add = 25
+			current_year >= 980
+		}
+	}
+}
+
+bzn_siberian_isolationism_tradition_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_culture.dds"
+    }
+    decision_group_type = regional_major
+    ai_check_interval = 240
+
+    is_shown = {
+        is_landed = yes
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = world_siberia_2 }
+        }
+		NOT = { has_variable = siberian_isolationism_tradition }
+		NOT = { root.culture = { has_cultural_tradition = tradition_siberian_isolationism }}
+		NOR = { has_character_modifier = russian_settlers has_character_modifier = russian_traders }
+    }
+
+    is_valid = {
+		NOR = { has_character_modifier = russian_settlers has_character_modifier = russian_traders }
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = world_siberia_2 }
+        }
+    }
+
+    desc = bzn_siberian_isolationism_tradition_decision_desc
+    cost = { prestige = 1000 }
+
+    effect = {
+        root.culture = {
+			remove_culture_tradition = tradition_isolationist
+            add_culture_tradition = tradition_siberian_isolationism
+        }
+		set_variable = {
+			name = siberian_isolationism_tradition
+			years = 1000
+		}
+    }
+
+    ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 10
+	}
+}
+
+bzn_consult_forest_seers_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/event_scenes/forest.dds"
+    }
+    decision_group_type = regional_major
+    ai_check_interval = 120
+	
+	cooldown = { years = 5 }
+
+    is_shown = {
+        is_landed = yes
+		faith = { has_doctrine = tenet_sanctity_of_nature }
+    }
+
+    is_valid = {
+		faith = { has_doctrine = tenet_sanctity_of_nature }
+    }
+
+    desc = bzn_consult_forest_seers_decision_desc
+    cost = { gold = 25 prestige = 50 }
+
+    effect = {
+		add_piety = 300
+		random_list = {
+            90 = { }
+            10 = { add_trait = lifestyle_mystic }
+        } 
+    }
+
+    ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 50
+	}
+}
+
+# River Expedition
+bzn_river_expedition_decision = {
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_longship.dds" }
+	decision_group_type = regional_major
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 64
+		duchy = 64
+		kingdom = 48
+		empire = 48
+		hegemony = 48
+	}
+
+	cooldown = { years = 10 }
+	
+	desc = bzn_river_expedition_decision_desc
+	
+	is_shown = {
+		is_landed = yes
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = world_siberia_2 }
+        }
+	}
+	
+	is_valid = {
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = world_siberia_2 }
+        }
+	}
+
+	effect = {
+		custom_tooltip = bzn_river_expedition_effect_tooltip_1
+		trigger_event = {
+			id = bzn_decisions.0019
+			days = { 7 21 } 
+		}
+	}
+
+	cost = { 
+		gold = 75
+	}	
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+		modifier = {
+			add = -8
+			has_trait = content
+		}
+		modifier = {
+			add = 8
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -8
+			has_trait = craven
+		}
+		modifier = {
+			add = 8
+			has_trait = brave
+		}
+	}
+}
+
+bzn_frontier_warriors_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/men_at_arms_big/maturkan_warriors.dds"
+	}
+	
+	desc = bzn_frontier_warriors_decision_desc
+	decision_group_type = regional_major
+	
+	ai_check_interval = 120
+	
+	cooldown = { years = 10 }
+
+	is_shown = {
+		is_landed = yes
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = world_siberia_2 }
+        }
+	}
+	
+	is_valid = {
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = world_siberia_2 }
+        }
+	}
+	
+	cost = { prestige = 150 }
+
+	effect = {
+		add_character_flag = {
+			flag = hired_frontier_warriors
+		}
+		spawn_army = {
+			men_at_arms = {
+				type = maturkan_warriors
+				stacks = 5
+			}
+			location = root.capital_province
+			inheritable = no
+			name = frontier_warriors
+		}
+	}
+	
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 50
+	}
+}
+

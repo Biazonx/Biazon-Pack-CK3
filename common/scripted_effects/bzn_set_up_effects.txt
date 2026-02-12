@@ -1,0 +1,6 @@
+﻿bzn_setup_innovation_early_effect = { 
+		#Boyar
+		culture:russian = { 
+			add_innovation = innovation_slavic_boyar
+		}		
+}

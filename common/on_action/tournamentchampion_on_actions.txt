@@ -1,0 +1,108 @@
+﻿five_year_everyone_pulse = {
+    on_actions = {
+        tournamentchampionhouse_action = yes
+    }
+}
+
+tournamentchampionhouse_action = {
+    effect = {
+        tournamentchampionhouse_effects = yes
+    }
+}
+
+
+
+contest_ongoing_event_melee_outcome_pulse = {
+    on_actions = {
+        tournamentchampionmelee_action = yes
+    }
+}
+tournamentchampionmelee_action = {
+    effect = {
+        tournamentchampionmelee_effects = yes
+    }
+}
+
+
+contest_ongoing_event_archery_outcome_pulse = {
+    on_actions = {
+        tournamentchampionarchery_action = yes
+    }
+}
+tournamentchampionarchery_action = {
+    effect = {
+        tournamentchampionarchery_effects = yes
+    }
+}
+
+
+contest_ongoing_event_recital_outcome_pulse = {
+    on_actions = {
+        tournamentchampionrecital_action = yes
+    }
+}
+tournamentchampionrecital_action = {
+    effect = {
+        tournamentchampionrecital_effects = yes
+    }
+}
+
+
+contest_bout_joust_outcome_pulse = {
+    on_actions = {
+        tournamentchampionjoust_action = yes
+    }
+}
+tournamentchampionjoust_action = {
+    effect = {
+        tournamentchampionjoust_effects = yes
+    }
+}
+
+
+contest_bout_wrestling_outcome_pulse = {
+    on_actions = {
+        tournamentchampionwrestling_action = yes
+    }
+}
+tournamentchampionwrestling_action = {
+    effect = {
+        tournamentchampionwrestling_effects = yes
+    }
+}
+
+
+contest_bout_duel_outcome_pulse = {
+    on_actions = {
+        tournamentchampionduel_action = yes
+    }
+}
+tournamentchampionduel_action = {
+    effect = {
+        tournamentchampionduel_effects = yes
+    }
+}
+
+
+contest_bout_board_game_outcome_pulse = {
+    on_actions = {
+        tournamentchampionboard_action = yes
+    }
+}
+tournamentchampionboard_action = {
+    effect = {
+        tournamentchampionboard_effects = yes
+    }
+}
+
+
+contest_ongoing_event_horse_race_outcome_pulse = {
+    on_actions = {
+        tournamentchampionhorse_action = yes
+    }
+}
+tournamentchampionhorse_action = {
+    effect = {
+        tournamentchampionhorse_effects = yes
+    }
+}

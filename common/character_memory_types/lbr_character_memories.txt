@@ -1,0 +1,40 @@
+﻿# Lowborn Rise Character Memory Types
+# Updated for CK3 1.18+
+
+ennobled_memory = {
+	categories = { positive title }
+	icon = "title.dds"
+	
+	description = {
+		first_valid = {
+			desc = ennobled_memory_desc
+		}
+	}
+
+	participants = {
+		grantor = {
+			type = character
+		}
+	}
+
+	duration = 3650
+}
+
+granted_ennoblement_memory = {
+	categories = { positive title }
+	icon = "title.dds"
+	
+	description = {
+		first_valid = {
+			desc = granted_ennoblement_memory_desc
+		}
+	}
+
+	participants = {
+		ennobled = {
+			type = character
+		}
+	}
+
+	duration = 3650
+}

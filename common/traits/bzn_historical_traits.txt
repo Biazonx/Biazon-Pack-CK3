@@ -1,0 +1,193 @@
+﻿historical_character = {
+	category = fame
+	diplomacy = 2
+	learning = 2
+	enemy_hostile_scheme_success_chance_growth_add = -1
+	health = 0.25
+	
+	desc = {
+		first_valid = {
+		
+			triggered_desc = {
+				trigger = {
+					exists = this
+					has_variable = pierre_valdes
+				}
+				desc = historical_character.pierre_valdes
+			}
+			triggered_desc = {
+				trigger = {
+					exists = this
+					has_variable = karp
+				}
+				desc = historical_character.karp
+			}
+			desc = generic_importance
+		}
+	}
+	
+	shown_in_ruler_designer = no
+}
+
+shieldmaiden = {
+	
+	category = fame
+	martial = 3
+	prowess = 3
+	
+	same_opinion = 10
+
+	ruler_designer_cost = 40
+	
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_shieldmaiden_female
+			}
+			triggered_desc = {
+				trigger = {
+					exists = this
+					culture = { has_cultural_parameter = can_designate_gbeto }
+				}
+				desc = trait_shieldmaiden_ewe
+			}
+			triggered_desc = {
+				trigger = { is_male = yes }
+				desc = trait_shieldmaiden_male
+			}
+			desc = trait_shieldmaiden_female
+		}
+	}
+	icon = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = shieldmaiden.dds
+			}
+			triggered_desc = {
+				trigger = {
+					exists = this
+					culture = { has_cultural_parameter = can_designate_gbeto }
+				}
+				desc = shieldmaiden_ewe.dds
+			}
+			desc = shieldmaiden.dds
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_shieldmaiden_desc
+			}
+			triggered_desc = {
+				trigger = {
+					exists = this
+					culture = { has_cultural_parameter = can_designate_gbeto }
+				}
+				desc = trait_shieldmaiden_ewe_character_desc
+			}
+			triggered_desc = {
+				trigger = { is_male = yes }
+				desc = trait_shieldmaiden_male_character_desc
+			}
+			desc = trait_shieldmaiden_female_character_desc
+		}
+	}
+
+	ai_boldness = high_positive_ai_value
+	ai_energy = high_positive_ai_value
+}
+
+griot = {
+
+	category = fame
+	
+	diplomacy = 3
+	learning = 3
+	same_opinion = 10
+	shown_in_ruler_designer = no
+	inheritance_blocker = all
+	claim_inheritance_blocker = all
+	
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_griot
+			}
+			triggered_desc = {
+				trigger = {
+					exists = this
+					culture = culture:serer
+				}
+				desc = trait_griot_serer
+			}
+			triggered_desc = {
+				trigger = {
+					exists = this
+					culture = culture:songhai
+				}
+				desc = trait_griot_songhai
+			}
+			triggered_desc = {
+				trigger = {
+					exists = this
+					culture = culture:yoruba
+				}
+				desc = trait_griot_yoruba
+			}
+			triggered_desc = {
+				trigger = {
+					exists = this
+					culture = culture:pulaar
+				}
+				desc = trait_griot_pulaar
+			}
+			triggered_desc = {
+				trigger = {
+					exists = this
+					culture = culture:soninke
+				}
+				desc = trait_griot_soninke
+			}
+			triggered_desc = {
+				trigger = {
+					exists = this
+					culture = { has_cultural_pillar = heritage_west_african }
+				}
+				desc = trait_griot_mandinka
+			}
+			triggered_desc = {
+				trigger = {
+					exists = this
+					culture = culture:wolof
+				}
+				desc = trait_griot_wolof
+			}
+			desc = trait_griot
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_griot_desc
+			}
+			desc = trait_griot_character_desc
+		}
+	}
+	
+	ai_boldness = low_positive_ai_value
+	ai_sociability = low_positive_ai_value
+	
+}

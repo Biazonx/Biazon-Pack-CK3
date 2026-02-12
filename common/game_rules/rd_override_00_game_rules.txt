@@ -1,0 +1,94 @@
+﻿conquerors_frequency = {
+	
+	categories = {
+		difficulty ai
+	}
+	
+	default = default_conquerors_frequency
+
+	default_conquerors_frequency = {
+		flag = GG_can_change_rule
+	}
+	
+	no_conquerors_frequency = {
+		flag = GG_can_change_rule
+	}
+	
+	few_conquerors_frequency = {
+		flag = GG_can_change_rule
+	}
+	
+	very_few_conquerors_frequency = {
+		flag = GG_can_change_rule
+	}
+	
+	many_conquerors_frequency = {
+		flag = GG_can_change_rule
+	}
+
+	strong_default_conquerors_frequency = {
+		flag = GG_can_change_rule
+	}
+	
+	strong_few_conquerors_frequency = {
+		flag = GG_can_change_rule
+	}
+	
+	strong_very_few_conquerors_frequency = {
+		flag = GG_can_change_rule
+	}
+	
+	strong_many_conquerors_frequency = {
+		flag = GG_can_change_rule
+	}
+}
+
+conquerors_bonuses = {
+	
+	categories = {
+		difficulty ai
+	}
+	
+	default = default_conquerors_bonuses
+
+	default_conquerors_bonuses = {
+		flag = GG_can_change_rule
+	}
+	
+	no_conquerors_bonuses = {
+		flag = GG_can_change_rule
+	}
+	
+	extreme_conquerors_bonuses = {
+		flag = GG_can_change_rule
+	}
+	
+	random_conquerors_bonuses = {
+		flag = GG_can_change_rule
+	}
+	
+	reduced_random_conquerors_bonuses = {
+		flag = GG_can_change_rule
+	}
+}
+
+conquerors_inheritance = {
+	
+	categories = {
+		difficulty ai
+	}
+	
+	default = primary_conquerors_inheritance
+
+	default_conquerors_inheritance = {
+		flag = GG_can_change_rule
+	}
+	
+	primary_conquerors_inheritance = {
+		flag = GG_can_change_rule
+	}
+	
+	no_conquerors_inheritance = {
+		flag = GG_can_change_rule
+	}
+}

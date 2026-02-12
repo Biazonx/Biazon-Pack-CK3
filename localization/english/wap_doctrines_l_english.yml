@@ -1,0 +1,71 @@
+﻿l_english:	
+
+#BAP
+ WAP_INCOMPATIBLE_TENET_MUNE:0 "Incompatible with the [core_tenet|E] [GetFaithDoctrine('wap_tenet_mune').GetName( GetPlayer.GetFaith )]"
+ WAP_INCOMPATIBLE_TENET_SACRED_DESERTS:0 "Incompatible with the [core_tenet|E] [GetFaithDoctrine('wap_tenet_sacred_deserts').GetName( GetPlayer.GetFaith )]"
+ WAP_INCOMPATIBLE_TENET_GRAND_PILGRIMAGES:0 "Incompatible with the [core_tenet|E] [GetFaithDoctrine('wap_tenet_grand_pilgrimages').GetName( GetPlayer.GetFaith )]"
+ WAP_INCOMPATIBLE_TENET_DIVINATION:0 "Incompatible with the [core_tenet|E] [GetFaithDoctrine('wap_tenet_divination').GetName( GetPlayer.GetFaith )]"
+ WAP_INCOMPATIBLE_TENET_ADORCISM:0 "Incompatible with the [core_tenet|E] [GetFaithDoctrine('tenet_adorcism').GetName( GetPlayer.GetFaith )]"
+ 
+#Doctrine flavor changes
+#Vanilla tenets modified by WAP
+ tenet_dharmic_pacifism_odinala:0 "Ịlọụwa"
+ tenet_religious_legal_pronouncements_omenala:0 "Omenala"
+ tenet_religious_omenala_cost_tooltip:0 "Omenala: #P -10%#!"
+ tenet_esotericism_marabout:0 "Marabouts" 
+ tenet_adorcism_bori:0 "Bòòríí"
+ tenet_adorcism_ijaw:0 "Owuamapu"
+ tenet_legalism_maat:0 "Ma'at"
+ tenet_gruesome_festivals_bida_name:0 "Sacrifice to Bida"
+ 
+ #BAP tenets
+ wap_tenet_angelolatry_name:0 "Angelolatry"
+ wap_tenet_angelolatry_desc:0 "Angelolatry, or the worship of Angels is common practice across Christian Nubia. The Angels are seen as a believer's chief intercessors with God, as protectors, and as bringer of blessings and healing. Churches across Medieval Nubia are dedicated to the Angels, and they hold a place of supreme reverence in Nubian Christian Art, alongside sitting or departed royal figures."
+ 
+ tenet_sun_worship_name_beja:0 "Servants of the Sun"
+ tenet_sun_worship_beja_desc:0 "We are the last remaining protectors of the temples of Mandulis amongst the Eastern sands."
+ 
+ wap_tenet_water_spirits_name:0 "Water Spirits"
+ wap_tenet_water_spirits_desc:0 "This faith believes that powerful spiritual entities reside in the rivers, oceans, and other waterways."
+ 
+ wap_tenet_sacred_mountains_name:0 "Sacred Mountains"
+ wap_tenet_sacred_mountains_jigo:0 "Jigo"
+ wap_tenet_sacred_mountains_manda:0 "Manda"
+ wap_tenet_sacred_mountains_islam:0 "Mountain Jinns"
+ wap_tenet_sacred_mountains_desc:0 "The spirits inhabit the natural world and we must make offerings to them in order to receive their blessing and to avoid their wrath. The most powerful of these dwell in our sacred mountains; whilst other lesser spirits dwell in our sacred boulders and trees."
+ doctrine_parameter_wap_sacred_mountains_dedication_active:0 "Rulers can [decide|E] to host a dedication to the ancestral spirits that dwell in the caves, the hills and mountains, gaining bonuses for hills, mountains or unspoiled terrain within their [domain|El]"
+
+ wap_tenet_mune_name:0 "Mune"
+ wap_tenet_mune_desc:0 "The Mune idol represents peace, a divine covenant between the royal houses of Kanem. It is from Mune our unity is derived."
+ doctrine_parameter_wap_mune_decision_active:0 "A [ruler|E] of Munean [faith|E] can [decide|E] to ask their vassals to kiss the Mune idol to show fealty."
+ 
+ wap_tenet_sacred_deserts_name:0 "Sacred Deserts"
+ wap_tenet_sacred_deserts_islam:0 "Desert Jinns"
+ wap_tenet_sacred_deserts_tuareg:0 "Kel Esuf"
+ wap_tenet_sacred_deserts_desc:0 "The desert dunes and mountains are sacred places where the spirits and our ancestors dwell."
+ 
+ wap_tenet_grand_pilgrimages_name:0 "Grand Pilgrimages"
+ wap_tenet_grand_pilgrimages_desc:0 "When undertaking the hajj we must show the faithful the blessings Allah has given to us, and spread these blessings to honor Him."
+ doctrine_parameter_invite_marabout_active:0 "Once every 5 years adherents can [decide|E] to recruit a Marabout to serve at their court."
+ doctrine_parameter_grand_pilgrimages:0 "[rulers|E] of this [faith|E] can [decide|E] to go on a [grand_pilgrimage_to_mecca|E]. This [decision|E] is only available to a [king|E] or [emperor|E] whose [realm_capital|E] is in Africa."
+ wap_pilgrimage_because_i_have_wap_tenet_marabout:0 "Because your [faith|E] has the [GetFaithDoctrine('wap_tenet_grand_pilgrimages').GetBaseName] [core_tenet|E]:"
+ 
+ wap_tenet_divination_name:0 "Divination"
+ tenet_divination_ogwega:0 "Ogwega"
+ tenet_divination_ifa:0 "Ifá"
+ tenet_divination_afa:0 "Afá"
+ tenet_divination_baga:0 "Baga"
+ tenet_divination_igbadai:0 "Igbadai"
+ tenet_divination_name:0 "Divination"
+ wap_tenet_divination_desc:0 "Access to the world of the gods and spirits can be found in the hands of our ritual specialists, who using ancient techniques of divination can reveal the will of the gods, ask for their blessings, or sometimes... a curse on our enemies."
+ doctrine_parameter_divination_active:0 "Adherents can [decide|E] to seek spiritual guidance from a diviner."
+ 
+ doctrine_parameter_retire_to_a_monastery_active:0 "Pious adherents of king-level and above can [decide|E] to abdicate all titles and retire to a monastery."
+ doctrine_parameter_invite_monks_active:0 "Once a year adherents can [decide|E] to recruit skilled scholars from a monastery to serve at their court."
+ #Credit to Muslim enhancements
+ tenet_puritanical_islam_name:0 "Puritanical"
+ tenet_puritanical_islam_desc:0 "Whether we advocate for a return to an old orthodoxy or the enforcement of new strictures, our faith is undeniably the only proper practice of our religion, and we ought to stamp out sin and vice from among our brethren."
+ #Credit to Carthigian flavor pack
+ wap_tenet_mummification_name:0 "Xaxos"
+ wap_tenet_mummification_desc:0 "Those in the afterlife keep their bodies as they are present in the real world so preserving them for as long as possible in our sacred caves is necessary."
+ doctrine_parameter_mummify_relative_active:0 "[rulers|E] can mummify their ancestors in a practice known as Xaxos, gaining [piety|E] and pleasing their [vassals|E]"

@@ -1,0 +1,11 @@
+﻿l_korean: 
+
+trait_lifestyle_tournamentchampion:0 "토너먼트 챔피언"
+trait_lifestyle_tournamentchampion_desc:0 "그는 상대의 움직임을 예측하고, 그들의 강점을 파악하고, 적절한 때에 허점을 이용했습니다. 경기에 참여하기 전에 전투에서 승리하고, 체스판에서는 전투의 심리학을 가지고 놀았습니다."
+trait_lifestyle_tournamentchampion_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip](은)는 상대의 움직임을 예측하고, 그들의 강점을 파악하고, 적절한 때에 허점을 이용했습니다. 경기에 참여하기 전에 전투에서 승리하고, 체스판에서는 전투의 심리학을 가지고 놀았습니다."
+
+trait_track_lifestyle_tournamentchampion:0 "토너먼트 챔피언"
+trait_track_lifestyle_tournamentchampion_desc:0 "토너먼트 챔피언은 단순한 전사 그 이상입니다."
+  
+tournamentchampion_modifier:0 "토너먼트 챔피언"
+tournamentchampion_modifier_custom_desc:0 "토너먼트 챔피언 [SCOPE.sCharacter('tournamentchampionhouse').GetName], 그의 위대한 승리는 세대를 통해 울려 퍼지는 이야기로 기억될 것입니다."

@@ -5,3 +5,7 @@ court_position_thrall = {
 court_position_gentry = {
 	name = COURT_POSITION_CATEGORY_GENTRY
 }
+
+court_position_frontier_governor = {
+	name = COURT_POSITION_CATEGORY_FRONTIER_GOVERNOR
+}	

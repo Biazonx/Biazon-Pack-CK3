@@ -1,0 +1,15 @@
+﻿mass_military_aid_governor_count = {
+	value = 0
+
+	scope:actor.top_liege = {
+		every_vassal_or_below = {
+			limit = {
+				tgp_celestial_military_governor_can_join_war_trigger = {
+					TARGET_GOVERNOR = scope:recipient
+					MINISTER_OF_WAR = scope:actor
+				}
+			}
+			add = 1
+		}
+	}
+}

@@ -1,0 +1,15 @@
+﻿l_english:
+ 
+ nick_the_ladylord_of_the_nile:0 "the [CHARACTER.GetLadyLord|U] of the Nile"
+ nick_the_ladylord_of_the_mountain:0 "the [CHARACTER.GetLadyLord|U] of the Mountain"
+ nick_the_ladylord_of_the_two_dominions:0 "the [CHARACTER.GetLadyLord|U] of the Two Dominions"
+ nick_child_of_amun:0 "the Child of Amun"
+ nick_the_new_constantine:0 "the New Constantine"
+ nick_oduduwas_chosen:0 "Odùduwà's Chosen"
+ nick_spirit_slayer:0 "The Spirit Slayer"
+ nick_the_ladylord_of_the_niger:0 "[CHARACTER.GetLadyLord|U] of the Niger"
+ nick_the_sword_of_wargod:0 "the Sword of [CHARACTER.GetFaith.WarGodName]"
+ nick_the_ancestors_fury:0 "the Ancestor's Fury"
+ nick_al_kahina:0 "al-Kāhina"
+ nick_al_ghazi:0 "al-Ghāzi"
+ 

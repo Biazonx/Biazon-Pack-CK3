@@ -157,7 +157,7 @@ free_yourself_decision = {
 		}
 
 		OR = { 
-			is_ruler = yes 	
+			is_landed = yes 	
 			is_landless_adventurer = yes
 		}
 	}
@@ -247,7 +247,7 @@ write_manifesto_to_stars_decision = {
         }
         random_list = {
             75 = { }
-            25 = { add_trait = poet }
+            25 = { add_trait = lifestyle_poet }
         }
     }
 

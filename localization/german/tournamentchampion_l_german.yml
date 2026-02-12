@@ -1,0 +1,11 @@
+﻿l_german:
+  
+ trait_lifestyle_tournamentchampion: "Turniersieger" #NT!
+ trait_lifestyle_tournamentchampion_desc: "Er antizipierte die Züge seiner Gegner, erkannte ihre Stärken und nutzte Eröffnungen im richtigen Moment. Er gewann Schlachten, bevor er an ihnen teilnahm, und auf dem Schachbrett spielte er mit der Psychologie des Kampfes." #NT!
+ trait_lifestyle_tournamentchampion_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] antizipierte die Züge seiner Gegner, erkannte ihre Stärken und nutzte Eröffnungen genau zum richtigen Zeitpunkt. Er gewann Schlachten, bevor er an ihnen teilnahm, und auf dem Schachbrett spielte er mit der Psychologie des Kampfes." #NT!
+  
+ trait_track_lifestyle_tournamentchampion: "Turniersieger" #NT!
+ trait_track_lifestyle_tournamentchampion_desc: "Ein Turnierchampion ist mehr als nur ein einfacher Krieger." #NT!
+  
+ tournamentchampion_modifier: "Turniersieger" #NT!
+ tournamentchampion_modifier_custom_desc: "Turnierchampion [SCOPE.sCharacter('tournamentchampionhouse').GetName], seine großen Siege werden als Geschichten in Erinnerung bleiben, die über Generationen hinweg nachhallen." #NT!

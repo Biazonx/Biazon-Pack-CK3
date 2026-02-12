@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+  
+ trait_lifestyle_tournamentchampion: "锦标赛冠军" #NT!
+ trait_lifestyle_tournamentchampion_desc: "他能预测对手的行动，识别对手的优势，并在恰当的时机利用空当。他未参战即获胜，在棋盘上运用战斗心理。" #NT!
+ trait_lifestyle_tournamentchampion_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] 能预测对手的行动，识别对手的优势，并在恰当的时机利用空当。他未参加战斗就赢得胜利，在棋盘上，他运用战斗心理进行游戏。" #NT!
+  
+ trait_track_lifestyle_tournamentchampion: "锦标赛冠军" #NT!
+ trait_track_lifestyle_tournamentchampion_desc: "锦标赛冠军不仅仅是一个简单的战士。" #NT!
+  
+ tournamentchampion_modifier: "锦标赛冠军" #NT!
+ tournamentchampion_modifier_custom_desc: "锦标赛冠军[SCOPE.sCharacter('tournamentchampionhouse').GetName]，他的伟大胜利将作为流传几代的故事被人们铭记。" #NT!

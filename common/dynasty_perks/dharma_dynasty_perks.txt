@@ -64,7 +64,7 @@ dharma_legacy_4 = {
 	character_modifier = {
 		monthly_lifestyle_xp_gain_mult = 0.25
 		stress_gain_mult = -0.15
-		monthly_dynasty_prestige_mult = 0.25 
+		dynasty_opinion = 10
 	}
 	can_be_picked = { 
 		is_landed = yes

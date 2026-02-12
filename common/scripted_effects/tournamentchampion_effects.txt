@@ -1,0 +1,377 @@
+tournament_winner_gold_rewards_effect = {
+	if = {
+		limit = {
+			scope:activity = {
+				has_activity_option = {
+					category = tournament_option_prizes
+					option = tournament_prizes_good
+				}
+			}
+		}
+		tournamentchampion_effects = yes
+		add_gold = scope:host.medium_gold_value
+		tournament_contest_rewards_split_prize_money_with_liege_effect = { AMOUNT = medium_gold_value }
+	}
+	else_if = {
+		limit = {
+			scope:activity = {
+				has_activity_option = {
+					category = tournament_option_prizes
+					option = tournament_prizes_normal
+				}
+			}
+		}
+		tournamentchampion_effects = yes
+		add_gold = scope:host.minor_gold_value
+		tournament_contest_rewards_split_prize_money_with_liege_effect = { AMOUNT = minor_gold_value }
+	}
+	else = {
+		tournamentchampion_effects = yes
+		add_gold = scope:host.tiny_gold_value
+		tournament_contest_rewards_split_prize_money_with_liege_effect = { AMOUNT = tiny_gold_value }
+	}
+}
+
+
+
+tournamentchampion_effects = {
+    if = {
+        limit = {
+                NOT = {
+                    has_trait = lifestyle_tournamentchampion
+                }
+            is_alive = yes
+        }
+        tournamentchampion_set_up_effects = yes
+    }
+    else_if = {
+        limit = {
+            has_trait = lifestyle_tournamentchampion
+            has_trait_xp = {
+                trait = lifestyle_tournamentchampion
+                value < 100
+            }
+            is_alive = yes
+        }
+        tournamentchampion_xp_effects = yes
+    }
+}
+
+
+tournamentchampion_set_up_effects = {
+    add_trait = lifestyle_tournamentchampion
+}
+
+
+tournamentchampion_xp_effects = {
+	if = {
+		limit = {
+			is_ai = yes
+		}
+		add_trait_xp = {
+			trait = lifestyle_tournamentchampion
+				value = {
+					integer_range = {
+						min = 20
+						max = 35
+					}
+				}
+		}
+	}
+	if = {
+		limit = {
+			is_ai = no
+		}
+		add_trait_xp = {
+			trait = lifestyle_tournamentchampion
+				value = {
+					integer_range = {
+						min = 10
+						max = 20
+					}
+				}
+		}
+	}
+}
+
+
+tournamentchampionmelee_effects = {
+		if = {
+			limit = {
+				is_ai = yes
+			}
+		add_trait_xp = {
+		trait = lifestyle_tournamentchampion
+		value = {
+		integer_range = {
+		min = 5
+		max = 15
+		}
+        }
+    }
+    }
+	if = {
+		limit = {
+			is_ai = no
+		}
+		add_trait_xp = {
+		trait = lifestyle_tournamentchampion
+		value = {
+		integer_range = {
+		min = 2
+		max = 6
+		}
+        }
+    	}
+	}
+}
+
+
+tournamentchampionarchery_effects = {
+		if = {
+			limit = {
+				is_ai = yes
+			}
+		add_trait_xp = {
+		trait = lifestyle_tournamentchampion
+		value = {
+		integer_range = {
+		min = 5
+		max = 15
+		}
+        }
+    }
+    }
+	if = {
+		limit = {
+			is_ai = no
+		}
+		add_trait_xp = {
+		trait = lifestyle_tournamentchampion
+		value = {
+		integer_range = {
+		min = 2
+		max = 6
+		}
+        }
+    	}
+	}
+}
+
+
+tournamentchampionrecital_effects = {
+		if = {
+			limit = {
+				is_ai = yes
+			}
+		add_trait_xp = {
+		trait = lifestyle_tournamentchampion
+		value = {
+		integer_range = {
+		min = 5
+		max = 15
+		}
+        }
+    }
+    }
+	if = {
+		limit = {
+			is_ai = no
+		}
+		add_trait_xp = {
+		trait = lifestyle_tournamentchampion
+		value = {
+		integer_range = {
+		min = 2
+		max = 6
+		}
+        }
+    	}
+	}
+}
+
+
+tournamentchampionjoust_effects = {
+		if = {
+			limit = {
+				is_ai = yes
+			}
+		add_trait_xp = {
+		trait = lifestyle_tournamentchampion
+		value = {
+		integer_range = {
+		min = 5
+		max = 15
+		}
+        }
+    }
+    }
+	if = {
+		limit = {
+			is_ai = no
+		}
+		add_trait_xp = {
+		trait = lifestyle_tournamentchampion
+		value = {
+		integer_range = {
+		min = 2
+		max = 6
+		}
+        }
+    	}
+	}
+}
+
+
+tournamentchampionwrestling_effects = {
+		if = {
+			limit = {
+				is_ai = yes
+			}
+		add_trait_xp = {
+		trait = lifestyle_tournamentchampion
+		value = {
+		integer_range = {
+		min = 5
+		max = 15
+		}
+        }
+    }
+    }
+	if = {
+		limit = {
+			is_ai = no
+		}
+		add_trait_xp = {
+		trait = lifestyle_tournamentchampion
+		value = {
+		integer_range = {
+		min = 2
+		max = 6
+		}
+        }
+    	}
+	}
+}
+
+
+tournamentchampionduel_effects = {
+		if = {
+			limit = {
+				is_ai = yes
+			}
+		add_trait_xp = {
+		trait = lifestyle_tournamentchampion
+		value = {
+		integer_range = {
+		min = 5
+		max = 15
+		}
+        }
+    }
+    }
+	if = {
+		limit = {
+			is_ai = no
+		}
+		add_trait_xp = {
+		trait = lifestyle_tournamentchampion
+		value = {
+		integer_range = {
+		min = 2
+		max = 6
+		}
+        }
+    	}
+	}
+}
+
+
+tournamentchampionboard_effects = {
+		if = {
+			limit = {
+				is_ai = yes
+			}
+		add_trait_xp = {
+		trait = lifestyle_tournamentchampion
+		value = {
+		integer_range = {
+		min = 5
+		max = 15
+		}
+        }
+    }
+    }
+	if = {
+		limit = {
+			is_ai = no
+		}
+		add_trait_xp = {
+		trait = lifestyle_tournamentchampion
+		value = {
+		integer_range = {
+		min = 2
+		max = 6
+		}
+        }
+    	}
+	}
+}
+
+
+tournamentchampionhorse_effects = {
+		if = {
+			limit = {
+				is_ai = yes
+			}
+		add_trait_xp = {
+		trait = lifestyle_tournamentchampion
+		value = {
+		integer_range = {
+		min = 5
+		max = 15
+		}
+        }
+    }
+    }
+	if = {
+		limit = {
+			is_ai = no
+		}
+		add_trait_xp = {
+		trait = lifestyle_tournamentchampion
+		value = {
+		integer_range = {
+		min = 2
+		max = 6
+		}
+        }
+    	}
+	}
+}
+
+
+
+
+tournamentchampionhouse_effects = { 
+    if = {
+        limit = {
+        AND = {
+        is_alive = yes
+        has_trait = lifestyle_tournamentchampion
+        has_trait_xp = {
+        trait = lifestyle_tournamentchampion
+        value >= 100
+        }
+	}
+	}
+	save_scope_as = tournamentchampionhouse
+	house = {
+	add_house_modifier = {
+	modifier = tournamentchampion_modifier
+	desc = tournamentchampion_modifier_custom_desc
+	years = 50
+	}
+	}
+	}
+}

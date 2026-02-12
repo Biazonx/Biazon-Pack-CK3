@@ -1,0 +1,27 @@
+﻿##############################################################################################
+# 
+# Emirate of Crete Setup
+# 
+# These events set up various aspects of the mod at the start of the game.
+# A lot of this is to maintain compatibility with other mods.
+# 
+##############################################################################################
+
+namespace = EECintro
+
+# Event to set things up
+EECintro.0001 = {
+	type = empty
+	hidden = yes
+	
+	immediate = {	
+		## Add Chandax buildings
+		title:b_iraklio.title_province = {
+				add_special_building = eec_crete_castle_01
+			}
+		}
+	}
+
+
+
+

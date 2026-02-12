@@ -1,0 +1,183 @@
+﻿namespace = wap_orisha
+
+#######################################
+#					
+#      Picking personal Orisha cult
+#								
+#######################################
+wap_orisha.200 = {# Yoruba and Edo deities
+	type = character_event
+	title = wap_orisha.200.t
+	desc = wap_orisha.200.desc
+	theme = faith
+	override_background = {
+		reference = wilderness
+	}
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	right_portrait = {
+		character = scope:realm_priest
+		animation = happiness
+	}
+    immediate = {
+		cp:councillor_court_chaplain = {
+			save_scope_as = realm_priest
+		}
+	}
+
+	# Yoruba and Bini deities
+	option = {# Obatala
+		name = wap_orisha.200.obatala
+		trigger = {
+			religion = religion:west_african_orisha_religion
+			NOT = { has_character_modifier = orisha_deity_obatala }
+		}
+        stress_impact = {
+			zealous = medium_stress_impact_loss
+			cynical = medium_stress_impact_gain
+		}
+		set_orisha_effect = { ORISHA = orisha_deity_obatala }
+	}
+
+	option = {# Yemoja
+		name = wap_orisha.200.yemoja
+		trigger = {
+			religion = religion:west_african_orisha_religion
+			NOT = { has_character_modifier = orisha_deity_yemoja }
+		}
+        stress_impact = {
+			zealous = medium_stress_impact_loss
+			cynical = medium_stress_impact_gain
+		}
+		set_orisha_effect = { ORISHA = orisha_deity_yemoja }
+	}
+
+	option = {# Orunmila
+		name = wap_orisha.200.orunmila
+		trigger = {
+			religion = religion:west_african_orisha_religion
+			NOT = { has_character_modifier = orisha_deity_orunmila }
+		}
+        stress_impact = {
+			zealous = medium_stress_impact_loss
+			cynical = medium_stress_impact_gain
+		}
+		set_orisha_effect = { ORISHA = orisha_deity_orunmila }
+	}
+
+	option = {# Ogun
+		name = wap_orisha.200.ogun
+		trigger = {
+			religion = religion:west_african_orisha_religion
+			NOT = { has_character_modifier = orisha_deity_ogun }
+		}
+        stress_impact = {
+			zealous = medium_stress_impact_loss
+			cynical = medium_stress_impact_gain
+		}
+		set_orisha_effect = { ORISHA = orisha_deity_ogun }
+	}
+
+	option = {# Olookun
+		name = wap_orisha.200.olookun
+		trigger = {
+			religion = religion:west_african_orisha_religion
+			NOT = { has_character_modifier = orisha_deity_olookun }
+		}
+        stress_impact = {
+			zealous = medium_stress_impact_loss
+			cynical = medium_stress_impact_gain
+		}
+		set_orisha_effect = { ORISHA = orisha_deity_olookun }
+	}
+
+    option = {# Next page
+		name = wap_orisha.200.next_page
+                trigger_event = {
+				id = wap_orisha.300
+			}		
+	}
+}
+
+wap_orisha.300 = {# Yoruba and Edo deities
+	type = character_event
+	title = wap_orisha.200.t
+	desc = wap_orisha.200.desc
+	theme = faith
+	override_background = {
+		reference = wilderness
+	}
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+    right_portrait = {
+		character = scope:realm_priest
+		animation = happiness
+	}
+    immediate = {
+		cp:councillor_court_chaplain = {
+			save_scope_as = realm_priest
+		}
+	}
+	
+	option = {# Osun
+		name = wap_orisha.300.osun
+		trigger = {
+			religion = religion:west_african_orisha_religion
+			NOT = { has_character_modifier = orisha_deity_osun }
+		}
+        stress_impact = {
+			zealous = medium_stress_impact_loss
+			cynical = medium_stress_impact_gain
+		}
+		set_orisha_effect = { ORISHA = orisha_deity_osun }
+	}
+
+	option = {# Esu
+		name = wap_orisha.300.esu
+		trigger = {
+			religion = religion:west_african_orisha_religion
+			NOT = { has_character_modifier = orisha_deity_esu }
+		}
+        stress_impact = {
+			zealous = medium_stress_impact_loss
+			cynical = medium_stress_impact_gain
+		}
+		set_orisha_effect = { ORISHA = orisha_deity_esu }
+	}
+
+    option = {# Osoosi
+		name = wap_orisha.300.osoosi
+		trigger = {
+			religion = religion:west_african_orisha_religion
+			NOT = { has_character_modifier = orisha_deity_osoosi }
+		}
+        stress_impact = {
+			zealous = medium_stress_impact_loss
+			cynical = medium_stress_impact_gain
+		}
+		set_orisha_effect = { ORISHA = orisha_deity_osoosi }
+	}
+
+	option = {# Sango
+		name = wap_orisha.300.sango
+		trigger = {
+			religion = religion:west_african_orisha_religion
+			NOT = { has_character_modifier = orisha_deity_sango }
+		}
+        stress_impact = {
+			zealous = medium_stress_impact_loss
+			cynical = medium_stress_impact_gain
+		}
+		set_orisha_effect = { ORISHA = orisha_deity_sango }
+	}
+    option = {# Previous page
+		name = wap_orisha.300.previous_page
+        trigger_event = {
+			id = wap_orisha.200
+		}		
+	}
+}

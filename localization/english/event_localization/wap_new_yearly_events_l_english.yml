@@ -1,0 +1,10 @@
+﻿l_english:
+ 
+ wap_new_yearly.9020.t:0 "A Mighty Elephant"
+ wap_new_yearly.9020.desc:1 "[marshal.Custom2('MyCharacterIntroduction', ROOT.Char)|U] approaches me with a smile on [marshal.GetHerHis] face. [marshal.GetSheHe|U] explains that I have received a truly impressive gift from an overseer in the [county.GetNameNoTooltip], and beckons me to come with [marshal.GetHerHim].\n\nAnd impressive it is! As I walk outside, I am greeted by a #emphasis gargantuan#! elephant. Larger than any I have seen. The beast will certainly bring devestation to any foe."
+ wap_new_yearly.9020.a:0 "I will ride this mighty beast into battle. Personally."
+ wap_new_yearly.9020.b:1 "[marshal.GetCouncilTitle]. The creature is yours."
+ wap_new_yearly.9020.c:2 "My $knight_culture_player_no_tooltip_lowercase$ [knight.GetTitledFirstNameNoTooltip] is sure to make good use of it."
+ wap_new_yearly.9020.d1:1 "Let us honor [ROOT.Char.GetFaith.KnowledgeGodName] and release it."
+ wap_new_yearly.9020.d2:0 "Such an animal should be free. Release it."
+ wap_new_yearly_9020_personal_war_elephant:0 "Personal War Elephant"

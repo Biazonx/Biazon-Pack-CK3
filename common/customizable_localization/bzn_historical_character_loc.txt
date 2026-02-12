@@ -1,0 +1,25 @@
+﻿HistoricalCharacterDesc = {
+	type = character
+	
+	text = {
+		trigger = {
+			has_variable = pierre_valdes
+		}
+		localization_key = historical_character.pierre_valdes
+	}
+	
+	text = {
+		trigger = {
+			has_variable = karp
+		}
+		localization_key = historical_character.karp
+	}
+
+	text = {
+		trigger = {
+			always = no
+		}
+		localization_key = generic_importance
+		fallback = yes
+	}
+}

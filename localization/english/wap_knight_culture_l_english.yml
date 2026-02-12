@@ -1,0 +1,225 @@
+﻿l_english:
+ 
+# BAP
+ 
+ knight_eso_no_tooltip:0 "Eso"
+ knight_dike_no_tooltip:0 "Dikē"
+ knight_kabuna_no_tooltip:0 "Kabuna"
+ knight_asafohene_no_tooltip:0 "Asáfóhene"
+ knight_sarkin_yaki_no_tooltip:0 "Sarkin Yaki"
+ knight_okaeghele_no_tooltip:0 "Okaeghele"
+ knight_jatigi_no_tooltip:0 "Jatigi"
+ knight_tobbia_no_tooltip:0 "Tobbia"
+ knight_ogbenjuwa_no_tooltip:0 "Ogbenjuwa"
+ knight_sigone_no_tooltip:0 "Sigoñe"
+ knight_eso_no_tooltip_plural:0 "Eso"
+ knight_ogbenjuwa_no_tooltip_plural:0 "Ogbenjuwas"
+ knight_dike_no_tooltip_plural:0 "Dikēs"
+ knight_kabuna_no_tooltip_plural:0 "Kabunas"
+ knight_asafohene_no_tooltip_plural:0 "Asáfóhenes"
+ knight_sarkin_yaki_no_tooltip_plural:0 "Sarkin Yakis"
+ knight_okaeghele_no_tooltip_plural:0 "Okaegheles"
+ knight_jatigi_no_tooltip_plural:0 "Jatigis"
+ knight_tobbia_no_tooltip_plural:0 "Tobbihi"
+ knight_sigone_no_tooltip_plural:0 "Sigoñes"
+ 
+ knight_malassay_no_tooltip_plural:0 "Mälässays"
+ knight_malassay_no_tooltip:0 "Mälässay"
+ 
+ knight_malassay_no_tooltip_lowercase:0 "mälässay"
+ knight_malassay_no_tooltip_lowercase_plural:0 "mälässays"
+ knight_malassay_no_tooltip_lowercase_plural_possessive:0 "mälässay's"
+ knight_malassay_no_tooltip_lowercase_adjective:0 "mälässay"
+ 
+ knight_tobbia_no_tooltip_lowercase:0 "tobbia"
+ knight_tobbia_no_tooltip_lowercase_plural:0 "tobbihi"
+ knight_tobbia_no_tooltip_lowercase_plural_possessive:0 "tobbihis'"
+ knight_tobbia_no_tooltip_lowercase_adjective:0 "tobbia"
+ 
+ knight_ogbenjuwa_no_tooltip_lowercase:0 "ogbenjuwa"
+ knight_ogbenjuwa_no_tooltip_lowercase_plural:0 "ogbenjuwas"
+ knight_ogbenjuwa_no_tooltip_lowercase_plural_possessive:0 "ogbenjuwas'"
+ knight_ogbenjuwa_no_tooltip_lowercase_adjective:0 "ogbenjuwa"
+ 
+ knight_dike_no_tooltip_lowercase:0 "dikē"
+ knight_dike_no_tooltip_lowercase_plural:0 "dikēs"
+ knight_dike_no_tooltip_lowercase_plural_possessive:0 "dikēs'"
+ knight_dike_no_tooltip_lowercase_adjective:0 "dikē"
+ 
+ knight_eso_no_tooltip_lowercase:0 "eso"
+ knight_eso_no_tooltip_lowercase_plural:0 "eso"
+ knight_eso_no_tooltip_lowercase_plural_possessive:0 "esos'"
+ knight_eso_no_tooltip_lowercase_adjective:0 "eso"
+ 
+ knight_kabuna_no_tooltip_lowercase:0 "kabuna"
+ knight_kabuna_no_tooltip_lowercase_plural:0 "kabunas"
+ knight_kabuna_no_tooltip_lowercase_plural_possessive:0 "kabunas'"
+ knight_kabuna_no_tooltip_lowercase_adjective:0 "kabuna"
+ 
+ knight_asafohene_no_tooltip_lowercase:0 "asáfóhene"
+ knight_asafohene_no_tooltip_lowercase_plural:0 "asáfóhenes"
+ knight_asafohene_no_tooltip_lowercase_plural_possessive:0 "asáfóhenes'"
+ knight_asafohene_no_tooltip_lowercase_adjective:0 "asáfóhene"
+ 
+ knight_sarkin_yaki_no_tooltip_lowercase:0 "sarkin yaki"
+ knight_sarkin_yaki_no_tooltip_lowercase_plural:0 "sarkin yakis"
+ knight_sarkin_yaki_no_tooltip_lowercase_plural_possessive:0 "sarkin yaki's"
+ knight_sarkin_yaki_no_tooltip_lowercase_adjective:0 "sarkin yaki"
+ 
+ knight_okaeghele_no_tooltip_lowercase:0 "okaeghele"
+ knight_okaeghele_no_tooltip_lowercase_plural:0 "okaegheles"
+ knight_okaeghele_no_tooltip_lowercase_plural_possessive:0 "okaegheles'"
+ knight_okaeghele_no_tooltip_lowercase_adjective:0 "okaeghele"
+ 
+ knight_jatigi_no_tooltip_lowercase:0 "jatigi"
+ knight_jatigi_no_tooltip_lowercase_plural:0 "jatigis"
+ knight_jatigi_no_tooltip_lowercase_plural_possessive:0 "jatigis'"
+ knight_jatigi_no_tooltip_lowercase_adjective:0 "jatigi"
+ 
+ knight_sigone_no_tooltip_lowercase:0 "sigoñe"
+ knight_sigone_no_tooltip_lowercase_plural:0 "sigoñes"
+ knight_sigone_no_tooltip_lowercase_plural_possessive:0 "sigoñe's"
+ knight_sigone_no_tooltip_lowercase_adjective:0 "sigoñe"
+
+ #Game Concept versions
+ 
+ #BAP ADDITIONS
+ knight_malassay:0 "[Concept( 'knight', '$knight_malassay_no_tooltip|q$' )|E]"
+ knight_malassay_plural:0 "[Concept( 'knight', '$knight_malassay_no_tooltip_plural|q$' )|E]"
+ 
+ knight_dike:0 "[Concept( 'knight', '$knight_dike_no_tooltip|q$' )|E]"
+ knight_dike_plural:0 "[Concept( 'knight', '$knight_dike_no_tooltip_plural|q$' )|E]"
+
+ knight_ogbenjuwa:0 "[Concept( 'knight', '$knight_ogbenjuwa_no_tooltip|q$' )|E]"
+ knight_ogbenjuwa_plural:0 "[Concept( 'knight', '$knight_ogbenjuwa_no_tooltip_plural|q$' )|E]"
+ 
+ knight_tobbia:0 "[Concept( 'knight', '$knight_tobbia_no_tooltip|q$' )|E]"
+ knight_tobbia_plural:0 "[Concept( 'knight', '$knight_tobbia_no_tooltip_plural|q$' )|E]"
+
+ knight_eso:0 "[Concept( 'knight', '$knight_eso_no_tooltip|q$' )|E]"
+ knight_eso_plural:0 "[Concept( 'knight', '$knight_eso_no_tooltip_plural|q$' )|E]"
+
+ knight_kabuna:0 "[Concept( 'knight', '$knight_kabuna_no_tooltip|q$' )|E]"
+ knight_kabuna_plural:0 "[Concept( 'knight', '$knight_kabuna_no_tooltip_plural|q$' )|E]"
+
+ knight_asafohene:0 "[Concept( 'knight', '$knight_asafohene_no_tooltip|q$' )|E]"
+ knight_asafohene_plural:0 "[Concept( 'knight', '$knight_asafohene_no_tooltip_plural|q$' )|E]"
+
+ knight_dux:0 "[Concept( 'knight', '$knight_dux_no_tooltip|q$' )|E]"
+ knight_dux_plural:0 "[Concept( 'knight', '$knight_dux_no_tooltip_plural|q$' )|E]"
+
+ knight_sarkin_yaki:0 "[Concept( 'knight', '$knight_sarkin_yaki_no_tooltip|q$' )|E]"
+ knight_sarkin_yaki_plural:0 "[Concept( 'knight', '$knight_sarkin_yaki_no_tooltip_plural|q$' )|E]"
+
+ knight_okaeghele:0 "[Concept( 'knight', '$knight_okaeghele_no_tooltip|q$' )|E]"
+ knight_okaeghele_plural:0 "[Concept( 'knight', '$knight_okaeghele_no_tooltip_plural|q$' )|E]"
+ 
+ knight_jatigi:0 "[Concept( 'knight', '$knight_jatigi_no_tooltip|q$' )|E]"
+ knight_jatigi_plural:0 "[Concept( 'knight', '$knight_jatigi_no_tooltip_plural|q$' )|E]"
+ 
+ knight_sigone:0 "[Concept( 'knight', '$knight_sigone_no_tooltip|q$' )|E]"
+ knight_sigone_plural:0 "[Concept( 'knight', '$knight_sigone_no_tooltip_plural|q$' )|E]"
+ 
+### Credit to CTP
+
+ knight_sardinian: "[Concept( 'knight', '$knight_no_tooltip_sardinian|q$' )|E]"
+ knight_sardinian_no_tooltip: "Buiakesu"
+ knight_sardinian_plural:0 "[Concept( 'knight', '$knight_sardinian_no_tooltip_plural|q$' )|E]"
+ knight_sardinian_no_tooltip_lowercase:0 "buiakesu"
+ knight_sardinian_no_tooltip_lowercase_plural:0 "buiakesos"
+ knight_sardinian_no_tooltip_lowercase_plural_possessive:0 "buiakesos'"
+ knight_sardinian_no_tooltip_lowercase_adjective:0 "buiakesu"
+ knight_sardinian_no_tooltip_plural:0 "Buiakesos"
+ 
+ #Coptic
+ knight_egyptian_coptic_no_tooltip:0 "Hippəus"
+ knight_egyptian_coptic:0 "[Concept( 'knight', '$knight_egyptian_coptic_no_tooltip|q$' )|E]"
+ knight_egyptian_coptic_plural:0 "[Concept( 'knight', '$knight_egyptian_coptic_no_tooltip_plural|q$' )|E]"
+ knight_egyptian_coptic_no_tooltip_lowercase:0 "hippəus"
+ knight_egyptian_coptic_no_tooltip_lowercase_plural:0 "hippəus"
+ knight_egyptian_coptic_no_tooltip_lowercase_plural_possessive:0 "hippəus'"
+ knight_egyptian_coptic_no_tooltip_lowercase_adjective:0 "hippəus"
+ knight_egyptian_coptic_no_tooltip_plural:0 "Hippəus"
+ 
+ #Ethiopian
+ knight_ethiopian_no_tooltip:0 "Wä′ali"
+ knight_ethiopian:0 "[Concept( 'knight', '$knight_ethiopian_no_tooltip|q$' )|E]"
+ knight_ethiopian_plural:0 "[Concept( 'knight', '$knight_ethiopian_no_tooltip_plural|q$' )|E]"
+ knight_ethiopian_no_tooltip_lowercase:0 "wä′ali"
+ knight_ethiopian_no_tooltip_lowercase_plural:0 "wä′aliyan"
+ knight_ethiopian_no_tooltip_lowercase_plural_possessive:0 "wä′aliyan's"
+ knight_ethiopian_no_tooltip_lowercase_adjective:0 "wä′aliyan"
+ knight_ethiopian_no_tooltip_plural:0 "Wä′aliyan"
+ 
+ ## Nubian
+ knight_nubian_no_tooltip:0 "Diŋarel"
+ knight_nubian:0 "[Concept( 'knight', '$knight_nubian_no_tooltip|q$' )|E]"
+ knight_nubian_plural:0 "[Concept( 'knight', '$knight_nubian_no_tooltip_plural|q$' )|E]"
+ knight_nubian_no_tooltip_lowercase:0 "diŋarel"
+ knight_nubian_no_tooltip_lowercase_plural:0 "diŋareligou"
+ knight_nubian_no_tooltip_lowercase_plural_possessive:0 "diŋareligou's"
+ knight_nubian_no_tooltip_lowercase_adjective:0 "diŋareligou"
+ knight_nubian_no_tooltip_plural:0 "Diŋareligou"
+ 
+ ## daju
+ knight_daju_no_tooltip:0 "Lèèdé Múrtìnè"
+ knight_daju:0 "[Concept( 'knight', '$knight_daju_no_tooltip|q$' )|E]"
+ knight_daju_plural:0 "[Concept( 'knight', '$knight_daju_no_tooltip_plural|q$' )|E]"
+ knight_daju_no_tooltip_lowercase:0 "lèèdé múrtìnè"
+ knight_daju_no_tooltip_lowercase_plural:0 "léttìgé Mòrtígè"
+ knight_daju_no_tooltip_lowercase_plural_possessive:0 "léttìgé Mòrtígè's"
+ knight_daju_no_tooltip_lowercase_adjective:0 "léttìgé Mòrtígè"
+ knight_daju_no_tooltip_plural:0 "Léttìgé Mòrtígè"
+ 
+ ## Songhai
+ knight_songhai_no_tooltip:0 "Wongaari"
+ knight_songhai:0 "[Concept( 'knight', '$knight_songhai_no_tooltip|q$' )|E]"
+ knight_songhai_plural:0 "[Concept( 'knight', '$knight_songhai_no_tooltip_plural|q$' )|E]"
+ knight_songhai_no_tooltip_lowercase:0 "wongaari"
+ knight_songhai_no_tooltip_lowercase_plural:0 "wongaarey"
+ knight_songhai_no_tooltip_lowercase_plural_possessive:0 "wongaarey's"
+ knight_songhai_no_tooltip_lowercase_adjective:0 "wongaarey"
+ knight_songhai_no_tooltip_plural:0 "Wongaarey"
+ 
+ ## Serer
+ knight_serer_no_tooltip:0 "Baax"
+ knight_serer:0 "[Concept( 'knight', '$knight_serer_no_tooltip|q$' )|E]"
+ knight_serer_plural:0 "[Concept( 'knight', '$knight_serer_no_tooltip_plural|q$' )|E]"
+ knight_serer_no_tooltip_lowercase:0 "baax"
+ knight_serer_no_tooltip_lowercase_plural:0 "a paax"
+ knight_serer_no_tooltip_lowercase_plural_possessive:0 "a paax's"
+ knight_serer_no_tooltip_lowercase_adjective:0 "a paax"
+ knight_serer_no_tooltip_plural:0 "A Paax"
+ 
+ ## Wolof
+ knight_wolof_no_tooltip:0 "Jambaar"
+ knight_wolof:0 "[Concept( 'knight', '$knight_wolof_no_tooltip|q$' )|E]"
+ knight_wolof_plural:0 "[Concept( 'knight', '$knight_wolof_no_tooltip_plural|q$' )|E]"
+ knight_wolof_no_tooltip_lowercase:0 "jambaar"
+ knight_wolof_no_tooltip_lowercase_plural:0 "jambaar-yi"
+ knight_wolof_no_tooltip_lowercase_plural_possessive:0 "jambaar-yi's"
+ knight_wolof_no_tooltip_lowercase_adjective:0 "jambaar-yi"
+ knight_wolof_no_tooltip_plural:0 "Jambaar-yi"
+ 
+ ## Beja
+
+ knight_beja_no_tooltip:0 "Amóodha"
+ knight_beja:0 "[Concept( 'knight', '$knight_beja_no_tooltip|q$' )|E]"
+ knight_beja_plural:0 "[Concept( 'knight', '$knight_beja_no_tooltip_plural|q$' )|E]"
+ knight_beja_no_tooltip_lowercase:0 "amóodha"
+ knight_beja_no_tooltip_lowercase_plural:0 "amóodha"
+ knight_beja_no_tooltip_lowercase_plural_possessive:0 "amóodha's"
+ knight_beja_no_tooltip_lowercase_adjective:0 "amóodha"
+ knight_beja_no_tooltip_plural:0 "Mälässays"
+ 
+ ## Malinke
+ knight_malinke_no_tooltip:0 "Fari"
+ knight_malinke:0 "[Concept( 'knight', '$knight_malinke_no_tooltip|q$' )|E]"
+ knight_malinke_plural:0 "[Concept( 'knight', '$knight_malinke_no_tooltip_plural|q$' )|E]"
+ knight_malinke_no_tooltip_lowercase:0 "fari"
+ knight_malinke_no_tooltip_lowercase_plural:0 "farari"
+ knight_malinke_no_tooltip_lowercase_plural_possessive:0 "farari's"
+ knight_malinke_no_tooltip_lowercase_adjective:0 "farari"
+ knight_malinke_no_tooltip_plural:0 "Farari"
+ 
+ 

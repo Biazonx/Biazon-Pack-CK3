@@ -13,21 +13,21 @@ celtic_religion = {
 	doctrine = doctrine_theocracy_lay_clergy
 
 	#Marriage
-	doctrine = doctrine_concubines
+	doctrine = doctrine_polygamy
 	doctrine = doctrine_divorce_allowed
 	doctrine = doctrine_bastardry_none
 	doctrine = doctrine_consanguinity_unrestricted
 
 	#Crimes
-	doctrine = doctrine_homosexuality_accepted
+	doctrine = doctrine_homosexuality_shunned
 	doctrine = doctrine_adultery_men_shunned
-	doctrine = doctrine_adultery_women_shunned
+	doctrine = doctrine_adultery_women_crime
 	doctrine = doctrine_kinslaying_close_kin_crime
 	doctrine = doctrine_deviancy_shunned
 	doctrine = doctrine_witchcraft_accepted
 
 	#Clerical Functions
-	doctrine = doctrine_clerical_function_recruitment
+	doctrine = doctrine_clerical_function_control
 	doctrine = doctrine_clerical_gender_either
 	doctrine = doctrine_clerical_marriage_allowed
 	doctrine = doctrine_clerical_succession_temporal_appointment
@@ -42,8 +42,8 @@ celtic_religion = {
 	doctrine = doctrine_no_anointment
 
 	traits = {
-		virtues = { brave just honest poet }
-		sins = { craven arbitrary deceitful }
+		virtues = { brave diligent honest high_druid lifestyle_poet }
+		sins = { craven deceitful lazy }
 	}
 
 	custom_faith_icons = {
@@ -229,8 +229,8 @@ celtic_religion = {
 			holy_site = leon
 
 			#Generic pagan tenets
-			doctrine = tenet_megaliths
-			doctrine = tenet_ritual_celebrations
+			doctrine = tenet_sanctity_of_nature
+			doctrine = tenet_human_sacrifice
 			doctrine = tenet_esotericism
 		}
 	}

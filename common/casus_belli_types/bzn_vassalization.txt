@@ -8,9 +8,11 @@
 	defender_score_from_battles_scale = 150
 	
 	allowed_for_character = {
-		has_government = confederate_tribal_government
+		OR = {
+			has_government = confederate_tribal_government
+			has_trait = bzn_warlord
+		}
 	}
-
 	# Root is the title
 	# scope:attacker is the attacker
 	# scope:defender is the defender
@@ -292,7 +294,7 @@
 	war_name = "VASSALIZATION_WAR_NAME"
 	war_name_base = "VASSALIZATION_WAR_NAME_BASE"
 	cb_name = "VASSALIZATION_CB_NAME"
-	interface_priority = 59
+	interface_priority = 1001
 	
 	ticking_war_score_targets_entire_realm = yes
 	max_defender_score_from_occupation = 150
@@ -303,23 +305,13 @@
 	max_ai_diplo_distance_to_title = 500
 
 	ai_score_mult = {
-		value = 1
-		# As a feudal gov never attack tribal for vassalization
-		add = {
-			if = {
-				limit = {
-					scope:attacker = {
-						NOT = { government_has_flag = government_is_tribal }
-					}
-					scope:defender = {
-							government_has_flag = government_is_tribal
-					}
-				}
-				add = -1000
-			}
-		}
+		value = 100
+
+		# AI in struggles act insularly for wars that don't have a familial or legal basis.
+		multiply = struggle_wars_prioritise_struggle_targets_value
 		# Tell the Romans to stop going adventuring into the steppe for no gods-damned reason.
 		multiply = byzantium_conquests_ai_score_value
+		multiply = muslim_invasions_prefer_nonmuslims_ai_score_value
 
 		#Declaring war on the frankokratia leader can really ruin the whole thing
 		if = {

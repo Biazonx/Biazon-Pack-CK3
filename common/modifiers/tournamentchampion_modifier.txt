@@ -1,0 +1,5 @@
+﻿tournamentchampion_modifier = {
+	icon = tournament_positive
+	tourney_participant_xp_gain_mult = 0.15
+	glory_hound_opinion = 5
+}

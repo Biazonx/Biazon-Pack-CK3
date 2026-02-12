@@ -3,9 +3,13 @@ become_medium = {
 }
 
 government_major = {
-	sort_order = 201
+	sort_order = 203
 }
 
 flavor_medium = {
 	sort_order = 149
+}
+
+regional_major = {
+	sort_order = 204
 }

@@ -1,0 +1,64 @@
+﻿# Grant title should improve house relations, mirroring how revoke damages them
+
+grant_title_house_relation_on_action = {
+    effect = {
+        if = {
+            limit = {
+                scope:transfer_type = flag:granted
+                exists = scope:previous_holder
+                scope:title.tier >= tier_county
+            }
+            # County
+            if = {
+                limit = {
+                    scope:title.tier = tier_county
+                }
+                house ?= {
+                    change_house_relation_effect = {
+                        HOUSE = scope:previous_holder.house
+                        VALUE = house_relation_improve_minor_value
+                        REASON = title_grant
+                        CHAR = scope:previous_holder
+                        TARGET_CHAR = root
+                        TITLE = scope:title
+                    }
+                }
+            }
+            # Duchy
+            else_if = {
+                limit = {
+                    scope:title.tier = tier_duchy
+                }
+                house ?= {
+                    change_house_relation_effect = {
+                        HOUSE = scope:previous_holder.house
+                        VALUE = house_relation_improve_medium_value
+                        REASON = title_grant
+                        CHAR = scope:previous_holder
+                        TARGET_CHAR = root
+                        TITLE = scope:title
+                    }
+                }
+            }
+            # Kingdom or higher
+            else = {
+                house ?= {
+                    change_house_relation_effect = {
+                        HOUSE = scope:previous_holder.house
+                        VALUE = house_relation_improve_major_value
+                        REASON = title_grant
+                        CHAR = scope:previous_holder
+                        TARGET_CHAR = root
+                        TITLE = scope:title
+                    }
+                }
+            }
+        }
+    }
+}
+
+on_title_gain = {
+    on_actions = {
+        grant_title_house_relation_on_action
+    }
+}

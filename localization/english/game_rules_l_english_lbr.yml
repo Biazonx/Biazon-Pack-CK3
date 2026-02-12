@@ -1,0 +1,7 @@
+﻿l_english:
+ # Game Rule: AI Lowborn Ennoblement
+ RULE_AI_LOWBORN_ENNOBLEMENT:0 "AI Lowborn Ennoblement"
+ RULE_AI_LOWBORN_ENNOBLEMENT_ON:0 "Enabled"
+ RULE_AI_LOWBORN_ENNOBLEMENT_ON_DESC:0 "AI rulers can ennoble lowborn characters if they meet the merit requirements. This is balanced with higher thresholds, longer cooldowns, and 50% cost discount for AI."
+ RULE_AI_LOWBORN_ENNOBLEMENT_OFF:0 "Disabled"
+ RULE_AI_LOWBORN_ENNOBLEMENT_OFF_DESC:0 "AI rulers will never ennoble lowborn characters. Players can still use the interaction."

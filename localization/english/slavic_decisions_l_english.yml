@@ -1,0 +1,12 @@
+﻿l_english:
+
+embrace_bogatyrs_legacy_decision: "Embrace Bogatyr's Legacy"
+embrace_bogatyrs_legacy_decision_desc: "It is finally time the Slavs were united, now there is finally one Slavic people for one realm."
+embrace_bogatyrs_legacy_decision_tooltip: "We will adopt Bogatyr's Legacy."
+embrace_bogatyrs_legacy_decision_confirm: "For Bogatyr!"
+add_bogatyrs_legacy_2_tt: "[GetPlayer.GetCulture.GetName] will adopt the $tradition_bogatyrs_legacy_name$ [tradition|E]"
+ 
+bzn_bolghar_legacy_decision: "Restore Old Traditions"
+bzn_bolghar_legacy_decision_desc: "The ancient customs of the Bolghar people have faded over time, replaced by foreign influences and forgotten laws. By restoring the old traditions, we may revive our ancestral identity and strengthen the unity of our realm."
+bzn_bolghar_legacy_decision_tooltip: "Revive the ancient Bolghar traditions and reclaim our ancestral heritage."
+bzn_bolghar_legacy_decision_confirm: "The old ways shall guide us once more."

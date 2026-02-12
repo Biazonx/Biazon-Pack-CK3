@@ -1,0 +1,61 @@
+﻿##########################################
+# Orisha - Yoruba and Bini
+##########################################
+
+orisha_deity_obatala = {# Obatala, the sky-father and creator of human bodies
+	icon = health_positive
+	negate_health_penalty_add = 0.25
+	monthly_prestige_gain_mult = 0.1
+}
+orisha_deity_yemoja = {# Yemoja, the water goddess
+	icon = diplomacy_positive
+	naval_movement_speed_mult = 0.25
+	diplomacy = 3
+}
+orisha_deity_orunmila = {# Orunmila, the patron orisha of Ifa itself, and the source of wisdom
+	icon = learning_positive
+	monthly_learning_lifestyle_xp_gain_mult = 0.15
+    learning = 2
+    ai_honor = 10
+}
+orisha_deity_ogun = {# Ogun, the patron orisha of war and metal-workers
+	icon = martial_positive
+	monthly_martial_lifestyle_xp_gain_mult = 0.15
+    martial = 2
+    ai_boldness = 10
+}
+orisha_deity_olookun = {# The master of the Ocean, and one who manifests great wealth and prosperity
+	icon = economy_positive
+    stewardship = 2
+	domain_tax_same_faith_mult = 0.1
+	monthly_stewardship_lifestyle_xp_gain_mult = 0.15
+    ai_greed = 10
+}
+orisha_deity_osun = {# Orisha of femininity, fertility, beauty and love
+	icon = love_positive
+	fertility = 0.25
+	attraction_opinion = 10
+	spouse_opinion = 10
+    ai_compassion = 10
+    ai_vengefulness = -10
+}
+orisha_deity_esu = {# Esu, the force of chaos, of trickery and deceit
+	icon = intrigue_positive
+    intrigue = 2
+	monthly_intrigue_lifestyle_xp_gain_mult = 0.15
+    ai_honor = -10
+}
+orisha_deity_osoosi = {# Osoosi, the orisha of the hunt, the forest, and of warrior
+	icon = hunt_positive
+	prowess = 5
+	martial = 1
+    stress_gain_mult = -0.15
+    ai_boldness = 10
+}
+orisha_deity_sango = {# Sango, the wrathful orisha of judgement, he who creates thunder and lightning
+	icon = dread_positive
+	dread_baseline_add = 20
+	martial = 1
+	tolerance_advantage_mod = 2
+    ai_vengefulness = 10
+}

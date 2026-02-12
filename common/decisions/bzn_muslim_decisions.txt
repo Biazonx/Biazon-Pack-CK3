@@ -5,7 +5,7 @@ bzn_manage_harem_decision = {
 
 	decision_group_type = flavor_medium
 
-	ai_check_interval = 240
+	ai_check_interval = 120
 	cooldown = { years = 5 }
 
 	is_shown = {
@@ -43,7 +43,7 @@ bzn_manage_harem_decision = {
 	}
 
 	ai_will_do = {
-		base = 25
+		base = 50
 	}
 }
 
@@ -54,7 +54,7 @@ bzn_invite_mamluk_decision = {
 
     decision_group_type = flavor_medium
 
-    ai_check_interval = 240
+    ai_check_interval = 120
 
     cooldown = { years = 5 }
 
@@ -71,6 +71,12 @@ bzn_invite_mamluk_decision = {
             days = { 5 10 }
         }
 		custom_tooltip = bzn_invite_mamluk_effect_tooltip
+		house = {
+			add_unity_value = {
+				value = massive_unity_loss
+				character = root
+			}
+		}
     }
 
     cost = { prestige = 75 }
@@ -80,7 +86,7 @@ bzn_invite_mamluk_decision = {
 	}
 
 	ai_will_do = {
-		base = 10
+		base = 20
 	}
 }
 
@@ -91,7 +97,7 @@ bzn_observe_ramadan_decision = {
 	
 	desc = bzn_observe_ramadan_decision_desc
     decision_group_type = flavor_medium
-    ai_check_interval = 240
+    ai_check_interval = 120
 	
 	cooldown = { years = 5 }
 	
@@ -116,7 +122,7 @@ bzn_observe_ramadan_decision = {
         always = yes
     }
     ai_will_do = {
-        base = 20
+        base = 50
     }
 }
 
@@ -127,7 +133,7 @@ bzn_pay_sadaqah_decision = {
 	
 	desc = bzn_pay_sadaqah_decision_desc
     decision_group_type = flavor_medium
-    ai_check_interval = 240
+    ai_check_interval = 120
 	
 	cooldown = { years = 5 }
 	
@@ -149,6 +155,113 @@ bzn_pay_sadaqah_decision = {
         always = yes
     }
     ai_will_do = {
-        base = 20
+        base = 25
+    }
+}
+
+bzn_rashidun_descendant_decision = {
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_family_tree.dds"
+    }
+	
+	desc = bzn_rashidun_descendant_desc
+    decision_group_type = major
+    ai_check_interval = 120
+	
+	cooldown = { years = 1 }
+	
+    is_shown = {
+		religion = religion:islam_religion
+		NOT = { has_character_modifier = rashidun_descendant }
+		NOT = { house = has_house_modifier = rashidun_awakening_house_modifier }
+    }
+	
+    is_valid = {
+		OR = {
+			AND = {
+				has_trait = sayyid
+				piety_level >= 2
+			}
+			AND = {
+				piety_level >= 4
+				prestige_level >= 4
+			}
+		}
+	}
+	
+	cost = { prestige = 500 piety = 500 }
+	
+    effect = {
+		add_character_modifier = {
+            modifier = rashidun_descendant
+            years = -1
+        }
+    }
+	
+    ai_potential = {
+        always = no
+    }
+	
+    ai_will_do = {
+        base = 0
+    }
+}
+
+bzn_rashidun_reawakening_decision = {
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_golden_age.dds"
+    }
+	
+	desc = bzn_rashidun_reawakening_desc
+    decision_group_type = major
+    ai_check_interval = 120
+	
+	cooldown = { years = 1 }
+	
+    is_shown = {
+		religion = religion:islam_religion
+		has_character_modifier = rashidun_descendant
+		NOT = { house = { has_house_modifier = rashidun_awakening_house_modifier } }
+    }
+	
+    is_valid = {
+		has_character_modifier = rashidun_descendant
+		prestige_level >= 3
+		piety_level >= 5
+		OR = {
+			completely_controls = title:c_medina
+			completely_controls = title:c_kufa
+		}	
+	}
+	
+	cost = { gold = 250 piety = 1000 }
+	
+    effect = {
+		add_prestige = major_prestige_gain
+		house = {
+			add_house_modifier = {
+			modifier = rashidun_awakening_house_modifier 
+				years = -1
+			}
+		}
+		create_artifact = {	
+			name = muhammad_sword
+			description = muhammad_sword_description
+			type = sword
+			visuals = wall_muhammad_sword
+			wealth = 100
+			quality = 100
+			template = general_unique_template
+			generate_history = no
+			modifier = muhammad_sword_modifier
+		}
+	}
+	
+    ai_potential = {
+        always = no
+    }
+	
+    ai_will_do = {
+        base = 0
     }
 }

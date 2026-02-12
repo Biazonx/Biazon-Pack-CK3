@@ -1,0 +1,1502 @@
+﻿l_english:
+
+###########################################################
+### West African Theocratic Titles
+###########################################################
+#Theocracy titles, religious (group) localization.
+
+# Tsafi
+ duke_theocracy_male_west_african_bori_religion:0 "High Adjingi"
+ duke_theocracy_female_west_african_bori_religion:0 "High Magadja"
+ 
+# West African Olokun
+ baron_theocracy_male_oloku_pagan:0 "Ohen"
+ baron_theocracy_female_oloku_pagan:0 "Ohen"
+ count_theocracy_male_oloku_pagan:0 "Igiohen"
+ count_theocracy_female_oloku_pagan:0 "Igiohen"
+ duke_theocracy_male_oloku_pagan:0 "Ohenosa"
+ duke_theocracy_female_oloku_pagan:0 "Ohenosa"
+ king_theocracy_male_oloku_pagan:0 "Grand Ohenosa"
+ king_theocracy_female_oloku_pagan:0 "Grand Ohenosa"
+ 
+# West African Odinala
+ baron_theocracy_male_odinala_religion:0 "Diviner"
+ baron_theocracy_female_odinala_religion:0 "Diviner"
+ count_theocracy_male_odinala_religion:0 "Dibia"
+ count_theocracy_female_odinala_religion:0 "Dibia"
+ duke_theocracy_male_odinala_religion:0 "High Dibia"
+ duke_theocracy_female_odinala_religion:0 "High Dibia"
+ king_theocracy_male_odinala_religion:0 "Grand Dibia"
+ king_theocracy_female_odinala_religion:0 "Grand Dibia"
+ 
+# West African Orisha
+ baron_theocracy_male_west_african_orisha_religion:0 "Olorìṣà"
+ baron_theocracy_female_west_african_orisha_religion:0 "Olorìṣà"
+ count_theocracy_male_west_african_orisha_religion:0 "Babaláwo"
+ count_theocracy_female_west_african_orisha_religion:0 "Ìyáláwo"
+ duke_theocracy_male_west_african_orisha_religion:0 "Aborè"
+ duke_theocracy_female_west_african_orisha_religion:0 "Aborè"
+ king_theocracy_male_west_african_orisha_religion:0 "Ọọ̀ni"
+ king_theocracy_female_west_african_orisha_religion:0 "Ọọ̀ni"
+ kingdom_theocracy_west_african_orisha_religion:0 "Ọọ̀nidom"
+ 
+ #Tuareg pagan
+ baron_theocracy_male_tuareg_pagan:0 "Diviner"
+ baron_theocracy_female_tuareg_pagan:0 "Diviner"
+ count_theocracy_male_tuareg_pagan:0 "Priest"
+ count_theocracy_female_tuareg_pagan:0 "Priestess"
+ duke_theocracy_male_tuareg_pagan:0 "High Priest"
+ duke_theocracy_female_tuareg_pagan:0 "High Priestess"
+ king_theocracy_male_tuareg_pagan:0 "Priest-King"
+ king_theocracy_female_tuareg_pagan:0 "Priest-Queen"
+
+ #Dinka pagan
+ baron_theocracy_male_dinka_pagan:0 "Diviner"
+ baron_theocracy_female_dinka_pagan:0 "Diviner"
+ count_theocracy_male_dinka_pagan:0 "Priest"
+ count_theocracy_female_dinka_pagan:0 "Priestess"
+ duke_theocracy_male_dinka_pagan:0 "High Priest"
+ duke_theocracy_female_dinka_pagan:0 "High Priestess"
+ king_theocracy_male_dinka_pagan:0 "Priest-King"
+ king_theocracy_female_dinka_pagan:0 "Priest-Queen"
+###########################################################
+### Central African Culture Ruler Titles
+###########################################################
+## Jukun Culture
+
+ count_feudal_male_jukun:0 "Kuvyi"
+ count_feudal_female_jukun:0 "Kuvyi"
+ duke_feudal_male_jukun:0 "Kimbi"
+ duke_feudal_female_jukun:0 "Kimbi"
+ duke_feudal_female_jukun_independent:0 "Aku"
+ duke_feudal_male_jukun_independent:0 "Aku"
+ king_feudal_male_jukun:0 "Aku"
+ king_feudal_female_jukun:0 "Aku"
+ emperor_feudal_male_jukun:0 "Akuchuwo" #lit. portmanteau of 'great' and 'king', fictional as no cultural equivalent to an emperor.
+ emperor_feudal_female_jukun:0 "Akuchuwo"
+ queen_mother_jukun:0 "Kunsheje"
+ empress_mother_jukun:0 "Kunsheje"
+ 
+## Dinka Culture
+ baron_feudal_male_dinka:0 "Bėny Koor"
+ baron_feudal_female_dinka:0 "Bėny Koor Tik"
+ count_feudal_male_dinka:0 "Bėny" #Should be Bɛny
+ count_feudal_female_dinka:0 "Bėny Tik"
+ duke_feudal_male_dinka:0 "Bėny Dit"
+ duke_feudal_female_dinka:0 "Bėny Dit"
+ duke_feudal_female_dinka_independent:0 "Bėny Dit"
+ duke_feudal_male_dinka_independent:0 "Bėny Dit"
+ king_feudal_male_dinka:0 "Bäny"
+ king_feudal_female_dinka:0 "Bäny Tik"
+ emperor_feudal_male_dinka:0 "Bëny Bäny"
+ emperor_feudal_female_dinka:0 "Bëny Bäny Tik"
+
+
+###########################################################
+### West African Cultures Ruler Titles
+###########################################################
+
+## Yoruba
+ baron_feudal_male_yoruba:0 "Ajale"
+ baron_feudal_female_yoruba:0 "Ajale"
+ count_feudal_male_yoruba:0 "Baálę"
+ count_feudal_female_yoruba:0 "Baálę"
+ duke_feudal_male_yoruba:0 "Olóyè"
+ duke_feudal_male_yoruba_independent:0 "Ọba"
+ duke_feudal_female_yoruba:0 "Ìyáloyé"
+ duke_feudal_female_yoruba_independent:0 "Ayaba"
+ duke_feudal_female_yoruba_spouse:0 "Olorì"
+ king_feudal_male_yoruba:0 "Ọba"
+ king_feudal_female_yoruba:0 "Ayaba"
+ king_feudal_female_yoruba_spouse:0 "Olorì"
+ emperor_feudal_male_yoruba:0 "Ọba Nla" #lit. 'great [or big] king'...fictional, no cultural equivalent to emperor.
+ emperor_feudal_female_yoruba:0 "Ayaba Nla" #lit. 'great queen'...fictional, no cultural equivalent to emperor.
+ emperor_feudal_female_yoruba_spouse:0 "Olorì"
+ #special titles
+ queen_mother_yoruba:0 "Ìyáo̩ba"
+ empress_mother_yoruba:0 "Ìyáàfin"
+ title_prince_male_yoruba:0 "Ọmọba"
+ title_prince_female_yoruba:0 "Ọmọba"
+ title_prince_male_yoruba_empire:0 "Ọmọba"
+ title_prince_female_yoruba_empire:0 "Ọmọba"
+ duke_feudal_yoruba_shabe:0 "Oníşábe"
+ duke_feudal_yoruba_oyo:0 "Aláàfin"
+ duke_feudal_yoruba_ketu:0 "Alákétu"
+ duke_feudal_yoruba_ife:0 "Ọbalùfọ̀n"
+ duke_feudal_yoruba_ila:0 "Òràngún"
+ duke_feudal_yoruba_shabe_female:0 "Oníşábe"
+ duke_feudal_yoruba_oyo_female:0 "Aláàfin"
+ duke_feudal_yoruba_ketu_female:0 "Alákétu"
+ duke_feudal_yoruba_ife_female:0 "Ọbalùfọ̀n"
+ duke_feudal_yoruba_ila_female:0 "Òràngún"
+ 
+ #Special titles
+ ooni:0 "Ọọ̀ni"
+
+## Igbo culture
+ baron_feudal_male_igbo:0 "Ozo"
+ baron_feudal_female_igbo:0 "Ozo"
+ count_feudal_male_igbo:0 "Nze"
+ count_feudal_female_igbo:0 "Nze"
+ duke_feudal_male_igbo:0 "Òbi"
+ duke_feudal_male_igbo_independent:0 "Ezè"
+ duke_feudal_female_igbo:0 "Òbi"
+ duke_feudal_female_igbo_independent:0 "Ezè Nwaàyì"
+ king_feudal_male_igbo:0 "Ezè"
+ king_feudal_female_igbo:0 "Ezè Nwaàyì"
+ emperor_feudal_male_igbo:0 "Ezèukwu" #lit. portmanteau of 'great' and 'king', fictional as no cultural equivalent to an emperor.
+ emperor_feudal_female_igbo:0 "Ezèukwu" 
+ queen_mother_igbo:0 "Ọ̀mụ"
+ empress_mother_igbo:0 "Ọ̀mụ"
+ title_prince_male_igbo:0 "Ezènwa"
+ title_prince_female_igbo:0 "Adaèze"
+ title_prince_male_igbo_empire:0 "Ezènwa"
+ title_prince_female_igbo_empire:0 "Adaèze"
+  
+## Bini culture
+ baron_feudal_male_edo:0 "Okaevbo"
+ baron_feudal_female_edo:0 "Okaevbo"
+ count_feudal_male_edo:0 "Ekhaemo"
+ count_feudal_female_edo:0 "Ekhaemo"
+ duke_feudal_male_edo:0 "Enogie"
+ duke_feudal_female_edo:0 "Enogie"
+ duke_feudal_female_edo_independent:0 "Ayaba"
+ duke_feudal_female_edo_spouse:0 "Iloi"
+ duke_male_edo_independent:0 "[CHARACTER.Custom('DukeMaleEdoInd')]"
+ king_male_edo:0 "[CHARACTER.Custom('KingMaleEdo')]"
+ king_feudal_female_edo:0 "Ayaba"
+ king_feudal_female_edo_spouse:0 "Iloi"
+ emperor_feudal_male_edo:0 "Ọba Noghodua"
+ emperor_feudal_female_edo:0 "Ayaba Noghodua"
+ emperor_feudal_female_edo_spouse:0 "Iloi"
+ queen_mother_edo:0 "Ìyọba"
+ empress_mother_edo:0 "Ìyọba"
+ title_prince_male_edo:0 "Okoro"
+ title_prince_female_edo:0 "Uvbi"
+ title_prince_male_edo_empire:0 "Okoro"
+ title_prince_female_edo_empire:0 "Uvbi"
+ 
+ duke_male_edo_ind_oba_era:0 "Ọba"
+ duke_male_edo_ind_ogiso_era:0 "Ogiso"
+ king_male_oba_era:0 "Ọba"
+ king_male_ogiso_era:0 "Ogiso"
+ 
+## Ewe culture
+ baron_feudal_male_ewe:0 "Kõmefia"
+ baron_feudal_female_ewe:0 "Kõmefia"
+ count_feudal_male_ewe:0 "Kõmefiaga"
+ count_feudal_female_ewe:0 "Kõmefiaga"
+ duke_feudal_male_ewe:0 "Fia Ntsu"
+ duke_feudal_female_ewe:0 "Fia Nõnu"
+ king_feudal_male_ewe:0 "Togbe"
+ king_feudal_female_ewe:0 "Togbe"
+ emperor_feudal_male_ewe:0 "Togbega" #lit. portmanteau of 'great' and 'king', fictional as no cultural equivalent to an emperor.
+ emperor_feudal_female_ewe:0 "Togbega" 
+ duke_feudal_female_ewe_independent:0 "Fia"
+ duke_feudal_male_ewe_independent:0 "Fia Nõnu"
+ queen_mother_ewe:0 "Fia Enõ" #fictional, from Ewe words for chief and mother
+ empress_mother_ewe:0 "Fia Enõ"
+ title_prince_male_ewe:0 "Fiavi" 
+ title_prince_female_ewe:0 "Fiavi"
+ title_prince_male_ewe_empire:0 "Fiavi"
+ title_prince_female_ewe_empire:0 "Fiavi"
+ 
+## Baatonu Culture
+ baron_feudal_male_baatonu:0 "Headman"
+ count_feudal_male_baatonu:0 "Kibe"
+ duke_feudal_male_baatonu:0 "Sìnambu"
+ duke_feudal_male_baatonu_independent:0 "Sènàboko"
+ king_feudal_male_baatonu:0 "Sènàboko"
+ emperor_feudal_male_baatonu:0 "Bakasènàboko" #lit. portmanteau of 'great' and 'king', fictional as no cultural equivalent to an emperor.
+ queen_mother_baatonu:0 "Gnon Kogui"
+ empress_mother_baatonu:0 "Gnon Kogui"
+ 
+## Ijaw
+ baron_feudal_male_ijaw:0 "Headman"
+ baron_feudal_female_ijaw:0 "Headwoman"
+ count_feudal_male_ijaw:0 "Amanyanabo"
+ count_feudal_female_ijaw:0 "Amanyanabo"
+ county_feudal_ijaw:0 "Chiefdom"
+ duchy_feudal_ijaw:0 "High Chiefdom"
+ kingdom_feudal_ijaw:0 "Peres"
+ duke_feudal_male_ijaw:0 "Alawei"
+ duke_feudal_female_ijaw:0 "Alawei"
+ duke_feudal_female_ijaw_spouse:0 "Alata"
+ king_feudal_male_ijaw:0 "Pere"
+ king_feudal_female_ijaw:0 "Alaere"
+ king_feudal_female_ijaw_spouse:0 "Alata"
+ emperor_feudal_male_ijaw:0 "Opupere"
+ emperor_feudal_female_ijaw:0 "Opualere"
+ title_prince_male_ijaw:0 "Prince"
+ title_prince_female_ijaw:0 "Princess"
+ title_prince_male_ijaw_empire:0 "Prince"
+ title_prince_female_ijaw_empire:0 "Princess"
+ duke_feudal_female_ijaw_independent:0 "Alaere"
+ duke_feudal_male_ijaw_independent:0 "Pere"
+ queen_mother_ijaw:0 "Alayingi"
+ empress_mother_ijaw:0 "Alayingi"
+
+## Akpoto
+ baron_feudal_male_akpoto:0 "Oteyi"
+ baron_feudal_female_akpoto:0 "Oyeti'onya" 
+ count_feudal_male_akpoto:0 "Onyakwuoche"
+ count_feudal_female_akpoto:0 "Onyakwuoche"
+ county_feudal_akpoto:0 "Igeli"
+ duke_feudal_male_akpoto:0 "Ondu"
+ duke_feudal_female_akpoto:0 "Ondunya"
+ king_feudal_male_akpoto:0 "Oche"
+ king_feudal_female_akpoto:0 "Ochanya"
+ emperor_feudal_female_akpoto:0 "Ochanyaba"
+ emperor_feudal_male_akpoto:0 "Attah"
+ queen_mother_akpoto:0 "Enoche"
+ empress_mother_akpoto:0 "Enoche"
+ title_prince_female_akpoto:0 "Okah"
+ title_prince_female_akpoto_empire:0 "Okah"
+ title_prince_male_akpoto:0 "Okah"
+ title_prince_male_akpoto_empire:0 "Okah"
+ 
+###########################################################
+### East African Cultures Ruler Titles
+###########################################################
+########################################################### 
+## Special
+ emperor_golden_horn_muslim_male:1 "Grand Sulṭān"
+ emperor_golden_horn_muslim_female:1 "Grand Sulṭāna"
+ empire_golden_horn_muslim:0 "Grand Sulṭānate"
+
+## Nubian Greek and Old Nubian
+
+ baron_male_nubian:0 "[CHARACTER.Custom('BaronMaleNubian')]"
+ baron_female_nubian:0 "[CHARACTER.Custom('BaronFemaleNubian')]"
+ 
+ count_male_nubian:0 "[CHARACTER.Custom('CountMaleNubian')]"
+ count_female_nubian:0 "[CHARACTER.Custom('CountFemaleNubian')]"
+ 
+ duke_male_nubian:0 "[CHARACTER.Custom('DukeMaleNubian')]"
+ duke_male_nubian_independent:0 "[CHARACTER.Custom('DukeMaleIndpNubian')]"
+ duke_female_nubian:0 "[CHARACTER.Custom('DukeFemaleNubian')]"
+ duke_female_nubian_independent:0 "[CHARACTER.Custom('DukeFemaleIndpNubian')]"
+ 
+ king_male_nubian:0 "[CHARACTER.Custom('KingMaleNubian')]"
+ king_female_nubian:0 "[CHARACTER.Custom('KingFemaleNubian')]"
+ 
+ emperor_male_nubian:0 "[CHARACTER.Custom('EmperorMaleNubian')]"
+ emperor_female_nubian:0 "[CHARACTER.Custom('EmperorFemaleNubian')]"
+ 
+ queen_mother_nubian:0 "[CHARACTER.Custom('QueenMotherNubian')]"
+ empress_mother_nubian:0 "[CHARACTER.Custom('EmpressMotherNubian')]"
+ prince_male_nubian:0 "[CHARACTER.Custom('PrinceMaleNubian')]"
+ princess_female_nubian:0 "[CHARACTER.Custom('PrincessFemaleNubian')]"
+ prince_male_nubian_empire:0 "[CHARACTER.Custom('PrinceMaleNubianEmpire')]"
+ princess_female_nubian_empire:0 "[CHARACTER.Custom('PrincessFemaleNubianEmpire')]"
+
+ baron_male_old_nubian:0 "Dawkatt"
+ baron_male_nubian_greek:0 "Komis"
+ baron_female_old_nubian:0 "Asta"
+ baron_female_nubian_greek:0 "Komissa"
+ count_male_old_nubian:0 "Samet"
+ count_male_nubian_greek:0 "Exarchos"
+ count_female_nubian_greek:0 "Exarchessa"
+ count_female_old_nubian:0 "Samet"
+ duke_male_old_nubian:0 "Songoj"
+ duke_male_nubian_greek:0 "Eparchos"
+ duke_female_nubian_greek:0 "Eparchessa"
+ duke_female_old_nubian:0 "Songoj"
+ duke_male_old_nubian_independent:0 "Songoj Daour"
+ duke_male_nubian_greek_independent:0 "Basilikos"
+ duke_female_old_nubian_independent:0 "Songoj Daour"
+ duke_female_nubian_greek_independent:0 "Basilissa"
+ king_male_old_nubian:0 "Ourou"
+ king_male_nubian_greek:0 "Basileōs"
+ king_female_old_nubian:0 "Ourouitten"
+ king_female_nubian_greek:0 "Basilissa"
+ emperor_male_old_nubian:0 "Ourou Dauour"
+ emperor_male_nubian_greek:0 "Basileōs Basileōn"
+ emperor_female_old_nubian:0 "Ourouitten Daour"
+ emperor_female_nubian_greek:0 "Basilissa"
+ queen_mother_old_nubian:0 "Ngonnen"
+ queen_mother_nubian_greek:0 "Mother of the Basileōs'"
+ empress_mother_old_nubian:0 "Ngonnen"
+ empress_mother_nubian_greek:0 "Mother of the Basileōs'"
+ prince_male_old_nubian:0 "Ourouŋa" #fictional, lit. son of king in old nubian
+ prince_male_nubian_greek:0 "Kaisar"
+ princess_female_old_nubian:0 "Ourouas" #fictional, lit. daughter of king in old nubian
+ princess_female_nubian_greek:0 "Kaisarissa"
+ prince_male_old_nubian_empire:0 "Ourouŋa"
+ prince_male_nubian_greek_empire:0 "Kaisar"
+ princess_female_old_nubian_empire:0 "Ourouas"
+ princess_female_nubian_greek_empire:0 "Kaisarissa" 
+
+ duchy_nubian:0 "Eparchate"
+ county_nubian:0 "Exarchate"
+
+ baron_theocracy_male_nubian_orthodox:0 "Presbuteros"
+ baron_theocracy_female_nubian_orthodox:0 "Presbuterissa"
+ barony_theocracy_nubian_orthodox:0 "Presbuteri"
+ count_theocracy_male_nubian_orthodox:0 "Ēpiskōpos"
+ count_theocracy_female_nubian_orthodox:0 "Ēpiskōpissa"
+ county_theocracy_nubian_orthodox:0 "Ēpiskōpi"
+ duke_theocracy_male_nubian_orthodox:0 "Archiēpiskōpos"
+ duke_theocracy_female_nubian_orthodox:0 "Archiēpiskōpissa"
+ duchy_theocracy_nubian_orthodox:0 "Archiēpiskōpi"
+ king_theocracy_male_nubian_orthodox:0 "Mitropolitis"
+ king_theocracy_female_nubian_orthodox:0 "Mitropolitis"
+ kingdom_theocracy_nubian_orthodox:0 "Mitropolis"
+ emperor_theocracy_male_nubian_orthodox:0 "Patriarchis"
+ emperor_theocracy_female_nubian_orthodox:0 "Matriarchis"
+ empire_theocracy_nubian_orthodox:0 "Patriarchion"
+
+ ##Ethiopian Muslims
+ count_feudal_muslim_male_ethiopian:0 "Chieftain"
+ count_feudal_muslim_female_ethiopian:0 "Chieftess"
+ county_feudal_muslim_ethiopian:0 "Chiefdom"
+ duke_feudal_muslim_male_ethiopian:0 "Emīr"
+ duke_feudal_muslim_female_ethiopian:0 "Emīra"
+ duke_feudal_muslim_male_ethiopian_independent:0 "Emīr"
+ duke_feudal_muslim_female_ethiopian_independent:0 "Emīra"
+ duchy_feudal_muslim_ethiopian:0 "Emīrate"
+ king_feudal_muslim_male_ethiopian:0 "Sulṭān"
+ king_feudal_muslim_female_ethiopian:0 "Sulṭāna"
+ kingdom_feudal_muslim_ethiopian:0 "Sulṭānte"
+ #Ethiopian
+ duke_feudal_ethiopian_king_of_sea_male:0 "Baḥər Nägaśi"
+ duke_feudal_ethiopian_king_of_sea_female:0 "Baḥər Nǝgǝśt"
+ 
+ baron_theocracy_male_ethiopian_orthodox:0 "Däbtära"
+ baron_theocracy_female_ethiopian_orthodox:0 "Däbtära"
+ barony_theocracy_ethiopian_orthodox:0 "Barony"
+ count_theocracy_male_ethiopian_orthodox:0 "Abba"
+ count_theocracy_female_ethiopian_orthodox:0 "Abba"
+ county_theocracy_ethiopian_orthodox:0 "Gwélt"
+ duke_theocracy_male_ethiopian_orthodox:0 "Archiēpiskōpos"
+ duke_theocracy_female_ethiopian_orthodox:0 "Archiēpiskōpissa"
+ duchy_theocracy_ethiopian_orthodox:0 "Archiēpiskōpi"
+ king_theocracy_male_ethiopian_orthodox:0 "Mitropolitis"
+ king_theocracy_female_ethiopian_orthodox:0 "Mitropolitis"
+ kingdom_theocracy_ethiopian_orthodox:0 "Mitropolis"
+ emperor_theocracy_male_ethiopian_orthodox:0 "Patriarchis"
+ emperor_theocracy_female_ethiopian_orthodox:0 "Matriarchis"
+ empire_theocracy_ethiopian_orthodox:0 "Patriarchion"
+ 
+###Harla and Argobba
+ count_feudal_muslim_male_adalite:0 "Chieftain"
+ count_feudal_muslim_female_adalite:0 "Chieftess"
+ county_feudal_muslim_adalite:0 "Chiefdom"
+ count_feudal_male_adalite:0 "Chieftain"
+ count_feudal_female_adalite:0 "Chieftess"
+ county_feudal_adalite:0 "Chiefdom"
+ duke_feudal_muslim_male_adalite:0 "Emīr"
+ duke_feudal_muslim_female_adalite:0 "Emīra"
+ duchy_feudal_muslim_adalite:0 "Emīrate"
+ duke_feudal_male_adalite:0 "High Chieftain"
+ duke_feudal_female_adalite:0 "High Chieftess"
+ duchy_feudal_adalite:0 "High Chiefdom"
+ king_feudal_male_adalite:1 "Garaad"
+ king_feudal_female_adalite:1 "Garaad"
+ kingdom_feudal_adalite:1 "Garaadom"
+ king_feudal_muslim_male_adalite:0 "Sulṭān"
+ king_feudal_muslim_female_adalite:0 "Sulṭāna"
+ kingdom_feudal_muslim_adalite:0 "Sulṭānte"
+ emperor_feudal_muslim_male_adalite:1 "Grand Sulṭān"
+ emperor_feudal_muslim_female_adalite:1 "Grand Sulṭāna"
+ empire_feudal_muslim_adalite:0 "Grand Sulṭānate"
+ emperor_feudal_male_adalite:1 "High Garaad"
+ emperor_feudal_female_adalite:1 "High Garaad"
+ empire_feudal_adalite:0 "Empire"
+ 
+ ###Oromo
+ baron_feudal_male_oromo:0 "Abbaa Fuunyo"
+ baron_feudal_female_oromo:0 "Abbaa Fuunyo"
+ count_feudal_male_oromo:0 "Abbaa Ganda"
+ count_feudal_female_oromo:0 "Abba Ganda"
+ duke_feudal_male_oromo:0 "Abbaa Gadaa" #traditional head of the Gadaa
+ duke_feudal_female_oromo:0 "Abbaa Gadaa"
+ king_feudal_male_oromo:0 "Moti"
+ king_feudal_female_oromo:0 "Moti"
+ emperor_feudal_male_oromo:0 "Grand Moti" #Fictional
+ emperor_feudal_female_oromo:0 "Grand Moti"
+ 
+###########################################################
+### Amazigh Group 
+###########################################################
+########################################################### 
+ ## Guanche
+ baron_feudal_male_guanches:0 "Headman"
+ baron_feudal_female_guanches:0 "Headwoman"
+ count_feudal_male_guanches:0 "Guayre"
+ count_feudal_female_guanches:0 "Guayra" #fictional
+ county_guanches:0 "Guayrato"
+ duchy_guanches:0 "Guanartemato"
+ kingdom_guanches:0 "Menceyato"
+ empire_guanches:0 "High Menceyato"
+ duke_feudal_male_guanches:0 "Guanarteme"
+ duke_feudal_female_guanches:0 "Guanarteme"
+ king_feudal_male_guanches:0 "Mencey"
+ king_feudal_female_guanches:0 "Guayarmina"
+ emperor_feudal_male_guanches:0 "High Mencey"
+ emperor_feudal_female_guanches:0 "High Guayarmina"
+ title_prince_male_guanches:0 "Achimencey" #lit. of the king
+ title_prince_female_guanches:0 "Achimencey"
+ title_prince_male_guanches_empire:0 "Achimencey"
+ title_prince_female_guanches_empire:0 "Achimencey"
+ duke_feudal_female_guanches_independent:0 "Mencey"
+ duke_feudal_male_guanches_independent:0 "Mencey"
+ 
+ #Tuareg
+ duke_feudal_male_tuareg:0 "Ămuzer"
+ duke_feudal_female_tuareg:0 "Tămuzert"
+ duke_feudal_male_tuareg_independent:0 "$king_feudal_male_tuareg$"
+ duke_feudal_female_tuareg_independent:0 "$king_feudal_female_tuareg$"
+ king_feudal_male_tuareg:0 "Ămenukal"
+ king_feudal_female_tuareg:0 "Tămenukalt"
+ 
+###########################################################
+### Credit to CTP for the following
+###########################################################
+########################################################### 
+######################################################
+ #Arabic Culture Group
+######################################################
+  baron_male_arabic_group: "ʿĀmil"
+  baron_female_arabic_group: "ʿĀmila"
+  baron_female_arabic_group_holder: "$baron_male_arabic_group$"
+  barony_castle_arabic_group: "Ḍayʿa"
+  baron_male_andalusian_christian: "Muqaddam"
+  baron_female_andalusian_christian: "Muqaddama"
+ 
+  count_feudalclan_male_arabic_group: "Wālī"
+  count_feudalclan_female_arabic_group: "Wāliya"
+  count_feudalclan_female_arabic_group_holder: "Sitt"
+  county_feudalclan_arabic_group: "Liwāʾ"
+  count_feudalclan_male_andalusian_christian: "Qūmis"
+  count_feudalclan_female_andalusian_christian: "Qūmisa"
+  county_feudalclan_andalusian_christian: "Qūmtat"
+ 
+  count_feudalclan_male_arabic_group_independent: "$duke_default_male_arabic_group$"
+  count_feudalclan_female_arabic_group_independent: "$duke_default_female_arabic_group$"
+  county_feudalclan_arabic_group_independent: "$duchy_arabic_group$"
+  county_feudalclan_andalusian_independent: "Ṭāʾifa"
+  count_feudalclan_male_andalusian_independent_christian: "$count_feudalclan_male_andalusian_christian$"
+  count_feudalclan_female_andalusian_independent_christian: "$count_feudalclan_female_andalusian_christian$"
+ 
+  duke_feudalclan_male_arabic_group: "[CHARACTER.Custom('DukeMaleArabic')]"
+  duke_feudalclan_female_arabic_group: "[CHARACTER.Custom('DukeFemaleArabic')]"
+  duchy_feudalclan_arabic_group: "[CHARACTER.Custom('DuchyArabic')]"
+  marquess_male_christian_andulusian: "Markish"
+  marquess_female_christian_andulusian: "Markisha"
+  march_christian_andulusian: "Markā"
+  marquess_male_arabic_group: "Ṣāḥib aṯ-Ṯaġr"
+  marquess_female_arabic_group: "Sitt aṯ-Ṯaġr"
+  march_arabic_group: "Ṯaġr"
+  palatine_male_arabic_group: "ʾAmīr al-ʾUmarāʾ"
+  palatine_female_arabic_group: "Sayyidat al-Ḥurra"
+  palatine_male_christian_andulusian: "Balāṭīn"
+  palatine_female_christian_andulusian: "Balāṭīna"
+  palatinate_christian_andulusian: "Balāṭīniyya"
+  duke_christian_male_andulusian: "Dūq"
+  duke_christian_female_andulusian: "Dūqa"
+  duchy_christian_andulusian: "Dūqiyya"
+  duke_default_male_arabic_group: "ʾAmīr"
+  duke_default_female_arabic_group: "ʾAmīra"
+  duchy_arabic_group: "ʾImāra"
+  
+  duchy_feudalclan_andulusian_independent: "[CHARACTER.Custom('AndalusianIndepDuchy')]"
+  independent_duchy_andalusian: "Ṭāʾifa"
+ 
+  king_feudalclan_male_arabic_group: "[CHARACTER.Custom('KingMaleArabic')]"
+  king_feudalclan_female_arabic_group: "[CHARACTER.Custom('KingFemaleArabic')]"
+  king_feudalclan_female_arabic_group_holder: "[CHARACTER.Custom('KingFemaleHolderArabic')]"
+  kingdom_feudalclan_arabic_group: "[CHARACTER.Custom('KingdomArabic')]"
+  king_christian_andalusian: "Rāy"
+  king_female_christian_andalusian: "Rāyina"
+  kingdom_christian_andalusian: "Mulk"
+  sultan_arabic: "Sulṭān"
+  sultan_female_arabic: "Sulṭāna"
+  sultanate_arabic: "Salṭana"
+  king_default_male_arabic: "Malik"
+  king_default_female_arabic: "Malika"
+  king_default_female_holder_arabic: "Ḥurrat al-Malika"
+  kingdom_default_arabic: "Mamlaka"
+ 
+  emperor_male_arabic_group: "[CHARACTER.Custom('EmperorMaleArabic')]"
+  emperor_female_arabic_group: "[CHARACTER.Custom('EmperorFemaleArabic')]"
+  empire_arabic_group: "[CHARACTER.Custom('EmpireArabic')]"
+  emperor_default_male_arabic: "Malik al-Mulūk"
+  emperor_default_female_arabic: "Malikat al-Malikāt"
+  empire_default_arabic: "Mulk"
+  emperor_male_andalusian_christian: "ʾImbarāṭūr"
+  emperor_female_andalusian_christian: "ʾImbarāṭūra"
+  empire_andalusian_christian: "ʾInbiraṭūriyya"
+ 
+  title_prince_male_arabic_group: "[CHARACTER.Custom('PrinceArabic')]"
+  title_prince_female_arabic_group: "[CHARACTER.Custom('PrincessArabic')]"
+  prince_default_male_arabic: "ʾAmīr"
+  prince_default_female_arabic: "ʾAmīra"
+  title_prince_male_arabic_group_empire: "[CHARACTER.Custom('PrinceArabic')]"
+  title_prince_female_arabic_group_empire: "[CHARACTER.Custom('PrincessArabic')]"
+  title_prince_male_andalusian_christian: "ʾIfānt"
+  title_prince_female_andalusian_christian: "ʾIfānta"
+  title_prince_male_andalusian_christian_empire: "$title_prince_male_andalusian_christian_empire$"
+  title_prince_female_andalusian_christian_empire: "$title_prince_female_andalusian_christian$"
+  queen_mother_arabic_group: "[CHARACTER.Custom('QueenMArabic')]"
+  queen_mother_arabic_group_empire: "[CHARACTER.Custom('EmpressMArabic')]"
+  arabic_primary_heir: "Waliyy ʿAhd"
+ 
+  baron_republic_male_arabic_group: "Raʾīs"
+  baron_republic_female_arabic_group: "Raʾīsa"
+  barony_city_arabic_group: "Madīna"
+  county_republic_arabic_group: "Madīnat Kubrā"
+  duchy_republic_arabic_group: "Dawla"
+  kingdom_republic_arabic_group: "Dawla"
+ 
+  barony_tribe_arabic_group: "$county_tribal_arabic_group$"
+  count_tribal_male_arabic_group: "Shaykh"
+  count_tribal_female_arabic_group: "Shaykha"
+  count_tribal_female_arabic_group_holder: "$count_tribal_male_arabic_group$"
+  county_tribal_arabic_group: "ʿAshīra"
+  duke_tribal_male_arabic_group: "Shaykh"
+  duke_tribal_female_arabic_group: "Shaykha"
+  duke_tribal_female_arabic_group_holder: "$duke_tribal_male_arabic_group$"
+  duchy_tribal_arabic_group: "Qabīla"
+ 
+ ######################################################
+ #Berber Culture Group
+######################################################
+  #Butr Zaghawa
+######################################################
+   baron_male_butr: "Akurat"
+   baron_female_butr: "Takuratit"
+   barony_castle_butr: "Taddart"
+   
+   count_male_butr: "Amğar"
+   count_female_butr: "Tamğart"
+   county_butr: "Taqbilt"
+   
+   duke_male_butr: "Amir"
+   duke_female_butr: "Tamirt"
+   duchy_butr: "Tamurt"
+   
+   duke_male_butr_independent: "$king_default_male_butr$"
+   duke_female_butr_independent: "$king_default_female_butr$"
+   duchy_butr_independent: "$kingdom_default_butr$"
+   
+   king_male_butr: "[CHARACTER.Custom('KingMaleButr')]"
+   king_female_butr: "[CHARACTER.Custom('KingFemaleButr')]"
+   kingdom_butr: "[CHARACTER.Custom('KingdomButr')]"
+   sultan_male_butr: "Ṣṣelṭan"
+   sultan_female_butr: "Tṣelṭant"
+   sultanate_butr: "Taselṭna"
+   king_default_male_butr: "Ajellid"
+   king_default_female_butr: "Tajellidt"
+   kingdom_default_butr: "Tajellidt"
+   
+   emperor_male_butr: "Amenkad"
+   emperor_female_butr: "Tamenkadt"
+   empire_butr: "Amenkud"
+   
+   title_prince_male_butr: "Ajeldun"
+   queen_mother_butr: "$king_default_female_butr$"
+   empress_mother_butr: "$emperor_female_butr$"
+   
+   baron_republic_butr: "Amğiwan"
+   barony_city_butr: "Tamdint"
+   
+   barony_tribe_butr: "$barony_castle_butr$"
+######################################################
+  #Baranis
+######################################################
+   baron_male_baranis: "Akurat"
+   baron_female_baranis: "Takuratit"
+   barony_castle_baranis: "Taddart"
+   
+   count_male_baranis: "Amğar"
+   count_female_baranis: "Tamğart"
+   county_baranis: "Taqbilt"
+   
+   duke_male_baranis: "Amir"
+   duke_female_baranis: "Tamirt"
+   duchy_baranis: "Tamurt"
+   
+   duke_male_baranis_independent: "$king_default_male_baranis$"
+   duke_female_baranis_independent: "$king_default_female_baranis$"
+   duchy_baranis_independent: "$kingdom_default_baranis$"
+   
+   king_male_baranis: "[CHARACTER.Custom('KingMaleBaranis')]"
+   king_female_baranis: "[CHARACTER.Custom('KingFemaleBaranis')]"
+   kingdom_baranis: "[CHARACTER.Custom('KingdomBaranis')]"
+   sultan_male_baranis: "Ṣṣelṭan"
+   sultan_female_baranis: "Tṣelṭant"
+   sultanate_baranis: "Taselṭna"
+   king_default_male_baranis: "Agellid"
+   king_default_female_baranis: "Tagellidt"
+   kingdom_default_baranis: "Tageldit"
+   
+   emperor_male_baranis: "Amenkad"
+   emperor_female_baranis: "Tamenkadt"
+   empire_baranis: "Amenkud"
+   
+   title_prince_male_baranis: "Ageldun"
+   queen_mother_baranis: "$king_female_baranis$"
+   
+   baron_republic_baranis: "Amğiwan"
+   barony_city_baranis: "Tamdint"
+   
+   barony_tribe_baranis: "$barony_castle_baranis$"
+   
+ ## Afru #Based on Sardinian
+ baron_feudal_male_afariqa:0 "Seniore"
+ baron_feudal_female_afariqa:0 "Seniora" 
+ count_feudal_male_afariqa:0 "Konte"
+ count_feudal_female_afariqa:0 "Kontissa"
+ count_feudal_male_afariqa_independant:0 "Kuratore"
+ count_feudal_female_afariqa_independant:0 "Kuratrice"
+ duke_feudal_male_afariqa:0 "Duka"
+ duke_feudal_female_afariqa:0 "Dukessa"
+ duke_feudal_male_afariqa_independant:0 "Principe"
+ duke_feudal_female_afariqa_independant:0 "Principissa"
+ king_feudal_male_afariqa:0 "Arrege"
+ king_feudal_female_afariqa:0 "Arregina"
+ emperor_feudal_female_afariqa:0 "Imperatore"
+ emperor_feudal_male_afariqa:0 "Imperatice"
+ title_prince_female_afariqa:0 "Principissa"
+ title_prince_female_afariqa_empire:0 "Principissa"
+ title_prince_male_afariqa:0 "Principe"
+ title_prince_male_afariqa_empire:0 "Principe"
+ barony_feudal_afariqa:0 "Baronia"
+ county_feudal_afariqa:0 "Kontatu"
+ duchy_feudal_afariqa:0 "Dukatu"
+ duchy_feudal_afariqa_independant:0 "Principatu"
+ kingdom_feudal_afariqa:0 "Rennu"
+ empire_feudal_afariqa:0 "Imperu"
+ count_tribal_male_afariqa:0 "Kuratore"
+ count_tribal_female_afariqa:0 "Kuratrice"
+ duke_tribal_male_afariqa:0 "Kapu"
+ duke_tribal_female_afariqa:0 "Kapu"
+ county_tribal_afariqa:0 "Kuratoria"
+ duchy_tribal_afariqa:0 "Tribu"
+ king_muslim_male_afariqa:0 "Sultanu"
+ king_muslim_female_afariqa:0 "Sultana"
+ kingdom_muslim_afariqa:0 "Sultanatu"
+
+#Central African Culture Group
+######################################################
+  #Kanuri
+######################################################
+   baron_male_kanuri_holder: "Cîma Ganá"
+   baron_female_kanuri_holder: "Cîma Ganá"
+   baron_male_kanuri: "Kəmâ"
+   baron_female_kanuri: "Yâ"
+   barony_castle_kanuri: "Cídí"
+   
+   count_male_kanuri_holder: "Cîma Kúra"
+   count_female_kanuri_holder: "Cîma Kúra"
+   count_male_kanuri: "Kəmâ"
+   count_female_kanuri: "Yâ"
+   county_kanuri: "Cî"
+   
+   count_male_holder_kanuri_independent: "$king_male_kanuri$"
+   count_male_kanuri_independent: "Kəmâ"
+   count_female_holder_kanuri_independent: "$king_female_holder_kanuri$"
+   count_female_kanuri_independent: "Gumsú"
+   county_kanuri_independent: "[CHARACTER.Custom('KanuriIndepCounty')]"
+   independent_county_kanuri: "$kingdom_kanuri$"
+   
+   duke_male_kanuri_holder: "Galadíma"
+   duke_female_kanuri_holder: "Galadíma"
+   duke_male_kanuri: "Kəmâ"
+   duke_female_kanuri: "Yâ"
+   duchy_kanuri: "Lárdə"
+   
+   duke_male_kanuri_independent: "$king_male_kanuri$"
+   duke_female_holder_kanuri_independent: "$king_female_holder_kanuri$"
+   duke_female_kanuri_independent: "$king_female_kanuri$"
+   duchy_kanuri_independent: "[CHARACTER.Custom('KanuriIndepDuchy')]"
+   independent_duchy_kanuri: "$kingdom_kanuri$"
+   
+   king_male_kanuri: "Mâi"
+   king_female_holder_kanuri: "Mâi"
+   king_female_kanuri: "Gumsú"
+   kingdom_kanuri: "Kərmâi"
+   
+   title_prince_male_kanuri: "Mâinà"
+   title_prince_female_kanuri: "Mâiràm"
+   queen_mother_kanuri: "Makkíra"
+
+   count_tribal_male_holder_kanuri: "Cîma"
+   count_tribal_female_holder_kanuri: "Cîma"
+   duke_tribal_male_holder_kanuri: "Cîma"
+   duke_tribal_female_holder_kanuri: "Cîma"
+   duchy_tribal_kanuri: "Cî"
+   
+   baron_republic_kanuri: "Màigàɽí"
+   barony_city_kanuri: "Ngúro"
+
+   barony_tribe_kanuri: "Cî"
+   count_tribal_male_kanuri: "Cîma"
+   count_tribal_female_kanuri: "Cîma"
+   county_tribal_kanuri: "Cî"
+   duke_tribal_male_kanuri: "Cîma"
+   duke_tribal_female_kanuri: "Cîma"
+######################################################
+  #Hausa
+######################################################
+   baron_male_hausa: "Ùbangidā"
+   baron_female_hausa: "Uwar̃gidā"
+   barony_castle_hausa: "Gidā"
+   
+   count_male_hausa: "Magā̀jī"
+   count_female_hausa: "Magājìyā"
+   county_hausa: "Magā̀jinta"
+   
+   duke_male_hausa: "Másaraucī"
+   duke_female_hausa: "Másaráucia"
+   duchy_hausa: "Masarautā"
+   
+   duke_male_hausa_independent: "$king_male_hausa$"
+   duke_female_holder_hausa_independent: "$king_female_holder_hausa$"
+   duke_female_hausa_independent: "$king_female_hausa$"
+   duchy_hausa_independent: "[CHARACTER.Custom('HausaIndepDuchy')]"
+   
+   king_male_hausa: "Sarkī"
+   king_female_holder_hausa: "Sarkánya"
+   king_female_hausa: "Saraunìyā"
+   kingdom_hausa: "Sàrautā̀"
+   
+   emperor_male_hausa: "Sarkin Sàràkai"
+   emperor_female_holder_hausa: "Sarkányar Sárakúna"
+   emperor_female_hausa: "Saraunìyar̃ Saraunìyai"
+   
+   title_prince_male_hausa: "Yàr̃īmà"
+   title_prince_female_hausa: "Gimbiya"
+   title_prince_male_hausa_empire: "$title_prince_male_hausa$"
+   title_prince_female_hausa_empire: "$title_prince_female_hausa$"
+   queen_mother_hausa: "$king_female_hausa$"
+   empress_mother_hausa: "$emperor_female_hausa$"
+   
+   baron_republic_hausa: "Màigàrī"
+   barony_city_hausa: "Gàrī"
+   
+   barony_tribe_hausa: "Ḳauye"
+######################################################
+  #Nupe
+######################################################
+   baron_male_nupe: "Efutsu"
+   baron_female_nupe: "$baron_male_nupe$"
+   barony_castle_nupe: "Efu"
+   
+   count_male_nupe: "Zhitsu"
+   count_female_nupe: "$count_male_nupe$"
+   county_nupe: "Ezhi"
+   
+   duke_male_nupe: "Gitsu"
+   duke_female_nupe: "$duke_male_nupe$"
+   
+   king_male_nupe: "Etsu"
+   king_female_nupe: "$king_male_nupe$"
+   kingdom_nupe: "Sã̀rǒta"
+
+   king_male_nupe_independent: "Etsu Nupe"
+   king_female_nupe_independent: "$king_male_nupe_independent$"
+   
+   emperor_male_nupe: "Bagadòzhì"
+   emperor_female_nupe: "$emperor_male_nupe$"
+   
+   title_prince_male_nupe: "Gítsu"
+   title_prince_female_nupe: "$title_prince_male_nupe$"
+   title_prince_male_nupe_empire: "$title_prince_male_nupe$"
+   title_prince_female_nupe_empire: "$title_prince_male_nupe$"
+   queen_mother_nupe: "$king_female_nupe$"
+   empress_mother_nupe: "$emperor_female_nupe$"
+   
+   baron_republic_nupe: "[CHARACTER.GetPrimaryTitle.GetNameNoTierNoTooltip]"
+   barony_city_nupe: "Tunga"
+   count_republic_nupe: "[CHARACTER.GetPrimaryTitle.GetNameNoTierNoTooltip]"
+   county_republic_nupe: "Ezhì"
+   
+   barony_tribe_nupe: "$barony_castle_nupe$"
+
+######################################################
+ #Akan Culture Group
+######################################################
+  #Akan
+######################################################
+   baron_male_akan: "Owúrà"
+   baron_female_akan: "Awuráa"
+   barony_castle_akan: "Asàsé"
+   
+   
+   count_male_akan: "Ohéne"
+   count_female_akan: "Ohémmaa"
+   county_akan: "Ahenni"
+   
+   duke_male_akan: "Omã́ṅhéne"
+   duke_female_akan: "Omã́ṅhémmaa"
+   duchy_akan: "Omãṅ"
+   
+   duke_male_akan_independent: "[CHARACTER.GetPrimarySpouse.GetPrimaryTitle.GetNameNoTierNoTooltip]hene"
+   duke_female_akan_independent: "[CHARACTER.GetPrimarySpouse.GetPrimaryTitle.GetNameNoTierNoTooltip]hemmaa"
+   duke_male_akan_independent_holder: "[CHARACTER.GetPrimaryTitle.GetNameNoTierNoTooltip]hene"
+   duke_female_akan_independent_holder: "[CHARACTER.GetPrimaryTitle.GetNameNoTierNoTooltip]hemmaa"
+   duchy_akan_independent: "[CHARACTER.Custom('AkanIndepDuchy')]"
+   
+   king_male_akan: "[CHARACTER.GetPrimarySpouse.GetPrimaryTitle.GetNameNoTierNoTooltip]hene"
+   king_female_akan: "[CHARACTER.GetPrimarySpouse.GetPrimaryTitle.GetNameNoTierNoTooltip]hemmaa"
+   king_male_akan_holder: "[CHARACTER.GetPrimaryTitle.GetNameNoTierNoTooltip]hene"
+   king_female_akan_holder: "[CHARACTER.GetPrimaryTitle.GetNameNoTierNoTooltip]hemmaa"
+   kingdom_akan: "Ahemmáṅ"
+   
+   emperor_male_akan: "Ohempoṅ"
+   emperor_female_akan: "Ohémmaa"
+   empire_akan: "Ahemmáṅpoṅ"
+   
+   title_prince_male_akan: "Ohéneba"
+   title_prince_female_akan: "Ohenebábea"
+   title_prince_male_akan_empire: "$title_prince_male_akan$"
+   title_prince_female_akan_empire: "$title_prince_female_akan$"
+   queen_mother_akan: "$emperor_female_akan$"
+   empress_mother_akan: "$emperor_female_akan$"
+   
+   baron_republic_akan: "Odekŭrow"
+   barony_city_akan: "Kŭrow"
+   
+   barony_tribe_akan: "$barony_castle_akan$"
+######################################################
+  #Kru
+######################################################
+   count_male_kru: "Oranhba"
+   king_female_kru: "Gide"
+   kingdom_kru: "Dible"
+######################################################
+  #Guan
+######################################################
+   baron_male_guan: "Kasawulewura"
+   baron_female_guan: "Kasawulewurache"
+   barony_castle_guan: "Kasawule"
+   
+   count_male_guan: "Ewura"
+   count_female_guan: "Ewurache"
+   county_guan: "Tiuŋ"
+   
+   duke_guan: "Ewurgboŋ"
+   duke_male_guan: "Ewura"
+   duke_female_guan: "Ewurache"
+   
+   duke_male_guan_independent: "[CHARACTER.GetPrimarySpouse.GetPrimaryTitle.GetNameNoTierNoTooltip]wura"
+   duke_female_guan_independent: "Ewurache"
+   duke_male_guan_independent_holder: "[CHARACTER.GetPrimaryTitle.GetNameNoTierNoTooltip]wura"
+   duke_female_guan_independent_holder: "[CHARACTER.GetPrimaryTitle.GetNameNoTierNoTooltip]wurache"
+   
+   king_male_guan: "[CHARACTER.GetPrimarySpouse.GetPrimaryTitle.GetNameNoTierNoTooltip]wura"
+   king_female_guan: "Ewurache"
+   king_male_guan_holder: "[CHARACTER.GetPrimaryTitle.GetNameNoTierNoTooltip]wura"
+   king_female_guan_holder: "[CHARACTER.GetPrimaryTitle.GetNameNoTierNoTooltip]wurache"
+
+   emperor_male_guan: "Gbinipewura"
+   emperor_female_guan: "Gbinipewurache"
+   
+   queen_mother_guan: "Ewurache"
+   empress_mother_guan: "$queen_mother_guan$"
+   
+   barony_tribe_guan: "$barony_castle_guan$"
+######################################################
+
+########################################################
+ #East African Culture Group 
+########################################################
+  #Ethiopian
+########################################################
+   baron_male_ethiopian: "Balabbat"
+   baron_female_ethiopian: "Wäyzäró"
+   baron_female_holder_ethiopian: "Balabbat"
+   barony_castle_ethiopian: "Dästa"
+
+   count_feudalclan_male_ethiopian: "Śeyum"
+   count_feudalclan_female_ethiopian: "Wäyzäró"
+   count_feudalclan_female_holder_ethiopian: "Śeyum"
+   county_feudalclan_ethiopian: "Nagit" #correct term could also be Gwǝlt lit. land grants from the negus
+
+   duke_feudalclan_male_ethiopian: "Nagāśi"
+   duke_feudalclan_female_ethiopian: "Nagāśit"
+   duchy_feudalclan_ethiopian: "Bəḥer" #CTP uses Hagar
+
+   duke_feudalclan_male_ethiopian_independent: "Masfən"
+   duke_feudalclan_female_ethiopian_independent: "Səfanit"
+   duchy_feudalclan_ethiopian_independent: "[CHARACTER.Custom('EthiopianIndepDuchy')]"
+   independent_duchy_ethiopian: "Səfnat"
+
+   king_male_ethiopian: "Nəguś"
+   king_female_ethiopian: "Qäññ Baʿāltiḥat"
+   king_female_holder_ethiopian: "Nəgist"
+   kingdom_ethiopian: "Mängistä"
+
+   emperor_male_ethiopian: "Nəgusa Nägäst"
+   emperor_female_ethiopian: "Qäññ Baʿāltiḥat"
+   emperor_female_holder_ethiopian: "Nígəstä Nəgəstât"
+   empire_ethiopian: "Mängistä"
+
+   title_prince_male_ethiopian: "Abētō"
+   title_prince_female_ethiopian: "Ləʿəlt"
+   title_prince_male_ethiopian_empire: "$title_prince_male_ethiopian$"
+   title_prince_female_ethiopian_empire: "$title_prince_female_ethiopian$"
+   queen_mother_ethiopian: "ʿƏmma Nəgisit"
+   empress_mother_ethiopian: "$queen_mother_ethiopian$"
+
+   baron_republic_ethiopian: "Käntiba"
+   barony_city_ethiopian: "Hagarit"
+   
+   barony_tribe_ethiopian: "$barony_castle_ethiopian$"
+   duchy_tribal_ethiopian: "Angadä"
+   
+########################################################
+  #Coptic
+########################################################
+ baron_male_egyptian_coptic: "Nəbiohi"
+ baron_female_egyptian_coptic: "Nəbiohi"
+ barony_castle_egyptian_coptic: "Mətnêb"
+ count_feudalclan_male_egyptian_coptic: "Amira"
+ count_feudalclan_female_egyptian_coptic: "Amirissa"
+ county_feudalclan_egyptian_coptic: "Amiraton"
+ 
+ duke_feudalclan_male_egyptian_coptic: "[CHARACTER.Custom('DukeMaleCoptic')]"
+ duke_feudalclan_female_egyptian_coptic: "[CHARACTER.Custom('DukeFemaleCoptic')]"
+ duchy_feudalclan_egyptian_coptic: "[CHARACTER.Custom('DuchyCoptic')]"
+ marquess_coptic: "Təshə"
+ march_coptic: "Manpôrj"
+ palatine_male_coptic: "Palatinos"
+ palatine_female_coptic: "Palatinissa"
+ palatinate_coptic: "Palatinaton"
+ duke_default_male_coptic: "Əparkhos"
+ duke_default_female_coptic: "Əparkhissa"
+ duchy_default_coptic: "Əparkhia"
+ 
+ king_feudalclan_male_egyptian_coptic: "Rro"
+ king_feudalclan_female_egyptian_coptic: "Rrō"
+ kingdom_feudalclan_egyptian_coptic: "Mntrro"
+ 
+ emperor_feudalclan_male_egyptian_coptic: "Autokratôr"
+ emperor_feudalclan_female_egyptian_coptic: "Autokratəira"
+ empire_feudalclan_egyptian_coptic: "Autokratôria"
+
+ title_prince_male_eqyptian_coptic: "Priggipos"
+ title_prince_female_eqyptian_coptic: "Priggipissa"
+ title_prince_male_eqyptian_coptic_empire: "Kaisar"
+ title_prince_female_eqyptian_coptic_empire: "Kaisarissa"
+ queen_mother_eqyptian_coptic: "Rrō Maau"
+ empress_mother_eqyptian_coptic: "Autokratəira Maau"
+   
+ baron_republic_egyptian_coptic: "Lashanə"
+ barony_city_egyptian_coptic: "Baki"
+ count_republic_egyptian_coptic: "Rêt"
+ county_republic_egyptian_coptic: "Tosh"
+ duke_republic_male_egyptian_coptic: "Bouləutês"
+ duke_republic_female_egyptian_coptic: "Bouləutis"
+ duchy_republic_egyptian_coptic: "Bouləutêrion"
+ king_republic_male_egyptian_coptic: "Protopolitês"
+ king_republic_female_egyptian_coptic: "Protopolitis"
+ kingdom_republic_egyptian_coptic: "Dêmosion"
+   
+ barony_tribe_egyptian_coptic: "$county_tribal_egyptian_coptic$"
+ count_tribal_male_egyptian_coptic: "Phularkhos"
+ count_tribal_female_egyptian_coptic: "Phularkhissa"
+ county_tribal_egyptian_coptic: "Phulê"
+ duke_tribal_male_egyptian_coptic: "Anaks"
+ duke_tribal_female_egyptian_coptic: "Anassa"
+ duchy_tribal_egyptian_coptic: "Anaktoria" 
+ 
+ #######################################################
+  #Welayta Culture
+########################################################
+   count_male_welayta: "Gódàà"
+   county_welayta: "Gódààtettaa"
+   
+   duke_male_welayta_holder_independent: "Motalami"
+   duke_male_welayta_independent: "Kawó"
+   duke_female_welayta_independent: "Kawiya"
+   duke_female_welayta_holder_independent: "Motalami"
+   
+   king_male_welayta: "Kawó"
+   king_female_welayta: "Abéntá"
+   king_female_welayta_holder: "Kawiya"
+   kingdom_welayta: "Kawótettaa"
+   
+   emperor_male_welayta_holder: "Kaatíntá"
+   emperor_male_welayta: "Kawó"
+   emperor_female_welayta: "$king_female_welayta$"
+   emperor_female_welayta_holder: "$emperor_male_welayta$"
+   
+   queen_mother_welayta: "$king_female_welayta$"
+   empress_mother_welayta: "$king_female_welayta$"
+########################################################
+  #Daju Culture
+########################################################
+   baron_male_daju: "Dìmlíg"
+   baron_female_daju: "Ùrá Dìmlíg"
+   barony_castle_daju: "Dìmlígdìgé"
+   
+   count_male_daju: "Lèèdé Úské"
+   count_female_daju: "Ùrá Lèèdé Úské"
+   county_daju: "Úské"
+   
+   count_male_daju_independent: "$duke_male_daju$"
+   count_female_daju_independent: "$duke_female_daju$"
+   county_daju_independent: "[CHARACTER.Custom('DajuIndepCounty')]"
+   independent_county_daju: "Ɓùgíttìgé"
+   
+   duke_male_daju: "Ɓùgé"
+   duke_female_daju: "Ùrá Ɓùgé"
+   duchy_daju: "Ɓùgíttìgé"
+   
+   duke_male_daju_independent: "$king_male_daju$"
+   duke_female_daju_independent: "$king_female_daju$"
+   duchy_daju_independent: "[CHARACTER.Custom('DajuIndepDuchy')]"
+   
+   king_male_daju: "Ɓùgúr"
+   king_female_daju: "Ùrá Ɓùgúr"
+   kingdom_daju: "Ɓùgúrdìgé"
+   
+   emperor_male_daju: "Ɓónnò"
+   emperor_female_daju: "Ùrá Ɓónnò"
+   empire_daju: "Ɓóŋdìgé"
+   
+   queen_mother_daju: "Ɓóósín Ɓùgúr"
+   empress_mother_daju: "Ɓóósín Ɓónnò"
+   
+   baron_republic_daju: "Lèèdé Héllé"
+   barony_city_daju: "Héllé"
+   
+   barony_tribe_daju: "$barony_castle_daju$"
+
+######################################################
+#Sahelian
+########################################################
+#Soninke
+########################################################
+   baron_male_soninke: "Horo"
+   baron_female_soninke: "Horo"
+   
+   count_male_holder_soninke: "Debegume"
+   count_male_soninke: "Gume Kiina"
+   count_female_holder_soninke: "$count_male_holder_soninke$"
+   count_female_soninke: "Gume Yaqe"
+   county_soninke: "Gumaaxu"
+   
+   duke_male_soninke_holder: "Ɲiiɲegume"
+   duke_female_soninke_holder: "Ɲiiɲegume"
+   duke_male_soninke: "Gume Kiina"
+   duke_female_soninke: "Gume Yaqe"
+   duchy_soninke: "Ɲiiɲe"
+   
+   duke_male_holder_soninke_independent: "$king_male_holder_soninke$"
+   duke_male_soninke_independent: "$king_male_soninke$"
+   duke_female_holder_soninke_independent: "$king_female_holder_soninke$"
+   duke_female_soninke_independent: "$king_female_soninke$"
+   duchy_soninke_independent: "[CHARACTER.Custom('SoninkeIndepDuchy')]"
+   
+   king_male_holder_soninke: "Tunka"
+   king_male_soninke: "Tunka Kiina"
+   king_female_holder_soninke: "Tunka"
+   king_female_soninke: "Tunka Yaqe"
+   kingdom_soninke: "Tunkaaxu"
+
+   king_male_holder_soninke_independent: "$emperor_male_holder_soninke$"
+   king_male_soninke_independent: "$emperor_male_soninke$"
+   king_female_holder_soninke_independent: "$emperor_female_holder_soninke$"
+   king_female_soninke_independent: "$emperor_female_soninke$"
+   kingdom_soninke_independent: "[CHARACTER.Custom('SoninkeIndepKingdom')]"
+   
+   emperor_male_holder_soninke: "Kaya Manga"
+   emperor_male_soninke: "Manga Kiina"
+   emperor_female_holder_soninke: "Kaya Manga"
+   emperor_female_soninke: "Manga Yaqe"
+   empire_soninke: "Mangaaxu"
+   
+   queen_mother_soninke: "$king_female_soninke$"
+   empress_mother_soninke: "$emperor_female_soninke$"
+   
+   barony_city_soninke: "Debe"
+########################################################
+#Gur culture group
+########################################################
+   duke_male_mossi: "Naaba"
+   duke_female_mossi: "Weemba"
+   duchy_mossi: "Naam"
+   
+   king_male_mossi: "Rĩma"
+   king_female_mossi: "Rĩm-poaka"
+   kingdom_mossi: "Rĩungu"
+   
+   emperor_male_mossi: "Moogo Naaba"
+   emperor_female_mossi: "Moogo Weemba"
+   empire_mossi: "Moogo Naam"
+   
+   queen_mother_mossi: "$king_female_mossi$"
+   empress_mother_mossi: "$emperor_female_mossi$"
+ ## Mossi from BAP
+ baron_feudal_male_mossi:0 "Kombere"
+ baron_feudal_female_mossi:0 "Kombere"
+ count_feudal_male_mossi:0 "Dima"
+ count_feudal_female_mossi:0 "Dima"
+ title_prince_male_mossi:0 "Nabiga"
+ title_prince_female_mossi:0 "Nabiga"
+ title_prince_male_mossi_empire:0 "Nabiga"
+ title_prince_female_mossi_empire:0 "Nabiga"
+ #Gur from BAP
+ baron_feudal_male_gur:0 "Kombere"
+ baron_feudal_female_gur:0 "Kombere"
+ count_feudal_male_gur:0 "Naa"
+ count_feudal_female_gur:0 "Naa"
+ county_feudal_gur: "Chiefdom"
+ duchy_feudal_gur: "High Chiefdom"
+ duke_feudal_male_gur:0 "Naaba"
+ duke_feudal_female_gur:0 "Weemba"
+ king_feudal_male_gur:0 "Ya'Naa"
+ king_feudal_female_gur:0 "Ya'Naa"
+########################################################
+  #Songhai
+########################################################
+   baron_male_songhai: "Jineboro"
+   baron_female_songhai: "Jineboro"
+   barony_castle_songhai: "Tata"
+   barony_tribe_songhai: "Tata"
+   
+   count_male_songhai: "Koy"
+   count_female_songhai: "Koy"
+   county_songhai: "Koytarey"
+
+   county_songhai_independent: "[CHARACTER.Custom('SonghaiIndepCounty')]"
+   
+   duke_male_songhai: "Boŋkoyno"
+   duchy_songhai: "Labu"
+   
+   king_male_songhai: "Dia"
+   king_female_songhai: "Dia"
+   kingdom_songhai: "Ganda"
+   
+   title_prince_male_songhai: "Koyize"
+   title_prince_female_songhai: "Woykoyize"
+   
+   baron_republic_songhai: "Diyaw"
+   barony_republic_songhai: "Koyra"
+   count_republic_songhai: "Jinehun"
+   county_republic_songhai: "Koyra Beeri"
+   duchy_republic_songhai: "Gallu"
+   king_republic_songhai: "Koyra Farma"
+   kingdom_republic_songhai: "Gallu Beeri"
+########################################################
+ #Senegambian
+########################################################
+  #Pulaar
+########################################################
+   baron_male_holder_pulaar: "Jom"
+   baron_male_pulaar: "Goroo Jom"
+   baron_female_holder_pulaar: "$baron_male_holder_pulaar$"
+   baron_female_pulaar: "Dey Jom"
+   
+   count_male_holder_pulaar: "Kaananke"
+   count_male_pulaar: "Goroo Kaananke"
+   count_female_holder_pulaar: "$count_male_holder_pulaar$"
+   count_female_pulaar: "Dey Kaananke"
+   
+   duke_male_holder_pulaar: "Laamɗo"
+   duke_male_pulaar: "Goroo Laamɗo"
+   duke_female_holder_pulaar: "$duke_male_holder_pulaar$"
+   duke_female_pulaar: "Dey Laamdo"
+   
+   duke_male_holder_pulaar_independent: "$king_male_holder_pulaar$"
+   duke_male_pulaar_independent: "$king_male_pulaar$"
+   duke_female_holder_pulaar_independent: "$king_female_holder_pulaar$"
+   duke_female_pulaar_independent: "$king_female_pulaar$"
+   duchy_pulaar_independent: "$kingdom_pulaar$"
+   
+   king_male_holder_pulaar: "Laamiido"
+   king_male_pulaar: "Goroo Laamiiɗo"
+   king_female_holder_pulaar: "$king_male_holder_pulaar$"
+   king_female_pulaar: "Dey Laamiido"
+   kingdom_pulaar: "Laamu"
+   
+   emperor_male_pulaar: "Laamiido Baa"
+   emperor_female_pulaar: "Laamiido Yaa"
+   empire_pulaar: "Laamu Baa"
+   
+   queen_mother_pulaar: "$king_female_pulaar$"
+   empress_mother_pulaar: "$emperor_female_pulaar$"
+   
+   baron_republic_pulaar: "Jom Wuro"
+   barony_city_pulaar: "Wuro"
+########################################################
+  #Serer
+########################################################
+   baron_male_serer: "Yaal Bakh"
+   baron_female_serer: "Yaal Bakh"
+   barony_feudalclan_serer: "Mbind"
+   
+   count_male_serer: "Kubel"
+   count_female_serer: "Kubel"
+   county_feudalclan_serer: "Saax"
+   
+   count_male_serer_independent: "$duke_male_serer$"
+   count_female_serer_independent: "$duke_female_serer$"
+   
+   duke_male_serer: "Laman"
+   duke_female_serer: "Laman"
+   
+   duke_male_serer_independent: "$king_male_serer$"
+   duke_female_holder_serer_independent: "$king_male_serer$"
+   duke_female_serer_independent: "$king_female_serer$"
+   duchy_serer_independent: "$kingdom_serer$"
+   
+   king_male_serer: "Maad"
+   king_female_holder_serer: "$king_male_serer$"
+   king_female_serer: "Awo"
+   kingdom_serer: "Maat"
+   
+   emperor_male_serer: "Maad Ba'"
+   emperor_female_holder_serer: "Maad Ya'"
+   emperor_female_serer: "Awo"
+   
+   queen_mother_serer: "Lingeer"
+   empress_mother_serer: "$queen_mother_serer$"
+   
+   barony_republic_serer: "Teeru"
+   count_republic_serer: "Njaatigi"
+   
+   barony_tribal_serer: "Daland"
+   county_tribal_serer: "Xeet"
+########################################################
+  #Wolof
+########################################################
+   baron_male_wolof: "Boroom"
+   baron_female_wolof: "Boroom"
+   
+   count_male_wolof: "Garmi"
+   count_female_wolof: "Garmi"
+   
+   count_male_wolof_independent: "$duke_male_wolof$"
+   count_female_wolof_independent: "$duke_female_wolof$"
+   
+   duke_male_wolof: "Laamaan"
+   duke_female_wolof: "Laamaan"
+   
+   duke_male_wolof_independent: "$king_male_wolof$"
+   duke_female_holder_wolof_independent: "$king_male_wolof$"
+   duke_female_wolof_independent: "$king_female_wolof$"
+   duchy_wolof_independent: "$kingdom_wolof$"
+   
+   king_male_wolof: "Buur"
+   king_female_holder_wolof: "$king_male_wolof$"
+   king_female_wolof: "Awo"
+   kingdom_wolof: "Buuryuhan"
+   
+   emperor_male_wolof: "Buur Ba"
+   emperor_female_holder_wolof: "Buur Ya"
+   emperor_female_wolof: "Awo"
+   empire_wolof: "Nguur"
+   
+   queen_mother_wolof: "Lingeer"
+   empress_mother_wolof: "$queen_mother_wolof$"
+   
+   barony_republic_wolof: "Teeru"
+########################################################
+ #Somalian
+########################################################
+  #Somali
+########################################################
+   baron_male_somali: "Akil"
+   barony_somali: "Qalcad"
+   
+   count_male_somali: "Ugaas"
+   count_female_somali: "Ugaasad"
+   county_somali: "Éṇḍawa"
+   
+   duke_male_somali: "Gerad"
+   duke_female_somali: "Geradad"
+   duchy_somali: "Saldanadda"
+   
+   king_male_somali: "[CHARACTER.Custom('KingMaleSomali')]"
+   king_female_somali: "[CHARACTER.Custom('KingFemaleSomali')]"
+   kingdom_somali: "Saldanadda"
+   sultan_male_somali: "Suldaan"
+   sultan_female_somali: "Suldaanad"
+   king_default_male_somali: "Ughaz"
+   king_default_female_somali: "Ughazad"
+   
+   emperor_male_somali: "Boqor"
+   emperor_female_somali: "Boqorad"
+   
+   title_prince_male_somali: "Amiir"
+   title_prince_female_somali: "Amiiraad"
+   title_prince_male_somali_empire: "$title_prince_male_somali$"
+   title_prince_female_somali_empire: "$title_prince_female_somali$"
+   queen_mother_somali: "[CHARACTER.Custom('QueenMSomali')]"
+   empress_mother_somali: "$emperor_female_somali$"
+########################################################
+  #Beja
+########################################################
+   baron_male_beja: "Kína"
+   baron_female_beja: "Kína"
+   barony_castle_beja: "Balád"
+   
+   count_male_beja: "Hadaa'"
+   count_female_beja: "Hadaa't"
+   county_beja: "Hád'énda"
+   
+   duke_male_beja: "Takléel"
+   duke_female_beja: "Takléelt"
+   duchy_beja: "Hokúm"
+   
+   duke_male_beja_independent: "Ámiir"
+   duke_female_beja_independent: "Ámiirt"
+   
+   king_male_beja: "[CHARACTER.Custom('KingMaleBeja')]"
+   king_female_beja: "[CHARACTER.Custom('KingFemaleBeja')]"
+   sultan_male_beja: "Sultáan"
+   sultan_female_beja: "Sultáant"
+   king_default_male_sbeja: "Malík"
+   king_default_female_beja: "Dagwáayt"
+   
+   emperor_male_beja: "ee-Málik Malík"
+   emperor_female_beja: "tee-Dágwaayt Dagwáayt"
+   
+   queen_mother_beja: "$king_female_beja$"
+   empress_mother_beja: "$emperor_female_beja$"
+   
+   barony_city_beja: "Balád"
+   
+   barony_tribe_beja: "Balád"
+########################################################
+  #Afar
+########################################################
+   king_male_afar: "Maaliki"
+   king_female_afar: "Maalika"
+   kingdom_afar: "Mamlaka"
+########################################################
+ #Guineian
+########################################################
+  #Malinke
+########################################################
+   baron_male_malinke: "Fàrí"
+   baron_female_malinke: "Fàrí"
+   barony_castle_malinke: "Fàríya"
+   barony_tribe_malinke: "Fàríya"
+   
+   count_male_malinke: "Kàfótigi"
+   count_female_malinke: "Kàfótigi"
+   county_malinke: "Kàfó"
+   
+   count_male_malinke_independent: "$duke_male_malinke$"
+   count_female_holder_malinke_independent: "$duke_female_holder_malinke$"
+   count_female_malinke_independent: "$duke_female_malinke$"
+   county_malinke_independent: "[CHARACTER.Custom('MalinkeIndepCounty')]"
+   
+   duke_male_malinke: "Fàribá"
+   duke_female_holder_malinke: "Fàribá"
+   duke_female_malinke: "Fàribámuso"
+   duchy_malinke: "Fàribáya"
+   
+   duke_male_malinke_independent: "$king_male_malinke$"
+   duke_female_malinke_independent: "$king_female_malinke$"
+   duchy_malinke_independent: "[CHARACTER.Custom('MalinkeIndepDuchy')]"
+   
+   king_male_malinke: "Fàamá"
+   king_female_malinke_holder: "Fàamá"
+   king_female_malinke: "Fàamámuso"
+   kingdom_malinke: "Fàamáya"
+
+   king_male_malinke_independent: "$emperor_male_malinke$"
+   king_female_malinke_independent: "$emperor_female_malinke$"
+   kingdom_malinke_independent: "[CHARACTER.Custom('MalinkeIndepKingdom')]"
+   
+   emperor_male_malinke: "Mànsá"
+   emperor_female_malinke: "Qàsá"
+   empire_malinke: "Mansaya"
+   
+   title_prince_male_malinke: "Mansadiŋ"
+   title_prince_female_malinke: "Mansadiŋ"
+   queen_mother_malinke: "$king_female_malinke$"
+   
+   baron_republic_malinke: "Dùgútigi"
+   barony_city_malinke: "Dùgú"
+   count_republic_malinke: "Kàfótigi"
+   county_republic_malinke: "Kàfó"
+
+########################################################
+  #Nubian Culture
+########################################################
+   baron_male_holder_nubian: "Dawkatt"
+   baron_male_nubian: "Ŋod"
+   baron_female_nubian: "Ŋod"
+   baron_female_holder_nubian: "Dawkatt"
+   barony_castle_nubian: "Šal"
+
+   count_feudalclan_male_holder_nubian: "Samet"
+   count_feudalclan_male_nubian: "Ŋod"
+   count_feudalclan_female_nubian: "Ŋod"
+   count_feudalclan_female_holder_nubian: "Samet"
+   county_feudalclan_nubian: "Samett"
+
+   count_feudalclan_male_holder_nubian_independent: "$duke_default_nubian$"
+   count_feudalclan_female_holder_nubian_independent: "$duke_default_nubian$"
+   county_feudalclan_nubian_independent: "[CHARACTER.Custom('NubianIndepCounty')]"
+
+   duke_feudalclan_male_holder_nubian: "[CHARACTER.Custom('DukeNubian')]"
+   duke_feudalclan_male_nubian: "Ŋod"
+   duke_feudalclan_female_nubian: "Ŋod"
+   duke_feudalclan_female_holder_nubian: "[CHARACTER.Custom('DukeNubian')]"
+   duchy_feudalclan_nubian: "[CHARACTER.Custom('DuchyNubian')]"
+   marquess_nubian: "Šewdŋod"
+   march_nubian: "Šewd"
+   palatine_nubian: "Ŋokŋod"
+   palatinate_nubian: "Ŋodkane"
+   duke_default_nubian: "Soŋoj"
+   duchy_default_nubian: "Soŋojj"
+
+   duke_feudalclan_male_nubian_independent: "$king_male_nubian$"
+   duke_feudalclan_female_nubian_independent: "$king_female_nubian$"
+   duke_feudalclan_female_nubian_holder_independent: "$king_female_nubian_holder$"
+   duchy_feudalclan_nubian_independent: "[CHARACTER.Custom('NubianIndepDuchy')]"
+
+   king_male_nubian: "Uru"
+   king_female_nubian: "Basilissa"
+   king_female_nubian_holder: "Ŋonnen"
+   kingdom_nubian: "Urkane"
+
+   emperor_male_nubian: "Uruigun Uru"
+   emperor_female_nubian: "Ŋonnenigun Ŋonnen"
+   emperor_female_nubian_holder: "Ŋonnenigun Ŋonnen"
+   empire_nubian: "Urkane Ur"
+
+   title_prince_male_nubian: "Pour"
+   title_prince_female_nubian: "Ŋonnas"
+   title_prince_male_nubian_empire: "Pour"
+   title_prince_female_nubian_empire: "Ŋonnas"
+   queen_mother_nubian: "Ŋonnen"
+   empress_mother_nubian: "Ŋonnen Ur"
+
+   baron_male_republic_nubian: "Dawkatt"
+   baron_female_republic_nubian: "Dawkatt"
+   barony_city_nubian: "Dipp"
+
+   barony_tribe_nubian: "Erk"
+   count_male_tribal_nubian: "Uran"
+   count_female_tribal_holder_nubian: "Uran"
+   county_tribal_nubian: "Jer"
+   duke_male_tribal_nubian: "Mek"
+   duke_female_tribal_holder_nubian: "Mek"
+   duchy_tribal_nubian: "Jer Ur"
+   
+########################################################
+  #Gur
+########################################################
+   count_male_gur_independent: "$king_male_gur$"
+   count_female_gur_independent: "$king_female_gur$"
+   county_gur_independent: "$kingdom_gur$"
+   
+   duke_male_gur_independent: "$king_male_gur$"
+   duke_female_gur_independent: "$king_female_gur$"
+   duchy_gur_independent: "$kingdom_gur$"
+   
+   king_male_gur: "Bádo"
+   king_female_gur: "Póbádo"
+   kingdom_gur: "Bali"
+   
+

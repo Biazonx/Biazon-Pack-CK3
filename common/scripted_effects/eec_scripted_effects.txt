@@ -1,0 +1,146 @@
+﻿##################################################
+# Decisions
+##################################################
+elevate_crete_scripted_effect = {
+	# You gain the Legacy of Piracy dynasty modifier.
+	dynasty = {
+		add_dynasty_modifier = {
+			modifier = eec_legacy_of_piracy_modifier
+			years = 100
+		}
+		# Also gain a medium amount of dynasty prestige.
+		add_dynasty_prestige = 150
+	}
+	
+	# Buff Krete.
+	title:c_chandax = {
+		# Give it an extra one building slots.
+		title_province = { add_building_slot = 1 }
+		# And a decent development boost.
+		change_development_level = minor_development_level_gain
+	}
+	save_scope_as = founder
+	create_title_and_vassal_change = {
+		type = created
+		save_scope_as = title_change
+		add_claim_on_loss = no
+	}
+	title:k_krete = {
+		change_title_holder = {
+			holder = scope:founder
+			change = scope:title_change
+		}
+	}
+	set_primary_title_to = title:k_krete
+	
+	# Make it your capital if it wasn't already.
+	if = {
+		limit = {
+			NOT = { capital_county = title:c_chandax }
+		}
+		set_realm_capital = title:c_chandax
+	}
+	# And convert it to your culture if it wasn't some flavour of North Germanic.
+	if = {
+		limit = {
+			NOR = {
+				title:c_chandax.culture = {
+					OR = {
+					has_cultural_pillar = heritage_arabic
+					has_cultural_pillar = heritage_berber
+					has_cultural_pillar = heritage_iberian
+					}
+				}
+			}
+		}
+		title:c_chandax = { set_county_culture = scope:founder.culture }
+	}
+	# Have a huge, terrifying event army.
+	spawn_army = {
+		levies = 2500
+		men_at_arms = {
+			type = light_footmen
+			stacks = 5
+		}
+		men_at_arms = {
+			type = bowmen
+			stacks = 5
+		}
+		men_at_arms = {
+			type = pikemen_unit
+			stacks = 5
+		}
+		men_at_arms = {
+			type = mubarizun
+			stacks = 10
+		}
+
+		uses_supply = no
+		location = title:c_chandax.title_province
+		name = fp1_mann_event_troops
+	}
+	# Crete gets a huge modernising boost.
+	title:c_chandax = {
+		add_county_modifier = {
+			modifier = eec_crete_pirate_capital_modifier
+			years = 100
+		}
+	}
+
+	# Plus, if you weren't already, become feudal.
+	if = {
+		limit = { has_government = tribal_government }
+		convert_whole_realm_to_feudalism_effect = yes
+	}
+}
+
+aimm_abdicate_effect = {
+		add_trait = devoted
+		root = {
+			every_character_artifact = {
+				set_owner = root.primary_heir
+			}
+		}
+		if = {
+			limit = {
+				is_married = yes
+			}
+			every_spouse = {
+				divorce = scope:recipient
+			}
+		}
+		if = {
+			limit = {
+				exists = betrothed
+			}
+			break_betrothal = betrothed
+			if = {
+				limit = {
+					has_been_promised_grand_wedding = yes
+				}
+				break_grand_wedding_betrothal_effect = yes
+			}
+		}
+		if = {
+			limit = {
+				is_concubine = yes
+			}
+			this.concubinist = {
+				remove_concubine = scope:recipient
+			}
+		}
+		if = {
+			limit = {
+				number_of_concubines > 0
+			}
+			every_concubine = {
+				scope:recipient = {
+					remove_concubine = prev
+				}
+			}
+		}
+		if = {
+			limit = { is_ruler = yes }
+			depose = yes
+		}
+}

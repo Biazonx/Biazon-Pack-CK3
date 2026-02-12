@@ -1,0 +1,716 @@
+﻿# Lowborn Rise: Ennoblement interaction
+# Updated for CK3 1.18+
+# Core mechanic redesigned without deprecated title creation effects
+
+ennoblement_interaction = {
+	category = interaction_category_friendly
+	common_interaction = yes
+	icon = icon_dynasty
+
+	greeting = positive
+	notification_text = ENNOBLEMENT_PROPOSAL
+	
+	desc = ennoblement_interaction_desc
+	
+	is_shown = {
+		scope:actor = {
+			is_landed = yes
+			OR = {
+				has_government = feudal_government
+				has_government = clan_government
+				has_government = tribal_government
+				has_government = administrative_government
+				has_government = meritocratic_government
+				has_government = celestial_government
+				has_government = steppe_admin_government
+				has_government = mandala_government
+				has_government = japan_administrative_government  # Ritsuryo
+				has_government = japan_feudal_government  # Soryo
+			}
+			# Both AI and player must be top liege (independent) and at least duke tier
+			is_independent_ruler = yes
+			highest_held_title_tier >= tier_duchy
+		}
+		scope:recipient = {
+			is_courtier_of = scope:actor
+			is_lowborn = yes
+			is_adult = yes
+			is_imprisoned = no
+		}
+		NOT = { scope:actor = scope:recipient }
+	}
+	
+	is_valid_showing_failures_only = {
+		# Dynasty prestige requirement (all governments)
+		scope:actor.dynasty = {
+			dynasty_prestige >= 25
+		}
+		
+		# Tribal: needs 350 prestige, 50 gold
+		trigger_if = {
+			limit = { scope:actor = { has_government = tribal_government } }
+			scope:actor = {
+				prestige >= 350
+				gold >= 50
+			}
+		}
+		
+		# Administrative: needs 150 prestige, 50 gold, 150 influence
+		trigger_if = {
+			limit = { scope:actor = { has_government = administrative_government } }
+			scope:actor = {
+				prestige >= 150
+				gold >= 50
+				influence >= 150
+			}
+		}
+		
+		# Feudal/Clan: needs 150 prestige, 50 gold
+		trigger_if = {
+			limit = { 
+				scope:actor = { 
+					OR = {
+						has_government = feudal_government
+						has_government = clan_government
+					}
+				}
+			}
+			scope:actor = {
+				prestige >= 150
+				gold >= 50
+			}
+		}
+		
+		# Meritocratic: 150 prestige, 50 gold, 150 influence (same as administrative)
+		trigger_if = {
+			limit = { scope:actor = { has_government = meritocratic_government } }
+			scope:actor = {
+				prestige >= 150
+				gold >= 50
+				influence >= 150
+			}
+		}
+		
+		# Celestial: 150 prestige, 50 gold, 150 influence (same as administrative)
+		trigger_if = {
+			limit = { scope:actor = { has_government = celestial_government } }
+			scope:actor = {
+				prestige >= 150
+				gold >= 50
+				influence >= 150
+			}
+		}
+		
+		# Steppe Admin: 150 prestige, 50 gold, 150 influence (same as administrative)
+		trigger_if = {
+			limit = { scope:actor = { has_government = steppe_admin_government } }
+			scope:actor = {
+				prestige >= 150
+				gold >= 50
+				influence >= 150
+			}
+		}
+		
+		# Mandala: 150 prestige, 50 gold, 150 piety
+		trigger_if = {
+			limit = { scope:actor = { has_government = mandala_government } }
+			scope:actor = {
+				prestige >= 150
+				gold >= 50
+				piety >= 150
+			}
+		}
+		
+		# Recipient must be available (not imprisoned, incapable, etc.)
+		scope:recipient = {
+			is_adult = yes
+			is_imprisoned = no
+			NOT = { has_trait = incapable }
+		}
+	}
+
+	cost = {
+		renown = 25
+		
+		# Display costs based on government (these show in tooltip)
+		prestige = {
+			# Tribal
+			if = {
+				limit = { scope:actor = { has_government = tribal_government } }
+				value = 350
+			}
+			# Administrative, Feudal, Clan, Meritocratic, Celestial, Steppe Admin
+			else_if = {
+				limit = {
+					scope:actor = {
+						OR = {
+							has_government = administrative_government
+							has_government = feudal_government
+							has_government = clan_government
+							has_government = meritocratic_government
+							has_government = celestial_government
+							has_government = steppe_admin_government
+						}
+					}
+				}
+				value = 150
+			}
+			# Nomad
+			else_if = {
+				limit = { scope:actor = { has_government = nomad_government } }
+				value = 100
+			}
+			# Mandala
+			else_if = {
+				limit = { scope:actor = { has_government = mandala_government } }
+				value = 150
+			}
+			# Default (should not reach)
+			else = { value = 150 }
+			
+			# Show AI pays 50%
+			if = {
+				limit = { scope:actor = { is_ai = yes } }
+				multiply = 0.5
+			}
+		}
+		
+		gold = {
+			# All governments: 50 gold
+			value = 50
+			
+			# Show AI pays 50%
+			if = {
+				limit = { scope:actor = { is_ai = yes } }
+				multiply = 0.5
+			}
+		}
+		
+		piety = {
+			# Mandala
+			if = {
+				limit = { scope:actor = { has_government = mandala_government } }
+				value = 150
+			}
+			else = { value = 0 }
+			
+			# Show AI pays 50%
+			if = {
+				limit = { scope:actor = { is_ai = yes } }
+				multiply = 0.5
+			}
+		}
+		
+		influence = {
+			value = 0
+			if = {
+				limit = {
+					scope:actor = {
+						OR = {
+							has_government = administrative_government
+							has_government = meritocratic_government
+							has_government = celestial_government
+							has_government = steppe_admin_government
+						}
+					}
+				}
+				add = 150
+			}
+			
+			# Show AI pays 50%
+			if = {
+				limit = { scope:actor = { is_ai = yes } }
+				multiply = 0.5
+			}
+		}
+	}
+	
+	on_accept = {
+		
+		# Dynasty creation mechanism - must happen in hidden_effect
+		hidden_effect = {
+			scope:recipient = {
+				# Store if actor is nomad (prevents automatic domicile creation)
+				if = {
+					limit = { scope:actor = { has_government = nomad_government } }
+					save_temporary_scope_value_as = { name = was_under_nomad value = yes }
+				}
+				
+				add_character_flag = becoming_nobility
+				create_dynamic_title = {
+					tier = duchy
+					name = ennoblement_title_name
+				}
+				create_title_and_vassal_change = {
+					type = created
+					save_scope_as = change
+					add_claim_on_loss = no
+				}
+				scope:new_title = {
+					set_capital_county = scope:actor.capital_county
+					set_landless_title = yes
+					set_destroy_on_gain_same_tier = yes
+					set_no_automatic_claims = yes
+					set_can_be_named_after_dynasty = no
+					change_title_holder = {
+						holder = scope:recipient
+						change = scope:change
+					}
+				}
+				resolve_title_and_vassal_change = scope:change
+				scope:new_title = {
+					generate_coa = yes
+				}
+				destroy_title = scope:new_title
+			}
+			scope:actor = {
+				add_courtier = scope:recipient
+			}
+		}
+		
+		scope:actor = {
+			save_scope_as = granter
+			stress_impact = {
+				callous = minor_stress_impact_gain
+				greedy = minor_stress_impact_gain
+				arrogant = minor_stress_impact_gain
+			}
+		}
+		
+		scope:recipient = {
+		save_scope_as = ennobled_one
+			
+			# Log AI ennoblement for testing (shows in game.log)
+			if = {
+				limit = { scope:actor = { is_ai = yes } }
+				scope:actor = {
+					send_interface_toast = {
+						title = ennoblement_ai_toast_title
+						left_icon = scope:actor
+						right_icon = scope:recipient
+						custom_tooltip = ennoblement_ai_toast_desc
+					}
+				}
+			}
+			
+			# Grant immediate benefits of ennoblement
+			# Prestige: 50% of what actor spent
+			if = {
+				limit = { scope:actor = { has_government = tribal_government } }
+				add_prestige = 175  # 50% of 350
+			}
+			else = {
+				add_prestige = 75  # 50% of 150
+			}
+			
+			# Gold: 100% of what actor spent (always 50)
+			add_gold = 50
+			
+			# Piety for Mandala government
+			if = {
+				limit = { scope:actor = { has_government = mandala_government } }
+				add_piety = 150  # Bonus piety
+			}
+			
+			# Add prestige modifier for 10 years
+			add_character_modifier = {
+				modifier = ennobled_prestige_modifier
+				years = 10
+			}
+			
+			# Opinion bonuses
+			add_opinion = {
+				modifier = ennobled_opinion
+				target = scope:actor
+			}
+			
+			# Grant strong hook to the grantor (loyalty)
+			scope:actor = {
+				add_hook = {
+					target = scope:recipient
+					type = obligation_hook
+				}
+			}
+			
+			# Character memory
+			create_character_memory = {
+				type = ennobled_memory
+				participants = {
+					grantor = scope:actor
+				}
+			}
+		}
+		
+		# Grantor gets memory (removed invalid modifier)
+		scope:actor = {
+			create_character_memory = {
+				type = granted_ennoblement_memory
+				participants = {
+					ennobled = scope:recipient
+				}
+			}
+		}
+	}
+	
+	auto_accept = yes
+	
+	ai_accept = {
+		base = 100  # Recipients always accept ennoblement
+	}
+	
+	# AI evaluation frequency (in months) - checks court periodically
+	# Only duke+ can ennoble
+	ai_frequency_by_tier = {
+		barony = 0      # Barons cannot ennoble
+		county = 0      # Counts cannot ennoble
+		duchy = 60      # Dukes check every 5 years
+		kingdom = 60    # Kings check every 5 years
+		empire = 60     # Emperors check every 5 years
+		hegemony = 60   # Hegemony tier
+	}
+	
+	ai_targets = {
+		ai_recipients = courtiers
+	}
+	
+	ai_target_quick_trigger = {
+		adult = yes
+	}
+	
+	ai_potential = {
+		# AI must be independent top liege duke+ (or mandala with no suzerain)
+		OR = {
+			AND = {
+				is_independent_ruler = yes
+				highest_held_title_tier >= tier_duchy
+			}
+			AND = {
+				has_government = mandala_government
+				is_independent_ruler = yes
+				NOT = { any_liege_or_above = { always = yes } }
+			}
+		}
+		
+		# AI must have sufficient resources (won't bankrupt themselves)
+		OR = {
+			# Tribal government
+			AND = {
+				has_government = tribal_government
+				prestige >= 500
+				gold >= 50
+			}
+			# Administrative government
+			AND = {
+				has_government = administrative_government
+				prestige >= 300
+				gold >= 100
+				influence >= 300
+			}
+			# Feudal/Clan government
+			AND = {
+				OR = {
+					has_government = feudal_government
+					has_government = clan_government
+				}
+				prestige >= 300
+				gold >= 100
+			}
+			# Meritocratic government
+			AND = {
+				has_government = meritocratic_government
+				prestige >= 300
+				gold >= 100
+				influence >= 300
+			}
+			# Celestial government
+			AND = {
+				has_government = celestial_government
+				prestige >= 300
+				gold >= 100
+				influence >= 300
+			}
+			# Steppe Admin government
+			AND = {
+				has_government = steppe_admin_government
+				prestige >= 300
+				gold >= 100
+				influence >= 300
+			}
+			# Mandala government (requires no suzerain - autonomous tributary system)
+			AND = {
+				has_government = mandala_government
+				prestige >= 300
+				gold >= 100
+				piety >= 500
+				is_independent_ruler = yes
+			}
+		}
+		
+		# AI must have enough dynasty prestige
+		dynasty = {
+			dynasty_prestige_level >= 1  # At least Established (rank 1)
+		}
+	}
+	
+	ai_will_do = {
+		base = 0
+		
+		# AI RESTRICTION: Must be dynasty head to spend renown
+		modifier = {
+			factor = 0
+			scope:actor = {
+				NOT = { dynasty = { dynast = root } }
+			}
+		}
+		
+		######################
+		# MERIT TRIGGERS
+		######################
+		
+		# Accomplished Knight (Battlefield Valor)
+		modifier = {
+			add = 25
+			scope:recipient = {
+				is_knight_of = scope:actor
+				prowess >= 22
+				opinion = {
+					target = scope:actor
+					value >= 50
+				}
+				# Has proven themselves in battle
+				OR = {
+					has_trait = brave
+					has_trait = wounded
+					has_trait = maimed
+					has_trait_xp = {
+						trait = education_martial_prowess_4
+						value >= 50
+					}
+				}
+			}
+		}
+		
+		# Exceptional Councillor
+		modifier = {
+			add = 20
+			scope:recipient = {
+				is_councillor_of = scope:actor
+				highest_skill_value >= 22
+				opinion = {
+					target = scope:actor
+					value >= 75
+				}
+			}
+		}
+		
+		# Loyal Court Officer
+		modifier = {
+			add = 10
+			scope:recipient = {
+				has_any_court_position = yes
+				opinion = {
+					target = scope:actor
+					value >= 80
+				}
+				OR = {
+					has_trait = loyal
+					has_trait = humble
+					has_trait = content
+				}
+			}
+		}
+		
+		# Lifesaving Physician
+		modifier = {
+			add = 30
+			scope:recipient = {
+				has_court_position = court_physician_court_position
+				learning >= 20
+				has_character_flag = saved_liege_life
+			}
+		}
+		
+		# High Learning Scholar
+		modifier = {
+			add = 10
+			scope:recipient = {
+				learning >= 22
+				OR = {
+					has_trait = education_learning_4
+					has_trait = scholar
+					has_trait = theologian
+				}
+			}
+		}
+		
+		######################
+		# RULER PERSONALITY
+		######################
+		
+		# Generous/Just rulers more likely
+		modifier = {
+			factor = 2
+			scope:actor = {
+				OR = {
+					has_trait = generous
+					has_trait = just
+				}
+			}
+		}
+		
+		# Greedy/Arrogant rulers avoid
+		modifier = {
+			factor = 0.1
+			scope:actor = {
+				OR = {
+					has_trait = greedy
+					has_trait = arrogant
+					has_trait = ambitious
+				}
+			}
+		}
+		
+		# Humble rulers more likely
+		modifier = {
+			factor = 1.5
+			scope:actor = {
+				has_trait = humble
+			}
+		}
+		
+		# Compassionate rulers more likely
+		modifier = {
+			factor = 1.5
+			scope:actor = {
+				has_trait = compassionate
+			}
+		}
+		
+		######################
+		# CULTURAL FACTORS
+		######################
+		
+		# Byzantine/Administrative cultures (historical precedent)
+		modifier = {
+			factor = 2
+			scope:actor = {
+				OR = {
+					culture = { has_cultural_pillar = heritage_byzantine }
+					has_government = administrative_government
+					has_government = meritocratic_government
+					has_government = celestial_government
+				}
+			}
+		}
+		
+		# Feudal Western Europe (more restrictive)
+		modifier = {
+			factor = 0.5
+			scope:actor = {
+				culture = {
+					OR = {
+						has_cultural_pillar = heritage_west_germanic
+						has_cultural_pillar = heritage_frankish
+					}
+				}
+				has_government = feudal_government
+			}
+		}
+		
+		######################
+		# SITUATIONAL
+		######################
+		
+		# After major war victory (more generous)
+		modifier = {
+			factor = 2
+			scope:actor = {
+				has_character_flag = recent_major_victory
+			}
+		}
+		
+		# Peacetime (has time to consider merit)
+		modifier = {
+			factor = 1.5
+			scope:actor = {
+				is_at_war = no
+			}
+		}
+		
+		# High stewardship actor (better resource management)
+		modifier = {
+			factor = 1.3
+			scope:actor = {
+				stewardship >= 20
+			}
+		}
+		
+		######################
+		# RECIPIENT QUALITY
+		######################
+		
+		# Very high opinion bonus
+		modifier = {
+			factor = 2
+			scope:recipient = {
+				opinion = {
+					target = scope:actor
+					value >= 90
+				}
+			}
+		}
+		
+		# Outstanding skill bonus
+		modifier = {
+			factor = 1.5
+			scope:recipient = {
+				highest_skill_value >= 24
+			}
+		}
+		
+		# Recipient is veteran (long service)
+		modifier = {
+			factor = 1.5
+			scope:recipient = {
+				age >= 35
+				OR = {
+					is_knight_of = scope:actor
+					is_councillor_of = scope:actor
+					has_any_court_position = yes
+				}
+			}
+		}
+		
+		######################
+		# BALANCING FACTORS
+		######################
+		
+		# Don't ennoble if recipient has low opinion
+		modifier = {
+			factor = 0.1
+			scope:recipient = {
+				opinion = {
+					target = scope:actor
+					value < 25
+				}
+			}
+		}
+		
+		# Prefer adults over young adults
+		modifier = {
+			factor = 0.5
+			scope:recipient = {
+				age < 25
+			}
+		}
+		
+		# Hard limit: Must have some minimal merit
+		modifier = {
+			factor = 0
+			scope:recipient = {
+				highest_skill_value < 18
+				prowess < 20
+			}
+		}
+	}
+}

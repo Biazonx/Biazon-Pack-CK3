@@ -1,0 +1,11 @@
+﻿l_english: 
+
+trait_lifestyle_tournamentchampion:0 "Tournament Champion"
+trait_lifestyle_tournamentchampion_desc:0 "He anticipated his opponents' moves, identified their strengths, and exploited openings at just the right time. He won battles before participating in them, and on the chessboard, he played with the psychology of combat."
+trait_lifestyle_tournamentchampion_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] anticipated his opponents' moves, identified their strengths, and exploited openings at just the right time. He won battles before participating in them, and on the chessboard, he played with the psychology of combat."
+
+trait_track_lifestyle_tournamentchampion:0 "Tournament Champion"
+trait_track_lifestyle_tournamentchampion_desc:0 "A Tournament Champion is more than just a simple warrior."
+
+tournamentchampion_modifier:0 "Tournament Champion"
+tournamentchampion_modifier_custom_desc:0 "Tournament Champion [SCOPE.sCharacter('tournamentchampionhouse').GetName], his great victories will be remembered as stories that echo through the generations."

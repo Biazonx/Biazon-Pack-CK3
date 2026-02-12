@@ -1,0 +1,27 @@
+﻿# Lowborn Rise Character Modifiers
+# Updated for CK3 1.18+
+
+enacted_ennoblement_modifier = {
+	icon = learning_positive
+	monthly_prestige = 0.5
+	diplomacy = 1
+}
+
+newly_ennobled_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 0.25
+	general_opinion = 5
+	same_opinion = -10
+}
+
+# Modifier for characters who have been ennobled
+ennobled_prestige_modifier = {
+	icon = prestige_positive
+	monthly_prestige = 1
+}
+
+# Modifier for characters who have raised a lowborn to nobility
+raised_lowborn_to_nobility = {
+	icon = diplomacy_negative
+	diplomacy = -1
+}

@@ -10,27 +10,12 @@
 
 	combine_into_one = yes
 	should_show_war_goal_subview = yes
-	mutually_exclusive_titles = { always = yes }
 
 	# Already defined in 00_casus_belli_groups.txt
 	allowed_for_character = {
 		scope:attacker.faith = {
 			NOT = { has_doctrine = unreformed_faith_doctrine }
 		}
-	}
-
-	allowed_for_character_display_regardless = {
-		trigger_if = {
-			limit = {
-				has_variable_list = humsacd_hofs
-				is_target_in_variable_list = {
-					name = humsacd_hofs
-					target = scope:attacker.faith
-				}
-			}
-			piety_level >= 1
-		}
-		trigger_else = { piety_level >= 2 }
 	}
 
 	allowed_against_character = {
@@ -49,15 +34,10 @@
 	}
 	#target_titles = neighbor_land_or_water
 	# Allow CB on every religion that is within diplomatic range instead of just neighboring
-	target_titles = all
-	target_title_tier = all
-	target_de_jure_regions_above = yes
 	ignore_effect = change_title_holder
 
 	valid_to_start = {
-		scope:target = {
-			tier = tier_county
-		}
+		# No specific conditions to allow free use
 	}
 
 	should_invalidate = {
@@ -123,7 +103,7 @@
 	}
 	
 	ai_score_mult = {
-		value = 1
+		value = 10
 		# Holy War are limited to connected neighbour to limit big empire expansions over weak realms.
 		add = {
 			if = {
@@ -525,7 +505,7 @@
 
 	is_holy_war = yes
 
-	interface_priority = 80
+	interface_priority = 1
 
 	use_de_jure_wargoal_only = yes
 

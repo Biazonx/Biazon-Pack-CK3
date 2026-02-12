@@ -3,6 +3,7 @@ can_raid_trigger = {
 	OR = {
 		has_trait = pirate_captain
 		has_trait = slaver
+		dynasty = { has_dynasty_modifier = eec_legacy_of_piracy_modifier }
 		# Government logic.
 		government_has_flag = government_can_raid_rule
 		## Admin - Frontier themes
@@ -67,8 +68,10 @@ can_raid_trigger = {
 # Here so that you can plug in whatever dynasty modifiers you want without overwriting the whole scripted rule trigger.
 can_raid_dynasty_modifiers_that_enable_raiding_overseas_list_trigger = {
 	# Yes, I realise the OR is redundant till someone else puts something in here. Shoosh.
+		OR = {
 		has_dynasty_modifier = fp1_legacy_of_piracy_modifier
-
+		has_dynasty_modifier = eec_legacy_of_piracy_modifier 
+		}
 }
 can_raid_dynasty_modifiers_that_enable_raiding_overland_list_trigger = {
 	OR = {
@@ -134,5 +137,7 @@ can_raid_across_water_trigger = {
 		government_has_flag = government_enables_naval_raiding
 		#Is Hereward.
 		has_trait = the_wake
+		has_trait = pirate_captain
+		has_trait = slaver
 	}
 }

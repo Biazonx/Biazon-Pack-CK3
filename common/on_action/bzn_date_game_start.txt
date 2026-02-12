@@ -1,0 +1,44 @@
+﻿on_game_start = {
+	on_actions = {
+	
+		bzn_setup_on_actions
+		
+	}
+}
+
+bzn_setup_on_actions = {
+	effect = {
+	
+		bzn_setup_effect = yes	
+		
+		if = {
+			limit = {
+				game_start_date >= 769.1.1
+			}
+			bzn_setup_innovation_tribal_effect = yes	
+		}		
+		
+		if = {
+			limit = {
+				game_start_date >= 1066.1.1
+			}
+			bzn_setup_innovation_early_effect = yes	
+		}		
+		
+		if = {
+			limit = {
+				game_start_date >= 1166.1.1
+			}
+			bzn_setup_innovation_high_effect = yes	
+		}
+		
+		if = {
+			limit = {
+				game_start_date >= 1337.1.1
+			}
+			bzn_setup_innovation_late_effect = yes	
+		}		
+		
+	}	
+}
+

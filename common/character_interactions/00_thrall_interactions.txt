@@ -1206,14 +1206,17 @@ sell_thrall = {
 
 free_thrall_interaction = {
 	category = interaction_category_diplomacy
+	interface_priority = 1000
 	use_diplomatic_range = no	
 	icon = thrall
 	
 	is_shown = {
 		scope:recipient = {
 			is_courtier_of = scope:actor
+			OR = {
 			has_trait = thrall
-			has_trait = battle_thrall 
+			has_trait = battle_thrall
+			}
 		}
 	}
 
@@ -1960,3 +1963,76 @@ pay_thrall_ransom = {
 	}
 }
 
+battle_thrall_interaction = {
+	category = interaction_category_diplomacy
+	interface_priority = 999
+	use_diplomatic_range = no	
+	icon = battle_thrall
+	
+	is_shown = {
+		scope:recipient = {
+			is_courtier_of = scope:actor
+			has_trait = thrall
+		}
+	}
+
+	desc = battle_thrall_interaction_desc
+
+	auto_accept = yes
+
+	ai_frequency = 1
+
+	ai_will_do = {
+		base = 0
+
+		modifier = {
+			add = 25
+			scope:recipient = {
+				is_courtier_of = scope:actor	
+			}
+		}
+	}
+	
+	on_accept = {
+		scope:actor = {
+			stress_impact = {
+				compassionate = minor_stress_impact_gain
+			}
+		}
+		
+		scope:recipient = {
+			remove_trait = thrall
+			add_trait = battle_thrall
+			if = {	
+				limit = {
+					has_character_modifier = thrall_fields
+				}
+				remove_character_modifier = thrall_fields
+			}
+			else_if = {	
+				limit = {
+					has_character_modifier = thrall_stables
+				}
+				remove_character_modifier = thrall_stables
+			}
+			else_if = {	
+				limit = {
+					has_character_modifier = thrall_cleaning
+				}
+				remove_character_modifier = thrall_cleaning
+			}
+			else_if = {	
+				limit = {
+					has_character_modifier = thrall_serving
+				}
+				remove_character_modifier = thrall_serving
+			}
+			else_if = {	
+				limit = {
+					has_character_modifier = thrall_respected
+				}
+				remove_character_modifier = thrall_respected
+			}
+		}
+	}
+}

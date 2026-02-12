@@ -38,11 +38,17 @@ tradition_diwan_intrigue = {
 	
 	parameters = {
 		number_of_spouses = 4
-		number_of_consorts = 4
+		number_of_consorts = 3
 		can_castrate_prisoners = yes
 		eunuch_trait_bonuses = yes
+		courtiers_more_likely_to_join_hostile_schemes_in_court = yes
+		eunuch_powerful_scheme_agents = yes
 		can_appoint_chief_eunuch = yes
-		family_castration = yes
+		cultrad_unlocks_t4_bounties_for_whispers = yes
+	}
+	
+	character_modifier = {
+		owned_political_scheme_success_chance_add = 10
 	}
 	
 	cost = {
@@ -103,10 +109,10 @@ tradition_mamluk_elite = {
 	
 	parameters = {
 		unlock_maa_mamluk_cavalry = yes
-		unlock_voluntary_laampdom = yes
-		powerful_foreign_knights_find_you_attractive = yes
-		wanderers_gain_extra_combat_skills = yes
-		ambitious_trait_more_common = yes
+		heavy_cavalry_max_size_add = 2	
+		heavy_cavalry_maintenance_mult = -0.1	
+		knight_effectiveness_mult = 0.1
+		doesnt_care_about_culture_faith_in_factions = yes
 	}
 
 	cost = {

@@ -415,8 +415,8 @@
 
 			holy_site = jerusalem
 			holy_site = mecca
-			holy_site = najran
-			holy_site = asir
+			holy_site = medina
+			holy_site = sinai
 			holy_site = sufed
 
 			doctrine = tenet_esotericism
@@ -432,7 +432,7 @@
 			icon = fio_judaism_4
 
 			holy_site = jerusalem
-			holy_site = rai
+			holy_site = alexandria
 			holy_site = baghdad
 			holy_site = sinai
 			holy_site = sufed
@@ -450,7 +450,7 @@
 			icon = fio_judaism_1
 
 			holy_site = jerusalem
-			holy_site = rai
+			holy_site = basra
 			holy_site = baghdad
 			holy_site = sufed
 			holy_site = hamadan
@@ -486,8 +486,8 @@
 			holy_site = jerusalem
 			holy_site = carthage
 			holy_site = medina
-			holy_site = asir
-			holy_site = najran
+			holy_site = sufed
+			holy_site = sinai
 
 			doctrine = tenet_vows_of_poverty
 			doctrine = tenet_pacifism

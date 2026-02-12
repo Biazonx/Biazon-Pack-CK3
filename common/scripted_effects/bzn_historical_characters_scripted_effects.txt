@@ -1,0 +1,101 @@
+﻿spawn_historical_characters_effect = {
+	if = { # Pierre Valdes
+		limit = {
+			current_year >= 1173
+			current_year <= 1184
+			NOT = { exists = global_var:hchar_pierre_valdes }
+		}
+		random = {
+		chance = 100
+		set_global_variable = {name = hchar_pierre_valdes value = yes }
+		title:c_turin = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 26
+				name = "Pierre"
+				dynasty_house = house:house_valdes
+				gender_female_chance = 0
+				random_traits = no
+				location = scope:birth_location.title_province
+				faith = faith:waldensian
+				culture = culture:french
+				trait = education_stewardship_3
+				trait = zealous
+				trait = generous
+				trait = content
+				trait = theologian
+				trait = heresiarch
+				trait = improvident
+				diplomacy = { min_template_high_skill max_template_high_skill }
+				martial = { min_template_low_skill max_template_low_skill }
+				stewardship = { min_template_high_skill max_template_high_skill }
+				intrigue = { min_template_low_skill max_template_low_skill }
+				learning = { min_template_high_skill max_template_high_skill }
+				prowess = { min_template_low_skill max_template_low_skill }
+				save_scope_as = historical_character
+			}
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = pierre_valdes
+				save_scope_as = major
+				create_inspiration = religious_inspiration
+				add_character_flag = ai_will_not_convert
+				give_nickname = nick_the_poor_of_lyon 
+				add_piety = 5000
+				add_character_modifier = {
+					modifier = vow_of_poverty_modifier
+				}
+			}
+			if = { limit = { has_variable = pierre_valdes } } # Error suppression
+			spawn_historical_characters_boilerplate_effect = yes	}
+		}
+	}
+		if = { # Deacon Karp
+		limit = {
+			current_year >= 1173
+			current_year <= 1184
+			NOT = { exists = global_var:hchar_karp }
+		}
+		random = {
+		chance = 100
+		set_global_variable = {name = hchar_karp value = yes }
+		title:c_pskov = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 40
+				name = "Karp"
+				dynasty_house = house:house_karp
+				gender_female_chance = 0
+				random_traits = no
+				location = scope:birth_location.title_province
+				faith = faith:strigolniki
+				culture = culture:russian
+				trait = education_learning_4
+				trait = zealous
+				trait = temperate
+				trait = gregarious
+				trait = theologian
+				trait = scholar
+				trait = heresiarch
+				trait = intellect_good_1 
+				diplomacy = { min_template_high_skill max_template_high_skill }
+				martial = { min_template_low_skill max_template_low_skill }
+				stewardship = { min_template_high_skill max_template_high_skill }
+				intrigue = { min_template_low_skill max_template_low_skill }
+				learning = { min_template_high_skill max_template_high_skill }
+				prowess = { min_template_low_skill max_template_low_skill }
+				save_scope_as = historical_character
+			}
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = karp
+				save_scope_as = major
+				create_inspiration = religious_inspiration
+				add_character_flag = ai_will_not_convert
+				add_piety = 5000
+			}
+			if = { limit = { has_variable = karp } } # Error suppression
+			spawn_historical_characters_boilerplate_effect = yes	}
+		}
+	}
+}

@@ -1,0 +1,40 @@
+﻿eec_crete_castle_01 = {  # rabḍ al-kḫandaq, Castle of the Moat
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_visby_ringmur.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	can_construct = {
+		scope:holder.culture = {
+			has_innovation = innovation_motte
+		}
+	}
+	
+	cost_gold = 250
+	
+	province_modifier = {
+		fort_level = 3
+		defender_holding_advantage = 5
+		garrison_size = 0.25
+	}
+	
+	county_modifier = {
+		levy_size = 0.25
+		hostile_raid_time = 0.25
+	}
+	
+	character_modifier = {
+		naval_movement_speed_mult = 0.25
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+
+

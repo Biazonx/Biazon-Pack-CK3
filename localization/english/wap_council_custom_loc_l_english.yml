@@ -1,0 +1,205 @@
+﻿l_english:
+
+###################################
+#Council Position Chancellor
+###################################
+### Yoruba
+ councillor_chancellor_yoruba:0 "Baṣọ̀run"
+## Edo
+ councillor_chancellor_edo:0 "Iyase"
+## Jukun
+ councillor_chancellor_jukun:0 "Abonchuwo"
+## Nupe
+ councillor_chancellor_nupe:0 "Ndeji"
+## Gur
+ councillor_chancellor_gur:0 "Togo Naaba"
+ councillor_chancellor_mossi:0 "Togo Naba"
+## Akan
+#councillor_chancellor_akan: "Manwerehen"
+## Nubian 
+ councillor_chancellor_nubian_greek_male:0 "Prōtodōmestikos"
+ councillor_chancellor_nubian_greek_female:0 "Prōtodōmestikissa"
+ councillor_chancellor_old_nubian_male:0 "Irt" #Or Samet?
+ councillor_chancellor_old_nubian_female:0 "Irt"
+
+######## Credit to CTP #######
+##Arabic
+ councillor_chancellor_arabic_group_male: "Wazīr"
+ councillor_chancellor_arabic_group_female: "Sayyida"
+ councillor_chancellor_andalusian_male: "Ḥājib"
+ councillor_chancellor_andalusian_female: "Sayyida"
+ councillor_chancellor_egyptian_coptic_male: "Prəsbəutês"
+ councillor_chancellor_egyptian_coptic_female: "Prəsbəira"
+ 
+## European
+ councillor_chancellor_sardinian: "Cancelleri"
+ councillor_chancellor_greek_male: "Magistros"
+ councillor_chancellor_greek_female: "Magistrissa"
+
+## Akan
+ councillor_chancellor_akan: "Aheṅkwaa"
+
+## Central African
+ councillor_chancellor_hausa: "Makā̀mā"
+
+## East African
+ councillor_chancellor_ethiopian: "Ts'äḥafē Tə’əzaz"
+ councillor_chancellor_daju: "Sár'ìné"
+
+## Senegambian
+ councillor_chancellor_serer: "Jaraf"
+ councillor_chancellor_wolof: "Jogomaay"
+   
+###################################
+#Default
+###################################
+ councillor_chancellor_default: "Chancellor"
+ 
+################################### 
+#Council Position Steward
+################################### 
+## Jukun
+ councillor_steward_jukun:0 "Abonziken"
+## Hausa
+ councillor_steward_hausa:0 "Magaji"
+## Gur
+ councillor_steward_gur:0 "Werânga Naaba"
+ councillor_steward_mossi:0 "Werânga Naba"
+##Akan
+ #councillor_steward_akan_male: "Sanaahene"
+ #councillor_steward_akan_female: "Sanaahena"
+## Yoruba
+ councillor_steward_yoruba:0 "Olori Parakoyi" 
+## Nubian
+ councillor_steward_nubian_greek_male:0 "Prōtomeizōteros"
+ councillor_steward_nubian_greek_female:0 "Prōtomeizōterissa"
+ councillor_steward_old_nubian_male:0 "Ŋok Eidñil" #Daukatt?
+ councillor_steward_old_nubian_female:0 "Ŋok Eidñil"
+ 
+######## Credit to CTP #######
+## Arabic 
+ councillor_steward_arabic_group_male: "Hājib"
+ councillor_steward_arabic_group_female: "Qahramāna"
+ councillor_steward_egyptian_coptic_male: "Oikonomos"
+ councillor_steward_egyptian_coptic_female: "Oikonoma"
+ councillor_steward_maghrebi: "Khāzin"
+ councillor_steward_andalusian: "Kātib"
+## European
+ councillor_steward_sardinian: "Maiurdomu"
+ councillor_steward_greek_male: "Sakellarios"
+ councillor_steward_greek_female: "Sakellarissa"
+## Akan
+ councillor_steward_akan_male: "Gyaasehéne"
+ councillor_steward_akan_female: "Gyaasehémmaa"
+## East African
+ councillor_steward_ethiopian: "Bajerond"
+## Senegambian
+ councillor_steward_serer: "Sakh-Sakh"
+ councillor_steward_wolof: "Maalo"
+
+###################################
+#Default
+###################################
+ councillor_steward_default: "Steward"
+ 
+################################### 
+#Council Position Marshal
+################################### 
+## Yoruba
+ councillor_marshal_yoruba:0 "Balógun"
+## Edo
+ councillor_marshal_edo:0 "Ezomo"
+## Igbo
+ councillor_marshal_igbo:0 "Ọchịagha"
+## Jukun
+ councillor_marshal_jukun:0 "Abonta"
+## Kanuri
+ councillor_marshal_kanuri:0 "Kaigama"
+## Sao
+ councillor_marshal_sao:0 "Kaigama"
+## Gur
+ councillor_marshal_gur:0 "Tâsoba"
+## Mossi
+ councillor_marshal_mossi:0 "Gounga Naba"
+## Nupe
+ councillor_marshal_nupe:0 "Tsadza"
+## Hausa
+ councillor_marshal_hausa:0 "Madawaki"
+## Zaghawa
+ councillor_marshal_zaghawa:0 "Kaigama"
+##Akan
+ #councillor_marshal_akan_male: "Tufohene"
+ #councillor_marshal_akan_female: "Tufohena"
+## Nubian
+ councillor_marshal_nubian_greek_male:0 "Arkhistratêgos"
+ councillor_marshal_nubian_greek_female:0 "Arkhistratêgissa"
+ councillor_marshal_old_nubian_male:0 "Sametiŋo" #Mourtin Ngodil? Unattested in Old Nubian, but this title is a real one for the Lord of Horses - which could be the head of the cavalry?
+ councillor_marshal_old_nubian_female:0 "Sametiŋo"
+ 
+######## Credit to CTP #######
+##Arabic 
+ councillor_marshal_arabic_group_male: "Qāʾid al-ʾAʿlā"
+ councillor_marshal_arabic_group_female: "Ḥurra"
+ councillor_marshal_egyptian_coptic_male: "Arkhistratêgos"
+ councillor_marshal_egyptian_coptic_female: "Arkhistratêgissa"
+##European
+ councillor_marshal_sardinian: "Ianna"
+ councillor_marshal_greek_male: "Protostrator"
+ councillor_marshal_greek_female: "Protostratorissa"
+##Akan
+ councillor_marshal_akan_male: "Abontenhéne"
+ councillor_marshal_akan_female: "Abontenhémmaa"
+##East African
+ councillor_marshal_ethiopian: "Qäññ behtwäddäd"
+##Senegambian
+ councillor_marshal_serer: "Farba"
+ councillor_marshal_wolof: "Jawriñ"
+   
+###################################
+#Default
+###################################
+ councillor_marshal_default: "Marshal"
+################################### 
+#Council Position Spymaster
+################################### 
+## Kanuri
+ councillor_spymaster_kanuri:0 "Mestrema"
+## Sao
+ councillor_spymaster_sao:0 "Mestrema"
+## Zaghawa
+ councillor_spymaster_zaghawa:0 "Mestrema"
+## Yoruba
+ councillor_spymaster_yoruba:0 "Odefin"
+## Edo
+ councillor_spymaster_edo:0 "Ero"
+## Hausa
+ councillor_spymaster_hausa:0 "Yari" 
+## Nubian 
+ councillor_spymaster_nubian_greek_male:0 "Kataskopos" #unattested, taken from CTP Coptic
+ councillor_spymaster_nubian_greek_female:0 "Kataskopissa" #unattested, taken from CTP Coptic
+ councillor_spymaster_old_nubian_male:0 "Gourgikrel" #Alternative is fictional but Oudmikshil is a WAP creation using old nubian words for lord and darkness, i.e. master of shadows.
+ councillor_spymaster_old_nubian_female:0 "Gourgikrel"
+ 
+######## Credit to CTP #######
+#Arabic
+ councillor_spymaster_arabic_group_male: "Ṣāḥib ash-Shurṭa"
+ councillor_spymaster_arabic_group_female: "ʾAmīn"
+ councillor_spymaster_egyptian_coptic_male: "Kataskopos"
+ councillor_spymaster_egyptian_coptic_female: "Kataskopissa"
+ ##European
+ councillor_spymaster_sardinian_male: "Camarlingu"
+ councillor_spymaster_sardinian_female: "Camarlinga"
+ councillor_spymaster_greek_male: "Mystikos"
+ councillor_spymaster_greek_female: "Mystiki"
+ ##Akan
+ councillor_spymaster_akan: "Okwansráfó"
+ ##Senegambian
+ councillor_spymaster_serer: "Kawul"
+ councillor_spymaster_wolof: "Géwél"
+ ##East African
+ councillor_spymaster_ethiopian: "Sab'a 'Ayn"
+###################################
+#Default
+###################################
+ councillor_spymaster_default: "Spymaster"
+##################################

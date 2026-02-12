@@ -253,8 +253,7 @@
 			holy_site = takht-e_soleyman
 			holy_site = yazd
 
-			doctrine = tenet_divine_marriage
-			doctrine = tenet_reincarnation					  
+			doctrine = tenet_divine_marriage				  
 			doctrine = tenet_communal_identity
 			doctrine = tenet_ritual_celebrations
 
@@ -280,7 +279,6 @@
 			doctrine = tenet_divine_marriage
 			doctrine = tenet_ritual_celebrations #Can't have pentarchy and be pluralistic, so this will do
 			doctrine = tenet_false_conversion_sanction #This covers it being more philosophically minded than Mainline Zoroastrianism
-			doctrine = tenet_asceticism
 
 			doctrine = doctrine_spiritual_head
 			doctrine = doctrine_consanguinity_unrestricted
@@ -380,7 +378,6 @@
 
 			doctrine = doctrine_spiritual_head
 			doctrine = doctrine_pluralism_pluralistic
-			doctrine = doctrine_major_branch_behdin 
 
 			holy_order_names = {
 				{ name = "holy_order_order_of_waseghn" }
@@ -429,7 +426,6 @@
 			doctrine = doctrine_gender_equal
 			doctrine = doctrine_pluralism_pluralistic
 			doctrine = doctrine_spiritual_head
-			doctrine = doctrine_heretic_branch_zandik
 		}
 
 		khurramism = {
@@ -446,7 +442,6 @@
 			doctrine = tenet_unrelenting_faith 
 			doctrine = tenet_reincarnation
 			doctrine = tenet_communal_possessions
-			doctrine = tenet_islamic_syncretism
 			doctrine = doctrine_syncretic_mythology 
 
 			doctrine = doctrine_monogamy
@@ -658,14 +653,13 @@
 			holy_site = samarkand
 			holy_site = qayaliq
 			holy_site = farz
-			holy_site = bamiyan
+			holy_site = balkh
 			holy_site = takht-i-sangin 
 
 			doctrine = unreformed_faith_doctrine
 
 			doctrine = tenet_ritual_celebrations
 			doctrine = tenet_adaptive
-			doctrine = tenet_communal_identity
 			doctrine = tenet_divine_marriage
 			doctrine = unreformed_faith_doctrine
 			doctrine = doctrine_major_branch_behdin
@@ -703,7 +697,7 @@
 			religious_head = d_isfahani
 
 			holy_site = ushi-darena
-			holy_site = isfahan
+			holy_site = adur_farnbag
 			holy_site = bahrein
 			holy_site = takht-e_soleyman
 			holy_site = yazd

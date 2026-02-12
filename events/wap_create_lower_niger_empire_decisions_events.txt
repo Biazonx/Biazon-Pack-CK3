@@ -1,0 +1,76 @@
+﻿namespace = wap_create_lower_niger_empire
+
+##################################################
+# Forming the Lower Niger Empire
+##################################################
+
+wap_create_lower_niger_empire.0001 = {
+	type = character_event
+	theme = realm
+	title = wap_create_lower_niger_empire.0001.t
+	desc = wap_create_lower_niger_empire.0001.desc
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+    override_background = {
+		reference = throne_room
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_crusade_starts"
+		hidden_effect = {
+			save_scope_as = scoped_ruler
+			# De jure shifts.
+			title:k_borgu = {
+				set_de_jure_liege_title = title:e_lower_niger
+			}
+			title:k_yorubaland = {
+				set_de_jure_liege_title = title:e_lower_niger
+			}
+			title:k_benin = {
+				set_de_jure_liege_title = title:e_lower_niger
+			}
+			title:k_igbo-benue = {
+				set_de_jure_liege_title = title:e_lower_niger
+			}
+			every_held_title = { # Should shift all dejure of all Empires owned at the time.
+				limit = {
+					tier = tier_empire
+				}
+				every_in_de_jure_hierarchy = {
+					limit = {
+						tier = tier_kingdom
+					}
+					set_de_jure_liege_title = title:e_lower_niger
+					
+				}
+			}
+			every_held_title = { # And any other held Kingdom.
+				limit = {
+					tier = tier_kingdom
+				}
+				set_de_jure_liege_title = title:e_lower_niger
+			}
+	    }
+	}
+
+	option = {
+		name = wap_create_lower_niger_empire.0001.a
+		form_lower_niger_empire_scripted_effects = yes
+		# Send narrative fluff to other players (if any).
+		every_ruler = {
+			limit = {
+				is_landed = yes
+				NOT = { this = root }
+				capital_province = {
+					OR = {
+						geographical_region = world_africa_west
+						geographical_region = world_africa_east
+					}
+				}
+			}
+		}
+	}
+}
+

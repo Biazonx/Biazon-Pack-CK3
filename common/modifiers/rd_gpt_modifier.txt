@@ -1,0 +1,32 @@
+﻿
+rd_gpt_martial_supporter = {
+	icon = martial_mixed
+}
+
+rd_gpt_intrigue_supporter = {
+	icon = intrigue_mixed
+}
+
+rd_gpt_stewardship_supporter = {
+	icon = stewardship_mixed
+}
+
+rd_gpt_learning_supporter = {
+	icon = learning_mixed
+}
+
+rd_gpt_martial_supporter_temp = {
+	icon = martial_negative
+}
+
+rd_gpt_intrigue_supporter_temp = {
+	icon = intrigue_negative
+}
+
+rd_gpt_stewardship_supporter_temp = {
+	icon = stewardship_negative
+}
+
+rd_gpt_learning_supporter_temp = {
+	icon = learning_negative
+}

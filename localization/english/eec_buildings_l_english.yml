@@ -1,0 +1,7 @@
+﻿l_english:
+
+# Castle of the Moat (Chandax)
+building_type_eec_crete_castle_01:0 "Castle of the Moat"
+building_type_eec_crete_castle_01_desc:0 "#F The Arab raiders from Andalusia who founded the Emirate of Crete moved the island's capital from Gortyna to a new castle they called rabḍ al-khandaq, or 'Castle of the Moat', in the 820s. According to the contemporary chronicler Leo the Deacon, it was protected on one side by the sea, and on the other by tall battlements of 'earth and goat and pig hair mixed together and compressed thoroughly, wide enough so that two wagons could easily make a circuit on top of the ramparts and pass each other'. These imposing walls were supplemented by two outspread and throughly impassable moats. From this base, for the approximately 135 years of its existence, the emirate was one of the major foes of Byzantium. Crete commanded the sea lanes of the Eastern Mediterranean and functioned as a forward base and haven for Muslim corsair fleets that ravaged the Byzantine-controlled shores of the Aegean Sea and even for the first time in centuries penetrated into the Marmara Sea. #!"
+building_eec_crete_castle_01:0 "Castle of the Moat"
+building_eec_crete_castle_01_desc:0 "$building_type_eec_crete_castle_01_desc$"

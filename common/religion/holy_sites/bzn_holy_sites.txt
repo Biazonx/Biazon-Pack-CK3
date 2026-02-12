@@ -1,14 +1,3 @@
-kent = {
-	county = c_kent
-	barony = b_canterbury
-	
-	character_modifier = {
-		name = holy_site_kent_effect_name
-		religious_vassal_opinion = 5
-		sway_scheme_phase_duration_add = minor_scheme_phase_duration_bonus_value
-	}
-}
-
 armagh = {
 	county = c_oriel
 

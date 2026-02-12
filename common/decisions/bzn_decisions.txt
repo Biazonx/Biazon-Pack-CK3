@@ -1,207 +1,4 @@
-﻿bzn_change_asatru = {
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
-	}
-
-	decision_group_type = flavor_medium
-
-	ai_check_interval = 120
-
-	is_shown = {
-		faith = faith:norse_pagan
-		is_landless_adventurer = no
-	}
-	
-	is_valid = {
-		faith = faith:norse_pagan
-		OR = {
-			AND = {
-				learning >= 12
-				OR = {
-					has_trait = poet
-					has_trait = scholar
-					has_trait = theologian
-					has_trait = lifestyle_mystic
-				}
-			}
-			custom_description = {
-				text = appoint_a_righteous_caliph_decision.control_two_holy_sites
-			faith = {
-				any_holy_site = {
-					count >= 2
-					holder.top_liege = root
-					}
-				}
-			}
-			
-		}
-		
-	}
-	
-	desc = bzn_change_asatru_desc
-	cost = { piety = 1000 }
-
-	effect = {
-		root.faith = { remove_doctrine = tenet_warmonger } 
-		root.faith = { remove_doctrine = doctrine_consanguinity_cousins }
-		root.faith = { add_doctrine = tenet_reincarnation } 
-		root.faith = { add_doctrine = tenet_divine_marriage } 
-	}
-
-	ai_potential = {
-		always = no
-	}
-
-	ai_will_do = {
-		base = 0
-	}
-}
-
-bzn_adopt_behafaridism = {
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
-	}
-
-	decision_group_type = flavor_medium
-
-	ai_check_interval = 240
-
-	is_shown = {
-		NOT = { faith = faith:zurvanism}
-		any_held_title = {
-			tier = tier_county
-			title_province = { geographical_region = custom_behafaridism }
-        }
-		is_landless_adventurer = no
-	}
-	
-	is_valid = {
-		NOT = { faith = faith:zurvanism}
-	}
-	
-	desc = bzn_adopt_behafaridism_decision_desc
-	cost = { piety = 250 }
-
-	effect = {
-		set_character_faith = faith:zurvanism
-		capital_county = {
-			set_county_faith = faith:zurvanism
-		}
-		add_character_modifier = protector_of_behafaridism
-	}
-
-	ai_potential = {
-		always = yes
-	}
-
-	ai_will_do = {
-		base = 5
-	}
-}
-
-bzn_hussite_decision = {
-    picture = {
-        reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
-    }
-
-    decision_group_type = major
-
-    ai_check_interval = 120
-
-    cooldown = { years = 1 }
-
-    is_shown = {
-        NOT = { 
-			faith = faith:taborites
-			faith = faith:ultraquist
-			faith = faith:orebites
-		}
-		any_held_title = {
-			tier = tier_county
-			title_province = { geographical_region = custom_hussite }
-        }
-		is_landless_adventurer = no
-	}
-	
-	is_valid = {
-		NOT = {
-			has_trait = zealous
-			has_trait = inquisitor
-		}
-	}
-    desc = bzn_hussite_decision_desc
-
-    effect = {
-        trigger_event = {
-            id = bzn_decisions.0011
-            days = { 3 5 }
-        }
-        custom_tooltip = bzn_hussite_decision_effect_tooltip
-    }
-
-    cost = { piety = 200 }
-
-    ai_potential = {
-		always = yes
-	}
-
-	ai_will_do = {
-		base = 5
-	}
-}
-
-bzn_create_war_wagon = {
-    picture = {
-        reference = "gfx/interface/illustrations/decisions/decision_smith.dds"
-    }
-    decision_group_type = major
-    ai_check_interval = 0
-
-    is_shown = {
-        is_landless_adventurer = no
-		NOT = { has_variable = wagon_tradition }
-		OR = {
-			has_faith = faith:taborites
-			has_faith = faith:ultraquist
-			has_faith = faith:orebites
-		}
-	}
-
-    is_valid = {
-	}
-
-    desc = bzn_create_war_wagon_decision_desc
-    cost = { gold = 500 }
-
-    effect = {
-        root.culture = {
-            add_culture_tradition = tradition_hussite_wagon
-        }
-		spawn_army = {
-			men_at_arms = {
-				type = hussite_wagon
-				stacks = 2
-			}
-			inheritable = yes
-			uses_supply = yes
-			location = root.location
-		}
-		set_variable = {
-			name = wagon_tradition
-			years = 100
-		}
-    }
-
-    ai_potential = {
-		always = no
-	}
-
-	ai_will_do = {
-		base = 0
-	}
-}
-
-bzn_become_inquisitor = {
+﻿bzn_become_inquisitor = {
     picture = {
         reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
     }
@@ -276,7 +73,7 @@ bzn_become_artisan = {
                 }
             }
         }
-    }
+    } 
 
     desc = bzn_become_artisan_desc
     cost = {
@@ -402,6 +199,10 @@ bzn_looting_tradition_decision = {
     is_shown = {
         is_landless_adventurer = no
 		NOT = { has_variable = looting_tradition }
+		OR = {
+            has_trait = pirate_captain
+			has_trait = slaver
+        }
     }
 
     is_valid = {
@@ -421,7 +222,7 @@ bzn_looting_tradition_decision = {
         }
 		set_variable = {
 			name = looting_tradition
-			years = 500
+			years = 1000
 		}
     }
 
@@ -434,52 +235,43 @@ bzn_looting_tradition_decision = {
 	}
 }
 
-bzn_battle_thrall_decision = {
+bzn_bolghar_legacy_decision = {
     picture = {
-        reference = "gfx/interface/illustrations/decisions/decision_knight_kneeling.dds"
+        reference = "gfx/interface/illustrations/decisions/decision_legitimacy.dds"
     }
     decision_group_type = flavor_medium
     ai_check_interval = 120
-    cooldown = { years = 1 }
 
     is_shown = {
         is_landless_adventurer = no
-        is_ai = no
-		any_courtier = {
-            has_trait = thrall
-            is_imprisoned = no
-        }
-		
+		culture = culture:bulgarian
+		NOT = { has_variable = bolghar_tradition }
     }
 
     is_valid = {
-        any_courtier = {
-            has_trait = thrall
-            is_imprisoned = no
-        }
+        prestige_level >= 3
+		culture = culture:bulgarian
     }
 
-    desc = "bzn_battle_thrall_decision_desc"
-    cost = { prestige = 150 }
+    desc = bzn_bolghar_legacy_decision_desc
+    cost = { prestige = 1000 }
 
     effect = {
-        random_courtier = {
-            limit = {
-                has_trait = thrall
-                is_imprisoned = no
-            }
-            remove_trait = thrall
-            add_trait = battle_thrall
-            custom_tooltip = "bzn_battle_thrall_effect_tooltip"
+        root.culture = {
+            add_culture_tradition = tradition_bolghar_legacy
         }
+		set_variable = {
+			name = bolghar_tradition
+			years = 500
+		}
     }
 
     ai_potential = {
-		always = no
+		always = yes
 	}
 
 	ai_will_do = {
-		base = 0
+		base = 100
 	}
 }
 
@@ -747,88 +539,6 @@ bzn_headhunter = {
     }
 }
 
-challenge_statue_to_duel_decision = {
-    picture = {
-        reference = "gfx/interface/illustrations/decisions/mpo_decision_confederation.dds"
-    }
-	
-	decision_group_type = flavor_medium
-    ai_check_interval = 120
-    cooldown = { years = 5 }
-
-    is_shown = {
-        has_trait = lunatic_1
-    }
-
-    is_valid = {
-        has_trait = lunatic_1
-    }
-	
-	desc = challenge_statue_to_duel_decision_desc
-
-    effect = {
-        add_stress = -30
-        add_character_modifier = {
-            modifier = challenged_statue_bonus
-            years = 5
-        }
-        random_list = {
-            75 = { }
-            25 = { add_trait = lifestyle_blademaster }
-        }
-    }
-	
-	 cost = { prestige = 100 }
-
-    ai_potential = {
-        always = yes
-    }
-
-    ai_will_do = {
-        base = 50
-    }
-}
-
-write_manifesto_to_stars_decision = {
-    picture = {
-        reference = "gfx/interface/illustrations/decisions/decision_misc.dds"
-    }
-
-    ai_check_interval = 120
-    decision_group_type = flavor_medium
-    cooldown = { years = 5 }
-
-    is_shown = {
-        has_trait = lunatic_1
-    }
-
-    is_valid = {
-        has_trait = lunatic_1
-    }
-
-    cost = { prestige = 100 }
-
-    effect = {
-        add_character_modifier = {
-            modifier = manifesto_inspired
-            years = 5
-        }
-        random_list = {
-            75 = { }
-            25 = { add_trait = poet }
-        }
-    }
-
-    ai_potential = {
-        always = yes
-    }
-
-    ai_will_do = {
-        base = 50
-    }
-}
-
-
 bzn_embrace_madness = {
     picture = {
         reference = "gfx/interface/illustrations/decisions/decision_prison.dds"
@@ -893,50 +603,6 @@ bzn_enter_trance = {
     }
 }
 
-bzn_classics = {
-	picture = {
-        reference = "gfx/interface/illustrations/decisions/decision_legend.dds"
-    }
-    decision_group_type = flavor_medium
-    ai_check_interval = 120
-	
-    is_shown = {
-		NOT = { faith = faith:hellenic_pagan }
-        OR = {
-            culture = { has_cultural_pillar = heritage_latin }
-            culture = { has_cultural_pillar = heritage_byzantine }
-			culture = { has_cultural_pillar = heritage_ancient_greek }
-            culture = { has_cultural_pillar = heritage_byzantine }
-        }
-    }
-    is_valid = {
-		learning >= 8
-        OR = {
-			has_trait = lunatic_1 
-			has_trait = possessed_1 
-            has_trait = lifestyle_mystic
-            has_trait = scholar
-            has_trait = theologian
-       }
-    }
-	
-	cost = { piety = 250 }
-	
-    desc = bzn_classics_desc
-    effect = {
-        set_character_faith = faith:hellenic_pagan
-		capital_county = {
-			set_county_faith = faith:hellenic_pagan
-			}
-    }
-    ai_potential = {
-        always = no
-    }
-    ai_will_do = {
-        base = 0
-    }
-}
-
 bzn_borrow_jews = {
 	picture = {
         reference = "gfx/interface/illustrations/decisions/decision_spend_money.dds"
@@ -966,7 +632,7 @@ bzn_borrow_jews = {
 	cost = { prestige = 100 }
 	
     effect = {
-		add_gold = 300 
+		add_gold = 500 
 		add_character_modifier = {
             modifier = indebted
         }
@@ -995,7 +661,7 @@ bzn_repay_jews = {
     is_valid = {
     }
 	
-	cost = { gold = 350 }
+	cost = { gold = 550 }
 	
     effect = {
 		remove_character_modifier = indebted
@@ -1072,7 +738,7 @@ bzn_welcome_jews = {
     is_valid = {
     }
 	
-	cost = { gold = 400 }
+	cost = { gold = 600 }
 	
     effect = {
 		save_scope_as = actor
@@ -1216,6 +882,7 @@ call_for_confederation_decision = {
 		NOR = {
 			has_trait = conqueror
 			has_trait = greatest_of_khans
+			has_trait = rd_gpt_conquest_era
 		}
 		OR = {
 			government_has_flag = government_is_confederate_tribal

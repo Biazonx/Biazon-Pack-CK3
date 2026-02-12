@@ -7,13 +7,13 @@ cb_war_of_humiliation = {
 
 	allowed_for_character = {
 		OR = {
-		AND = { 
-		debt_level >= 2
-		is_ai = yes
-		}
-		AND = { 
-		is_ai = no
-		}
+			AND = { 
+				debt_level >= 2
+				is_ai = yes
+			}
+			AND = { 
+				is_ai = no
+			}
 		}
 	}
 
@@ -52,10 +52,7 @@ cb_war_of_humiliation = {
 	on_victory = {
 	scope:defender = {
 		pay_short_term_income = { years = 2 target = scope:attacker }
-		add_prestige = {
-			value = -750
-			desc = "Prestige multiplied by defender's realm size"
-		}
+		add_prestige_level = -1
 		add_legitimacy = {
 			value = -100
 			desc = "Legitimacy multiplied by defender's realm size"
@@ -68,9 +65,10 @@ cb_war_of_humiliation = {
 			desc = "Legitimacy multiplied by defender's realm size"
 		}
 		add_prestige = {
-			value = 1000
+			value = 750
 			desc = "Prestige multiplied by defender's realm size"
 		}
+		add_prestige_experience = 250
 	}
 	modify_allies_of_participants_fame_values = {
 		WINNER = scope:attacker
@@ -94,11 +92,11 @@ cb_war_of_humiliation = {
 			show_pow_release_message_effect = yes
 			add_legitimacy = -50
 			add_prestige = -100
+			pay_short_term_income = { years = 1 target = scope:defender }
 		}
 		scope:defender = {
 			add_legitimacy = 50
 			add_prestige = 100
-			pay_short_term_income = { years = 2 target = scope:attacker }
 		}
 		modify_allies_of_participants_fame_values = {
 			WINNER = scope:defender
@@ -120,6 +118,10 @@ cb_war_of_humiliation = {
 	on_invalidated = {
 		# Define invalidated actions if any
 	}
+	
+	ai_score_mult = {
+		value = 10
+	}
 
 	on_primary_attacker_death = inherit
 	on_primary_defender_death = inherit
@@ -132,7 +134,7 @@ cb_war_of_humiliation = {
 	war_name = "War for Humiliation and Control"
 	cb_name_no_target = "War for Humiliation and Control"
 
-	interface_priority = 0
+	interface_priority = 1
 
 	attacker_wargoal_percentage = 0.8
 

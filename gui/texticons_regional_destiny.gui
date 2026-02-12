@@ -1,0 +1,9 @@
+﻿texticon = {
+	icon = regional_destiny_situation_icon
+	iconsize = {
+		texture = "gfx/interface/icons/character_interactions/icon_scheme_foster_legitimacy.dds"
+		size = { 28 28 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}

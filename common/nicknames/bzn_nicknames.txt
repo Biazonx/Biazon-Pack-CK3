@@ -4,3 +4,4 @@
 
 nick_the_mad = {}
 nick_the_possessed = {}
+nick_the_poor_of_lyon = {}

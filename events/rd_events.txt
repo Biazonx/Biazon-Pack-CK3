@@ -1,0 +1,81 @@
+﻿namespace = regional_destiny_situation
+
+regional_destiny_situation.0001 = {
+	hidden = yes
+
+	immediate = {
+		send_interface_toast = {
+			type = event_toast_regional_destiny
+			title = situation_regional_destiny_situation
+			left_icon = root
+			custom_tooltip = rd_change_situation_phase_tt_undefined_era
+		}
+	}
+}
+
+regional_destiny_situation.0002 = {
+	hidden = yes
+
+	immediate = {
+		send_interface_toast = {
+			type = event_toast_regional_destiny
+			title = situation_regional_destiny_situation
+			left_icon = root
+			custom_tooltip = rd_change_situation_phase_tt_unification_chaotic
+		}
+	}
+}
+
+regional_destiny_situation.0003 = {
+	hidden = yes
+
+	immediate = {
+		send_interface_toast = {
+			type = event_toast_regional_destiny
+			title = situation_regional_destiny_situation
+			left_icon = root
+			custom_tooltip = xxxxxxxxxx
+		}
+	}
+}
+
+regional_destiny_situation.0004 = {
+	hidden = yes
+
+	immediate = {
+		send_interface_toast = {
+			type = event_toast_regional_destiny
+			title = situation_regional_destiny_situation
+			left_icon = root
+			custom_tooltip = rd_change_situation_phase_tt_unification_ordered
+		}
+	}
+}
+
+regional_destiny_situation.0005 = {
+	hidden = yes
+
+	immediate = {
+		send_interface_toast = {
+			type = event_toast_regional_destiny
+			title = situation_regional_destiny_situation
+			left_icon = scope:conqueror
+			custom_tooltip = rd_situation_sub_region_conqueror_emerged_tt
+		}
+	}
+}
+
+regional_destiny_situation.0006 = {
+	hidden = yes
+
+	immediate = {
+		send_interface_toast = {
+			type = event_toast_regional_destiny
+			title = situation_regional_destiny_situation
+			left_icon = scope:conqueror
+			custom_tooltip = rd_situation_sub_region_conqueror_left_tt
+		}
+	}
+}
+
+

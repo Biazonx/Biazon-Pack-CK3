@@ -1,0 +1,22 @@
+﻿l_english: 
+ #Interactions
+ cair_contract_assistance_interaction:0 "Offer Military Assistance"
+ cair_contract_assistance_no_ai_interaction:0 "Offer Military Assistance"
+ cair_incite_revolts_interaction:1 "$game_concept_incite_revolts_interaction$"
+ cair_incite_revolts_no_ai_interaction:1 "$game_concept_incite_revolts_interaction$"
+ 
+ #Game Rules
+ rule_cair_requirements:0 "Offer Military Assistance + Foment Revolt for Everyone"
+ 
+ setting_cair_default_option:0 "Default"
+ setting_cair_default_option_desc:0 "The AI can use the new OMA + FR interactions if they meet the requirements."
+ 
+ setting_cair_no_ai_option:0 "No AI Usage"
+ setting_cair_no_ai_option_desc:0 "The AI will NOT use the new OMA + FR interactions. AI who're Landless or in Struggle Regions will still use the vanilla interactions."
+ 
+ setting_cair_no_ai_revolt_option:0 "AI cannot Foment Revolts"
+ setting_cair_no_ai_revolt_option_desc:0 "The AI cannot foment revolts but can offer military assistance. AI who're Landless or in Struggle Regions will still use the vanilla interactions."
+ 
+ setting_cair_no_ai_merc_option:0 "AI cannot offer Contract Assistance"
+ setting_cair_no_ai_merc_option_desc:0 "AI cannot offer military assistance but can foment revolts. AI who're Landless or in Struggle Regions will still use the vanilla interactions."
+ 

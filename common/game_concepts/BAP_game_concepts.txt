@@ -1,0 +1,9 @@
+﻿griot = {
+	texture = "gfx/interface/icons/traits/griot.dds"
+	alias = { griots }
+}
+gbeto = {
+	texture = "gfx/interface/icons/traits/shieldmaiden_ewe.dds"
+	alias = { gbetos }
+}
+

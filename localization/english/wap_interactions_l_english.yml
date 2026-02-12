@@ -1,0 +1,17 @@
+﻿l_english:
+
+ designate_gbeto_interaction:0 "Make Gbeto Warrior"
+ designate_gbeto_interaction_extra_icon:0 "$hook_extra_icon$"
+ designate_gbeto_interaction_desc:0 "Offer [recipient.GetFirstNameNoTooltip] the opportunity to fight in your ranks as a Gbeto.\n\n#weak A Gbeto can serve as a [actor.Custom('KnightCulture')] or [commander|E], and might even save you from [murder|E] attempts. Only the most brave and skilled fighters amongst our women can become Gbeto."
+ designate_gbeto_interaction_notification:0 "[recipient.GetShortUIName] became a Gbeto!"
+ 
+ INTERACTION_GRIOT_EDUCATION:0 "[recipient.GetSheHe|U] has a [learning|E] or [diplommacy|E] [education|E]: $VALUE|=+0$"
+ INTERACTION_CYNICAL:0 "[GetTrait('cynical').GetName( recipient )]: $VALUE|=+0$"
+ INTERACTION_GREGARIOUS:0 "[GetTrait('gregarious').GetName( recipient )]: $VALUE|=+0$"
+
+ cultural_adoption_interaction:0 "Culturally Adopt as Your Child"
+ cultural_adoption_interaction_desc:0 "Adopt the recipient as your child making them a part of your house and culture."
+ cultural_adoption_interaction_notification:0 "The Recipient is now your child and of your culture"
+ 
+ ASK_FOR_CONVERSION_ACTOR_IS_ASSIMILATOR:0 "[actor.GetCulture.GetName] culture encourages cultural converts."  
+

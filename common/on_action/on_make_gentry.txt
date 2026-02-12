@@ -13,18 +13,3 @@ on_make_gentry = {
             remove_character_modifier = veteran_modifier
     }
 }
-
-#prevent inhereting heir from getting gentry
-# on_title_gain_inheritance = {
-#     on_remove_gentry
-# }
-
-# on_remove_gentry = {
-#     trigger = {
-#         has_trait = gentry
-#     }
-
-#     effect = {
-#         remove_trait = gentry
-#     }
-# }

@@ -1,0 +1,94 @@
+﻿###Invite griots decision
+namespace = wap_invite_griot_decision
+
+wap_invite_griot_decision.0001 = {
+	type = character_event
+	title = wap_invite_griot_decision.0001.t
+	desc = wap_invite_griot_decision.0001.desc
+	theme = faith
+	
+    override_background = {
+		reference = throne_room
+	}
+	
+	left_portrait = {
+		character = scope:wap_griot
+		animation = happiness
+	}
+	right_portrait = {
+		character = scope:wap_griot_2
+		animation = personality_honorable
+	}
+    lower_right_portrait = {
+		character = root
+		animation = happiness
+	}
+	immediate = {                     
+		create_character = {
+			location = root.capital_province
+			template = wap_generated_griot
+			save_scope_as = wap_griot
+		}
+		create_character = {
+			location = root.capital_province
+			template = wap_generated_griot
+			save_scope_as = wap_griot_2
+		}
+	}
+
+    # Hire them
+	option = {
+		name = wap_invite_griot_decision.0001.a
+        add_courtier = scope:wap_griot
+		
+        hidden_effect = {
+			scope:wap_griot_2 = {		
+				death = {
+					death_reason = death_disappearance
+				}
+			}
+		}		
+        stress_impact = {
+			gregarious = minor_stress_impact_loss
+			paranoid = minor_stress_impact_gain
+		}
+	}
+	option = {
+		name = wap_invite_griot_decision.0001.b
+        add_courtier = scope:wap_griot_2
+		
+        hidden_effect = {
+			scope:wap_griot = {		
+				death = {
+					death_reason = death_disappearance
+				}
+			}
+		}		
+        stress_impact = {
+			gregarious = minor_stress_impact_loss
+			paranoid = minor_stress_impact_gain
+		}
+	}
+    option = { # Don't hire them
+		name = wap_invite_griot_decision.0001.c
+ 
+        hidden_effect = {
+			scope:wap_griot = {		
+				death = {
+					death_reason = death_disappearance
+				}
+			}
+		}
+		hidden_effect = {
+			scope:wap_griot_2 = {		
+				death = {
+					death_reason = death_disappearance
+				}
+			}
+		}
+		stress_impact = {
+			arrogant = minor_stress_impact_loss
+			humble = minor_stress_impact_gain
+		}
+	}
+}

@@ -1,0 +1,251 @@
+tradition_bogatyrs_legacy = {
+	category = regional
+
+	layers = {
+		0 = martial
+		1 = western
+		4 = imperial_tagmata.dds
+	}
+
+	# Pan-Slavic Empire
+	is_shown = {
+		has_cultural_pillar = heritage_east_slavic
+		has_cultural_pillar = heritage_south_slavic
+		has_cultural_pillar = heritage_west_slavic
+		has_cultural_pillar = heritage_slavic
+	}
+
+	can_pick = {
+		has_cultural_pillar = heritage_slavic
+		
+		# Shouldn't be combined with the following traditions:
+		custom_tooltip = {
+			text = cannot_have_tradition_runestones
+			NOT = { culture_tradition:tradition_runestones = { is_in_list = traits } }
+		}
+		custom_tooltip = {
+			text = cannot_have_tradition_poetry
+			NOT = { culture_tradition:tradition_poetry = { is_in_list = traits } }
+		}
+		custom_tooltip = {
+			text = cannot_have_tradition_storytellers
+			NOT = { culture_tradition:tradition_storytellers = { is_in_list = traits } }
+		}
+		
+		NOR = { #Replaces Martial Admiration
+			has_cultural_tradition = tradition_futuwaa
+			has_cultural_tradition = tradition_chanson_de_geste
+			has_cultural_tradition = tradition_martial_admiration
+		}
+		
+		trigger_if = {
+			limit = {
+				OR = {
+					NOT = { exists = scope:replacing }
+					NOT = { scope:replacing = culture_tradition:tradition_hit_and_run }
+				}
+			}
+			NOT = { has_cultural_tradition = tradition_hit_and_run } #To prevent stacking after hybridization
+		}
+	}
+
+	parameters = {
+		unlock_maa_druzhina = yes
+		unlock_maa_hussar = yes
+		has_access_to_runestones = yes
+		poet_trait_gives_bonuses = yes
+		poet_trait_more_common = yes
+		martial_education_more_valued = yes
+		prowess_traits_more_valued = yes
+		better_ward_education = yes
+		tells_stories = yes
+	}
+
+	character_modifier = {
+		knight_limit = 2
+		negate_prowess_penalty_add = 5
+		accolade_glory_gain_mult = 0.2
+		heavy_infantry_toughness_add = 2
+		light_cavalry_damage_add = 6
+		light_cavalry_screen_add = 6
+		retreat_losses = -0.1
+		hard_casualty_modifier = -0.1
+		owned_scheme_secrecy_add = -15
+		owned_legend_spread_mult = 0.1
+	}
+
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+			if = {
+				limit = {
+					NOR = {
+						culture_pillar:ethos_bellicose = { is_in_list = traits }
+						culture_pillar:ethos_stoic = { is_in_list = traits }
+						culture_pillar:ethos_bureaucratic = { is_in_list = traits }
+					}
+				}
+				add = {
+					value = tradition_incompatible_ethos_penalty
+					desc = not_bellicose_or_bureaucratic_desc
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						scope:character = {
+							any_knight = {
+								count >= 6
+								prowess >= 12
+							}
+						}
+					}
+				}
+				add = {
+					value = tradition_unfulfilled_criteria_penalty
+					desc = knights_with_prowess_desc
+				}
+			}
+			multiply = tradition_replacement_cost_if_relevant
+		}
+	}
+
+	ai_will_do = { value = 800 }
+}
+
+tradition_siberian_isolationism = {
+	category = regional
+
+	layers = {
+		0 = diplo
+		1 = steppe
+		4 = noble.dds
+	}
+	
+	parameters = {
+		unlock_maa_frontier_enforcer = yes
+		courtiers_less_likely_to_leave_same_culture_court = yes
+		reduced_marriage_acceptance_outside_culture = yes
+		reduced_marriage_acceptance_distant_realms = yes
+		ai_doesnt_marry_outside_culture = yes
+		less_plague_spread_culture = yes
+		cultrad_unlocks_t3_strengthen_sentries = yes
+		cultrad_unlocks_t3_redouble_guards = yes
+		may_challenge_to_board_games = yes
+	}
+	culture_modifier = {
+		cultural_acceptance_gain_mult = -0.25
+	}
+	character_modifier = {
+		diplomatic_range_mult = -0.25
+		same_culture_opinion = 5
+		monthly_lifestyle_xp_gain_mult = 0.05
+		build_speed = -0.15
+		holding_build_speed = -0.15
+		domicile_build_speed = -0.15
+		build_gold_cost = -0.15
+		holding_build_gold_cost = -0.15
+		domicile_build_gold_cost = -0.15
+	}
+	
+	county_modifier = {
+		monthly_county_control_growth_add = 0.5
+	}
+	
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+			if = {
+				limit = {
+					NOR = {
+						culture_pillar:ethos_communal = { is_in_list = traits }
+						culture_pillar:ethos_spiritual = { is_in_list = traits }
+						culture_pillar:ethos_stoic = { is_in_list = traits }
+					}
+				}
+				add = {
+					value = tradition_incompatible_ethos_penalty
+					desc = not_communal_spiritual_or_stoic_desc
+				}
+			}
+			if = {
+				limit = {
+					scope:character = {
+						any_sub_realm_county = {
+							culture = scope:character.culture
+							any_neighboring_county = {
+								culture != scope:character.culture
+								culture = {
+									cultural_acceptance = { target = scope:character.culture value >= 40 }
+								}
+							}
+						}
+					}
+				}
+				add = {
+					value = tradition_unfulfilled_criteria_penalty
+					desc = non_tolerated_cultures_desc
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						has_variable = defensive_traditionalist_discount
+						has_variable = aggressive_traditionalist_discount
+					}
+				}
+				add = {
+					value = traditionalist_discount
+					desc = traditionalist_discount_desc
+				}
+			}
+
+			if = {
+				limit = {
+					culture_tradition_reduction_trigger = { TRADITION = tradition_isolationist }
+				}
+				multiply = {
+					value = 0.5
+					desc = inspired_by_culture_desc
+				}
+			}
+			
+			multiply = tradition_replacement_cost_if_relevant
+		}
+	}
+	
+	can_pick = {
+		# Mutually exclusive with other Isolationist
+		NOR = {
+			culture_tradition:tradition_tgp_inward_perfection = { is_in_list = traits }
+			culture_tradition:tradition_cultural_primacy = { is_in_list = traits }
+			culture_tradition:tradition_isolationist = { is_in_list = traits }
+		}
+	}
+
+	ai_will_do = {
+		value = 100
+		if = {
+			limit = {
+				NOT = {
+					is_divergent_culture = yes
+				}
+			}
+			multiply = 0
+		}
+		if = {
+			limit = {
+				culture_pillar:ethos_egalitarian = { is_in_list = traits }
+			}
+			multiply = 0
+		}
+	}
+}

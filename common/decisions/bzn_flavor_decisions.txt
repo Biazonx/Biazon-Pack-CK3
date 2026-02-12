@@ -5,7 +5,7 @@ bzn_tribal_army_decision = {
 	
 	desc = bzn_tribal_army_decision_desc
     decision_group_type = government_major
-    ai_check_interval = 240
+    ai_check_interval = 120
 	
 	cooldown = { years = 5 }
 	
@@ -28,7 +28,7 @@ bzn_tribal_army_decision = {
         always = yes
     }
     ai_will_do = {
-        base = 20
+        base = 50
     }
 }
 
@@ -39,7 +39,7 @@ bzn_patronize_guilds_decision = {
 	
 	desc = bzn_patronize_guilds_desc
     decision_group_type = government_major
-    ai_check_interval = 240
+    ai_check_interval = 120
 	
 	cooldown = { years = 10 }
 	
@@ -63,7 +63,7 @@ bzn_patronize_guilds_decision = {
         always = yes
     }
     ai_will_do = {
-        base = 20
+        base = 50
     }
 }
 
@@ -74,7 +74,7 @@ bzn_strengthen_nobility_decision = {
 	
 	desc = bzn_strengthen_nobility_desc
     decision_group_type = government_major
-    ai_check_interval = 240
+    ai_check_interval = 120
 	
 	cooldown = { years = 10 }
 	
@@ -98,8 +98,70 @@ bzn_strengthen_nobility_decision = {
         always = yes
     }
     ai_will_do = {
-        base = 20
+        base = 50
     }
+}
+
+free_company_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_invite_knights.dds"
+	}
+
+	title = free_company_decision_title
+	desc = free_company_decision_desc
+	selection_tooltip = free_company_decision_tooltip
+	confirm_text = free_company_decision_confirm
+	decision_group_type = government_major
+
+	is_shown = {
+		is_landed = yes
+		NOT = {
+			has_character_flag = hired_free_company
+		}
+		has_government = feudal_government
+	}
+	
+	is_valid = {
+		is_landed = yes
+		has_government = feudal_government
+	}
+	
+	
+	cost = {
+		gold = 500
+	}
+
+	effect = {
+		add_character_flag = {
+			flag = hired_free_company
+		}
+		spawn_army = {
+			levies = 1000
+			men_at_arms = {
+				type = armored_footmen
+				stacks = 1
+			}
+			men_at_arms = {
+				type = pikemen_unit
+				stacks = 2
+			}
+			men_at_arms = {
+				type = bowmen
+				stacks = 3
+			}
+			men_at_arms = {
+				type = light_footmen
+				stacks = 4
+			}
+			location = root.capital_province
+			inheritable = no
+			name = free_company
+		}
+	}
+
+	ai_will_do = {
+		base = 0
+	}
 }
 
 bzn_confederate_council_decision = { 
@@ -109,7 +171,7 @@ bzn_confederate_council_decision = {
 
     decision_group_type = government_major
 
-    ai_check_interval = 240
+    ai_check_interval = 120
 
     cooldown = { years = 15 }
 
@@ -137,7 +199,7 @@ bzn_confederate_council_decision = {
 	}
 
 	ai_will_do = {
-		base = 20
+		base = 50
 	}
 }
 
@@ -182,7 +244,7 @@ bzn_determine_karma_decision = {
 	
 	desc = bzn_determine_karma_decision_desc
     decision_group_type = flavor_medium
-    ai_check_interval = 240
+    ai_check_interval = 120
 	
 	cooldown = { years = -1 }
 	
@@ -224,15 +286,21 @@ bzn_distribute_alms_decision = {
 	
 	desc = bzn_distribute_alms_decision_desc
     decision_group_type = government_major
-    ai_check_interval = 240
+    ai_check_interval = 120
 	
 	cooldown = { years = 10 }
 	
     is_shown = {
-		has_government = monastic_feudal_government 
+		OR = {
+		faith = { has_doctrine = tenet_vows_of_poverty }
+		has_government = monastic_feudal_government
+		}
     }
     is_valid = {
+		OR = {
+		faith = { has_doctrine = tenet_vows_of_poverty }
 		has_government = monastic_feudal_government
+		}
     }
 	
 	cost = { gold = 100 }
@@ -252,7 +320,7 @@ bzn_distribute_alms_decision = {
         always = yes
     }
     ai_will_do = {
-        base = 20
+        base = 50
     }
 }
 
@@ -263,30 +331,37 @@ bzn_commission_manuscripts_decision = {
 	
 	desc = bzn_commission_manuscripts_decision_desc
     decision_group_type = government_major
-    ai_check_interval = 240
+    ai_check_interval = 120
 	
 	cooldown = { years = 10 }
 	
     is_shown = {
-		has_government = monastic_feudal_government 
-    }
-    is_valid = {
+		OR = {
+		faith = { has_doctrine = tenet_monasticism }
 		has_government = monastic_feudal_government
+		}
     }
+	
+    is_valid = {
+		OR = {
+		faith = { has_doctrine = tenet_monasticism }
+		has_government = monastic_feudal_government
+		}
+	}
 	
 	cost = { gold = 75 }
 	
     effect = {
-		add_piety = 100
-		add_prestige = 100 
-		add_legitimacy = 50
+		add_piety = 125
+		add_prestige = 125
+		add_legitimacy = 100
 		dynasty = { add_dynasty_prestige = 50 }
     }
     ai_potential = {
         always = yes
     }
     ai_will_do = {
-        base = 20
+        base = 50
     }
 }
 
@@ -297,7 +372,7 @@ bzn_warrior_lodges_decision = {
 
     decision_group_type = government_major
 
-    ai_check_interval = 840
+    ai_check_interval = 120
 
     cooldown = { years = 5 }
 
@@ -331,18 +406,18 @@ bzn_warrior_lodges_decision = {
 
     cost = {
 		prestige = {
-		value = 250
+		value = 200
 	if = {
 		limit = {highest_held_title_tier = tier_empire} 
-		add = 750
+		add = 600
 	}
 	else_if = {
 		limit = {highest_held_title_tier = tier_kingdom} 
-		add = 500
+		add = 400
 	}
 	else_if = {
 		limit = {highest_held_title_tier = tier_duchy} 
-		add = 250
+		add = 200
 			}
 		}
 	}
@@ -352,7 +427,7 @@ bzn_warrior_lodges_decision = {
 	}
 
 	ai_will_do = {
-		base = 20
+		base = 50
 	}
 }
 
@@ -381,11 +456,14 @@ bzn_adopt_confederate_tribal_decision = {
 	cost = { prestige = 150 }
 
 	effect = {
+		
 		change_government = confederate_tribal_government
 		every_vassal_or_below = {
 				limit = { government_has_flag = government_is_tribal }
 				change_government = confederate_tribal_government
 			}
+		if = { limit = { highest_held_title_tier >= tier_kingdom} 
+		primary_title = { add_title_law = confederation_elective_succession_law } }
 	}
 
 	ai_potential = {
@@ -399,6 +477,13 @@ bzn_adopt_confederate_tribal_decision = {
 			any_held_title = {
 			tier = tier_county
 			title_province = { geographical_region = custom_ireland }
+			}
+		}
+		modifier = {
+			factor = 100
+			any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = world_siberia_2 }
 			}
 		}
 	}
@@ -504,41 +589,146 @@ bzn_decentralize_decision = {
 	}
 }
 
-
-bzn_adopt_city_state_decision = {
+aimm_abdicate_decision = {
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
 	}
-
-	decision_group_type = government_major
 	
-	ai_check_interval = 120
+	decision_group_type = flavor_medium
 
 	is_shown = {
-		NOT = { has_government = city_state_government }
-		has_government = feudal_government
-		primary_title = { tier = tier_county }
+		is_landed = yes
+		faith = { has_doctrine = tenet_monasticism }
 	}
 	
 	is_valid = {
-		NOT = { has_character_modifier = guild_patron }
+		is_landed = yes
+		faith = { has_doctrine = tenet_monasticism }
 	}
-	desc = bzn_city_state_decision_desc
-	cost = { prestige = 150 }
 
 	effect = {
-		change_government = city_state_government
-		every_vassal_or_below = {
-				limit = { government_has_flag = government_is_feudal }
-				change_government = city_state_government
-			}
+		custom_tooltip = {
+			text = aimm_abdicate_effect
 		}
-
-	ai_potential = {
-		always = no
+		aimm_abdicate_effect = yes
 	}
-
-	ai_will_do = {
-		base = 0
-	}
+	ai_check_interval = 0
 }
+
+bzn_become_vegetarian = {
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+    }
+	
+	desc = bzn_become_vegetarian_desc
+    decision_group_type = flavor_medium
+	sort_order = 1
+    ai_check_interval = 240
+	
+    is_shown = {
+		NOT = { has_character_modifier = vegetarian }
+		OR = {
+			faith = { has_doctrine = tenet_dharmic_pacifism }
+			faith = { has_doctrine = tenet_pacifism }
+			has_cultural_tradition = tradition_vegetarianism 
+		}
+	}
+    is_valid = {
+		OR = {
+			faith = { has_doctrine = tenet_dharmic_pacifism }
+			faith = { has_doctrine = tenet_pacifism }
+			has_cultural_tradition = tradition_vegetarianism 
+		}
+	}
+	
+	cost = { }
+	
+    effect = {
+		add_character_modifier = {
+            modifier = vegetarian
+        }
+    }
+    ai_potential = {
+        always = yes
+    }
+    ai_will_do = {
+        base = 10
+    }
+}
+
+bzn_renounce_vegetarian = {
+	picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+    }
+	
+	desc = bzn_renounce_vegetarian_desc
+    decision_group_type = flavor_medium
+    ai_check_interval = 240
+	sort_order = 1
+	
+    is_shown = {
+		OR = {
+			faith = { has_doctrine = tenet_dharmic_pacifism }
+			faith = { has_doctrine = tenet_pacifism }
+			has_cultural_tradition = tradition_vegetarianism 
+		}
+		has_character_modifier = vegetarian
+	}
+    is_valid = {
+		OR = {
+			faith = { has_doctrine = tenet_dharmic_pacifism }
+			faith = { has_doctrine = tenet_pacifism }
+		}
+	}
+	
+	cost = { piety = 100 }
+	
+    effect = {
+		remove_character_modifier = vegetarian 
+    }
+	
+    ai_potential = {
+        always = yes
+    }
+    ai_will_do = {
+        base = 10
+    }
+}
+
+#bzn_adopt_city_state_decision = {
+#	picture = {
+#		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+#	}
+#
+#	decision_group_type = government_major
+#	
+#	ai_check_interval = 120
+#
+#	is_shown = {
+#		NOT = { has_government = city_state_government }
+#		has_government = feudal_government
+#		primary_title = { tier = tier_county }
+#	}
+#	
+#	is_valid = {
+#		NOT = { has_character_modifier = guild_patron }
+#	}
+#	desc = bzn_city_state_decision_desc
+#	cost = { prestige = 150 }
+#
+#	effect = {
+#		change_government = city_state_government
+#		every_vassal_or_below = {
+#				limit = { government_has_flag = government_is_feudal }
+#				change_government = city_state_government
+#			}
+#		}
+#
+#	ai_potential = {
+#		always = no
+#	}
+#
+#	ai_will_do = {
+#		base = 0
+#	}
+#}

@@ -1,0 +1,176 @@
+wap_invite_griot_decision = {
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_griot_epic.dds" }
+	decision_group_type = regional_major
+	ai_check_interval = 120
+
+	cooldown = { years = 5 }
+	
+	desc = wap_invite_griot_decision_desc
+
+	is_shown = {
+		culture = {
+			has_cultural_parameter = can_appoint_court_griots
+		}
+	}
+	effect = {
+		trigger_event = {
+			id = wap_invite_griot_decision.0001
+			days = { 10 20 }
+		}
+	}
+
+	cost = { prestige = { value = 75 } }	
+
+	ai_will_do = {
+		base = 50
+
+        modifier = {
+			add = 10
+			OR = {
+				has_trait = education_learning_3
+				has_trait = education_learning_4
+				has_trait = education_diplomacy_3
+				has_trait = education_diplomacy_4
+				has_trait = scholar
+				has_trait = theologian
+				has_trait = lifestyle_poet
+				has_trait = griot
+			}
+		}
+		modifier = {
+			add = -10
+			OR = {
+				has_trait = arrogant
+				has_trait = paranoid
+				has_trait = content
+                has_trait = shy
+				has_trait = cynical
+			}
+		}
+	}
+}
+
+wap_create_lower_niger_empire_decision = {
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_lower_niger_empire.dds" }
+
+	desc = wap_create_lower_niger_empire_decision_desc
+	selection_tooltip = wap_create_lower_niger_empire_decision_tooltip
+	decision_group_type = regional_major
+
+	ai_check_interval = 120
+	cost = {
+		gold = 500
+		prestige = 1000
+	}
+	is_shown = {
+		is_landed = yes
+		#Must be in the right area.
+		capital_province = { geographical_region = world_africa_west }
+		#Can only do it once.
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:created_lower_niger_empire
+			}
+		}
+	}
+
+	is_valid = {
+	    #Must be independent.
+		is_independent_ruler = yes
+		#Must be suitably prestigious.
+		prestige_level >= high_prestige_level
+		#Just confirm that becoming an empire will prevent you from achieving this one.
+		highest_held_title_tier < tier_empire
+		#Completely controls the core regions of their kingdoms.
+		completely_controls_region = custom_lower_niger
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_at_war = no
+	}
+
+	effect = {
+	
+		save_scope_as = lower_niger_uniter
+		gain_heroic_legend_seed_tooltip_effect = yes
+		show_as_tooltip = { form_lower_niger_empire_scripted_effects = yes }
+		
+		trigger_event = wap_create_lower_niger_empire.0001
+		hidden_effect = {
+			#Can only be done once
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:created_lower_niger_empire
+			}
+		}
+
+	}
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+wap_select_personal_deity_orisha_decision = {# Yoruba and Edo 
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_choose_orisha.dds" }
+
+	desc = wap_select_personal_deity_orisha_decision_desc
+	selection_tooltip = wap_select_personal_orisha_decision_tooltip
+	decision_group_type = regional_major
+	is_shown = {
+		OR = {
+			religion = religion:west_african_orisha_religion
+			faith = faith:oloku_pagan
+		}
+	}
+
+	is_valid = {
+		custom_description = {
+			text = decision_has_court_chaplain
+			exists = cp:councillor_court_chaplain
+			cp:councillor_court_chaplain = {
+				is_available_adult = yes
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+	}
+
+	cost = { }
+
+    effect = {
+		custom_tooltip = wap_select_personal_orisha_decision_tt
+		# And the actual effect.
+		trigger_event = wap_orisha.200
+	}
+
+	ai_check_interval = 96
+	cooldown = { years = 3 }	
+
+	ai_potential = {
+		piety >= minor_piety_value
+		NOR = {
+			# Yoruba and Edo orisha
+			has_character_modifier = orisha_deity_obatala
+			has_character_modifier = orisha_deity_yemoja
+			has_character_modifier = orisha_deity_orunmila
+			has_character_modifier = orisha_deity_ogun
+			has_character_modifier = orisha_deity_olookun
+			has_character_modifier = orisha_deity_osun
+			has_character_modifier = orisha_deity_esu
+			has_character_modifier = orisha_deity_osoosi
+			has_character_modifier = orisha_deity_sango
+		}
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

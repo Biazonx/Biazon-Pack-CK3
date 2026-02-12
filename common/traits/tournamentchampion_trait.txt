@@ -1,0 +1,51 @@
+﻿lifestyle_tournamentchampion = {
+	icon = tournamentchampion.dds
+	category = base
+	ruler_designer_cost = 10
+	
+	monthly_prestige = 0.25
+	attraction_opinion = 5
+	
+	desc = {
+        first_valid = {
+            triggered_desc = {
+                trigger = {
+                    NOT = { exists = this }
+                }
+                desc = trait_lifestyle_tournamentchampion_desc
+            }
+            desc = trait_lifestyle_tournamentchampion_character_desc
+        }
+	}
+
+    track = {
+        25 = {
+     	diplomacy = 1
+     	prowess = 1
+     	monthly_dynasty_prestige = 0.1
+     	legitimacy_gain_mult = 0.01
+     	attraction_opinion = 1
+        }
+        50 = {
+	martial = 1
+	prowess = 1
+     	monthly_dynasty_prestige = 0.1
+ 	legitimacy_gain_mult = 0.02
+     	attraction_opinion = 2
+        }
+        75 = {
+	learning = 1
+	prowess = 1
+     	monthly_dynasty_prestige = 0.1
+     	legitimacy_gain_mult = 0.03
+     	attraction_opinion = 3
+        }
+        100 = {
+	stewardship = 1
+	prowess = 1
+     	monthly_dynasty_prestige = 0.2
+     	legitimacy_gain_mult = 0.04
+     	attraction_opinion = 4
+	}
+	}
+}

@@ -39,7 +39,7 @@ cannibal_intent = {
     }
 
     ai_will_do = {
-        value = 5
+        value = 100
     }
 
     is_shown = {
@@ -80,7 +80,7 @@ monastic_armed_pilgrimages_intent = {
     }
 
     ai_will_do = {
-        value = 5
+        value = 100
     }
 
     is_shown = {

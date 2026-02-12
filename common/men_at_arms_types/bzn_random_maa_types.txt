@@ -13,19 +13,22 @@ mamluk_cavalry = {
 	screen = 10
 	
 	terrain_bonus = {
-		plains = { damage = 30 }
+		plains = { damage = 30 toughness = 5 }
 		drylands = { damage = 30 }
-		savanna = { damage = 30 }
 		hills = { damage = -10 }
-		dry_hills = { damage = -10 }
-		mountains = { damage = -30 }
-		desert_mountains = { damage = -30 }
-		wetlands = { damage = -90 }
+		mountains = { damage = -50 }
+		desert_mountains = { damage = -50 }
+		wetlands = { damage = -80 toughness = -15 pursuit = -10 }
 	}
 
 	counters = {
-		heavy_infantry = 1
+		gunpowder = 1
 		archers = 1
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = -15 toughness = -5 }
+		harsh_winter = { damage = -30 toughness = -10 }
 	}
 	
 	can_recruit = {
@@ -45,7 +48,7 @@ mamluk_cavalry = {
 
 	icon = egy_mam_r
 	
-	ai_quality = { value = @cultural_maa_extra_ai_score }
+	ai_quality = { value = @[cultural_maa_extra_ai_score - 20] }
 }
 
 ## BRITANNIA
@@ -96,25 +99,25 @@ irish_ridire = {
 	
 	damage = 45
 	toughness = 25
-	pursuit = 25
+	pursuit = 30
 	screen = 15
 	
 	terrain_bonus = {
-		plains = { damage = 20 }
-		drylands = { damage = 20 }
-		savanna = { damage = 20 }
-		hills = { damage = -15 }
-		dry_hills = { damage = -15 }
-		mountains = { damage = -30 pursuit = -10 }
-		desert_mountains = { damage = -45 pursuit = -10 }
+		plains = { damage = 15 }
+		drylands = { damage = 15 }
+		hills = { damage = 15 }
+		mountains = { damage = -15 pursuit = -40 }
+		desert_mountains = { damage = -20 pursuit = -50 }
 	}
 
 	counters = {
 		archers = 1
+		archer_cavalry = 0.5
+		gunpowder = 1
 	}
 
 	winter_bonus = {
-		harsh_winter = { damage = -5 toughness = -2 }
+		harsh_winter = { damage = -5 }
 	}
 
 	can_recruit = {
@@ -125,34 +128,37 @@ irish_ridire = {
 		valid_for_maa_trigger = { PARAMETER = unlock_maa_irish_ridire }
 	}
 
-	buy_cost = { gold = druzhina_recruitment_cost }
-	low_maintenance_cost = { gold = druzhina_low_maint_cost }
-	high_maintenance_cost = { gold = druzhina_high_maint_cost }
-	provision_cost = @provisions_cost_infantry_moderate
+	buy_cost = { gold = ayrudzi_recruitment_cost }
+	low_maintenance_cost = { gold = ayrudzi_low_maint_cost }
+	high_maintenance_cost = { gold = ayrudzi_high_maint_cost }
+	provision_cost = @provisions_cost_cavalry_cheap
 	
-	stack = 100
-	ai_quality = { value = @cultural_maa_extra_ai_score }
+	stack = 50
+	ai_quality = {
+		value = @cultural_maa_extra_ai_score
+		add = counter_synergy_ai_weight_light_cavalry
+	}
 	icon = irish_airig
 }
 
 irish_cliathairi = {
 	type = pikemen
 	
-	damage = 25
-	toughness = 25
+	damage = 16
+	toughness = 16
 	pursuit = 0
-	screen = 0
+	screen = 10
 	
 	terrain_bonus = {
-		wetlands = { damage = 5 }
-		hills = { toughness = 8 }
-		dry_hills = { toughness = 8 }
-		mountains = { toughness = 12 }
+		wetlands = { damage = 4 toughness = 8 }
+		hills = { toughness = 12 }
+		plains = { damage = 4 toughness = 8 }
 	}
 
 	counters = {
 		light_cavalry = 1
-		heavy_cavalry = 1
+		heavy_cavalry = 0.5
+		pikemen = 1
 	}
 
 	can_recruit = {
@@ -163,39 +169,36 @@ irish_cliathairi = {
 		valid_for_maa_trigger = { PARAMETER = unlock_maa_irish_cliathairi }
 	}
 
-	buy_cost = { gold = pikemen_recruitment_cost }
-	low_maintenance_cost = { gold = pikemen_low_maint_cost }
-	high_maintenance_cost = { gold = pikemen_high_maint_cost }
-	provision_cost = @provisions_cost_infantry_expensive
+	buy_cost = { gold = bondi_recruitment_cost }
+	low_maintenance_cost = { gold = bondi_low_maint_cost }
+	high_maintenance_cost = { gold = bondi_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_moderate
 	
 	stack = 100
-	ai_quality = { value = culture_ai_weight_pikemen }
+	ai_quality = { value = @[cultural_maa_extra_ai_score + 20] }
 	icon = ang_sax_darop
 }
 
 welsh_teulu = {
 	type = heavy_cavalry
 	
-	damage = 75
+	damage = 85
 	toughness = 25
-	pursuit = 25
+	pursuit = 10
 	screen = 0
 	
 	terrain_bonus = {
-		plains = { damage = 20 }
-		drylands = { damage = 20 }
-		savanna = { damage = 20 }
-		forest = { toughness = 10 screen = 10 }
-		hills = { damage 25 toughness = 15 }
-		dry_hills = { damage 25 toughness = 15 }
-		mountains = { damage = -30 screen = -30 }
-		desert_mountains = { damage = -30 screen = -30 }
-		wetlands = { damage = -75 pursuit = -25 screen = -25 }
+		plains = { damage = 30 }
+		farmlands = { damage = 30 }
+		hills = { damage 30 }
+		mountains = { damage = -75 }
+		desert_mountains = { damage = -75 }
 	}
 
 	counters = {
 		skirmishers = 1
 		archers = 1
+		gunpowder = 1
 	}
 
 	can_recruit = {
@@ -205,33 +208,34 @@ welsh_teulu = {
 		}
 		valid_for_maa_trigger = { PARAMETER = unlock_maa_welsh_teulu }
 	}
+	
+	winter_bonus = {
+		normal_winter = { damage = -10 toughness = -5 }
+		harsh_winter = { damage = -20 toughness = -15 }
+	}
 
-	buy_cost = { gold = huscarls_recruitment_cost }
-	low_maintenance_cost = { gold = huscarls_low_maint_cost }
-	high_maintenance_cost = { gold = huscarls_high_maint_cost }
-	provision_cost = @provisions_cost_infantry_cheap
+	buy_cost = { gold = 150 }
+	low_maintenance_cost = { gold = conrois_low_maint_cost }
+	high_maintenance_cost = { gold = conrois_high_maint_cost }
+	provision_cost = @provisions_cost_cavalry_cheap
 	
 	stack = 50
 	icon = breton_teulu
-	ai_quality = { value = @cultural_maa_extra_ai_score }
+	ai_quality = { value = @[cultural_maa_extra_ai_score + 20 ] }
 }
 
 anglo_saxon_thane = {
 	type = heavy_infantry
 	
-	damage = 30
-	toughness = 21
-	pursuit = 0
+	damage = 35
+	toughness = 22
+	pursuit = 12
 	screen = 0
 	
-	terrain_bonus = {
-		hills = { damage = 5 toughness = 5 }
-		mountains = { damage = 5 toughness = 5 }
-	}
 
 	counters = {
 		pikemen = 1
-		heavy_infantry = 0.5
+		peasant_militia = 2
 	}
 	
 	can_recruit = {
@@ -242,9 +246,9 @@ anglo_saxon_thane = {
 		culture = culture:anglo_saxon
 	}
 
-	buy_cost = { gold = heavy_infantry_recruitment_cost }
-	low_maintenance_cost = { gold = heavy_infantry_low_maint_cost }
-	high_maintenance_cost = { gold = heavy_infantry_high_maint_cost }
+	buy_cost = { gold = ayyar_recruitment_cost }
+	low_maintenance_cost = { gold = ayyar_low_maint_cost }
+	high_maintenance_cost = { gold = ayyar_high_maint_cost }
 	provision_cost = @provisions_cost_infantry_expensive
 	
 	holy_order_fallback = yes	
@@ -257,22 +261,14 @@ anglo_saxon_thane = {
 anglo_saxon_fyrd = {
 	type = skirmishers
 	
-	damage = 24
-	toughness = 10
-	pursuit = 5
-	screen = 20
+	damage = 10
+	toughness = 24
+	pursuit = 0
+	screen = 40
 	
-	terrain_bonus = {
-		plains = { pursuit = 4 }
-		drylands = { pursuit = 4 }		
-		mountains = { damage = 5 toughness = 5 }
-		desert_mountains = { damage = 5 toughness = 5 }
-		hills = { damage = 8 toughness = 8 }
-	}
 
 	counters = {
 		heavy_infantry = 1	
-		pikemen = 1
 	}
 	
 	can_recruit = {
@@ -283,10 +279,10 @@ anglo_saxon_fyrd = {
 		culture = culture:anglo_saxon
 	}
 
-	buy_cost = { gold = horn_warrior_recruitment_cost }
-	low_maintenance_cost = { gold = horn_warrior_low_maint_cost }
-	high_maintenance_cost = { gold = horn_warrior_high_maint_cost }
-	provision_cost = @provisions_cost_infantry_cheap
+	buy_cost = { gold = shomer_recruitment_cost }
+	low_maintenance_cost = { gold = shomer_low_maint_cost }
+	high_maintenance_cost = { gold = shomer_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_moderate
 	
 	stack = 100
 	ai_quality = { value = @cultural_maa_extra_ai_score }
@@ -297,19 +293,18 @@ anglo_saxon_fyrd = {
 woodsmen = {
 	type = skirmishers
 	
-	damage = 10
-	toughness = 15
-	pursuit = 10
+	damage = 12
+	toughness = 16
+	pursuit = 5
 	screen = 20
 	
 	terrain_bonus = {
-		forest = { damage = 10 toughness = 5 screen = 5 }
-		taiga = { damage = 10 toughness = 5 screen = 5 }
-		jungle = { damage = 10 toughness = 5 screen = 5 }
+		forest = { damage = 10 toughness = 8 }
+		taiga = { damage = 10 toughness = 8 }
+		jungle = { damage = 10 toughness = 8 }
 	}
 
 	counters = {
-		skirmishers = 1
 		heavy_infantry = 1
 	}
 	
@@ -324,32 +319,32 @@ woodsmen = {
 		}
     }
 
-	buy_cost = { gold = skirmisher_recruitment_cost }
-	low_maintenance_cost = { gold = skirmisher_low_maint_cost }
-	high_maintenance_cost = { gold = skirmisher_high_maint_cost }
-	
-	allowed_in_hired_troops = no
+	buy_cost = { gold = horn_warrior_recruitment_cost }
+	low_maintenance_cost = { gold = horn_warrior_low_maint_cost }
+	high_maintenance_cost = { gold = horn_warrior_high_maint_cost }
 	
 	stack = 100
-	ai_quality = { value = culture_ai_weight_skirmishers }
+	ai_quality = { value = @cultural_maa_extra_ai_score }
 	icon = skirmishers
 }
 
 balkan_axemen = {
 	type = heavy_infantry
 	
-	damage = 35
-	toughness = 24
+	damage = 40
+	toughness = 26
 	pursuit = 0
-	screen = 12
+	screen = 24
 	
 	terrain_bonus = {
-		hills = { damage = 5 }
-		mountains = { damage = 5 }
+		hills = { damage = 8 }
+		mountains = { damage = 8 }
 	}
 
 	counters = {
 		pikemen = 1
+		peasant_militia = 2
+		archers = 1
 	}
 	
 	can_recruit = {
@@ -368,25 +363,25 @@ balkan_axemen = {
 	buy_cost = { gold = huscarls_recruitment_cost }
 	low_maintenance_cost = { gold = huscarls_low_maint_cost }
 	high_maintenance_cost = { gold = huscarls_high_maint_cost }
-	provision_cost = @provisions_cost_cavalry_expensive
+	provision_cost = @provisions_cost_infantry_cheap
 	
 	stack = 100
 	icon = balkan_axeman
-	ai_quality = { value = culture_ai_weight_heavy_infantry }
+	ai_quality = { value = @cultural_maa_extra_ai_score }
 }
 
 ## BULGARIAN UNITS
 bulgarian_voynik = {
 	type = skirmishers
 
-	damage = 15
-	toughness = 16
-	pursuit = 18
-	screen = 15
+	damage = 10
+	toughness = 14
+	pursuit = 12
+	screen = 18
 
 	terrain_bonus = {
-		hills = { damage = 5 toughness = 5 }
-		dry_hills = { damage = 5 toughness = 5 }
+		hills = { damage = 6 toughness = 6 }
+		desert_mountains = { damage = 6 toughness = 6 }
 		mountains = { damage = 10 toughness = 10 }
 	}
 
@@ -402,9 +397,9 @@ bulgarian_voynik = {
 		culture = culture:bulgarian
 	}
 	
-	buy_cost = { gold = skirmisher_recruitment_cost }
-	low_maintenance_cost = { gold = skirmisher_low_maint_cost }
-	high_maintenance_cost = { gold = skirmisher_high_maint_cost }
+	buy_cost = { gold = akritai_recruitment_cost }
+	low_maintenance_cost = { gold = akritai_low_maint_cost }
+	high_maintenance_cost = { gold = akritai_high_maint_cost }
 	provision_cost = @provisions_cost_infantry_cheap
 
 	
@@ -417,20 +412,14 @@ bulgarian_voynik = {
 bulgarian_oklopnitsi = {
 	type = heavy_infantry
 
-	damage = 32
-	toughness = 20
-	pursuit = 10
-	screen = 0
+	damage = 40
+	toughness = 30
+	pursuit = 0
+	screen = 30
 
 	counters = {
 		pikemen = 1
-		heavy_infantry = 1
-	}
-
-	terrain_bonus = {
-		hills = { damage = 5 toughness = 10 }
-		dry_hills = { damage = 5 toughness = 10  }
-		mountains = { damage = 10 toughness = 10 }
+		peasant_militia = 2
 	}
 	
 	can_recruit = {
@@ -454,21 +443,18 @@ bulgarian_oklopnitsi = {
 bulgarian_konnik = {
 	type = heavy_cavalry
 	
-	damage = 90
-	toughness = 30
-	pursuit = 20
+	damage = 125
+	toughness = 35
+	pursuit = 10
 	screen = 0
 	
 	terrain_bonus = {
-		plains = { damage = 30 }
+		plains = { damage = 30 toughness = 5 }
 		drylands = { damage = 30 }
-		savanna = { damage = 30 }
-		hills = { damage = 10  }
-		dry_hills = { damage = 10  }
-		mountains = { damage = 10 }
-		desert = { toughness = -15 toughness -15 screen = -15 }
-		desert_mountains = { damage = -30 }
-		wetlands = { damage = -90 }
+		hills = { damage = -10 }
+		mountains = { damage = -50 }
+		desert_mountains = { damage = -50 }
+		wetlands = { damage = -80 toughness = -15 pursuit = -10 }
 	}
 	
 	can_recruit = {
@@ -480,14 +466,19 @@ bulgarian_konnik = {
 	}
 
 	counters = {
-		skirmishers = 1
 		archers = 1
+		gunpowder = 1
+	}
+	
+	winter_bonus = {
+		normal_winter = { damage = -15 toughness = -5 }
+		harsh_winter = { damage = -30 toughness = -10 }
 	}
 
-	buy_cost = { gold = heavy_cavalry_recruitment_cost }
-	low_maintenance_cost = { gold = heavy_cavalry_low_maint_cost }
-	high_maintenance_cost = { gold = heavy_cavalry_high_maint_cost }
-	provision_cost = @provisions_cost_cavalry_expensive
+	buy_cost = { gold = cataphract_recruitment_cost }
+	low_maintenance_cost = { gold = cataphract_low_maint_cost }
+	high_maintenance_cost = { gold = cataphract_high_maint_cost }
+	provision_cost = @provisions_cost_cavalry_bankrupting
 	
 	icon = bulg_kon
 	
@@ -525,3 +516,57 @@ bulgarian_testudos = {
 	
 	icon = testudo
 }
+
+frontier_enforcer = {
+	type = pikemen
+	
+	damage = 40
+	toughness = 24
+	pursuit = 0
+	screen = 0
+	
+	terrain_bonus = {
+		taiga = { toughness = 12 }
+		forest = { toughness = 12 }
+		hills = { toughness = 12 }
+		mountains = { toughness = 12 }
+	}
+	
+	winter_bonus = {
+		harsh_winter = { toughness = 6 screen = 12 }
+		normal_winter = { toughness = 4 screen = 8 }
+	}
+
+	counters = {
+		skirmishers = 0.5
+		light_cavalry = 1
+		heavy_cavalry = 1
+		camel_cavalry = 1
+		elephant_cavalry = 1
+	}
+	
+	can_recruit = {
+		NOR = {
+			government_has_flag = government_is_nomadic
+			government_has_flag = government_is_herder
+		}
+		culture = { 
+			has_cultural_parameter = unlock_maa_frontier_enforcer
+		}
+	}
+
+	buy_cost = { gold = pikemen_recruitment_cost }
+	low_maintenance_cost = { gold = pikemen_low_maint_cost }
+	high_maintenance_cost = { gold = pikemen_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_expensive
+	
+	allowed_in_hired_troops = no 
+	
+	stack = 100
+	ai_quality = {
+		value = culture_ai_weight_pikemen
+		add = counter_synergy_ai_weight_pikemen
+	}
+	icon = north_pikemen
+}
+

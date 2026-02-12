@@ -20,7 +20,7 @@ buddhist_school_chan = {# Chan / Zen
 		buddhist_school_pure_land
 	}
 
-	monthly_piety = 0.1
+	monthly_piety = 1
 	same_opinion = 5
 	opposite_opinion = -5
 	culture_modifier = {
@@ -57,7 +57,7 @@ buddhist_school_madhyamaka = {# Madhyamaka
 
 	
 
-	monthly_piety = 0.1
+	monthly_piety = 1
 	same_opinion = 5
 	opposite_opinion = -5
 	culture_modifier = {
@@ -94,7 +94,7 @@ buddhist_school_yogachara = {# Yogachara
 
 	
 
-	monthly_piety = 0.1
+	monthly_piety = 1
 	same_opinion = 5
 	opposite_opinion = -5
 	culture_modifier = {
@@ -131,7 +131,7 @@ buddhist_school_pure_land = {# Pure Land
 
 	
 
-	monthly_piety = 0.1
+	monthly_piety = 1
 	same_opinion = 5
 	opposite_opinion = -5
 	culture_modifier = {
@@ -171,7 +171,7 @@ buddhist_school_nyingma = {# Nyingma
 
 	
 
-	monthly_piety = 0.1
+	monthly_piety = 1
 	same_opinion = 5
 	opposite_opinion = -5
 	culture_modifier = {
@@ -209,7 +209,7 @@ buddhist_school_kadam = {# Kadam
 
 	
 
-	monthly_piety = 0.1
+	monthly_piety = 1
 	same_opinion = 5
 	opposite_opinion = -5
 	culture_modifier = {
@@ -258,7 +258,7 @@ buddhist_school_sakya = {# Sakya
 
 	
 
-	monthly_piety = 0.1
+	monthly_piety = 1
 	same_opinion = 5
 	opposite_opinion = -5
 	culture_modifier = {
@@ -296,7 +296,7 @@ buddhist_school_kagyu = {# Kagyu
 
 	
 
-	monthly_piety = 0.1
+	monthly_piety = 1
 	same_opinion = 5
 	opposite_opinion = -5
 	culture_modifier = {
@@ -342,7 +342,7 @@ hindu_philoosphy_yoga = {# Yoga
 	
 
 	health = 0.05
-	stress_gain_mult = -0.1
+	stress_gain_mult = -0.15
 	same_opinion = 5
 	opposite_opinion = -5
 	culture_modifier = {
@@ -385,7 +385,7 @@ hindu_philoosphy_samkhya = {# Samkhya
 
 	
 
-	stewardship = 2
+	stewardship = 3
 	same_opinion = 5
 	opposite_opinion = -5
 	culture_modifier = {
@@ -431,7 +431,7 @@ hindu_philoosphy_vaisheshika = {# Vaisheshika
 
 	
 
-	learning = 2
+	learning = 3
 	same_opinion = 5
 	opposite_opinion = -5
 	culture_modifier = {
@@ -478,7 +478,7 @@ hindu_philoosphy_mimamsa = {# Mimamsa
 
 	
 
-	development_growth_factor = 0.05
+	development_growth_factor = 0.15
 	scheme_discovery_chance_mult = 0.1
 	same_opinion = 5
 	opposite_opinion = -5
@@ -526,8 +526,8 @@ hindu_philoosphy_nyaya = {# Nyaya
 
 	
 
-	owned_personal_scheme_success_chance_add = 5
-	owned_hostile_scheme_success_chance_add = 5
+	owned_personal_scheme_success_chance_add = 10
+	owned_hostile_scheme_success_chance_add = 10
 	same_opinion = 5
 	opposite_opinion = -5
 	culture_modifier = {
@@ -577,8 +577,7 @@ hindu_philoosphy_vishishtadvaita = {# Vishishtadvaita - School of Vedanta
 
 	
 
-	learning = 1
-	monthly_piety_gain_mult = 0.1
+	monthly_piety = 3
 	same_opinion = 5
 	opposite_opinion = -5
 	culture_modifier = {
@@ -625,8 +624,7 @@ hindu_philoosphy_advaita_vedanta = {# Advaita Vedanta - School of Vedanta
 		hindu_philoosphy_dvaita_vedanta
 	}
 
-	learning = 1
-	monthly_piety_gain_mult = 0.1
+	monthly_piety_gain_mult = 0.25
 	same_opinion = 5
 	opposite_opinion = -5
 	culture_modifier = {
@@ -672,8 +670,7 @@ hindu_philoosphy_bhedabheda = {# Bhedabheda - School of Vedanta
 		hindu_philoosphy_dvaita_vedanta
 	}
 
-	learning = 1
-	monthly_piety_gain_mult = 0.1
+	monthly_piety = 3
 	same_opinion = 5
 	opposite_opinion = -5
 	culture_modifier = {
@@ -720,8 +717,7 @@ hindu_philoosphy_dvaita_vedanta = {# Dvaita Vedanta - School of Vedanta
 		hindu_philoosphy_dvaita_vedanta
 	}
 	
-	learning = 1
-	monthly_piety_gain_mult = 0.1
+	monthly_piety_gain_mult = 0.25
 	same_opinion = 5
 	opposite_opinion = -5
 	culture_modifier = {

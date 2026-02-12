@@ -1,22 +1,22 @@
 servile_soldiers = {
 	type = skirmishers
 	
-	damage = 10
-	toughness = 16
-	pursuit = 10
-	screen = 16
+	damage = 7
+	toughness = 12
+	pursuit = 7
+	screen = 12
 
 	can_recruit = {
 		valid_for_maa_trigger = { PARAMETER = unlock_maa_servile_soldiers }
 	}
 
 	buy_cost = { gold = 30 }
-	low_maintenance_cost = { gold = 0.03 }
-	high_maintenance_cost = { gold = 0.15 }
+	low_maintenance_cost = { gold = 0.15 }
+	high_maintenance_cost = { gold = 0.45 }
 	provision_cost = provisions_cost_infantry_cheap
 
 	stack = 200
-	ai_quality = { value = -400 }
+	ai_quality = { value = @cultural_maa_extra_ai_score }
 	icon = skirmishers
 
 }
@@ -27,11 +27,13 @@ hashasin = {
 	damage = 30
 	toughness = 12
 	pursuit = 15
-	screen = 12
+	screen = 10
 
 	terrain_bonus = {
-		hills = { damage = 5 toughness = 5 }
-		mountains = { damage = 5 toughness = 5 }
+		desert_mountains = { damage = 10 toughness = 8 }
+		mountains = { damage = 6 toughness = 6 }
+		hills = { damage = 6 toughness = 6 }
+		desert = { damage = 10 toughness = 8 }
 	}
 
 	counters = {
@@ -44,44 +46,44 @@ hashasin = {
 			government_has_flag = government_is_herder
 		}
 		OR = {
-		faith = { has_doctrine = muhammad_succession_shia_doctrine }
-		faith = { has_doctrine = muhammad_succession_zandaqa_doctrine }
+			faith = { has_doctrine = muhammad_succession_shia_doctrine }
+			faith = { has_doctrine = muhammad_succession_zandaqa_doctrine }
 		}
 	}
 	
-	buy_cost = { gold = skirmisher_recruitment_cost }
-	low_maintenance_cost = { gold = skirmisher_low_maint_cost }
-	high_maintenance_cost = { gold = skirmisher_high_maint_cost }
+	buy_cost = { gold = abudrar_recruitment_cost }
+	low_maintenance_cost = { gold = abudrar_low_maint_cost }
+	high_maintenance_cost = { gold = abudrar_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_cheap
 
 	allowed_in_hired_troops = no
 
 	stack = 100
 	ai_quality = { value = @cultural_maa_extra_ai_score }
-	icon = skirmishers
+	illustration = "hashashin"
+	icon = arabic_ghazi
 }
 
 armed_traders = {
 	type = archer_cavalry
 	
-	damage = 40
-	toughness = 25
-	pursuit = 25
-	screen = 30
+	damage = 96
+	toughness = 34
+	pursuit = 40
+	screen = 20
 	
 	terrain_bonus = {
-		steppe = { damage = 40 pursuit = 10 }
-		desert = { damage = 25 pursuit = 5 }
-		drylands = { damage = 25 pursuit = 5 }
+		steppe = { damage = 20 }
+		plains = { damage = 20 }
+		drylands = { damage = 20 }
+		desert = { damage = 20 }
 		jungle = { damage = -30 pursuit = -30 }
-		forest = { damage = -10 pursuit = -30 }
-		wetlands = { damage = -20 pursuit = -30 }
-		mountains = { pursuit = -5 }
-		desert_mountains = { pursuit = -5 }
+		desert_mountains = { damage = -30 pursuit = -30 }
+		wetlands = { damage = -50 pursuit = -50 }
 	}
 
 	counters = {
 		skirmishers = 1
-		light_cavalry = 1
 		heavy_infantry = 1
 	}
 
@@ -92,71 +94,87 @@ armed_traders = {
 	buy_cost = { gold = horse_archers_recruitment_cost }
 	low_maintenance_cost = { gold = horse_archers_low_maint_cost }
 	high_maintenance_cost = { gold = horse_archers_high_maint_cost }
+	provision_cost = @provisions_cost_cavalry_moderate
 	
-	stack = 100
-	ai_quality = { value = @cultural_maa_extra_ai_score }
+	stack = 50
+	ai_quality = {
+		value = @cultural_maa_extra_ai_score
+		add = 100 #I mean... they're horse archers
+	}
 	icon = berber_archers
+	illustration = "armed_traders"
 }
 
 temple_zealots = {
 	type = heavy_infantry
 	
-	damage = 32
+	damage = 35
 	toughness = 22
-	pursuit = 5
-	screen = 10
-	
-	terrain_bonus = {
-	}
+	pursuit = 12
+	screen = 0
 	
 	counters = {
 		pikemen = 1
-		skirmishers = 1
+		peasant_militia = 2
 	}
 
 	can_recruit = {
 		religion = religion:judaism_religion 
 	}
 
-	buy_cost = { gold = 90 }
-	low_maintenance_cost = { gold = 0.4 }
-	high_maintenance_cost = { gold = 1.2 }
+	buy_cost = { gold = ayyar_recruitment_cost }
+	low_maintenance_cost = { gold = ayyar_low_maint_cost }
+	high_maintenance_cost = { gold = ayyar_high_maint_cost }
+	provision_cost = @provisions_cost_infantry_expensive
 	
 	stack = 100
 	ai_quality = { value = @cultural_maa_extra_ai_score }
 	icon = temple_zealots
+	illustration = "temple_zealots"
 }
 
+# Special
 house_guard = {
 	type = heavy_infantry
 	can_recruit = {
-		exists = dynasty
-		dynasty = {
+		dynasty ?= {
 			has_dynasty_perk = warfare_legacy_5
 		}
 		NOT = {
 			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
 		}
 	}
-	
+
 	damage = 40
-	toughness = 40
+	toughness = 32
 	pursuit = 0
-	screen = 30
-	
+	screen = 24
+
 	counters = {
 		pikemen = 2
+		peasant_militia = 4
 		archers = 2
-		heavy_infantry = 2
 	}
-	
+
 	buy_cost = { gold = 50 }
 	low_maintenance_cost = { gold = 0 }
 	high_maintenance_cost = { gold = 1 }
 	provision_cost = @provisions_cost_infantry_expensive
-	
+
 	max_regiments = 1
-	
+
 	stack = 100
 	ai_quality = { value = 100 }
+
+	illustration = {
+		trigger = {
+			should_use_asian_maa_graphics = yes
+		}
+
+		reference = heavy_infantry_asia
+	}
+
+	illustration = {
+		reference = heavy_infantry
+	}
 }

@@ -220,7 +220,7 @@ pirate_captain = {
 
 high_druid = {
 	category = fame
-	
+	icon = high_druid.dds
     intrigue = 2
 	diplomacy = 2
 	learning = 2
@@ -392,15 +392,19 @@ painter = {
 bzn_warlord = {
 	category = fame
 	icon = bzn_warlord.dds
-	martial = 3
-	prowess = 3
-	title_creation_cost_mult = -0.25
-	monthly_legitimacy_add = 2
-	men_at_arms_maintenance = -0.25
-	monthly_prestige = 2
-	enemy_hostile_scheme_phase_duration_add = 10
-	enemy_hostile_scheme_success_chance_max_add = -20
-	enemy_hostile_scheme_success_chance_growth_add = -2
+	flag = join_factions_more
+	ai_war_chance = 100
+	ai_war_cooldown = -100
+	ai_amenity_spending = -0.3
+	ai_amenity_target_baseline = -0.4
+	knight_effectiveness_mult =  0.4
+	title_creation_cost_mult = -0.3
+	title_creation_piety_cost_mult = -0.3
+	monthly_income = 3
+	monthly_legitimacy_add = 3
+	army_maintenance_mult = -0.4
+	monthly_prestige = 3
+	herd_capacity_mult = 0.3
 
 	ruler_designer_cost = 150
 	
@@ -503,8 +507,12 @@ artisan = {
 	learning = 2
 	stewardship = 3
 	same_opinion = 10
-	build_gold_cost = -0.10
-	build_speed = -0.10
+	build_speed = -0.1
+	holding_build_speed = -0.1
+	domicile_build_speed = -0.1
+	build_gold_cost = -0.1
+	holding_build_gold_cost = -0.1
+	domicile_build_gold_cost = -0.1
 	development_growth_factor = 0.10
 	
 

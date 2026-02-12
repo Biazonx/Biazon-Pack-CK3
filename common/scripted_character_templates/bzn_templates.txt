@@ -1,5 +1,5 @@
 ﻿bzn_traveler_character = {
-	age = { 20 40 }
+	age = { 20 50 }
 	random_traits_list = {
 		count = 1
 		education_stewardship_1 = {}
@@ -15,15 +15,13 @@
 	random_traits = yes
 	culture = culture:han
 	gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
-	stewardship = {
-		min_template_decent_skill
-		max_template_decent_skill
-	}
-	prowess = { 2 10 }
-	martial = { 2 10 }
-	diplomacy = { 5 13 }
-	learning = { 5 13 }
+	stewardship = {5 15 }
+	prowess = { 5 10 }
+	martial = { 5 10 }
+	diplomacy = { 5 15 }
+	learning = { 5 15 }
 	after_creation = {
+		add_trait = lifestyle_traveler
 		random_list = {
 			40 = { add_trait = painter }
 			40 = { add_trait = tea_master }
@@ -42,8 +40,52 @@
 	}	
 }
 
+bzn_rus_traveler_character = {
+	age = { 20 50 }
+	random_traits_list = {
+		count = 1
+        education_martial_1 = {}
+        education_martial_2 = {}
+        education_martial_3 = {}
+		education_martial_4 = {}
+		education_stewardship_1 = {}
+		education_stewardship_2 = {}
+		education_stewardship_3 = {}
+		education_stewardship_4 = {}
+		education_learning_1 = {}
+		education_learning_2 = {}
+		education_learning_3 = {}
+		education_learning_5 = {}
+		education_diplomacy_1 = {}
+		education_diplomacy_2 = {}
+		education_diplomacy_3 = {}
+		education_diplomacy_4 = {}
+		education_intrigue_1 = {}
+		education_intrigue_2 = {}
+		education_intrigue_3 = {}
+		education_intrigue_4 = {}
+	}
+	dynasty = none
+	random_traits = yes
+	culture = culture:russian
+	gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+	stewardship = {5 12 }
+	prowess = { 5 10 }
+	martial = { 5 10 }
+	diplomacy = { 5 10 }
+	learning = { 5 12 }
+	after_creation = {
+		add_trait = lifestyle_traveler
+		random_list = {
+			20 = { set_character_faith = faith:catholic }
+			60 = { set_character_faith = faith:orthodox }
+			20 = { set_character_faith = faith:rabbinism }
+		}
+	}	
+}
+
 bzn_new_samurai_character = {
-    age = { 20 40 }
+    age = { 20 50 }
     random_traits_list = {
         count = 1
         education_martial_1 = {}
@@ -55,11 +97,11 @@ bzn_new_samurai_character = {
     random_traits = yes
     faith = faith:shinto
     culture = culture:japanese
-    stewardship = { 2 10 }
+    stewardship = { 5 10 }
     prowess = { 8 16 }
     martial = { 8 16 }
-    diplomacy = { 3 10 }
-    learning = { 3 10 }
+    diplomacy = { 5 10 }
+    learning = { 5 10 }
 	after_creation = {
 		random_list = {
 			65 = { add_trait = ronin }
@@ -101,7 +143,7 @@ bzn_majin_character = {
 }
 
 bzn_slave_character = {
-    age = { 20 40 }
+    age = { 20 50 }
     random_traits_list = {
         count = 1
         education_martial_1 = {}
@@ -138,7 +180,7 @@ bzn_slave_character = {
 }
 
 bzn_jewish_merchant_character = {
-	age = { 20 40 }
+	age = { 20 50 }
 	random_traits_list = {
 		count = 1
 
@@ -149,7 +191,7 @@ bzn_jewish_merchant_character = {
 		education_stewardship_5 = {}
 
 	}
-	dynasty = none
+	dynasty = generate
 	random_traits = yes
 	faith = faith:rabbinism
 	culture = culture:radhanite
@@ -160,7 +202,7 @@ bzn_jewish_merchant_character = {
 }	
 
 bzn_islam_scholar_character = {
-	age = { 20 40 }
+	age = { 20 50 }
 	random_traits_list = {
 		count = 1
 		education_learning_1 = {}
@@ -179,7 +221,7 @@ bzn_islam_scholar_character = {
 }	
 
 bzn_mamluk_character = {
-	age = { 20 40 }
+	age = { 20 50 }
 	random_traits_list = {
         count = 1
         education_martial_1 = {}
@@ -188,15 +230,15 @@ bzn_mamluk_character = {
         education_martial_4 = {}
 		education_martial_5 = {}
     }
-	dynasty = generate
+	dynasty = none
     random_traits = yes
     faith = root.faith
     culture = root.culture
-    stewardship = { 3 10 }
-    prowess = { 5 12 }
-    martial = { 5 12 }
-    diplomacy = { 3 10 }
-    learning = { 2 10 }
+    stewardship = { 5 10 }
+    prowess = { 5 15 }
+    martial = { 5 15 }
+    diplomacy = { 5 10 }
+    learning = { 5 10 }
 	after_creation = {
 		add_trait = mamluk 
 		add_trait = strong
@@ -205,21 +247,46 @@ bzn_mamluk_character = {
 }	
 
 bzn_new_warrior_character = {
-	age = { 20 40 }
+	age = { 20 50 }
 	random_traits_list = {
         count = 1
 		education_martial_5 = {}
     }
-	dynasty = generate
+	dynasty = none
     random_traits = yes
     faith = root.faith
     culture = root.culture
-    stewardship = { 3 10 }
+    stewardship = { 5 10 }
     prowess = { 7 15 }
     martial = { 7 15 }
-    diplomacy = { 3 10 }
-    learning = { 2 10 }
+    diplomacy = { 5 10 }
+    learning = { 5 10 }
 	after_creation = {
 		add_trait = gladiator 
 		}
+}
+
+wap_generated_griot = {
+	age = { 40 70 }
+	trait = griot
+	random_traits_list = {
+		count = 1
+		education_diplomacy_2 = {}
+		education_diplomacy_3 = {}
+		education_learning_2 = {}
+		education_learning_3 = {}
+	}
+	random_traits = yes
+	dynasty = none
+	faith = root.faith
+	culture = root.culture
+	gender = male
+	diplomacy = {
+		min_template_low_skill
+		max_template_high_skill
+	}
+	learning = {
+		min_template_low_skill
+		max_template_high_skill
+	}
 }

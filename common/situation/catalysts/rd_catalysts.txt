@@ -1,0 +1,22 @@
+﻿catalyst_regional_destiny_situation_passing_of_time = {}
+### Casus Belli
+catalyst_regional_destiny_situation_win_any_war = {}
+catalyst_regional_destiny_situation_start_any_war = {}
+catalyst_regional_destiny_situation_win_against_liege = {}
+
+# Diplomacy
+catalyst_gift_independent_ruler = {}
+
+### Scheme
+catalyst_regional_destiny_situation_claim_throne = {}
+
+### martial
+catalyst_gpt_rd_chaotic_pos_count = {}
+catalyst_gpt_rd_chaotic_pos_duke = {}
+catalyst_gpt_rd_chaotic_pos_king = {}
+catalyst_gpt_rd_chaotic_pos_emp = {}
+
+catalyst_gpt_rd_chaotic_neg_count = {}
+catalyst_gpt_rd_chaotic_neg_duke = {}
+catalyst_gpt_rd_chaotic_neg_king = {}
+catalyst_gpt_rd_chaotic_neg_emp = {}

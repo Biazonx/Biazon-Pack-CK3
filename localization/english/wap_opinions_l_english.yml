@@ -1,0 +1,17 @@
+﻿l_english:
+ ##################################################
+ # #Culture Opinions
+ igbo_opinion:0 "$igbo$ Opinion"
+ ##################################################
+ ##Event and Decision Opinions
+ wap_usurped_my_authority_opinion:0 "Usurped my Authority"
+ wap_saved_me_from_the_mob_opinion:0 "Saved me from the Mob"
+ wap_abandoned_me_to_the_mob_opinion:0 "Abandoned me to the Mob"
+ wap_desecrated_corpse_of_loved_one:0 "Desecrated Corpse of Loved One"
+ wap_king_of_the_niger_opinion:0 "High King of the Niger"
+ wap_queen_of_the_niger_opinion:0 "High Queen of the Niger"
+ wap_sacrificed_close_family:0 "Sacrificed my Family Member"
+ ######Interactions
+ wap_appointed_griot_opinion:0 "Appointed me as the Royal Griot"
+ wap_relieved_griot_opinion:0 "Removed me as the Royal Griot"
+
