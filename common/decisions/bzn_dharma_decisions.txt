@@ -866,7 +866,7 @@ adopt_a_new_faith_for_india_decision = {
 							title_province = { geographical_region = world_india_pakistan }
 						}
 					}
-					add = 20
+					add = 40
 				}
 				if = {
 					limit = {
@@ -934,7 +934,7 @@ adopt_a_new_faith_for_india_decision = {
 			localization = choose_shaivism_name
 			icon = "gfx/interface/icons/faith/shaivism.dds"
 			ai_chance = {
-				value = 15
+				value = 10
 				if = {
 					limit = {
 						any_sub_realm_county = {
@@ -956,7 +956,7 @@ adopt_a_new_faith_for_india_decision = {
 			localization = choose_vaishnavism_name
 			icon = "gfx/interface/icons/faith/hinduism.dds"
 			ai_chance = {
-				value = 15
+				value = 10
 				if = {
 					limit = {
 						any_sub_realm_county = {

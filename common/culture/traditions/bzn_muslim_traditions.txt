@@ -109,10 +109,13 @@ tradition_mamluk_elite = {
 	
 	parameters = {
 		unlock_maa_mamluk_cavalry = yes
+		doesnt_care_about_culture_faith_in_factions = yes
+	}
+	
+	character_modifier = {
 		heavy_cavalry_max_size_add = 2	
 		heavy_cavalry_maintenance_mult = -0.1	
 		knight_effectiveness_mult = 0.1
-		doesnt_care_about_culture_faith_in_factions = yes
 	}
 
 	cost = {
