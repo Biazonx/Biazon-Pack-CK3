@@ -1,0 +1,2 @@
+﻿l_english:
+ doctrine_parameter_hostility_override_special_doctrine_ecumenical_christian:3 "Other Christian [faiths|E] that have the Ecumenism doctrine are considered [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V] instead of $hostility_hostile_tooltippable$\n$EFFECT_LIST_BULLET$Ecumenical [faiths|E] in [full_communion|E] consider each other to be $hostility_righteous_tooltippable$"

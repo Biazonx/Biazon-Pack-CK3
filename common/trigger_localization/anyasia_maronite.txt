@@ -1,0 +1,4 @@
+﻿anyasia_maronite_antioch_is_maronite = {
+	first = ANYASIA_MARONITE_ANTIOCH_IS_MARONITE
+	first_not = ANYASIA_MARONITE_ANTIOCH_IS_NOT_MARONITE
+}

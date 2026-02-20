@@ -109,3 +109,7 @@ custom_lower_niger = {
 		d_kwararafa
 	}
 }
+
+custom_coffee = {
+	counties = { c_taizz c_harar c_begemder }
+}

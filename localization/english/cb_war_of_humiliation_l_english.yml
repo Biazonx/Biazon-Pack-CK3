@@ -8,3 +8,22 @@
  cb_war_of_humiliation_defeat_desc:0 "Upon defeat, [attacker.GetShortUIName|U] will suffer a loss of prestige and legitimacy, while [defender.GetShortUIName|U] will gain prestige and legitimacy, and [attacker.GetShortUIName|U] will be forced to pay reparations."
  cb_war_of_humiliation_invalidated_desc:0 "The war for Humiliation and Control has been invalidated."
  CB_WAR_OF_HUMILIATION_TITLE:0 "Ruler of [THIS.GetLandedTitle.GetBaseName] will be humiliated. No land will be seized."
+ 
+cb_coffee_raid: "Seize Coffee Production"
+cb_coffee_raid_desc: "The defender controls valuable coffee-producing lands. By force of arms, we can seize their profits, disrupt their trade, and assert dominance over the lucrative coffee market."
+cb_coffee_raid_victory_desc: "We have plundered their coffee wealth and humbled their trade."
+cb_coffee_raid_defeat_desc: "Our attempt to seize their coffee trade has failed."
+cb_coffee_raid_invalidated_desc: "The conflict over coffee production has lost its cause."
+
+cb_coffee_labor: "Enforce Coffee Labor"
+cb_coffee_labor_desc: "Our plantations demand more hands than our lands can provide. By defeating our rivals, we can compel them to supply labor for our expanding coffee estates."
+cb_coffee_labor_victory_desc: "Workers have been secured to expand our coffee production, enriching our realm."
+cb_coffee_labor_defeat_desc: "Our attempt to secure labor for our plantations has failed."
+cb_coffee_labor_invalidated_desc: "The conflict over plantation labor has lost its cause."
+
+stolen_coffee: "Coffee Trade Plundered"
+stolen_coffee_desc: "Our plantations have been raided and our trade disrupted. The loss of revenue and prestige is deeply felt."
+seized_coffee: "Seized Coffee Trade"
+seized_coffee_desc: "Through strength and cunning, we have seized control of valuable coffee revenues, boosting our coffers and reputation."
+imported_coffee_labor: "Imported Plantation Labor"
+imported_coffee_labor_desc: "Workers brought from foreign lands expand the coffee plantations, greatly increasing production and profits."

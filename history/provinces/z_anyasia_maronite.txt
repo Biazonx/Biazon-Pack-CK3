@@ -1,0 +1,24 @@
+# OVERWRITE
+5918 = {	# 5918 - Tripoli
+	
+	# Misc
+	culture = levantine
+	religion = maronite
+	holding = castle_holding
+	# History
+	867.1.1 = {
+		buildings = {
+			common_tradeport_01
+			military_camps_01
+		}
+	}
+	1066.1.1 = {
+		buildings = {
+			common_tradeport_02
+			military_camps_01
+			watchtowers_01
+		}
+	}
+	1295.1.1 = { religion = ashari }
+
+}

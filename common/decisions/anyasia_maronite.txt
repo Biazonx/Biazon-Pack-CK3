@@ -1,0 +1,264 @@
+﻿restore_the_patriarchs_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	}
+	decision_group_type = regional_major
+
+	ai_check_interval = 12
+
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		exists = title:d_maronite # Sanity check
+		can_restore_the_patriarchs = yes
+	}
+
+	is_valid = {
+		highest_held_title_tier >= tier_kingdom
+		custom_description = {
+			text = "anyasia_maronite_antioch_is_maronite"
+			title:c_antiocheia.faith = faith:maronite
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_independent_ruler = yes # Cleaner than allowing vassal kings to do it. They'll get the vassal, anyway.
+		is_at_war = no
+	}
+
+	effect = {
+		hidden_effect = {
+			# Can only happen once
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:restored_the_patriarchs
+			}
+
+			# Save descision-taker for notification events
+			save_scope_as = restorer
+
+			# Save old liege for later
+			if = {
+				limit = { exists = title:d_maronite.holder.liege }
+				title:d_maronite.holder.liege = { save_scope_as = old_liege }
+			}
+
+			# Find new liege: the holder of c_antiocheia if valid, then a king above him, then an emperor above him
+			title:c_antiocheia.holder = {
+				if = {
+					limit = { highest_held_title_tier >= tier_kingdom }
+					save_scope_as = new_liege
+				}
+				else = {
+					every_liege_or_above = {
+						limit = { highest_held_title_tier >= tier_kingdom }
+						add_to_list = potential_lieges
+					}
+					ordered_in_list = {
+						list = potential_lieges
+						order_by = { subtract = highest_held_title_tier }
+						save_scope_as = new_liege
+					}
+				}
+			}
+			# If we're a Duke who's just looking
+			if = {
+				limit = { NOT = { exists = scope:new_liege } }
+				save_scope_as = new_liege
+			}
+		}
+
+		# Determine if we need to change the liege, and do that if necessary
+		if = {
+			limit = {
+				OR = {
+					NOT = { exists = scope:old_liege }
+					NOT = { scope:old_liege = scope:new_liege }
+				}
+			}
+			create_title_and_vassal_change = {
+				type = returned
+				save_scope_as = change
+				add_claim_on_loss = no
+			}
+			title:d_maronite.holder = {
+				change_liege = {
+					liege = scope:new_liege
+					change = scope:change
+				}
+			}
+			resolve_title_and_vassal_change = scope:change
+		}
+
+		# Lifetime opinion boost with the Patriarch and coreligionists
+		add_character_modifier = restored_the_patriarchs
+
+		# Notify players
+		every_player = {
+			limit = {
+				OR = {
+					faith = faith:maronite # This will always include the character executing the decision
+					this = scope:new_liege
+					AND = {
+						exists = scope:old_liege
+						this = scope:old_liege
+					}
+				}
+			}
+			trigger_event = anyasia_maronite.0001
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+vassalize_maronite_patriarchate_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { patriarchs_restored = yes }
+				desc = vassalize_maronite_patriarchate_decision_desc.antioch
+			}
+			desc = vassalize_maronite_patriarchate_decision_desc.tripoli
+		}
+	}
+	confirm_text = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { patriarchs_restored = yes }
+				desc = vassalize_maronite_patriarchate_decision_confirm.antioch
+			}
+			desc = vassalize_maronite_patriarchate_decision_confirm.tripoli
+		}
+	}
+
+	decision_group_type = regional_major
+
+	ai_check_interval = 12
+
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		exists = title:d_maronite # Sanity check.
+		NOT = { title:d_maronite.holder = { any_liege_or_above = { this = root } } }
+		OR = {
+			can_restore_the_patriarchs = no
+			NOT = { title:c_antiocheia.faith = faith:maronite }
+		}
+		is_liege_of_patriarchate_seat = yes
+	}
+
+	is_valid = {
+		highest_held_title_tier >= tier_kingdom
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_independent_ruler = yes # Cleaner than allowing vassal kings to do it. They'll get the vassal, anyway.
+		is_at_war = no
+	}
+
+	effect = {
+		hidden_effect = {
+			# Are we in Antioch, or still in Byblos?
+			if = {
+				limit = { patriarchs_restored = yes }
+				title:c_antiocheia = { save_scope_as = patriarchate_seat }
+			}
+			else = {
+				title:c_tripoli = { save_scope_as = patriarchate_seat }
+			}
+
+			# Save old liege for later
+			if = {
+				limit = { exists = title:d_maronite.holder.liege }
+				title:d_maronite.holder.liege = { save_scope_as = old_liege }
+			}
+
+			# Find new liege: the holder of patriarchate_seat if valid, then a king above him, then an emperor above him
+			scope:patriarchate_seat.holder = {
+				if = {
+					limit = { highest_held_title_tier >= tier_kingdom }
+					save_scope_as = new_liege
+				}
+				else = {
+					every_liege_or_above = {
+						limit = { highest_held_title_tier >= tier_kingdom }
+						add_to_list = potential_lieges
+					}
+					ordered_in_list = {
+						list = potential_lieges
+						order_by = { subtract = highest_held_title_tier }
+						save_scope_as = new_liege
+					}
+				}
+			}
+			# If we're a Duke who's just looking
+			if = {
+				limit = { NOT = { exists = scope:new_liege } }
+				save_scope_as = new_liege
+			}
+		}
+
+		# Determine if we need to change the liege, and do that if necessary
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = change
+			add_claim_on_loss = no
+		}
+		title:d_maronite.holder = {
+			save_scope_as = the_patriarch
+			change_liege = {
+				liege = scope:new_liege
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+
+		# Notify players - old liege and new liege
+		hidden_effect = {
+			scope:new_liege = {
+				if = {
+					limit = { is_ai = no }
+					send_interface_toast = {
+						title = vassalize_maronite_patriarchate_decision_new_vassal
+						left_icon = scope:the_patriarch
+						custom_tooltip = vassalize_maronite_patriarchate_decision_new_vassal_desc
+					}
+				}
+			}
+			every_player = {
+				limit = {
+					exists = scope:old_liege
+					this = scope:old_liege
+				}
+				send_interface_toast = {
+					title = vassalize_maronite_patriarchate_decision_vassal_lost
+					left_icon = scope:the_patriarch
+					right_icon = scope:new_liege
+					custom_tooltip = vassalize_maronite_patriarchate_decision_vassal_lost_desc
+				}
+			}
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

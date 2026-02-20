@@ -2,6 +2,7 @@ on_game_start = {
 	on_actions = {
 		bzn_setup_on_actions
 		on_game_start_BAP
+		my_on_game_start
 	}
 }
 
@@ -44,6 +45,20 @@ bzn_setup_after_game_start_on_actions_after = {
 				add_prestige = 800
 			}
 		}		
+	}
+}
+
+my_on_game_start = {
+  effect = {	
+		if = {
+			limit = { current_date = 867.1.1 }
+			title:e_byzantium.holder = {
+				trigger_event = {
+					id = paulician_revolt.1111
+					days = 7
+				}
+			}
+		}
 	}
 }
 
@@ -403,6 +418,15 @@ BAP_history_special_buildings_adding = {
 		}
 		title:b_sharshal.title_province = { 
 			add_special_building = wap_mausoleum_of_juba_01
+		}
+		title:b_taizz.title_province = {
+			add_special_building = bzn_coffee_plantation_01
+		}
+		title:b_harar.title_province = {
+			add_special_building = bzn_coffee_plantation_01
+		}
+		title:b_begemdir.title_province = {
+			add_special_building = bzn_coffee_plantation_01
 		}
 	}
 }

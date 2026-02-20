@@ -1,0 +1,773 @@
+﻿# TODO: Figure out why living Patriarchs are lowborn and either assign them a random dynasty or find a way to make historic Patriarchs lowborn
+anyasia_maronite_63_grandfather = {
+	name = "Alidipas" # Prince Alidipas, governor of Antioch, nephew of Carloman, a Frankish prince
+	dynasty = anyasia_maronite_sarumid # Retroäctive from son
+	religion = "maronite"
+	culture = "assyrian"
+	587.5.7 = {
+		birth = yes
+	}
+	640.1.25 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_63_father = {
+	name = "Agathon" # Governor of Sarum
+	dynasty = anyasia_maronite_sarumid
+	religion = "maronite"
+	culture = "assyrian"
+	father = anyasia_maronite_63_grandfather
+	608.6.1 = {
+		birth = yes
+	}
+	626.4.30 = {
+		add_spouse = anyasia_maronite_63_mother
+	}
+	662.1.10 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_63_mother = {
+	name = "Anohamia"
+	female = yes
+	religion = "maronite"
+	culture = "assyrian"
+	610.3.19 = {
+		birth = yes
+	}
+	682.8.2 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_63 = {
+	name = "John_Maron"
+	dynasty = anyasia_maronite_sarumid
+	religion = "maronite"
+	culture = "assyrian"
+	father = anyasia_maronite_63_father
+	mother = anyasia_maronite_63_mother
+	diplomacy = 9
+	martial = 2
+	intrigue = 2
+	stewardship = 12
+	learning = 8
+	prowess = 1
+	trait = zealous # Debated the Monophosytes
+	trait = temperate
+	trait = chaste
+	trait = devoted # Monk
+	trait = education_learning_4
+	trait = scholar # Well-rounded education
+	628.3.2 = {
+		birth = yes
+	}
+	685.2.3 = {
+		name = "John_Maron"
+	}
+	707.3.2 = {
+		trait = saint
+		death = yes
+	}
+}
+
+anyasia_maronite_63_sister = {
+	name = "Meirona" # Real name unknown
+	female = yes
+	dynasty = anyasia_maronite_sarumid
+	religion = "maronite"
+	culture = "assyrian"
+	father = anyasia_maronite_63_father
+	mother = anyasia_maronite_63_mother
+	627.2.2 = {
+		birth = yes
+	}
+	710.1.8 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_64 = {
+	name = "Cyrus"
+	dynasty = anyasia_maronite_sarumid # Shouldn't really be applied via mother, but since we don't list a father, might as well
+	religion = "maronite"
+	culture = "assyrian"
+	mother = anyasia_maronite_63_sister
+	trait = education_learning_1
+	649.10.9 = {
+		birth = yes
+	}
+	707.3.2 = {
+		name = "Cyrus"
+	}
+	708.7.18 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_65 = {
+	name = "Gabriel"
+	religion = "maronite"
+	culture = "assyrian"
+	trait = education_learning_2
+	650.11.2 = {
+		birth = yes
+	}
+	708.7.18 = {
+		name = "Gabriel"
+	}
+	710.7.1 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_66 = {
+	name = "John_Maron"
+	religion = "maronite"
+	culture = "assyrian"
+	trait = education_learning_3
+	trait = celibate
+	670.1.7 = {
+		birth = yes
+	}
+	710.7.1 = {
+		name = "John_Maron"
+	}
+	731.3.21 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_67 = {
+	name = "John"
+	dynasty = anyasia_maronite_jubailid
+	religion = "maronite"
+	culture = "levantine"
+	trait = education_learning_3
+	699.4.30 = {
+		birth = yes
+	}
+	731.3.21 = {
+		name = "John"
+	}
+	766.3.5 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_68 = {
+	name = "Gregory"
+	dynasty = anyasia_maronite_shihab # Fictional
+	religion = "maronite"
+	culture = "levantine"
+	trait = education_learning_3
+	725.2.14 = {
+		birth = yes
+	}
+	766.3.5 = {
+		name = "Gregory"
+	}
+	771.7.1 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_69 = {
+	name = "Stephen"
+	dynasty = anyasia_maronite_jurdid # Fictional
+	religion = "maronite"
+	culture = "levantine"
+	trait = education_learning_4
+	722.7.26 = {
+		birth = yes
+	}
+	771.7.1 = {
+		name = "Stephen"
+	}
+	805.4.3 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_70 = {
+	name = "Mark"
+	dynasty = anyasia_maronite_hrawid # Fictional
+	religion = "maronite"
+	culture = "levantine"
+	trait = education_learning_2
+	762.3.8 = {
+		birth = yes
+	}
+	805.4.3 = {
+		name = "Mark"
+	}
+	833.9.2 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_71 = {
+	name = "Eusebius"
+	dynasty = anyasia_maronite_kassab # Fictional
+	religion = "maronite"
+	culture = "levantine"
+	trait = education_learning_3
+	800.3.14 = {
+		birth = yes
+	}
+	833.9.2 = {
+		name = "Eusebius"
+		effect = {
+			learn_language = language_aramaic
+		}
+	}
+	867.12.24 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_72 = {
+	name = "John"
+	dynasty = anyasia_maronite_hamwid
+	religion = "maronite"
+	culture = "levantine"
+	trait = education_learning_3
+	801.12.5 = {
+		birth = yes
+	}
+	867.12.24 = {
+		name = "John"
+	}
+	885.5.28 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_73 = {
+	name = "Joshua"
+	dynasty = anyasia_maronite_karam # Fictional
+	religion = "maronite"
+	culture = "levantine"
+	trait = education_learning_4
+	852.8.15 = {
+		birth = yes
+	}
+	885.5.28 = {
+		name = "Joshua"
+	}
+	905.7.4 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_74 = {
+	name = "David"
+	dynasty = anyasia_maronite_khourid # Fictional
+	religion = "maronite"
+	culture = "levantine"
+	trait = education_learning_4
+	857.6.8 = {
+		birth = yes
+	}
+	905.7.4 = {
+		name = "David"
+	}
+	907.3.15 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_75 = {
+	name = "Gregory"
+	dynasty = anyasia_maronite_maalouf # Fictional
+	religion = "maronite"
+	culture = "levantine"
+	trait = education_learning_3
+	875.1.23 = {
+		birth = yes
+	}
+	907.3.15 = {
+		name = "Gregory"
+	}
+	933.10.3 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_76 = {
+	name = "Theophylact"
+	dynasty = anyasia_maronite_sadiq # Fictional
+	religion = "maronite"
+	culture = "levantine"
+	trait = education_learning_3
+	899.12.29 = {
+		birth = yes
+	}
+	933.10.3 = {
+		name = "Theophylact"
+	}
+	948.4.8 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_77 = {
+	name = "Joshua"
+	dynasty = anyasia_maronite_dimashqid
+	religion = "maronite"
+	culture = "levantine"
+	trait = education_learning_3
+	900.12.8 = {
+		birth = yes
+	}
+	948.4.8 = {
+		name = "Joshua"
+	}
+	956.8.14 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_78 = {
+	name = "Domitius"
+	dynasty = anyasia_maronite_bayrutid
+	religion = "maronite"
+	culture = "levantine"
+	trait = education_learning_1
+	921.4.4 = {
+		birth = yes
+	}
+	956.8.14 = {
+		name = "Domitius"
+	}
+	989.8.9 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_79 = {
+	name = "Isaac"
+	dynasty = anyasia_maronite_assad # Fictional
+	religion = "maronite"
+	culture = "levantine"
+	trait = education_learning_2
+	952.1.10 = {
+		birth = yes
+	}
+	989.8.9 = {
+		name = "Isaac"
+	}
+	992.1.9 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_80 = {
+	name = "John"
+	dynasty = anyasia_maronite_massoud # Fictional
+	religion = "maronite"
+	culture = "levantine"
+	trait = education_learning_2
+	957.11.10 = {
+		birth = yes
+	}
+	992.1.9 = {
+		name = "John"
+	}
+	1019.10.19 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_81 = {
+	name = "Simeon"
+	dynasty = anyasia_maronite_makhlouf # Fictional
+	religion = "maronite"
+	culture = "levantine"
+	trait = education_learning_3
+	973.3.10 = {
+		birth = yes
+	}
+	1019.10.19 = {
+		name = "Simeon"
+	}
+	1037.7.13 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_82 = {
+	name = "Jeremiah"
+	dynasty = anyasia_maronite_sarkis # Fictional
+	religion = "maronite"
+	culture = "levantine"
+	trait = education_learning_2
+	995.6.1 = {
+		birth = yes
+	}
+	1037.7.13 = {
+		name = "Jeremiah"
+	}
+	1047.11.4 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_83 = {
+	name = "John"
+	dynasty = anyasia_maronite_haqilanid # Fictional
+	religion = "maronite"
+	culture = "levantine"
+	trait = education_learning_1
+	1000.9.11 = {
+		birth = yes
+	}
+	1047.11.4 = {
+		name = "John"
+	}
+	1068.6.8 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_84 = {
+	name = "Simeon"
+	dynasty = anyasia_maronite_rayess # Fictional
+	religion = "maronite"
+	culture = "levantine"
+	trait = education_learning_1
+	1004.5.3 = {
+		birth = yes
+	}
+	1068.6.8 = {
+		name = "Simeon"
+	}
+	1084.3.9 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_85 = {
+	name = "Simeon"
+	dynasty = anyasia_maronite_semanid # Fictional
+	religion = "maronite"
+	culture = "levantine"
+	trait = education_learning_3
+	1054.3.19 = {
+		birth = yes
+	}
+	1084.3.9 = {
+		name = "Simeon"
+	}
+	1100.3.27 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_86 = {
+	name = "Joseph"
+	dynasty = anyasia_maronite_jirjissid
+	religion = "maronite"
+	culture = "levantine"
+	diplomacy = 13
+	trait = education_learning_3
+	trait = shrewd # Established relations with the Crusaders
+	1057.8.13 = {
+		birth = yes
+	}
+	1100.3.27 = {
+		name = "Joseph"
+	}
+	1120.8.7 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_87 = {
+	name = "Peter"
+	dynasty = anyasia_maronite_jumayyil # Fictional
+	religion = "maronite"
+	culture = "levantine"
+	trait = education_learning_2
+	1064.12.7 = {
+		birth = yes
+	}
+	1120.8.7 = {
+		name = "Peter"
+	}
+	1130.11.30 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_88 = {
+	name = "Gregory"
+	dynasty = anyasia_maronite_halatid
+	religion = "maronite"
+	culture = "levantine"
+	trait = education_learning_2
+	1078.7.5 = {
+		birth = yes
+	}
+	1130.11.30 = {
+		name = "Gregory"
+	}
+	1141.8.9 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_89 = {
+	name = "Jacob"
+	dynasty = anyasia_maronite_ramatid
+	religion = "maronite"
+	culture = "levantine"
+	trait = education_learning_3
+	1100.1.3 = {
+		birth = yes
+	}
+	1141.8.9 = {
+		name = "Jacob"
+	}
+	1151.4.1 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_90 = {
+	name = "John"
+	dynasty = anyasia_maronite_lihfidid
+	religion = "maronite"
+	culture = "levantine"
+	trait = education_learning_3
+	1101.11.23 = {
+		birth = yes
+	}
+	1151.4.1 = {
+		name = "John"
+	}
+	1154.5.4 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_91 = {
+	name = "Peter"
+	dynasty = anyasia_maronite_salem # Fictional
+	religion = "maronite"
+	culture = "levantine"
+	trait = education_learning_3
+	1103.4.26 = {
+		birth = yes
+	}
+	1154.5.4 = {
+		name = "Peter"
+	}
+	1173.3.14 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_92 = {
+	name = "Peter"
+	dynasty = anyasia_maronite_lihfidid
+	religion = "maronite"
+	culture = "levantine"
+	trait = education_learning_4
+	1111.1.11 = {
+		birth = yes
+	}
+	1173.3.14 = {
+		name = "Peter"
+	}
+	1189.3.30 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_93 = {
+	name = "Peter"
+	dynasty = anyasia_maronite_mouranid # Fictional
+	religion = "maronite"
+	culture = "levantine"
+	trait = education_learning_2
+	1132.1.15 = {
+		birth = yes
+	}
+	1189.3.30 = {
+		name = "Peter"
+	}
+	1199.12.30 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_94 = {
+	name = "Jeremiah"
+	dynasty_house = anyasia_maronite_amshittid
+	religion = "maronite"
+	culture = "levantine"
+	diplomacy = 13
+	martial = 1
+	intrigue = 2
+	stewardship = 4
+	learning = 10
+	prowess = 0
+	trait = education_learning_3
+	trait = devoted # Raised a monk
+	trait = pilgrim # Went to Rome
+	trait = mystic_3 # Levitated the Host
+	trait = diplomat # Fourth Lateran Council
+	1152.9.2 = {
+		birth = yes
+	}
+	1199.12.30 = {
+		name = "Jeremiah"
+	}
+	1230.6.6 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_95 = {
+	name = "Daniel"
+	dynasty = anyasia_maronite_shamatid
+	religion = "maronite"
+	culture = "levantine"
+	trait = education_learning_2
+	1171.8.1 = {
+		birth = yes
+	}
+	1230.6.6 = {
+		name = "Daniel"
+	}
+	1239.9.23 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_96 = {
+	name = "John"
+	dynasty = anyasia_maronite_jajid
+	religion = "maronite"
+	culture = "levantine"
+	trait = education_learning_1
+	1192.8.3 = {
+		birth = yes
+	}
+	1239.9.23 = {
+		name = "John"
+	}
+	1245.5.4 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_97 = {
+	name = "Simeon"
+	dynasty = anyasia_maronite_lahud # Fictional
+	religion = "maronite"
+	culture = "levantine"
+	trait = education_learning_3
+	1200.8.4 = {
+		birth = yes
+	}
+	1245.5.4 = {
+		name = "Simeon"
+	}
+	1277.7.26 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_98 = {
+	name = "Jacob"
+	dynasty = anyasia_maronite_aoun # Fictional
+	religion = "maronite"
+	culture = "levantine"
+	trait = education_learning_3
+	1209.7.5 = {
+		birth = yes
+	}
+	1277.7.26 = {
+		name = "Jacob"
+	}
+	1278.4.9 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_99 = {
+	name = "Daniel"
+	dynasty = anyasia_maronite_hadchitid
+	religion = "maronite"
+	culture = "levantine"
+	trait = education_learning_1
+	1218.7.12 = {
+		birth = yes
+	}
+	1278.4.9 = {
+		name = "Daniel"
+	}
+	1282.8.2 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_100 = {
+	name = "Luke"
+	dynasty = anyasia_maronite_bnahranid
+	religion = "maronite"
+	culture = "levantine"
+	trait = education_learning_1
+	trait = ambitious # Schism
+	1243.1.7 = {
+		birth = yes
+	}
+	1282.8.2 = {
+		name = "Luke"
+	}
+	1283.2.28 = {
+		death = {
+			death_reason = death_mysterious # Deposed by successor
+		}
+	}
+}
+
+anyasia_maronite_101 = {
+	name = "Jeremiah"
+	dynasty = anyasia_maronite_damalsid
+	religion = "maronite"
+	culture = "levantine"
+	trait = education_learning_1
+	trait = ambitious # Schism
+	1238.3.19 = {
+		birth = yes
+	}
+	1283.2.28 = {
+		name = "Jeremiah"
+	}
+	1297.9.7 = {
+		death = yes
+	}
+}
+
+anyasia_maronite_102 = {
+	name = "Simeon"
+	dynasty = anyasia_maronite_jubran # Fictional
+	religion = "maronite"
+	culture = "levantine"
+	trait = education_learning_3
+	trait = whole_of_body # Just 'cause I made him live to 91!
+	1248.12.3 = {
+		birth = yes
+	}
+	1297.9.7 = {
+		name = "Simeon"
+	}
+	1339.4.13 = {
+		death = yes
+	}
+}

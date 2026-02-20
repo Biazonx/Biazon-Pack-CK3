@@ -383,3 +383,31 @@ omi = {
 		stewardship = 1
 	}
 }
+
+# The Monastery of Saint Maron. Could also be in c_homs b_jusiya.
+kfarhi = {
+	county = c_baalbek
+	barony = b_baalbak
+	
+	# Saint John Maron reputedly oversaw the defeat of Justinian II's forces in the Lebanon, establishing Maronite independence.
+	character_modifier = {
+		name = holy_site_kfarhi_effect_name
+		desert_mountains_advantage = 5
+		controlled_province_advantage = 5
+	}
+}
+
+# Site of the Patriarchate from John Maron II. It moved to Mayfuq c. 1120, but it remains in the same mapped province.
+# In reälity both locales are south of Tripoli, but CK3 maps Tripoli too far south, roughly where Byblos is, so this is close enough.
+yanouh = {
+	county = c_tripoli
+	barony = b_syrtripolis
+	
+	# This was originally supposed to grant 50% County Conversion Resistance, repurposing the flag from either Visoki or Wadi el-Milk.
+	# However, not only do I not think using those flags works here, I don't think they work for Visoki or Wadi el-Milk, either!
+	# In lieu thereof, we will for the time being give a house member opinion bonus, highlighting Maronite communal identity.
+	character_modifier = {
+		name = holy_site_yanouh_effect_name
+		dynasty_house_opinion = 5
+	}
+}

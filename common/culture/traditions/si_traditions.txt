@@ -91,7 +91,7 @@ si_tradition_dense_bureaucracy = {
 	category = realm
 
 	layers = {
-		0 = stewardship
+		0 = steward
 		1 = indian
 		4 = quill.dds
 	}

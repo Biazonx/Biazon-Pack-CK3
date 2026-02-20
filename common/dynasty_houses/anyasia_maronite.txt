@@ -1,0 +1,5 @@
+﻿anyasia_maronite_amshittid = {
+	prefix = "dynnp_al-"
+	name = "dynn_Amshittid"
+	dynasty = anyasia_maronite_douaihid
+}

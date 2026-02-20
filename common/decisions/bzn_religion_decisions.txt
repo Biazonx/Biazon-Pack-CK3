@@ -275,6 +275,7 @@ bzn_adopt_waldensianism = {
 
 	is_shown = {
 		NOT = { faith = faith:waldensian }
+		religion = religion:christianity_religion
 		any_courtier = {
             has_faith = faith:waldensian
             is_imprisoned = no
@@ -284,6 +285,7 @@ bzn_adopt_waldensianism = {
 	
 	is_valid = {
 		NOT = { faith = faith:waldensian }
+		religion = religion:christianity_religion
 		any_courtier = {
             has_faith = faith:waldensian
             is_imprisoned = no
@@ -328,6 +330,7 @@ bzn_adopt_strigolniki = {
 
 	is_shown = {
 		NOT = { faith = faith:strigolniki }
+		religion = religion:christianity_religion
         any_courtier = {
             has_faith = faith:strigolniki
 			is_imprisoned = no
@@ -337,7 +340,8 @@ bzn_adopt_strigolniki = {
 	
 	is_valid = {
 		NOT = { faith = faith:strigolniki }
-		 any_courtier = {
+		religion = religion:christianity_religion
+		any_courtier = {
             has_faith = faith:strigolniki
 			is_imprisoned = no
 		}
@@ -903,6 +907,6 @@ bzn_ghulat_convertion = {
 	}
 
 	ai_will_do = {
-		base = 15
+		base = 10
 	}
 }

@@ -722,7 +722,41 @@
 				ReligiousHeadTitleName = orthodox_religious_head_title_name						
 			}
 		}
+		
+		paulician  = {
+			color = { 0.6 0.1 0.4 }
+			icon = christianity_paulicanism
 
+			#Shared with Armenian?
+			holy_site = jerusalem
+			holy_site = constantinople
+			holy_site = rome
+			holy_site = alexandria
+			holy_site = antioch
+
+			#Main Group
+			doctrine = doctrine_pluralism_fundamentalist
+
+			#Clerical Functions
+			doctrine = doctrine_clerical_function_recruitment
+			doctrine = doctrine_pilgrimage_forbidden
+
+			#Tenets
+			doctrine = tenet_gnosticism
+			doctrine = tenet_aniconism
+			doctrine = tenet_unrelenting_faith
+
+			localization = {
+				ReligiousText = paulician_religious_text
+				ReligiousText2 = paulician_religious_text_2
+				ReligiousText3 = paulician_religious_text_3
+
+				# Patriarchs instead of Popes
+				ReligiousHeadName = orthodox_religious_head_title
+				ReligiousHeadTitleName = orthodox_religious_head_title_name						
+			}
+		}
+		
 		nestorian = {
 			color = { 0.8 0.3 0.5 }
 			religious_head = d_patriarchate_in_the_east
@@ -1082,6 +1116,91 @@
 				ReligiousHeadName = adoptionist_religious_head_title
 				ReligiousHeadTitleName = adoptionist_religious_head_title_name
 			}			
+		}
+		
+		maronite = {
+			color = { 224 200 103 }
+			#color = { 176 0 0 }
+			religious_head = d_maronite
+			graphical_faith = "orthodox_gfx" # In communion with Rome, yes, but still very much an Eastern church
+
+			holy_site = jerusalem
+			holy_site = rome
+			holy_site = antioch
+			holy_site = kfarhi
+			holy_site = yanouh
+
+			#Special Tolerance
+			#doctrine = special_doctrine_ecumenical_christian # Removed: Can be gained later via event
+
+			#Tenets
+			doctrine = tenet_communion
+			doctrine = tenet_monasticism
+			doctrine = tenet_communal_identity
+
+			#Crimes
+			doctrine = doctrine_kinslaying_extended_family_crime
+
+			holy_order_names = {
+				{ name = "holy_order_order_of_saint_george" coat_of_arms = "ho_order_of_saint_george" }
+				{ name = "holy_order_order_of_saint_maron" coat_of_arms = "ho_order_of_saint_maron" }
+				{ name = "holy_order_mardaites" coat_of_arms = "ho_mardaites" }
+			}
+
+			localization = { # Utilizes a mixture of West and East Christian Saints, and one of its own
+				#HealthGod - Saint Maron was known for his gift for healing
+				HealthGodName = maronite_health_god_name
+				HealthGodNamePossessive = maronite_health_god_name_possessive
+				HealthGodSheHe = CHARACTER_SHEHE_HE
+				HealthGodHerHis = CHARACTER_HERHIS_HIS
+				HealthGodHerHim = CHARACTER_HERHIM_HIM
+				
+				#FertilityGod
+				FertilityGodName = east_christian_fertility_god_name
+				FertilityGodNamePossessive = east_christian_fertility_god_name_possessive
+				FertilityGodSheHe = CHARACTER_SHEHE_SHE
+				FertilityGodHerHis = CHARACTER_HERHIS_HER
+				FertilityGodHerHim = CHARACTER_HERHIM_HER
+
+				#WealthGod
+				WealthGodName = east_christian_wealth_god_name
+				WealthGodNamePossessive = east_christian_wealth_god_name_possessive
+				WealthGodSheHe = CHARACTER_SHEHE_HE
+				WealthGodHerHis = CHARACTER_HERHIS_HIS
+				WealthGodHerHim = CHARACTER_HERHIM_HIM
+
+				#HouseholdGod
+				HouseholdGodName = east_christian_household_god_name
+				HouseholdGodNamePossessive = east_christian_household_god_name_possessive
+				HouseholdGodSheHe = CHARACTER_SHEHE_HE
+				HouseholdGodHerHis = CHARACTER_HERHIS_HIS
+				HouseholdGodHerHim = CHARACTER_HERHIM_HIM
+
+				#KnowledgeGod
+				KnowledgeGodName = east_christian_knowledge_god_name
+				KnowledgeGodNamePossessive = east_christian_knowledge_god_name_possessive
+				KnowledgeGodSheHe = CHARACTER_SHEHE_HE
+				KnowledgeGodHerHis = CHARACTER_HERHIS_HIS
+				KnowledgeGodHerHim = CHARACTER_HERHIM_HIM
+
+				#WarGod - Although Saint George is more popular in the southern Levant, I feel it makes sense to use him here
+				WarGodName = west_christian_war_god_name
+				WarGodNamePossessive = west_christian_war_god_name_possessive
+				WarGodSheHe = CHARACTER_SHEHE_HE
+				WarGodHerHis = CHARACTER_HERHIS_HIS
+				WarGodHerHim = CHARACTER_HERHIM_HIM
+
+				#WaterGod
+				WaterGodName = west_christian_water_god_name
+				WaterGodNamePossessive = west_christian_water_god_name_possessive
+				WaterGodSheHe = CHARACTER_SHEHE_HE
+				WaterGodHerHis = CHARACTER_HERHIS_HIS
+				WaterGodHerHim = CHARACTER_HERHIM_HIM
+
+				# Patriarchs instead of Popes
+				ReligiousHeadName = maronite_religious_head_title
+				ReligiousHeadTitleName = maronite_religious_head_title_name
+			}
 		}
 		
 		taborites = { #Hussite

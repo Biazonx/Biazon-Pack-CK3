@@ -1,0 +1,220 @@
+﻿# Dynasties from known historical surnames
+anyasia_maronite_sarumid = {
+	prefix = "dynnp_as-"
+	name = "dynn_Sarumid"
+	culture = "levantine"
+}
+
+anyasia_maronite_jirjissid = {
+	prefix = "dynnp_al-"
+	name = "dynn_Jirjissid"
+	culture = "levantine"
+}
+
+#anyasia_maronite_amshittid = { # Moved to dynasty_houses under anyasia_maronite_douaihid
+#	prefix = "dynnp_al-"
+#	name = "dynn_Amshittid"
+#	culture = "levantine"
+#}
+
+anyasia_maronite_douaihid = {
+	prefix = "dynnp_el-"
+	name = "dynn_Douaihid"
+	culture = "levantine"
+}
+
+# Dynasties derived from known places of birth
+anyasia_maronite_jubailid = {
+	prefix = "dynnp_al-"
+	name = "dynn_Jubailid"
+	culture = "levantine"
+}
+
+anyasia_maronite_hamwid = {
+	prefix = "dynnp_el-"
+	name = "dynn_Hamwid"
+	culture = "levantine"
+}
+
+anyasia_maronite_dimashqid = {
+	prefix = "dynnp_al-"
+	name = "dynn_Dimashqid"
+	culture = "levantine"
+}
+
+anyasia_maronite_bayrutid = {
+	prefix = "dynnp_al-"
+	name = "dynn_Bayrutid"
+	culture = "levantine"
+}
+
+anyasia_maronite_halatid = {
+	prefix = "dynnp_el-"
+	name = "dynn_Halatid"
+	culture = "levantine"
+}
+
+anyasia_maronite_ramatid = {
+	prefix = "dynnp_ar-"
+	name = "dynn_Ramatid"
+	culture = "levantine"
+}
+
+anyasia_maronite_lihfidid = {
+	prefix = "dynnp_al-"
+	name = "dynn_Lihfidid"
+	culture = "levantine"
+}
+
+anyasia_maronite_shamatid = {
+	prefix = "dynnp_ash-"
+	name = "dynn_Shamatid"
+	culture = "levantine"
+}
+
+anyasia_maronite_jajid = {
+	prefix = "dynnp_al-"
+	name = "dynn_Jajid"
+	culture = "levantine"
+}
+
+anyasia_maronite_hadchitid = {
+	prefix = "dynnp_al-"
+	name = "dynn_Hadchitid"
+	culture = "levantine"
+}
+
+anyasia_maronite_bnahranid = {
+	prefix = "dynnp_el-"
+	name = "dynn_Bnahranid"
+	culture = "levantine"
+}
+
+anyasia_maronite_damalsid = {
+	prefix = "dynnp_al-"
+	name = "dynn_Damalsid"
+	culture = "levantine"
+}
+
+# Fictional dynasties for historical patriarchs
+anyasia_maronite_khourid = {
+	prefix = "dynnp_al-"
+	name = "dynn_Khourid"
+	culture = "levantine"
+}
+
+anyasia_maronite_kassab = {
+	name = "dynn_Kassab"
+	culture = "levantine"
+}
+
+anyasia_maronite_haqilanid = {
+	prefix = "dynnp_al-"
+	name = "dynn_Haqilanid"
+	culture = "levantine"
+}
+
+anyasia_maronite_rayess = {
+	prefix = "dynnp_ar-"
+	name = "dynn_Rayess"
+	culture = "levantine"
+}
+
+anyasia_maronite_semanid = {
+	prefix = "dynnp_as-"
+	name = "dynn_Semanid"
+	culture = "levantine"
+}
+
+anyasia_maronite_jubran = {
+	name = "dynn_Jubran"
+	culture = "levantine"
+}
+
+anyasia_maronite_jurdid = {
+	prefix = "dynnp_el-"
+	name = "dynn_Jurdid"
+	culture = "levantine"
+}
+
+anyasia_maronite_karam = {
+	name = "dynn_Karam"
+	culture = "levantine"
+}
+
+anyasia_maronite_shihab = {
+	prefix = "dynnp_ash-"
+	name = "dynn_Shihab"
+	culture = "levantine"
+}
+
+anyasia_maronite_assad = {
+	prefix = "dynnp_al-"
+	name = "dynn_Assad"
+	culture = "levantine"
+}
+
+anyasia_maronite_sadiq = {
+	prefix = "dynnp_as-"
+	name = "dynn_Sadiq"
+	culture = "levantine"
+}
+
+anyasia_maronite_maalouf = {
+	prefix = "dynnp_al-"
+	name = "dynn_Maalouf"
+	culture = "levantine"
+}
+
+anyasia_maronite_jumayyil = {
+	prefix = "dynnp_al-"
+	name = "dynn_Jumayyil"
+	culture = "levantine"
+}
+
+anyasia_maronite_massoud = {
+	name = "dynn_Massoud"
+	culture = "levantine"
+}
+
+anyasia_maronite_salem = {
+	name = "dynn_Salem"
+	culture = "levantine"
+}
+
+#anyasia_maronite_saad = { # Unused
+#	name = "dynn_Saad"
+#	culture = "levantine"
+#}
+
+anyasia_maronite_mouranid = {
+	prefix = "dynnp_el-"
+	name = "dynn_Mouranid"
+	culture = "levantine"
+}
+
+anyasia_maronite_lahud = {
+	name = "dynn_Lahud"
+	culture = "levantine"
+}
+
+anyasia_maronite_aoun = {
+	name = "dynn_Aoun"
+	culture = "levantine"
+}
+
+anyasia_maronite_sarkis = {
+	name = "dynn_Sarkis"
+	culture = "levantine"
+}
+
+anyasia_maronite_hrawid = {
+	prefix = "dynnp_al-"
+	name = "dynn_Hrawid"
+	culture = "levantine"
+}
+
+anyasia_maronite_makhlouf = {
+	name = "dynn_Makhlouf"
+	culture = "levantine"
+}

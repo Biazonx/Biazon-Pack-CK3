@@ -1,0 +1,20 @@
+﻿d_maronite = {
+	color = { 224 200 103 }
+	definite_form = yes
+	ruler_uses_title_name = no
+	landless = yes
+
+	capital = c_antiocheia # Patriarch of Antioch. Actual headquarters moved throughout the Lebanon.
+
+	ai_primary_priority = {
+		add = 1000
+	}
+
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = yes
+	de_jure_drift_disabled = yes
+
+	# Names in this list include all Patriarchs included in the history files, and prior and subsequent Patriarchs whose names are already localized
+	male_names = { Acacius Alexander Anastasius Antoine Basil Cornelius Cyril Cyrus Daniel David Demetrius Domitius Elias Ephraim Eulalius Eusebius Fabius Flavianus Gabriel George Gregory Ignatius Isaac Jacob Jeremiah John Joseph Joshua Julian Macedonius Mark Maximus Michael Moses Paul Paulinus Peter Philip Serapion Simeon Sergius Stephen Theophanes Theophilos Theophylact Tobias Victor }
+}

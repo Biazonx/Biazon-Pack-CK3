@@ -1,0 +1,139 @@
+d_maronite = {
+	685.2.3 = {
+		holder = anyasia_maronite_63 # St John Maron I
+		#government = theocracy_government
+	}
+	707.3.2 = {
+		holder = anyasia_maronite_64 # Cyrus. A couple shorter reigns due to the instability of Muslim incursions.
+	}
+	708.7.18 = {
+		holder = anyasia_maronite_65 # Gabriel I. A couple shorter reigns due to the instability of Muslim incursions.
+	}
+	709.1.1 = {
+		liege = e_arabia # holds c_baalbek from 706, but moved forwards to coïncide with the abandonment of Kfarhi under Gabriel I
+	}
+	710.7.1 = {
+		holder = anyasia_maronite_66 # John Maron II. Longer reigns following the move to Yanouh.
+	}
+	731.3.21 = {
+		holder = anyasia_maronite_67 # John II (I) (Johns' numbering is worse than the Popes')
+	}
+	766.3.5 = {
+		holder = anyasia_maronite_68 # Gregory II (Gregory I on ar.wiki)
+	}
+	771.7.1 = {
+		holder = anyasia_maronite_69 # Stephen III (Stephen I on ar.wiki)
+	}
+	805.4.3 = {
+		holder = anyasia_maronite_70 # Mark
+	}
+	833.9.2 = {
+		holder = anyasia_maronite_71 # Eusebius
+	}
+	867.12.24 = {
+		holder = anyasia_maronite_72 # John III
+	}
+	880.1.1 = {
+		liege = 0 # d_lebanon is destroyed at this time
+	}
+	885.5.28 = {
+		holder = anyasia_maronite_73 # Joshua I
+	}
+	905.7.4 = {
+		holder = anyasia_maronite_74 # David I
+	}
+	907.3.15 = {
+		holder = anyasia_maronite_75 # Gregory III (II)
+	}
+	933.10.3 = {
+		holder = anyasia_maronite_76 # Theophylact
+	}
+	948.4.8 = {
+		holder = anyasia_maronite_77 # Joshua II
+	}
+	956.8.14 = {
+		holder = anyasia_maronite_78 # Domitius
+	}
+	978.1.1 = {
+		liege = "k_egypt" # Fatimid conquest of Syria (I guess)
+	}
+	989.8.9 = {
+		holder = anyasia_maronite_79 # Isaac
+	}
+	992.1.9 = {
+		holder = anyasia_maronite_80 # John IV
+	}
+	1019.10.19 = {
+		holder = anyasia_maronite_81 # Simeon I
+	}
+	1037.7.13 = {
+		holder = anyasia_maronite_82 # Jeremiah I
+	}
+	1047.11.4 = {
+		holder = anyasia_maronite_83 # John V
+	}
+	1068.6.8 = {
+		holder = anyasia_maronite_84 # Simeon II
+	}
+	1084.3.9 = {
+		holder = anyasia_maronite_85 # Simeon III
+	}
+	1099.7.15 = {
+		liege = "k_jerusalem"
+	}
+	1100.3.27 = {
+		holder = anyasia_maronite_86 # Joseph I al-Jirjissi
+	}
+	1120.8.7 = {
+		holder = anyasia_maronite_87 # Peter II (Peter I on ar.wiki)
+	}
+	1130.11.30 = {
+		holder = anyasia_maronite_88 # Gregory IV
+	}
+	1141.8.9 = {
+		holder = anyasia_maronite_89 # Jacob I
+	}
+	1151.4.1 = {
+		holder = anyasia_maronite_90 # John VI
+	}
+	1154.5.4 = {
+		holder = anyasia_maronite_91 # Peter III
+	}
+	1173.3.14 = {
+		holder = anyasia_maronite_92 # Peter IV
+	}
+	1189.3.30 = {
+		holder = anyasia_maronite_93 # Peter VI (‽)
+	}
+	1199.12.30 = {
+		holder = anyasia_maronite_94 # Jeremiah II al-Amshitti
+	}
+	1230.6.6 = {
+		holder = anyasia_maronite_95 # Daniel I
+	}
+	1239.9.23 = {
+		holder = anyasia_maronite_96 # John VII
+	}
+	1245.5.4 = {
+		holder = anyasia_maronite_97 # Simeon IV
+	}
+	1277.7.26 = {
+		holder = anyasia_maronite_98 # Jacob II
+	}
+	1278.4.9 = {
+		holder = anyasia_maronite_99 # Daniel II
+	}
+	1282.8.2 = {
+		holder = anyasia_maronite_100 # Luke
+	}
+	1283.2.28 = {
+		holder = anyasia_maronite_101 # Jeremiah III
+	}
+	1289.3.1 = {
+		liege = "k_egypt" # Fall of Tripoli
+	}
+	1297.9.7 = {
+		liege = "k_cyprus" # Simeon V as Bishop of Cyprus
+		holder = anyasia_maronite_102 # Simeon V
+	}
+}

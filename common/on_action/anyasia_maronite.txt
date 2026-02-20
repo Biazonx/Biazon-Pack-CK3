@@ -1,0 +1,228 @@
+﻿on_character_faith_change = {
+	on_actions = {
+		anyasia_maronite_apostasy_effects
+	}
+}
+
+yearly_global_pulse = {
+	first_valid = {
+		anyasia_maronite.1001 # A Church United - Crusade
+		anyasia_maronite.1002 # A Church United - Catholic liege
+		anyasia_maronite.1003 # A Church United - Close Catholic relation
+		anyasia_maronite.1004 # A Church United - Local Catholic lord
+	}
+}
+
+# basic_is_valid_for_yearly_events_trigger is too restrictive to use random_yearly_playable_pulse
+quarterly_playable_pulse = {
+	events = {
+		anyasia_maronite.0002
+	}
+}
+
+# If a crusade is launched against a Maronite target, make communion with Rome impossible
+on_great_holy_war_countdown_end = {
+	on_actions = {
+		anyasia_maronite_invalidate_communion
+	}
+}
+
+on_title_gain = {
+	on_actions = {
+		anyasia_maronite_language_effects
+	}
+}
+
+random_yearly_playable_pulse = {
+	on_actions = {
+		anyasia_maronite_pool_effects
+	}
+}
+
+on_game_start = {
+	on_actions = {
+		anyasia_maronite_pool_effects_game_start
+		anyasia_maronite_trigger_communion_for_late_start
+		anyasia_maronite_language_effects_game_start
+	}
+}
+
+anyasia_maronite_apostasy_effects = {
+	effect = {
+		remove_character_modifier = restored_the_patriarchs
+	}
+}
+
+anyasia_maronite_invalidate_communion = {
+	effect = {
+		if = {
+			limit = {
+				faith = faith:catholic
+				ghw_target_character.faith = faith:maronite
+			}
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:maronite_communion_invalidated
+			}
+		}
+	}
+}
+
+anyasia_maronite_language_effects_game_start = {
+	effect = {
+		title:d_maronite = {
+			save_scope_as = title
+			holder = {
+				trigger_event = {
+					on_action = anyasia_maronite_language_effects
+				}
+			}
+		}
+	}
+}
+
+anyasia_maronite_language_effects = {
+	effect = {
+		if = {
+			limit = {
+				scope:title = { this = title:d_maronite }
+				OR = {
+					has_strong_religious_conviction_trigger = yes
+					has_trait = education_learning_3
+					has_trait = education_learning_4
+				}
+				NOT = { knows_language = language_aramaic }
+			}
+			learn_language = language_aramaic
+		}
+	}
+}
+
+anyasia_maronite_pool_effects = {
+	effect = {
+		if = {
+			limit = {
+				OR = {
+					has_primary_title = title:d_lebanon
+					has_primary_title = title:c_beirut
+					has_primary_title = title:c_tripoli
+					has_primary_title = title:d_cibyrrhaeot
+					has_primary_title = title:c_caria
+					has_primary_title = title:c_lycia
+					has_primary_title = title:c_pamphylia
+					has_primary_title = title:c_rhodos
+					has_primary_title = title:c_seleucia
+				}
+				any_courtier_or_guest = {
+					is_alive = yes
+					has_faith = faith:maronite
+					count < 2
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						root.primary_title.duchy = title:d_lebanon	# Lebanon always gets Maronite courtiers
+						current_date < 1000.1.1						# Anatolia only gets Maronite courtiers till the eleventh century
+					}
+				}
+				random = {
+					chance = {
+						value = 25
+						if = {
+							limit = {
+								OR = {
+									any_courtier_or_guest = {
+										is_alive = yes
+										has_faith = faith:maronite
+										count = 0
+									}
+									root.primary_title.duchy = title:d_lebanon
+								}
+							}
+							add = 50
+						}
+					}
+					if = {
+						limit = { exists = local_var:at_game_start }
+						random_list = {
+							25 = { # define:NSetup|COURTLESS_CHARACTER_GUEST_CHANCE
+								create_character = {
+									template = anyasia_maronite_courtier
+									location = root.capital_province
+									dynasty = none # Doesn't work in template
+								}
+							}
+							75 = {
+								create_character = {
+									template = anyasia_maronite_courtier
+									employer = root
+									dynasty = none # Doesn't work in template
+								}
+							}
+						}
+					}
+					else = {
+						create_character = {
+							template = anyasia_maronite_courtier
+							location = root.capital_province
+							dynasty = none # Doesn't work in template
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+anyasia_maronite_pool_effects_game_start = {
+	effect = {
+		set_local_variable = {
+			name = at_game_start
+			value = yes
+		}
+		every_county = {
+			limit = {
+				OR = {
+					this = title:c_beirut
+					this = title:c_tripoli
+					this = title:c_caria
+					this = title:c_lycia
+					this = title:c_pamphylia
+					this = title:c_rhodos
+					this = title:c_seleucia
+				}
+				holder = { NOT = { is_in_list = maronite_population_region } }
+			}
+			holder = { add_to_temporary_list = maronite_population_region }
+		}
+		every_in_list = {
+			list = maronite_population_region
+			trigger_event = {
+				on_action = anyasia_maronite_pool_effects
+			}
+		}
+	}	
+}
+
+anyasia_maronite_trigger_communion_for_late_start = {
+	trigger = {
+		game_start_date >= 1100.4.1
+		exists = character:2014
+		exists = character:anyasia_maronite_86
+	}
+	effect = {
+		# Ensure communion doesn't try to trigger again
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:maronite_communion
+		}
+		faith:maronite = {
+			if = {
+				limit = { NOT = { has_doctrine = special_doctrine_ecumenical_christian } }
+				add_doctrine = special_doctrine_ecumenical_christian
+			}
+		}
+		title:d_maronite.holder = { create_artifact_maronite_regalia_effect = { PATRIARCH = character:anyasia_maronite_86 POPE = character:2014 DATE = 1100.4.1 } }
+	}
+}

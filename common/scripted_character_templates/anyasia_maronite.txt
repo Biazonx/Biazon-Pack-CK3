@@ -1,0 +1,36 @@
+﻿anyasia_maronite_courtier = {
+	age = { 25 45 }
+	gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+	faith = faith:maronite
+	culture = root.capital_county.culture
+	random_traits = yes
+	
+	after_creation = {
+		if = {
+			limit = {
+				OR = {
+					has_strong_religious_conviction_trigger = yes
+					has_education_learning_trigger = yes # Since it's only a percentage chance, we don't concern ourselves so much with the quality of the education
+				}
+			}
+			if = {
+				limit = { NOT = { knows_language = language_arabic } }
+				random = {
+					chance = 35
+					learn_language = language_arabic
+				}
+			}
+			if = {
+				limit = { NOT = { knows_language = language_aramaic } }
+				random = {
+					chance = 20
+					learn_language = language_aramaic
+				}
+			}
+		}
+		if = {
+			limit = { is_courtier = no }
+			root = { add_visiting_courtier = prev }
+		}
+	}
+}

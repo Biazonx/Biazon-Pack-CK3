@@ -1,0 +1,43 @@
+﻿create_artifact_maronite_regalia_effect = {
+	$PATRIARCH$ = { save_scope_as = the_patriarch }
+	$POPE$ = { save_scope_as = the_pope }
+	set_artifact_rarity_masterwork = yes
+
+	create_artifact = {	
+		name = anyasia_maronite_regalia_name
+		description = anyasia_maronite_regalia_description
+		template = anyasia_maronite_regalia_template
+		type = regalia_simple
+		visuals = regalia
+		wealth = scope:wealth
+		quality = scope:quality
+		history = {
+			location = province:2575 # Rome
+			actor = scope:the_pope
+			recipient = scope:the_patriarch
+			type = given
+			date = $DATE$
+		}
+		modifier = artifact_learning_per_piety_level_modifier
+		save_scope_as = patriarchal_regalia
+		decaying = no
+	}
+
+	scope:patriarchal_regalia = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		set_variable = {
+			name = relic
+			value = flag:christian
+		}
+		set_variable = {
+			name = artifact_succession_title
+			value = title:d_maronite
+		}
+		add_artifact_modifier = artifact_clergy_opinion_2_modifier
+		add_artifact_title_history = {
+			target = title:d_maronite
+			date = 1100.4.1
+		}
+		equip_artifact_to_owner = yes
+	}
+}

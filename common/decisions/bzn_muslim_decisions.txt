@@ -265,3 +265,48 @@ bzn_rashidun_reawakening_decision = {
         base = 0
     }
 }
+
+bzn_invest_coffee = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/tgp_silk_road.dds"
+	}
+
+	decision_group_type = regional_major
+
+	ai_check_interval = 120
+	
+	cooldown = { years = 10 }
+
+	is_shown = {
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_coffee }
+        }
+	}
+	
+	is_valid = {
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_coffee }
+        }
+	}
+	
+	desc = bzn_invest_coffee_desc
+	cost = { gold = 75 }
+
+	effect = {
+		add_character_modifier = {             
+			modifier = coffee_baron
+            years = 10
+        }
+		add_prestige = 150
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

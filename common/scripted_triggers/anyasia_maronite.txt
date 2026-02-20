@@ -1,0 +1,33 @@
+﻿patriarchs_restored = {
+	is_target_in_global_variable_list = {
+		name = unavailable_unique_decisions
+		target = flag:restored_the_patriarchs
+	}
+}
+
+can_restore_the_patriarchs = {
+	patriarchs_restored = no
+	faith = faith:maronite
+	OR = {
+		title:c_antiocheia.holder = {
+			any_liege_or_above = { this = root }
+		}
+		title:c_antiocheia.holder = { this = root }
+	}
+}
+
+is_liege_of_patriarchate_seat = {
+	trigger_if = {
+		limit = { patriarchs_restored = yes }
+		OR = {
+			title:c_antiocheia.holder = { any_liege_or_above = { this = root } }
+			title:c_antiocheia.holder = { this = root }
+		}
+	}
+	trigger_else = {
+		OR = {
+			title:c_tripoli.holder = { any_liege_or_above = { this = root } }
+			title:c_tripoli.holder = { this = root }
+		}
+	}
+}

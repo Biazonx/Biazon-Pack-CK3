@@ -1,0 +1,183 @@
+﻿d_maronite = {
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_cross_moline.dds"
+		color1 = "red"
+
+		instance = { position = { 0.5 0.45 } }
+	}
+
+	colored_emblem = {
+		texture = "ce_annulet.dds"
+		color1 = "yellow"
+
+		instance = { position = { 0.5 0.45 } scale = { 0.25 0.25 } }
+	}
+}
+
+ho_order_of_saint_george = {
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_cross_06.dds"
+		color1 = "red"
+		color2 = "red"
+		instance = { position = { 0.5 0.49 } scale = { 1.4 1.4 } }
+	}
+
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "red"
+		instance = { position = { 0.5 0.49 } }
+	}
+
+	colored_emblem = {
+		texture = "ce_knight.dds"
+		color1 = "white"
+		color2 = "yellow"
+		color3 = "red"
+
+		instance = { scale = { 0.6 0.6 } }
+	}
+}
+
+ho_order_of_saint_maron = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+
+	colored_emblem = {
+		texture = "ce_cross_moline.dds"
+		color1 = "yellow"
+
+		instance = { position = { 0.5 0.45 } }
+	}
+
+	colored_emblem = {
+		texture = "ce_annulet.dds"
+		color1 = "red"
+
+		instance = { position = { 0.5 0.45 } scale = { 0.25 0.25 } }
+	}
+}
+
+ho_mardaites = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+
+	colored_emblem = {
+		texture = "ce_block_03.dds"
+		color1 = "white"
+
+		instance = { position = { 0.5 0.36 } scale = { 1 0.85 } }
+		instance = { position = { 0.5 0.475 } scale = { 0.85 1 } rotation = 90 }
+	}
+
+	colored_emblem = {
+		texture = "ce_block_03.dds"
+		color1 = "red"
+
+		instance = { position = { 0.5 0.36 } scale = { 1 0.15 } }
+		instance = { position = { 0.5 0.475 } scale = { 0.15 1 } rotation = 90 }
+	}
+}
+
+anyasia_maronite_sarumid = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+
+	colored_emblem = {
+		texture = "ce_tower.dds"
+		color1 = "white"
+		color2 = "red"
+	}
+
+	colored_emblem = {
+		texture = "ce_block_02.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { position = { 0.5 0.36 } scale = { 0.2 0.2 }  }
+	}
+
+	colored_emblem = {
+		texture = "ce_cross_moline.dds"
+		color1 = "red"
+
+		instance = { position = { 0.5 0.36 } scale = { 0.25 0.25 }  }
+	}
+
+	colored_emblem = {
+		texture = "ce_annulet.dds"
+		color1 = "white"
+
+		instance = { position = { 0.5 0.36 } scale = { 0.0625 0.0625 }  }
+	}
+}
+
+anyasia_maronite_haqilanid = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+
+	colored_emblem = {
+		texture = "ce_african_frame_04.dds"
+		color1 = "red"
+		color2 = "yellow"
+	}
+
+	colored_emblem = {
+		texture = "ce_religion_christianity_maronite.dds"
+		color1 = "yellow"
+
+		instance = { position = { 0.5 0.475 } scale = { 0.5 0.5 } }
+	}
+}
+
+anyasia_maronite_kassab = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+
+	colored_emblem = {
+		texture = "ce_border_shield_engrailed_01.dds"
+		color1 = "white"
+	}
+
+	colored_emblem = {
+		texture = "ce_religion_christianity_maronite.dds"
+		color1 = "yellow"
+
+		instance = { position = { 0.5 0.475 } scale = { 0.65 0.65 } }
+	}
+}
+
+# Simplified from modern arms
+anyasia_maronite_douaihid = {
+	pattern = "pattern_tricolor_horizontal_01.dds"
+	color1 = "blue"
+	color2 = "blue"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_per_bend_nebuly.dds"
+		color1 = "blue"
+		color2 = "yellow"
+
+		instance = { position = { 0.5 0.48 } scale = { 1.25 0.65 } rotation = -45 }
+	}
+
+	colored_emblem = {
+		texture = "ce_sword_simple.dds"
+		color1 = "yellow"
+		color2 = "white"
+
+		instance = { position = { 0.5 0.25 } scale = { 0.85 0.85 } rotation = 90 }
+	}
+
+	colored_emblem = {
+		texture = "ce_key_st_peter.dds"
+		color1 = "blue"
+
+		instance = { position = { 0.5 0.7 } scale = { 0.75 0.75 } rotation = -90 }
+	}
+}

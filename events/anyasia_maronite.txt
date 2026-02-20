@@ -1,0 +1,574 @@
+﻿namespace = anyasia_maronite
+
+# The Restoration of the Patriarchs
+anyasia_maronite.0001 = {
+	type = character_event # We need to compare ROOT to saved scopes for localization
+	title = anyasia_maronite.0001.t
+	desc = {
+		desc = anyasia_maronite.0001.desc.opening
+		first_valid = {
+			triggered_desc = {
+				trigger = { this = scope:restorer }
+				desc = anyasia_maronite.0001.desc.restorer
+			}
+			desc = anyasia_maronite.0001.desc.other
+		}
+	}
+
+	theme = faith
+
+	override_background = docks # God those seagulls are annoying
+
+	left_portrait = {
+		character = scope:restorer
+		animation = admiration
+	}
+	right_portrait = {
+		character = title:d_maronite.holder
+		animation = personality_content
+	}
+
+	option = {
+		name = {
+			text = {
+				first_valid = {
+					triggered_desc = {
+						trigger = {
+							exists = scope:old_liege
+							this = scope:old_liege
+							NOR = {
+								this = scope:new_liege
+								this = scope:restorer
+							}
+							faith = faith:maronite
+						}
+						desc = anyasia_maronite.0001.a.old_liege.maronite
+					}
+					triggered_desc = {
+						trigger = {
+							exists = scope:old_liege
+							this = scope:old_liege
+							NOR = {
+								this = scope:new_liege
+								this = scope:restorer
+							}
+						}
+						desc = anyasia_maronite.0001.a.old_liege.other
+					}
+					triggered_desc = {
+						trigger = {
+							this = scope:new_liege
+							NOT = { faith = faith:maronite }
+						}
+						desc = anyasia_maronite.0001.a.new_liege
+					}
+					desc = anyasia_maronite.0001.a
+				}
+			}
+		}
+		show_as_tooltip = {
+			if = {
+				limit = { NOT = { scope:old_liege = scope:new_liege } }
+				title:d_maronite.holder = {
+					change_liege = {
+						liege = scope:new_liege
+						change = scope:change
+					}
+				}
+			}
+			scope:new_liege = { add_character_modifier = restored_the_patriarchs }
+		}
+	}
+}
+
+# Maronite Independence
+anyasia_maronite.0002 = {
+	type = letter_event
+	opening = anyasia_maronite.0002.opening
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { patriarchs_restored = yes }
+				desc = anyasia_maronite.0002.desc.antioch
+			}
+			desc = anyasia_maronite.0002.desc.tripoli
+		}
+	}
+	sender = title:d_maronite.holder
+
+	trigger = {
+		exists = title:d_maronite
+		exists = title:d_maronite.holder
+		exists = title:d_maronite.holder.liege
+		title:d_maronite.holder.liege = root
+		is_liege_of_patriarchate_seat = no
+	}
+
+	# Save scope for localization
+	# This appears to work, thanks be to God
+	immediate = { title:d_maronite.holder = { save_scope_as = the_patriarch } }
+
+	option = {
+		name = {
+			text = {
+				first_valid = {
+					triggered_desc = {
+						trigger = { faith = faith:maronite }
+						desc = anyasia_maronite.0002.a.maronite
+					}
+					desc = anyasia_maronite.0002.a
+				}
+			}
+		}
+
+		create_title_and_vassal_change = {
+			type = independency
+			save_scope_as = change
+			add_claim_on_loss = no
+		}
+
+		title:d_maronite.holder = {
+			becomes_independent = {
+				change = scope:change
+			}
+		}
+
+		resolve_title_and_vassal_change = scope:change
+	}
+}
+
+# A Church United - setup trigger (titles)
+scripted_trigger anyasia_maronite_1000_titles = {
+	# Sanity check
+	exists = title:d_maronite
+	exists = title:d_maronite.holder
+	
+	# Papacy not dismantled
+	exists = title:k_papal_state
+	exists = title:k_papal_state.holder
+	faith:catholic = { has_doctrine = doctrine_spiritual_head }
+}
+
+# A Church United - setup trigger (wrapper)
+scripted_trigger anyasia_maronite_1000_trigger = {
+	anyasia_maronite_1000_titles = yes
+
+	# Hasn't already triggered or invalidated
+	NOR = {
+		is_target_in_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:maronite_communion
+		}
+		is_target_in_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:maronite_communion_invalidated
+		}
+	}
+}
+
+# A Church United - setup trigger (crusader states)
+scripted_trigger anyasia_maronite_1001_titles = {
+	any_kingdom = {
+		is_title_created = yes
+		exists = holder
+		holder = {
+			faith = faith:catholic
+		}
+		# TODO: An existing Catholic ruler will simply have his realm expanded, and thus will not trigger this.
+		#		This is, however, unlikely, and in the case of Syria will most likely occur after 1002, or else trigger it regardless.
+		recent_history = {
+			type = conquest_holy_war
+			years = 2
+		}
+		OR = {
+			this = title:k_jerusalem
+			this = title:k_syria
+			# If either title is held by a non-Catholic ecumenical Christian, a dynamic title will be created instead.
+			# Because a landed character receiving this title will keep his capital in Europe, we need to check for sub realm duchies in the Levant.
+			holder = {
+				any_sub_realm_duchy = {
+					title_capital_county = {
+						title_province = {
+							geographical_region = world_middle_east_jerusalem
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+# A Church United - setup effect
+scripted_effect anyasia_maronite_1000_setup = {
+	add_to_global_variable_list = {
+		name = unavailable_unique_decisions
+		target = flag:maronite_communion
+	}
+	set_local_variable = {
+		name = anyasia_maronite_1000_cause
+		value = $CAUSE$
+	}
+	trigger_event = {
+		id = anyasia_maronite.1000
+		days = { 60 300 }
+	}
+}
+
+# A Church United - execution effect
+scripted_effect anyasia_maronite_1000_effect = {
+	faith:maronite = {
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_doctrine = special_doctrine_ecumenical_christian } }
+				add_doctrine = special_doctrine_ecumenical_christian
+			}
+			if = {
+				limit = { NOT = { has_doctrine = special_doctrine_full_communion } }
+				add_doctrine = special_doctrine_full_communion
+			}
+			religious_head = { create_artifact_maronite_regalia_effect = { PATRIARCH = this POPE = title:k_papal_state.holder DATE = current_date } }
+		}
+		show_as_tooltip = { add_doctrine = special_doctrine_ecumenical_christian }
+		change_fervor = {
+			value = 20
+			desc = fervor_gain_maronite_communion_maronite
+		}
+	}
+	faith:catholic = {
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_doctrine = special_doctrine_full_communion } }
+				add_doctrine = special_doctrine_full_communion
+			}
+		}
+		change_fervor = {
+			value = 10
+			desc = fervor_gain_maronite_communion_catholic
+		}
+	}
+	custom_tooltip = anyasia_maronite.1100.full_communion_tt
+}
+
+# A Church United - hidden effect event
+anyasia_maronite.1000 = {
+	type = empty
+	hidden = yes
+
+	# Ensure trigger is still valid…
+	trigger = {
+		anyasia_maronite_1000_titles = yes
+		trigger_if = {
+			limit = { local_var:anyasia_maronite_1000_cause = flag:crusade }
+			anyasia_maronite_1001_titles = yes
+		}
+		trigger_else_if = {
+			limit = { local_var:anyasia_maronite_1000_cause = flag:liege }
+
+			# Liege may have changed, converted, or no longer exist!
+			exists = title:d_maronite.holder.liege
+			title:d_maronite.holder.liege.faith = faith:catholic
+		}
+		trigger_else_if = {
+			limit = { local_var:anyasia_maronite_1000_cause = flag:relation }
+
+			# Since we're not localizing the specific relation, all we need worry about is that the target hasn't died (if Patriarch) or ceased to be Maronite (if liege)
+			OR = {
+				AND = {
+					exists = scope:communion_target
+					scope:communion_target = title:d_maronite.holder
+				}
+				AND = {
+					exists = title:d_maronite.holder.liege
+					title:d_maronite.holder.liege.faith = faith:maronite # If the liege died, we'll still use him, but we don't want his unbelieving successor mucking stuff up!
+				}
+			}
+		}
+		trigger_else_if = {
+			limit = { local_var:anyasia_maronite_1000_cause = flag:local_lord }
+
+			# Since we're localizing to a specific holy site, we need to ensure it's still valid
+			exists = scope:communion_target
+			scope:communion_target = {
+				county = {
+					faith = faith:maronite
+					holder = {
+						faith = faith:catholic
+						capital_county = prev
+					}
+				}
+			}
+		}
+		trigger_else = {
+			always = no
+		}
+	}
+
+	# …or else silently reënable future communion event triggers
+	on_trigger_fail = {
+		remove_list_global_variable = {
+			name = unavailable_unique_decisions
+			target = flag:maronite_communion
+		}
+	}
+
+	immediate = {
+		anyasia_maronite_1000_effect = yes
+		hidden_effect = {
+			title:k_papal_state.holder = { save_scope_as = the_pope }
+			title:d_maronite.holder = {
+				save_scope_as = the_patriarch
+				add_opinion = {
+					modifier = restored_communion_opinion
+					target = scope:the_pope
+				}
+				reverse_add_opinion = {
+					modifier = restored_communion_opinion
+					target = scope:the_pope
+				}
+			}
+		}
+
+		# Inform relevant players
+		every_player = {
+			limit = {
+				OR = {
+					faith = { has_doctrine = special_doctrine_ecumenical_christian }
+					any_vassal_or_below = { this = scope:the_patriarch }
+				}
+			}
+			trigger_event = anyasia_maronite.1100
+		}
+	}
+}
+
+# A Church United - displayed event
+anyasia_maronite.1100 = {
+	type = character_event
+	title = anyasia_maronite.1100.t
+	desc = {
+		desc = anyasia_maronite.1100.desc.opening
+		first_valid = {
+			triggered_desc = {
+				trigger = { local_var:anyasia_maronite_1000_cause = flag:crusade }
+				desc = anyasia_maronite.1100.desc.crusade
+			}
+			triggered_desc = {
+				trigger = {
+					local_var:anyasia_maronite_1000_cause = flag:liege
+					this = scope:communion_target
+				}
+				desc = anyasia_maronite.1100.desc.liege.me
+			}
+			triggered_desc = {
+				trigger = { local_var:anyasia_maronite_1000_cause = flag:liege }
+				desc = anyasia_maronite.1100.desc.liege
+			}
+			triggered_desc = {
+				trigger = {
+					local_var:anyasia_maronite_1000_cause = flag:relation
+					this = scope:communion_target
+				}
+				desc = anyasia_maronite.1100.desc.relation.me
+			}
+			triggered_desc = {
+				trigger = { local_var:anyasia_maronite_1000_cause = flag:relation }
+				desc = anyasia_maronite.1100.desc.relation
+			}
+			triggered_desc = {
+				trigger = {
+					local_var:anyasia_maronite_1000_cause = flag:local_lord
+					this = scope:communion_target.county.holder
+				}
+				desc = anyasia_maronite.1100.desc.local_lord.me
+			}
+			triggered_desc = {
+				trigger = { local_var:anyasia_maronite_1000_cause = flag:local_lord }
+				desc = anyasia_maronite.1100.desc.local_lord
+			}
+		}
+		desc = anyasia_maronite.1100.desc.closing
+	}
+
+	theme = faith
+
+	override_background = {
+		event_background = temple_church
+	}
+
+	left_portrait = {
+		character = scope:the_pope
+		animation = personality_content
+	}
+	right_portrait = {
+		character = scope:the_patriarch
+		animation = personality_content
+	}
+	lower_left_portrait = {
+		trigger = {
+			exists = scope:communion_target_portrait
+			NOR = {
+				scope:communion_target_portrait = scope:the_pope
+				scope:communion_target_portrait = scope:the_patriarch
+			}
+		}
+		character = scope:communion_target_portrait
+	}
+
+	artifact = {
+		target = scope:patriarchal_regalia
+		position = lower_right_portrait
+	}
+
+	immediate = {
+		if = {
+			limit = { exists = scope:communion_target }
+			if = {
+				limit = { local_var:anyasia_maronite_1000_cause = flag:local_lord }
+				scope:communion_target.county.holder = { save_scope_as = communion_target_portrait }
+			}
+			else = {
+				scope:communion_target = { save_scope_as = communion_target_portrait }
+			}
+		}
+		play_music_cue = "mx_cue_faith_conversion"
+	}
+
+	option = {
+		name = {
+			text = {
+				first_valid = {
+					triggered_desc = {
+						trigger = {
+							OR = {
+								faith = faith:catholic
+								faith = faith:maronite
+							}
+						}
+						desc = anyasia_maronite.1100.a.involved_faith
+					}
+					triggered_desc = {
+						trigger = { faith = { has_doctrine = special_doctrine_ecumenical_christian } }
+						desc = anyasia_maronite.1100.a.ecumenical
+					}
+					desc = anyasia_maronite.1100.a.other
+				}
+			}
+		}
+		show_as_tooltip = { anyasia_maronite_1000_effect = yes }
+	}
+}
+
+# A Church United - Crusade setup event
+anyasia_maronite.1001 = {
+	type = empty
+	hidden = yes
+
+	trigger = {
+		anyasia_maronite_1000_trigger = yes
+		
+		# Check if Catholics recently crusaded
+		faith:catholic = { has_variable = variable_ghw_cooldown }
+
+		# If they did, see if a Catholic kingdom exists in the Levant
+		anyasia_maronite_1001_titles = yes
+	}
+
+	immediate = { anyasia_maronite_1000_setup = { CAUSE = flag:crusade } }
+}
+
+# A Church United - Catholic liege setup event
+anyasia_maronite.1002 = {
+	type = empty
+	hidden = yes
+
+	trigger = {
+		anyasia_maronite_1000_trigger = yes
+		exists = title:d_maronite.holder.liege
+		title:d_maronite.holder.liege.faith = faith:catholic
+	}
+
+	immediate = {
+		title:d_maronite.holder.liege = { save_scope_as = communion_target }
+		anyasia_maronite_1000_setup = { CAUSE = flag:liege }
+	}
+}
+
+# A Church United - Close Catholic relation setup event
+scripted_trigger has_close_catholic_relation = {
+	OR = {
+		any_consort = { faith = faith:catholic }
+		any_relation = { type = soulmate faith = faith:catholic }
+		any_relation = { type = lover faith = faith:catholic }
+		any_relation = { type = best_friend faith = faith:catholic }
+		any_relation = { type = friend faith = faith:catholic }
+		any_close_family_member = { faith = faith:catholic }
+	}
+}
+
+# A Church United - Catholic relation setup event
+anyasia_maronite.1003 = {
+	type = empty
+	hidden = yes
+
+	trigger = {
+		anyasia_maronite_1000_trigger = yes
+		OR = {
+			title:d_maronite.holder = { has_close_catholic_relation = yes }
+			AND = {
+				exists = title:d_maronite.holder.liege
+				title:d_maronite.holder.liege.faith = faith:maronite
+				title:d_maronite.holder.liege = { has_close_catholic_relation = yes }
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = { title:d_maronite.holder = { has_close_catholic_relation = yes } }
+			title:d_maronite.holder = { save_scope_as = communion_target }
+		}
+		else = { title:d_maronite.holder.liege = { save_scope_as = communion_target } }
+		anyasia_maronite_1000_setup = { CAUSE = flag:relation } # Rather than account for the individual relationships (and whether they're even licit!), we'll localize 'close relations' generically
+	}
+}
+
+# A Church United - Local Catholic lord setup event
+anyasia_maronite.1004 = {
+	type = empty
+	hidden = yes
+
+	trigger = {
+		anyasia_maronite_1000_trigger = yes
+
+		# Any Maronite holy site has Maronite populace and Catholic holder
+		faith:maronite = {
+			any_holy_site = {
+				county = {
+					faith = faith:maronite
+					holder = {
+						faith = faith:catholic
+						capital_county = prev
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		faith:maronite = {
+			random_holy_site = {
+				limit = {
+					county = {
+						faith = faith:maronite
+						holder = {
+							faith = faith:catholic
+							capital_county = prev
+						}
+					}
+				}
+				save_scope_as = communion_target
+			}
+		}
+		anyasia_maronite_1000_setup = { CAUSE = flag:local_lord }
+	}
+}

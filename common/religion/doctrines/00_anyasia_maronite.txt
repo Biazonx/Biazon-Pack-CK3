@@ -1,0 +1,13 @@
+﻿anyasia_maronite_communion = {
+	group = "not_creatable"
+	is_available_on_create = {
+		always = no
+	}
+	
+	special_doctrine_full_communion = {
+		visible = no
+		parameters = {
+			hostility_override_special_doctrine_full_communion = 0
+		}
+	}
+}

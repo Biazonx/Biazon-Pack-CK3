@@ -494,6 +494,103 @@ bzn_zadruga_leader = {
     }
 }
 
+bzn_defenders_of_paulicianism_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	}
+	decision_group_type = major
+	ai_check_interval = 120
+	sort_order = 1
+	desc = bzn_defenders_of_paulicianism_decision_desc
+
+	is_shown = {
+		OR = {
+			faith = faith:paulician
+		}
+		#Only once per faith
+		NOR = {
+			AND = {
+				faith = faith:paulician
+				is_target_in_global_variable_list = {
+					name = unavailable_unique_decisions
+					target = flag:defenders_of_paulicianism_decision
+				}
+			}
+		}
+	}
+
+	is_valid = {
+		piety_level >= 4
+	}
+	
+	is_valid_showing_failures_only = {
+		is_independent_ruler = yes
+		is_landed = yes
+	}
+
+
+	effect = {
+		save_scope_as = defender_of_highgod
+		add_piety = 500
+		faith = {
+		save_scope_as = highgod_faith_scope
+		change_fervor = {
+			value = medium_fervor_value
+			desc = fervor_gain_defenders_of_highgod
+		}
+	}
+	add_character_modifier = {
+		modifier = defender_of_the_faith
+	}
+
+	if = {
+		limit = { number_of_commander_traits < commander_trait_limit }
+		add_trait = holy_warrior
+	}
+
+	custom_tooltip = defenders_of_highgod_decision_effects_holy_warriors_tt
+	hidden_effect = {
+		every_vassal_or_below = {
+			add_to_list = warriors
+		}
+		every_courtier = {
+			add_to_list = warriors
+		}
+		every_in_list = {
+			list = warriors
+			limit = {
+				is_adult = yes
+				is_ai = yes
+				can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = root }
+				number_of_commander_traits < commander_trait_limit
+				faith = root.faith
+			}
+			random = {
+				chance = 50
+				add_trait = holy_warrior
+			}	
+		}
+	}
+		if = {
+		limit = { faith = faith:paulician }
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:defenders_of_paulicianism_decision
+			}
+		}
+	}
+
+	cost = { gold = { value = 100 } }
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
 bzn_save_bulgaria = {
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/ep3_decision_hold_triumph.dds"

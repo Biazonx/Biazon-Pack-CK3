@@ -1,0 +1,3 @@
+﻿restored_communion_opinion = {
+	opinion = 75
+}

@@ -243,4 +243,24 @@ vegetarian = {
 	monthly_piety = 1
 	clergy_opinion = 5
 }
-	
+
+coffee_baron = {
+	icon = stewardship_positive
+	monthly_income_mult = 0.25
+	development_growth_factor = 0.1
+}
+
+stolen_coffee = {
+	icon = economy_negative
+	monthly_income = -5
+}
+
+seized_coffee = {
+	icon = economy_positive
+	monthly_income = 5
+}
+
+imported_coffee_labor = {
+	icon = economy_positive
+	monthly_income = 3
+}

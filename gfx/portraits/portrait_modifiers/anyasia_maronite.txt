@@ -1,0 +1,45 @@
+﻿anyasia_maronite_clothes = {
+	usage = game
+
+	anyasia_maronite_clothes = {
+	    dna_modifiers = {
+	        accessory = {
+	            mode = add
+	            gene = clothes
+	            template = religious_catholic_high_clothes
+	            value = 0
+	        }
+			morph = {
+				mode = modify_multiply
+				gene = gene_bs_bust
+				value = 0.8
+				template = bust_clothes
+			}
+			morph = {
+				mode = add
+				
+				gene = gene_bs_ear_outward
+				template = ear_outward_neg
+				value = 1.0
+			}
+			accessory = {
+				mode = add
+				
+				gene = headgear
+				template = catholic_high
+				value = 1
+			}
+
+	    }
+	    outfit_tags = { priest_outfit bishop_outfit }
+	    weight = {
+	        base = 0
+			modifier = {
+				add = 1500
+				exists = this
+				faith = faith:maronite
+				faith.religious_head = this
+			}
+	    }
+	}
+}
