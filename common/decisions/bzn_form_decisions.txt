@@ -33,7 +33,9 @@ form_romania_kingdom_decision = {
 
 	effect = { 
 		form_romania_scripted_effect = yes
-		add_prestige = major_prestige_gain
+		add_prestige = 500
+		dynasty = { add_dynasty_prestige = 250 }
+		
 		house = {
 			add_house_modifier = {
 			modifier = romania_title_reward_house_modifier 
@@ -47,7 +49,7 @@ form_romania_kingdom_decision = {
 	}
 	
 	ai_potential = {
-		prestige_level >= 2
+		always = yes
 	}
 
 	ai_will_do = {
@@ -84,13 +86,14 @@ form_yugoslavia_empire_decision = {
 		is_independent_ruler = yes
 		# Must be suitably prestigious.
 		prestige_level >= 2
-		# Must control core Yugoslavia
+		# Must control core Yugoslavia.
 		completely_controls_region = custom_yugoslavia
 	}
 
 	effect = { 
-	form_yugoslavia_scripted_effect = yes
-	add_prestige = 500
+		form_yugoslavia_scripted_effect = yes
+		add_prestige = 1000
+		dynasty = { add_dynasty_prestige = 500 }
 	}
 	
 	cost = {
@@ -98,7 +101,7 @@ form_yugoslavia_empire_decision = {
 	}
 	
 	ai_potential = {
-		prestige_level >= 2
+		always = yes
 	}
 
 	ai_will_do = {
@@ -135,13 +138,14 @@ form_czechslovakia_empire_decision = {
 		is_independent_ruler = yes
 		# Must be suitably prestigious.
 		prestige_level >= 2
-		# Must control core Yugoslavia
+		# Must control core Yugoslavia.
 		completely_controls_region = custom_czechslovakia
 	}
 
 	effect = { 
-	form_czechslovakia_scripted_effect = yes
-	add_prestige = 500
+		form_czechslovakia_scripted_effect = yes
+		add_prestige = 1000
+		dynasty = { add_dynasty_prestige = 500 }
 	}
 	
 	cost = {
@@ -149,7 +153,7 @@ form_czechslovakia_empire_decision = {
 	}
 	
 	ai_potential = {
-		prestige_level >= 2
+		always = yes
 	}
 
 	ai_will_do = {
@@ -174,38 +178,44 @@ bzn_embrace_german_culture_decision = {
 				target = flag:flag_formed_teutonic_kingdom
 			}
 		}
+		faith = faith:catholic
 		OR = {
-			culture = culture:prussian
-			culture = culture:pomeranian
+			culture = { has_cultural_pillar = heritage_north_germanic }
+			culture = { has_cultural_pillar = heritage_central_germanic }
 		}
-		NOT = { culture = culture:german }
 	}
 
 	is_valid = {
 		OR = {
-			culture = culture:prussian
-			culture = culture:pommeranian
+			culture = { has_cultural_pillar = heritage_north_germanic }
+			culture = { has_cultural_pillar = heritage_central_germanic }
 		}
-		prestige_level >= 2
 		piety_level >= 2
 		completely_controls_region = custom_teutonic
-		highest_held_title_tier <= tier_duchy
+		highest_held_title_tier >= tier_duchy
 	}
 
 	desc = embrace_german_culture_decision_desc
-	cost = { gold = 250 piety = 250 }
+	cost = { gold = 500 piety = 500 }
 
 	effect = {
-		form_teutonic_scripted_effect = yes
-		add_prestige = 1000
+		form_teutonic_scripted_effect = yes	
+		give_nickname = nick_teut
+		add_prestige = 500
+		dynasty = { add_dynasty_prestige = 250 }
 		set_culture = culture:german
-		set_character_faith = faith:catholic
-		every_close_family_member = { set_character_faith = faith:catholic }
-
+		hidden_effect = {
+			set_character_faith_with_conversion = faith:catholic
+			every_vassal = { set_character_faith = faith:catholic }
+			every_courtier = { set_character_faith = faith:catholic }
+			capital_county = {
+				set_county_faith = faith:catholic
+			}
+		}
 	}
 
 	ai_potential = {
-		prestige_level >= 2
+		always = yes
 	}
 
 	ai_will_do = {
@@ -213,55 +223,60 @@ bzn_embrace_german_culture_decision = {
 	}
 }
 
-bzn_adopt_chinese_administration_decision = {
-    picture = {
-        reference = "gfx/interface/illustrations/decisions/decision_culture.dds"
-    }
-    decision_group_type = regional_major
-    ai_check_interval = 120
-    is_shown = {
-        NOT = { government_has_flag = government_is_administrative }
-        NOT = { government_has_flag = government_is_shogunate }
-        culture = culture:han
-        OR = {
-            has_government = feudal_government
-            has_government = tribal_government
-            has_government = clan_government
-        }
-    }
-    is_valid = {
-        primary_title = {
-            tier >= tier_kingdom
-        }
-        culture = culture:han
-        is_independent_ruler = yes
-    }
-    desc = adopt_chinese_administration_decision_desc
-    cost = { prestige = 250 }
-    effect = {
-        every_realm_province = {
-            limit = { has_holding_type = tribal_holding }
-            set_holding_type = castle_holding
-        }
-        change_to_celestial_effect = yes
-        every_vassal_or_below = {
-            limit = {
-                OR = {
-                    has_government = feudal_government
-                    has_government = tribal_government
-                    has_government = clan_government
-                }
-            }
-            change_to_celestial_effect = yes
-        }
-    }
-    ai_potential = {
-        always = yes
-    }
-    ai_will_do = {
-        base = 100
-    }
-}
+#bzn_adopt_chinese_administration_decision = {
+#    picture = {
+#        reference = "gfx/interface/illustrations/decisions/decision_culture.dds"
+#    }
+#	
+#    decision_group_type = regional_major
+#    ai_check_interval = 120
+#	
+#    is_shown = {
+#        NOT = { government_has_flag = government_is_administrative }
+#        NOT = { government_has_flag = government_is_shogunate }
+#        culture = { has_cultural_pillar = heritage_chinese }
+#        OR = {
+#            has_government = feudal_government
+#            has_government = tribal_government
+#            has_government = clan_government
+#        }
+#    }
+#	
+#    is_valid = {
+#		highest_held_title_tier >= tier_kingdom
+#        culture = { has_cultural_pillar = heritage_chinese }
+#        is_independent_ruler = yes
+#    }
+#	
+#    desc = adopt_chinese_administration_decision_desc
+#	
+#    cost = { gold = 500 }
+#	
+#    effect = {
+#		add_prestige = 1000
+#		if = {
+#			limit = { has_government = tribal_government }
+#			convert_whole_realm_to_feudalism_effect = yes
+#		}
+#        change_to_celestial_effect = yes
+#        every_vassal_or_below = {
+#            limit = {
+#                OR = {
+#                    has_government = feudal_government
+#                    has_government = tribal_government
+#                    has_government = clan_government
+#                }
+#            }
+#            change_to_celestial_effect = yes
+#        }
+#    }
+#    ai_potential = {
+#        always = yes
+#    }
+#    ai_will_do = {
+#        base = 100
+#    }
+#}
 
 bzn_novgorod_republic_decision = {
     picture = {
@@ -287,11 +302,16 @@ bzn_novgorod_republic_decision = {
 		
         NOT = { government_has_flag = government_is_administrative }
     }
+	
     is_valid = {
         has_primary_title = title:k_novgorod
-        culture = { has_cultural_pillar = heritage_east_slavic }
+		OR = {
+			culture = { has_cultural_pillar = heritage_north_germanic }
+			culture = { has_cultural_pillar = heritage_east_slavic }
+		}
         is_independent_ruler = yes
     }
+	
     desc = novgorod_republic_decision_desc
     cost = { gold = 500 }
     effect = {
@@ -334,9 +354,7 @@ elevate_crete_decision = {
 	is_shown = {
 		#Standard filter checks.
 		is_landed = yes
-		OR = {
-			has_government = clan_government
-		}
+		has_government = clan_government
 		#Must be within the North African cultural sphere.
 		culture = { 
 			OR = {
@@ -365,8 +383,6 @@ elevate_crete_decision = {
 		prestige_level >= 2
 		#Must be independent.
 		is_independent_ruler = yes
-		#Has to be around for the ceremony.
-		is_imprisoned = no
 		#Completely controls Krete.
 		has_title = title:c_chandax
 		has_title = title:c_chania
@@ -382,7 +398,6 @@ elevate_crete_decision = {
 		is_alive = yes
 		is_in_an_activity = no
 		is_imprisoned = no
-		has_contagious_deadly_disease_trigger = no
 	}
 
 	effect = {
@@ -416,7 +431,7 @@ elevate_crete_decision = {
 	}
 
 	cost = {
-		prestige = 300
+		gold = 250
 	}
 
 	ai_potential = {

@@ -25,10 +25,10 @@ bzn_contact_eastern_decision = {
 		}
     }
     ai_potential = {
-        always = yes
+        always = no
     }
     ai_will_do = {
-        base = 20
+        base = 0
     }
 }
 
@@ -61,12 +61,11 @@ bzn_invite_chinese_traveler_decision = {
     cost = { prestige = minor_prestige_value }
 
     ai_potential = {
-		always = yes
-	}
-
-	ai_will_do = {
-		base = 20
-	}
+        always = no
+    }
+    ai_will_do = {
+        base = 0
+    }
 }
 
 bzn_invite_japanese_samurai_decision = {
@@ -98,12 +97,11 @@ bzn_invite_japanese_samurai_decision = {
     cost = { prestige = minor_prestige_value }
 
     ai_potential = {
-		always = yes
-	}
-
-	ai_will_do = {
-		base = 20
-	}
+        always = no
+    }
+    ai_will_do = {
+        base = 0
+    }
 }
 
 bzn_invite_jewish_merchant_decision = {
@@ -135,12 +133,11 @@ bzn_invite_jewish_merchant_decision = {
     cost = { prestige = minor_prestige_value }
 
     ai_potential = {
-		always = yes
-	}
-
-	ai_will_do = {
-		base = 20
-	}
+        always = no
+    }
+    ai_will_do = {
+        base = 0
+    }
 }
 
 bzn_become_samurai = {
@@ -175,12 +172,11 @@ bzn_become_samurai = {
     }
 
     ai_potential = {
-		always = no
-	}
-
-	ai_will_do = {
-		base = 0
-	}
+        always = no
+    }
+    ai_will_do = {
+        base = 0
+    }
 }
 
 bzn_become_ronin = {
@@ -221,12 +217,11 @@ bzn_become_ronin = {
     }
 
     ai_potential = {
-		always = no
-	}
-
-	ai_will_do = {
-		base = 0
-	}
+        always = no
+    }
+    ai_will_do = {
+        base = 0
+    }
 }
 
 bzn_embrace_chinese_culture_decision = {
@@ -261,13 +256,12 @@ bzn_embrace_chinese_culture_decision = {
 		}
 	}
 
-	ai_potential = {
-		always = no
-	}
-
-	ai_will_do = {
-		base = 0
-	}
+    ai_potential = {
+        always = no
+    }
+    ai_will_do = {
+        base = 0
+    }
 }
 
 bzn_embrace_japanese_culture_decision = {
@@ -302,13 +296,12 @@ bzn_embrace_japanese_culture_decision = {
 		}
 	}
 
-	ai_potential = {
-		always = no
-	}
-
-	ai_will_do = {
-		base = 0
-	}
+    ai_potential = {
+        always = no
+    }
+    ai_will_do = {
+        base = 0
+    }
 }
 
 bzn_adopt_shinto_decision = {
@@ -343,11 +336,817 @@ bzn_adopt_shinto_decision = {
 		}
 	}
 
+    ai_potential = {
+        always = no
+    }
+    ai_will_do = {
+        base = 0
+    }
+}
+
+bzn_adopt_zoroastrism_china = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds"
+	}
+
+	decision_group_type = regional_major
+
+	ai_check_interval = 120
+
+	is_shown = {
+		NOT = { faith = faith:mazdayasna }
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_zoroastrian_china }
+        }
+		NOT = {  # Can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:blend_sogdian_traditions
+			}
+		}
+	}
+	
+	is_valid = {
+		NOT = { faith = faith:mazdayasna }
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_zoroastrian_china }
+        }
+	}
+	
+	desc = bzn_adopt_zoroastrism_china_decision_desc
+	cost = { piety = 50 }
+
+	effect = {
+		set_character_faith_with_conversion = faith:mazdayasna
+
+		capital_county = {
+			set_county_faith = faith:mazdayasna
+		}
+		culture:sogdian = { save_scope_as = original_sogdian_culture }
+		culture = { save_scope_as = original_character_culture }
+		create_hybrid_culture = culture:sogdian
+		custom_tooltip = random_traditions_tt
+		hidden_effect = {		
+			every_courtier = {
+				set_character_faith = faith:mazdayasna
+			}
+			if = {
+				limit = {
+					root.culture = {
+						NOT = {
+							has_same_culture_heritage = scope:original_sogdian_culture
+						}
+					}
+				}
+				root.culture = {
+					set_heritage_from = root.domicile.domicile_culture
+				}
+			}
+			every_held_title = {
+				limit = {
+					tier = tier_county
+					is_landless_type_title = no
+				}
+				set_county_culture = root.culture
+			}
+			# Spouses convert
+			every_spouse = {
+				limit = {
+					is_courtier_of = root
+					OR = {
+						culture = scope:original_character_culture
+						culture = scope:original_sogdian_culture
+					}
+					NOT = { culture = root.culture }
+				}
+				add_to_list = spouses_and_family_to_convert
+			}
+			# Family at court also convert
+			every_close_or_extended_family_member = {
+				limit = {
+					is_courtier_of = root
+					OR = {
+						culture = scope:original_character_culture
+						culture = scope:original_sogdian_culture
+					}
+					NOT = { culture = root.culture }
+				}
+				add_to_list = spouses_and_family_to_convert
+			}
+			every_in_list = {
+				list = spouses_and_family_to_convert
+				set_culture = root.culture
+			}
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:blend_sogdian_traditions
+			}	
+		}
+	}
+
 	ai_potential = {
-		always = no
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 15
+	}
+}
+
+
+bzn_invite_chinese_exiles_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/tgp_silk_road.dds"
+    }
+
+    decision_group_type = regional_major
+
+    ai_check_interval = 120
+
+    cooldown = { years = 10 }
+
+    is_shown = {
+		is_landed = yes
+		culture = culture:amis
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_taiwan }
+		}
+    }
+	
+	is_valid = {
+		highest_held_title_tier >= tier_duchy
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_taiwan }
+        }
+	}
+		
+    desc = bzn_invite_chinese_exiles_decision_desc
+
+    effect = {
+		every_held_title = {
+			limit = {
+				tier = tier_county
+				is_landless_type_title = no
+			}
+			change_county_control = 15
+			change_development_progress_with_overflow = 50
+		}
+        
+		trigger_event = {
+            id = bzn_decisions.0020
+            days = { 5 10 }
+        }
+		if = {
+			limit = { NOT = { has_character_modifier = han_exiles } }
+			add_character_modifier = han_exiles
+		}
+    }
+
+    cost = { prestige = 100 }
+
+    ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 50
+	}
+}
+
+bzn_chinese_taiwan_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_culture.dds"
+	}
+
+	decision_group_type = regional_major
+
+	ai_check_interval = 120
+
+	is_shown = {
+		has_character_modifier = han_exiles
+		is_landed = yes
+		NOT = {  # Can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:blend_han_traditions
+			}
+		}
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_taiwan }
+        }
+	}
+	
+	is_valid = {
+		has_character_modifier = han_exiles
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_taiwan }
+        }
+	}
+	
+	desc = bzn_chinese_taiwan_decision_desc
+	cost = { prestige = 250 piety = 50 }
+
+	effect = {
+		if = { 
+			limit = { game_start_date <= 867 }
+			set_character_faith_with_conversion = faith:jingxue
+			capital_county = {
+				set_county_faith = faith:jingxue
+			}
+		}
+		
+		else = {
+			set_character_faith_with_conversion = faith:daoxue
+			capital_county = {
+				set_county_faith = faith:daoxue
+			}
+		}
+		
+		
+		culture:han = { save_scope_as = original_han_culture }
+		culture = { save_scope_as = original_character_culture }
+		create_hybrid_culture = culture:han
+		custom_tooltip = random_traditions_tt
+		hidden_effect = {
+			if = { 
+				limit = { game_start_date <= 867 }
+				every_courtier = {
+					set_character_faith = faith:jingxue
+				}
+			}
+			
+			else = {
+				every_courtier = {
+					set_character_faith = faith:daoxue
+				}
+			}
+
+			if = {
+				limit = {
+					root.culture = {
+						NOT = {
+							has_same_culture_heritage = scope:original_han_culture
+						}
+					}
+				}
+				root.culture = {
+					set_heritage_from = root.domicile.domicile_culture
+				}
+			}
+			every_held_title = {
+				limit = {
+					tier = tier_county
+					is_landless_type_title = no
+				}
+				set_county_culture = root.culture
+			}
+			# Spouses convert
+			every_spouse = {
+				limit = {
+					is_courtier_of = root
+					OR = {
+						culture = scope:original_character_culture
+						culture = scope:original_han_culture
+					}
+					NOT = { culture = root.culture }
+				}
+				add_to_list = spouses_and_family_to_convert
+			}
+			# Family at court also convert
+			every_close_or_extended_family_member = {
+				limit = {
+					is_courtier_of = root
+					OR = {
+						culture = scope:original_character_culture
+						culture = scope:original_han_culture
+					}
+					NOT = { culture = root.culture }
+				}
+				add_to_list = spouses_and_family_to_convert
+			}
+			every_in_list = {
+				list = spouses_and_family_to_convert
+				set_culture = root.culture
+			}
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:blend_han_traditions
+			}	
+		}
+	}
+
+	ai_potential = {
+		always = yes
 	}
 
 	ai_will_do = {
 		base = 0
+	}
+}
+
+bzn_taiwan_adopt_chinese_administration_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
+    }
+	
+    decision_group_type = regional_major
+    ai_check_interval = 120
+	
+    is_shown = {
+		is_landed = yes
+		has_character_modifier = han_exiles
+        NOT = { has_government = meritocratic_government }
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_taiwan }
+        }
+		is_target_in_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:blend_han_traditions
+		}
+    }
+	
+    is_valid = {
+		prestige_level >= 2
+		has_character_modifier = han_exiles
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_taiwan }
+        }
+		highest_held_title_tier >= tier_duchy
+        is_independent_ruler = yes
+    }
+	
+    desc = bzn_taiwan_adopt_chinese_administration_decision_desc
+	
+    cost = { prestige = 250 }
+	
+    effect = {
+		hidden_effect = { convert_whole_realm_to_feudalism_effect = yes change_to_administrative_effect = yes }		
+		change_government = meritocratic_government
+        every_vassal_or_below = {
+            change_government = meritocratic_government
+        }
+    }
+	
+    ai_potential = {
+        always = yes
+    }
+    ai_will_do = {
+        base = 100
+    }
+}
+
+bzn_japanese_trade_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/tgp_silk_road.dds"
+	}
+
+	decision_group_type = regional_major
+
+	ai_check_interval = 120
+	
+	cooldown = { years = 10 }
+
+	is_shown = {
+		OR = {
+			culture = culture:ryukyuan
+			culture = culture:amis
+		}
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_ryukyu }
+        }
+	}
+	
+	is_valid = {
+		OR = {
+			culture = culture:ryukyuan
+			culture = culture:amis
+		}
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_ryukyu }
+        }
+	}
+	
+	desc = bzn_japanese_trade_decision_desc
+	cost = { gold = 75 }
+
+	effect = {
+		add_character_modifier = {             
+			modifier = japanese_trade
+            years = 10
+        }
+		add_prestige = 150
+		root.culture = {
+			change_cultural_acceptance = {
+				target = culture:japanese
+				value = 5
+				desc = cultural_acceptance_loss_declared_war
+			}
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+bzn_ryukyu_feudalism_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/tgp_dominance.dds"
+	}
+
+	decision_group_type = regional_major
+
+	ai_check_interval = 120
+	
+	cooldown = { years = 10 }
+
+	is_shown = {
+		OR = {
+			has_government = wanua_government
+			has_government = tribal_government
+			has_government = confederate_tribal_government
+		}
+		has_character_modifier = japanese_trade
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_ryukyu }
+        }
+	}
+	
+	is_valid = {
+		prestige_level >= 2
+		has_character_modifier = japanese_trade
+		has_title = title:d_ruucuu
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_ryukyu }
+        }
+	}
+	
+	desc = bzn_ryukyu_feudalism_decision_desc
+	cost = { prestige = 250 }
+
+	effect = {
+		convert_whole_realm_to_feudalism_effect = yes
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+bzn_invade_ryukyu_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/tgp_dominance.dds"
+	}
+
+	decision_group_type = regional_major
+
+	ai_check_interval = 120
+	
+	cooldown = { years = 10 }
+
+	is_shown = {
+		has_primary_title = title:e_japan
+		NOT = {  # Can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:invaded_ryukyu
+			}
+		}
+	}
+	
+	is_valid = {
+		has_primary_title = title:e_japan
+	}
+	
+	desc = bzn_invade_ryukyu_decision_desc
+	cost = { gold = 50 }
+
+	effect = {
+		start_war = {
+			cb = eastern_county_conquest_cb
+				target = title:c_ucinaa.holder
+				claimant = root
+				target_title = title:c_ucinaa
+		}
+		start_war = {
+			cb = eastern_county_conquest_cb
+				target = title:c_amami.holder
+				claimant = root
+				target_title = title:c_amami
+		}
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:invaded_ryukyu
+		}	
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 10
+	}
+}
+
+bzn_invest_ryukyu_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/tgp_dominance.dds"
+	}
+
+	decision_group_type = regional_major
+
+	ai_check_interval = 120
+	
+	cooldown = { years = 10 }
+
+	is_shown = {
+		has_primary_title = title:e_japan
+		NOT = {  # Can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:invested_ryukyu
+			}
+		}
+	}
+	
+	is_valid = {
+		has_title = title:d_ruucuu
+	}
+	
+	desc = bzn_invest_ryukyu_decision_desc
+	cost = { gold = 100 prestige = 250 }
+
+	effect = {
+		root.culture = {
+			change_cultural_acceptance = {
+				target = culture:ryukyuan
+				value = 20
+			}
+		}
+		title:c_amami = {
+			set_county_faith = root.faith
+			change_county_control = 60
+		}
+		title:c_ucinaa = {
+			set_county_faith = root.faith
+			change_county_control = 60
+		}
+		title:b_amami.title_province = {
+			set_holding_type = castle_holding
+		}
+		title:b_kunjan_ucinaa.title_province = {
+			set_holding_type = castle_holding
+		}
+		title:b_nakajan.title_province = {
+			set_holding_type = castle_holding
+		}
+		title:b_simajiri.title_province = {
+			set_holding_type = castle_holding
+		}
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:invested_ryukyu
+		}	
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+bzn_invade_taiwan_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/event_scenes/tgp_docks_asia.dds"
+	}
+
+	decision_group_type = regional_major
+
+	ai_check_interval = 120
+	
+	cooldown = { years = 10 }
+
+	is_shown = {
+		has_primary_title = title:h_china
+		NOT = {  # Can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:invaded_taiwan
+			}
+		}
+	}
+	
+	is_valid = {
+		has_primary_title = title:h_china
+	}
+	
+	desc = bzn_invade_taiwan_decision_desc
+	cost = { gold = 50 }
+
+	effect = {
+		start_war = {
+			cb = eastern_county_conquest_cb
+				target = title:c_hoanya.holder
+				claimant = root
+				target_title = title:c_hoanya
+		}
+		start_war = {
+			cb = eastern_county_conquest_cb
+				target = title:c_siraya.holder
+				claimant = root
+				target_title = title:c_siraya
+		}
+		start_war = {
+			cb = eastern_county_conquest_cb
+				target = title:c_amis.holder
+				claimant = root
+				target_title = title:c_amis
+		}
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:invaded_taiwan
+		}	
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 10
+	}
+}
+
+bzn_sinicize_taiwan_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/tgp_kowtow.dds"
+	}
+
+	decision_group_type = regional_major
+
+	ai_check_interval = 120
+	
+	cooldown = { years = 10 }
+
+	is_shown = {
+		has_primary_title = title:h_china
+		NOT = {  # Can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:sinicize_taiwan
+			}
+		}
+	}
+	
+	is_valid = {
+		has_title = title:d_liuqiu
+	}
+	
+	desc = bzn_sinicize_taiwan_decision_desc
+	cost = { gold = 100 prestige = 250 }
+
+	effect = {
+		title:c_hoanya = {
+			set_county_faith = root.faith
+			set_county_culture = culture:han
+			change_county_control = 60
+			change_development_level = 7
+		}
+		title:c_amis = {
+			set_county_faith = root.faith
+			set_county_culture = culture:han
+			change_county_control = 60
+			change_development_level = 7
+		}
+		title:c_siraya = {
+			set_county_faith = root.faith
+			set_county_culture = culture:han
+			change_county_control = 60
+			change_development_level = 7
+		}
+		title:b_taiwan_changhua.title_province = {
+			set_holding_type = castle_holding
+		}
+		title:b_taiwan_miaoli.title_province = {
+			set_holding_type = city_holding
+		}
+		title:b_taiwan_new_4.title_province = {
+			set_holding_type = church_holding
+		}
+		title:b_taiwan_chiayi.title_province = {
+			set_holding_type = castle_holding
+		}
+		title:b_taiwan_kaohsiung.title_province = {
+			set_holding_type = city_holding
+		}
+		title:b_taiwan_pingtung.title_province = {
+			set_holding_type = church_holding
+		}
+		title:b_taiwan_new_1.title_province = {
+			set_holding_type = castle_holding
+		}
+		title:b_taiwan_new_2.title_province = {
+			set_holding_type = city_holding
+		}
+		title:b_taiwan_new_3.title_province = {
+			set_holding_type = church_holding
+		}
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:sinicize_taiwan
+		}	
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+bzn_buy_tsushima_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/tgp_dominance.dds"
+	}
+
+	decision_group_type = regional_major
+
+	ai_check_interval = 120
+	
+	cooldown = { years = 10 }
+
+	is_shown = {
+		has_character_modifier = japanese_trade
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_ryukyu }
+        }
+		NOT = {  # Can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:buy_tsushima
+			}
+		}
+		NOT = { has_title = title:c_tsushima }
+	}
+	
+	is_valid = {
+		e_japan.holder = { has_title = title:c_tsushima }
+		has_character_modifier = japanese_trade
+		has_title = title:k_ruucuu
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = custom_ryukyu }
+        }
+	}
+	
+	desc = bzn_buy_tsushima_decision_desc
+	cost = { gold = 500 }
+
+	effect = {
+		title:e_japan = { 
+			holder.top_liege = { save_scope_as = japan_emperor } 
+			scope:japan_emperor = { add_gold = 500 }
+		}
+		get_title = title:c_tsushima 
+		
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:buy_tsushima
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
 	}
 }

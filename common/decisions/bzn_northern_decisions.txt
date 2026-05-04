@@ -9,7 +9,7 @@
 	cooldown = { years = 5 }
 
 	desc = embrace_bogatyrs_legacy_decision_desc
-	decision_group_type = major
+	decision_group_type = regional_major
 
 	is_shown = {
 		OR = { 
@@ -99,15 +99,9 @@ northern_crusade_decision = {
 			}
 		}
 		faith = faith:catholic
-		OR = {
-			culture = culture:swedish
-			culture = culture:danish
-			culture = culture:norwegian
-			culture = culture:norse
-			AND = { 
-				highest_held_title_tier >= tier_empire
-				culture = culture:franconian
-				}
+		OR = { 
+			culture = { has_cultural_pillar = heritage_north_germanic }
+			has_primary_title = title:e_hre
 			}
 		}
 	}
@@ -115,10 +109,7 @@ northern_crusade_decision = {
 	is_valid = {
 		faith = faith:catholic
 		OR = { 
-			culture = culture:swedish
-			culture = culture:danish
-			culture = culture:norwegian
-			culture = culture:norse
+			culture = { has_cultural_pillar = heritage_north_germanic }
 			has_primary_title = title:e_hre
 		}
 		highest_held_title_tier >= tier_kingdom
@@ -327,7 +318,7 @@ bzn_invite_russian_settlers_decision = {
 
     }
 
-    cost = { prestige = 100 }
+    cost = { prestige = 150 }
 
     ai_potential = {
 		always = yes
@@ -543,7 +534,9 @@ bzn_siberia_convertion = {
 			}
 			ai_chance = {
 				value = {
-					add = 33
+					add = root.ai_rationality
+					multiply = -1
+					min = 0
 				}
 			}
 		}
@@ -557,7 +550,8 @@ bzn_siberia_convertion = {
 			}
 			ai_chance = {
 				value = {
-					add = 33
+					add = root.ai_zeal
+					min = 1
 				}
 			}
 		}
@@ -571,7 +565,9 @@ bzn_siberia_convertion = {
 			}
 			ai_chance = {
 				value = {
-					add = 33
+					add = root.ai_greed
+					multiply = -1
+					min = 1
 				}
 			}
 		}
@@ -579,7 +575,7 @@ bzn_siberia_convertion = {
 
 	cost = {
 		piety = {
-			value = 50
+			value = 250
 		}
 	}
 
@@ -622,7 +618,11 @@ bzn_siberia_convertion = {
 	}
 
 	ai_will_do = {
-		base = 40
+		base = 30
+		modifier = {
+			add = -500
+			has_character_flag = recent_convert
+		}
 	}
 }
 
@@ -779,7 +779,7 @@ bzn_siberian_isolationism_tradition_decision = {
     }
 
     desc = bzn_siberian_isolationism_tradition_decision_desc
-    cost = { prestige = 1000 }
+    cost = { prestige = 750 }
 
     effect = {
         root.culture = {

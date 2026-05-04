@@ -1,0 +1,126 @@
+﻿# New (Celtic)
+
+meath = { # Hill of Uisneach, Hill of Tara, Newgrange, etc.
+	county = c_athlone
+	
+	character_modifier = {
+		name = holy_site_meath_effect_name
+		diplomacy = 2
+	}
+}
+
+hy_many = { # Sligo, Benbulbin, Knocknarea, Carrowkeel, Carrowmore, Innismurray, etc.
+	county = c_mayo
+	
+	character_modifier = {
+		name = holy_site_hy_many_effect_name
+		same_faith_opinion = 5
+		learning_per_piety_level = 1
+	}
+}
+
+outer_hebrides = { # Lewis, specifically the Callanish Stones
+	county = c_outer_hebrides
+	
+	character_modifier = {
+		name = holy_site_outer_hebrides_effect_name
+		stress_loss_mult = 0.2
+		fertility = 0.1
+	}
+}
+
+orkney = { # Orkney & Shetland, specifically the Ring of Brodgar, Jarlshof and Old Scatness
+	county = c_orkney
+	
+	character_modifier = {
+		name = holy_site_orkney_effect_name
+		naval_movement_speed_mult = 0.2
+		supply_duration = 0.2
+	}
+}
+
+wiltshire = { # Stonehenge, Salisbury Plain, White Barrow, West Kennet Long Barrow, Robin Hood's Ball, etc.
+	county = c_wiltshire
+	
+	flag = wiltshire_divine_the_stars_bonus # unlocks the 'Divine the Stars' decision (usually requires the Astrology tenet)
+}
+
+rennes = { # La Roche-aux-Fées (megalithic site) and the Forêt de Paimpont (sacred grove)
+	county = c_rennes
+	
+	character_modifier = {
+		name = holy_site_rennes_effect_name
+		forest_advantage = 5
+		defender_advantage = 5
+	}
+}
+
+provence = { # Mont Ventoux (holy mountain and spring) and Roquepertuse (temple and sanctuary)
+	county = c_provence
+	
+	character_modifier = {
+		name = holy_site_provence_effect_name
+		stress_loss_mult = 0.2
+		clergy_opinion = 10
+	}
+}
+
+frankfurt = { # Glauberg, a huge Celtic oppidum and burial ground
+	county = c_frankfurt
+	
+	character_modifier = {
+		name = holy_site_frankfurt_effect_name
+		levy_reinforcement_rate_same_faith = 0.1
+		army_maintenance_mult = -0.05
+	}
+}
+
+baden = { # Alte Burg, Heidengraben, Hochdorf Chieftain's Grave, etc.
+	county = c_baden
+	
+	character_modifier = {
+		name = holy_site_baden_effect_name
+		martial_per_piety_level = 1
+		prowess_per_prestige_level = 1
+	}
+}
+
+coruna = { # Castro de Viladonga and the Celtic hill forts of Baroña and Elvira
+	county = c_coruna
+	
+	character_modifier = {
+		name = holy_site_coruna_effect_name
+		levy_size = 0.1
+		raid_speed = 0.1
+	}
+}
+
+anglesey = { # Temple of Tre'r Dryw and numerous standing stones, burial chambers and megaliths
+	county = c_anglesey
+	
+	character_modifier = {
+		name = holy_site_anglesey_effect_name
+		county_opinion_add = 5
+		monthly_county_control_growth_factor = 0.1
+	}
+}
+
+cornwall = { # Celliwig, St. Nectan's Glen, Madron Well and other minor shrines in Cornwall
+	county = c_cornwall
+	
+	character_modifier = {
+		name = holy_site_cornwall_effect_name
+		stress_loss_mult = 0.2
+		monthly_piety_gain_mult = 0.1
+	}
+}
+
+fife = { # Dunino Den, Cennrígmonaid (later St. Andrew's) and various Pictish pagan sites
+	county = c_fife
+	
+	character_modifier = {
+		name = holy_site_fife_effect_name
+		dread_baseline_add = 5
+		retreat_losses = -0.1
+	}
+}

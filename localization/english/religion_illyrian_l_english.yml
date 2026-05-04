@@ -1,0 +1,213 @@
+﻿l_english:
+
+ illyrian_religion:0 "Perëndism"
+ illyrian_religion_adj:0 "Illyrian"
+ illyrian_religion_adherent:0 "Perëndist"
+ illyrian_religion_adherent_plural:0 "Perëndists"
+ illyrian_religion_desc:0 "The indigenous Palaeo-Balkan religion of the Illyrians, which was suppressed by Christianity, but then reëmerged after the Abanians were cut off from the church by the Slavic migrations."
+ 
+ 
+ holy_site_tomorr_name:0 "Mt. Tomorr"
+ holy_site_tomorr_effect_name:0 "From [holy_site|E] #weak ($holy_site_tomorr_name$)#!"
+ holy_site_rozafa_name:0 "Rozafa Castle"
+ holy_site_rozafa_effect_name:0 "From [holy_site|E] #weak ($holy_site_rozafa_name$)#!"
+ holy_site_rodons_cape_name:0 "Cape of Rodon"
+ holy_site_rodons_cape_effect_name:0 "From [holy_site|E] #weak ($holy_site_rodons_cape_name$)#!"
+ 
+ 
+ ##### ALBANIAN #####
+ shqip_high_god_name:0 "Zojzi" #m, Lightning God
+ shqip_high_god_name_possessive:0 "$shqip_high_god_name$'s"
+ shqip_high_god_name_2:0 "Perëndía"
+ shqip_high_god_name_2_possessive:0 "$shqip_high_god_name_2$'s"
+ shqip_high_god_name_alternate:0 "$shqip_health_god_name$"
+ shqip_high_god_name_alternate_possessive:0 "$shqip_health_god_name_possessive$"
+ shqip_high_god_name_alt_2:0 "Hyji"
+ shqip_high_god_name_alt_2_possessive: "$shqip_high_god_name_alt_2$'s"
+ 
+ shqip_good_god_tomorr:0 "Baba Tomorr" #m, the god of Mt. Tomorr, the so-called 'Illyrian Mt. Olympus'
+ shqip_good_god_nena_e_vatres:0 "Nëna e Vatrës" #f
+ shqip_good_god_enji:0 "Enji" #m, fire
+ shqip_good_god_dheu:0 "Dheu" #f, earth
+ shqip_good_god_shurdh:0 "Shurdh" #m, weather, storms
+ shqip_good_god_verbti:0 "Verbti" #weather
+ shqip_good_god_bube:0 "Bubë" #protector of the mountains and those who inhabit them
+ shqip_good_god_malesor:0 "Malësor" #id.
+ shqip_good_god_qevsi:0 "Qevsi" #E. Albanian protector of wells and springs
+ shqip_good_god_twins:0 "Muji & Halili"
+ 
+ shqip_evil_god_stihi:0 "Stihi"
+ 
+ shqip_pantheon_term:0 "Perëndítë"
+ shqip_pantheon_term_2:0 "$shqip_pantheon_term$"
+ shqip_pantheon_term_3:0 "$shqip_pantheon_term$"
+ shqip_devil_name:0 "Kulshedra" #f
+ shqip_devil_name_possessive:0 "$shqip_devil_name$'s"
+ shqip_priest_male:0 "priest"
+ shqip_priest_male_plural:0 "priests"
+ shqip_priest_female:0 "priestess"
+ shqip_priest_female_plural:0 "priestesses"
+ shqip_priest_neuter:0 "$shqip_priest_male$"
+ shqip_priest_neuter_plural:0 "$paganism_priest_alternate_plural$"
+ shqip_bishop_male:0 "high $shqip_priest_male$"
+ shqip_bishop_male_plural:0 "high $shqip_priest_male_plural$"
+ shqip_bishop_female:0 "high $shqip_priest_female$"
+ shqip_bishop_female_plural:0 "high $shqip_priest_female_plural$"
+ shqip_house_of_worship:0 "$paganism_house_of_worship$"
+ shqip_house_of_worship_plural:0 "$paganism_house_of_worship_plural$"
+ shqip_house_of_worship_2:0 "$shqip_house_of_worship$"
+ shqip_house_of_worship_3:0 "$shqip_house_of_worship$"
+ shqip_devotee_male:0 "acolyte"
+ shqip_devotee_male_plural:0 "acolytes"
+ shqip_devotee_female:0 "$shqip_devotee_male$"
+ shqip_devotee_female_plural:0 "$shqip_devotee_male_plural$"
+ shqip_devotee_neuter:0 "$shqip_devotee_male$"
+ shqip_devotee_neuter_plural:0 "$shqip_devotee_male_plural$"
+ shqip_death_deity_name:0 "Vdekja" #f
+ shqip_death_deity_name_possessive:0 "$shqip_death_deity_name$'"
+ shqip_death_deity_name_2:0 "Kallaba"
+ shqip_death_deity_name_2_possessive:0 "$shqip_death_deity_name_2$'s"
+ shqip_religious_symbol:0 "Sun & Moon"
+ shqip_religious_symbol_2:0 "$shqip_religious_symbol$"
+ shqip_religious_symbol_3:0 "$shqip_religious_symbol$"
+ shqip_religious_text:0 "Doke"
+ shqip_religious_text_2:0 "$shqip_religious_text$"
+ shqip_religious_text_3:0 "$shqip_religious_text$"
+ shqip_religious_head_title:0 "Hierarch"
+ shqip_religious_head_title_name:0 "Hierarchy"
+ shqip_divine_realm:0 ""
+ shqip_divine_realm_2:0 "$shqip_divine_realm$"
+ shqip_divine_realm_3:0 "$shqip_divine_realm$"
+ shqip_positive_afterlife:0 "$paganism_afterlife$"
+ shqip_positive_afterlife_2:0 "$shqip_positive_afterlife$"
+ shqip_positive_afterlife_3:0 "$shqip_positive_afterlife$"
+ shqip_negative_afterlife:0 "$shqip_positive_afterlife$"
+ shqip_negative_afterlife_2:0 "$shqip_negative_afterlife$"
+ shqip_negative_afterlife_3:0 "$shqip_negative_afterlife$"
+ shqip_negative_afterlife_alternate:0 "$shqip_positive_afterlife$"
+ shqip_negative_afterlife_alternate_2:0 "$shqip_negative_afterlife_2$"
+ shqip_negative_afterlife_alternate_3:0 "$shqip_negative_afterlife_3$"
+ shqip_witchgodname:0 "$shqip_health_god_name$"
+ shqip_witchgodname_possessive:0 "$shqip_witchgodname$'s"
+
+ shqip_creator_god_name:0 "$shqip_high_god_name$"
+ shqip_creator_god_name_possessive:0 "$shqip_creator_god_name$'s"
+ shqip_creator_god_alternate:0 "$shqip_high_god_name_2$"
+ shqip_creator_god_alternate_possessive:0 "$shqip_high_god_name_2_possessive$"
+ shqip_health_god_name:0 "Premtja" #f, goddess of the moon, beauty, fertility, and health
+ shqip_health_god_name_possessive:0 "$shqip_health_god_name$'s"
+ shqip_fertility_god_name:0 "Vitorja" #f
+ shqip_fertility_god_name_possessive:0 "$shqip_fertility_god_name$'s"
+ shqip_wealth_god_name:0 "Bregu" #North Albanian deity
+ shqip_wealth_god_name_possessive:0 "$shqip_wealth_god_name$'s"
+ shqip_household_god_name:0 "Gjarpni i Vatrës" #f
+ shqip_household_god_name_possessive:0 "$shqip_household_god_name$'s"
+ shqip_fate_god_name:0 "Ora e Shtëpisë" #f
+ shqip_fate_god_name_possessive:0 "$shqip_fate_god_name$'s"
+ shqip_knowledge_god_name:0 "$shqip_high_god_name$"
+ shqip_knowledge_god_name_possessive:0 "$shqip_knowledge_god_name$'s"
+ shqip_war_god_name:0 "$shqip_good_god_enji$"
+ shqip_war_god_name_possessive:0 "$shqip_war_god_name$'s"
+ shqip_war_god_name_alternate:0 "$shqip_high_god_name_2$"
+ shqip_war_god_name_alternate_possessive:0 "$shqip_war_god_name_alternate$'s"
+ shqip_trickster_god_name:0 "Djall"
+ shqip_trickster_god_name_possessive:0 "$shqip_trickster_god_name$'s"
+ shqip_night_god_name:0 "Hëna" #f
+ shqip_night_god_name_possessive:0 "$shqip_night_god_name$'s"
+ shqip_night_god_name_alternate:0 "Yjet"
+ shqip_night_god_name_alternate_possessive:0 "$shqip_night_god_name_possessive$"
+ shqip_water_god_name:0 "$shqip_ocean_god_name$"
+ shqip_water_god_name_possessive:0 "$shqip_water_god_name$'s"
+ shqip_water_god_name_alternate:0 "Uji"
+ shqip_water_god_name_alternate_possessive:0 "$shqip_ocean_god_name_possessive$"
+ 
+ #New names added by Shautora
+ shqip_medicine_god_name:0 "$shqip_health_god_name$"
+ shqip_medicine_god_name_possessive:0 "$shqip_medicine_god_name$'s"
+ shqip_vengeance_god_name:0 "$shqip_justice_god_name$"
+ shqip_vengeance_god_name_possessive:0 "$shqip_vengeance_god_name$'s"
+ shqip_justice_god_name:0 "Hirzi" #m
+ shqip_justice_god_name_possessive:0 "$shqip_justice_god_name$'s"
+ shqip_judge_of_the_dead_name:0 "$shqip_afterlife_god_name_alt$"
+ shqip_judge_of_the_dead_name_possessive:0 "$shqip_afterlife_god_name_alt_possessive$"
+ shqip_afterlife_god_name:0 "Bardha e Zi #Goddess of the Underworld"
+ shqip_afterlife_god_name_possessive:0 "$shqip_afterlife_god_name$'s"
+ shqip_afterlife_god_name_alt:0 "Zurzule" #Demon Queen of the Underworld
+ shqip_afterlife_god_name_alt_possessive:0 "$shqip_afterlife_god_name_alt$'s"
+ shqip_marriage_god_name:0 "$shqip_health_god_name$"
+ shqip_marriage_god_name_possessive:0 "$shqip_health_god_name_possessive$"
+ shqip_victory_god_name:0 "$shqip_war_god_name$"
+ shqip_victory_god_name_possessive:0 "$shqip_victory_god_name$"
+ shqip_merriment_god_name:0 "$shqip_health_god_name$"
+ shqip_merriment_name_possessive:0 "$shqip_merriment_god_name$'s"
+ shqip_protection_god_name:0 "Vargu" #S. Ablanian deity
+ shqip_protection_god_name_possessive:0 "$shqip_protection_god_name$'s"
+ shqip_wilderness_god_name:0 "Zana"
+ shqip_wilderness_god_name_possessive:0 "$shqip_wilderness_god_name$'s"
+ shqip_hunting_god_name:0 "Bariu Hyjnor"
+ shqip_hunting_god_name_possessive:0 "$shqip_hunting_god_name$'s"
+ shqip_archery_god_name:0 "$shqip_war_god_name$"
+ shqip_archery_god_name_possessive:0 "$shqip_archery_god_name$'s"
+ shqip_smith_god_name:0 "$shqip_good_god_enji$"
+ shqip_smith_god_name_possessive:0 "$shqip_smith_god_name$'s"
+ shqip_travel_god_name:0 "$shqip_water_god_name$"
+ shqip_travel_god_name_possessive:0 "$shqip_travel_god_name$'s"
+ shqip_psychopomp_name:0 "Kallaba"
+ shqip_psychopomp_name_possessive:0 "$shqip_psychopomp_name$'s"
+ shqip_ocean_god_name:0 "Rodon" #m
+ shqip_ocean_god_name_possessive:0 "$shqip_ocean_god_name$'s"
+ 
+ shqip_pagan:0 "Besimet Arbëreshë"
+ shqip_pagan_adj:0 "Arbëreshë"
+ shqip_pagan_adherent:0 "Albanian"
+ shqip_pagan_adherent_plural:0 "Albanians"
+
+ shqip_pagan_old:0 "Old $shqip_pagan$"
+ shqip_pagan_old_adj:0 "Old $shqip_pagan_adj$"
+ shqip_pagan_old_adherent:0 "Old $shqip_pagan_adherent$"
+ shqip_pagan_old_adherent_plural:0 "Old $shqip_pagan_adherent_plural$"
+ 
+ select_personal_deity_illyrian_decision:0 "Select a Totem"
+ select_personal_deity_illyrian_decision_tooltip:0 "Think about the aspects of the wild."
+ select_personal_deity_illyrian_decision_desc:1 "#F It is not uncommon for [ROOT.Char.GetFaith.GetAdherentNamePluralNoTooltip] to single out a specific totem that suits their particular tastes and aims in life for special attention.\n\nI should contemplate these divine forces of nature and decide which one calls to me the most.#!"
+ select_personal_deity_illyrian_decision_confirm:0 "Adopt a particular totem"
+ select_personal_deity_illyrian_decision_tt:1 "You begin to live your life according to the values of"
+ select_personal_deity_illyrian_decision.select_bee:0 "$bhakti_illyrian_bee$, the tireless bee"
+ select_personal_deity_illyrian_decision.select_eagle:0 "$bhakti_illyrian_eagle$, the proud eagle"
+ select_personal_deity_illyrian_decision.select_goat:0 "$bhakti_illyrian_goat$, the sylvan goat"
+ select_personal_deity_illyrian_decision.select_serpent:0 "$bhakti_illyrian_serpent$, the sacred serpent"
+ select_personal_deity_illyrian_decision.select_wolf:0 "$bhakti_illyrian_wolf$, the ferocious wolf"
+ 
+ bhakti_illyrian_bee:0 "Bleta"
+ bhakti_illyrian_bee_desc:0 "This character follows the totem of the bee, symbolic of life and considered spiritually of equal status to humans."
+ bhakti_illyrian_eagle:0 "Shqiponja"
+ bhakti_illyrian_eagle_desc:0 "This character follows the totem of the eagle, symbol of freedom and heroism and emblem of the Albanian people."
+ bhakti_illyrian_goat:0 "Dhia e Egër"
+ bhakti_illyrian_goat_desc:0 "This character follows the totem of the wild goat, associated with forests."
+ bhakti_illyrian_serpent:0 "Gjarpri"
+ bhakti_illyrian_serpent_desc:0 "This character's totem is the serpent, associated with earth, water, sun, hearth and ancestor cults, as well as destiny, good fortune and fertility."
+ bhakti_illyrian_wolf:0 "Ujku"
+ bhakti_illyrian_wolf_desc:0 "This character's totem is the fiercesome wolf."
+ 
+ religious_decision.0103.t:0 "Selecting a Totem"
+ religious_decision.0103.desc:0 "The court of [ROOT.Char.GetFaith.WildernessGodName] is larger, but by devoting myself to one of [ROOT.Char.GetFaith.WildernessGodHerHis] servants in particular, I may be able to share in some of its aspect and blessings."
+ religious_decision.0103.bee:0 "$bhakti_illyrian_bee$, the industrious bee, emblem of life."
+ religious_decision.0103.eagle:0 "$bhakti_illyrian_eagle$, the proud and mighty eagle."
+ religious_decision.0103.goat:0 "$bhakti_illyrian_goat$, the wild goat, denizen of the forest."
+ religious_decision.0103.serpent:0 "$bhakti_illyrian_serpent$, the sacred serpent."
+ religious_decision.0103.wolf:0 "$bhakti_illyrian_wolf$, the ferocious wolf."
+ religious_decision.0103.optout:0 "$religious_decision.0101.flavor$"
+ religious_decision.0103.flavor:0 "$religious_decision.0101.flavor$"
+ 
+bzn_albanian_paganism_decision: "Revive the Old Albanian Gods"
+bzn_albanian_paganism_decision_desc: "Before the cross and the crescent cast their long shadows upon our mountains, the ancestors of the Shqiptar honored the ancient spirits of the land. In the peaks, forests, and rivers, the old gods still whisper. Perhaps it is time to cast aside foreign creeds and rekindle the sacred fire of our forebears."
+bzn_albanian_paganism_decision_confirm: "The old gods shall rise again."
+bzn_albanian_paganism_decision_tooltip: "You will abandon your current Faith and embrace the ancient pagan beliefs of the Albanian people. Your capital and court will follow your example."
+
+custom_albania: "Albania"
+
+teut1_event_troops: "Teutonic Knights"
+#### SOURCES ####
+# https://en.wikipedia.org/wiki/Albanian_folk_beliefs
+# https://www.folklore.earth/culture/albanian/
+# https://en.wikipedia.org/wiki/Kanun_(Albania)

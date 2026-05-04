@@ -104,13 +104,6 @@ set_yidam_effect = {# Buddhist deities
 	}
 	else_if = {	
 		limit = {
-			has_character_modifier = buddhist_deity_ksitigarbha
-		}
-		remove_character_modifier = buddhist_deity_ksitigarbha
-		add_piety = massive_piety_loss
-	}
-	else_if = {	
-		limit = {
 			has_character_modifier = buddhist_deity_bhaisajyaguru
 		}
 		remove_character_modifier = buddhist_deity_bhaisajyaguru

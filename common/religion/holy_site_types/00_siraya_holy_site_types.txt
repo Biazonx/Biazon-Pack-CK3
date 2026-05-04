@@ -1,0 +1,11 @@
+﻿siraya = {
+	county = c_siraya
+	# barony = b_taiwan_pingtung   # optional, leave commented while testing
+
+	character_modifier = {
+		name = holy_site_siraya_effect_name
+		jungle_advantage = 3
+		defender_advantage = 3
+		prowess_per_piety_level = 1
+	}
+}

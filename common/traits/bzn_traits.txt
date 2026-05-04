@@ -505,6 +505,7 @@ artisan = {
 	category = fame
 
 	learning = 2
+	domain_limit = 1
 	stewardship = 3
 	same_opinion = 10
 	build_speed = -0.1
@@ -540,7 +541,7 @@ gentry = {
 	category = fame
 	ruler_designer_cost = 100
 	
-	stewardship = 2
+	domain_limit = 1
 	martial = 1
 	monthly_income = 1
 	development_growth = 0.15
@@ -611,7 +612,7 @@ zadruga_leader = {
     ruler_designer_cost = 50
 
 	army_maintenance_mult = -0.25
-    stewardship = 2
+    domain_limit = 1
     same_culture_opinion = 10
     monthly_stewardship_lifestyle_xp_gain_mult = 0.15
 }

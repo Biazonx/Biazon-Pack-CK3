@@ -243,13 +243,8 @@ paulician_revolt.1111 = {
 	left_portrait = { character = root }
 	option = {
 		name = paulician_revolt.1111.a
-		if = {
-			limit = {
-				has_game_rule = bgp_paulicians_on
-			}
-			trigger_event = {
-				id = paulician_revolt.0001
-			}
+		trigger_event = {
+			id = paulician_revolt.0001
 		}
 	}
 }

@@ -1,0 +1,31 @@
+﻿
+tomorr = { # The Albanian/Illyrian equivalent of Mt. Olympus
+	county = c_antipatreia
+	barony = b_antipatreia
+	
+	character_modifier = {
+		name = holy_site_tomorr_effect_name
+		monthly_piety_gain_mult = 0.2
+	}
+}
+
+rozafa = { # An ancient Illyrian stronghold mythically build by the immurement of one of the builder's wives
+	county = c_duklja
+	barony = b_skadar
+	
+	character_modifier = {
+		name = holy_site_rozafa_effect_name
+		stewardship_per_piety_level = 2
+	}
+}
+
+rodons_cape = { # A site supposedly sacred to the deity Rodon
+	county = c_arbanon
+	barony = b_lezhe
+	
+	character_modifier = {
+		name = holy_site_rodons_cape_effect_name
+		naval_movement_speed_mult = 0.2
+		embarkation_cost_mult = -0.25
+	}
+}

@@ -8,12 +8,10 @@ cb_war_of_humiliation = {
 	allowed_for_character = {
 		OR = {
 			AND = { 
-				debt_level >= 2
+				prestige_level >= 2
 				is_ai = yes
 			}
-			AND = { 
-				is_ai = no
-			}
+			is_ai = no
 		}
 	}
 
@@ -51,7 +49,7 @@ cb_war_of_humiliation = {
 
 	on_victory = {
 	scope:defender = {
-		pay_short_term_income = { years = 2 target = scope:attacker }
+		pay_short_term_income = { years = 3 target = scope:attacker }
 		add_prestige_level = -1
 		add_legitimacy = {
 			value = -100
@@ -170,8 +168,15 @@ cb_war_of_humiliation = {
 	cb_name_no_target = "War for Humiliation and Control"
 
 	interface_priority = 1
+	
+	use_de_jure_wargoal_only = yes
 
-	attacker_wargoal_percentage = 0.8
+	attacker_score_from_occupation_scale = 150
+	defender_score_from_occupation_scale = 150
+	attacker_score_from_battles_scale = 200
+	defender_score_from_battles_scale = 200
+	max_attacker_score_from_battles = 200
+	max_defender_score_from_battles = 200
 
 	should_show_war_goal_subview = yes
 }

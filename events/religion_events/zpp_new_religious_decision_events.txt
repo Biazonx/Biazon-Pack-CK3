@@ -1,0 +1,68 @@
+﻿namespace = religious_decision
+
+religious_decision.0103 = {
+	type = character_event
+	title = religious_decision.0103.t
+	desc = religious_decision.0103.desc
+	theme = faith
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	# Bleta
+	option = {
+		name = religious_decision.0103.bee
+		trigger = {
+			NOT = { has_character_modifier = bhakti_illyrian_bee }
+		}
+		set_bhakti_effect = { BHAKTI = bhakti_illyrian_bee }
+	}
+
+	# Shqiponja
+	option = {
+		name = religious_decision.0103.eagle
+		trigger = {
+			NOT = { has_character_modifier = bhakti_illyrian_eagle }
+		}
+		set_bhakti_effect = { BHAKTI = bhakti_illyrian_eagle }
+	}
+
+	# Dhia e Egër
+	option = {
+		name = religious_decision.0103.goat
+		trigger = {
+			is_vaguely_danish_bhakti_trigger = yes
+			NOT = { has_character_modifier = bhakti_illyrian_goat }
+		}
+		set_bhakti_effect = { BHAKTI = bhakti_illyrian_goat }
+	}
+
+	# Gjarpri
+	option = {
+		name = religious_decision.0103.serpent
+		trigger = {
+			NOT = { has_character_modifier = bhakti_illyrian_serpent }
+		}
+		set_bhakti_effect = { BHAKTI = bhakti_illyrian_serpent }
+	}
+
+	# Ujku
+	option = {
+		name = religious_decision.0103.wolf
+		trigger = {
+			NOT = { has_character_modifier = bhakti_illyrian_wolf }
+		}
+		set_bhakti_effect = { BHAKTI = bhakti_illyrian_wolf }
+	}
+
+	# Opt-Out
+	option = {
+		name = religious_decision.0103.optout
+		flavor = religious_decision.0103.flavor
+
+		ai_chance = {
+			base = 0
+		}
+	}
+}

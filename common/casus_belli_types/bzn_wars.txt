@@ -854,8 +854,8 @@ slave_raid_cb = {
 	ticking_war_score_targets_entire_realm = yes
 	attacker_ticking_warscore = 0
 	attacker_wargoal_percentage = 0.01
-	attacker_score_from_occupation_scale = 50
-	defender_score_from_occupation_scale = 50
+	attacker_score_from_occupation_scale = 150
+	defender_score_from_occupation_scale = 150
 	attacker_score_from_battles_scale = 200
 	defender_score_from_battles_scale = 200
 

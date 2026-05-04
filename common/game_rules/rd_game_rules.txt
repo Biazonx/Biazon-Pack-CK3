@@ -68,4 +68,3 @@ rd_conqueror_situation_rd_downfall = {
 		flag = GG_can_change_rule
 	}
 }
-

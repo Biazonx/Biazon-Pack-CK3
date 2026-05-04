@@ -652,15 +652,6 @@ dharma_hinduism.051 = {# Picking a Philosophy - Vedanta
 		animation = personality_rational
 	}
 
-	option = {# Vishishtadvaita
-		name = dharma_hinduism.051.vishishtadvaita
-		trigger = {
-			faith = { has_doctrine = sampradaya_vaishnavism_doctrine }
-			NOT = { has_trait = hindu_philoosphy_vishishtadvaita }
-			exists = global_var:hindu_philosophy_vishishtadvaita_formed
-		}
-		set_hindu_philosophy_effect = { ASTIKA = hindu_philoosphy_vishishtadvaita }
-	}
 	option = {# Advaita Vedanta
 		name = dharma_hinduism.051.advaita_vedanta
 		trigger = {
@@ -677,15 +668,6 @@ dharma_hinduism.051 = {# Picking a Philosophy - Vedanta
 		}
 		set_hindu_philosophy_effect = { ASTIKA = hindu_philoosphy_bhedabheda }
 	}
-	option = {# Dvaita Vedanta
-		name = dharma_hinduism.051.dvaita_vedanta
-		trigger = {
-			faith = { has_doctrine = sampradaya_vaishnavism_doctrine }
-			NOT = { has_trait = hindu_philoosphy_dvaita_vedanta }
-			exists = global_var:hindu_philosophy_dvaita_vedanta_formed
-		}
-		set_hindu_philosophy_effect = { ASTIKA = hindu_philoosphy_dvaita_vedanta }
-	}	
 	option = {# Another Branch of Philosophy
 		name = dharma_hinduism.051.philosophy
 		trigger_event = { id = dharma_hinduism.050 }

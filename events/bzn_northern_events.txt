@@ -1,0 +1,22 @@
+﻿namespace = northern_crusade_major_decisions
+
+northern_crusade_major_decisions.0001 = {
+	type = character_event
+	title = northern_crusade_major_decisions.0001.t
+	desc = northern_crusade_major_decisions.0001.desc
+	theme = war
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+	override_background = { event_background = docks }
+
+	immediate = {
+		play_music_cue = "mx_cue_war_declared"
+	}
+
+	# I rule the sea
+    option = {
+        name = northern_crusade_major_decisions.0001.a
+	}
+}

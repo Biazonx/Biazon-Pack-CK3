@@ -113,3 +113,15 @@ custom_lower_niger = {
 custom_coffee = {
 	counties = { c_taizz c_harar c_begemder }
 }
+
+custom_albania = {
+	duchies = { d_ragusa d_duklja d_dyrrachion } 
+}
+
+custom_taiwan = {
+	duchies = { d_liuqiu }
+}
+
+custom_ryukyu = {
+	duchies = { d_ruucuu }
+}

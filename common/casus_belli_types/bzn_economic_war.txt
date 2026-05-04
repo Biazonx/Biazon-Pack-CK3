@@ -166,7 +166,12 @@ cb_coffee_raid = {
 
 	interface_priority = 1005
 
-	attacker_wargoal_percentage = 0.8
+	attacker_score_from_battles_scale = 150
+	attacker_score_from_occupation_scale = 150
+	max_attacker_score_from_battles = 200
+	max_defender_score_from_battles = 200
+	max_defender_score_from_occupation = 200
+	max_attacker_score_from_occupation = 200
 
 	should_show_war_goal_subview = yes
 }
@@ -327,5 +332,10 @@ cb_coffee_labor = {
 	cb_name_no_target = "Enforce Coffee Labor"
 
 	interface_priority = 1006
-	attacker_wargoal_percentage = 0.8
+	attacker_score_from_battles_scale = 150
+	attacker_score_from_occupation_scale = 150
+	max_attacker_score_from_battles = 200
+	max_defender_score_from_battles = 200
+	max_defender_score_from_occupation = 200
+	max_attacker_score_from_occupation = 200
 }

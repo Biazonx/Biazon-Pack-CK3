@@ -486,7 +486,11 @@
 
 	use_de_jure_wargoal_only = yes
 
-	attacker_wargoal_percentage = 0.8
+	attacker_score_from_occupation_scale = 150
+	defender_score_from_occupation_scale = 150
+	attacker_score_from_battles_scale = 200
+	defender_score_from_battles_scale = 200
+	max_attacker_score_from_battles = 200
+	max_defender_score_from_battles = 200
 
-	max_ai_diplo_distance_to_title = 500
 }

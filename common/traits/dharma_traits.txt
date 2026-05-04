@@ -23,10 +23,7 @@ buddhist_school_chan = {# Chan / Zen
 	monthly_piety = 1
 	same_opinion = 5
 	opposite_opinion = -5
-	culture_modifier = {
-		parameter = innovation_from_learning_traits
-		cultural_head_fascination_mult = 0.05
-	}
+	diplomacy = 2
 	
 	shown_in_ruler_designer = no
 
@@ -60,10 +57,7 @@ buddhist_school_madhyamaka = {# Madhyamaka
 	monthly_piety = 1
 	same_opinion = 5
 	opposite_opinion = -5
-	culture_modifier = {
-		parameter = innovation_from_learning_traits
-		cultural_head_fascination_mult = 0.05
-	}	
+	stewardship = 2
 
 	shown_in_ruler_designer = no
 
@@ -97,11 +91,8 @@ buddhist_school_yogachara = {# Yogachara
 	monthly_piety = 1
 	same_opinion = 5
 	opposite_opinion = -5
-	culture_modifier = {
-		parameter = innovation_from_learning_traits
-		cultural_head_fascination_mult = 0.05
-	}
-
+	intrigue = 2
+	
 	shown_in_ruler_designer = no
 
 	ai_sociability = very_low_negative_ai_value
@@ -134,11 +125,8 @@ buddhist_school_pure_land = {# Pure Land
 	monthly_piety = 1
 	same_opinion = 5
 	opposite_opinion = -5
-	culture_modifier = {
-		parameter = innovation_from_learning_traits
-		cultural_head_fascination_mult = 0.05
-	}
-		
+	learning = 2
+	
 	shown_in_ruler_designer = no
 
 	ai_sociability = very_low_negative_ai_value
@@ -174,10 +162,7 @@ buddhist_school_nyingma = {# Nyingma
 	monthly_piety = 1
 	same_opinion = 5
 	opposite_opinion = -5
-	culture_modifier = {
-		parameter = innovation_from_learning_traits
-		cultural_head_fascination_mult = 0.05
-	}
+	diplomacy = 2
 		
 	shown_in_ruler_designer = no
 
@@ -212,10 +197,7 @@ buddhist_school_kadam = {# Kadam
 	monthly_piety = 1
 	same_opinion = 5
 	opposite_opinion = -5
-	culture_modifier = {
-		parameter = innovation_from_learning_traits
-		cultural_head_fascination_mult = 0.05
-	}
+	stewardship = 2
 	
 	culture_modifier = {
 		parameter = poet_trait_gives_bonuses
@@ -261,10 +243,7 @@ buddhist_school_sakya = {# Sakya
 	monthly_piety = 1
 	same_opinion = 5
 	opposite_opinion = -5
-	culture_modifier = {
-		parameter = innovation_from_learning_traits
-		cultural_head_fascination_mult = 0.05
-	}
+	intrigue = 2
 
 	shown_in_ruler_designer = no
 
@@ -299,10 +278,7 @@ buddhist_school_kagyu = {# Kagyu
 	monthly_piety = 1
 	same_opinion = 5
 	opposite_opinion = -5
-	culture_modifier = {
-		parameter = innovation_from_learning_traits
-		cultural_head_fascination_mult = 0.05
-	}
+	learning = 2
 	
 	shown_in_ruler_designer = no
 
@@ -341,14 +317,10 @@ hindu_philoosphy_yoga = {# Yoga
 
 	
 
-	health = 0.05
-	stress_gain_mult = -0.15
+	health = 0.25
+	stress_gain_mult = -0.25
 	same_opinion = 5
 	opposite_opinion = -5
-	culture_modifier = {
-		parameter = innovation_from_learning_traits
-		cultural_head_fascination_mult = 0.05
-	}
 
 	shown_in_ruler_designer = no
 
@@ -388,10 +360,6 @@ hindu_philoosphy_samkhya = {# Samkhya
 	stewardship = 3
 	same_opinion = 5
 	opposite_opinion = -5
-	culture_modifier = {
-		parameter = innovation_from_learning_traits
-		cultural_head_fascination_mult = 0.05
-	}
 
 	shown_in_ruler_designer = no
 
@@ -431,13 +399,9 @@ hindu_philoosphy_vaisheshika = {# Vaisheshika
 
 	
 
-	learning = 3
+	prowess = 5
 	same_opinion = 5
 	opposite_opinion = -5
-	culture_modifier = {
-		parameter = innovation_from_learning_traits
-		cultural_head_fascination_mult = 0.05
-	}
 
 	shown_in_ruler_designer = no
 
@@ -478,14 +442,9 @@ hindu_philoosphy_mimamsa = {# Mimamsa
 
 	
 
-	development_growth_factor = 0.15
-	scheme_discovery_chance_mult = 0.1
+	martial = 3
 	same_opinion = 5
 	opposite_opinion = -5
-	culture_modifier = {
-		parameter = innovation_from_learning_traits
-		cultural_head_fascination_mult = 0.05
-	}
 
 	shown_in_ruler_designer = no
 
@@ -525,15 +484,11 @@ hindu_philoosphy_nyaya = {# Nyaya
 	}
 
 	
-
+	intrigue = 2
 	owned_personal_scheme_success_chance_add = 10
 	owned_hostile_scheme_success_chance_add = 10
 	same_opinion = 5
 	opposite_opinion = -5
-	culture_modifier = {
-		parameter = innovation_from_learning_traits
-		cultural_head_fascination_mult = 0.05
-	}
 
 	shown_in_ruler_designer = no
 
@@ -558,56 +513,6 @@ hindu_philoosphy_nyaya = {# Nyaya
 	}
 
 }
-hindu_philoosphy_vishishtadvaita = {# Vishishtadvaita - School of Vedanta
-	potential = {
-		faith = { has_doctrine = sampradaya_vaishnavism_doctrine }
-		exists = global_var:hindu_philosophy_vishishtadvaita_formed
-	}
-	opposites = {
-		hindu_philoosphy_yoga
-		hindu_philoosphy_samkhya
-		hindu_philoosphy_vaisheshika
-		hindu_philoosphy_mimamsa
-		hindu_philoosphy_nyaya
-		hindu_philoosphy_vishishtadvaita
-		hindu_philoosphy_advaita_vedanta
-		hindu_philoosphy_bhedabheda
-		hindu_philoosphy_dvaita_vedanta
-	}
-
-	
-
-	monthly_piety = 3
-	same_opinion = 5
-	opposite_opinion = -5
-	culture_modifier = {
-		parameter = innovation_from_learning_traits
-		cultural_head_fascination_mult = 0.05
-	}
-
-	shown_in_ruler_designer = no
-
-	ai_rationality = 5
-	ai_zeal = 20
-	
-	
-	shown_in_ruler_designer = no
-
-	ai_sociability = very_low_negative_ai_value
-
-	desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					NOT = { exists = this }
-				}
-				desc = trait_hindu_philoosphy_vishishtadvaita_desc
-			}
-			desc = trait_hindu_philoosphy_vishishtadvaita_character_desc
-		}
-	}
-
-}
 hindu_philoosphy_advaita_vedanta = {# Advaita Vedanta - School of Vedanta
 	potential = {
 		faith = { religion_tag = hinduism_religion }
@@ -623,14 +528,11 @@ hindu_philoosphy_advaita_vedanta = {# Advaita Vedanta - School of Vedanta
 		hindu_philoosphy_bhedabheda
 		hindu_philoosphy_dvaita_vedanta
 	}
-
+	
+	learning = 2
 	monthly_piety_gain_mult = 0.25
 	same_opinion = 5
 	opposite_opinion = -5
-	culture_modifier = {
-		parameter = innovation_from_learning_traits
-		cultural_head_fascination_mult = 0.05
-	}
 
 	shown_in_ruler_designer = no
 
@@ -670,7 +572,8 @@ hindu_philoosphy_bhedabheda = {# Bhedabheda - School of Vedanta
 		hindu_philoosphy_dvaita_vedanta
 	}
 
-	monthly_piety = 3
+	diplomacy = 2
+	monthly_prestige_gain_mult = 0.25
 	same_opinion = 5
 	opposite_opinion = -5
 	culture_modifier = {
@@ -700,49 +603,4 @@ hindu_philoosphy_bhedabheda = {# Bhedabheda - School of Vedanta
 	}
 
 }
-hindu_philoosphy_dvaita_vedanta = {# Dvaita Vedanta - School of Vedanta
-	potential = {
-		faith = { has_doctrine = sampradaya_vaishnavism_doctrine }
-		exists = global_var:hindu_philosophy_dvaita_vedanta_formed
-	}
-	opposites = {
-		hindu_philoosphy_yoga
-		hindu_philoosphy_samkhya
-		hindu_philoosphy_vaisheshika
-		hindu_philoosphy_mimamsa
-		hindu_philoosphy_nyaya
-		hindu_philoosphy_vishishtadvaita
-		hindu_philoosphy_advaita_vedanta
-		hindu_philoosphy_bhedabheda
-		hindu_philoosphy_dvaita_vedanta
-	}
-	
-	monthly_piety_gain_mult = 0.25
-	same_opinion = 5
-	opposite_opinion = -5
-	culture_modifier = {
-		parameter = innovation_from_learning_traits
-		cultural_head_fascination_mult = 0.05
-	}
 
-	shown_in_ruler_designer = no
-
-	ai_rationality = 5
-	ai_zeal = 20
-
-	ai_rationality = 10
-	ai_zeal = 20
-
-	desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					NOT = { exists = this }
-				}
-				desc = trait_hindu_philoosphy_dvaita_vedanta_desc
-			}
-			desc = trait_hindu_philoosphy_dvaita_vedanta_character_desc
-		}
-	}
-	
-}

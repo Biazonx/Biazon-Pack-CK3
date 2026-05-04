@@ -1,0 +1,11 @@
+chosen_of_perkunas_have_not_existed_trigger = {
+	NOR = {
+		# And otherwise can't currently be created.
+		exists = global_var:chosen_of_perkunas_title
+		# Nor should they have been made via decision or event.
+		is_target_in_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:flag_forged_chosen_of_perkunas
+		}
+	}
+}

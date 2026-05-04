@@ -8,9 +8,10 @@ elevate_crete_scripted_effect = {
 			modifier = eec_legacy_of_piracy_modifier
 			years = 100
 		}
-		# Also gain a medium amount of dynasty prestige.
-		add_dynasty_prestige = 150
+		add_dynasty_prestige = 250
 	}
+	
+	add_prestige = 500
 	
 	# Buff Krete.
 	title:c_chandax = {
@@ -57,7 +58,7 @@ elevate_crete_scripted_effect = {
 	}
 	# Have a huge, terrifying event army.
 	spawn_army = {
-		levies = 2500
+		levies = 2000
 		men_at_arms = {
 			type = light_footmen
 			stacks = 5
@@ -73,6 +74,11 @@ elevate_crete_scripted_effect = {
 		men_at_arms = {
 			type = mubarizun
 			stacks = 10
+		}
+		
+		men_at_arms = {
+			type = onager
+			stacks = 5
 		}
 
 		uses_supply = no

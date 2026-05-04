@@ -1,0 +1,395 @@
+﻿illyrian_religion = {
+	family = rf_pagan
+
+	pagan_roots = yes
+
+	doctrine = pagan_hostility_doctrine
+
+	#Main Group
+	doctrine = doctrine_polytheist
+	doctrine = doctrine_no_head
+	doctrine = doctrine_gender_male_dominated
+	doctrine = doctrine_pluralism_pluralistic
+	doctrine = doctrine_theocracy_temporal
+
+	#Marriage
+	doctrine = doctrine_concubines
+	doctrine = doctrine_divorce_allowed
+	doctrine = doctrine_bastardry_legitimization
+	doctrine = doctrine_consanguinity_cousins
+
+	#Crimes
+	doctrine = doctrine_homosexuality_crime
+	doctrine = doctrine_adultery_men_shunned
+	doctrine = doctrine_adultery_women_crime
+	doctrine = doctrine_kinslaying_extended_family_crime
+	doctrine = doctrine_deviancy_shunned
+	doctrine = doctrine_witchcraft_accepted
+
+	#Clerical Functions
+	doctrine = doctrine_clerical_function_recruitment
+	doctrine = doctrine_clerical_gender_either
+	doctrine = doctrine_clerical_marriage_allowed
+	doctrine = doctrine_clerical_succession_temporal_appointment
+
+	#Allow pilgrimages
+	doctrine = doctrine_pilgrimage_encouraged
+
+	#Funeral tradition
+	doctrine = doctrine_funeral_bewailment
+
+	#Coronation tradition
+	doctrine = doctrine_no_anointment
+	
+	traits = {
+		virtues = { loyal just honest generous gregarious }
+		sins = { disloyal zealous deceitful greedy shy }
+	}
+
+	custom_faith_icons = {
+		custom_faith_1 custom_faith_2 custom_faith_3 custom_faith_4 custom_faith_5 custom_faith_6 custom_faith_7 custom_faith_8 custom_faith_9 custom_faith_10 dualism_custom_1 zoroastrian_custom_1 zoroastrian_custom_2 buddhism_custom_1 buddhism_custom_2 buddhism_custom_3 buddhism_custom_4 taoism_custom_1 yazidi_custom_1 sunni_custom_2 sunni_custom_3 sunni_custom_4 muhakkima_1 muhakkima_2 muhakkima_4 muhakkima_5 muhakkima_6 judaism_custom_1 custom_faith_fp1_fenrir custom_faith_fp1_irminsul custom_faith_fp1_jormungandr custom_faith_fp1_odins_ravens custom_faith_fp1_runestone_moon custom_faith_fp1_thors_hammer custom_faith_fp1_valknut custom_faith_fp1_yggdrasil custom_faith_boromian_circles custom_faith_lotus custom_faith_aum_tibetan custom_faith_pentagram custom_faith_pentagram_inverted custom_faith_burning_bush custom_faith_allah custom_faith_gankyil custom_faith_eye_of_providence custom_faith_dove custom_faith_ichthys custom_faith_lamb custom_faith_black_sheep custom_faith_ankh custom_faith_chi_rho custom_faith_hamsa custom_faith_cool_s
+	}
+
+	holy_order_names = {
+		{ name = "holy_order_albanian_mountains" }
+		{ name = "holy_order_warriors_of_wargod" }
+		{ name = "holy_order_masters_of_watergod" }
+		{ name = "holy_order_sentinals_of_protection_god" }
+	}
+
+	holy_order_maa = { mountaineer }
+
+	localization = {
+		HighGodName = shqip_high_god_name
+		HighGodNamePossessive = shqip_high_god_name_possessive
+		HighGodName2 = shqip_high_god_name
+		HighGodName3 = shqip_high_god_name_possessive
+		HighGodNameSheHe = CHARACTER_SHEHE_HE
+		HighGodHerselfHimself = CHARACTER_HIMSELF
+		HighGodHerHis = CHARACTER_HERHIS_HIS
+		HighGodHerHim = CHARACTER_HERHIM_HIM
+		
+		HighGodNameAlternate = shqip_high_god_name_alternate
+		HighGodNameAlternatePossessive = shqip_high_god_name_alternate_possessive
+		HighGodNameAlternateSheHe = CHARACTER_SHEHE_HE
+		HighGodAlternateSheHe = CHARACTER_SHEHE_HE
+		HighGodAlternateHerselfHimself = CHARACTER_HIMSELF
+		HighGodAlternateHerHis = CHARACTER_HERHIS_HIS
+		HighGodAlternateHerHim = CHARACTER_HERHIM_HIM
+		
+		HighGodNameAlt2 = shqip_high_god_name_alt_2
+		HighGodNameAlt2Possessive = shqip_high_god_name_alt_2_possessive
+		HighGodNameAlt2SheHe = CHARACTER_SHEHE_HE
+		HighGodAlt2HerselfHimself = CHARACTER_HIMSELF
+		HighGodAlt2HerHis = CHARACTER_HERHIS_HIS
+		HighGodAlt2HerHim = CHARACTER_HERHIM_HIM
+		
+		#Creator
+		CreatorName = shqip_creator_god_name
+		CreatorNamePossessive = shqip_creator_god_name_possessive
+		CreatorSheHe = CHARACTER_SHEHE_HE
+		CreatorHerHis = CHARACTER_HERHIS_HIS
+		CreatorHerHim = CHARACTER_HERHIM_HIM
+		
+		CreatorNameAlternate = shqip_creator_god_name_alternate
+		CreatorNameAlternatePossessive = shqip_creator_god_name_alternate_possessive
+		CreatorAlternateSheHe = CHARACTER_SHEHE_HE
+		CreatorAlternateHerHis = CHARACTER_HERHIS_HIS
+		CreatorAlternateHerHim = CHARACTER_HERHIM_HIM
+		
+		#HealthGod
+		HealthGodName = shqip_health_god_name
+		HealthGodNamePossessive = shqip_health_god_name_possessive
+		HealthGodSheHe = CHARACTER_SHEHE_SHE
+		HealthGodHerHis = CHARACTER_HERHIS_HER
+		HealthGodHerHim = CHARACTER_HERHIM_HER
+		
+		#MedicineGod
+		MedicineGodName = shqip_medicine_god_name
+		MedicineGodNamePossessive = shqip_medicine_god_name_possessive
+		MedicineGodSheHe = CHARACTER_SHEHE_SHE
+		MedicineGodHerHis = CHARACTER_HERHIS_HER
+		MedicineGodHerHim = CHARACTER_HERHIM_HER
+		
+		#FertilityGod
+		FertilityGodName = shqip_fertility_god_name
+		FertilityGodNamePossessive = shqip_fertility_god_name_possessive
+		FertilityGodSheHe = CHARACTER_SHEHE_SHE
+		FertilityGodHerHis = CHARACTER_HERHIS_HER
+		FertilityGodHerHim = CHARACTER_HERHIM_HER
+		
+		#WealthGod
+		WealthGodName = shqip_wealth_god_name
+		WealthGodNamePossessive = shqip_wealth_god_name_possessive
+		WealthGodSheHe = CHARACTER_SHEHE_HE
+		WealthGodHerHis = CHARACTER_HERHIS_HIS
+		WealthGodHerHim = CHARACTER_HERHIM_HIM
+		
+		#HouseholdGod
+		HouseholdGodName = shqip_household_god_name
+		HouseholdGodNamePossessive = shqip_household_god_name_possessive
+		HouseholdGodSheHe = CHARACTER_SHEHE_SHE
+		HouseholdGodHerHis = CHARACTER_HERHIS_HER
+		HouseholdGodHerHim = CHARACTER_HERHIM_HER
+		
+		#MarriageGod
+		MarriageGodName = shqip_marriage_god_name
+		MarriageGodNamePossessive = shqip_marriage_god_name_possessive
+		MarriageGodSheHe = CHARACTER_SHEHE_SHE
+		MarriageGodHerHis = CHARACTER_HERHIS_HER
+		MarriageGodHerHim = CHARACTER_HERHIM_HER
+		
+		#MerrimentGod
+		MerrimentGodName = shqip_merriment_god_name
+		MerrimentGodNamePossessive = shqip_merriment_god_name_possessive
+		MerrimentGodSheHe = CHARACTER_SHEHE_SHE
+		MerrimentGodHerHis = CHARACTER_HERHIS_HER
+		MerrimentGodHerHim = CHARACTER_HERHIM_HER
+		
+		#FateGod
+		FateGodName = shqip_fate_god_name
+		FateGodNamePossessive = shqip_fate_god_name_possessive
+		FateGodSheHe = CHARACTER_SHEHE_SHE
+		FateGodHerHis = CHARACTER_HERHIS_HER
+		FateGodHerHim = CHARACTER_HERHIM_HER
+		
+		#KnowledgeGod
+		KnowledgeGodName = shqip_knowledge_god_name
+		KnowledgeGodNamePossessive = shqip_knowledge_god_name_possessive
+		KnowledgeGodSheHe = CHARACTER_SHEHE_HE
+		KnowledgeGodHerHis = CHARACTER_HERHIS_HIS
+		KnowledgeGodHerHim = CHARACTER_HERHIM_HIM
+		
+		#WarGod
+		WarGodName = shqip_war_god_name
+		WarGodNamePossessive = shqip_war_god_name_possessive
+		WarGodSheHe = CHARACTER_SHEHE_HE
+		WarGodHerHis = CHARACTER_HERHIS_HIS
+		WarGodHerHim = CHARACTER_HERHIM_HIM
+		
+		WarGodNameAlternate = shqip_war_god_name_alternate
+		WarGodNameAlternatePossessive = shqip_war_god_name_alternate_possessive
+		WarGodAlternateSheHe = CHARACTER_SHEHE_HE
+		WarGodAlternateHerHis = CHARACTER_HERHIS_HIS
+		WarGodAlternateHerHim = CHARACTER_HERHIM_HIM
+		
+		#VictoryGod
+		VictoryGodName = shqip_victory_god_name
+		VictoryGodNamePossessive = shqip_victory_god_name_possessive
+		VictoryGodSheHe = CHARACTER_SHEHE_HE
+		VictoryGodHerHis = CHARACTER_HERHIS_HIS
+		VictoryGodHerHim = CHARACTER_HERHIM_HIM
+		
+		#ProtectionGod
+		ProtectionGodName = shqip_protection_god_name
+		ProtectionGodNamePossessive = shqip_protection_god_name_possessive
+		ProtectionGodSheHe = CHARACTER_SHEHE_HE
+		ProtectionGodHerHis = CHARACTER_HERHIS_HIS
+		ProtectionGodHerHim = CHARACTER_HERHIM_HIM
+		
+		#TricksterGod
+		TricksterGodName = shqip_trickster_god_name
+		TricksterGodNamePossessive = shqip_trickster_god_name_possessive
+		TricksterGodSheHe = CHARACTER_SHEHE_HE
+		TricksterGodHerHis = CHARACTER_HERHIS_HIS
+		TricksterGodHerHim = CHARACTER_HERHIM_HIM
+		
+		#NightGod
+		NightGodName = shqip_night_god_name
+		NightGodNamePossessive = shqip_night_god_name_possessive
+		NightGodSheHe = CHARACTER_SHEHE_SHE
+		NightGodHerHis = CHARACTER_HERHIS_HER
+		NightGodHerHim = CHARACTER_HERHIM_HER
+		
+		NightGodNameAlternate = shqip_night_god_name_alternate
+		NightGodNameAlternatePossessive = shqip_night_god_name_alternate_possessive
+		NightGodAlternateSheHe = CHARACTER_SHEHE_SHE
+		NightGodAlternateHerHis = CHARACTER_HERHIS_HER
+		NightGodAlternateHerHim = CHARACTER_HERHIM_HER
+		
+		#WaterGod
+		WaterGodName = shqip_water_god_name
+		WaterGodNamePossessive = shqip_water_god_name_possessive
+		WaterGodSheHe = CHARACTER_SHEHE_HE
+		WaterGodHerHis = CHARACTER_HERHIS_HIS
+		WaterGodHerHim = CHARACTER_HERHIM_HIM
+		
+		WaterGodNameAlternate = shqip_water_god_name_alternate
+		WaterGodNameAlternatePossessive = shqip_water_god_name_alternate_possessive
+		WaterGodAlternateSheHe = CHARACTER_SHEHE_SHE
+		WaterGodAlternateHerHis = CHARACTER_HERHIS_HER
+		WaterGodAlternateHerHim = CHARACTER_HERHIM_HER
+		
+		#DeathGod
+		DeathDeityName = shqip_death_deity_name
+		DeathDeityNamePossessive = shqip_death_deity_name_possessive
+		DeathDeitySheHe = CHARACTER_SHEHE_SHE
+		DeathDeityHerHis = CHARACTER_HERHIS_HER
+		DeathDeityHerHim = CHARACTER_HERHIM_HER
+		
+		#MagicGod
+		WitchGodName = shqip_witchgodname
+		WitchGodNamePossessive = shqip_witchgodname_possessive
+		WitchGodSheHe = CHARACTER_SHEHE_SHE
+		WitchGodHerHis = CHARACTER_HERHIS_HER
+		WitchGodHerHim = CHARACTER_HERHIM_HER
+		WitchGodMistressMaster = witch_spirit
+		WitchGodMotherFather = witch_source
+
+
+		PantheonTerm = shqip_mother_earth_father_sky
+		PantheonTerm2 = shqip_mother_earth_father_sky_2
+		PantheonTerm3 = shqip_mother_earth_father_sky_3
+		PantheonTermHasHave = pantheon_term_have
+		GoodGodNames = { shqip_high_god_name shqip_good_god_father_sky shqip_good_god_ancestors }
+		DevilName = shqip_devil_name
+		DevilNamePossessive = shqip_devil_name_possessive
+		DevilSheHe = CHARACTER_SHEHE_IT
+		DevilHerHis = CHARACTER_HERHIS_ITS
+		DevilHerHim = CHARACTER_HERHIM_IT
+		DevilHerselfHimself = shqip_devil_herselfhimself
+		EvilGodNames = { shqip_devil_name shqip_evil_god_decay }
+		HouseOfWorship = shqip_house_of_worship
+		HouseOfWorship2 = shqip_house_of_worship_2
+		HouseOfWorship3 = shqip_house_of_worship_3
+		HouseOfWorshipPlural = shqip_house_of_worship_plural
+		ReligiousSymbol = shqip_religious_symbol
+		ReligiousSymbol2 = shqip_religious_symbol_2
+		ReligiousSymbol3 = shqip_religious_symbol_3
+		ReligiousText = shqip_religious_text
+		ReligiousText2 = shqip_religious_text_2
+		ReligiousText3 = shqip_religious_text_3
+		ReligiousHeadName = shqip_religious_head_title
+		ReligiousHeadTitleName = shqip_religious_head_title_name
+		DevoteeMale = shqip_devotee
+		DevoteeMalePlural = shqip_devoteeplural
+		DevoteeFemale = shqip_devotee
+		DevoteeFemalePlural = shqip_devoteeplural
+		DevoteeNeuter = shqip_devotee
+		DevoteeNeuterPlural = shqip_devoteeplural
+		PriestMale = shqip_priest
+		PriestMalePlural = shqip_priest_plural
+		PriestFemale = shqip_priest
+		PriestFemalePlural = shqip_priest_plural
+		PriestNeuter = shqip_priest
+		PriestNeuterPlural = shqip_priest_plural
+		AltPriestTermPlural = shqip_priest_alternate_plural
+		BishopMale = shqip_priest
+		BishopMalePlural = shqip_priest_plural
+		BishopFemale = shqip_priest
+		BishopFemalePlural = shqip_priest_plural
+		BishopNeuter = shqip_priest
+		BishopNeuterPlural = shqip_priest_plural
+		DivineRealm = shqip_divine_realm
+		DivineRealm2 = shqip_divine_realm_2
+		DivineRealm3 = shqip_divine_realm_3
+		PositiveAfterLife = shqip_divine_realm
+		PositiveAfterLife2 = shqip_divine_realm_2
+		PositiveAfterLife3 = shqip_divine_realm_3
+		NegativeAfterLife = shqip_afterlife
+		NegativeAfterLife2 = shqip_afterlife_2
+		NegativeAfterLife3 = shqip_afterlife_3
+		NegativeAfterLifeAlternate = shqip_afterlife
+		NegativeAfterLifeAlternate2 = shqip_afterlife_2
+		NegativeAfterLifeAlternate3 = shqip_afterlife_3
+		
+		GHWName = ghw_great_holy_war
+		GHWNamePlural = ghw_great_holy_wars
+		
+		#New items added by Shautora
+		
+		NegativeAfterLifeAlternate = shqip_negative_afterlife_alternate #P+: This negativ afterlief's the positiv? And that too, reguelar paiganism?
+		NegativeAfterLifeAlternate2 = shqip_negative_afterlife_alternate_2
+		NegativeAfterLifeAlternate3 = shqip_negative_afterlife_alternate_3
+		
+		#JusticeGod
+		JusticeGodName = shqip_justice_god_name
+		JusticeGodNamePossessive = shqip_justice_god_name_possessive
+		JusticeGodSheHe = CHARACTER_SHEHE_HE
+		JusticeGodHerHis = CHARACTER_HERHIS_HIS
+		JusticeGodHerHim = CHARACTER_HERHIM_HIM
+		
+		#JudgeOfTheDead
+		JudgeOfTheDeadName = shqip_judge_of_the_dead_name
+		JudgeOfTheDeadNamePossessive = shqip_judge_of_the_dead_name_possessive
+		JudgeOfTheDeadSheHe = CHARACTER_SHEHE_SHE
+		JudgeOfTheDeadHerHis = CHARACTER_HERHIS_HER
+		JudgeOfTheDeadHerHim = CHARACTER_HERHIM_HER
+		
+		#AfterlifeGod
+		AfterlifeGodName = shqip_afterlife_god_name
+		AfterlifeGodNamePossessive = shqip_afterlife_god_name_possessive
+		AfterlifeGodSheHe = CHARACTER_SHEHE_SHE
+		AfterlifeGodHerHis = CHARACTER_HERHIS_HER
+		AfterlifeGodHerHim = CHARACTER_HERHIM_HER
+		AfterlifeGodNameAlternate = shqip_afterlife_god_name_alt
+		AfterlifeGodNameAlternatePossessive = shqip_afterlife_god_name_alt_possessive
+		AfterlifeGodAlternateSheHe = CHARACTER_SHEHE_SHE
+		AfterlifeGodAlternateHerHis = CHARACTER_HERHIS_HER
+		AfterlifeGodAlternateHerHim = CHARACTER_HERHIM_HER
+		
+		#WildernessGod
+		WildernessGodName = shqip_wilderness_god_name
+		WildernessGodNamePossessive = shqip_wilderness_god_name_possessive
+		WildernessGodSheHe = CHARACTER_SHEHE_SHE
+		WildernessGodHerHis = CHARACTER_HERHIS_HER
+		WildernessGodHerHim = CHARACTER_HERHIM_HER
+		
+		#HuntingGod
+		HuntingGodName = shqip_hunting_god_name
+		HuntingGodNamePossessive = shqip_hunting_god_name_possessive
+		HuntingGodSheHe = CHARACTER_SHEHE_SHE
+		HuntingGodHerHis = CHARACTER_HERHIS_HER
+		HuntingGodHerHim = CHARACTER_HERHIM_HER
+		
+		#ArcheryGod
+		ArcheryGodName = shqip_archery_god_name
+		ArcheryGodNamePossessive = shqip_archery_god_name_possessive
+		ArcheryGodSheHe = CHARACTER_SHEHE_HE
+		ArcheryGodHerHis = CHARACTER_HERHIS_HIS
+		ArcheryGodHerHim = CHARACTER_HERHIM_HIM
+		
+		#SmithGod
+		SmithGodName = shqip_smith_god_name
+		SmithGodNamePossessive = shqip_smith_god_name_possessive
+		SmithGodSheHe = CHARACTER_SHEHE_HE
+		SmithGodHerHis = CHARACTER_HERHIS_HIS
+		SmithGodHerHim = CHARACTER_HERHIM_HIM
+		
+		#Psychopomp
+		PsychopompName = shqip_psychopomp_name
+		PsychopompNamePossessive = shqip_psychopomp_name_possessive
+		PsychopompSheHe = CHARACTER_SHEHE_SHE
+		PsychopompHerHis = CHARACTER_HERHIS_HER
+		PsychopompHerHim = CHARACTER_HERHIM_HER
+	}
+	
+	faiths = {
+		shqip_pagan = {
+			color = { 19 109 192 }
+            icon = star_and_crescent
+			reformed_icon = star_and_crescent
+			
+			doctrine = unreformed_faith_doctrine
+
+			holy_site = tomorr
+			holy_site = rozafa
+			holy_site = rodons_cape
+			holy_site = visoki
+			holy_site = ragusa
+
+			doctrine = tenet_gnosticism
+			doctrine = tenet_reincarnation
+			doctrine_selection_pair = {
+				requires_dlc_flag = the_northern_lords
+				doctrine = tenet_bhakti
+				fallback_doctrine = tenet_christian_syncretism
+			} #P+: Deleted loc cuz't's duplicate, literally naut unlike aboon.
+		}
+	}
+}
+
+### SOURCES ###
+# https://www.afsusa.org/countries/albania/
+# https://www.everyculture.com/A-Bo/Albania.html
+# https://en.wikipedia.org/wiki/Albanian_folk_beliefs

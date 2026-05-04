@@ -1,0 +1,31 @@
+﻿bhakti_illyrian_bee = {
+	icon = fertility_positive
+	health = 0.5
+	stress_gain_mult = -0.33
+}
+
+bhakti_illyrian_eagle = {
+	icon = bird_positive
+	monthly_prestige_gain_mult = 0.1
+	diplomacy = 2
+}
+
+bhakti_illyrian_goat = {
+	icon = hunt_positive
+	lifestyle_hunter_xp_gain_mult = 0.5
+	movement_speed = 0.2
+	forest_advantage = 2
+}
+
+bhakti_illyrian_serpent = {
+	icon = treatment_positive
+	fertility = 0.25
+	monthly_dynasty_prestige_mult = 0.05
+}
+
+bhakti_illyrian_wolf = {
+	icon = bear_positive
+	martial = medium_skill_bonus
+	attacker_advantage = 3
+	prowess = 4
+}

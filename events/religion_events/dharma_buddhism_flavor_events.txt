@@ -371,7 +371,6 @@ dharma_buddhism.051 = {# Tibetan Schools
 		trigger = {
 			faith = faith:lamaism
 			NOT = { has_trait = buddhist_school_kadam }
-			exists = global_var:buddhist_school_kadam_formed
 		}
 		set_buddhist_school_effect = { YANA = buddhist_school_kadam }
 	}
@@ -380,7 +379,6 @@ dharma_buddhism.051 = {# Tibetan Schools
 		trigger = {
 			faith = faith:lamaism
 			NOT = { has_trait = buddhist_school_sakya }
-			exists = global_var:buddhist_school_sakya_formed
 		}
 		set_buddhist_school_effect = { YANA = buddhist_school_sakya }
 	}
@@ -389,7 +387,6 @@ dharma_buddhism.051 = {# Tibetan Schools
 		trigger = {
 			faith = faith:lamaism
 			NOT = { has_trait = buddhist_school_kagyu }
-			exists = global_var:buddhist_school_kagyu_formed
 		}
 		set_buddhist_school_effect = { YANA = buddhist_school_kagyu }
 	}				
@@ -1680,10 +1677,7 @@ dharma_buddhism.201 = {# Burmese Buddhist Deities
 	option = {# Sīvali
 		name = dharma_buddhism.201.sivalia
 		trigger = {
-			OR = {
-				faith = faith:ari
-				faith = faith:theravada
-			}
+			faith = faith:ari
 			NOT = { has_character_modifier = nat_ari_sivali }
 		}
 		set_nat_effect = { NAT = nat_ari_sivali }

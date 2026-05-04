@@ -55,12 +55,6 @@ sadaqah = {
 	clergy_opinion = 15
 }
 
-tribal_army = { 
-	icon = martial_positive
-	levy_size = 0.5
-	levy_reinforcement_rate = 0.25
-}
-
 guild_patron = { 
 	icon = stewardship_positive
 	development_growth_factor = 0.1
@@ -71,8 +65,8 @@ guild_patron = {
 strengthen_nobility = {
 	icon = legitimacy_positive
 		vassal_opinion = 10
-		vassal_tax_contribution_mult = -0.15
-		vassal_levy_contribution_mult = 0.25
+		county_opinion_add = -10
+		vassal_tax_contribution_mult = 0.15
 		legitimacy_gain_mult = 0.15
 }
 
@@ -129,7 +123,7 @@ development_focus = {
 lodge_initiated = {
 	icon = prowess_positive 
 	martial = 1
-	prowess = 2
+	prowess = 3
 }
 
 spirits_of_the_forest = {
@@ -263,4 +257,49 @@ seized_coffee = {
 imported_coffee_labor = {
 	icon = economy_positive
 	monthly_income = 3
+}
+
+TO_modifier = {
+	icon = piety_positive
+	vassal_levy_contribution_mult = 0.1
+	levy_reinforcement_rate = 0.05
+	knight_effectiveness_mult = 0.2
+	knight_limit = 2
+}
+
+han_exiles = {
+	icon = diplomacy_positive
+	diplomacy = 2
+	learning = 1
+}
+	
+japanese_trade = {
+	icon = stewardship_positive
+	diplomacy = 1
+	development_growth = 0.1
+	monthly_income_mult = 0.1
+}
+
+dao_ritual_order_modifier = {
+	icon = county_modifier_opinion_positive
+	monthly_county_control_growth_add = 0.25
+	county_opinion_add = 10
+}
+
+dao_mystical_insight_modifier = {
+	icon = learning_positive
+	learning = 3
+	monthly_piety_gain_mult = 0.25
+}
+
+dao_disciplined_body_modifier = {
+	icon = health_positive
+	health = 0.5
+	prowess = 3
+}
+
+dao_heavenly_zeal_modifier = {
+	icon = martial_positive
+	martial = 3
+	levy_reinforcement_rate = 0.15
 }

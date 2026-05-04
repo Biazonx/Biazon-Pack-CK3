@@ -6,7 +6,7 @@
     selection_tooltip = saiyan_invite_decision_tooltip
 	decision_group_type = flavor_medium
 
-    ai_check_interval = 120
+    ai_check_interval = 240
 
     cooldown = { years = 5 }
 
@@ -42,7 +42,7 @@ forge_dragon_balls_decision = { #Craft Artifacts
 	decision_group_type = flavor_medium
 	desc = forge_dragon_balls_decision_desc
 	
-	ai_check_interval = 120
+	ai_check_interval = 240
 	
 	cooldown = { years = 100 }
 
@@ -95,7 +95,7 @@ frieza_race_decision = {
     selection_tooltip = frieza_decision_tooltip
 	decision_group_type = major
 
-    ai_check_interval = 120
+    ai_check_interval = 240
 
     is_shown = {
         culture = culture:frieza
@@ -130,7 +130,7 @@ namekian_race_decision = {
     selection_tooltip = namekian_decision_tooltip
 	decision_group_type = major
 
-    ai_check_interval = 120
+    ai_check_interval = 240
 
     is_shown = {
         culture = culture:namekian
@@ -165,7 +165,7 @@ majin_race_decision = {
     selection_tooltip = majin_decision_tooltip
 	decision_group_type = major
 
-    ai_check_interval = 120
+    ai_check_interval = 240
 
     is_shown = {
         culture = culture:majin
@@ -200,7 +200,7 @@ pure_saiyan_decision = {
     selection_tooltip = pure_saiyan_decision_tooltip
 	decision_group_type = major
 
-    ai_check_interval = 120
+    ai_check_interval = 240
 
     is_shown = {
         culture = culture:saiyan

@@ -17,7 +17,6 @@ form_romania_scripted_effect = {
 	title:d_oltenia = { set_de_jure_liege_title = title:k_romania }
 	title:d_transylvania = { set_de_jure_liege_title = title:k_romania }
 	title:c_galatia = { set_de_jure_liege_title = title:k_romania }
-	set_primary_title_to = title:k_romania 
 }
 
 form_teutonic_scripted_effect = {
@@ -35,27 +34,40 @@ form_teutonic_scripted_effect = {
 		}
 	}
 	
-	title:d_prussia = { set_de_jure_liege_title = title:k_teutonic }
-	title:d_masuria = { set_de_jure_liege_title = title:k_teutonic }
-	title:d_pomerelia = { set_de_jure_liege_title = title:k_teutonic }
-	resolve_title_and_vassal_change = scope:title_change
-
-	set_primary_title_to = title:k_teutonic 
-	
-	if = {
-		limit = {
-			NOT = { capital_county = title:c_malbork }
+		title:d_prussia = { set_de_jure_liege_title = title:k_teutonic }
+		title:d_masuria = { set_de_jure_liege_title = title:k_teutonic }
+		title:d_pomerelia = { set_de_jure_liege_title = title:k_teutonic }
+		if = {
+			limit = {
+				NOT = { capital_county = title:c_malbork }
+			}
+			set_realm_capital = title:c_malbork
 		}
-		set_realm_capital = title:c_malbork
+	resolve_title_and_vassal_change = scope:title_change
+	
+	dynasty = {
+		add_dynasty_modifier = {
+			modifier = TO_modifier
+		}
 	}
-	capital_county = { set_county_faith = faith:catholic }
+	
+	spawn_army = {
+		men_at_arms = {
+			type = teutonic_knights
+			stacks = 15
+		}
+		men_at_arms = {
+			type = landsknecht
+			stacks = 5
+		}
+		location = title:c_malbork.title_province
+		name = teut1_event_troops
+	}
+	
 	# And convert it to your culture if it wasn't some flavour of European.
 	if = {
 		limit = {
-			NOR = {
-				title:c_malbork.culture = {
-					has_cultural_pillar = heritage_central_germanic 
-				}
+			NOT = {
 				title:c_malbork.culture = culture:german
 			}
 		}
@@ -126,7 +138,6 @@ form_yugoslavia_scripted_effect = {
 	# Set de jure vassal kingdoms under e_yugoslavia
 	title:k_croatia = { set_de_jure_liege_title = title:e_yugoslavia }
 	title:k_serbia = { set_de_jure_liege_title = title:e_yugoslavia }
-	set_primary_title_to = title:e_yugoslavia 
 	
 }
 
@@ -157,8 +168,6 @@ form_czechslovakia_scripted_effect = {
 	title:d_ungvar = { set_de_jure_liege_title = title:k_moravia }
 	title:k_moravia = { set_de_jure_liege_title = title:e_czechslovakia }
 	
-	set_primary_title_to = title:e_czechslovakia
-
 }
 
 found_northern_capital_scripted_effect = {
@@ -205,4 +214,156 @@ found_northern_capital_scripted_effect = {
 			years = 100
 		}
 	}
+}
+
+forge_the_chosen_of_perkunas_scripted_effect = {
+	# Display simplified results.
+	custom_tooltip = create_holy_order_decision_effect_message
+	# Select a random county.
+	random_held_title = {
+		limit = { fp1_valid_county_for_jomsvikings_trigger = yes }
+		save_scope_as = designated_county
+	}
+	# Select an appropriate barony.
+	## If there's an empty space in the capital, we create a castle.
+	if = {
+		limit = {
+			scope:designated_county = {
+				any_county_province = { has_holding = no }
+			}
+		}
+		scope:designated_county = {
+			random_county_province = {
+				limit = { has_holding = no }
+				set_holding_type = castle_holding
+				barony = { save_scope_as = leased_barony }
+			}
+		}
+	}
+	## Otherwise, grab an existing non-capital castle/city.
+	else = {
+		scope:designated_county = {
+			random_county_province = {
+				limit = {
+					is_county_capital = no
+					OR = {
+						has_holding_type = castle_holding
+						has_holding_type = city_holding
+					}
+				}
+				barony = { save_scope_as = leased_barony }
+			}
+		}
+	}
+	# Create a suitable leader for the Jomsvikings.
+	create_character = {
+		template = perkunas_grandmaster
+		location = scope:leased_barony.title_province
+		save_scope_as = leader
+	}
+	# Create the actual holy order.
+	create_holy_order_neutral_effect = {
+		LEADER = scope:leader
+		CAPITAL = scope:leased_barony
+		NEW_HO_SCOPE = new_holy_order
+		FOUNDER = scope:founder
+	}
+	## Give it some buildings.
+	hidden_effect = {
+		scope:leased_barony.title_province = {
+			# Walls & Towers.
+			if = {
+				limit = {
+					NOT = { has_building_or_higher = curtain_walls_01 }
+				}
+				# If it doesn't have a free building slot, give it one.
+				if = {
+					limit = { free_building_slots = 0 }
+					add_province_modifier = extra_building_slot
+				}
+				# Add the building.
+				add_building = curtain_walls_01
+			}
+			# Barracks.
+			if = {
+				limit = {
+					NOT = { has_building_or_higher = barracks_01 }
+				}
+				# If it doesn't have a free building slot, give it one.
+				if = {
+					limit = { free_building_slots = 0 }
+					add_province_modifier = extra_building_slot
+				}
+				# Add the building.
+				add_building = barracks_01
+			}
+			# Military Camps.
+			if = {
+				limit = {
+					NOT = { has_building_or_higher = military_camps_01 }
+				}
+				# If it doesn't have a free building slot, give it one.
+				if = {
+					limit = { free_building_slots = 0 }
+					add_province_modifier = extra_building_slot
+				}
+				# Add the building.
+				add_building = military_camps_01
+			}
+		}
+	}
+	## Mark it so it can be renamed if the order is ever destroyed.
+	set_global_variable = {
+		name = perkunaland_location
+		value = scope:leased_barony
+	}
+	# And the Grandmaster of Jomsberg certainly looks favourably on their patron.
+	## Hidden because the title doesn't play nicely with characters created in the same immediate block.
+	hidden_effect = {
+		scope:founder = { set_relation_friend = { reason = friend_forging_jomsvikings target = scope:leader } }
+	}
+	# Mark the Jomsvikings as existing & make them easily accessible
+	set_global_variable = {
+		name = chosen_of_perkunas_title
+		value = scope:leader.primary_title
+	}
+	# Some minor misc effects.
+	create_holy_order_effect = yes
+	# Flag the Jomsvikings as forged.
+	hidden_effect = {
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:flag_forged_chosen_of_perkunas
+		}
+	}
+}
+
+forge_the_chosen_of_perkunas_maa_reward_effect = {
+	spawn_army = {
+		levies = { add = 500 }
+		men_at_arms = {
+			type = kirwinikos
+			stacks = 4
+		}
+		men_at_arms = {
+			type = kavelerija
+			stacks = 2
+		}
+		men_at_arms = {
+			type = zemjones
+			stacks = 4
+		}
+		inheritable = yes
+		uses_supply = yes
+		location = scope:founder.capital_province
+		name = chosen_of_perkunas_event_troops
+	}
+}
+
+forge_the_chosen_of_perkunas_decision_tooltip_effect = {
+	# Standard info.
+	custom_tooltip = create_holy_order_decision_effect_message
+	create_holy_order_effect = yes
+	# And the free army.
+	forge_the_chosen_of_perkunas_maa_reward_effect = yes
 }

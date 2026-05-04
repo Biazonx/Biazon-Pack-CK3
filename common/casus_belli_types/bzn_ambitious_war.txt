@@ -10,16 +10,16 @@
 			government_has_flag = government_is_feudal
 			government_has_flag = government_is_monastic_feudal 
 			has_trait = rd_gpt_conquest_era
+			AND = { 
+				prestige_level >= 2
+				is_ai = yes
+			}
 		}
 		
 		NOT = {
 			government_has_flag = government_is_landless_adventurer
 		}
 	}
-	
-	attacker_score_from_occupation_scale = 150
-	attacker_score_from_battles_scale = 150
-	defender_score_from_battles_scale = 150
 
 	allowed_against_character = {
 		scope:attacker = {
@@ -33,29 +33,13 @@
 	target_titles = neighbor_land
 	target_title_tier = county
 	ignore_effect = change_title_holder
-	defender_ticking_warscore = 0.125
-	attacker_ticking_warscore = 0.125
-
-	defender_score_from_battles_scale = 150
-	attacker_score_from_battles_scale = 150
-
+	
 	ai_only_against_neighbors = yes
 	#ai_can_target_all_titles = { always = yes }
 	ai_score_mult = {
-		value = 10
+		value = struggle_conquest_ai_score_value
 
-		#Declaring war on the frankokratia leader can really ruin the whole thing
-		if = {
-			limit = {
-				scope:defender = {
-					any_owned_story = {
-						story_type = frankokratia_story
-						NOT = { has_variable = franko_war_complete }
-					}
-				}
-			}
-			multiply = 0
-		}
+		add = frankokratia_leader_protection_value #Set back to 0. Declaring war on the frankokratia leader can really ruin the whole thing
 	}
 
 	valid_to_start = {
@@ -88,8 +72,8 @@
 
 	cost = {
 		# Charge prestige against same-faith opponents.
-		prestige = {
-			value = 250
+		piety = {
+			value = 0
 			if = {
 				limit = {
 					scope:defender.faith = scope:attacker.faith
@@ -101,17 +85,17 @@
 				tier = tier_county
 				holder.top_liege = scope:defender
 					}
-					add = 175
+					add = 200
 				}
 			}
 		}
 		}
 		# & piety against diff-faith opponents.
-		piety = {
+		prestige = {
 			value = 0
 			if = {
 				limit = {
-					NOT = { scope:defender.faith = scope:attacker.faith }
+					scope:defender.faith != scope:attacker.faith 
 				}
 			add = {	
 			every_in_list = { 
@@ -339,8 +323,19 @@
 
 	use_de_jure_wargoal_only = yes
 
-	attacker_wargoal_percentage = 0.8
 	
+	attacker_wargoal_percentage = 0.5
+	defender_ticking_warscore = 0.05
+	attacker_ticking_warscore = 0.05
+	defender_ticking_warscore_delay = { months = 24 }
+
+	attacker_score_from_occupation_scale = 150
+	attacker_score_from_battles_scale = 150
+	defender_score_from_battles_scale = 150
+	
+	max_defender_score_from_battles = 150
+	max_attacker_score_from_battles = 150
+
 	max_defender_score_from_occupation = 150
 	max_attacker_score_from_occupation = 150
 }

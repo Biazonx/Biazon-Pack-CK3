@@ -36,35 +36,32 @@ german = {
 	}
 }
 
-celt = {
-	color = gaelic
-	
-	parents = { irish pictish gaelic }
+ancient_egyptian = {
+	color = ancient_egyptian
 	
 	ethos = ethos_spiritual
-	heritage = heritage_goidelic
-	language = language_goidelic
-	martial_custom = martial_custom_male_only
+	heritage = heritage_egyptian
+	language = language_egyptian
+	martial_custom = martial_custom_equal # Questionable, women in Egyptian court had equal status to men, but they were granted that status *by* men
 	traditions = {
-		tradition_fishermen
-		tradition_irish_cliathairi
-		tradition_fp1_northern_stories
-		tradition_strong_kinship
-		tradition_mendicant_mystics
-		tradition_hit_and_run
+		tradition_agrarian
+		tradition_fervent_temple_builders
+		tradition_land_of_the_bow
+		tradition_hard_working
 	}
+	
+	name_list = name_list_ancient_egyptian
 
-	name_list = name_list_gaelic
-	
-	coa_gfx = { scottish_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	
+	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
+	building_gfx = { mediterranean_building_gfx }
+	clothing_gfx = { dde_abbasid_clothing_gfx mena_clothing_gfx } 
+	clothing_gfx = { byzantine_clothing_gfx }
+	building_gfx = { arabic_group_building_gfx mena_building_gfx }
+	unit_gfx = { mena_unit_gfx }
+	house_coa_frame = house_frame_16
+
 	ethnicities = {
-		5 = caucasian_blond
-		30 = caucasian_ginger
-		35 = caucasian_brown_hair
-		30 = caucasian_dark_hair
+		10 = mediterranean
+		10 = arab
 	}
 }

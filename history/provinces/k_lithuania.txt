@@ -10,6 +10,10 @@
 	culture = lithuanian
 	religion = lithuanian_pagan
 	holding = tribal_holding
+	special_building_slot = teutonic_castle_01
+	1166.1.1 = {
+	special_building = teutonic_castle_01
+	}
 }
 149 = {		#VILKMERGE
 	holding = none
@@ -111,6 +115,10 @@
 }
 2834 = {	#MALBORK
 	holding = none
+	special_building_slot = teutonic_citadel_01
+	1166.1.1 = {
+	special_building = teutonic_citadel_01
+	}
 }
 3197 = {	#KWEDIS
 	culture = prussian
@@ -419,4 +427,24 @@
 }
 152 = {		#BIRZAI
 	holding = none
+}
+
+###c_vidzeme
+101 = {	# 101 - LEMISELE
+	
+	# Misc
+	culture = estonian
+	religion = finnish_pagan
+	
+	holding = tribal_holding
+	special_building_slot = teutonic_castle_01
+	1166.1.1 = {
+	special_building = teutonic_castle_01
+	}
+	
+	# History
+	1290.1.1 = {
+		religion = catholic
+	}
+
 }

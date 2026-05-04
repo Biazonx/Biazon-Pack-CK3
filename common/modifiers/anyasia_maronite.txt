@@ -1,5 +1,0 @@
-﻿restored_the_patriarchs = {
-	icon = piety_positive
-	same_faith_opinion = 10
-	religious_head_opinion = 30
-}

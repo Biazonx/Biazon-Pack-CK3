@@ -372,7 +372,7 @@ dharma_pick_hindu_philosophy = {# Follow a Mahayana Buddhist School
 	}
 	
 	is_valid = {
-		learning >= 10
+		learning >= 8
 		religion = religion:hinduism_religion
 	}
 	
@@ -393,10 +393,8 @@ dharma_pick_hindu_philosophy = {# Follow a Mahayana Buddhist School
 			has_trait = hindu_philoosphy_vaisheshika
 			has_trait = hindu_philoosphy_mimamsa
 			has_trait = hindu_philoosphy_nyaya
-			has_trait = hindu_philoosphy_vishishtadvaita
 			has_trait = hindu_philoosphy_advaita_vedanta
 			has_trait = hindu_philoosphy_bhedabheda
-			has_trait = hindu_philoosphy_dvaita_vedanta
 		}
 	}
 
@@ -620,7 +618,7 @@ dharma_adopt_mahayana_school = {# Follow a Mahayana Buddhist School
 	}
 	
 	is_valid = {
-		learning >= 10
+		learning >= 8
 		faith = faith:mahayana
 	}
 	
@@ -663,7 +661,7 @@ dharma_adopt_tibetan_school = {# Follow a Tibetan Buddhist School
 	}
 	
 	is_valid = {
-		learning >= 10
+		learning >= 8
 		faith = faith:lamaism
 	}
 	
@@ -818,6 +816,10 @@ adopt_a_new_faith_for_india_decision = {
 	}
 
 	is_valid = {
+		any_held_title = {
+			tier = tier_county
+		title_province = { geographical_region = world_india }
+       }
 	}
 	
 	widget = {
@@ -836,7 +838,7 @@ adopt_a_new_faith_for_india_decision = {
 			localization = choose_ismaili_name
 			icon = "gfx/interface/icons/faith/shia.dds"
 			ai_chance = {
-				value = 10
+				value = 5
 				if = {
 					limit = {
 						any_sub_realm_county = {
@@ -956,7 +958,7 @@ adopt_a_new_faith_for_india_decision = {
 			localization = choose_vaishnavism_name
 			icon = "gfx/interface/icons/faith/hinduism.dds"
 			ai_chance = {
-				value = 10
+				value = 15
 				if = {
 					limit = {
 						any_sub_realm_county = {

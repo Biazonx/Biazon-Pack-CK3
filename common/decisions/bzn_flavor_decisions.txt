@@ -7,7 +7,7 @@ bzn_tribal_army_decision = {
     decision_group_type = government_major
     ai_check_interval = 120
 	
-	cooldown = { years = 5 }
+	cooldown = { years = 10 }
 	
     is_shown = {
 		has_government = tribal_government 
@@ -19,10 +19,12 @@ bzn_tribal_army_decision = {
 	cost = { prestige = 250 }
 	
     effect = {
-		add_character_modifier = {
-            modifier = tribal_army
-            years = 5
-        }
+		spawn_army = {
+			levies = 1000
+			location = root.capital_province
+			inheritable = no
+			name = tribal_army
+		}
     }
     ai_potential = {
         always = yes
@@ -55,7 +57,7 @@ bzn_patronize_guilds_decision = {
     effect = {
 		add_character_modifier = {
             modifier = guild_patron
-            years = 5
+            years = 10
         }
 		add_prestige = 150
     }
@@ -90,7 +92,7 @@ bzn_strengthen_nobility_decision = {
     effect = {
 		add_character_modifier = {
             modifier = strengthen_nobility
-            years = 5
+            years = 10
         }
 		add_legitimacy = 50
     }
@@ -136,14 +138,14 @@ free_company_decision = {
 			flag = hired_free_company
 		}
 		spawn_army = {
-			levies = 1000
+			levies = 800
 			men_at_arms = {
 				type = armored_footmen
-				stacks = 1
+				stacks = 2
 			}
 			men_at_arms = {
 				type = pikemen_unit
-				stacks = 2
+				stacks = 3
 			}
 			men_at_arms = {
 				type = bowmen
@@ -152,6 +154,10 @@ free_company_decision = {
 			men_at_arms = {
 				type = light_footmen
 				stacks = 4
+			}
+			men_at_arms = {
+				type = onager
+				stacks = 2
 			}
 			location = root.capital_province
 			inheritable = no
@@ -377,19 +383,20 @@ bzn_warrior_lodges_decision = {
     cooldown = { years = 5 }
 
     is_shown = {
-		is_landless_adventurer = no
+		is_landed = yes
 		NOT = { has_government = confederate_tribal_government }
 		OR = {
 			has_government = wanua_government
 			has_government = tribal_government
 			has_government = nomad_government
-			faith = {has_doctrine = pagan_hostility_doctrine} 
-			religion = religion:anahuac_religion
 		}
+		faith = { has_doctrine = pagan_hostility_doctrine } 
 	}
 	
 	is_valid = {
+		faith = { has_doctrine = pagan_hostility_doctrine } 
 	}
+	
     desc = bzn_warrior_lodges_decision_desc
 
     effect = {
@@ -406,7 +413,7 @@ bzn_warrior_lodges_decision = {
 
     cost = {
 		prestige = {
-		value = 200
+		value = 100
 	if = {
 		limit = {highest_held_title_tier = tier_empire} 
 		add = 600

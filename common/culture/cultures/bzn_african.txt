@@ -165,7 +165,8 @@ ewe = {
 	head_determination = head_determination_domain
 	traditions = {
 		tradition_gbeto
-		tradition_festivities
+		tradition_legalistic
+		tradition_religion_blending
 		tradition_bush_hunting
 		tradition_formation_fighting
 	}
