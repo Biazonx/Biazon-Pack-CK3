@@ -84,6 +84,10 @@ bzn_setup_after_game_start_on_actions_after = {
 			}
 		}
 		if = {
+			limit = { game_start_date = 867.1.1 }
+			character:187002 = { add_trait = merchant }
+		}
+		if = {
 			limit = { current_date = 867.1.1 }
 			title:e_byzantium.holder = {
 				trigger_event = {

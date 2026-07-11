@@ -107,8 +107,16 @@ d_bzn_itzcoatl = { # Itzcoatl
 }
 
 k_romania = {
-	color = { 16 125 74 }
-	capital = c_campulung # Târgoviste
+	color = { 49 118 191 }
+	capital = c_campulung # Campulung
+	ai_primary_priority = {
+		if = {
+			limit = {
+				culture = culture:vlach
+			}
+			add = @correct_culture_primary_score
+		}
+	}
 }
 
 k_teutonic = {
@@ -151,4 +159,102 @@ e_lower_niger = {
 			add = @correct_culture_primary_score
 		}
 	}
+}
+
+k_catalonia = {
+	color = { 166 100 72 }
+	capital = c_barcelona # Barcelona
+	can_be_named_after_dynasty = no
+}
+
+d_malta = {
+	color = { 120 255 60 }
+	capital = c_malta
+}
+
+k_malta = {
+	color = { 120 255 60 }
+	capital = c_malta
+}
+
+k_majorca = {
+	color = { 41 105 61 }
+	capital = c_mallorca # Mallorca
+	can_be_named_after_dynasty = no
+}
+
+k_albania = {
+	color = { 183 37 37 }
+	capital = c_dyrrachion # Durrës
+	can_be_named_after_dynasty = no
+	ai_primary_priority = {
+		if = {
+			limit = {
+				culture = culture:albanian
+			}
+			add = @correct_culture_primary_score
+		}
+	}
+}
+
+k_tripolitania = {
+	color = { 103 141 128 }
+	capital = c_tripolitana # Tripolitania
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				culture = { has_cultural_pillar = heritage_berber }
+			}
+			add = @better_than_the_alternatives_score
+		}
+	}
+}
+
+k_oman = {
+	color = { 91 105 130 }
+
+	capital = c_nizwa
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				NOT = { culture = culture:egyptian }
+				culture = { has_cultural_pillar = heritage_arabic }
+			}
+			add = @correct_culture_primary_score
+		}
+	}
+	can_be_named_after_dynasty = yes
+	can_create = {
+		# no restrictions
+	}
+}
+
+k_bhutan = {
+	capital = c_paro # Thimphu
+	color = { 116 180 34 }
+}
+
+k_iceland = {
+	color = { 31 31 91 }
+	capital = c_vestisland # Reykjavik
+}
+
+k_slovakia = {
+	color = { 200 60 90 }
+	capital = c_nyitra
+	ai_primary_priority = {
+		if = {
+			limit = {
+				culture = culture:slovien
+			}
+			add = @correct_culture_primary_score
+		}
+	}		
+}
+
+k_balaton = {
+	color = { 25 152 158 }
+	capital = c_somogy		
 }

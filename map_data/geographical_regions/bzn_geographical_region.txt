@@ -11,12 +11,11 @@ world_europe_west_britannia = {
 	}
 }
 custom_romania = {
-	#Romania
 	duchies = {
-		d_transylvania d_transylvanian_alps d_muntenia d_oltenia
-	}
-	counties = {
-		c_galati c_stoenesti
+		#k_dacia
+		d_transylvanian_alps d_muntenia d_oltenia
+        #k_moldavia
+		d_bukovina d_moldova d_bugeac
 	}
 }
 
@@ -125,3 +124,25 @@ custom_taiwan = {
 custom_ryukyu = {
 	duchies = { d_ruucuu }
 }
+
+custom_tripolitania = {
+	duchies = { d_cyrenaica d_tripolitania d_syrte }
+}
+
+custom_tripolitania_libya = {
+	duchies = { d_cyrenaica d_tripolitania d_syrte d_ghat d_fezzan }
+}
+
+custom_balaton = {
+	duchies = { d_gyor d_somogy d_visegrad }
+}
+
+custom_bhutan = {
+	duchies = {
+		d_bumthang
+	}
+	counties = {
+		c_paro c_punakha
+	}
+}
+

@@ -1,12 +1,22 @@
+#Creating Kingdom of Romania
 form_romania_kingdom_decision = {
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
 	}
+
 	desc = form_romania_kingdom_decision_desc
 	selection_tooltip = form_romania_kingdom_decision_tooltip
 	decision_group_type = regional_major
-	ai_check_interval = 120
-	
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 120
+		duchy = 120
+		kingdom = 120
+		empire = 0
+		hegemony = 0
+	}
+
 	is_shown = {
 		NOT = { exists = title:k_romania.holder }
 		NOT = {  # Can only do it once.
@@ -31,6 +41,10 @@ form_romania_kingdom_decision = {
 		completely_controls_region = custom_romania
 	}
 
+	cost = {
+		gold = 250
+	}
+
 	effect = { 
 		form_romania_scripted_effect = yes
 		add_prestige = 500
@@ -44,16 +58,12 @@ form_romania_kingdom_decision = {
 		}
 	}
 	
-	cost = {
-		gold = 250
-	}
-	
 	ai_potential = {
 		always = yes
 	}
 
 	ai_will_do = {
-		base = 100
+		base = 50
 	}
 }
 
@@ -223,61 +233,6 @@ bzn_embrace_german_culture_decision = {
 	}
 }
 
-#bzn_adopt_chinese_administration_decision = {
-#    picture = {
-#        reference = "gfx/interface/illustrations/decisions/decision_culture.dds"
-#    }
-#	
-#    decision_group_type = regional_major
-#    ai_check_interval = 120
-#	
-#    is_shown = {
-#        NOT = { government_has_flag = government_is_administrative }
-#        NOT = { government_has_flag = government_is_shogunate }
-#        culture = { has_cultural_pillar = heritage_chinese }
-#        OR = {
-#            has_government = feudal_government
-#            has_government = tribal_government
-#            has_government = clan_government
-#        }
-#    }
-#	
-#    is_valid = {
-#		highest_held_title_tier >= tier_kingdom
-#        culture = { has_cultural_pillar = heritage_chinese }
-#        is_independent_ruler = yes
-#    }
-#	
-#    desc = adopt_chinese_administration_decision_desc
-#	
-#    cost = { gold = 500 }
-#	
-#    effect = {
-#		add_prestige = 1000
-#		if = {
-#			limit = { has_government = tribal_government }
-#			convert_whole_realm_to_feudalism_effect = yes
-#		}
-#        change_to_celestial_effect = yes
-#        every_vassal_or_below = {
-#            limit = {
-#                OR = {
-#                    has_government = feudal_government
-#                    has_government = tribal_government
-#                    has_government = clan_government
-#                }
-#            }
-#            change_to_celestial_effect = yes
-#        }
-#    }
-#    ai_potential = {
-#        always = yes
-#    }
-#    ai_will_do = {
-#        base = 100
-#    }
-#}
-
 bzn_novgorod_republic_decision = {
     picture = {
         reference = "gfx/interface/illustrations/decisions/decision_culture.dds"
@@ -443,185 +398,783 @@ elevate_crete_decision = {
 	}
 }
 
-form_the_kingdom_of_aragon_decision = {
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
+form_oman_decision = {
+	picture = { 
+		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
 	}
-	decision_group_type = major
+	decision_group_type = regional_major
 
-	ai_check_interval = 60
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 120
+		duchy = 120
+		kingdom = 120
+		empire = 0
+		hegemony = 0
+	}
 
-	desc = form_the_kingdom_of_aragon_decision_desc
-	selection_tooltip = form_the_kingdom_of_aragon_decision_tooltip
+	desc = form_oman_decision_desc
+	selection_tooltip = form_oman_decision_tooltip
 
 	is_shown = {
-		is_playable_character = yes # Redundancy check
-		# Can't form Aragon if Aragon already formed.
-		game_start_date < 1035.10.18
-		# Not relevant for characters who are already kings.
+		is_ruler = yes
+		is_landed = yes
+		exists = dynasty
+		title:k_oman = { is_titular = yes } # or the title is titular, because HI can split Arabia and render this obsolete
+		capital_county = { duchy = title:d_oman }
+
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:form_oman_decision
+			}
+		}
+		NOT = { exists = title:k_oman.holder }
+		# Technically Oman is a really Ibadi place but give it some leeway.
+		OR = {
+			faith.religion = religion:islam_religion
+			faith = { has_variable = is_islam_faith }
+		}
+	}
+
+	is_valid = {
+		prestige_level >= 2
+		is_independent_ruler = yes
 		highest_held_title_tier <= tier_duchy
-		# Cast a broad net for folks who might like to try this.
-		capital_province = { geographical_region = dlc_fp2_form_aragon_region }
-		# Aaaaand it can't have happened already.
+		#You must control the kingdom's heartlands.
+		completely_controls = title:d_oman
+
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		save_scope_as = founder
+		found_oman_decision_scripted_effect = yes
+		primary_title = { save_scope_as = new_primary_title }
+		add_prestige = medium_prestige_gain
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:form_oman_decision
+			}
+		}
+	}
+
+	cost = {
+		gold = 250
+		piety = 250
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+elevate_catalonia_decision={
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	}
+	decision_group_type = regional_major
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 120
+		duchy = 120
+		kingdom = 120
+		empire = 0
+		hegemony = 0
+	}
+
+	desc = elevate_catalonia_decision_desc
+	selection_tooltip = elevate_catalonia_decision_tooltip
+
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		exists = dynasty # Everyone should have a dynasty, but in case they don't...
+		OR = {
+			has_title = title:d_barcelona
+			any_held_title = {
+				tier = tier_county
+				duchy = title:d_barcelona
+			}
+		}
+		OR = {
+			culture = culture:catalan
+			culture = { any_parent_culture_or_above = { this = culture:catalan } }
+		}
+
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_elevated_catalonia
+			}
+		}
+
+		# NOT = {
+			# has_government = republic_government
+		# }
+
+		highest_held_title_tier <= tier_duchy
+	}
+
+	is_valid = {
+		# is_independent_ruler = yes
+		prestige_level >= 2
+		completely_controls = title:d_barcelona
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		elevate_catalonia_decision_scripted_effect = yes
+		primary_title = { save_scope_as = new_primary_title }
+		add_prestige = medium_prestige_gain
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_elevated_catalonia
+			}
+			set_global_variable = {
+				name = flag_elevated_catalonia
+				value = root
+			}
+		}
+	}
+
+	cost = {
+		gold = 250
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+# Majorca
+## Either by a king/emperor in Spain or by proclamation.
+found_majorca_decision={
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	}
+	decision_group_type = regional_major
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 120
+		duchy = 120
+		kingdom = 120
+		empire = 0
+		hegemony = 0
+	}
+
+	desc = found_majorca_decision_desc
+	selection_tooltip = found_majorca_decision_tooltip
+
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		exists = dynasty # Everyone should have a dynasty, but in case they don't...
+		has_title = title:d_mallorca
+		highest_held_title_tier <= tier_duchy
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_found_majorca
+			}
+		}
+	}
+
+	is_valid = {
+		# is_independent_ruler = yes
+		trigger_if = { # independent
+			limit = { highest_held_title_tier <= tier_duchy }
+			prestige_level >= 2
+		}
+		completely_controls = title:d_mallorca
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		found_majorca_decision_scripted_effect = yes
+		primary_title = { save_scope_as = new_primary_title }
+		add_prestige = medium_prestige_gain
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_found_majorca
+			}
+			set_global_variable = {
+				name = flag_found_majorca
+				value = root
+			}
+		}
+	}
+
+	cost = {
+		gold = 250
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+form_tripolitania_decision = {
+	picture = { 
+		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	}
+	decision_group_type = regional_major
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 120
+		duchy = 120
+		kingdom = 0
+		empire = 0
+		hegemony = 0
+	}
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { 
+					highest_held_title_tier >= tier_empire
+				}
+				desc = form_tripolitania_decision_overlord
+			}
+			desc = form_tripolitania_decision
+		}
+	}
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { 
+					highest_held_title_tier >= tier_empire
+				}
+				desc = form_tripolitania_decision_desc_overlord
+			}
+			desc = form_tripolitania_decision_desc
+		}
+	}
+	selection_tooltip = form_tripolitania_decision_tooltip
+
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		exists = dynasty
+		OR = {
+			capital_province = { geographical_region = custom_tripolitania }
+			AND = {
+				highest_held_title_tier >= tier_empire
+				any_sub_realm_county = { title_province = { geographical_region = custom_tripolitania } }
+			}
+		}
+
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:form_tripolitania_decision
+			}
+		}
+		NOT = { exists = title:k_tripolitania.holder }
+	}
+
+	is_valid = {
+		prestige_level >= 2
+		is_independent_ruler = yes
+
+		OR = {
+			highest_held_title_tier >= tier_empire
+			highest_held_title_tier <= tier_duchy
+		}
+		
+		completely_controls_region = custom_tripolitania
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		found_tripolitania_decision_scripted_effect = yes 
+		primary_title = { save_scope_as = new_primary_title }
+		add_prestige = medium_prestige_gain
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:form_tripolitania_decision
+			}
+		}
+	}
+
+	cost = {
+		gold = 250
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+form_bhutan_decision = {
+	picture = {	
+		reference = "gfx/interface/illustrations/holding_types/tgp_castle_se_asia.dds"
+	}
+	decision_group_type = regional_major
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 120
+		duchy = 120
+		kingdom = 0
+		empire = 0
+		hegemony = 0
+	}
+	desc = form_bhutan_decision_desc
+	selection_tooltip = form_bhutan_decision_tooltip
+
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		exists = dynasty
+		capital_province = { geographical_region = custom_bhutan }
+		highest_held_title_tier < tier_kingdom
+		culture = {
+			has_cultural_pillar = heritage_tibetan
+		}
+		OR = {
+			faith.religion = religion:buddhism_religion
+			faith = { has_doctrine = special_doctrine_is_eastern_faith }
+		}
+		# Vajrayana and Nangchos, more or less
+		faith = { has_doctrine = tenet_esotericism }
+		# NOT Theravada
+		NOT = { faith = faith:theravada }
 		NOT = {
 			is_target_in_global_variable_list = {
 				name = unavailable_unique_decisions
-				target = flag:flag_formed_kingdom_of_aragon
+				target = flag:flag_formed_bhutan
 			}
 		}
 	}
 
 	is_valid = {
 		is_independent_ruler = yes
-		completely_controls = title:d_aragon
+		prestige_level >= 2
+		piety_level >= 2
 		OR = {
-			completely_controls = title:d_barcelona
-			completely_controls = title:d_valencia
-			completely_controls = title:d_navarra
+			has_title = title:d_paro
+			has_title = title:d_bumthang
 		}
+		highest_held_title_tier < tier_kingdom
+		completely_controls_region = custom_bhutan
 	}
-	
+
 	is_valid_showing_failures_only = {
-		is_landed = yes
+		is_imprisoned = no
+		is_available_adult = yes
 	}
 
 	effect = {
-		gain_heroic_legend_seed_tooltip_effect = yes
-		# Grab scopes for loc.
-		save_scope_as = founder
-		culture = { save_scope_as = founder_culture }
-		culture:aragonese = { save_scope_as = aragonese_culture }
-		title:k_aragon = { save_scope_as = k_aragon }
-		title:d_aragon = { save_scope_as = d_aragon }
-		title:d_valencia = { save_scope_as = d_valencia }
-		title:d_barcelona = { save_scope_as = d_barcelona }
-		title:d_navarra = { save_scope_as = d_navarra }
-		# Create kingdom title.
-		create_title_and_vassal_change = {
-			type = created
-			save_scope_as = change
-		}
-		title:k_aragon = {
-			change_title_holder = {
-				holder = scope:founder
-				change = scope:change
-			}
-		}
-		resolve_title_and_vassal_change = scope:change
-		# Gain some prestige.
-		add_prestige = major_prestige_gain
-		# You shift to Aragonese culture, but will have a chance to change it.
-		## We do the actual change inside the event for nicer tooltip grouping.
-		show_as_tooltip = { set_culture = culture:aragonese }
-		custom_tooltip = form_the_kingdom_of_aragon_decision.tt.form_aragonese
-		trigger_event = iberia_north_africa.0131
-		# De jure shifts.
-		## Take care of the preferred empire.
-		if = {
-			limit = { NOT = { title:k_aragon.empire = title:d_aragon.empire } }
-			title:k_aragon = { set_de_jure_liege_title = title:d_aragon.empire }
-		}
-		## The heartlands drift over.
-		title:d_aragon = { set_de_jure_liege_title = title:k_aragon }
-		## Various neighbouring duchies can be preemptively integrated.
-		### From Valencia.
-		if = {
-			limit = { completely_controls = title:d_valencia }
-			title:d_valencia = { set_de_jure_liege_title = title:k_aragon }
-		}
-		else = { custom_tooltip = form_the_kingdom_of_aragon_decision.tt.drift.d_valencia }
-		### From Aquitaine.
-		if = {
-			limit = { completely_controls = title:d_barcelona }
-			title:d_barcelona = { set_de_jure_liege_title = title:k_aragon }
-		}
-		else = { custom_tooltip = form_the_kingdom_of_aragon_decision.tt.drift.d_barcelona }
-		### From Navarre.
-		if = {
-			limit = { completely_controls = title:d_navarra }
-			title:d_navarra = { set_de_jure_liege_title = title:k_aragon }
-		}
-		else = { custom_tooltip = form_the_kingdom_of_aragon_decision.tt.drift.d_navarra }
-		if = {
-			limit = { completely_controls = title:d_mallorca }
-			title:d_mallorca = { set_de_jure_liege_title = title:k_aragon }
-		}
-		if = {
-			limit = { completely_controls = title:d_sardinia }
-			title:d_sardinia = { set_de_jure_liege_title = title:k_aragon }
-		}
-		if = {
-			limit = { completely_controls = title:d_corsica }
-			title:d_corsica = { set_de_jure_liege_title = title:k_aragon }
-		}
-		if = {
-			limit = { completely_controls = title:d_athens }
-			title:d_athens = { set_de_jure_liege_title = title:k_aragon }
-		}
-		if = {
-			limit = { completely_controls = title:d_sicily }
-			title:d_sicily = { set_de_jure_liege_title = title:k_aragon }
-		}
-		if = {
-			limit = { completely_controls = title:d_calabria }
-			title:d_calabria = { set_de_jure_liege_title = title:k_aragon }
-		}
-		if = {
-			limit = { completely_controls = title:d_salerno }
-			title:d_salerno = { set_de_jure_liege_title = title:k_aragon }
-		}
-		if = {
-			limit = { completely_controls = title:d_apulia }
-			title:d_apulia = { set_de_jure_liege_title = title:k_aragon }
-		}
-		if = {
-			limit = { completely_controls = title:d_benevento }
-			title:d_benevento = { set_de_jure_liege_title = title:k_aragon }
-		}
-		if = {
-			limit = { completely_controls = title:d_capua }
-			title:d_capua = { set_de_jure_liege_title = title:k_aragon }
-		}
-		
-		# Plus, call the place Aragon rather than Zaragoza.
-		title:d_aragon = { reset_title_name = yes }
-		# Once per game.
-		add_to_global_variable_list = {
-			name = unavailable_unique_decisions
-			target = flag:flag_formed_kingdom_of_aragon
-		}
-		# Note this for books and such.
-		set_global_variable = {
-			name = flag_formed_kingdom_of_aragon
-			value = scope:founder
-		}
-
-		# Reward suggested by Ewan
-		house = {
-			add_house_modifier = {
-				modifier = fp2_aragon_title_reward_house_modifier # Mountains/hills bonus + hard casualty bonus
-				years = 200
+		form_bhutan_decision_effect = yes
+		primary_title = { save_scope_as = new_primary_title }
+		add_prestige = medium_prestige_gain
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_formed_bhutan
 			}
 		}
 	}
 
 	cost = {
 		gold = {
-			# Since we want this to happen, it free for the AI...
-			value = 0
-			# ... but costs for players.
-			if = {
-				limit = { is_ai = no }
-				add = 200
-			}
+			value = 100
+		}
+		piety = {
+			value = 250
 		}
 	}
 
 	ai_potential = {
-		any_held_title = { this = title:d_aragon }
+		always = yes
 	}
 
-	ai_will_do = { base = 100 }
+	ai_will_do = {
+		base = 100
+	}
 }
 
-	
+form_iceland_decision = {
+	picture = {	
+		reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
+	}
+	decision_group_type = regional_major
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 120
+		kingdom = 0
+		empire = 0
+		hegemony = 0
+	}
+	desc = form_iceland_decision_desc
+	selection_tooltip = form_iceland_decision_tooltip
+
+	is_shown = {
+		title:k_iceland = { is_titular = yes }
+		is_ruler = yes
+		is_landed = yes
+		is_playable_character = yes
+		highest_held_title_tier <= tier_duchy
+		exists = dynasty
+		capital_county.duchy = title:d_iceland
+		culture = {
+			has_cultural_pillar = heritage_north_germanic
+		}
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_formed_iceland
+			}
+		}
+	}
+
+	is_valid = {
+		is_independent_ruler = yes
+		prestige_level >= 2
+		completely_controls = title:d_iceland
+		realm_size < 8 # If you're big enough, you don't really have any reason to form an Icelandic kingdom.
+
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+	}
+
+	effect = {
+		form_iceland_decision_effect = yes
+		primary_title = { save_scope_as = new_primary_title }
+		add_prestige = medium_prestige_gain
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_formed_iceland
+			}
+		}
+	}
+	cost = {
+		gold = 100
+		prestige = 250
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+form_albania_decision = {
+	picture = { 
+		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	}
+	decision_group_type = regional_major
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 120
+		duchy = 120
+		kingdom = 0
+		empire = 0
+		hegemony = 0
+	}
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { is_independent_ruler = yes }
+				desc = form_albania_decision
+			}
+			desc = form_albania_decision_subject
+		}
+	}
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { is_independent_ruler = no }
+				desc = form_albania_decision_subject_desc
+			}
+			triggered_desc = {
+				trigger = { 
+					is_independent_ruler = yes 
+					OR = {
+						has_primary_title = title:k_sicily
+						has_primary_title = title:k_naples
+						has_primary_title = title:k_trinacria
+					}
+				}
+				desc = form_albania_decision_desc_italian
+			}
+			desc = form_albania_decision_desc
+		}
+	}
+	selection_tooltip = form_albania_decision_tooltip
+
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		exists = dynasty
+		OR = {
+			OR = {
+				culture = culture:albanian
+				culture = { has_cultural_pillar = language_albanian }
+			}
+			AND = {
+				has_primary_title = title:d_dyrrachion
+				is_independent_ruler = no
+			}
+			has_primary_title = title:k_sicily
+			has_primary_title = title:k_naples
+			has_primary_title = title:k_trinacria
+		}
+
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:form_albania_decision
+			}
+		}
+		NOT = { exists = title:k_albania.holder }
+		NOT = {
+			has_government = tribal_government
+			has_government = republic_government
+		}
+	}
+
+	is_valid = {
+		prestige_level >= 2
+		trigger_if = {
+			limit = { is_independent_ruler = yes }
+			is_independent_ruler = yes
+		}
+		trigger_else = {
+			has_strong_usable_hook = top_liege
+		}
+
+		highest_held_title_tier <= tier_duchy
+		OR = {
+			OR = {
+				culture = culture:albanian
+				culture = { has_cultural_pillar = language_albanian }
+			}
+			AND = {
+				is_independent_ruler = no
+				has_primary_title = title:d_dyrrachion
+			}
+			has_primary_title = title:k_sicily
+			has_primary_title = title:k_naples
+			has_primary_title = title:k_trinacria
+		}
+		completely_controls = title:d_dyrrachion
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		form_albania_decision_scripted_effect = yes
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:form_albania_decision
+			}
+		}
+	}
+
+	cost = {
+		gold = 150
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+create_slovakia_decision = {
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds" }
+	decision_group_type = regional_major
+
+	ai_check_interval = 120
+
+	desc = create_slovakia_decision_desc
+	selection_tooltip = create_slovakia_decision_tooltip
+
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		exists = dynasty # Everyone should have a dynasty, but in case they don't...
+		OR = {
+			culture = culture:hungarian
+			culture = culture:slovien
+			culture = { any_parent_culture_or_above = { this = culture:slovien } }
+		}
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_created_slovakia
+			}
+		}
+		OR = {	
+			has_government = tribal_government
+			has_government = feudal_government
+		}
+		highest_held_title_tier <= tier_duchy
+	}
+
+	is_valid = {
+		is_independent_ruler = yes
+		OR = {
+			culture = culture:slovien
+			culture = { any_parent_culture_or_above = { this = culture:slovien } }
+		}
+		prestige_level >= medium_prestige_level
+		completely_controls = title:d_nyitra
+		completely_controls = title:d_ungvar
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		create_slovakia_decision_scripted_effect = yes
+		primary_title = { save_scope_as = new_primary_title }
+		add_prestige = medium_prestige_gain
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_created_slovakia
+			}
+		}
+	}
+
+	cost = {
+		gold = 150
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+create_balaton_decision = {
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds" }
+	decision_group_type = regional_major
+
+	ai_check_interval = 120
+
+	desc = create_balaton_decision_desc
+	selection_tooltip = create_balaton_decision_tooltip
+
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		exists = dynasty
+		capital_province = { geographical_region = custom_balaton }
+		culture = { has_cultural_pillar = heritage_west_slavic }
+		OR = {
+			culture = culture:slovien
+			culture = { any_parent_culture_or_above = { this = culture:slovien } }
+		}
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:form_balaton_decision
+			}
+		}
+		NOT = { exists = title:k_balaton.holder }
+	}
+
+	is_valid = {
+		prestige_level >= 2
+		is_independent_ruler = yes
+		highest_held_title_tier <= tier_duchy
+		OR = {
+			culture = culture:slovien
+			culture = { any_parent_culture_or_above = { this = culture:slovien } }
+		}
+		completely_controls = title:d_somogy
+		completely_controls = title:d_gyor
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		create_balaton_decision_scripted_effect = yes 
+		primary_title = { save_scope_as = new_primary_title }
+		add_prestige = medium_prestige_gain
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:form_balaton_decision
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	cost = {
+		gold = 150
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
