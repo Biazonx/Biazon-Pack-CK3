@@ -1,0 +1,431 @@
+﻿### gompa
+
+gompa_01 = {
+	construction_time = quick_construction_time
+	effect_desc = gompa_desc
+	
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		scope:holder = { has_government = monastic_feudal_government }
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+	
+	cost_gold = cheap_building_tier_1_cost
+	
+	levy = small_building_levy_tier_1
+	province_modifier = {
+		monthly_income = poor_building_tax_tier_1
+		defender_holding_advantage = normal_building_advantage_tier_1
+		monthly_piety = 0.05
+		levy_size = 0.06
+		development_growth = 0.01
+	}
+
+	on_complete = {
+		#Mandala Creator Aspect
+		creator_mandala_built_regular_building_piety_effect = yes
+	}
+	
+	next_building = gompa_02
+
+	type_icon = "icon_structure_jvari_monastery.dds"
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_general_building_modifier = yes
+		directive_to_build_military_modifier = yes
+		ai_skirmisher_modifier = yes
+		ai_archer_modifier = yes
+		ai_stacking_bonus_warrior_lodges_modifier = yes
+		ai_stacking_bonus_military_camps_modifier = yes
+		ai_anti_synergy_armored_infantry_modifier = yes
+		ai_anti_synergy_cavalry_modifier = yes
+		modifier = {
+			factor = 0
+			building_camel_farms_requirement_terrain = yes
+			NOT = {
+				has_building_or_higher = camel_farms_01
+			}
+		}
+		modifier = {
+			factor = 0
+			building_horse_pastures_requirement_terrain = yes
+			NOT = {
+				has_building_or_higher = horse_pastures_01
+			}
+		}
+		modifier = {
+			factor = 0
+			building_hillside_grazing_requirement_terrain = yes
+			NOT = {
+				has_building_or_higher = hillside_grazing_01
+			}
+		}
+		modifier = {
+			factor = 0
+			building_warrior_lodges_requirement_terrain = yes
+			NOT = {
+				has_building_or_higher = warrior_lodges_01
+			}
+		}
+		modifier = { # It now has a small economic component; build it last
+			add = -3
+			has_building_or_higher = city_01
+		}
+		modifier = {
+			add = -10
+			scope:holder = {
+				OR = {
+					AND = {
+						government_has_flag = government_is_theocracy
+						highest_held_title_tier <= tier_barony
+					}
+					is_theocratic_lessee = yes
+				}
+			}
+		}
+	}
+}
+
+gompa_02 = {
+	construction_time = quick_construction_time
+	effect_desc = gompa_desc
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		scope:holder = { has_government = monastic_feudal_government }
+	}
+	
+
+	can_construct_showing_failures_only = {
+		scope:holder.culture = {
+			has_innovation = innovation_barracks
+		}
+		building_requirement_tribal = no
+	}
+	
+	cost_gold = cheap_building_tier_2_cost
+	
+	levy = small_building_levy_tier_2
+	province_modifier = {
+		monthly_income = poor_building_tax_tier_2
+		defender_holding_advantage = normal_building_advantage_tier_2
+		monthly_piety = 0.1
+		levy_size = 0.12
+		development_growth = 0.02
+	}
+	county_modifier = {
+		monthly_county_control_growth_add = 0.1
+	}
+
+	on_complete = {
+		#Mandala Creator Aspect
+		creator_mandala_built_regular_building_piety_effect = yes
+	}
+	
+	next_building = gompa_03
+	
+	ai_value = {
+		base = 9
+		ai_general_building_modifier = yes
+		directive_to_build_military_modifier = yes
+		modifier = { # Fill all building slots before going for upgrades
+			factor = 0
+			free_building_slots > 0
+		}
+	}
+}
+
+gompa_03 = {
+	construction_time = quick_construction_time
+	effect_desc = gompa_desc
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		scope:holder = { has_government = monastic_feudal_government }
+	}
+
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 02 }
+		scope:holder.culture = {
+			has_innovation = innovation_burhs
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+	
+	cost_gold = cheap_building_tier_3_cost
+	
+	levy = small_building_levy_tier_3
+	province_modifier = {
+		monthly_income = poor_building_tax_tier_3
+		defender_holding_advantage = normal_building_advantage_tier_3
+		monthly_piety = 0.15
+		levy_size = 0.18
+		development_growth = 0.03
+	}
+	county_modifier = {
+		monthly_county_control_growth_add = 0.1
+	}
+
+
+	on_complete = {
+		#Mandala Creator Aspect
+		creator_mandala_built_regular_building_piety_effect = yes
+	}
+	
+	next_building = gompa_04
+	
+	ai_value = {
+		base = 8
+		ai_general_building_modifier = yes
+		directive_to_build_military_modifier = yes
+	}
+}
+
+gompa_04 = {
+	construction_time = quick_construction_time
+	effect_desc = gompa_desc
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		scope:holder = { has_government = monastic_feudal_government }
+	}
+
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 02 }
+		scope:holder.culture = {
+			has_innovation = innovation_burhs
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+	
+	cost_gold = cheap_building_tier_4_cost
+	
+	levy = small_building_levy_tier_4
+	province_modifier = {
+		monthly_income = poor_building_tax_tier_4
+		defender_holding_advantage = normal_building_advantage_tier_4
+		monthly_piety = 0.2
+		levy_size = 0.24
+		development_growth = 0.04
+	}
+	county_modifier = {
+		monthly_county_control_growth_add = 0.1
+	}
+
+	on_complete = {
+		#Mandala Creator Aspect
+		creator_mandala_built_regular_building_piety_effect = yes
+	}
+	
+	next_building = gompa_05
+	
+	ai_value = {
+		base = 7
+		ai_general_building_modifier = yes
+		directive_to_build_military_modifier = yes
+	}
+}
+
+gompa_05 = {
+	construction_time = quick_construction_time
+	effect_desc = gompa_desc
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		scope:holder = { has_government = monastic_feudal_government }
+	}
+
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 03 }
+		scope:holder.culture = {
+			has_innovation = innovation_castle_baileys
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+	
+	cost_gold = cheap_building_tier_5_cost
+	
+	levy = small_building_levy_tier_5
+	province_modifier = {
+		monthly_income = poor_building_tax_tier_5
+		defender_holding_advantage = normal_building_advantage_tier_5
+		monthly_piety = 0.25
+		levy_size = 0.30
+		development_growth = 0.05
+	}
+	county_modifier = {
+		monthly_county_control_growth_add = 0.1
+		garrison_size = 0.05
+	}
+
+	on_complete = {
+		#Mandala Creator Aspect
+		creator_mandala_built_regular_building_piety_effect = yes
+	}
+	
+	next_building = gompa_06
+	
+	ai_value = {
+		base = 6
+		ai_general_building_modifier = yes
+		directive_to_build_military_modifier = yes
+	}
+}
+
+gompa_06 = {
+	construction_time = quick_construction_time
+	effect_desc = gompa_desc
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		scope:holder = { has_government = monastic_feudal_government }
+	}
+
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 03 }
+		scope:holder.culture = {
+			has_innovation = innovation_castle_baileys
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+	
+	cost_gold = cheap_building_tier_6_cost
+	
+	levy = small_building_levy_tier_6
+	province_modifier = {
+		monthly_income = poor_building_tax_tier_6
+		monthly_piety = 0.3
+		levy_size = 0.36
+		development_growth = 0.06
+	}
+	county_modifier = {
+		monthly_county_control_growth_add = 0.1
+		garrison_size = 0.05
+	}
+
+	on_complete = {
+		#Mandala Creator Aspect
+		creator_mandala_built_regular_building_piety_effect = yes
+	}
+	
+	next_building = gompa_07
+	
+	ai_value = {
+		base = 5
+		ai_general_building_modifier = yes
+		directive_to_build_military_modifier = yes
+	}
+}
+
+gompa_07 = {
+	construction_time = quick_construction_time
+	effect_desc = gompa_desc
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		scope:holder = { has_government = monastic_feudal_government }
+	}
+
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 04 }
+		scope:holder.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+	
+	cost_gold = cheap_building_tier_7_cost
+	
+	levy = small_building_levy_tier_7
+	province_modifier = {
+		monthly_income = poor_building_tax_tier_7
+		defender_holding_advantage = normal_building_advantage_tier_7
+		monthly_piety = 0.35
+		levy_size = 0.42
+		development_growth = 0.07
+	}
+	county_modifier = {
+		monthly_county_control_growth_add = 0.1
+		garrison_size = 0.05
+	}
+
+	on_complete = {
+		#Mandala Creator Aspect
+		creator_mandala_built_regular_building_piety_effect = yes
+	}
+	
+	next_building = gompa_08
+	
+	ai_value = {
+		base = 4
+		ai_general_building_modifier = yes
+		directive_to_build_military_modifier = yes
+	}
+}
+
+gompa_08 = {
+	construction_time = quick_construction_time
+	effect_desc = gompa_desc
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		scope:holder = { has_government = monastic_feudal_government }
+	}
+
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 04 }
+		scope:holder.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+	
+	cost_gold = cheap_building_tier_8_cost
+	
+	levy = small_building_levy_tier_8
+	province_modifier = {
+		monthly_income = poor_building_tax_tier_8
+		monthly_piety = 0.4
+		levy_size = 0.48
+		development_growth = 0.08
+	}
+	county_modifier = {
+		monthly_county_control_growth_factor = 0.15
+		monthly_county_control_growth_add = 0.1
+		garrison_size = 0.05
+	}
+
+	on_complete = {
+		#Mandala Creator Aspect
+		creator_mandala_built_regular_building_piety_effect = yes
+	}
+	
+	ai_value = {
+		base = 3
+		ai_general_building_modifier = yes
+		directive_to_build_military_modifier = yes
+	}
+}

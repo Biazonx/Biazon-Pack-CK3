@@ -1,0 +1,39 @@
+﻿namespace = tibet
+
+tibet.0001 = {
+	type = character_event
+	window = fullscreen_event
+	title = tibet.0001.t
+	desc = tibet.0001.desc
+	theme = faith
+	override_background = { reference = fp3_fullscreen_sunder }
+
+	immediate = {
+		if = {
+			limit = {
+				root = scope:persecutor
+			}
+			persecute_buddhists_in_tibet_effect = yes
+		}
+		else = {
+			show_as_tooltip = {
+				scope:persecutor = {
+					persecute_buddhists_in_tibet_effect = yes					
+				}
+			}
+		}
+	}
+	
+	option = { # Ok
+		name = tibet.0001.a
+		trigger = {
+			faith = faith:lamaism
+		}		
+	}
+	
+	option = { # Ok
+		name = tibet.0001.b
+		trigger = {
+			NOT = { faith = faith:lamaism} }
+		}	
+}

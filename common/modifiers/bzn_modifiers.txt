@@ -1,4 +1,4 @@
-hashishiyah_society = {
+﻿hashishiyah_society = {
 	icon = outdoors_positive
 	diplomacy = 2  
 	learning = 2
@@ -302,4 +302,24 @@ dao_heavenly_zeal_modifier = {
 	icon = martial_positive
 	martial = 3
 	levy_reinforcement_rate = 0.15
+}
+
+tibet_persecutor_of_buddhists = {
+	icon = dread_positive
+	dread_gain_mult = 0.1
+	dread_decay_mult = -0.1
+}
+
+restorer_of_yarlung_modifier = {
+	icon = prestige_positive
+	development_growth_factor = 0.15
+	same_culture_opinion = 10
+	title_creation_cost_mult = -0.25
+}
+
+plateau_unifier_modifier = {
+	icon = piety_positive
+	short_reign_duration_mult = -0.50
+	vassal_opinion = 10
+	title_creation_cost_mult = -0.25
 }

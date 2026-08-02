@@ -37,6 +37,18 @@ bzn_setup_on_actions = {
 			}
 			bzn_setup_innovation_late_effect = yes	
 		}
+		if = {
+			limit = {
+				NOT = {
+					exists = struggle:tibet_struggle
+					}
+				}
+			# Fire the struggle
+			start_struggle = {
+				struggle_type = tibet_struggle
+				start_phase = struggle_tibet_phase_fragmentation
+			}
+		}
 	}
 }
 

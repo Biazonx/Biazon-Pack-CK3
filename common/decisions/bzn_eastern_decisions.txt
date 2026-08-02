@@ -1150,3 +1150,346 @@ bzn_buy_tsushima_decision = {
 		base = 100
 	}
 }
+
+tibet_unite_yarlung_valley = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
+	}
+	decision_group_type = regional_major
+	ai_check_interval = 120
+	desc = tibet_unite_yarlung_valley_desc
+
+	is_shown = {
+		culture = {
+			culture_group = tibetan_heritage 
+		}
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = world_tibet }
+		}
+		NOT = { has_character_flag = flag_completed_yarlung_unification }
+		is_landed = yes
+	}
+
+	is_valid = {
+		piety_level >= 2 
+		any_held_title = {
+			count >= 2
+			tier = tier_duchy
+			title_province = { geographical_region = world_tibet }
+		}
+	}
+
+	cost = {
+		gold = 100
+	}
+
+	effect = {
+		add_prestige = 500
+		add_legitimacy = 150
+
+		add_character_modifier = {
+			modifier = restorer_of_yarlung_modifier
+			years = -1 
+		}
+
+		add_character_flag = flag_completed_yarlung_unification
+		
+		send_interface_toast = {
+			title = tibet_unite_yarlung_valley_name
+			left_icon = root
+			custom_tooltip = tibet_unite_yarlung_valley_success_tt
+		}
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+tibet_consolidate_high_plateau = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
+	}
+	decision_group_type = regional_major
+	ai_check_interval = 120
+	desc = tibet_consolidate_high_plateau_desc
+
+	is_shown = {
+		culture = {
+			culture_group = tibetan_heritage 
+		}
+		any_held_title = {
+			tier = tier_county
+			title_province = { geographical_region = world_tibet }
+		}
+		has_character_flag = flag_completed_yarlung_unification
+		NOT = { has_character_flag = flag_completed_plateau_consolidation }
+		is_landed = yes
+	}
+
+	is_valid = {
+		prestige_level >= 2
+		any_held_title = {
+			count >= 2
+			tier = tier_kingdom
+			title_province = { geographical_region = world_tibet }
+		}
+	}
+
+	cost = {
+		gold = 150
+	}
+
+	effect = {
+		add_prestige = 1000
+		add_character_modifier = {
+			modifier = plateau_unifier_modifier
+			years = -1
+		}
+
+		add_character_flag = flag_completed_plateau_consolidation
+
+		send_interface_toast = {
+			title = tibet_consolidate_high_plateau_name
+			left_icon = root
+			custom_tooltip = tibet_consolidate_high_plateau_success_tt
+		}
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+tibet_struggle_ending_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
+	}
+	desc = tibet_struggle_ending_decision_desc
+	decision_group_type = major
+	decision_group_type = struggle
+
+	ai_check_interval = 120
+
+	is_shown = {
+		any_character_struggle = { this = struggle:tibet_struggle }
+	}
+
+	is_valid = {
+		is_independent_ruler = yes
+		has_title = title:e_tibet
+	}
+
+	effect = {
+		# Safely target the struggle using the null-safe check operator
+		struggle:tibet_struggle ?= {
+			end_struggle = yes
+		}
+
+		add_prestige = 5000
+		add_piety = 3000
+
+		if = {
+			limit = {
+				has_dynasty = yes
+			}
+			dynasty = {
+				add_dynasty_prestige = 5000
+			}
+		}
+
+		add_character_flag = restored_tibetan_empire
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+tuyuhun_become_nomadic_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/event_story/mpo_steppe_region.dds"
+	}
+	
+	decision_group_type = regional_major
+	desc = tuyuhun_become_nomadic_decision_desc
+	selection_tooltip = tuyuhun_become_nomadic_decision_tooltip
+	
+	ai_check_interval = 0
+
+	is_shown = {
+		culture = culture:tuyuhun
+		has_mpo_dlc_trigger = yes
+		NOR = {
+			government_has_flag = government_is_nomadic
+			government_has_flag = government_is_steppe_admin
+		}
+		is_playable_character = yes
+		capital_county = {
+			any_county_situation = {
+				OR = {
+					situation:the_great_steppe ?= this
+					situation:game_rule_extra_nomads_arabs ?= this
+					situation:game_rule_extra_nomads_sami ?= this
+					situation:game_rule_extra_nomads_tibet ?= this
+					situation:game_rule_extra_nomads_sahel ?= this
+					situation:game_rule_extra_nomads_horn ?= this
+				}
+			}
+		}
+	}
+
+	is_valid = {
+		is_independent_ruler = yes
+		is_landed = yes
+		culture = culture:tuyuhun
+	}
+
+	is_valid_showing_failures_only = {
+		is_at_war = no
+		is_available = yes
+	}
+
+	cost = {
+		prestige = {
+			value = major_prestige_value
+		}
+	}
+
+	effect = {
+		every_sub_realm_county = {
+			limit = {
+				title_province = {
+					has_holding_type = tribal_holding
+				}
+			}
+			title_province = {
+				set_holding_type = nomad_holding
+			}
+		}
+		change_government = nomad_government
+		every_vassal_or_below = {
+			limit = {
+				has_government = tribal_government
+				highest_held_title_tier >= tier_county
+			}
+			change_government = nomad_government
+		}
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+cl_persecute_buddhists_in_tibet = {
+	picture = { reference = "gfx/interface/illustrations/decisions/fp3/fp3_decision_supremacy.dds" }
+	decision_group_type = regional_major
+	desc = cl_persecute_buddhists_in_tibet_desc
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 120
+		kingdom = 64
+		empire = 48
+		hegemony = 48
+	}
+
+	is_shown = {
+		is_landed = yes
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:buddhism_tibet_persecution_happened
+			}
+		}
+
+		any_held_county = {
+			any_county_province = {
+				geographical_region = world_tibet
+			}
+		}
+		
+		NOT = { religion = religion:buddhism_religion }
+
+	}
+
+	is_valid = {
+		NOT = { religion = religion:buddhism_religion }
+
+		OR = {
+			piety_level >= 3
+			prestige_level >= 3
+		}
+		
+		# Needs to be a ruler of some level of power
+		is_independent_ruler = yes
+		OR = {
+			highest_held_title_tier >= tier_kingdom
+			any_held_title = { is_head_of_faith = yes }
+		}
+
+	}
+
+	is_valid_showing_failures_only = {
+		is_adult = yes
+	}
+
+	effect = {
+
+		#Can only happen once
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:buddhism_tibet_persecution_happened
+		}
+
+		save_scope_as = persecutor
+
+		show_as_tooltip = {
+			persecute_buddhists_in_tibet_effect = yes
+		}
+
+		every_ruler = {
+			limit = {
+				OR = {
+					this = scope:persecutor	
+					any_liege_or_above = { this = scope:persecutor }
+					faith = faith:lamaism
+					any_held_county = {
+						any_county_province = {
+							geographical_region = world_tibet
+							}
+						}
+					}
+				}
+			}
+			trigger_event = tibet.0001
+		}
+
+	ai_will_do = {
+		base = 25
+	modifier = {
+		add = 10
+		has_trait = ambitious
+	}
+	modifier = {
+		add = -10
+		has_trait = lazy
+	}
+
+	modifier = {
+		add = 10
+		has_trait = zealous
+	}
+	modifier = {
+		add = -10
+		has_trait = compassionate
+		}
+	}
+}

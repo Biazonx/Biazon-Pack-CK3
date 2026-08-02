@@ -1,0 +1,258 @@
+﻿tibet_struggle = {
+	illustration = "gfx/interface/illustrations/decisions/decision_throne_room.dds"
+
+	##################################################
+	# Setup
+	##################################################
+	cultures = {
+		bodpa 
+		zhangzhung 
+		sumpa 
+		tsangpa 
+		tuyuhun 
+		tangut 
+		qiang 
+		lhomon
+		kashmiri
+	}
+
+	faiths = {
+		bon 
+		old_bon 
+		lamaism 
+		melieism 
+		rrmeaism
+		donyipoloism
+	}
+
+	regions = { 
+		world_tibet
+	}
+
+	involvement_prerequisite_percentage = 0.20
+
+	on_start = {
+		# Trigger initialization events if needed
+	}
+
+	on_change_phase = {
+		# Handle phase transition effects or AI intents
+	}
+
+	on_join = {
+		# Triggered when a character enters the struggle scope
+	}  
+
+	##################################################
+	# Phases
+	##################################################
+	start_phase = struggle_tibet_phase_fragmentation
+
+	phase_list = {
+
+		# PHASE 1: FRAGMENTATION (Silpa Period - Raiding & Regional Discord)
+		struggle_tibet_phase_fragmentation = {
+			duration = { points = 500 }
+			future_phases = {
+				struggle_tibet_phase_schism = {
+					catalysts = {
+						catalyst_win_any_war_within_the_region = minor_struggle_catalyst_gain
+						catalyst_forced_conversion = medium_struggle_catalyst_gain
+						catalyst_convert_local_culture_faith = major_struggle_catalyst_gain
+						catalyst_new_building_in_castle = minor_struggle_catalyst_gain
+						catalyst_unnatural_death_important_character = medium_struggle_catalyst_gain
+						catalyst_grant_land_local_noble = major_struggle_catalyst_gain
+						catalyst_release_important = massive_struggle_catalyst_gain
+					}
+				}
+			}
+
+			war_effects = {
+				name = WAR_EFFECTS_NAME
+
+				all_county_modifier = {
+					# The region is more amenable for waging war.
+					truces_by_involved_or_interlopers_within_region_shorter = yes
+					supply_limit_mult = 1
+					levy_reinforcement_rate_friendly_territory = 1
+				}
+
+				involved_county_modifier = {
+					# The region is more amenable for waging war.
+					levy_size = 1
+					garrison_size = -0.5
+				}
+
+				involved_character_modifier = {
+					# Fighting is encouraged, especially defensively.
+					same_heritage_county_advantage_add = 5
+					mercenary_hire_cost_mult = -0.25
+					# Get out there and do your part.
+					led_by_owner_extra_advantage_add = 5
+					ai_war_chance = 2
+					ai_war_cooldown = -0.25
+				}
+			}
+
+			faith_effects = {
+				name = FAITH_EFFECTS_NAME
+
+				common_parameters = {
+					cheaper_to_convert_to_struggle_faith = yes
+				}
+
+				involved_parameters = {
+					interfaith_marriages_available_between_involved_characters = yes
+				}
+
+				involved_character_modifier = {
+					# Zealots are ready to throw down.
+					zealot_opinion = 20
+					zealot_levy_contribution_mult = 0.5
+					zealot_tax_contribution_mult = 0.5
+					zealot_ai_vengefulness = very_high_positive_ai_value
+					zealot_ai_zeal = very_high_positive_ai_value
+					zealot_ai_boldness = high_positive_ai_value
+					church_holding_build_gold_cost = -0.3
+				}
+			}
+
+			culture_effects = {
+				name = CULTURE_EFFECTS_NAME
+
+				common_parameters = {
+					county_culture_conversion_in_region_proceeds_slower = yes
+				}
+
+				involved_character_modifier = {
+					# Minorities within your realm want no part of whatever you're pushing.
+					minority_opinion = -5
+					minority_tax_contribution_mult = -0.2
+					minority_levy_contribution_mult = -0.2
+					minority_ai_energy = high_positive_ai_value
+					# Diff-faith minorities _especially_ have no time for you.
+					minority_different_faith_opinion = -5
+				}
+			}
+
+			other_effects = {
+				name = OTHER_EFFECTS_NAME
+
+				all_county_modifier = {
+					# Not much happening economically.
+					build_speed = -0.5
+					# Lotta armed folk on the road.
+					travel_danger = 25
+				}
+
+				involved_county_modifier = {
+					# If you're at war, there's chaos at home.
+					monthly_county_control_decline_at_war_add = 0.02
+				}
+
+				involved_character_modifier = {
+					owned_hostile_scheme_success_chance_add = 20
+					claim_throne_scheme_phase_duration_add = monumental_scheme_phase_duration_bonus_value
+				}
+			}
+
+			ending_decisions = {
+				tibet_struggle_ending_decision
+			}
+		}
+
+		# PHASE 2: SCHISM (Religious Rivalry & Monastic Expansion)
+		struggle_tibet_phase_schism = {
+			duration = { points = 500 }
+			future_phases = {
+				struggle_tibet_phase_fragmentation = {
+					catalysts = {
+						catalyst_win_any_war_within_the_region = minor_struggle_catalyst_gain
+						catalyst_becomes_rival_with_involved = major_struggle_catalyst_gain
+						catalyst_broke_truce_against_important_character = massive_struggle_catalyst_gain
+						catalyst_reveal_secret_important = major_struggle_catalyst_gain
+					}
+				}
+			}
+
+			war_effects = {
+				name = WAR_EFFECTS_NAME
+
+				common_parameters = {
+					involved_or_interloper_wars_in_struggle_region_cheaper_piety_costs = yes
+				}
+
+				involved_parameters = {
+					unlocks_forced_vassalization_casus_belli = yes
+				}
+
+				involved_county_modifier = {
+					garrison_size = 0.15
+					defender_holding_advantage = 5
+				}
+
+				involved_character_modifier = {
+					men_at_arms_recruitment_cost = -0.10
+					men_at_arms_maintenance = -0.10
+				}
+			}
+
+			faith_effects = {
+				name = FAITH_EFFECTS_NAME
+
+				common_parameters = {
+					county_faith_conversion_in_region_proceeds_faster = yes
+				}
+
+				involved_parameters = {
+					completing_building_in_temple_gives_piety = yes
+					piety_from_converting_county = yes
+					piety_from_converting_involved_rulers = yes
+				}
+
+				involved_character_modifier = {
+					piety_gain_mult = 0.30
+					different_faith_opinion = -20
+					faith_conversion_piety_cost_mult = 0.20
+				}
+			}
+
+			culture_effects = {
+				name = CULTURE_EFFECTS_NAME
+
+				involved_parameters = {
+					struggle_prestige_from_befriending_same_culture = yes
+					gain_acceptance_when_developing_other_culture_county = yes
+				}
+
+				involved_character_modifier = {
+					cultural_head_fascination_mult = 0.15
+					learn_language_scheme_phase_duration_add = minor_scheme_phase_duration_bonus_value
+				}
+			}
+
+			other_effects = {
+				name = OTHER_EFFECTS_NAME
+
+				involved_parameters = {
+					completing_building_in_castle_gives_development = yes
+				}
+
+				all_county_modifier = {
+					tax_mult = 0.1
+					development_growth_factor = 0.15
+				}
+
+				involved_character_modifier = {
+					church_holding_build_gold_cost = -0.20
+					church_holding_build_gold_cost = -0.20
+				}
+			}
+
+			ending_decisions = {
+				tibet_struggle_ending_decision
+			}
+		}
+
+	}
+}

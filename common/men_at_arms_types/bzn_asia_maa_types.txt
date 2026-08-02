@@ -79,3 +79,40 @@ shrivamsha = {# Shrivamsha - horse breed that could easily accross seas of sand.
 	icon = shrivamsa
 	illustration = "shrivamsa"
 }
+
+nangchen_cavalry = {
+	type = heavy_cavalry
+	
+	damage = 110
+	toughness = 30
+	pursuit = 25
+	screen = 10
+	
+	terrain_bonus = {
+		hills = { damage = 20 pursuit = 10 }
+		mountains = { damage = 20 pursuit = 10 }
+		desert_mountains = { damage = -30 }
+		wetlands = { damage = -80 toughness = -15 pursuit = -20 }
+	}
+
+	counters = {
+		archers = 1
+		gunpowder = 1
+	}
+
+	winter_bonus = {
+		normal_winter = { damage = -10 toughness = -5 }
+		harsh_winter = { damage = -20 toughness = -5 }
+	}
+
+
+	buy_cost = { gold = monaspa_recruitment_cost }
+	low_maintenance_cost = { gold = monaspa_low_maint_cost }
+	high_maintenance_cost = { gold = monaspa_high_maint_cost }
+	provision_cost = @provisions_cost_cavalry_moderate
+	
+	stack = 50
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = tiefutu_cavalry
+	fallback_in_hired_troops_if_unlocked = yes
+}

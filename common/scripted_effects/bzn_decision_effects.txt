@@ -1,4 +1,4 @@
-form_romania_scripted_effect = {
+﻿form_romania_scripted_effect = {
 	title:k_romania = { save_scope_as = romania }
 	save_scope_as = founder
 	create_title_and_vassal_change = {
@@ -724,4 +724,18 @@ forge_the_chosen_of_perkunas_decision_tooltip_effect = {
 	create_holy_order_effect = yes
 	# And the free army.
 	forge_the_chosen_of_perkunas_maa_reward_effect = yes
+}
+
+persecute_buddhists_in_tibet_effect = {
+	add_character_modifier = {
+		modifier = tibet_persecutor_of_buddhists
+	}
+	add_piety = major_piety_gain
+	add_gold = 250
+	# Every county in your realm that is Manichean in Mesopotamia converts to your faith
+	every_county = {
+		limit = { holder = root faith = faith:lamaism }
+		custom = every_buddhist_county
+		set_county_faith = root.faith	
+	}
 }

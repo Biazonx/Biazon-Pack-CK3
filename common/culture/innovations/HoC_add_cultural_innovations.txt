@@ -22,3 +22,35 @@ innovation_slavic_boyar = {
 	flag = global_regional
 	flag = early_medieval_era_regional
 }
+
+@innovation_nangchen_cavalry = "gfx/interface/icons/culture_innovations/innovation_horseshoes.dds"
+
+innovation_nangchen_cavalry = {
+	skill = martial
+	icon = @innovation_nangchen_cavalry
+	group = culture_group_military
+	culture_era = culture_era_tribal
+	
+	potential = {	
+		OR = {			
+			this = culture:bodpa
+			this = culture:zhangzhung
+			this = culture:tsangpa
+			this = culture:sumpa
+			this = culture:tuyuhun
+			this = culture:qiang
+			this = culture:tangut
+			this = culture:lhomon			
+		}
+	}		
+	
+	character_modifier = {
+		development_growth_factor = 0.05
+		domain_tax_mult = 0.05
+	}	
+			
+	unlock_maa = nangchen_cavalry
+
+	flag = global_regional
+	flag = tribal_era_regional
+}
