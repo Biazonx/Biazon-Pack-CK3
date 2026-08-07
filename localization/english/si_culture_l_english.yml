@@ -499,3 +499,8 @@
  dynn_Ot_Yajai:0 "Ya Jä‘i"
  dynn_Ot_Yaxi:0 "Yaxi"
  dynn_Ot_Yaxudo:0 "Yaxudo"
+
+ e_nahua:0 "Tonalquizayan"
+ e_nahua_adj:0 "Tonalquizayan"
+ 
+culture_parameter_unlock_jaguar_warrior:0 "Can recruit [GetMaA('jaguar_warrior').GetName] as [men_at_arms|E]."

@@ -15,13 +15,13 @@
 
 	name_list = name_list_nahuatl
 
-	coa_gfx = { indo_aryan_group_coa_gfx }
-	building_gfx = { indian_building_gfx }
-	clothing_gfx = { african_clothing_gfx }
-	unit_gfx = { indian_unit_gfx }
+	coa_gfx = { burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
 	
 	ethnicities = {
-		10 = indian
+		100 = asian_austronesian
 	}
 }
 
@@ -42,12 +42,12 @@ otomitl = {
 
 	name_list = name_list_otomitl
 
-	coa_gfx = { indo_aryan_group_coa_gfx }
-	building_gfx = { indian_building_gfx }
-	clothing_gfx = { african_clothing_gfx }
-	unit_gfx = { indian_unit_gfx }
+	coa_gfx = { burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
 	
 	ethnicities = {
-		10 = indian
+		100 = asian_austronesian
 	}
 }

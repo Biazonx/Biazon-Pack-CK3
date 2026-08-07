@@ -7,11 +7,7 @@
 jaguar_warrior = {
 	type = skirmishers
 	can_recruit = {
-		OR = {
-			culture = culture:nahuatl
-			culture = culture:otomitl
-			religion = religion:anahuac_religion 
-		}
+		culture = { has_cultural_parameter = unlock_jaguar_warrior }
 	}
 	damage = 20
 	toughness = 20
@@ -19,16 +15,14 @@ jaguar_warrior = {
 	screen = 10
 	
 	terrain_bonus = {
-		jungle = { damage = 10 toughness = 5 }
-		forest = { damage = 10 toughness = 5 }
-		hills = { damage = 10 toughness = 5 }
-		wetlands = { damage = 10 toughness = 5 }
-		floodplains = { damage = 10 toughness = 5 }
+		jungle = { damage = 8 toughness = 4 }
+		forest = { damage = 8 toughness = 4 }
+		hills = { damage = 8 toughness = 4 }
 	}
 	
 	counters = {
-		pikemen = 1
-		heavy_infantry = 1
+		heavy_infantry = 2
+		skirmishers = 2
 		skirmishers = 1
 	}
 	
@@ -38,5 +32,5 @@ jaguar_warrior = {
 	
 	stack = 100
 	ai_quality = { value = @cultural_maa_extra_ai_score }
-	icon = skirmishers
+	icon = jaguar_warrior
 }
