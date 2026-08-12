@@ -411,11 +411,11 @@ bzn_adopt_behafaridism = {
 	}
 
 	ai_potential = {
-		always = yes
+		always = no
 	}
 
 	ai_will_do = {
-		base = 15
+		base = 0
 	}
 }
 
@@ -466,7 +466,7 @@ bzn_hussite_decision = {
 	}
 
 	ai_will_do = {
-		base = 10
+		base = 5
 	}
 }
 

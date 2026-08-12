@@ -1,0 +1,300 @@
+﻿taurus = {
+	category = fame
+	icon = h_taurus.dds
+	desc = taurus_desc
+	opposites = {
+		scorpio
+		pisces
+		libra
+		sagittarius
+		aquarius
+		gemini
+		capricorn
+		aries
+		virgo
+		leo
+		cancer_zodiac
+	}
+	
+	ruler_designer_cost = 15
+	
+	tax_mult = 0.10
+	stewardship_per_stress_level = 2
+	
+}
+
+pisces = {
+	category = fame
+	icon = h_pisces.dds
+	desc = pisces_desc
+	opposites = {
+		virgo
+		taurus
+		capricorn
+		cancer_zodiac
+		scorpio
+		libra
+		leo
+		aries
+		aquarius
+		sagittarius
+		gemini
+	}
+
+	ruler_designer_cost = 15
+
+	learning_per_piety_level = 1
+	learning = 2
+	
+}
+
+libra = {
+	category = fame
+	icon = h_libra.dds
+	desc = libra_desc
+	opposites = {
+		aries
+		pisces
+		capricorn
+		sagittarius
+		taurus
+		cancer_zodiac
+		leo
+		gemini
+		aquarius
+		virgo
+		scorpio
+	}
+	
+	ruler_designer_cost = 15
+
+	diplomacy = 2
+	monthly_diplomacy_lifestyle_xp_gain_mult = 0.05
+
+}
+
+capricorn = {
+	category = fame
+	icon = h_capricorn.dds
+	desc = capricorn_desc
+	opposites = {
+		cancer_zodiac
+		leo
+		pisces
+		scorpio
+		aries
+		sagittarius
+		taurus
+		aquarius
+		gemini
+		virgo
+		libra
+	}
+	
+	ruler_designer_cost = 15
+	
+	learning_per_prestige_level = 2
+	stress_loss_mult = 0.05
+	
+}
+
+aquarius = {
+	category = fame
+	icon = h_aquarius.dds
+	desc = aquarius_desc
+	opposites = {
+		leo
+		taurus
+		capricorn
+		sagittarius
+		cancer_zodiac
+		scorpio
+		pisces
+		libra
+		virgo
+		gemini
+		aries
+	}
+	
+	ruler_designer_cost = 15
+	
+	prowess_per_prestige_level = 1
+	prowess = 3
+
+}
+
+aries = {
+	category = fame
+	icon = h_aries.dds
+	desc = aries_desc
+	opposites = {
+		libra
+		capricorn
+		sagittarius
+		taurus
+		virgo
+		gemini
+		scorpio
+		pisces
+		leo
+		aquarius
+		cancer_zodiac
+	}
+
+	ruler_designer_cost = 15
+
+	martial = 2
+	monthly_martial_lifestyle_xp_gain_mult = 0.05
+
+}
+
+leo = {
+	category = fame
+	icon = h_leo.dds
+	desc = leo_desc
+	opposites = {
+		aquarius
+		cancer_zodiac
+		gemini
+		taurus
+		pisces
+		capricorn
+		sagittarius
+		scorpio
+		libra
+		virgo
+		aries
+	}
+
+	ruler_designer_cost = 15
+
+	monthly_prestige_gain_mult = 0.10
+	prowess_per_prestige_level = 2
+
+}
+
+scorpio = {
+	category = fame
+	icon = h_scorpio.dds
+	desc = scorpio_desc
+	opposites = {
+		taurus
+		gemini
+		virgo
+		leo
+		sagittarius
+		aquarius
+		cancer_zodiac
+		capricorn
+		libra
+		pisces
+		aries
+
+	}
+	
+	ruler_designer_cost = 15
+
+	fertility = 0.10
+	seduce_scheme_power_mult = 0.05
+
+}
+
+cancer_zodiac = {
+	category = fame
+	icon = h_cancer_zodiac.dds
+	desc = cancer_zodiac_desc
+	opposites = {
+		capricorn
+		aries
+		taurus
+		sagittarius
+		libra
+		pisces
+		gemini
+		scorpio
+		aquarius
+		virgo
+		leo
+	}
+	
+	ruler_designer_cost = 15
+
+	general_opinion = 5
+	scheme_resistance = 5
+
+}
+
+gemini = {
+	category = fame
+	icon = h_gemini.dds
+	desc = gemini_desc
+	opposites = {
+		sagittarius
+		virgo
+		aries
+		capricorn
+		leo
+		cancer_zodiac
+		libra
+		aquarius
+		scorpio
+		pisces
+		taurus
+	}
+	
+	ruler_designer_cost = 15
+
+	intrigue = 2
+	attraction_opinion = 5
+	
+}
+
+virgo = {
+	category = fame
+	icon = h_virgo.dds
+	desc = virgo_desc
+	opposites = {
+		pisces
+		taurus
+		aries
+		gemini
+		libra
+		sagittarius
+		capricorn
+		cancer_zodiac
+		scorpio
+		leo
+		aquarius
+	}
+	
+	ruler_designer_cost = 15
+
+	monthly_stewardship_lifestyle_xp_gain_mult = 0.10
+	stewardship = 2
+
+}
+
+sagittarius = {
+	category = fame
+	icon = h_sagittarius.dds
+	desc = sagittarius_desc
+	opposites = {
+		gemini
+		aquarius
+		libra
+		capricorn
+		taurus
+		scorpio
+		pisces
+		virgo
+		aries
+		cancer_zodiac
+		leo
+	}
+	
+	ruler_designer_cost = 15
+	
+	levy_size = 0.05
+	general_opinion = 5
+	
+}

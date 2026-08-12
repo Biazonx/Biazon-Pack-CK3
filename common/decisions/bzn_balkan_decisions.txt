@@ -79,7 +79,7 @@ bzn_adopt_krstjani_decision = {
 	}
 
 	ai_will_do = {
-		base = 10
+		base = 0
 		modifier = {
 			has_trait = cynical
 			add = 10
@@ -131,7 +131,7 @@ bzn_adopt_islam_decision = {
 	}
 
 	ai_will_do = {
-		base = 20
+		base = 0
 		modifier = { 
 			faith = faith:slavic_pagan
 			add = 100
@@ -504,9 +504,7 @@ bzn_defenders_of_paulicianism_decision = {
 	desc = bzn_defenders_of_paulicianism_decision_desc
 
 	is_shown = {
-		OR = {
-			faith = faith:paulician
-		}
+		faith = faith:paulician
 		#Only once per faith
 		NOR = {
 			AND = {

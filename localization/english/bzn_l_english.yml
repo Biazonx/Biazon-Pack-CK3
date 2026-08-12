@@ -1309,3 +1309,59 @@ innovation_nangchen_cavalry_desc: "The rugged highlands of Nangchen produce some
  bzn_consecrate_holy_vanguard_decision_tooltip: "Bless our blades and warriors!"
  blessed_blades: "Blessed Blades"
  blessed_blades_flavor: "The weapons of this ruler's army have been consecrated through holy rites, driving their knights to fight with fanatical efficiency and fervor."
+ 
+ bzn_household_bless_decision: "Bless the Household"
+bzn_household_bless_decision_desc: "By inviting the clergy to perform sacred rites and invoke divine favor upon my halls, I can ensure that my household begins the coming years under the protection and blessing of the gods."
+bzn_household_bless_decision_confirm: "Invite the Clergy"
+bzn_household_bless_decision_tooltip: "Invite the Clergy"
+blessed_household: "Blessed Household"
+blessed_household_desc: "This household has been consecrated through sacred rites. Daily life is guided by reverence, and its halls are believed to rest beneath the watchful protection of the divine."
+ 
+bzn_harvest_bless_decision: "Bless the Harvest"
+bzn_harvest_bless_decision_desc: "A bountiful harvest is a gift of the divine, but one that must be earned through proper rites and humble devotion. By leading sacred ceremonies in the fields, I shall seek blessings upon the coming harvest and prosperity for my people."
+bzn_harvest_bless_decision_confirm: "Lead the Harvest Rites"
+bzn_harvest_bless_decision_tooltip: "Perform sacred rites to invoke divine favor upon the land, increasing the prosperity and contentment of your realm."
+blessed_harvest: "Blessed Harvest"
+blessed_harvest_desc: "The fields have been consecrated through sacred rites, and the people believe the land now enjoys the favor of the divine. Hope is high, and the promise of a plentiful harvest inspires both diligence and gratitude."
+ 
+ 
+ trait_leo:0 "Leo"
+leo_desc:0 "Characters with Leo is represented by the lion, and these spirited fire signs are the kings and queens of the celestial jungle. They're delighted to embrace their royal status; Vivacious, theatrical, and passionate, Leos love to bask in the spotlight and celebrate themselves."
+
+trait_taurus:0 "Taurus"
+taurus_desc:0 "Characters with Taurus is an earth sign represented by the bull. Like their celestial spirit animal, Taureans enjoy relaxing in serene, bucolic environments, surrounded by soft sounds, soothing aromas, and succulent flavors. Taurus is ruled by Venus, the enchanting planet that governs love, beauty, and money."
+
+trait_sagittarius:0 "Sagittarius"
+sagittarius_desc:0 "Characters with Sagittarius are optimistic, lovers of freedom, hilarious, fair-minded, honest and intellectual. They are spontaneous and fun, usually with a lot of friends, and are perhaps the best conversationalists in the zodiac"
+
+trait_scorpio:0 "Scorpio"
+scorpio_desc:0 "Characters with Scorpio simply know what they want and aren't afraid to work hard and play the long game to get it. They never show their cards and their enigmatic nature is what makes them so seductive and beguiling. Scorpio is the sign most closely associated with sex; The part of the body that Scorpio governs is the genital area."
+
+trait_virgo:0 "Virgo"
+virgo_desc:0 "Characters with Virgo are logical, practical, and systematic in their approach to life. This earth sign is a perfectionist at heart and isn't afraid to improve skills through diligent and consistent practice. Virgo is governed by Mercury, the messenger planet of communication."
+
+trait_pisces:0 "Pisces"
+pisces_desc:0 "Characters with Pisces is a sensitive water sign, ruled by the planet Neptune. Your sign is fluid and tends to be sympathetic to the underdog. It's so easy for you to feel other people's experiences that they can obscure your own. You can be vague and escapist, but make up for it by being compassionate and intuitive."
+
+trait_aries:0 "Aries"
+aries_desc:0 "Characters with Aries loves to be number one, so it's no surprise that these audacious rams are the first sign of the zodiac. Like their fellow fire signs, Leo and Sagittarius, Aries is a passionate, motivated, and confident leader who builds community with their cheerful disposition and relentless determination."
+
+trait_gemini:0 "Gemini"
+gemini_desc:0 "Characters with Gemini are Playful and intellectually curious, Gemini is constantly juggling a variety of passions, hobbies, careers, and friend groups. They are the social butterflies of the zodiac; These quick-witted twins can talk to anyone about anything. Find them buzzing between happy hours, dinner parties, and dance floors."
+
+trait_cancer_zodiac:0 "Cancer"
+cancer_zodiac_desc:0 "Characters with Cancer is a cardinal water sign. Represented by the crab, this oceanic crustacean seamlessly weaves between the sea and shore, representing Cancer’s ability to exist in both emotional and material realms. Cancers are highly intuitive and their psychic abilities manifest in tangible spaces."
+
+trait_capricorn:0 "Capricorn"
+capricorn_desc:0 "Characters with Capricorn is the 10th sign of the zodiac and is represented by the Goat. Those born under this sign are generally pragmatic, ambitious, and disciplined, although they can also be somewhat stoic and pessimistic."
+
+trait_libra:0 "Libra"
+libra_desc:0 "Characters with Libra are known for being charming, beautiful, and well-balanced. They thrive on making things orderly and aesthetically pleasing. They also crave balance, and they can be equally as self-indulgent as they are generous."
+
+trait_aquarius:0 "Aquarius"
+aquarius_desc:0 "Characters with Aquarius are said to be progressive, independent, intelligent, unique, and idealistic. Their elemental sign is air, the same as that for Gemini and Libra. Like air, Aquarians don't have a single, clear shape and seem to defy categorization."
+
+ bzn_study_horoscope_decision:0 "Cast Horoscope"
+ bzn_study_horoscope_decision_desc:0 "Through rigorous study of the celestial alignments at the moment of my birth, I can uncover the hidden influences of the stars upon my destiny and nature."
+ bzn_study_horoscope_decision_tooltip:0 "You will consult the stars to reveal your zodiac sign."
+ bzn_study_horoscope_decision_confirm:0 "Consult the Heavens"

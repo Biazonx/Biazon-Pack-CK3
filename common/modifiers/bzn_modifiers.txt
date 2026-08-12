@@ -329,3 +329,20 @@ blessed_blades = {
 	knight_effectiveness_mult = 0.25
 	maa_damage_mult = 0.1
 }
+
+blessed_household = {
+	icon = piety_positive
+	clergy_opinion = 5
+	general_opinion = 5
+	vassal_opinion = 5
+	courtier_opinion = 5
+	monthly_piety = 0.5
+}
+
+blessed_harvest = {
+	icon = county_modifier_opinion_positive
+	monthly_county_control_growth_add = 0.1
+	development_growth_factor = 0.1
+	county_opinion_add = 10
+	tax_mult = 0.1
+}
