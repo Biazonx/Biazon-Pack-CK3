@@ -18,8 +18,8 @@
 	
 	ruler_designer_cost = 15
 	
+	same_opinion = 10
 	tax_mult = 0.10
-	stewardship_per_stress_level = 2
 	
 }
 
@@ -43,8 +43,8 @@ pisces = {
 
 	ruler_designer_cost = 15
 
-	learning_per_piety_level = 1
-	learning = 2
+	same_opinion = 10
+	monthly_piety_gain_mult = 0.15
 	
 }
 
@@ -67,9 +67,9 @@ libra = {
 	}
 	
 	ruler_designer_cost = 15
-
+	
+	same_opinion = 10
 	diplomacy = 2
-	monthly_diplomacy_lifestyle_xp_gain_mult = 0.05
 
 }
 
@@ -93,8 +93,8 @@ capricorn = {
 	
 	ruler_designer_cost = 15
 	
-	learning_per_prestige_level = 2
-	stress_loss_mult = 0.05
+	same_opinion = 10
+	levy_size = 0.1
 	
 }
 
@@ -118,8 +118,8 @@ aquarius = {
 	
 	ruler_designer_cost = 15
 	
-	prowess_per_prestige_level = 1
-	prowess = 3
+	same_opinion = 10
+	learning = 2
 
 }
 
@@ -142,9 +142,9 @@ aries = {
 	}
 
 	ruler_designer_cost = 15
-
+	
+	same_opinion = 10
 	martial = 2
-	monthly_martial_lifestyle_xp_gain_mult = 0.05
 
 }
 
@@ -168,8 +168,8 @@ leo = {
 
 	ruler_designer_cost = 15
 
-	monthly_prestige_gain_mult = 0.10
-	prowess_per_prestige_level = 2
+	same_opinion = 10
+	monthly_prestige_gain_mult = 0.15
 
 }
 
@@ -194,14 +194,14 @@ scorpio = {
 	
 	ruler_designer_cost = 15
 
-	fertility = 0.10
-	seduce_scheme_power_mult = 0.05
+	same_opinion = 10
+	fertility = 0.15
 
 }
 
 cancer_zodiac = {
 	category = fame
-	icon = h_cancer_zodiac.dds
+	icon = h_cancer.dds
 	desc = cancer_zodiac_desc
 	opposites = {
 		capricorn
@@ -220,6 +220,7 @@ cancer_zodiac = {
 	ruler_designer_cost = 15
 
 	general_opinion = 5
+	same_opinion = 10
 	scheme_resistance = 5
 
 }
@@ -243,9 +244,9 @@ gemini = {
 	}
 	
 	ruler_designer_cost = 15
-
+	
+	same_opinion = 10
 	intrigue = 2
-	attraction_opinion = 5
 	
 }
 
@@ -268,8 +269,8 @@ virgo = {
 	}
 	
 	ruler_designer_cost = 15
-
-	monthly_stewardship_lifestyle_xp_gain_mult = 0.10
+	
+	same_opinion = 10
 	stewardship = 2
 
 }
@@ -294,7 +295,7 @@ sagittarius = {
 	
 	ruler_designer_cost = 15
 	
-	levy_size = 0.05
-	general_opinion = 5
+	same_opinion = 10
+	prowess = 4
 	
 }

@@ -396,7 +396,14 @@ bzn_study_horoscope_decision = {
 	
 	desc = bzn_study_horoscope_decision_desc
 	sort_order = regional_major
-	ai_check_interval = 120
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 36
+		duchy = 12
+		kingdom = 12
+		empire = 12
+		hegemony = 12
+	}
 	
 	cooldown = { years = -1 }
 	
@@ -422,128 +429,22 @@ bzn_study_horoscope_decision = {
 		faith = { has_doctrine = tenet_astrology }
 	}
 	
-	cost = { piety = 100 }
+	cost = { piety = 50 }
 	
 	effect = {
-		# Capricorn: Dec 22 - Jan 19
-		if = {
-			limit = {
-				OR = {
-					AND = { birth_month = 12 birth_day >= 22 }
-					AND = { birth_month = 1 birth_day <= 19 }
-				}
-			}
-			add_trait = capricorn
-		}
-		# Aquarius: Jan 20 - Feb 18
-		else_if = {
-			limit = {
-				OR = {
-					AND = { birth_month = 1 birth_day >= 20 }
-					AND = { birth_month = 2 birth_day <= 18 }
-				}
-			}
-			add_trait = aquarius
-		}
-		# Pisces: Feb 19 - Mar 20
-		else_if = {
-			limit = {
-				OR = {
-					AND = { birth_month = 2 birth_day >= 19 }
-					AND = { birth_month = 3 birth_day <= 20 }
-				}
-			}
-			add_trait = pisces
-		}
-		# Aries: Mar 21 - Apr 19
-		else_if = {
-			limit = {
-				OR = {
-					AND = { birth_month = 3 birth_day >= 21 }
-					AND = { birth_month = 4 birth_day <= 19 }
-				}
-			}
-			add_trait = aries
-		}
-		# Taurus: Apr 20 - May 20
-		else_if = {
-			limit = {
-				OR = {
-					AND = { birth_month = 4 birth_day >= 20 }
-					AND = { birth_month = 5 birth_day <= 20 }
-				}
-			}
-			add_trait = taurus
-		}
-		# Gemini: May 21 - Jun 20
-		else_if = {
-			limit = {
-				OR = {
-					AND = { birth_month = 5 birth_day >= 21 }
-					AND = { birth_month = 6 birth_day <= 20 }
-				}
-			}
-			add_trait = gemini
-		}
-		# Cancer: Jun 21 - Jul 22
-		else_if = {
-			limit = {
-				OR = {
-					AND = { birth_month = 6 birth_day >= 21 }
-					AND = { birth_month = 7 birth_day <= 22 }
-				}
-			}
-			add_trait = cancer_zodiac
-		}
-		# Leo: Jul 23 - Aug 22
-		else_if = {
-			limit = {
-				OR = {
-					AND = { birth_month = 7 birth_day >= 23 }
-					AND = { birth_month = 8 birth_day <= 22 }
-				}
-			}
-			add_trait = leo
-		}
-		# Virgo: Aug 23 - Sep 22
-		else_if = {
-			limit = {
-				OR = {
-					AND = { birth_month = 8 birth_day >= 23 }
-					AND = { birth_month = 9 birth_day <= 22 }
-				}
-			}
-			add_trait = virgo
-		}
-		# Libra: Sep 23 - Oct 22
-		else_if = {
-			limit = {
-				OR = {
-					AND = { birth_month = 9 birth_day >= 23 }
-					AND = { birth_month = 10 birth_day <= 22 }
-				}
-			}
-			add_trait = libra
-		}
-		# Scorpio: Oct 23 - Nov 21
-		else_if = {
-			limit = {
-				OR = {
-					AND = { birth_month = 10 birth_day >= 23 }
-					AND = { birth_month = 11 birth_day <= 21 }
-				}
-			}
-			add_trait = scorpio
-		}
-		# Sagittarius: Nov 22 - Dec 21
-		else_if = {
-			limit = {
-				OR = {
-					AND = { birth_month = 11 birth_day >= 22 }
-					AND = { birth_month = 12 birth_day <= 21 }
-				}
-			}
-			add_trait = sagittarius
+		random_list = {
+            8.3 = { add_trait = capricorn }
+			8.3 = { add_trait = aquarius }
+			8.3 = {add_trait = pisces  }
+			8.3 = {add_trait = aries  }
+			8.3 = {add_trait = taurus  }
+			8.3 = {add_trait = gemini  }
+			8.3 = {add_trait = cancer_zodiac  }
+			8.3 = {add_trait = leo  } 
+			8.3 = {add_trait = virgo  }
+			8.3 = {add_trait = libra  }
+			8.3 = {add_trait = scorpio  }
+			8.3 = {add_trait = sagittarius  }
 		}
 	}
 	
