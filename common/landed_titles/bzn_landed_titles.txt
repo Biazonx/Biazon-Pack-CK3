@@ -258,3 +258,8 @@ k_balaton = {
 	color = { 25 152 158 }
 	capital = c_somogy		
 }
+
+e_hyperborea = {
+	color = { 45 0 188 }
+	capital = c_kholmogory	
+}

@@ -1365,3 +1365,10 @@ aquarius_desc:0 "Characters with Aquarius are said to be progressive, independen
  bzn_study_horoscope_decision_desc:0 "Through rigorous study of the celestial alignments at the moment of my birth, I can uncover the hidden influences of the stars upon my destiny and nature."
  bzn_study_horoscope_decision_tooltip:0 "You will consult the stars to reveal your zodiac sign."
  bzn_study_horoscope_decision_confirm:0 "Consult the Heavens"
+ 
+form_hyperborea_decision: "Form Hyperborea"
+form_hyperborea_decision_desc: "Gather the peoples of the far North beneath one banner and proclaim a new realm: Hyperborea, the legendary land beyond the northern winds."
+form_hyperborea_decision_tooltip: "Form the Empire of Hyperborea"
+form_hyperborea_decision_confirm: "Let Hyperborea rise!"
+e_hyperborea: "Hyperborea"
+e_hyperborea_adj: "Hyperborea"

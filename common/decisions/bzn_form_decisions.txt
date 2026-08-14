@@ -1178,3 +1178,82 @@ create_balaton_decision = {
 		base = 100
 	}
 }
+
+form_hyperborea_decision = {
+	picture = {	
+		reference = "gfx/interface/illustrations/decisions/decision_hyperborea.dds"
+	}
+	decision_group_type = regional_major
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 36
+		empire = 0
+		hegemony = 0
+	}
+	desc = form_hyperborea_decision_desc
+	selection_tooltip = form_hyperborea_decision_tooltip
+
+	is_shown = {
+		title:e_hyperborea = { is_titular = yes }
+		is_ruler = yes
+		is_landed = yes
+		is_playable_character = yes
+		highest_held_title_tier <= tier_kingdom
+		exists = dynasty
+		OR = {
+			has_religion = religion:finno_ugric_religion
+			has_religion = religion:siberian_religion
+		}
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_formed_hyperborea
+			}
+		}
+	}
+
+	is_valid = {
+		is_independent_ruler = yes
+		prestige_level >= 3
+		any_held_title = {
+			count >= 3
+			tier = tier_kingdom
+		}
+		OR = {
+			has_religion = religion:finno_ugric_religion
+			has_religion = religion:siberian_religion
+			has_religion = religion:shamanism_religion
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+	}
+
+	effect = {
+		form_hyperborea_decision_effect = yes
+		primary_title = { save_scope_as = new_primary_title }
+		add_prestige = 1000
+		dynasty = { add_dynasty_prestige = 500 }
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_formed_hyperborea
+			}
+		}
+	}
+	cost = {
+		gold = 250
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
