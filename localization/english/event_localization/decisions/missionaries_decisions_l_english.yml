@@ -22,3 +22,11 @@
  reinforce_kut_decision_desc:1 "#F Kut is a vital force sent by Tengri himself. Those with great kut are given mandate of the eternal blue sky which legitimates their rule. Their efficacy as rulers are evidence of being blessed by Tengri. If a ruler would begin to make poor decisions and become a bad ruler, it's a sign that the ruler has lost his kut and must therefor be disposed. \nI have announced my mandate of Tengri, but to keep it I have to continously prove my worth, or else I might be disposed of...#!"
  reinforce_kut_decision_effect_tooltip:1 "You will strengthen your claim of mandate of the eternal blue sky."
  reinforce_kut_decision_confirm:0 "I am still worthy!"
+ 
+ trait_white_shaman:0 "White Shaman"
+ trait_white_shaman_desc:0 "This character has a connection to the benevolent white spirits. This shaman can ask the spirits for help to divine the future."
+ trait_white_shaman_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has a connection to the benevolent white spirits. This shaman can ask the spirits for help to divine the future."
+
+ trait_black_shaman:0 "Black Shaman"
+ trait_black_shaman_desc:0 "This character has a connection to the malevolent black spirits. This shaman can ask the spirits for aid in warfare and as well as healing the sick."
+ trait_black_shaman_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has a connection to the malevolent black spirits. This shaman can ask the spirits for aid in warfare and as well as healing the sick."

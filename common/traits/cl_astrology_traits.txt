@@ -348,3 +348,43 @@ kut = {
 		}
 	}
 }
+
+white_shaman = {
+	category = fame
+	learning = 3
+	same_faith_opinion = 20
+	
+	ruler_designer_cost = 40
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_white_shaman_desc
+			}
+			desc = trait_white_shaman_character_desc
+		}
+	}
+}
+
+black_shaman = {
+	category = fame
+	learning = 3
+	same_faith_opinion = 20
+	
+	ruler_designer_cost = 40
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_black_shaman_desc
+			}
+			desc = trait_black_shaman_character_desc
+		}
+	}
+}
