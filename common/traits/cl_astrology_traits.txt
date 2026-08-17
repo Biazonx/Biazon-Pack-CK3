@@ -299,3 +299,52 @@ sagittarius = {
 	prowess = 4
 	
 }
+
+kut = {
+	category = fame
+	monthly_prestige_gain_mult = 0.05
+	monthly_piety_gain_mult = 0.05
+	martial = 1
+	vassal_opinion = 10
+	dynasty_opinion = 10
+	
+	ruler_designer_cost = 50
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_kut_desc
+			}
+			desc = trait_kut_character_desc
+		}
+	}
+	
+	tracks = { 
+		kut	= {
+			25 = {
+				martial = 1
+				monthly_prestige_gain_mult = 0.05
+				monthly_piety_gain_mult = 0.05
+			}
+			50 = {
+				martial = 1
+				monthly_prestige_gain_mult = 0.05
+				monthly_piety_gain_mult = 0.05
+				prowess_per_piety_level = 1
+			}
+			75 = {
+				martial = 1
+				monthly_prestige_gain_mult = 0.05
+				monthly_piety_gain_mult = 0.05
+			}
+			100 = {
+				martial = 1
+				monthly_prestige_gain_mult = 0.05
+				monthly_piety_gain_mult = 0.05
+			}
+		}
+	}
+}

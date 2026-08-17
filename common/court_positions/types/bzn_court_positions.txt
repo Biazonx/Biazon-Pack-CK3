@@ -493,3 +493,218 @@ mamaluk_court_position = {
 		add = court_position_candidate_aptitude_value
 	}
 }
+
+
+shaman_court_position = {
+	max_available_positions = 1
+	sort_order = 1000
+	skill = learning
+    localization_key = shaman_court_position
+
+	court_position_asset = {
+		animation = physician
+		background = "gfx/interface/illustrations/event_scenes/study_physician.dds"
+	}
+	
+	opinion = {
+		value = regular_court_position_opinion
+	}
+	
+	# How high the aptitude has to be to reach the 5 different modifier levels
+	aptitude_level_breakpoints = { 15 30 50 70 }
+
+	# How good is this character in this position? root scope is the holder of the court position
+	aptitude = {
+		value = 1
+		add = {
+			value = learning
+			multiply = 2.5
+			max = 50
+			desc = court_position_skill_learning
+		}
+		if = {
+			limit = {
+				is_landed = yes
+			}
+			add = {
+				value = -30
+				desc = court_position_landed_penalty
+			}
+		}
+		if = {
+			limit = {
+				has_trait = blind
+			}
+			add = {
+				value = -50
+				desc = court_position_blind_trait
+			}
+		}
+		if = {
+			limit = {
+				has_trait = infirm
+			}
+			add = {
+				value = -75
+				desc = court_position_infirm_trait
+			}
+		}
+		add = court_position_aptitude_family_business_value
+	}
+
+	is_shown = {
+		OR = {
+			has_religion = religion:tengrism_religion
+			has_religion = religion:finno_ugric_religion
+			has_religion = religion:siberian_religion
+			has_religion = religion:shamanism_religion
+		}
+	}
+
+	is_shown_character = {
+		scope:employee = {
+			is_courtier_of = scope:liege
+			is_imprisoned = no
+		}
+	}
+
+	valid_character = {
+		scope:employee = {
+			faith = liege.faith
+			OR = {
+				has_trait = witch
+				has_trait = lifestyle_mystic
+				has_trait = education_learning_1
+				has_trait = education_learning_2
+				has_trait = education_learning_3
+				has_trait = education_learning_4
+				has_trait = education_learning_5
+				has_trait = white_shaman
+				has_trait = black_shaman
+			}
+		}
+	}
+
+	revoke_cost = {
+		prestige =  {
+			value = major_court_position_prestige_revoke_cost
+
+			# Set to 0 with Dynasty Perk Inner Circle
+			if = {
+				limit = {
+					exists = dynasty
+					dynasty = { has_dynasty_perk = fp2_coterie_legacy_1 }
+
+					employs_court_position = shaman_court_position
+					any_court_position_holder = {
+				        type = shaman_court_position
+						exists = dynasty
+						house = prev.house
+					}
+				}
+				multiply = 0
+			}
+		}
+	}
+
+	salary = {
+		round = no
+		gold = {
+			value = minor_court_position_salary
+			# Set to 0 with Dynasty Perk Inner Circle
+			if = {
+				limit = {
+					scope:liege = {
+						exists = dynasty
+						dynasty = { has_dynasty_perk = fp2_coterie_legacy_1 }
+
+						employs_court_position = shaman_court_position
+						any_court_position_holder = {
+					        type = shaman_court_position
+							exists = dynasty
+							house = prev.house
+						}
+					}
+				}
+				multiply = {
+					value = 0.0
+					desc = inner_circle_salary_mod
+					format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
+				}
+			}
+			if = {
+				limit = {
+					scope:liege = {
+						employs_court_position = shaman_court_position
+						any_court_position_holder = {
+					        type = shaman_court_position
+					        scope:liege = {
+								has_hook_of_type = {
+									type = obligation_hook
+									target = prev
+								}
+							}
+						}
+					}
+				}
+				multiply = {
+					value = 0.5
+					desc = obligation_hook_salary
+				}
+			}
+		}
+	}
+
+	is_powerful_agent = yes
+
+	# These modifiers are employed based on what level the aptitude reaches (levels are defined as breakpoints) 
+	scaling_employer_modifiers = {
+		terrible = {
+			monthly_court_grandeur_change_mult = 0.05
+			learning = 1
+			monthly_learning_lifestyle_xp_gain_mult = 0.05
+			health = 0.05
+			
+		}
+		poor = {
+			court_grandeur_baseline_add = 1
+			monthly_court_grandeur_change_mult = 0.05
+			learning = 2
+			monthly_learning_lifestyle_xp_gain_mult = 0.1
+			health = 0.1
+		}
+		average = {
+			court_grandeur_baseline_add = 1
+			monthly_court_grandeur_change_mult = 0.10
+			learning = 3
+			monthly_learning_lifestyle_xp_gain_mult = 0.15
+			health = 0.15
+		}
+		good = {
+			court_grandeur_baseline_add = 2
+			monthly_court_grandeur_change_mult = 0.10
+			learning = 4
+			monthly_learning_lifestyle_xp_gain_mult = 0.2
+			health = 0.20
+		}
+		excellent = {
+			court_grandeur_baseline_add = 2
+			monthly_court_grandeur_change_mult = 0.15
+			learning = 5
+			monthly_learning_lifestyle_xp_gain_mult = 0.25
+			health = 0.25
+		}
+	}
+
+	modifier = {
+		monthly_prestige = minor_court_position_prestige_salary
+	}
+
+	# Scripted value to determine whether an AI will hire/fire a position or not. Hires over 0, fires under -50. Look in _court_positions.info for more extensive documentation!
+	candidate_score = {
+		value = 100
+		add = scope:base_value
+		add = court_position_candidate_score_base_value
+		add = court_position_debt_considerations_value
+	}
+}

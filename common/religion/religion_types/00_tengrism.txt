@@ -43,7 +43,7 @@
 	doctrine = doctrine_no_anointment
 
 	traits = {
-		virtues = { brave just honest }
+		virtues = { brave just honest kut }
 		sins = { craven arbitrary deceitful }
 	}
 
@@ -231,6 +231,7 @@
 			holy_site = preslav
 			holy_site = shengle
 			holy_site = degere
+			holy_site = itil 
 
 			doctrine = unreformed_faith_doctrine
 

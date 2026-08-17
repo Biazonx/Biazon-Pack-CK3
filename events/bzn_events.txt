@@ -704,3 +704,40 @@ bzn_decisions.0021 = {
 		}
 	}
 }
+
+bzn_decisions.6767 = {
+	type = character_event
+	title = bzn_decisions.6767.t
+	desc = bzn_decisions.6767.desc
+	theme = faith
+
+	override_background = {
+		reference = wilderness
+	}
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+
+	# Claim to have Kut
+	option = {
+		name = bzn_decisions.6767.claim
+		custom_tooltip = bzn_decisions.6767.claim.tt
+		trigger = {
+		}
+		add_trait = kut
+		add_legitimacy = major_legitimacy_gain
+		add_piety = -100 
+	}
+
+	# Opt-Out
+	option = {
+		name = bzn_decisions.6767.optout
+
+		ai_chance = {
+			base = 0
+		}
+	}
+}

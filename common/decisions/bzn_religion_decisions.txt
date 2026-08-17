@@ -1030,6 +1030,111 @@ bzn_celtic_traditions_decision = {
 	}
 }
 
+claim_kut_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_claim_kut.dds"
+	}
+	
+	decision_group_type = regional_major
+
+	desc = claim_kut_decision_desc
+	selection_tooltip = claim_kut_decision_tooltip
+
+	ai_check_interval = 120
+
+	is_shown = {
+		religion = religion:tengrism_religion
+		is_landed = yes
+		NOT = {
+			has_trait = kut
+		}
+	}
+
+	cooldown = { days = 30 }
+
+	cost = {
+		piety = 500
+		prestige = 500
+	}
+
+	is_valid = {
+		is_adult = yes
+		is_landed = yes
+		is_independent_ruler = yes
+		religion = religion:tengrism_religion
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+	}
+
+
+	effect = {
+		custom_tooltip = claim_kut_decision_effect_tooltip
+
+		trigger_event = bzn_decisions.6767
+	}
+	
+	ai_potential = {
+		is_at_war = no
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+reinforce_kut_decision = {
+
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_reinforce_kut.dds"
+	}
+	
+	decision_group_type = regional_major
+
+	desc = reinforce_kut_decision_desc
+	selection_tooltip = reinforce_kut_decision_tooltip
+
+	ai_check_interval = 120
+
+	is_shown = {
+		religion = religion:tengrism_religion
+		has_trait = kut
+	}
+
+	cooldown = { years = 2 }
+
+	cost = {
+		piety = 150
+	}
+
+	is_valid = {
+		has_trait = kut
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+	}
+
+	effect = {
+		custom_tooltip = reinforce_kut_decision_effect_tooltip
+		add_legitimacy = 50
+		add_trait_xp = {
+			trait = kut
+			value = 10
+		}
+		
+	}
+	
+	ai_potential = {
+		is_at_war = no
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
 bzn_albanian_paganism_decision = {
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"

@@ -1205,6 +1205,7 @@ form_hyperborea_decision = {
 		OR = {
 			has_religion = religion:finno_ugric_religion
 			has_religion = religion:siberian_religion
+			has_religion = religion:shamanism_religion
 		}
 		NOT = {
 			is_target_in_global_variable_list = {
