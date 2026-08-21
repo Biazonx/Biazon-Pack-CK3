@@ -1,0 +1,118 @@
+pay_all_governors_treasury_debt_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_spend_money.dds"
+	}
+
+	decision_group_type = admin
+
+	desc = pay_all_governors_treasury_debt_decision_desc
+	selection_tooltip = pay_all_governors_treasury_debt_decision_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 0
+		empire = 0
+		hegemony = 0
+	}
+
+	# 动态计算所有负债官员的负债总额。
+	# minimum_cost 只负责显示花费和检查是否支付得起，
+	# 实际付款由 effect 中的 pay_short_term_treasury 完成。
+	minimum_cost = {
+		treasury = {
+			value = 0
+
+			every_vassal_or_below = {
+				limit = {
+					has_treasury = yes
+					treasury < 0
+				}
+
+				add = {
+					value = treasury
+					multiply = -1
+				}
+			}
+		}
+	}
+
+	is_shown = {
+		is_ai = no
+		has_treasury = yes
+		has_title = title:h_china
+	}
+
+	is_valid_showing_failures_only = {
+		custom_tooltip = {
+			text = pay_all_governors_treasury_debt_available_trigger
+
+			any_vassal_or_below = {
+				has_treasury = yes
+				treasury < 0
+			}
+		}
+	}
+
+	effect = {
+		hidden_effect = {
+			save_scope_as = actor
+
+			every_vassal_or_below = {
+				limit = {
+					has_treasury = yes
+					treasury < 0
+				}
+
+				save_scope_as = recipient
+
+				# 与原版 pay_treasury_debt_interaction 保持一致
+				scope:actor = {
+					pay_short_term_treasury = {
+						target = scope:recipient
+						treasury = {
+							value = scope:recipient.treasury
+							multiply = -1
+						}
+					}
+
+					add_hook = {
+						type = strong_indebted_hook
+						target = scope:recipient
+					}
+
+					change_influence = major_influence_value
+				}
+
+				# 保留原版王朝周期催化剂
+				situation:dynastic_cycle ?= {
+					if = {
+						limit = {
+							situation_top_has_catalyst = catalyst_cleared_treasury_debt
+
+							any_situation_participant = {
+								this = scope:recipient
+							}
+						}
+
+						trigger_situation_catalyst = {
+							catalyst = catalyst_cleared_treasury_debt
+							character = scope:actor
+						}
+					}
+				}
+			}
+		}
+
+		custom_tooltip = pay_all_governors_treasury_debt_effect_tt
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}

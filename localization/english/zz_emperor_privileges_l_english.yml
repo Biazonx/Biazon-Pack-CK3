@@ -1,0 +1,12 @@
+﻿l_english:
+ examination_bypass_family_requirement_tt: "The target must be your Close or Extended Family; the Celestial Emperor is exempt from this restriction."
+
+ pay_all_governors_treasury_debt_decision: "Pay Officials' Treasury Debts"
+ pay_all_governors_treasury_debt_decision_desc: "The court may allocate Treasury funds to clear the [treasury_debt|E] of all indebted officials at once, avoiding the need to handle each repayment individually.\n\nThe required cost is equal to the total current Treasury debt of all indebted officials."
+ pay_all_governors_treasury_debt_decision_tooltip: "Clear the [treasury_debt|E] of all indebted officials at once"
+
+ pay_all_governors_treasury_debt_available_trigger: "At least one official under your rule has [treasury_debt|E]"
+
+ pay_all_governors_treasury_debt_effect_tt: "The [treasury_debt|E] of all indebted officials will be cleared. You will receive the corresponding hooks and [influence|E] according to the same rules as using the \"Pay Treasury Debt\" interaction on each official individually."
+
+ pay_all_governors_treasury_debt_decision_confirm: "Authorize Repayment"

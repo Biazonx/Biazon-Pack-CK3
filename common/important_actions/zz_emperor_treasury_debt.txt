@@ -1,0 +1,78 @@
+action_pay_governors_treasury_debt = {
+	priority = 350
+	combine_into_one = yes
+	check_create_action = {
+		if = {
+			limit = {
+				has_treasury = yes
+				OR = {
+					has_title = title:e_minister_of_revenue
+					has_title = title:e_minister_of_war
+					has_title = title:h_china
+				}
+				top_liege = {
+					any_vassal_or_below = {
+						has_treasury = yes
+						treasury < 0
+						OR = {
+							AND = {
+								title:e_minister_of_revenue.holder ?= root
+								NOT = {
+									vassal_contract_has_flag = celestial_military_appointment
+								}
+							}
+							AND = {
+								title:e_minister_of_war.holder ?= root
+								vassal_contract_has_flag = celestial_military_appointment
+							}
+							root = {
+								has_title = title:h_china
+							}
+						}
+						save_temporary_scope_as = governor
+					}
+				}
+				treasury >= {
+					value = scope:governor.treasury
+					multiply = -1
+				}
+			}
+			top_liege = {
+				every_vassal_or_below = {
+					limit = {
+						has_treasury = yes
+						treasury < 0
+						OR = {
+							AND = {
+								title:e_minister_of_revenue.holder ?= root
+								NOT = {
+									vassal_contract_has_flag = celestial_military_appointment
+								}
+							}
+							AND = {
+								title:e_minister_of_war.holder ?= root
+								vassal_contract_has_flag = celestial_military_appointment
+							}
+							root = {
+								has_title = title:h_china
+							}
+						}
+					}
+					try_create_important_action = {
+						important_action_type = action_pay_governors_treasury_debt
+						actor = root
+						recipient = this
+					}
+				}
+			}
+		}
+	}
+
+	effect = {
+		open_interaction_window = {
+			interaction = pay_treasury_debt_interaction 
+			actor = scope:actor
+			recipient = scope:recipient
+		}
+	}
+}
